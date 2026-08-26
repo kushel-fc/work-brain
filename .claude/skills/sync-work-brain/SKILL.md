@@ -15,7 +15,9 @@ Follow `CLAUDE.md` for structure, frontmatter, and the state-not-history princip
 3. Read the current `sources/*`, `support/*`, `prs/*` files — these are the "before" state for the diff in Phase 2.
 
 ## Phase 1 — Pull fresh state
-- **Linear**: `list_issues` for assignee=me (all statuses, recent-first), for team=BDD state=Triage, and `get_issue` for each file under `sources/linear/watched/`.
+- **Linear — my issues**: `list_issues` for assignee=me, all statuses, recent-first.
+- **Linear — Triage / support**: the canonical source is the team BDD Triage view — https://linear.app/fashioncloud/team/BDD/triage — pulled via `list_issues` with team=BDD, state=Triage. This single pull feeds both `sources/linear/triage.md` (the full raw list) and `support/open.md` (the FD-ticket-relevant subset, prioritized) — see Phase 3.
+- **Linear — watched**: `get_issue` for each file under `sources/linear/watched/`.
 - **GitHub**: `list_pull_requests` (state=open) for both repos. For any PR authored by kushel-fc or where he's a requested reviewer, `pull_request_read` (get + get_reviews) for review/mergeable-state detail.
 - **Slack**: `slack_read_channel` on `#brand-data-dev-alerts` (channel C07A06X22TD) since the last sync's timestamp (from `_meta/index.md`). Read threads for anything that isn't self-explanatory.
 
@@ -32,7 +34,7 @@ Write these findings down (mentally or as your commit-message draft) — they dr
 ## Phase 3 — Write
 1. Overwrite `sources/linear/my-issues.md`, `sources/linear/triage.md`, each `sources/linear/watched/*.md`, `sources/github/*/open-prs.md`, with current state (frontmatter + short prose per entry, per `CLAUDE.md`).
 2. Update `dagster-alerts/log.md`: append new alerts, flip status on ones that resolved or recurred, prune entries >30 days old to keep the file short.
-3. Update `support/open.md` and `support/recently-closed.md` (cap recently-closed at ~25, move older into `archive/support/`).
+3. Update `support/open.md` from the same team-BDD-Triage pull as `sources/linear/triage.md` — filter to FD-referenced tickets (or anything otherwise support-shaped: a customer/brand request rather than an internal task), sorted by priority then age. Update `support/recently-closed.md` from Triage-view items that dropped out because they went Done/Deployed (cap at ~25, move older into `archive/support/`).
 4. Update `prs/mine.md` and `prs/to-review.md` from the GitHub data — these are curated/prioritized views, not raw dumps.
 5. Touch `shaping/*.md` only if something in scope changed.
 6. Move anything closed/merged/resolved into the matching `archive/` subfolder.

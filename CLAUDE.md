@@ -6,6 +6,14 @@ This file governs how the sync routine (and any interactive session) reads and w
 
 This repo is Kushel's work brain — the single source of truth for what needs attention, synced daily from Linear, GitHub, and Slack. It replaces the old Notion "Work System" page. Nothing here is authored by hand during a sync; it's a faithful, structured mirror of those three systems plus a synthesized priority view on top.
 
+## Sources (canonical query surfaces)
+
+- **Linear — my issues**: assignee = me, all statuses.
+- **Linear — Triage / support**: team BDD Triage view — https://linear.app/fashioncloud/team/BDD/triage. One pull feeds two files: `sources/linear/triage.md` (full raw list) and `support/open.md` (the FD-referenced/support-shaped subset, prioritized).
+- **Linear — watched**: individually tracked long-running issues, one file per issue under `sources/linear/watched/`.
+- **GitHub**: open PRs across `fashioncloud/product-service` and `fashioncloud/brand-data-pipeline`.
+- **Slack**: `#brand-data-dev-alerts` (channel `C07A06X22TD`) for Dagster/ONA incidents.
+
 ## Structure
 
 ```
@@ -15,7 +23,7 @@ work-brain/
 ├── sources/                     # raw, faithful current-state snapshots per source
 │   ├── linear/
 │   │   ├── my-issues.md         # assigned to Kushel, live status
-│   │   ├── triage.md            # unassigned Triage backlog (team BDD)
+│   │   ├── triage.md            # full raw Triage backlog (team BDD) — see Sources below
 │   │   └── watched/             # one file per long-running issue tracked individually
 │   ├── github/
 │   │   ├── product-service/open-prs.md
@@ -23,7 +31,7 @@ work-brain/
 │   └── slack/
 │       └── mentions.md          # anything outside dagster-alerts worth tracking
 ├── support/
-│   ├── open.md                   # FD-sourced tickets, by priority
+│   ├── open.md                   # FD-sourced/support-shaped subset of the Triage view, by priority
 │   └── recently-closed.md
 ├── prs/
 │   ├── mine.md                   # PRs Kushel opened — review/CI/mergeable state
