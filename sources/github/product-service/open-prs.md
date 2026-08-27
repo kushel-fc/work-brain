@@ -3,6 +3,32 @@
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
 ```yaml
+number: 2562
+title: "fix(io-helpers): guard S3 readStream against mid-transfer stalls"
+author: dwiajik
+state: open
+mergeable_state: mergeable
+review_state: awaiting-first-review
+requested_reviewers: [abubakarwase, alirezaMoazenFashion]
+updated: 2026-08-27
+url: https://github.com/fashioncloud/product-service/pull/2562
+```
+New. Team-requested (brand-data-dev), no individual request for Kushel.
+
+```yaml
+number: 2561
+title: Ignore unsupported deliveryEndDate during GTIN migration
+author: marianabassi
+state: open
+mergeable_state: mergeable
+review_state: approved
+requested_reviewers: [irembbt, abirprantofc]
+updated: 2026-08-27
+url: https://github.com/fashioncloud/product-service/pull/2561
+```
+New, already approved.
+
+```yaml
 number: 2559
 title: Add ilseJacobsen mapping rules
 author: marianabassi
@@ -57,7 +83,7 @@ number: 2548
 title: PDS stream publisher package
 author: julsjacinto
 state: open
-mergeable_state: unknown
+mergeable_state: mergeable
 review_state: changes-requested
 requested_reviewers: [abubakarwase, alirezaMoazenFashion]
 updated: 2026-08-25

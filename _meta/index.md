@@ -1,6 +1,6 @@
 # Index
 
-- **Last sync:** 2026-08-27T08:09:45Z
+- **Last sync:** 2026-08-27T08:36:00Z
 - **Sources:** Linear (team BDD), GitHub (product-service, brand-data-pipeline), Slack (#brand-data-dev-alerts)
 
 ## Counts
@@ -11,10 +11,10 @@
 | Linear — Triage backlog (raw) | 25 |
 | Support — open (FD-shaped subset) | 23 (2 High / 12 Medium / 9 Low) |
 | Support — recently closed | 11 |
-| GitHub product-service — open PRs | 16 |
-| GitHub brand-data-pipeline — open PRs | 10 |
+| GitHub product-service — open PRs | 18 |
+| GitHub brand-data-pipeline — open PRs | 12 |
 | PRs — mine | 2 |
-| PRs — to review | 4 |
+| PRs — to review | 5 |
 | Dagster alerts (log) | 27 |
 | Dagster alerts — active | 16 |
 | Dagster alerts — recurring | 9 |

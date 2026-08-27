@@ -2,6 +2,18 @@
 
 One entry per sync run. Prune entries older than ~30 days.
 
+## 2026-08-27 (08:36 UTC)
+
+- New: Kushel added as a requested reviewer on brand-data-pipeline PR #1734 ("pointtec brand migration") — already Approved by dwiajik, he's the outstanding reviewer. Added to `today.md`.
+- New PRs (not his): product-service #2562, #2561; brand-data-pipeline #1736 (companion to #1734, same title/author).
+- brand-data-pipeline mergeable-state reads are flapping between mergeable/conflicting/unknown across repeated checks within the same minute (GitHub still computing) — wrote `unknown` for all as the honest current read rather than trusting any single snapshot; not treated as a real conflict, including the #1645/#1120/#1263/#1058 entries flagged conflicting yesterday.
+- product-service #2548 mergeable_state resolved from unknown to mergeable.
+- Linear (my-issues, Triage/support) unchanged since this morning's sync.
+- Slack: zero new messages in #brand-data-dev-alerts since the last sync (08:09:45Z) — quiet since.
+- BDD-3103's Aug 25 deadline still 2 days passed, no movement (unchanged from this morning).
+- Dagster onaDkCompany FEED still shown active, now ~19h past its 3h limit — no new Slack follow-up.
+- Notified: no — nothing crossed the notification bar (no deadline newly reached, no flip to conflict/Changes-Requested on his own work, no new Urgent unassigned ticket, no Dagster alert newly recurring).
+
 ## 2026-08-27
 
 - His own PR #2545 flipped to Approved (was awaiting-first-review) — ready to merge.

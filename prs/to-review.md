@@ -3,6 +3,20 @@
 PRs where Kushel is a requested reviewer. Populated on sync.
 
 ```yaml
+number: 1734
+repo: brand-data-pipeline
+title: pointtec brand migration
+author: abirprantofc
+state: open
+mergeable_state: unknown
+review_state: approved
+requested_reviewers: [kushel-fc]
+updated: 2026-08-27
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1734
+```
+New — Kushel added as requested reviewer. Already approved by dwiajik; team appears to be waiting on his review to close it out. Mergeable/CI state flapping between clean and unknown on repeated checks (GitHub still computing), not a real conflict.
+
+```yaml
 number: 2514
 repo: product-service
 title: "feat(llm-based-agent-setup): add mutations tool group for SKU reprocessing and mapping-rule updates"
