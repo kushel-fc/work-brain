@@ -3,6 +3,46 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
+timestamp: 2026-08-27T07:51:52Z
+channel: brand-data-dev-alerts
+brand: gabba
+summary: gabba/FEED — 10 asset materializations failed (unsupported connector_type in FTP/SFTP credential item)
+status: active
+linked_issue: null
+```
+Fired twice 07:46 and 07:51 UTC, ~5 min apart. Kushel triaged in-thread: credential item is missing host/filepath/filename_pattern/connector_type. Abir (07:05 CEST) confirmed understanding and said he'd fix and rerun. Same root cause as the endurance failure below — looks like a new brand-onboarding credential setup issue.
+
+```yaml
+timestamp: 2026-08-27T07:46:50Z
+channel: brand-data-dev-alerts
+brand: endurance
+summary: endurance/FEED — 10 asset materializations failed (unsupported connector_type in FTP/SFTP credential item)
+status: active
+linked_issue: null
+```
+Same "Unsupported connector_type 'undefined'" credential error as gabba above. Kushel tagged Abir in-thread; no reply yet as of sync time.
+
+```yaml
+timestamp: 2026-08-27T07:30:45Z
+channel: brand-data-dev-alerts
+brand: alberto
+summary: alberto__FEED__publish_from_map — container exited, exit code 137 (OOM)
+status: active
+linked_issue: null
+```
+Aji commented "probably a reprocessing job and hit OOM" — cause identified, no fix confirmed.
+
+```yaml
+timestamp: 2026-08-27T06:58:37Z
+channel: brand-data-dev-alerts
+brand: sanetta
+summary: sanetta/FEED — 3 asset materializations failed (map, merge, publish_from_map)
+status: recurring
+linked_issue: null
+```
+Fired twice, 06:57 and 06:58 UTC, ~1.5 min apart, identical failure. No thread or reaction visible.
+
+```yaml
 timestamp: 2026-08-26T16:25:32Z
 channel: brand-data-dev-alerts
 brand: onaDkCompany
@@ -10,7 +50,7 @@ summary: ona__dkCompany_FEED run exceeded 3h time limit
 status: active
 linked_issue: null
 ```
-Run 161bb902 started 13:24 UTC, still running when alert fired at 16:25 UTC. No follow-up in channel yet.
+Run 161bb902 started 13:24 UTC 08-26, still shown active as of last check. Over 15h with no follow-up or resolution visible in channel — worth a look if not already handled outside Slack.
 
 ```yaml
 timestamp: 2026-08-26T09:59:35Z

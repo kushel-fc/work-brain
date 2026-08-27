@@ -32,7 +32,7 @@ number: 2551
 title: D-Brand brand migration
 author: alirezaMoazenFashion
 state: open
-mergeable_state: unknown
+mergeable_state: mergeable
 review_state: awaiting-first-review
 requested_reviewers: [dwiajik, julsjacinto]
 updated: 2026-08-26
@@ -70,19 +70,19 @@ title: Remove 13 offboarded/ex-customer brands from brands_on_megatron
 author: kushel-fc
 state: open
 mergeable_state: mergeable
-review_state: awaiting-first-review
+review_state: approved
 requested_reviewers: [abubakarwase, alirezaMoazenFashion]
-updated: 2026-08-25
+updated: 2026-08-27
 url: https://github.com/fashioncloud/product-service/pull/2545
 ```
-Kushel's own PR — see [`prs/mine.md`](../../../prs/mine.md). CodeRabbit approved; awaiting a human review.
+Kushel's own PR — see [`prs/mine.md`](../../../prs/mine.md). Approved, ready to merge.
 
 ```yaml
 number: 2543
 title: Enable Freebird Icons and Simple on PIPE
 author: FCMachineUser
 state: open
-mergeable_state: unknown
+mergeable_state: mergeable
 review_state: approved
 requested_reviewers: [dwiajik, julsjacinto]
 updated: 2026-08-25
@@ -94,10 +94,10 @@ number: 2542
 title: PDS streams infrastructure setup
 author: julsjacinto
 state: open
-mergeable_state: unknown
+mergeable_state: mergeable
 review_state: changes-requested
 requested_reviewers: [abubakarwase, alirezaMoazenFashion]
-updated: 2026-08-26
+updated: 2026-08-27
 url: https://github.com/fashioncloud/product-service/pull/2542
 ```
 
@@ -122,33 +122,22 @@ state: open
 draft: true
 mergeable_state: mergeable
 review_state: changes-requested
-requested_reviewers: [irembbt, abirprantofc]
+requested_reviewers: [irembbt, kushel-fc, dwiajik, julsjacinto]
 updated: 2026-08-25
 url: https://github.com/fashioncloud/product-service/pull/2514
 ```
+Kushel added as a requested reviewer since last sync — see [`prs/to-review.md`](../../../prs/to-review.md).
 
 ```yaml
 number: 2130
 title: donders brand migration
 author: MuniaL
 state: open
-mergeable_state: unknown
+mergeable_state: mergeable
 review_state: awaiting-first-review
 requested_reviewers: [dwiajik, julsjacinto]
 updated: 2026-07-27
 url: https://github.com/fashioncloud/product-service/pull/2130
-```
-
-```yaml
-number: 2118
-title: lloydBelts brand migration
-author: Chamindu36
-state: open
-mergeable_state: unknown
-review_state: awaiting-first-review
-requested_reviewers: [dwiajik, abubakarwase]
-updated: 2026-07-27
-url: https://github.com/fashioncloud/product-service/pull/2118
 ```
 
 ```yaml
@@ -180,23 +169,11 @@ url: https://github.com/fashioncloud/product-service/pull/1756
 Kushel is a requested reviewer (draft, ~2 months stale) — see [`prs/to-review.md`](../../../prs/to-review.md).
 
 ```yaml
-number: 1744
-title: Support/new pip ebrands
-author: Busra040
-state: open
-mergeable_state: unknown
-review_state: approved
-requested_reviewers: [abubakarwase]
-updated: 2026-07-24
-url: https://github.com/fashioncloud/product-service/pull/1744
-```
-
-```yaml
 number: 1737
 title: add histogram endpoint to pdo
 author: irembbt
 state: open
-mergeable_state: unknown
+mergeable_state: mergeable
 review_state: awaiting-first-review
 requested_reviewers: [julsjacinto]
 updated: 2026-07-07
@@ -209,19 +186,20 @@ title: "BDD-2292 + BDD-2293: brand-onboarding transform-run launch + concurrency
 author: irembbt
 state: open
 draft: true
-mergeable_state: unknown
+mergeable_state: conflicting
 review_state: awaiting-first-review
 requested_reviewers: [irembbt, abubakarwase]
 updated: 2026-06-24
 url: https://github.com/fashioncloud/product-service/pull/1728
 ```
+Merge conflict.
 
 ```yaml
 number: 1724
 title: use ssm params
 author: irembbt
 state: open
-mergeable_state: unknown
+mergeable_state: mergeable
 review_state: awaiting-first-review
 requested_reviewers: [abubakarwase, julsjacinto]
 updated: 2026-06-17

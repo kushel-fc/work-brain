@@ -44,7 +44,7 @@ number: 1718
 title: "feat: migrate ECCO FEED to Ona"
 author: alirezaMoazenFashion
 state: open
-mergeable_state: unknown
+mergeable_state: mergeable
 review_state: approved
 requested_reviewers: [abubakarwase, julsjacinto]
 updated: 2026-08-25
@@ -56,19 +56,20 @@ number: 1645
 title: Clean up disabled Dagster automations, and clean up image_sync
 author: dwiajik
 state: open
-mergeable_state: unknown
+mergeable_state: conflicting
 review_state: approved
 requested_reviewers: [irembbt, dushansilva]
 updated: 2026-08-26
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1645
 ```
+Approved but now has a merge conflict.
 
 ```yaml
 number: 1472
 title: Remove obsolete Qubz mapping from No Excess transformation
 author: MuniaL
 state: open
-mergeable_state: unknown
+mergeable_state: mergeable
 review_state: awaiting-first-review
 requested_reviewers: []
 updated: 2026-08-04
@@ -80,24 +81,26 @@ number: 1263
 title: "fix: address lexson review comments"
 author: FCMachineUser
 state: open
-mergeable_state: unknown
+mergeable_state: conflicting
 review_state: awaiting-first-review
 requested_reviewers: [dwiajik, irembbt]
 updated: 2026-07-23
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1263
 ```
+Merge conflict.
 
 ```yaml
 number: 1120
 title: Support/bestseller feed2
 author: Busra040
 state: open
-mergeable_state: unknown
+mergeable_state: conflicting
 review_state: approved
 requested_reviewers: []
 updated: 2026-07-16
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1120
 ```
+Approved but now has a merge conflict.
 
 ```yaml
 number: 1058
@@ -105,19 +108,20 @@ title: Fix grpcio/protobuf version conflict breaking Dagster Cloud deployment jo
 author: app/copilot-swe-agent
 state: open
 draft: true
-mergeable_state: unknown
+mergeable_state: conflicting
 review_state: awaiting-first-review
 requested_reviewers: [Chamindu36]
 updated: 2026-07-07
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1058
 ```
+Merge conflict (fittingly, given the PR title).
 
 ```yaml
 number: 1055
 title: Fix Falke order settings transformation
 author: MuniaL
 state: open
-mergeable_state: unknown
+mergeable_state: mergeable
 review_state: approved
 requested_reviewers: []
 updated: 2026-07-07

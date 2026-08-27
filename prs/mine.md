@@ -23,9 +23,9 @@ title: Remove 13 offboarded/ex-customer brands from brands_on_megatron
 author: kushel-fc
 state: open
 mergeable_state: mergeable
-review_state: awaiting-first-review
+review_state: approved
 requested_reviewers: [abubakarwase, alirezaMoazenFashion]
-updated: 2026-08-25
+updated: 2026-08-27
 url: https://github.com/fashioncloud/product-service/pull/2545
 ```
-CodeRabbit approved; no human review yet.
+Approved — ready to merge, not yet merged.

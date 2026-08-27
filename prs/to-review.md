@@ -3,6 +3,21 @@
 PRs where Kushel is a requested reviewer. Populated on sync.
 
 ```yaml
+number: 2514
+repo: product-service
+title: "feat(llm-based-agent-setup): add mutations tool group for SKU reprocessing and mapping-rule updates"
+author: dushansilva
+state: open
+draft: true
+mergeable_state: mergeable
+review_state: changes-requested
+requested_reviewers: [irembbt, kushel-fc, dwiajik, julsjacinto]
+updated: 2026-08-25
+url: https://github.com/fashioncloud/product-service/pull/2514
+```
+New — Kushel added as requested reviewer since last sync. Draft, already has Changes Requested from someone else.
+
+```yaml
 number: 2558
 repo: product-service
 title: verweijFashion brand migration
