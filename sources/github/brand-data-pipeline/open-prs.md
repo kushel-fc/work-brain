@@ -3,80 +3,44 @@
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
 ```yaml
-number: 1736
-title: pointtec brand migration
-author: abirprantofc
+number: 1749
+title: added ai tags - calida
+author: honeypsabu
 state: open
+mergeable_state: mergeable
+review_state: approved
+requested_reviewers: []
+updated: 2026-08-28
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1749
+```
+New. Not his — no individual reviewers requested.
+
+```yaml
+number: 1747
+title: Update cron schedules for image sync across multiple brand configurations
+author: Chamindu36
+state: open
+mergeable_state: unknown
+review_state: approved
+requested_reviewers: []
+updated: 2026-08-28
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1747
+```
+New. Not his.
+
+```yaml
+number: 1744
+title: "feat: allow experimental.xml_sax_parsing in feed_config.json validator"
+author: dwiajik
+state: open
+draft: true
 mergeable_state: unknown
 review_state: awaiting-first-review
 requested_reviewers: []
 updated: 2026-08-27
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/1736
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1744
 ```
-New. Companion/earlier-phase PR to #1734 below (same title, same author) — no individual reviewers requested yet.
-
-```yaml
-number: 1734
-title: pointtec brand migration
-author: abirprantofc
-state: open
-mergeable_state: unknown
-review_state: approved
-requested_reviewers: [kushel-fc]
-updated: 2026-08-27
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/1734
-```
-New — Kushel added as a requested reviewer. Already approved by dwiajik; mergeable/CI state is flapping between clean and unknown on repeated checks (GitHub still computing) — see [`prs/to-review.md`](../../../prs/to-review.md).
-
-```yaml
-number: 1732
-title: Migrate ilseJacobsen FEED
-author: marianabassi
-state: open
-mergeable_state: unknown
-review_state: awaiting-first-review
-requested_reviewers: []
-updated: 2026-08-26
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/1732
-```
-Mergeable state reads inconsistently (mergeable/conflicting/unknown across repeated checks) — GitHub still computing.
-
-```yaml
-number: 1731
-title: verweijFashion brand migration
-author: marianabassi
-state: open
-mergeable_state: unknown
-review_state: approved
-requested_reviewers: []
-updated: 2026-08-26
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/1731
-```
-Flipped from awaiting-first-review to approved since last sync.
-
-```yaml
-number: 1720
-title: D-Brand brand migration
-author: alirezaMoazenFashion
-state: open
-mergeable_state: unknown
-review_state: awaiting-first-review
-requested_reviewers: []
-updated: 2026-08-25
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/1720
-```
-
-```yaml
-number: 1718
-title: "feat: migrate ECCO FEED to Ona"
-author: alirezaMoazenFashion
-state: open
-mergeable_state: unknown
-review_state: approved
-requested_reviewers: [abubakarwase, julsjacinto]
-updated: 2026-08-25
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/1718
-```
+New. Draft, not his.
 
 ```yaml
 number: 1645
@@ -86,10 +50,10 @@ state: open
 mergeable_state: unknown
 review_state: approved
 requested_reviewers: [irembbt, dushansilva]
-updated: 2026-08-26
+updated: 2026-08-28
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1645
 ```
-Was showing a merge conflict as of last sync; now reads unknown (mergeability recomputing) rather than confirmed conflicting.
+Mergeable state still reading unknown across repeated checks — not a confirmed conflict.
 
 ```yaml
 number: 1472
@@ -114,7 +78,6 @@ requested_reviewers: [dwiajik, irembbt]
 updated: 2026-07-23
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1263
 ```
-Was showing a merge conflict as of last sync; now reads unknown.
 
 ```yaml
 number: 1120
@@ -127,7 +90,6 @@ requested_reviewers: []
 updated: 2026-07-16
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1120
 ```
-Was showing a merge conflict as of last sync; now reads unknown.
 
 ```yaml
 number: 1058
@@ -141,7 +103,6 @@ requested_reviewers: [Chamindu36]
 updated: 2026-07-07
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1058
 ```
-Was showing a merge conflict as of last sync (fittingly, given the PR title); now reads unknown.
 
 ```yaml
 number: 1055

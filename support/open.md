@@ -13,16 +13,16 @@ url: https://linear.app/fashioncloud/issue/BDD-2957/dual-archive-g-star-archivin
 ```
 PIPE's dual-archive output is malformed (truncated, unclosed tags) vs. the pre-archive copy — blocks Megatron price import.
 
-```yaml
-id: BDD-3136
-title: Pricat backup file Studio Anneloes (FD: 672750)
-priority: High
-updated: 2026-08-26
-url: https://linear.app/fashioncloud/issue/BDD-3136/pricat-backup-file-studio-anneloes-fd-672750
-```
-Backup Pricat file repeatedly lands at 0 bytes — breaks Lobster order-based Pricat generation.
-
 ## Medium
+
+```yaml
+id: BDD-3150
+title: PIPE/Megatron Pipeline mismatch in processing capability for prices (FD: 674378)
+priority: Medium
+updated: 2026-08-27
+url: https://linear.app/fashioncloud/issue/BDD-3150/pipemegatron-pipeline-mismatch-in-processing-capability-for-prices-fd
+```
+New — PIPE can process price files >500MB that Megatron's parser can't; dual-archiving now writes files Megatron will choke on. Needs a design decision, not just a fix.
 
 ```yaml
 id: BDD-2539
@@ -70,24 +70,6 @@ url: https://linear.app/fashioncloud/issue/BDD-3107/blue-seven-ai-generated-imag
 IPTC metadata stripped somewhere in the download pipeline.
 
 ```yaml
-id: BDD-3111
-title: "PIPE: Bazlen FEED2 data not showing up in sku lifecycle (FD: 673391)"
-priority: Medium
-updated: 2026-08-21
-url: https://linear.app/fashioncloud/issue/BDD-3111/pipe-bazlen-feed2-data-not-showing-up-in-sku-lifecycle-fd-673391
-```
-Re-uploaded file's GTINs land in backend_db but not sku lifecycle — no visible run error.
-
-```yaml
-id: BDD-3115
-title: Ned International Bulk reprocess gtins (FD: 673878)
-priority: Medium
-updated: 2026-08-24
-url: https://linear.app/fashioncloud/issue/BDD-3115/ned-international-bulk-reprocess-gtins-fd-673878
-```
-~40K GTINs need a force-update reprocess after a transform issue.
-
-```yaml
 id: BDD-3129
 title: "Fwd: Dringend: Ansprechpartner (FD: 674136)"
 priority: Medium
@@ -95,15 +77,6 @@ updated: 2026-08-25
 url: https://linear.app/fashioncloud/issue/BDD-3129/fwd-dringend-ansprechpartner-fd-674136
 ```
 Forwarded internal email, unclear ask — needs triage to figure out what's being requested.
-
-```yaml
-id: BDD-2945
-title: Differences in platform and OW (FD: 659386)
-priority: Medium
-updated: 2026-08-26
-url: https://linear.app/fashioncloud/issue/BDD-2945/differences-in-platform-and-ow-fd-659386
-```
-Assigned to Irem Bulut. Article count mismatch (199 vs 197) for Fabienne SS27.
 
 ```yaml
 id: BDD-3103

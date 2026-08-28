@@ -3,6 +3,38 @@
 Capped at ~25 most recent. Older entries move to `../archive/support/`. Sourced from team BDD Done/Deployed issues carrying an FD reference.
 
 ```yaml
+id: BDD-3111
+title: "PIPE: Bazlen FEED2 data not showing up in sku lifecycle (FD: 673391)"
+priority: Medium
+closed: 2026-08-27
+url: https://linear.app/fashioncloud/issue/BDD-3111/pipe-bazlen-feed2-data-not-showing-up-in-sku-lifecycle-fd-673391
+```
+
+```yaml
+id: BDD-3115
+title: Ned International Bulk reprocess gtins (FD: 673878)
+priority: Medium
+closed: 2026-08-27
+url: https://linear.app/fashioncloud/issue/BDD-3115/ned-international-bulk-reprocess-gtins-fd-673878
+```
+
+```yaml
+id: BDD-3136
+title: Pricat backup file Studio Anneloes (FD: 672750)
+priority: High
+closed: 2026-08-27
+url: https://linear.app/fashioncloud/issue/BDD-3136/pricat-backup-file-studio-anneloes-fd-672750
+```
+
+```yaml
+id: BDD-2945
+title: Differences in platform and OW (FD: 659386)
+priority: Medium
+closed: 2026-08-27
+url: https://linear.app/fashioncloud/issue/BDD-2945/differences-in-platform-and-ow-fd-659386
+```
+
+```yaml
 id: BDD-3133
 title: MSCH Copenhagen items deletion (FD: 674161)
 priority: Low

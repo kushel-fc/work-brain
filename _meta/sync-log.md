@@ -2,6 +2,17 @@
 
 One entry per sync run. Prune entries older than ~30 days.
 
+## 2026-08-28 (08:05 UTC)
+
+- Big PR wave from 2026-08-27 landed: 6 brand-migration PRs on brand-data-pipeline (incl. #1734/#1736 "pointtec brand migration") and 9 on product-service all closed. His to-review queue on brand-data-pipeline is now empty — #1734, which was waiting on him, got merged by abirprantofc without his review.
+- His own PR #2545 (remove 13 offboarded brands from brands_on_megatron) — he closed it himself (not merged) after an open question came up about how to handle certain GTINs; will re-visit as a batch. His other own PR, #2520, is unchanged: still Changes Requested from Chamindu36, now 3+ days.
+- New PRs adding him as reviewer: product-service #2576 (Enable Sanetta on PIPE, already Approved) and #2569 (publishing job for size/color/style events, no reviews yet).
+- Linear: BDD-3136, BDD-2945, BDD-3115, BDD-3111 all moved Triage → Done since last sync (moved to `support/recently-closed.md`). New Triage item BDD-3150 (Medium, PIPE/Megatron 500MB parser mismatch for price files). New assignment for Kushel: BDD-3036 (Noah Group sketch-flag bug, Medium, To Do).
+- BDD-3103's Aug 25 deadline is now 3 days passed, still no movement.
+- Slack: 16 new Dagster alerts since last sync (2026-08-27 08:09 UTC through this morning). Notable: a "connector_type undefined" credential-config error now spans 5 brands (gabba, endurance x2, guidoMariaKretschmer, ecco, verweijFashion) over 24h — looks systemic, not a one-off; guess/FEED and dBrand/FEED each failed twice more; alberto hit a second OOM (team decided to bump its resource size); bruehl's "no valid SKUs" failure was root-caused to EAN values corrupted into Excel scientific notation in the source file (same symptom hit citizen, unconfirmed root cause there).
+- Dagster onaDkCompany FEED from 2026-08-26 is still shown active, now ~2 days past its 3h limit with zero Slack follow-up across three sync cycles.
+- Notified: no — nothing crossed the notification bar (BDD-3103's deadline was already flagged as passed in prior syncs, not newly reached; no flip to conflict/Changes-Requested on his own open work — #2520 unchanged and #2545 was a self-closure, not an externally-forced one; no new Urgent unassigned ticket; the recurring Dagster alerts this cycle were already active/unresolved before, not alerts that had self-resolved and then came back).
+
 ## 2026-08-27 (08:36 UTC)
 
 - New: Kushel added as a requested reviewer on brand-data-pipeline PR #1734 ("pointtec brand migration") — already Approved by dwiajik, he's the outstanding reviewer. Added to `today.md`.

@@ -5,6 +5,20 @@ Assigned to Kushel, live (non-completed) statuses. Populated on sync — complet
 ---
 
 ```yaml
+id: BDD-3036
+title: Noah Group - Sketch flag doesn't disappear after removal (FD: 671937)
+priority: Medium
+status: To Do
+assignee: Kushel Ramanayake
+team: BDD
+updated: 2026-08-27
+url: https://linear.app/fashioncloud/issue/BDD-3036/noah-group-sketch-flag-doesnt-disappear-after-removal-fd-671937
+```
+New. Removed the sketch-flag logic for noahGroup and reprocessed, but `isPreliminary` cleared from feed_transform without clearing from mergedSkus — follow-up needed.
+
+---
+
+```yaml
 id: BDD-2567
 title: Add FTP/SFTP support for video downloading
 priority: No priority

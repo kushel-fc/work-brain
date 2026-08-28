@@ -5,6 +5,20 @@ Full raw Triage view (team BDD) — https://linear.app/fashioncloud/team/BDD/tri
 ---
 
 ```yaml
+id: BDD-3150
+title: PIPE/Megatron Pipeline mismatch in processing capability for prices (FD: 674378)
+priority: Medium
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-08-27
+url: https://linear.app/fashioncloud/issue/BDD-3150/pipemegatron-pipeline-mismatch-in-processing-capability-for-prices-fd
+```
+New. Megatron's XML parser caps out at 500MB; PIPE can process larger files so dual-archives files (PME Legend PD import) that Megatron could never process — previously masked by DIMs manually chunking files. Needs a design decision.
+
+---
+
+```yaml
 id: BDD-2957
 title: "[dual-archive] G-star archiving creates a malformed/incomplete file (FD: 662655)"
 priority: High
@@ -15,34 +29,6 @@ updated: 2026-08-26
 url: https://linear.app/fashioncloud/issue/BDD-2957/dual-archive-g-star-archiving-creates-a-malformedincomplete-file-fd
 ```
 Dual archiving for Megatron price import — PIPE output is malformed (1-2K lines removed, closing tags missing) vs. the pre-processed copy.
-
----
-
-```yaml
-id: BDD-3136
-title: Pricat backup file Studio Anneloes (FD: 672750)
-priority: High
-status: Triage
-assignee: unassigned
-team: BDD
-updated: 2026-08-26
-url: https://linear.app/fashioncloud/issue/BDD-3136/pricat-backup-file-studio-anneloes-fd-672750
-```
-Backup Pricat file in backups/uploads/prices repeatedly landing at 0 bytes — breaks Lobster order-based Pricat generation.
-
----
-
-```yaml
-id: BDD-2945
-title: Differences in platform and OW (FD: 659386)
-priority: Medium
-status: Triage
-assignee: Irem Bulut
-team: BDD
-updated: 2026-08-26
-url: https://linear.app/fashioncloud/issue/BDD-2945/differences-in-platform-and-ow-fd-659386
-```
-Article count mismatch (199 vs 197) for Fabienne SS27 between OW and platform.
 
 ---
 
@@ -141,34 +127,6 @@ updated: 2026-08-24
 url: https://linear.app/fashioncloud/issue/BDD-3117/fw-pme-stockbase-fd-672891
 ```
 Forwarded stockbase question, original contact out of office.
-
----
-
-```yaml
-id: BDD-3115
-title: Ned International Bulk reprocess gtins (FD: 673878)
-priority: Medium
-status: Triage
-assignee: unassigned
-team: BDD
-updated: 2026-08-24
-url: https://linear.app/fashioncloud/issue/BDD-3115/ned-international-bulk-reprocess-gtins-fd-673878
-```
-~40K GTINs missing manufacturerAttribute.colorName.en due to a transform issue — needs force-update reprocess.
-
----
-
-```yaml
-id: BDD-3111
-title: "PIPE: Bazlen FEED2 data not showing up in sku lifecycle (FD: 673391)"
-priority: Medium
-status: Triage
-assignee: unassigned
-team: BDD
-updated: 2026-08-21
-url: https://linear.app/fashioncloud/issue/BDD-3111/pipe-bazlen-feed2-data-not-showing-up-in-sku-lifecycle-fd-673391
-```
-Re-uploaded FEED2 file's GTINs show in backend_db but not sku lifecycle as FEED2 — no error visible in the run.
 
 ---
 

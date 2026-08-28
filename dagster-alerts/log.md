@@ -3,6 +3,166 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
+timestamp: 2026-08-28T07:48:04Z
+channel: brand-data-dev-alerts
+brand: verweijFashion
+summary: verweijFashion/FEED — 10 asset materializations failed (unsupported connector_type in FTP/SFTP credential item)
+status: active
+linked_issue: null
+```
+Same "Unsupported connector_type 'undefined'" credential error seen repeatedly across brands since yesterday morning (gabba, endurance, guidoMariaKretschmer, ecco — see below). Aji flagged the specific credential item, cc'd Mariana.
+
+```yaml
+timestamp: 2026-08-27T22:03:09Z
+channel: brand-data-dev-alerts
+brand: sOliver
+summary: sOliver__FEED__trigger_enrichment_from_map — container exited, exit code 1
+status: active
+linked_issue: null
+```
+No thread or reaction visible.
+
+```yaml
+timestamp: 2026-08-27T16:26:02Z
+channel: brand-data-dev-alerts
+brand: guess
+summary: guess__FEED__trigger_enrichment_from_map — container exited, exit code 137 (OOM)
+status: recurring
+linked_issue: null
+```
+Second OOM on the same failing step within ~15 minutes (see entry below) — no reaction/thread this time.
+
+```yaml
+timestamp: 2026-08-27T16:10:58Z
+channel: brand-data-dev-alerts
+brand: guess
+summary: guess__FEED__trigger_enrichment_from_map — container exited, exit code 137 (OOM)
+status: recurring
+linked_issue: null
+```
+raising_hand reaction only.
+
+```yaml
+timestamp: 2026-08-27T15:34:50Z
+channel: brand-data-dev-alerts
+brand: dBrand
+summary: dBrand/FEED — 10 asset materializations failed
+status: recurring
+linked_issue: null
+```
+Second failure on this brand within ~8 minutes (see entry below) — no thread or reaction visible.
+
+```yaml
+timestamp: 2026-08-27T15:26:18Z
+channel: brand-data-dev-alerts
+brand: dBrand
+summary: dBrand/FEED — 10 asset materializations failed
+status: recurring
+linked_issue: null
+```
+No thread or reaction visible.
+
+```yaml
+timestamp: 2026-08-27T15:18:15Z
+channel: brand-data-dev-alerts
+brand: ecco
+summary: ecco/FEED — 10 asset materializations failed (unsupported connector_type in FTP/SFTP credential item)
+status: active
+linked_issue: null
+```
+Same connector_type credential-config issue as gabba/endurance/guidoMariaKretschmer. Kushel flagged the credential item to Alireza directly ("Credential should be updated").
+
+```yaml
+timestamp: 2026-08-27T14:08:02Z
+channel: brand-data-dev-alerts
+brand: citizen
+summary: citizen/FEED — 11 asset materializations failed (no valid SKUs produced)
+status: active
+linked_issue: null
+```
+Aji: rows were read from the extracted CSV but no valid SKUs were produced — relevantJsonObject/gtinField path may be wrong. Same symptom as bruehl below.
+
+```yaml
+timestamp: 2026-08-27T12:49:15Z
+channel: brand-data-dev-alerts
+brand: tommyHilfiger
+summary: tommyHilfiger__FEED__trigger_enrichment_from_map — container exited, exit code 1
+status: active
+linked_issue: null
+```
+raising_hand reaction only, no resolution visible.
+
+```yaml
+timestamp: 2026-08-27T11:54:32Z
+channel: brand-data-dev-alerts
+brand: platform (enrichment_file_sensor)
+summary: 5 asset materializations failed (map, merge, publish_from_map, process_enrichment...)
+status: active
+linked_issue: null
+```
+No thread or reaction visible.
+
+```yaml
+timestamp: 2026-08-27T09:53:26Z
+channel: brand-data-dev-alerts
+brand: bruehl
+summary: bruehl/FEED — 11 asset materializations failed (no valid SKUs produced)
+status: active
+linked_issue: null
+```
+Aji dug in and found the root cause: all 3,795 rows in the Brühl CSV have `EANCode` corrupted into Excel scientific notation (e.g. `4,04147E+12`) instead of a real 13-digit GTIN — a source data-quality issue, not a pipeline bug. No fix/re-request to the brand confirmed yet.
+
+```yaml
+timestamp: 2026-08-27T09:24:48Z
+channel: brand-data-dev-alerts
+brand: camelActive
+summary: camelActive/FEED2 — 11 asset materializations failed
+status: active
+linked_issue: null
+```
+Aji stopped the hanging job and said he'd reprocess the data.
+
+```yaml
+timestamp: 2026-08-27T09:21:47Z
+channel: brand-data-dev-alerts
+brand: guidoMariaKretschmer
+summary: guidoMariaKretschmer/FEED — 10 asset materializations failed (unsupported connector_type in FTP/SFTP credential item)
+status: active
+linked_issue: null
+```
+Same connector_type credential-config issue as gabba/endurance. Kushel flagged Alireza and pointed him to Abir for help.
+
+```yaml
+timestamp: 2026-08-27T08:51:09Z
+channel: brand-data-dev-alerts
+brand: pmeLegend
+summary: pmeLegend/FEED — 11 asset materializations failed
+status: active
+linked_issue: null
+```
+Aji stopped the hanging job and said he'd reprocess the data.
+
+```yaml
+timestamp: 2026-08-27T08:50:08Z
+channel: brand-data-dev-alerts
+brand: alberto
+summary: alberto__FEED__publish_from_map — container exited, exit code 137 (OOM)
+status: recurring
+linked_issue: null
+```
+Second OOM on this brand/step (previous one 2026-08-27T07:30:45Z). Kushel asked Aji whether to increase the resource size — Aji agreed.
+
+```yaml
+timestamp: 2026-08-27T08:24:00Z
+channel: brand-data-dev-alerts
+brand: endurance
+summary: endurance/FEED — 10 asset materializations failed (unsupported connector_type in FTP/SFTP credential item)
+status: recurring
+linked_issue: null
+```
+Second occurrence of the same credential-config issue for this brand (previous 2026-08-27T07:46:50Z) — part of a wider pattern hitting multiple brands this week (gabba, guidoMariaKretschmer, ecco, verweijFashion), looks like a systemic brand-onboarding credential gap rather than a one-off.
+
+```yaml
 timestamp: 2026-08-27T07:51:52Z
 channel: brand-data-dev-alerts
 brand: gabba
