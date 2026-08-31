@@ -2,6 +2,19 @@
 
 One entry per sync run. Prune entries older than ~30 days.
 
+## 2026-08-31 (08:41 UTC)
+
+- **Linear unavailable this run**: the Linear MCP server requires interactive OAuth, which isn't available in this non-interactive scheduled run. All Linear-derived files (`sources/linear/*`, `support/*`) are unchanged, carried forward from the 2026-08-28 pull, and flagged with a staleness note. `today.md`/`this-week.md` still surfaced BDD-3103's deadline (now 6 days passed) since the deadline date itself doesn't need a fresh pull to compute.
+- His own PR #2520 (BDD-2567) made real progress: he pushed a fix on 08-28 addressing julsjacinto's review, and julsjacinto + dwiajik have since approved. Aggregate state still reads `changes-requested` only because Chamindu36 (requested changes 08-24) hasn't re-reviewed — reframed in `today.md` from "stalled" to "needs a nudge."
+- PR wave: #2576 (product-service, Enable Sanetta) merged 08-28 without needing his review. Three brand-data-pipeline PRs also merged 08-28: #1749 (calida ai tags), #1747 (cron schedules), #1645 (clean up disabled Dagster automations) — none were his to review. All four archived.
+- New: he's now an individually-requested reviewer on brand-data-pipeline #1766 ("Staging Release - 2026-08-31") — his review queue there is active again after a few quiet days.
+- PR #2569 (he's a requested reviewer, not his own) flipped from mergeable to a merge conflict since last sync — still no reviews from any of the 4 requested reviewers.
+- 7 new open PRs surfaced on product-service (#2600, #2599, #2598, #2595, #2589, #2587, #2586) and 1 on brand-data-pipeline (#1763) — none involve Kushel as reviewer.
+- BDD-3103's Aug 25 deadline is now 6 days passed (per last Linear pull — status unconfirmed this cycle).
+- Slack: 6 new items since 08-28 07:48 UTC. Notable: the "no valid SKUs" EAN-corruption pattern hit a third brand (calida, self-resolved/ignorable — same root cause as bruehl/citizen). The Megatron→Backend image-processing-delay alert recurred (self-resolved again after ~23h, no human intervention either time). Two new one-off failures with no follow-up: verweijFashion_FEED exceeded its 3h limit, and muellerMeirer's image-sync cron failed with a Lambda "Cannot find module 'index'" error (looks like a packaging/deploy issue). The connector_type credential error that spread across 5 brands has gone quiet — no new occurrences since 08-27.
+- Dagster onaDkCompany FEED from 2026-08-26 is still shown active, now ~5 days past its 3h limit with zero Slack follow-up across five sync cycles.
+- Notified: no — nothing crossed the notification bar (BDD-3103's deadline already flagged as passed in prior syncs, and unconfirmed this cycle rather than newly reached; no flip to conflict/Changes-Requested on his own open work — #2520 is improving, not worsening, and #2569's conflict flip isn't his own PR; no new Urgent unassigned ticket confirmable, Linear unavailable; the Megatron→Backend alert's recurrence continues a pattern already tagged `recurring` from prior syncs rather than a fresh flip from self-resolved).
+
 ## 2026-08-28 (08:05 UTC)
 
 - Big PR wave from 2026-08-27 landed: 6 brand-migration PRs on brand-data-pipeline (incl. #1734/#1736 "pointtec brand migration") and 9 on product-service all closed. His to-review queue on brand-data-pipeline is now empty — #1734, which was waiting on him, got merged by abirprantofc without his review.

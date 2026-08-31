@@ -2,6 +2,8 @@
 
 Full raw Triage view (team BDD) — https://linear.app/fashioncloud/team/BDD/triage. Populated on sync. The FD-referenced/support-shaped subset of this list is curated into [`support/open.md`](../../support/open.md).
 
+_Last refreshed 2026-08-28 — the 2026-08-31 sync couldn't reach Linear (no interactive OAuth session for the Linear MCP server in this non-interactive run)._
+
 ---
 
 ```yaml

@@ -2,6 +2,8 @@
 
 FD-sourced/support-shaped tickets, by priority then age (oldest first within each tier). Sourced from the team BDD Triage view: https://linear.app/fashioncloud/team/BDD/triage. Populated on sync. Full raw Triage list (including non-FD internal items) lives in [`sources/linear/triage.md`](../sources/linear/triage.md).
 
+_Last refreshed 2026-08-28 — the 2026-08-31 sync couldn't reach Linear (no interactive OAuth session for the Linear MCP server in this non-interactive run)._
+
 ## High
 
 ```yaml

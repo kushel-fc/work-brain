@@ -6,10 +6,10 @@ Everything in [`today.md`](today.md), plus:
 - **[PR #2514](prs/to-review.md)** (to review, draft) — has Changes Requested from someone else.
 - **[PR #1874](prs/to-review.md)** (to review, draft) — CodeRabbit approved.
 - **[PR #1756](prs/to-review.md)** (to review, draft) — stale, ~2 months with no activity.
-- His brand-data-pipeline review queue is now empty — a wave of 6 brand-migration PRs (including #1734, which had been waiting on him) merged on 2026-08-27 without needing further action from him. See [`archive/prs/brand-data-pipeline.md`](archive/prs/brand-data-pipeline.md).
-- His own PR #2545 ("Remove 13 offboarded brands from brands_on_megatron") — he closed it himself 2026-08-27 to re-visit as a batch later, after an open question came up about how to handle certain GTINs.
+- His brand-data-pipeline review queue is active again after being empty for a few days — see [PR #1766](prs/to-review.md) in `today.md`.
 
 ## Aged, unassigned Triage tickets (visibility only — not necessarily his)
+_From the last Linear pull, 2026-08-28 — not refreshed this sync._
 - [BDD-2497](support/open.md) (Low) — open since 2026-07-08.
 - [BDD-2530](support/open.md) (Low) — open since 2026-07-09.
 - [BDD-2539](support/open.md) (Medium) — open since 2026-07-13.
@@ -23,12 +23,11 @@ Everything in [`today.md`](today.md), plus:
 - [Video download delivery](shaping/video-download-delivery.md) — parked since 2026-08-10, technical options unsettled. Still relevant given active work this week on BDD-2567/BDD-2258/PR #2520, all in the same area.
 
 ## Dagster — recurring patterns to watch
-- **Credential/connector_type config issue — spreading, not resolving.** "Unsupported connector_type 'undefined'" has now hit gabba, endurance (twice), guidoMariaKretschmer, ecco, and verweijFashion (this morning) over the past 24h — looks like a systemic brand-onboarding credential gap rather than one bad brand. Kushel has flagged each occurrence to Alireza/Abir in-thread; no fix confirmed yet.
-- **guess/FEED — OOM (exit 137) recurring.** Fired twice more yesterday evening (18:10 and 18:26 CEST) on the same `trigger_enrichment_from_map` step.
-- **dBrand/FEED — recurring, no thread.** Fired twice yesterday afternoon (~8 min apart), no visible follow-up either time.
-- **alberto/FEED — OOM (exit 137) recurring.** Second OOM on `publish_from_map`; Kushel and Aji agreed to increase the resource size.
-- **"No valid SKUs produced" pattern — bruehl and citizen.** Same relevantJsonObject/gtinField symptom on two different brands within hours. Root cause traced for bruehl: all 3,795 rows have `EANCode` corrupted into Excel scientific notation in the source file — a data-quality issue upstream, not a pipeline bug. Citizen's root cause unconfirmed.
+- **"No valid SKUs produced" pattern — now three brands.** Same relevantJsonObject/gtinField symptom hit calida (2026-08-31) after bruehl and citizen. Root cause traced for bruehl: EAN values corrupted into Excel scientific notation in the source file — a brand data-quality issue, not a pipeline bug. Same call made for calida (ignorable). Citizen's root cause is still unconfirmed.
+- **Megatron → Backend image processing delay — recurring again.** Same alert (backend-service-UNPROCESSED-IMAGE-RECEIVED) that self-resolved 2026-08-23 fired again 2026-08-29→08-30 (~23h), also self-resolving with no human intervention either time.
+- **Credential/connector_type config issue — gone quiet.** No new "Unsupported connector_type 'undefined'" occurrences since 2026-08-27 (had hit gabba, endurance, guidoMariaKretschmer, ecco, verweijFashion) — possibly fixed, unconfirmed.
+- **Two new one-off failures worth a look:** verweijFashion_FEED exceeded its 3h run limit (2026-08-28, no follow-up) and muellerMeirer's image-sync cron failed with a Lambda `Cannot find module 'index'` error (2026-08-28, no follow-up) — the latter looks like a packaging/deploy issue rather than brand data.
 - Full log: [`dagster-alerts/log.md`](dagster-alerts/log.md).
 
 ## Standing reminder
-- [BDD-1721](sources/linear/my-issues.md) (Medium, Tech Debt) — "Fix images failing silently with no error message captured," Ready to Start, untouched for over 3 months.
+- [BDD-1721](sources/linear/my-issues.md) (Medium, Tech Debt) — "Fix images failing silently with no error message captured," Ready to Start, untouched for over 3 months (per last Linear pull, 2026-08-28).

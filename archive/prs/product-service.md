@@ -123,3 +123,14 @@ merged: false
 closed: 2026-08-27
 url: https://github.com/fashioncloud/product-service/pull/1744
 ```
+
+```yaml
+number: 2576
+title: Enable Sanetta on PIPE
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-08-28
+url: https://github.com/fashioncloud/product-service/pull/2576
+```
+Kushel was a requested reviewer; merged without needing his review.

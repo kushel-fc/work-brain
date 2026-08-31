@@ -63,3 +63,33 @@ merged: true
 closed: 2026-08-27
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1718
 ```
+
+```yaml
+number: 1749
+title: added ai tags - calida
+author: honeypsabu
+state: closed
+merged: true
+closed: 2026-08-28
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1749
+```
+
+```yaml
+number: 1747
+title: Update cron schedules for image sync across multiple brand configurations
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-08-28
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1747
+```
+
+```yaml
+number: 1645
+title: Clean up disabled Dagster automations, and clean up image_sync
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-08-28
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1645
+```

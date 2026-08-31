@@ -3,6 +3,66 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
+timestamp: 2026-08-31T07:53:05Z
+channel: brand-data-dev-alerts
+brand: calida
+summary: calida/FEED — 11 asset materializations failed (no valid SKUs — EAN format)
+status: self-resolved
+linked_issue: null
+```
+Same "no valid SKUs produced" / relevantJsonObject-gtinField symptom as bruehl and citizen (see below) — third brand hit by this pattern. honey.sabu confirmed it's the brand uploading a bad EAN format and can be ignored; Aji closed it out in-thread within ~7 minutes.
+
+```yaml
+timestamp: 2026-08-30T15:41:59Z
+channel: brand-data-dev-alerts
+brand: platform (Megatron → Backend)
+summary: Delays in image processing flow between Megatron and Backend (backend-service-UNPROCESSED-IMAGE-RECEIVED)
+status: recurring
+linked_issue: null
+```
+Same alert as the 2026-08-20→08-23 incident, firing again. Warned 08-29 16:58 UTC, recovered 08-30 15:41 UTC (~23h) with no human thread activity either time — appears to clear itself without intervention.
+
+```yaml
+timestamp: 2026-08-29T10:55:34Z
+channel: brand-data-dev-alerts
+brand: platform (galvatron ECS)
+summary: ECS health check failures detected for galvatron service
+status: self-resolved
+linked_issue: null
+```
+Triggered 10:52 UTC, recovered ~3 minutes later — brief blip, no thread.
+
+```yaml
+timestamp: 2026-08-29T06:03:29Z
+channel: brand-data-dev-alerts
+brand: platform (product-service-logs-index)
+summary: Log Index daily ingestion quota reached (100%), logging paused for the index
+status: self-resolved
+linked_issue: null
+```
+Warning threshold (85%) fired 08-28 14:20 UTC, escalated to 100%/quota-reached 08-28 19:03 UTC, recovered when the daily quota reset 08-29 06:03 UTC.
+
+```yaml
+timestamp: 2026-08-28T12:17:56Z
+channel: brand-data-dev-alerts
+brand: muellerMeirer
+summary: muellerMeirer_FEED_cron_image_sync_schedule run failed — Runtime.ImportModuleError, Cannot find module 'index'
+status: active
+linked_issue: null
+```
+Looks like a Lambda packaging/deploy issue rather than a data problem — no thread or follow-up visible.
+
+```yaml
+timestamp: 2026-08-28T11:40:44Z
+channel: brand-data-dev-alerts
+brand: verweijFashion
+summary: verweijFashion_FEED run exceeded 3h time limit
+status: active
+linked_issue: null
+```
+Started 08:40 UTC — distinct from verweijFashion's connector_type credential failure logged below the same morning. No thread or reaction visible.
+
+```yaml
 timestamp: 2026-08-28T07:48:04Z
 channel: brand-data-dev-alerts
 brand: verweijFashion
@@ -210,7 +270,7 @@ summary: ona__dkCompany_FEED run exceeded 3h time limit
 status: active
 linked_issue: null
 ```
-Run 161bb902 started 13:24 UTC 08-26, still shown active as of last check. Over 15h with no follow-up or resolution visible in channel — worth a look if not already handled outside Slack.
+Run 161bb902 started 13:24 UTC 08-26, still shown active as of last check (now ~5 days past its 3h limit). Zero Slack follow-up across five sync cycles — worth confirming it's actually been handled outside the channel, or that the run just never got a completion notification.
 
 ```yaml
 timestamp: 2026-08-26T09:59:35Z
