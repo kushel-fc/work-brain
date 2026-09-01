@@ -3,6 +3,46 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
+timestamp: 2026-08-31T14:12:56Z
+channel: brand-data-dev-alerts
+brand: multiple (fabienne, swarovski, ceceba, denham, sOliver)
+summary: 5 brands' trigger_enrichment_from_map steps failed, container exit code 1
+status: active
+linked_issue: null
+```
+Started right after the ECR/datadog-agent incident below cleared (see next entry) — likely a retry-backlog side effect rather than a recurrence of the same root cause. Aji's reply on the sOliver instance (14:31 UTC) traced it to `AxiosError: Request failed with status code 504` from `DataEnrichmentService.makeRequest` — the internal enrichment service itself was timing out. Not confirmed resolved by end of window (channel goes quiet after 14:31 UTC).
+
+```yaml
+timestamp: 2026-08-31T12:31:00Z
+channel: brand-data-dev-alerts
+brand: platform (ECR / datadog-agent sidecar)
+summary: ~36 brand pipelines plus the analytics_trigger_sensor failed simultaneously — ECS tasks couldn't pull the datadog/agent:7 sidecar image
+status: self-resolved
+linked_issue: null
+```
+Systemic infra incident, not a brand-data issue. First diagnosed on the hoegl_FEED2_cron_schedule run: `CannotPullContainerError: pull image manifest has been retried 7 time(s): failed to resolve ref .../datadog/agent:7 ... not found`. Aji flagged it as a permissions issue; Chamindu confirmed at 12:34 UTC ("It's permissions ... let's update permission for all") and owned the fix. Dushan publicly called it out at 12:39 UTC ("many jobs are failing seems like due to failing to pull dd agent"). Roughly 36 distinct brand/schedule failures hit between 12:31 and 13:06 UTC (hoegl, viaVai, lawOfTheSea, fuchsSchmitt, newZealandAuckland, nile, redraft, airon, mavi, rabe, mustang, carsJeans, ray, katag, gant, pmeLegend, leComte, bruehl, halsueberkopf, picard, lcredi, carloLanza, donders, lerros, lieblingsstueck, beheim, calamar, cecil, lolaLiza, vanBommel, tam, vinciVici, susa, and others), plus the `analytics` sensor firing ~11 times in the same window. No explicit "all clear" was posted, but the error signature changed after ~14:12 UTC (see enrichment-service entry above), implying the ECR pull issue itself was fixed by then — marked self-resolved on that basis, not a confirmed all-clear.
+
+```yaml
+timestamp: 2026-08-31T11:40:11Z
+channel: brand-data-dev-alerts
+brand: ivko
+summary: ivko/FEED — 9 asset materializations failed
+status: active
+linked_issue: null
+```
+No thread or reaction visible. Occurred shortly before the ECR/datadog-agent cascade started — possibly an early, isolated instance of it rather than a separate issue.
+
+```yaml
+timestamp: 2026-08-31T10:03:13Z
+channel: brand-data-dev-alerts
+brand: sOliver
+summary: sOliver/FEED — 12 asset materializations failed (download_images/extract)
+status: active
+linked_issue: null
+```
+Kushel replied in-thread ("fetch failed / Just says this") but no diagnosis or fix confirmed. Distinct from sOliver's later 504 enrichment-timeout failure the same day (see top entry).
+
+```yaml
 timestamp: 2026-08-31T07:53:05Z
 channel: brand-data-dev-alerts
 brand: calida
@@ -268,9 +308,9 @@ channel: brand-data-dev-alerts
 brand: onaDkCompany
 summary: ona__dkCompany_FEED run exceeded 3h time limit
 status: active
-linked_issue: null
+linked_issue: BDD-3167
 ```
-Run 161bb902 started 13:24 UTC 08-26, still shown active as of last check (now ~5 days past its 3h limit). Zero Slack follow-up across five sync cycles — worth confirming it's actually been handled outside the channel, or that the run just never got a completion notification.
+Run 161bb902 started 13:24 UTC 08-26, still shown active as of last check (now ~6 days past its 3h limit). Zero Slack follow-up across six sync cycles. A new High-priority Linear ticket, BDD-3167 "Data completely missing - DKcompany" (FD 675069), was assigned to Kushel 2026-09-01 — likely the customer-facing consequence of this stuck run, though not confirmed. Not mentioned anywhere in this sync's Slack window either.
 
 ```yaml
 timestamp: 2026-08-26T09:59:35Z

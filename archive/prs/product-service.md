@@ -3,6 +3,109 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2520
+title: "BDD-2567 Add FTP/SFTP support for video downloading"
+author: kushel-fc
+state: closed
+merged: true
+closed: 2026-08-31
+url: https://github.com/fashioncloud/product-service/pull/2520
+```
+Kushel's own PR. Merged by Chamindu36, whose 2026-08-24 Changes Requested had been the one holdout after julsjacinto and dwiajik approved — flagged in `today.md` across several syncs before finally clearing.
+
+```yaml
+number: 2600
+title: Staging Release - 2026-08-31
+author: app/github-actions
+state: closed
+merged: true
+closed: 2026-08-31
+url: https://github.com/fashioncloud/product-service/pull/2600
+```
+Merged by kushel-fc.
+
+```yaml
+number: 2599
+title: Match mapping rules case-insensitively in process-enrichment's auto-update
+author: dushansilva
+state: closed
+merged: true
+closed: 2026-08-31
+url: https://github.com/fashioncloud/product-service/pull/2599
+```
+
+```yaml
+number: 2598
+title: Split comma-separated detailedCategory.level1 values before mapping
+author: dushansilva
+state: closed
+merged: true
+closed: 2026-08-31
+url: https://github.com/fashioncloud/product-service/pull/2598
+```
+
+```yaml
+number: 2589
+title: pcs first health endpoint and skeleton
+author: irembbt
+state: closed
+merged: true
+closed: 2026-08-31
+url: https://github.com/fashioncloud/product-service/pull/2589
+```
+
+```yaml
+number: 2586
+title: "fix(io-helpers,job): name the S3 object in mid-transfer stream failures"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-08-31
+url: https://github.com/fashioncloud/product-service/pull/2586
+```
+
+```yaml
+number: 2569
+title: publishing job to publish size, color & style events
+author: julsjacinto
+state: closed
+merged: false
+closed: 2026-08-31
+url: https://github.com/fashioncloud/product-service/pull/2569
+```
+Was in Kushel's to-review queue (flipped to a merge conflict, never got a review from any of the 4 requested reviewers) — closed without merging.
+
+```yaml
+number: 2567
+title: improve preview query
+author: irembbt
+state: closed
+merged: false
+closed: 2026-08-31
+url: https://github.com/fashioncloud/product-service/pull/2567
+```
+
+```yaml
+number: 2564
+title: Preserve Sanetta legacy size system during GTIN migration
+author: FCMachineUser
+state: closed
+merged: false
+closed: 2026-08-31
+url: https://github.com/fashioncloud/product-service/pull/2564
+```
+
+```yaml
+number: 1724
+title: use ssm params
+author: irembbt
+state: closed
+merged: false
+closed: 2026-08-31
+url: https://github.com/fashioncloud/product-service/pull/1724
+```
+
+```yaml
 number: 2545
 title: Remove 13 offboarded/ex-customer brands from brands_on_megatron
 author: kushel-fc

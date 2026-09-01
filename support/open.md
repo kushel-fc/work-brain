@@ -2,47 +2,9 @@
 
 FD-sourced/support-shaped tickets, by priority then age (oldest first within each tier). Sourced from the team BDD Triage view: https://linear.app/fashioncloud/team/BDD/triage. Populated on sync. Full raw Triage list (including non-FD internal items) lives in [`sources/linear/triage.md`](../sources/linear/triage.md).
 
-_Last refreshed 2026-08-28 — the 2026-08-31 sync couldn't reach Linear (no interactive OAuth session for the Linear MCP server in this non-interactive run)._
-
-## High
-
-```yaml
-id: BDD-2957
-title: "[dual-archive] G-star archiving creates a malformed/incomplete file (FD: 662655)"
-priority: High
-updated: 2026-08-26
-url: https://linear.app/fashioncloud/issue/BDD-2957/dual-archive-g-star-archiving-creates-a-malformedincomplete-file-fd
-```
-PIPE's dual-archive output is malformed (truncated, unclosed tags) vs. the pre-archive copy — blocks Megatron price import.
+No High-priority tickets currently sitting unassigned in Triage — the one High item here last sync (BDD-2957) has been picked up and moved to [`sources/linear/my-issues.md`](../sources/linear/my-issues.md).
 
 ## Medium
-
-```yaml
-id: BDD-3150
-title: PIPE/Megatron Pipeline mismatch in processing capability for prices (FD: 674378)
-priority: Medium
-updated: 2026-08-27
-url: https://linear.app/fashioncloud/issue/BDD-3150/pipemegatron-pipeline-mismatch-in-processing-capability-for-prices-fd
-```
-New — PIPE can process price files >500MB that Megatron's parser can't; dual-archiving now writes files Megatron will choke on. Needs a design decision, not just a fix.
-
-```yaml
-id: BDD-2539
-title: "Bilder-API liefert render_requests_exceeded (FD: 645720)"
-priority: Medium
-updated: 2026-07-13
-url: https://linear.app/fashioncloud/issue/BDD-2539/bilder-api-liefert-render-requests-exceeded-fragen-zum-render-limit-fd
-```
-Image API render-limit question, open since July 8 — oldest untouched medium item.
-
-```yaml
-id: BDD-3001
-title: Corrupted images - GUESS (FD: 671049)
-priority: Medium
-updated: 2026-08-03
-url: https://linear.app/fashioncloud/issue/BDD-3001/corrupted-images-guess-fd-671049
-```
-Recurring — same symptom as a prior closed ticket (FD 584227).
 
 ```yaml
 id: BDD-3037
@@ -51,7 +13,7 @@ priority: Medium
 updated: 2026-08-10
 url: https://linear.app/fashioncloud/issue/BDD-3037/artikel-data-florez-komt-niet-door-fd-671579
 ```
-Packshots/model photos not arriving via API for LAVIE Womenswear.
+Packshots/model photos not arriving via API for LAVIE Womenswear — oldest untouched medium item.
 
 ```yaml
 id: BDD-3043
@@ -63,15 +25,6 @@ url: https://linear.app/fashioncloud/issue/BDD-3043/incorrect-delimiter-not-show
 PIPE silently mis-parses on a delimiter mismatch instead of erroring.
 
 ```yaml
-id: BDD-3107
-title: Blue Seven - AI generated image metadata lost via B2X (FD: 673177)
-priority: Medium
-updated: 2026-08-20
-url: https://linear.app/fashioncloud/issue/BDD-3107/blue-seven-ai-generated-image-metadata-is-lost-when-receiving-images
-```
-IPTC metadata stripped somewhere in the download pipeline.
-
-```yaml
 id: BDD-3129
 title: "Fwd: Dringend: Ansprechpartner (FD: 674136)"
 priority: Medium
@@ -81,24 +34,6 @@ url: https://linear.app/fashioncloud/issue/BDD-3129/fwd-dringend-ansprechpartner
 Forwarded internal email, unclear ask — needs triage to figure out what's being requested.
 
 ```yaml
-id: BDD-3103
-title: Overview of fcKey Standard Value Translations (FD: 673052)
-priority: Medium
-updated: 2026-08-26
-url: https://linear.app/fashioncloud/issue/BDD-3103/need-response-until-august-25-overview-of-fckey-standard-value
-```
-Named deadline (Aug 25) has passed with no visible movement — ownership question for fcKey standard-value translations.
-
-```yaml
-id: BDD-3112
-title: Cancellations SS27 (FD: 673398)
-priority: Medium
-updated: 2026-08-26
-url: https://linear.app/fashioncloud/issue/BDD-3112/cancellations-ss27-fd-673398
-```
-SS27 cancellations file submitted by Altex/Funky Buddha.
-
-```yaml
 id: BDD-3137
 title: "Via Appia: remove duplicate catalogs (FD: 674164)"
 priority: Medium
@@ -106,6 +41,51 @@ updated: 2026-08-26
 url: https://linear.app/fashioncloud/issue/BDD-3137/via-appia-please-remove-duplicate-catalogs-fd-674164
 ```
 Duplicate Herbst/Winter catalogs across 4 Via Appia brands.
+
+```yaml
+id: BDD-3150
+title: PIPE/Megatron Pipeline mismatch in processing capability for prices (FD: 674378)
+priority: Medium
+updated: 2026-08-27
+url: https://linear.app/fashioncloud/issue/BDD-3150/pipemegatron-pipeline-mismatch-in-processing-capability-for-prices-fd
+```
+PIPE can process price files >500MB that Megatron's parser can't; dual-archiving now writes files Megatron will choke on. Needs a design decision, not just a fix.
+
+```yaml
+id: BDD-3155
+title: "PIPE: meyer FEED2 data reprocessing is not working (FD: 674619)"
+priority: Medium
+updated: 2026-08-28
+url: https://linear.app/fashioncloud/issue/BDD-3155/pipe-meyer-feed2-data-reprocessing-is-not-working-fd-674619
+```
+New.
+
+```yaml
+id: BDD-3163
+title: Brand Offboarding - Delete data (FD: 674971)
+priority: Medium
+updated: 2026-08-31
+url: https://linear.app/fashioncloud/issue/BDD-3163/brand-offboarding-delete-data-fd-674971
+```
+New — cross-check against the Notion "Brands that got offboarded" table before acting.
+
+```yaml
+id: BDD-3157
+title: MAC - deletion of articles (FD: 674486)
+priority: Medium
+updated: 2026-08-31
+url: https://linear.app/fashioncloud/issue/BDD-3157/mac-deletion-of-articles-fd-674486
+```
+New.
+
+```yaml
+id: BDD-3107
+title: Blue Seven - AI generated image metadata lost via B2X (FD: 673177)
+priority: Medium
+updated: 2026-09-01
+url: https://linear.app/fashioncloud/issue/BDD-3107/blue-seven-ai-generated-image-metadata-is-lost-when-receiving-images
+```
+IPTC metadata stripped somewhere in the download pipeline. Got new activity today (updated timestamp moved from 08-20 to 09-01) after weeks untouched — worth checking what changed.
 
 ## Low
 
@@ -182,3 +162,21 @@ priority: Low
 updated: 2026-08-25
 url: https://linear.app/fashioncloud/issue/BDD-3128/future-stock-niet-zichtbaar-fd-674093
 ```
+
+```yaml
+id: BDD-3152
+title: Item deletion Pure Path (FD: 674578)
+priority: Low
+updated: 2026-08-28
+url: https://linear.app/fashioncloud/issue/BDD-3152/item-deletion-pure-path-fd-674578
+```
+New.
+
+```yaml
+id: BDD-3153
+title: Preise siehe auch Ticket 610189 (FD: 674585)
+priority: Low
+updated: 2026-08-28
+url: https://linear.app/fashioncloud/issue/BDD-3153/preise-siehe-auch-ticket-610189-fd-674585
+```
+New — references an older ticket (610189), needs triage to check that link.

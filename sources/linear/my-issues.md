@@ -2,7 +2,75 @@
 
 Assigned to Kushel, live (non-completed) statuses. Populated on sync — completed/canceled work stays in Linear's own history rather than being repeated here; see `git log` for what rolled off.
 
-_Last refreshed 2026-08-28 — the 2026-08-31 sync couldn't reach Linear (no interactive OAuth session for the Linear MCP server in this non-interactive run)._
+---
+
+```yaml
+id: BDD-3167
+title: Data completely missing - DKcompany (FD: 675069)
+priority: High
+status: In Progress
+assignee: Kushel Ramanayake
+team: BDD
+updated: 2026-09-01
+url: https://linear.app/fashioncloud/issue/BDD-3167/data-completely-missing-dkcompany-fd-675069
+```
+New. Likely tied to the [onaDkCompany FEED Dagster run](../../dagster-alerts/log.md) that's been stuck past its 3h limit since 2026-08-26 with no completion — worth checking that run first before treating this as a separate data bug.
+
+---
+
+```yaml
+id: BDD-3164
+title: Bestseller - reprocess data to enable all B2B images with type "pack" to be visible to retailers (FD: 674996)
+priority: High
+status: In Progress
+assignee: Kushel Ramanayake
+team: BDD
+updated: 2026-08-31
+url: https://linear.app/fashioncloud/issue/BDD-3164/bestseller-reprocess-data-to-enable-all-b2b-images-with-type-pack-to
+```
+New.
+
+---
+
+```yaml
+id: BDD-2957
+title: "[dual-archive] G-star archiving creates a malformed/incomplete file (FD: 662655)"
+priority: High
+status: In Review
+assignee: Kushel Ramanayake
+team: BDD
+updated: 2026-08-31
+url: https://linear.app/fashioncloud/issue/BDD-2957/dual-archive-g-star-archiving-creates-a-malformedincomplete-file-fd
+```
+Was unassigned in Triage as of last successful pull — now his and in review. PIPE's dual-archive output is malformed (truncated, unclosed tags) vs. the pre-archive copy, blocking Megatron price import.
+
+---
+
+```yaml
+id: BDD-2539
+title: "Bilder-API liefert „render_requests_exceeded" – Fragen zum Render-Limit (FD: 645720)"
+priority: Medium
+status: In Progress
+assignee: Kushel Ramanayake
+team: BDD
+updated: 2026-08-31
+url: https://linear.app/fashioncloud/issue/BDD-2539/bilder-api-liefert-render-requests-exceeded-fragen-zum-render-limit-fd
+```
+Was unassigned in Triage (open since July 8) — now his and in progress.
+
+---
+
+```yaml
+id: BDD-3001
+title: Corrupted images - GUESS (FD: 671049)
+priority: Medium
+status: In Progress
+assignee: Kushel Ramanayake
+team: BDD
+updated: 2026-08-31
+url: https://linear.app/fashioncloud/issue/BDD-3001/corrupted-images-guess-fd-671049
+```
+Was unassigned in Triage — now his and in progress. Recurring symptom, same as a prior closed ticket (FD 584227).
 
 ---
 
@@ -16,21 +84,7 @@ team: BDD
 updated: 2026-08-27
 url: https://linear.app/fashioncloud/issue/BDD-3036/noah-group-sketch-flag-doesnt-disappear-after-removal-fd-671937
 ```
-New. Removed the sketch-flag logic for noahGroup and reprocessed, but `isPreliminary` cleared from feed_transform without clearing from mergedSkus — follow-up needed.
-
----
-
-```yaml
-id: BDD-2567
-title: Add FTP/SFTP support for video downloading
-priority: No priority
-status: In Review
-assignee: Kushel Ramanayake
-team: BDD
-updated: 2026-08-24
-url: https://linear.app/fashioncloud/issue/BDD-2567/add-ftpsftp-support-for-video-downloading
-```
-In review — see [product-service#2520](../github/product-service/open-prs.md), which has Changes Requested.
+Removed the sketch-flag logic for noahGroup and reprocessed, but `isPreliminary` cleared from feed_transform without clearing from mergedSkus — follow-up needed.
 
 ---
 
@@ -44,6 +98,7 @@ team: BDD
 updated: 2026-08-18
 url: https://linear.app/fashioncloud/issue/BDD-2258/sample-xmlcsv-with-video-links-test-manufacturer-on-sftp
 ```
+Unblocked now that [BDD-2567](https://linear.app/fashioncloud/issue/BDD-2567) shipped ([product-service#2520](../github/product-service/open-prs.md) merged 2026-08-31).
 
 ---
 
@@ -57,7 +112,7 @@ team: BDD
 updated: 2026-05-21
 url: https://linear.app/fashioncloud/issue/BDD-1721/fix-images-failing-silently-with-no-error-message-captured
 ```
-Tech Debt label. Stale — last touched three months ago.
+Tech Debt label. Stale — untouched for over 3 months.
 
 ---
 
@@ -72,34 +127,6 @@ updated: 2026-08-11
 url: https://linear.app/fashioncloud/issue/BDD-2518/convert-the-buffer-into-stream-in-extract-job
 ```
 Tech Debt label.
-
----
-
-```yaml
-id: BDD-2669
-title: comfortStudioByKultivate - PRICAT - CSV - FTP
-priority: No priority
-status: On-Hold
-assignee: Kushel Ramanayake
-team: BDD
-updated: 2026-08-12
-url: https://linear.app/fashioncloud/issue/BDD-2669/comfortstudiobykultivate-pricat-csv-ftp
-```
-Brand Migration label, on hold.
-
----
-
-```yaml
-id: BDD-2664
-title: comfortStudioByCatwalkJunkie - PRICAT - CSV - FTP
-priority: No priority
-status: On-Hold
-assignee: Kushel Ramanayake
-team: BDD
-updated: 2026-08-12
-url: https://linear.app/fashioncloud/issue/BDD-2664/comfortstudiobycatwalkjunkie-pricat-csv-ftp
-```
-Brand Migration label, on hold.
 
 ---
 

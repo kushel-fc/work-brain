@@ -3,6 +3,23 @@
 Capped at ~25 most recent. Older entries move to `../archive/support/`. Sourced from team BDD Done/Deployed issues carrying an FD reference.
 
 ```yaml
+id: BDD-3103
+title: Need response until August 25 – Overview of fcKey Standard Value Translations (FD: 673052)
+priority: Medium
+closed: 2026-08-31
+url: https://linear.app/fashioncloud/issue/BDD-3103/need-response-until-august-25-overview-of-fckey-standard-value
+```
+Finally resolved — this is the ticket flagged in `today.md` for six straight sync cycles over its passed Aug 25 deadline.
+
+```yaml
+id: BDD-3112
+title: Cancellations SS27 (FD: 673398)
+priority: Medium
+closed: 2026-08-31
+url: https://linear.app/fashioncloud/issue/BDD-3112/cancellations-ss27-fd-673398
+```
+
+```yaml
 id: BDD-3111
 title: "PIPE: Bazlen FEED2 data not showing up in sku lifecycle (FD: 673391)"
 priority: Medium

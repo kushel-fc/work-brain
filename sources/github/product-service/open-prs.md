@@ -3,45 +3,30 @@
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
 ```yaml
-number: 2600
-title: Staging Release - 2026-08-31
-author: app/github-actions
+number: 2605
+title: "update `StreamPublisher`'s partition keys & event types"
+author: julsjacinto
 state: open
-mergeable_state: mergeable
-review_state: awaiting-first-review
-requested_reviewers: [abubakarwase, julsjacinto]
-updated: 2026-08-31
-url: https://github.com/fashioncloud/product-service/pull/2600
-```
-New. Automated staging release aggregator. Team-requested (brand-data-dev), no individual request for Kushel.
-
-```yaml
-number: 2599
-title: Match mapping rules case-insensitively in process-enrichment's auto-update
-author: dushansilva
-state: open
-draft: true
 mergeable_state: mergeable
 review_state: changes-requested
-requested_reviewers: []
-updated: 2026-08-29
-url: https://github.com/fashioncloud/product-service/pull/2599
+requested_reviewers: [kushel-fc, alirezaMoazenFashion]
+updated: 2026-09-01
+url: https://github.com/fashioncloud/product-service/pull/2605
 ```
-New. Draft, not his.
+New. Kushel is a requested reviewer — see [`prs/to-review.md`](../../../prs/to-review.md). Already has Changes Requested (from alirezaMoazenFashion, before Kushel reviewed).
 
 ```yaml
-number: 2598
-title: Split comma-separated detailedCategory.level1 values before mapping
-author: dushansilva
+number: 2604
+title: "feat: add geisha mapping rules"
+author: marianabassi
 state: open
-draft: true
 mergeable_state: mergeable
 review_state: awaiting-first-review
-requested_reviewers: []
-updated: 2026-08-29
-url: https://github.com/fashioncloud/product-service/pull/2598
+requested_reviewers: [irembbt, abubakarwase]
+updated: 2026-08-31
+url: https://github.com/fashioncloud/product-service/pull/2604
 ```
-New. Draft, not his.
+New. Team-requested (brand-data-dev), no individual request for Kushel. Companion to [brand-data-pipeline#1783](../brand-data-pipeline/open-prs.md).
 
 ```yaml
 number: 2595
@@ -54,20 +39,7 @@ requested_reviewers: [alirezaMoazenFashion]
 updated: 2026-08-31
 url: https://github.com/fashioncloud/product-service/pull/2595
 ```
-New. Not his.
-
-```yaml
-number: 2589
-title: pcs first health endpoint and skeleton
-author: irembbt
-state: open
-mergeable_state: mergeable
-review_state: changes-requested
-requested_reviewers: [dwiajik, abirprantofc]
-updated: 2026-08-28
-url: https://github.com/fashioncloud/product-service/pull/2589
-```
-New. Not his.
+Not his.
 
 ```yaml
 number: 2587
@@ -80,20 +52,7 @@ requested_reviewers: [dwiajik, alirezaMoazenFashion]
 updated: 2026-08-28
 url: https://github.com/fashioncloud/product-service/pull/2587
 ```
-New. Team-requested (brand-data-dev), no individual request for Kushel.
-
-```yaml
-number: 2586
-title: "fix(io-helpers,job): name the S3 object in mid-transfer stream failures"
-author: dwiajik
-state: open
-mergeable_state: mergeable
-review_state: changes-requested
-requested_reviewers: [abubakarwase, abirprantofc]
-updated: 2026-08-31
-url: https://github.com/fashioncloud/product-service/pull/2586
-```
-New. Not his.
+Team-requested (brand-data-dev), no individual request for Kushel.
 
 ```yaml
 number: 2574
@@ -103,64 +62,11 @@ state: open
 draft: true
 mergeable_state: mergeable
 review_state: changes-requested
-requested_reviewers: []
-updated: 2026-08-31
+requested_reviewers: [irembbt, abirprantofc]
+updated: 2026-09-01
 url: https://github.com/fashioncloud/product-service/pull/2574
 ```
-Draft, no individual reviewers requested. Now linked to BDD-3159 (was untitled before).
-
-```yaml
-number: 2569
-title: publishing job to publish size, color & style events
-author: julsjacinto
-state: open
-mergeable_state: conflicting
-review_state: awaiting-first-review
-requested_reviewers: [irembbt, abubakarwase, Chamindu36, kushel-fc]
-updated: 2026-08-28
-url: https://github.com/fashioncloud/product-service/pull/2569
-```
-Kushel is a requested reviewer — see [`prs/to-review.md`](../../../prs/to-review.md). Flipped from mergeable to a merge conflict since last sync.
-
-```yaml
-number: 2567
-title: improve preview query
-author: irembbt
-state: open
-draft: true
-mergeable_state: unknown
-review_state: changes-requested
-requested_reviewers: [julsjacinto, abirprantofc]
-updated: 2026-08-27
-url: https://github.com/fashioncloud/product-service/pull/2567
-```
-Team-requested (brand-data-dev), no individual request for Kushel.
-
-```yaml
-number: 2564
-title: Preserve Sanetta legacy size system during GTIN migration
-author: FCMachineUser
-state: open
-mergeable_state: unknown
-review_state: awaiting-first-review
-requested_reviewers: [abubakarwase, abirprantofc]
-updated: 2026-08-27
-url: https://github.com/fashioncloud/product-service/pull/2564
-```
-Team-requested (brand-data-dev), no individual request for Kushel.
-
-```yaml
-number: 2520
-title: "BDD-2567 Add FTP/SFTP support for video downloading"
-author: kushel-fc
-state: open
-mergeable_state: mergeable
-review_state: changes-requested
-requested_reviewers: [irembbt, julsjacinto, Chamindu36]
-updated: 2026-08-31
-url: https://github.com/fashioncloud/product-service/pull/2520
-```
-Kushel's own PR — see [`prs/mine.md`](../../../prs/mine.md). julsjacinto and dwiajik have since approved after his 2026-08-28 fix addressing julsjacinto's review; Chamindu36's original 2026-08-24 Changes Requested hasn't been re-reviewed, which is why the aggregate state is still `changes-requested`.
+Draft. Now has individual reviewers (irembbt, abirprantofc) — Kushel not among them. Companion to [brand-data-pipeline#1744](../brand-data-pipeline/open-prs.md), which does request him.
 
 ```yaml
 number: 2514
@@ -194,13 +100,13 @@ title: Add helper script to delete GTINs from the downstream Fashion Cloud API
 author: dwiajik
 state: open
 draft: true
-mergeable_state: unknown
+mergeable_state: mergeable
 review_state: awaiting-first-review
 requested_reviewers: [abubakarwase, kushel-fc]
 updated: 2026-08-21
 url: https://github.com/fashioncloud/product-service/pull/1874
 ```
-Kushel is a requested reviewer (draft) — see [`prs/to-review.md`](../../../prs/to-review.md). CodeRabbit approved.
+Kushel is a requested reviewer (draft) — see [`prs/to-review.md`](../../../prs/to-review.md).
 
 ```yaml
 number: 1756
@@ -214,14 +120,14 @@ requested_reviewers: [irembbt, kushel-fc]
 updated: 2026-06-24
 url: https://github.com/fashioncloud/product-service/pull/1756
 ```
-Kushel is a requested reviewer (draft, ~2 months stale) — see [`prs/to-review.md`](../../../prs/to-review.md).
+Kushel is a requested reviewer (draft, over 2 months stale) — see [`prs/to-review.md`](../../../prs/to-review.md).
 
 ```yaml
 number: 1737
 title: add histogram endpoint to pdo
 author: irembbt
 state: open
-mergeable_state: mergeable
+mergeable_state: unknown
 review_state: awaiting-first-review
 requested_reviewers: [julsjacinto]
 updated: 2026-07-07
@@ -234,22 +140,10 @@ title: "BDD-2292 + BDD-2293: brand-onboarding transform-run launch + concurrency
 author: irembbt
 state: open
 draft: true
-mergeable_state: unknown
+mergeable_state: mergeable
 review_state: awaiting-first-review
 requested_reviewers: [irembbt, abubakarwase]
 updated: 2026-06-24
 url: https://github.com/fashioncloud/product-service/pull/1728
 ```
-Was a confirmed merge conflict last sync; now reads unknown (GitHub recomputing, not confirmed resolved).
-
-```yaml
-number: 1724
-title: use ssm params
-author: irembbt
-state: open
-mergeable_state: mergeable
-review_state: awaiting-first-review
-requested_reviewers: [abubakarwase, julsjacinto]
-updated: 2026-06-17
-url: https://github.com/fashioncloud/product-service/pull/1724
-```
+Was a confirmed merge conflict two syncs ago, then unknown last sync — now resolved back to mergeable.

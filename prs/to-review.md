@@ -3,32 +3,32 @@
 PRs where Kushel is a requested reviewer. Populated on sync.
 
 ```yaml
-number: 1766
+number: 2605
+repo: product-service
+title: "update `StreamPublisher`'s partition keys & event types"
+author: julsjacinto
+state: open
+mergeable_state: mergeable
+review_state: changes-requested
+requested_reviewers: [kushel-fc, alirezaMoazenFashion]
+updated: 2026-09-01
+url: https://github.com/fashioncloud/product-service/pull/2605
+```
+New. Already has Changes Requested from alirezaMoazenFashion — worth checking whether that's addressed before he reviews.
+
+```yaml
+number: 1744
 repo: brand-data-pipeline
-title: Staging Release - 2026-08-31
-author: FCMachineUser
+title: "BDD-3159: allow experimental.xml_sax_parsing in feed_config.json validator"
+author: dwiajik
 state: open
 mergeable_state: mergeable
 review_state: awaiting-first-review
-requested_reviewers: [dwiajik, kushel-fc]
+requested_reviewers: [julsjacinto, kushel-fc]
 updated: 2026-08-31
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/1766
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1744
 ```
-New — automated staging release, no reviews yet. His brand-data-pipeline queue is no longer empty.
-
-```yaml
-number: 2569
-repo: product-service
-title: publishing job to publish size, color & style events
-author: julsjacinto
-state: open
-mergeable_state: conflicting
-review_state: awaiting-first-review
-requested_reviewers: [irembbt, abubakarwase, Chamindu36, kushel-fc]
-updated: 2026-08-28
-url: https://github.com/fashioncloud/product-service/pull/2569
-```
-Still no reviews from any of the 4 requested reviewers including him; has since flipped from mergeable to a merge conflict.
+New — flipped out of draft and now individually requests him (was draft, team-only last sync). Companion to product-service#2574 (BDD-3159 SAX parser), which doesn't request him individually.
 
 ```yaml
 number: 2514
@@ -40,7 +40,7 @@ draft: true
 mergeable_state: mergeable
 review_state: changes-requested
 requested_reviewers: [irembbt, kushel-fc, dwiajik, julsjacinto]
-updated: 2026-08-27
+updated: 2026-08-28
 url: https://github.com/fashioncloud/product-service/pull/2514
 ```
 Draft, already has Changes Requested from someone else.
@@ -67,11 +67,12 @@ title: "BDD-2290 follow-up: Fix trace cell shape + global cell pollution"
 author: dushansilva
 state: open
 draft: true
-mergeable_state: mergeable
+mergeable_state: unknown
 review_state: awaiting-first-review
 requested_reviewers: [irembbt, kushel-fc]
 updated: 2026-06-24
 url: https://github.com/fashioncloud/product-service/pull/1756
 ```
-Draft, stale — ~2 months with no activity.
+Draft, stale — over 2 months with no activity.
 
+Dropped this cycle: **#1766** (brand-data-pipeline Staging Release) merged 2026-08-31 (by Kushel himself); **#2569** (product-service publishing job) closed 2026-08-31 without ever getting a review — both moved to `archive/prs/`.

@@ -3,44 +3,56 @@
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
 ```yaml
-number: 1766
-title: Staging Release - 2026-08-31
-author: FCMachineUser
+number: 1783
+title: "feat: add geisha FEED migration"
+author: marianabassi
+state: open
+mergeable_state: mergeable
+review_state: approved
+requested_reviewers: [abirprantofc]
+updated: 2026-09-01
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1783
+```
+New. Not his. Companion to [product-service#2604](../product-service/open-prs.md).
+
+```yaml
+number: 1780
+title: Post Migration Clean up
+author: MuniaL
 state: open
 mergeable_state: mergeable
 review_state: awaiting-first-review
-requested_reviewers: [dwiajik, kushel-fc]
+requested_reviewers: []
 updated: 2026-08-31
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/1766
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1780
 ```
-New. Automated staging release aggregator — Kushel individually requested as reviewer, no reviews yet. See [`prs/to-review.md`](../../../prs/to-review.md).
+New. Not his — no individual reviewers requested.
 
 ```yaml
 number: 1763
 title: "fix(dBrand): preserve legacy size system"
 author: FCMachineUser
 state: open
-mergeable_state: mergeable
+mergeable_state: unknown
 review_state: awaiting-first-review
 requested_reviewers: []
 updated: 2026-08-28
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1763
 ```
-New. Not his — no individual reviewers requested.
+Not his — no individual reviewers requested.
 
 ```yaml
 number: 1744
 title: "BDD-3159: allow experimental.xml_sax_parsing in feed_config.json validator"
 author: dwiajik
 state: open
-draft: true
 mergeable_state: mergeable
 review_state: awaiting-first-review
-requested_reviewers: []
+requested_reviewers: [julsjacinto, kushel-fc]
 updated: 2026-08-31
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1744
 ```
-Draft, not his. Now linked to BDD-3159 (was untitled before).
+Flipped out of draft and now individually requests Kushel (was draft with no named reviewers last sync) — see [`prs/to-review.md`](../../../prs/to-review.md). Companion to [product-service#2574](../product-service/open-prs.md).
 
 ```yaml
 number: 1472

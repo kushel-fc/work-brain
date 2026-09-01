@@ -3,6 +3,17 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 1766
+title: Staging Release - 2026-08-31
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-08-31
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1766
+```
+Kushel was an individually-requested reviewer (no reviews yet) — merged by himself without a formal review.
+
+```yaml
 number: 1734
 title: pointtec brand migration
 author: abirprantofc
