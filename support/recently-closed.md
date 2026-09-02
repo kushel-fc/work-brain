@@ -3,6 +3,24 @@
 Capped at ~25 most recent. Older entries move to `../archive/support/`. Sourced from team BDD Done/Deployed issues carrying an FD reference.
 
 ```yaml
+id: BDD-3167
+title: Data completely missing - DKcompany (FD: 675069)
+priority: High
+closed: 2026-09-01
+url: https://linear.app/fashioncloud/issue/BDD-3167/data-completely-missing-dkcompany-fd-675069
+```
+Was flagged at the top of `today.md` last sync, speculatively tied to the onaDkCompany FEED Dagster run stuck since 2026-08-26. No Slack confirmation of a fix appeared this cycle — resolved through some other path; the Dagster run's own status is unconfirmed.
+
+```yaml
+id: BDD-3154
+title: "PIPE: Bestseller Feed2: Warnings for new languags (FD: 674613)"
+priority: High
+closed: 2026-08-31
+url: https://linear.app/fashioncloud/issue/BDD-3154/pipe-bestseller-feed2-warnings-for-new-languags-fd-674613
+```
+Backfilled — missed in the 2026-09-01 sync. Shipped via [product-service#2594](../archive/prs/product-service.md), merged same day.
+
+```yaml
 id: BDD-3103
 title: Need response until August 25 – Overview of fcKey Standard Value Translations (FD: 673052)
 priority: Medium

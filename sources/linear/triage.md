@@ -5,6 +5,48 @@ Full raw Triage view (team BDD) — https://linear.app/fashioncloud/team/BDD/tri
 ---
 
 ```yaml
+id: BDD-3181
+title: Frage zu Artikelpreis (FD: 675078)
+priority: Medium
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-09-01
+url: https://linear.app/fashioncloud/issue/BDD-3181/frage-zu-artikelpreis-fd-675078
+```
+New.
+
+---
+
+```yaml
+id: BDD-3180
+title: API access permission error (FD: 675082)
+priority: Low
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-09-01
+url: https://linear.app/fashioncloud/issue/BDD-3180/api-access-permission-error-fd-675082
+```
+New.
+
+---
+
+```yaml
+id: BDD-3168
+title: API Image request problem (FD: 675101)
+priority: Low
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-09-01
+url: https://linear.app/fashioncloud/issue/BDD-3168/api-image-request-problem-fd-675101
+```
+New.
+
+---
+
+```yaml
 id: BDD-3037
 title: Artikel data Florez komt niet door (FD: 671579)
 priority: Medium
@@ -151,10 +193,10 @@ priority: Low
 status: Triage
 assignee: unassigned
 team: BDD
-updated: 2026-07-09
+updated: 2026-09-01
 url: https://linear.app/fashioncloud/issue/BDD-2530/pipe-global-transform-doesnt-catch-feed-transform-mistakes-on-string
 ```
-Global transform should reject a feed-transform bug (season returned as a language object instead of a string) but doesn't. Already fixed for Secrid, pending release.
+Global transform should reject a feed-transform bug (season returned as a language object instead of a string) but doesn't. Already fixed for Secrid, pending release. Updated timestamp jumped from 07-09 to 09-01 — some activity landed, not yet reflected in this summary.
 
 ---
 

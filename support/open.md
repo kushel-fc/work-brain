@@ -7,6 +7,15 @@ No High-priority tickets currently sitting unassigned in Triage — the one High
 ## Medium
 
 ```yaml
+id: BDD-3181
+title: Frage zu Artikelpreis (FD: 675078)
+priority: Medium
+updated: 2026-09-01
+url: https://linear.app/fashioncloud/issue/BDD-3181/frage-zu-artikelpreis-fd-675078
+```
+New.
+
+```yaml
 id: BDD-3037
 title: Artikel data Florez komt niet door (FD: 671579)
 priority: Medium
@@ -88,6 +97,24 @@ url: https://linear.app/fashioncloud/issue/BDD-3107/blue-seven-ai-generated-imag
 IPTC metadata stripped somewhere in the download pipeline. Got new activity today (updated timestamp moved from 08-20 to 09-01) after weeks untouched — worth checking what changed.
 
 ## Low
+
+```yaml
+id: BDD-3180
+title: API access permission error (FD: 675082)
+priority: Low
+updated: 2026-09-01
+url: https://linear.app/fashioncloud/issue/BDD-3180/api-access-permission-error-fd-675082
+```
+New.
+
+```yaml
+id: BDD-3168
+title: API Image request problem (FD: 675101)
+priority: Low
+updated: 2026-09-01
+url: https://linear.app/fashioncloud/issue/BDD-3168/api-image-request-problem-fd-675101
+```
+New.
 
 ```yaml
 id: BDD-2497

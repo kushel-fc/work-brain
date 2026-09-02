@@ -237,3 +237,25 @@ closed: 2026-08-28
 url: https://github.com/fashioncloud/product-service/pull/2576
 ```
 Kushel was a requested reviewer; merged without needing his review.
+
+```yaml
+number: 2594
+title: "fix: add lv, lt, et to LANGUAGE_CODES allowlist (BDD-3154)"
+author: kushel-fc
+state: closed
+merged: true
+closed: 2026-08-31
+url: https://github.com/fashioncloud/product-service/pull/2594
+```
+His own PR — opened and merged same-day. Backfilled — missed archiving in the 2026-09-01 sync.
+
+```yaml
+number: 2605
+title: "update `StreamPublisher`'s partition keys & event types"
+author: julsjacinto
+state: closed
+merged: true
+closed: 2026-09-01
+url: https://github.com/fashioncloud/product-service/pull/2605
+```
+Kushel was a requested reviewer (alireza had left Changes Requested); merged without his review.

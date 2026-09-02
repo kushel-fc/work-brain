@@ -3,37 +3,90 @@
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
 ```yaml
-number: 1783
-title: "feat: add geisha FEED migration"
-author: marianabassi
+number: 1794
+title: Staging Release - 2026-09-02
+author: FCMachineUser
+state: open
+mergeable_state: mergeable
+review_state: awaiting-first-review
+requested_reviewers: []
+updated: 2026-09-02
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1794
+```
+New. Not his — no individual reviewers requested.
+
+```yaml
+number: 1791
+title: Fix fcKeys default fallbacks that mask real merge data
+author: kushel-fc
 state: open
 mergeable_state: mergeable
 review_state: approved
-requested_reviewers: [abirprantofc]
-updated: 2026-09-01
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/1783
+requested_reviewers: [irembbt, alirezaMoazenFashion]
+updated: 2026-09-02
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1791
 ```
-New. Not his. Companion to [product-service#2604](../product-service/open-prs.md).
+New — his own PR. Already Approved by dwiajik and Chamindu36; irembbt and alirezaMoazenFashion are still-outstanding requested reviewers but the bar is already met. See [`prs/mine.md`](../../../prs/mine.md).
+
+```yaml
+number: 1789
+title: Production Release - 2026-09-01
+author: FCMachineUser
+state: open
+mergeable_state: mergeable
+review_state: awaiting-first-review
+requested_reviewers: [abubakarwase, julsjacinto]
+updated: 2026-09-01
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1789
+```
+New. Team-requested (brand-data-dev) plus 2 named reviewers — not his.
+
+```yaml
+number: 1785
+title: BDD-3161 Weekly image-reprocessing collector job + fan-out sensor
+author: dwiajik
+state: open
+draft: true
+mergeable_state: mergeable
+review_state: awaiting-first-review
+requested_reviewers: []
+updated: 2026-09-02
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1785
+```
+New. Draft, no individual reviewers — not his.
+
+```yaml
+number: 1784
+title: O'Neill brand migration
+author: MuniaL
+state: open
+mergeable_state: unknown
+review_state: awaiting-first-review
+requested_reviewers: [irembbt, abirprantofc]
+updated: 2026-09-01
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1784
+```
+New. Team-requested (brand-data-dev) plus 2 named reviewers — Kushel not among them. Companion to [product-service#2607](../product-service/open-prs.md), which does individually request him.
 
 ```yaml
 number: 1780
 title: Post Migration Clean up
 author: MuniaL
 state: open
-mergeable_state: mergeable
+mergeable_state: unknown
 review_state: awaiting-first-review
 requested_reviewers: []
 updated: 2026-08-31
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1780
 ```
-New. Not his — no individual reviewers requested.
+Not his — no individual reviewers requested.
 
 ```yaml
 number: 1763
 title: "fix(dBrand): preserve legacy size system"
 author: FCMachineUser
 state: open
-mergeable_state: unknown
+mergeable_state: mergeable
 review_state: awaiting-first-review
 requested_reviewers: []
 updated: 2026-08-28
@@ -52,7 +105,7 @@ requested_reviewers: [julsjacinto, kushel-fc]
 updated: 2026-08-31
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1744
 ```
-Flipped out of draft and now individually requests Kushel (was draft with no named reviewers last sync) — see [`prs/to-review.md`](../../../prs/to-review.md). Companion to [product-service#2574](../product-service/open-prs.md).
+Individually requests Kushel — see [`prs/to-review.md`](../../../prs/to-review.md). Companion to [product-service#2574](../product-service/open-prs.md).
 
 ```yaml
 number: 1472
@@ -93,7 +146,7 @@ url: https://github.com/fashioncloud/brand-data-pipeline/pull/1120
 ```yaml
 number: 1058
 title: Fix grpcio/protobuf version conflict breaking Dagster Cloud deployment job
-author: app/copilot-swe-agent
+author: copilot-swe-agent[bot]
 state: open
 draft: true
 mergeable_state: unknown

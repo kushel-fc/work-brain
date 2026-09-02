@@ -104,3 +104,14 @@ merged: true
 closed: 2026-08-28
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1645
 ```
+
+```yaml
+number: 1783
+title: "feat: add geisha FEED migration"
+author: marianabassi
+state: closed
+merged: true
+closed: 2026-09-01
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1783
+```
+Not his. Companion to product-service#2604, which is still open.

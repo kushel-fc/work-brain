@@ -3,18 +3,32 @@
 PRs where Kushel is a requested reviewer. Populated on sync.
 
 ```yaml
-number: 2605
+number: 2611
 repo: product-service
-title: "update `StreamPublisher`'s partition keys & event types"
+title: "Added `create-variants` package"
 author: julsjacinto
 state: open
-mergeable_state: mergeable
+mergeable_state: unknown
 review_state: changes-requested
-requested_reviewers: [kushel-fc, alirezaMoazenFashion]
-updated: 2026-09-01
-url: https://github.com/fashioncloud/product-service/pull/2605
+requested_reviewers: [kushel-fc]
+updated: 2026-09-02
+url: https://github.com/fashioncloud/product-service/pull/2611
 ```
-New. Already has Changes Requested from alirezaMoazenFashion — worth checking whether that's addressed before he reviews.
+New — he's the sole named reviewer. Chamindu36 already went through 17+ rounds of comments ending in Changes Requested before Kushel was added — worth checking whether those are addressed first.
+
+```yaml
+number: 2607
+repo: product-service
+title: O'Neill brand migration
+author: MuniaL
+state: open
+mergeable_state: unknown
+review_state: awaiting-first-review
+requested_reviewers: [abubakarwase, kushel-fc]
+updated: 2026-09-01
+url: https://github.com/fashioncloud/product-service/pull/2607
+```
+New — team + individually names Kushel. He's already left a COMMENTED review; julsjacinto has APPROVED.
 
 ```yaml
 number: 1744
@@ -28,7 +42,7 @@ requested_reviewers: [julsjacinto, kushel-fc]
 updated: 2026-08-31
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1744
 ```
-New — flipped out of draft and now individually requests him (was draft, team-only last sync). Companion to product-service#2574 (BDD-3159 SAX parser), which doesn't request him individually.
+Unchanged since it flipped out of draft last cycle — still no reviews. Companion to product-service#2574 (BDD-3159 SAX parser), which doesn't request him individually.
 
 ```yaml
 number: 2514
@@ -52,7 +66,7 @@ title: Add helper script to delete GTINs from the downstream Fashion Cloud API
 author: dwiajik
 state: open
 draft: true
-mergeable_state: mergeable
+mergeable_state: unknown
 review_state: awaiting-first-review
 requested_reviewers: [abubakarwase, kushel-fc]
 updated: 2026-08-21
@@ -75,4 +89,4 @@ url: https://github.com/fashioncloud/product-service/pull/1756
 ```
 Draft, stale — over 2 months with no activity.
 
-Dropped this cycle: **#1766** (brand-data-pipeline Staging Release) merged 2026-08-31 (by Kushel himself); **#2569** (product-service publishing job) closed 2026-08-31 without ever getting a review — both moved to `archive/prs/`.
+Dropped this cycle: **#2605** (product-service, "update StreamPublisher's partition keys & event types") merged 2026-09-01 by julsjacinto — moved to `archive/prs/`.

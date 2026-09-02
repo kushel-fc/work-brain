@@ -5,20 +5,6 @@ Assigned to Kushel, live (non-completed) statuses. Populated on sync — complet
 ---
 
 ```yaml
-id: BDD-3167
-title: Data completely missing - DKcompany (FD: 675069)
-priority: High
-status: In Progress
-assignee: Kushel Ramanayake
-team: BDD
-updated: 2026-09-01
-url: https://linear.app/fashioncloud/issue/BDD-3167/data-completely-missing-dkcompany-fd-675069
-```
-New. Likely tied to the [onaDkCompany FEED Dagster run](../../dagster-alerts/log.md) that's been stuck past its 3h limit since 2026-08-26 with no completion — worth checking that run first before treating this as a separate data bug.
-
----
-
-```yaml
 id: BDD-3164
 title: Bestseller - reprocess data to enable all B2B images with type "pack" to be visible to retailers (FD: 674996)
 priority: High
@@ -28,7 +14,7 @@ team: BDD
 updated: 2026-08-31
 url: https://linear.app/fashioncloud/issue/BDD-3164/bestseller-reprocess-data-to-enable-all-b2b-images-with-type-pack-to
 ```
-New.
+The reprocessing job (`bestseller_FEED2`) is generating recurring "exceeded 3h run time limit" [Dagster alerts](../../dagster-alerts/log.md) — Kushel confirmed in-thread both times (2026-09-01, 2026-09-02) that it's this job's merge/reprocessing step running long, not a bug.
 
 ---
 

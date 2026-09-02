@@ -2,6 +2,19 @@
 
 One entry per sync run. Prune entries older than ~30 days.
 
+## 2026-09-02 (08:40 UTC)
+
+All three sources reachable this run — Linear, GitHub, Slack.
+
+- **BDD-3167 (Data completely missing - DKcompany, High) resolved** — closed 2026-09-01. It was speculatively tied to the onaDkCompany Dagster run stuck since 2026-08-26, but no Slack message this cycle confirmed that run itself got fixed; the run's own status in `dagster-alerts/log.md` is now flagged stale/unconfirmed rather than treated as resolved.
+- **His own PR #1791** (brand-data-pipeline, "Fix fcKeys default fallbacks that mask real merge data") is new and already Approved by dwiajik and Chamindu36 — ready to merge, two other requested reviewers haven't weighed in but the bar is met.
+- **Two new individual review requests** landed on him: product-service #2611 ("Added `create-variants` package" — sole named reviewer, after 17+ rounds of Chamindu36 comments ending in Changes Requested) and #2607 (O'Neill brand migration, team + individual, he'd already left a comment).
+- **PR wave**: #2605 (product-service, StreamPublisher partition keys — he was a requested reviewer) merged 09-01 without his review. brand-data-pipeline #1783 (geisha FEED migration, not his) also merged 09-01. 8 other PRs opened across both repos this cycle (2613, 2612, 2608, 2604-companion review still open, 1794, 1789, 1785, 1784) — none individually his to review.
+- **Backfill**: product-service #2594 (his own PR, LANGUAGE_CODES fix) and BDD-3154 (the Linear ticket it shipped) were merged/closed 08-31 but missed being archived/logged in the 09-01 sync — caught up this cycle.
+- Linear: 3 new Triage tickets (BDD-3181 Medium, BDD-3180 Low, BDD-3168 Low), all FD-referenced, added to `support/open.md`. No High-priority items unassigned. BDD-2530's updated timestamp jumped from 07-09 to 09-01 with no visible status change yet — flagged for a look.
+- Slack: quiet-ish window since 2026-08-31T14:12:56Z. The enrichment-service 504 timeout pattern continues — Dushan claimed ownership in-channel but sOliver hit the same error again ~15 min later, so it isn't actually fixed. Two more galvatron ECS health-check blips, both self-resolved within minutes (established pattern). New: `bestseller_FEED2` fired "exceeded 3h limit" twice (09-01, 09-02) — both explained in-thread by Kushel himself as his own BDD-3164 reprocessing work, not bugs.
+- Notified: no — nothing crossed the notification bar (no deadline passed with zero movement; his own PR #1791 is Approved, not a conflict/Changes-Requested flip; no new Urgent unassigned ticket, the 3 new Triage items are Medium/Low; no Dagster alert recurred after self-resolving — the enrichment 504 and galvatron patterns were already active/recurring before this cycle, not fresh flips).
+
 ## 2026-08-31 (08:41 UTC)
 
 - **Linear unavailable this run**: the Linear MCP server requires interactive OAuth, which isn't available in this non-interactive scheduled run. All Linear-derived files (`sources/linear/*`, `support/*`) are unchanged, carried forward from the 2026-08-28 pull, and flagged with a staleness note. `today.md`/`this-week.md` still surfaced BDD-3103's deadline (now 6 days passed) since the deadline date itself doesn't need a fresh pull to compute.

@@ -3,6 +3,66 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
+timestamp: 2026-09-02T08:23:35Z
+channel: brand-data-dev-alerts
+brand: platform (galvatron ECS)
+summary: ECS health check failures detected for galvatron service
+status: self-resolved
+linked_issue: null
+```
+Triggered 08:12:35 UTC, recovered ~11 minutes later — same recurring galvatron health-check blip pattern as prior syncs, no thread.
+
+```yaml
+timestamp: 2026-09-02T04:46:33Z
+channel: brand-data-dev-alerts
+brand: bestseller
+summary: bestseller_FEED2 run exceeded 3h time limit
+status: self-resolved
+linked_issue: BDD-3164
+```
+Kushel replied in-thread ("This was the image reprocessing") ~2.5h later — expected, tied to his own [BDD-3164](../sources/linear/my-issues.md) B2B image reprocessing work, not a bug. Second occurrence of this same job exceeding its limit (see entry below).
+
+```yaml
+timestamp: 2026-09-01T19:06:10Z
+channel: brand-data-dev-alerts
+brand: platform (analytics asset / analytics_trigger_sensor)
+summary: Asset materialization failed for `analytics`, container exit code 1
+status: recurring
+linked_issue: null
+```
+Same sensor/asset as the prior 2026-08-20/08-25 occurrences — no thread or reaction this time either.
+
+```yaml
+timestamp: 2026-09-01T18:34:01Z
+channel: brand-data-dev-alerts
+brand: bestseller
+summary: bestseller_FEED2 run exceeded 3h time limit
+status: self-resolved
+linked_issue: BDD-3164
+```
+Kushel replied in-thread ("Still on the merge step") a minute later — same explanation as the entry above, tied to his BDD-3164 reprocessing work.
+
+```yaml
+timestamp: 2026-09-01T17:20:35Z
+channel: brand-data-dev-alerts
+brand: platform (galvatron ECS)
+summary: ECS health check failures detected for galvatron service
+status: self-resolved
+linked_issue: null
+```
+Triggered 17:17:36 UTC, recovered ~3 minutes later — brief blip, no thread.
+
+```yaml
+timestamp: 2026-08-31T14:31:00Z
+channel: brand-data-dev-alerts
+brand: sOliver
+summary: sOliver__FEED__trigger_enrichment_from_map — container exited, exit code 1
+status: active
+linked_issue: null
+```
+Same `AxiosError: Request failed with status code 504` from `DataEnrichmentService.makeRequest` as the entry below — fired again ~15 minutes after Dushan claimed ownership of "enrichment stuff" in-channel, meaning the underlying enrichment-service timeout was still unresolved as of this occurrence.
+
+```yaml
 timestamp: 2026-08-31T14:12:56Z
 channel: brand-data-dev-alerts
 brand: multiple (fabienne, swarovski, ceceba, denham, sOliver)
@@ -10,7 +70,7 @@ summary: 5 brands' trigger_enrichment_from_map steps failed, container exit code
 status: active
 linked_issue: null
 ```
-Started right after the ECR/datadog-agent incident below cleared (see next entry) — likely a retry-backlog side effect rather than a recurrence of the same root cause. Aji's reply on the sOliver instance (14:31 UTC) traced it to `AxiosError: Request failed with status code 504` from `DataEnrichmentService.makeRequest` — the internal enrichment service itself was timing out. Not confirmed resolved by end of window (channel goes quiet after 14:31 UTC).
+Started right after the ECR/datadog-agent incident below cleared (see next entry) — likely a retry-backlog side effect rather than a recurrence of the same root cause. Aji's reply on the sOliver instance (14:31 UTC) traced it to `AxiosError: Request failed with status code 504` from `DataEnrichmentService.makeRequest` — the internal enrichment service itself was timing out. Dushan claimed ownership ("enrichemnt stuff are mine") at 14:16 UTC, but sOliver failed again with the same error 15 minutes later (see entry above) — not actually resolved by that claim.
 
 ```yaml
 timestamp: 2026-08-31T12:31:00Z
@@ -310,7 +370,7 @@ summary: ona__dkCompany_FEED run exceeded 3h time limit
 status: active
 linked_issue: BDD-3167
 ```
-Run 161bb902 started 13:24 UTC 08-26, still shown active as of last check (now ~6 days past its 3h limit). Zero Slack follow-up across six sync cycles. A new High-priority Linear ticket, BDD-3167 "Data completely missing - DKcompany" (FD 675069), was assigned to Kushel 2026-09-01 — likely the customer-facing consequence of this stuck run, though not confirmed. Not mentioned anywhere in this sync's Slack window either.
+Run 161bb902 started 13:24 UTC 08-26, still shown active as of last check (now ~7 days past its 3h limit). Zero Slack follow-up across seven sync cycles. The linked Linear ticket, [BDD-3167](../support/recently-closed.md) "Data completely missing - DKcompany" (FD 675069), was resolved 2026-09-01 — but no Slack message in this cycle's window confirmed the underlying run itself was fixed, so the correlation stays unconfirmed and the run's own status here is stale.
 
 ```yaml
 timestamp: 2026-08-26T09:59:35Z
