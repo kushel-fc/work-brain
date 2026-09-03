@@ -3,6 +3,32 @@
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
 ```yaml
+number: 1799
+title: add PME Legend note
+author: hakansoylu1
+state: open
+mergeable_state: mergeable
+review_state: awaiting-first-review
+requested_reviewers: []
+updated: 2026-09-03
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1799
+```
+New. Not his — no individual reviewers requested.
+
+```yaml
+number: 1795
+title: "Ara: change credential id. Credential IDs were incorrect and data was..."
+author: marianabassi
+state: open
+mergeable_state: unknown
+review_state: approved
+requested_reviewers: []
+updated: 2026-09-02
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1795
+```
+New. Not his.
+
+```yaml
 number: 1794
 title: Staging Release - 2026-09-02
 author: FCMachineUser
@@ -20,13 +46,13 @@ number: 1791
 title: Fix fcKeys default fallbacks that mask real merge data
 author: kushel-fc
 state: open
-mergeable_state: mergeable
+mergeable_state: unknown
 review_state: approved
 requested_reviewers: [irembbt, alirezaMoazenFashion]
 updated: 2026-09-02
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1791
 ```
-New — his own PR. Already Approved by dwiajik and Chamindu36; irembbt and alirezaMoazenFashion are still-outstanding requested reviewers but the bar is already met. See [`prs/mine.md`](../../../prs/mine.md).
+His own PR. Already Approved by dwiajik and Chamindu36; irembbt and alirezaMoazenFashion are still-outstanding requested reviewers but the bar is already met. `mergeable_state` flapped from `mergeable` to `unknown` this cycle — the known GitHub-recompute flapping pattern, not a real conflict. See [`prs/mine.md`](../../../prs/mine.md).
 
 ```yaml
 number: 1789
@@ -53,33 +79,7 @@ requested_reviewers: []
 updated: 2026-09-02
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1785
 ```
-New. Draft, no individual reviewers — not his.
-
-```yaml
-number: 1784
-title: O'Neill brand migration
-author: MuniaL
-state: open
-mergeable_state: unknown
-review_state: awaiting-first-review
-requested_reviewers: [irembbt, abirprantofc]
-updated: 2026-09-01
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/1784
-```
-New. Team-requested (brand-data-dev) plus 2 named reviewers — Kushel not among them. Companion to [product-service#2607](../product-service/open-prs.md), which does individually request him.
-
-```yaml
-number: 1780
-title: Post Migration Clean up
-author: MuniaL
-state: open
-mergeable_state: unknown
-review_state: awaiting-first-review
-requested_reviewers: []
-updated: 2026-08-31
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/1780
-```
-Not his — no individual reviewers requested.
+Draft, no individual reviewers — not his.
 
 ```yaml
 number: 1763
@@ -99,13 +99,13 @@ number: 1744
 title: "BDD-3159: allow experimental.xml_sax_parsing in feed_config.json validator"
 author: dwiajik
 state: open
-mergeable_state: mergeable
+mergeable_state: unknown
 review_state: awaiting-first-review
 requested_reviewers: [julsjacinto, kushel-fc]
 updated: 2026-08-31
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1744
 ```
-Individually requests Kushel — see [`prs/to-review.md`](../../../prs/to-review.md). Companion to [product-service#2574](../product-service/open-prs.md).
+Individually requests Kushel — see [`prs/to-review.md`](../../../prs/to-review.md). Companion to [product-service#2574](../product-service/open-prs.md), which flipped to a real merge conflict this cycle. `mergeable_state` here flapped from `mergeable` to `unknown` — the known recompute pattern.
 
 ```yaml
 number: 1472

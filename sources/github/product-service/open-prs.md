@@ -3,6 +3,32 @@
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
 ```yaml
+number: 2617
+title: Staging Release - 2026-09-03
+author: github-actions[bot]
+state: open
+mergeable_state: mergeable
+review_state: approved
+requested_reviewers: [abubakarwase, alirezaMoazenFashion]
+updated: 2026-09-03
+url: https://github.com/fashioncloud/product-service/pull/2617
+```
+New. Not his.
+
+```yaml
+number: 2616
+title: Every NestJs service keeps the same promises and APIs should have OpenAPI spec
+author: Chamindu36
+state: open
+mergeable_state: unknown
+review_state: awaiting-first-review
+requested_reviewers: [irembbt, alirezaMoazenFashion, dwiajik, julsjacinto, kushel-fc]
+updated: 2026-09-02
+url: https://github.com/fashioncloud/product-service/pull/2616
+```
+New — team-requested (brand-data-dev) plus individually names Kushel among 4 others. See [`prs/to-review.md`](../../../prs/to-review.md).
+
+```yaml
 number: 2613
 title: "Update `publishing-job` to allow publishing to stream"
 author: julsjacinto
@@ -27,19 +53,6 @@ updated: 2026-09-01
 url: https://github.com/fashioncloud/product-service/pull/2612
 ```
 New. Not his.
-
-```yaml
-number: 2611
-title: "Added `create-variants` package"
-author: julsjacinto
-state: open
-mergeable_state: unknown
-review_state: changes-requested
-requested_reviewers: [kushel-fc]
-updated: 2026-09-02
-url: https://github.com/fashioncloud/product-service/pull/2611
-```
-New — individually requests Kushel, sole named reviewer. Extensive back-and-forth with Chamindu36 (17+ comments) ending in Changes Requested before he was added. See [`prs/to-review.md`](../../../prs/to-review.md).
 
 ```yaml
 number: 2608
@@ -95,31 +108,18 @@ url: https://github.com/fashioncloud/product-service/pull/2595
 Not his.
 
 ```yaml
-number: 2587
-title: Enable ECCO on PIPE
-author: FCMachineUser
-state: open
-mergeable_state: unknown
-review_state: awaiting-first-review
-requested_reviewers: [dwiajik, alirezaMoazenFashion]
-updated: 2026-08-28
-url: https://github.com/fashioncloud/product-service/pull/2587
-```
-Team-requested (brand-data-dev), no individual request for Kushel.
-
-```yaml
 number: 2574
 title: "BDD-3159 add SAX-based streaming XML parser (experimental, opt-in)"
 author: dwiajik
 state: open
 draft: true
-mergeable_state: unknown
+mergeable_state: conflicting
 review_state: awaiting-first-review
 requested_reviewers: [irembbt, abirprantofc]
 updated: 2026-09-01
 url: https://github.com/fashioncloud/product-service/pull/2574
 ```
-Draft. Named reviewers (irembbt, abirprantofc) — Kushel not among them. Companion to [brand-data-pipeline#1744](../brand-data-pipeline/open-prs.md), which does request him.
+Draft. Named reviewers (irembbt, abirprantofc) — Kushel not among them. Companion to [brand-data-pipeline#1744](../brand-data-pipeline/open-prs.md), which does request him. Flipped to a merge conflict this cycle — not his own PR, so no notification, but relevant: the pmeLegend FEED Dagster alert on 2026-09-03 (stream-abort reading a large XML file) was called out in-thread as exactly what this SAX parser is meant to fix.
 
 ```yaml
 number: 2514

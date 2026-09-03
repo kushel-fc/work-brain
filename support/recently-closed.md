@@ -3,6 +3,15 @@
 Capped at ~25 most recent. Older entries move to `../archive/support/`. Sourced from team BDD Done/Deployed issues carrying an FD reference.
 
 ```yaml
+id: BDD-2957
+title: "[dual-archive] G-star archiving creates a malformed/incomplete file (FD: 662655)"
+priority: High
+closed: 2026-09-02
+url: https://linear.app/fashioncloud/issue/BDD-2957/dual-archive-g-star-archiving-creates-a-malformedincomplete-file-fd
+```
+Kushel's own ticket — was In Review last sync, now Deployed. PIPE's dual-archive malformed-file fix shipped.
+
+```yaml
 id: BDD-3167
 title: Data completely missing - DKcompany (FD: 675069)
 priority: High

@@ -19,6 +19,20 @@ New.
 ---
 
 ```yaml
+id: BDD-3189
+title: information on sketch tag needed (FD: 675287)
+priority: Medium
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-09-02
+url: https://linear.app/fashioncloud/issue/BDD-3189/information-on-sketch-tag-needed-fd-675287
+```
+New.
+
+---
+
+```yaml
 id: BDD-3180
 title: API access permission error (FD: 675082)
 priority: Low
@@ -113,20 +127,6 @@ updated: 2026-08-27
 url: https://linear.app/fashioncloud/issue/BDD-3150/pipemegatron-pipeline-mismatch-in-processing-capability-for-prices-fd
 ```
 Megatron's XML parser caps out at 500MB; PIPE can process larger files so dual-archives files (PME Legend PD import) that Megatron could never process — previously masked by DIMs manually chunking files. Needs a design decision.
-
----
-
-```yaml
-id: BDD-3155
-title: "PIPE: meyer FEED2 data reprocessing is not working (FD: 674619)"
-priority: Medium
-status: Triage
-assignee: unassigned
-team: BDD
-updated: 2026-08-28
-url: https://linear.app/fashioncloud/issue/BDD-3155/pipe-meyer-feed2-data-reprocessing-is-not-working-fd-674619
-```
-New.
 
 ---
 

@@ -115,3 +115,25 @@ closed: 2026-09-01
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1783
 ```
 Not his. Companion to product-service#2604, which is still open.
+
+```yaml
+number: 1780
+title: Post Migration Clean up
+author: MuniaL
+state: closed
+merged: true
+closed: 2026-09-02
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1780
+```
+Not his — no individual reviewers requested.
+
+```yaml
+number: 1784
+title: O'Neill brand migration
+author: MuniaL
+state: closed
+merged: true
+closed: 2026-09-02
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1784
+```
+Not his. Companion to product-service#2607 (still open, individually requests Kushel).

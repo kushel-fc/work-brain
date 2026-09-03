@@ -259,3 +259,25 @@ closed: 2026-09-01
 url: https://github.com/fashioncloud/product-service/pull/2605
 ```
 Kushel was a requested reviewer (alireza had left Changes Requested); merged without his review.
+
+```yaml
+number: 2587
+title: Enable ECCO on PIPE
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-09-02
+url: https://github.com/fashioncloud/product-service/pull/2587
+```
+Not his — team-requested only.
+
+```yaml
+number: 2611
+title: "Added `create-variants` package"
+author: julsjacinto
+state: closed
+merged: true
+closed: 2026-09-02
+url: https://github.com/fashioncloud/product-service/pull/2611
+```
+He was the sole named reviewer after Chamindu36's 17+ rounds ending in Changes Requested — merged without his review.

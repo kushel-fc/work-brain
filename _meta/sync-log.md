@@ -2,6 +2,22 @@
 
 One entry per sync run. Prune entries older than ~30 days.
 
+## 2026-09-03 (09:15 UTC)
+
+All three sources reachable this run — Linear, GitHub, Slack.
+
+- **BDD-3155 (PIPE: meyer FEED2 data reprocessing, FD 674619) picked up by Kushel** — was sitting unassigned in Triage at Medium priority last sync, now his, bumped to High, In Progress. Added to `today.md`.
+- **BDD-2957 (his own G-star dual-archive ticket) shipped** — Deployed, moved from `my-issues.md` to `support/recently-closed.md`.
+- **New Triage item**: BDD-3189 (Medium, "information on sketch tag needed"), FD-referenced — added to `support/open.md`.
+- **New review request**: product-service #2616 ("Every NestJs service... OpenAPI spec", Chamindu36) — team + individually names him among 4 other reviewers.
+- **His review request #2611 merged without his review** (2026-09-02) — he was sole named reviewer after Chamindu36's 17+ rounds of Changes Requested; moved to `archive/prs/`. Also merged this cycle, not his: product-service #2587 (Enable ECCO on PIPE), brand-data-pipeline #1780 (Post Migration Clean up) and #1784 (O'Neill migration, companion to his still-open product-service#2607).
+- **New PRs opened**, none individually his: product-service #2617 (Staging Release, bot), brand-data-pipeline #1799 ("add PME Legend note"), #1795 (Ara credential-id fix).
+- **His own PR #1791** and his to-review **#1744** both flapped `mergeable_state` from `mergeable`/`mergeable` to `unknown` — the established GitHub-recompute noise on brand-data-pipeline, not real conflicts.
+- **product-service#2574 (SAX parser, companion to #1744) flipped to a real merge conflict** — not his own PR, so no notification, but directly relevant to the Slack finding below.
+- Slack: a pmeLegend FEED run failed 11 asset materializations 2026-09-03 09:56 CEST — stream aborted reading a large XML file. Kushel and Aji explained in-thread that the in-flight SAX-parser work (#1744/#2574, BDD-3159) is meant to fix exactly this; it also directly matches BDD-3150's PIPE/Megatron file-size-mismatch description, which specifically names PME Legend. Explained, not yet fixed — logged as `active`.
+- Slack: a second, unexplained failure hit `bestseller_FEED2` on 2026-09-02 (`publish_from_map`, container exited without an exit code) — no thread, no reaction. Distinct failure signature from the well-established "exceeded 3h limit" pattern on the same job; worth watching for a repeat before assuming it's routine.
+- Notified: no — nothing crossed the notification bar. No deadline passed with zero movement (no due dates set on any live issue). No flip to conflict/Changes-Requested on his own PR (only his own open PR, #1791, flapped to `unknown` mergeable state, not a real conflict, and stayed Approved). No new Urgent-priority ticket landed unassigned (BDD-3189 is Medium). No Dagster alert recurred after self-resolving (both new alerts are first occurrences of their specific failure signature, not repeats of something that had already self-resolved).
+
 ## 2026-09-02 (08:40 UTC)
 
 All three sources reachable this run — Linear, GitHub, Slack.

@@ -2,9 +2,18 @@
 
 FD-sourced/support-shaped tickets, by priority then age (oldest first within each tier). Sourced from the team BDD Triage view: https://linear.app/fashioncloud/team/BDD/triage. Populated on sync. Full raw Triage list (including non-FD internal items) lives in [`sources/linear/triage.md`](../sources/linear/triage.md).
 
-No High-priority tickets currently sitting unassigned in Triage — the one High item here last sync (BDD-2957) has been picked up and moved to [`sources/linear/my-issues.md`](../sources/linear/my-issues.md).
+No High-priority tickets currently sitting unassigned in Triage.
 
 ## Medium
+
+```yaml
+id: BDD-3189
+title: information on sketch tag needed (FD: 675287)
+priority: Medium
+updated: 2026-09-02
+url: https://linear.app/fashioncloud/issue/BDD-3189/information-on-sketch-tag-needed-fd-675287
+```
+New.
 
 ```yaml
 id: BDD-3181
@@ -59,15 +68,6 @@ updated: 2026-08-27
 url: https://linear.app/fashioncloud/issue/BDD-3150/pipemegatron-pipeline-mismatch-in-processing-capability-for-prices-fd
 ```
 PIPE can process price files >500MB that Megatron's parser can't; dual-archiving now writes files Megatron will choke on. Needs a design decision, not just a fix.
-
-```yaml
-id: BDD-3155
-title: "PIPE: meyer FEED2 data reprocessing is not working (FD: 674619)"
-priority: Medium
-updated: 2026-08-28
-url: https://linear.app/fashioncloud/issue/BDD-3155/pipe-meyer-feed2-data-reprocessing-is-not-working-fd-674619
-```
-New.
 
 ```yaml
 id: BDD-3163

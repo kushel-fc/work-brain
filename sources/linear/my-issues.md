@@ -5,30 +5,30 @@ Assigned to Kushel, live (non-completed) statuses. Populated on sync — complet
 ---
 
 ```yaml
+id: BDD-3155
+title: "PIPE: meyer FEED2 data reprocessing is not working (FD: 674619)"
+priority: High
+status: In Progress
+assignee: Kushel Ramanayake
+team: BDD
+updated: 2026-09-02
+url: https://linear.app/fashioncloud/issue/BDD-3155/pipe-meyer-feed2-data-reprocessing-is-not-working-fd-674619
+```
+New — was unassigned in Triage (Medium) as of last sync, now his, bumped to High and In Progress.
+
+---
+
+```yaml
 id: BDD-3164
 title: Bestseller - reprocess data to enable all B2B images with type "pack" to be visible to retailers (FD: 674996)
 priority: High
 status: In Progress
 assignee: Kushel Ramanayake
 team: BDD
-updated: 2026-08-31
+updated: 2026-09-02
 url: https://linear.app/fashioncloud/issue/BDD-3164/bestseller-reprocess-data-to-enable-all-b2b-images-with-type-pack-to
 ```
-The reprocessing job (`bestseller_FEED2`) is generating recurring "exceeded 3h run time limit" [Dagster alerts](../../dagster-alerts/log.md) — Kushel confirmed in-thread both times (2026-09-01, 2026-09-02) that it's this job's merge/reprocessing step running long, not a bug.
-
----
-
-```yaml
-id: BDD-2957
-title: "[dual-archive] G-star archiving creates a malformed/incomplete file (FD: 662655)"
-priority: High
-status: In Review
-assignee: Kushel Ramanayake
-team: BDD
-updated: 2026-08-31
-url: https://linear.app/fashioncloud/issue/BDD-2957/dual-archive-g-star-archiving-creates-a-malformedincomplete-file-fd
-```
-Was unassigned in Triage as of last successful pull — now his and in review. PIPE's dual-archive output is malformed (truncated, unclosed tags) vs. the pre-archive copy, blocking Megatron price import.
+The reprocessing job (`bestseller_FEED2`) is generating recurring "exceeded 3h run time limit" [Dagster alerts](../../dagster-alerts/log.md) — Kushel confirmed in-thread both times (2026-09-01, 2026-09-02) that it's this job's merge/reprocessing step running long, not a bug. A separate, unexplained `publish_from_map` container-exit failure hit the same job 2026-09-02 — see `dagster-alerts/log.md`, different signature.
 
 ---
 

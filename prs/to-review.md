@@ -3,18 +3,18 @@
 PRs where Kushel is a requested reviewer. Populated on sync.
 
 ```yaml
-number: 2611
+number: 2616
 repo: product-service
-title: "Added `create-variants` package"
-author: julsjacinto
+title: Every NestJs service keeps the same promises and APIs should have OpenAPI spec
+author: Chamindu36
 state: open
 mergeable_state: unknown
-review_state: changes-requested
-requested_reviewers: [kushel-fc]
+review_state: awaiting-first-review
+requested_reviewers: [irembbt, alirezaMoazenFashion, dwiajik, julsjacinto, kushel-fc]
 updated: 2026-09-02
-url: https://github.com/fashioncloud/product-service/pull/2611
+url: https://github.com/fashioncloud/product-service/pull/2616
 ```
-New — he's the sole named reviewer. Chamindu36 already went through 17+ rounds of comments ending in Changes Requested before Kushel was added — worth checking whether those are addressed first.
+New — team + individually names Kushel among 4 other reviewers, no reviews yet.
 
 ```yaml
 number: 2607
@@ -36,13 +36,13 @@ repo: brand-data-pipeline
 title: "BDD-3159: allow experimental.xml_sax_parsing in feed_config.json validator"
 author: dwiajik
 state: open
-mergeable_state: mergeable
+mergeable_state: unknown
 review_state: awaiting-first-review
 requested_reviewers: [julsjacinto, kushel-fc]
 updated: 2026-08-31
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1744
 ```
-Unchanged since it flipped out of draft last cycle — still no reviews. Companion to product-service#2574 (BDD-3159 SAX parser), which doesn't request him individually.
+Still no reviews since flipping out of draft. Companion to product-service#2574 (BDD-3159 SAX parser, doesn't request him individually) — that companion just flipped to a real merge conflict, and a Dagster alert this cycle (pmeLegend FEED stream-abort) was called out in-thread as exactly the failure this SAX work is meant to fix.
 
 ```yaml
 number: 2514
@@ -89,4 +89,4 @@ url: https://github.com/fashioncloud/product-service/pull/1756
 ```
 Draft, stale — over 2 months with no activity.
 
-Dropped this cycle: **#2605** (product-service, "update StreamPublisher's partition keys & event types") merged 2026-09-01 by julsjacinto — moved to `archive/prs/`.
+Dropped this cycle: **#2611** (product-service, "Added `create-variants` package") merged 2026-09-02 by julsjacinto — moved to `archive/prs/`. He was the sole named reviewer after Chamindu36's 17+ rounds of Changes Requested, but it merged without his review.

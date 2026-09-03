@@ -3,6 +3,26 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
+timestamp: 2026-09-03T07:56:05Z
+channel: brand-data-dev-alerts
+brand: pmeLegend
+summary: "pmeLegend/FEED — 11 asset materializations failed: stream aborted reading large XML (Products_20260903085537513.xml)"
+status: active
+linked_issue: null
+```
+Kushel replied in-thread with the exact stream-abort error; Aji confirmed this will be fixed by the SAX-based streaming XML parser already in flight ([product-service#2574](../sources/github/product-service/open-prs.md) / [brand-data-pipeline#1744](../sources/github/brand-data-pipeline/open-prs.md), BDD-3159) and linked a related Megatron alert. Directly relevant to [BDD-3150](../support/open.md) (PIPE/Megatron file-size mismatch, which specifically calls out PME Legend PD import) — explained, not yet fixed.
+
+```yaml
+timestamp: 2026-09-02T09:02:50Z
+channel: brand-data-dev-alerts
+brand: bestseller
+summary: "bestseller__FEED2__publish_from_map — container exited, exit code 1 (\"App container has no exit code after task stopped\")"
+status: active
+linked_issue: null
+```
+No thread or reaction. Different failing step than the known recurring "exceeded 3h run time limit" pattern on this same job (tied to Kushel's [BDD-3164](../sources/linear/my-issues.md) reprocessing) — an ECS task/container-level failure in the publish step, not a runtime-limit issue. Worth watching for a repeat before treating as the same known pattern.
+
+```yaml
 timestamp: 2026-09-02T08:23:35Z
 channel: brand-data-dev-alerts
 brand: platform (galvatron ECS)
