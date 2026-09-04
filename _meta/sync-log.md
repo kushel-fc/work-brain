@@ -2,6 +2,27 @@
 
 One entry per sync run. Prune entries older than ~30 days.
 
+## 2026-09-04 (08:45 UTC)
+
+All three sources reachable this run — Linear, GitHub, Slack.
+
+- **New assignment: BDD-3225 (Re: Pepe Jeans - missing image report, FD 675342), High.** Created 09-03, picked up and started same day — long AWWG/Pepe Jeans thread about images that keep failing to display despite repeated re-uploads. Added to `today.md`.
+- **New internal ticket: BDD-3089 (Process images taller than wide), In Review** — already has an implementation up, his own new PR [product-service#2623](../sources/github/product-service/open-prs.md).
+- **BDD-3117 (FW: PME stockbase, FD 672891) picked up by Kushel** — was sitting unassigned in Triage (Low) since 08-24, now his and In Progress. Moved out of `support/open.md`/`triage.md` into `my-issues.md`.
+- **BDD-3128 (Future stock niet zichtbaar, FD 674093) left BDD entirely** — transferred to the Retailer Data team (now RDD-1648), picked up there by Mo Shahmohammadi. Logged in new `archive/linear/team-transfers.md` rather than `recently-closed.md`, since BDD didn't resolve it.
+- **BDD-3036 (Noah Group sketch-flag) reassigned away from Kushel** — now Dushan's, still To Do. Removed from `my-issues.md`.
+- **BDD-3155 (his own meyer FEED2 reprocessing ticket) shipped** — Done, moved to `support/recently-closed.md`.
+- **His own PR #1791 (brand-data-pipeline) merged** 2026-09-03 by marianabassi — he now has zero open PRs on brand-data-pipeline. New own PR #2623 (product-service, BDD-3089) opened same day, no reviews yet.
+- **New review request: brand-data-pipeline#1808** (routine Production Release PR) individually names him among 3 others.
+- **New review request: product-service#2618** (BDD-3197 customAttributes) individually names him; already has Changes Requested from Chamindu36 after extensive back-and-forth — not from Kushel.
+- **His to-review PR #1744 got an approval** (julsjacinto) and its `mergeable_state` cleared from `unknown` to `mergeable` — companion product-service#2574 also cleared its real merge conflict from last cycle. Both tie to BDD-3150 (PIPE/Megatron file-size mismatch) and the pmeLegend Dagster alerts. He's now the last outstanding reviewer on #1744.
+- **PR wave, none individually his**: product-service #2617 (staging release), #2612 (production release), #2604 (closed, not merged — geisha mapping rules) all closed 09-03; #2616 (OpenAPI spec — was individually his to review) merged by Chamindu36 without his review; #2613 (publishing-job stream) merged. brand-data-pipeline #1795 (Ara credential fix), #1799 (PME Legend note), #1794 (staging release), #1789 (production release) all merged 09-03.
+- **New PRs opened, none individually his**: product-service #2624 (mavi enable, already approved), #2622 (Chamindu36 architecture docs, changes requested). brand-data-pipeline #1811 (mongodb chunk sync, draft), #1810 (Nump TRIMIT reonboarding), #1803 (numph fix), #1800 (BDD-3197 snocks companion to product-service#2618, approved).
+- **Three `mergeable_state` reads flipped from the long-standing `unknown` flapping to real conflicts** — product-service#1737, #1728 and brand-data-pipeline#1120, #1058 (none are his own or individually his to review).
+- Note: product-service#2607 (O'Neill migration, individually his) shows zero completed reviews via the API this cycle, though a prior sync's note claimed he'd left a COMMENTED review with julsjacinto APPROVED — could not reconfirm that either way this cycle, flagged in `sources/github/product-service/open-prs.md` rather than silently restated.
+- Slack: quiet cycle, only 4 messages since last sync, none threaded. New: lugina/FEED 11 assets failed (first occurrence of this brand); ara__PRICAT__process_images hit an OOM (new for this brand/step); one ~4-minute galvatron ECS health-check blip (established self-resolving pattern). The 09-03 pmeLegend stream-abort and bestseller publish_from_map issues did not recur.
+- Notified: no — nothing crossed the notification bar. No deadline passed with zero movement (no due dates set on any live issue). No flip to conflict/Changes-Requested on his own work (his own PR #1791 merged cleanly; his new PR #2623 has only a CodeRabbit changes-requested pass, not a human reviewer, and its aggregate review state is still awaiting-first-review). No new Urgent-priority ticket landed unassigned (BDD-3225 is High and already assigned, not unassigned; no new Triage items appeared at all this cycle). No Dagster alert recurred after self-resolving (lugina and the ara OOM are first occurrences, not repeats of something previously resolved; the galvatron blip continues its already-established recurring-but-self-resolving pattern).
+
 ## 2026-09-03 (09:15 UTC)
 
 All three sources reachable this run — Linear, GitHub, Slack.

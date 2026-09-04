@@ -4,6 +4,8 @@ FD-sourced/support-shaped tickets, by priority then age (oldest first within eac
 
 No High-priority tickets currently sitting unassigned in Triage.
 
+Two items dropped off this list this cycle: BDD-3117 was picked up by Kushel (now in [`sources/linear/my-issues.md`](../sources/linear/my-issues.md)); BDD-3128 transferred to the Retailer Data team (now RDD-1648) — see [`archive/linear/team-transfers.md`](../archive/linear/team-transfers.md).
+
 ## Medium
 
 ```yaml
@@ -172,22 +174,6 @@ title: Multidownload EAN limit inconsistent (1000 vs 2000) (FD: 673275)
 priority: Low
 updated: 2026-08-21
 url: https://linear.app/fashioncloud/issue/BDD-3110/maximum-download-with-artnumbers-is-1000-eans-but-when-searching-on
-```
-
-```yaml
-id: BDD-3117
-title: "FW: PME stockbase (FD: 672891)"
-priority: Low
-updated: 2026-08-24
-url: https://linear.app/fashioncloud/issue/BDD-3117/fw-pme-stockbase-fd-672891
-```
-
-```yaml
-id: BDD-3128
-title: Future stock niet zichtbaar (FD: 674093)
-priority: Low
-updated: 2026-08-25
-url: https://linear.app/fashioncloud/issue/BDD-3128/future-stock-niet-zichtbaar-fd-674093
 ```
 
 ```yaml

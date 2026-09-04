@@ -3,6 +3,36 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
+timestamp: 2026-09-03T19:38:06Z
+channel: brand-data-dev-alerts
+brand: lugina
+summary: "lugina/FEED — 11 asset materializations failed (download_images, feed_transform, etc.)"
+status: active
+linked_issue: null
+```
+No thread or reaction visible — first occurrence of this brand in the log.
+
+```yaml
+timestamp: 2026-09-03T14:16:35Z
+channel: brand-data-dev-alerts
+brand: platform (galvatron ECS)
+summary: ECS health check failures detected for galvatron service
+status: self-resolved
+linked_issue: null
+```
+Triggered 14:12:35 UTC, recovered ~4 minutes later — same recurring galvatron health-check blip pattern as prior syncs, no thread.
+
+```yaml
+timestamp: 2026-09-03T12:01:59Z
+channel: brand-data-dev-alerts
+brand: ara
+summary: "ara__PRICAT__process_images — container exited, exit code 137 (OOM)"
+status: active
+linked_issue: null
+```
+No thread or reaction visible. First OOM logged for ara specifically (distinct from the earlier ara credential-id fix, brand-data-pipeline#1795, merged same day).
+
+```yaml
 timestamp: 2026-09-03T07:56:05Z
 channel: brand-data-dev-alerts
 brand: pmeLegend

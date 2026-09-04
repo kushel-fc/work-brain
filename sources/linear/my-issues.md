@@ -5,16 +5,16 @@ Assigned to Kushel, live (non-completed) statuses. Populated on sync — complet
 ---
 
 ```yaml
-id: BDD-3155
-title: "PIPE: meyer FEED2 data reprocessing is not working (FD: 674619)"
+id: BDD-3225
+title: "Re: Pepe Jeans - missing image report (FD: 675342)"
 priority: High
 status: In Progress
 assignee: Kushel Ramanayake
 team: BDD
-updated: 2026-09-02
-url: https://linear.app/fashioncloud/issue/BDD-3155/pipe-meyer-feed2-data-reprocessing-is-not-working-fd-674619
+updated: 2026-09-04
+url: https://linear.app/fashioncloud/issue/BDD-3225/re-pepe-jeans-missing-image-report-fd-675342
 ```
-New — was unassigned in Triage (Medium) as of last sync, now his, bumped to High and In Progress.
+New — created 2026-09-03, picked up and started same day. Long AWWG/Pepe Jeans email thread: images repeatedly re-uploaded by the brand but still not showing on the Fashion Cloud frontend; prior colleague traced part of it to image aspect-ratio/watermark-compression issues.
 
 ---
 
@@ -28,7 +28,35 @@ team: BDD
 updated: 2026-09-02
 url: https://linear.app/fashioncloud/issue/BDD-3164/bestseller-reprocess-data-to-enable-all-b2b-images-with-type-pack-to
 ```
-The reprocessing job (`bestseller_FEED2`) is generating recurring "exceeded 3h run time limit" [Dagster alerts](../../dagster-alerts/log.md) — Kushel confirmed in-thread both times (2026-09-01, 2026-09-02) that it's this job's merge/reprocessing step running long, not a bug. A separate, unexplained `publish_from_map` container-exit failure hit the same job 2026-09-02 — see `dagster-alerts/log.md`, different signature.
+The reprocessing job (`bestseller_FEED2`) fired recurring "exceeded 3h run time limit" [Dagster alerts](../../dagster-alerts/log.md) on 09-01/09-02, self-explained by Kushel in-thread both times — quiet since. A separate, still-unexplained `publish_from_map` container-exit failure hit the same job 2026-09-02.
+
+---
+
+```yaml
+id: BDD-3089
+title: Process images that are taller than its wide
+priority: No priority
+status: In Review
+assignee: Kushel Ramanayake
+team: BDD
+updated: 2026-09-03
+url: https://linear.app/fashioncloud/issue/BDD-3089/process-images-that-are-taller-than-its-wide
+```
+Internal ticket (no FD), already has an implementation up: [product-service#2623](../github/product-service/open-prs.md).
+
+---
+
+```yaml
+id: BDD-3117
+title: "FW: PME stockbase (FD: 672891)"
+priority: Medium
+status: In Progress
+assignee: Kushel Ramanayake
+team: BDD
+updated: 2026-09-03
+url: https://linear.app/fashioncloud/issue/BDD-3117/fw-pme-stockbase-fd-672891
+```
+Was sitting unassigned in Triage (Low) since 08-24 — forwarded stockbase question, original contact was out of office. Now his and in progress.
 
 ---
 
@@ -61,20 +89,6 @@ Was unassigned in Triage — now his and in progress. Recurring symptom, same as
 ---
 
 ```yaml
-id: BDD-3036
-title: Noah Group - Sketch flag doesn't disappear after removal (FD: 671937)
-priority: Medium
-status: To Do
-assignee: Kushel Ramanayake
-team: BDD
-updated: 2026-08-27
-url: https://linear.app/fashioncloud/issue/BDD-3036/noah-group-sketch-flag-doesnt-disappear-after-removal-fd-671937
-```
-Removed the sketch-flag logic for noahGroup and reprocessed, but `isPreliminary` cleared from feed_transform without clearing from mergedSkus — follow-up needed.
-
----
-
-```yaml
 id: BDD-2258
 title: Sample XML/CSV with video links + test manufacturer on SFTP
 priority: High
@@ -84,7 +98,7 @@ team: BDD
 updated: 2026-08-18
 url: https://linear.app/fashioncloud/issue/BDD-2258/sample-xmlcsv-with-video-links-test-manufacturer-on-sftp
 ```
-Unblocked now that [BDD-2567](https://linear.app/fashioncloud/issue/BDD-2567) shipped ([product-service#2520](../github/product-service/open-prs.md) merged 2026-08-31).
+Unblocked since [BDD-2567](https://linear.app/fashioncloud/issue/BDD-2567) shipped (product-service#2520 merged 2026-08-31) — still not started.
 
 ---
 

@@ -137,3 +137,58 @@ closed: 2026-09-02
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1784
 ```
 Not his. Companion to product-service#2607 (still open, individually requests Kushel).
+
+```yaml
+number: 1795
+title: "Ara: change credential id. Credential IDs were incorrect and data was..."
+author: marianabassi
+state: closed
+merged: true
+closed: 2026-09-03
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1795
+```
+Not his.
+
+```yaml
+number: 1799
+title: add PME Legend note
+author: hakansoylu1
+state: closed
+merged: true
+closed: 2026-09-03
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1799
+```
+Not his.
+
+```yaml
+number: 1794
+title: Staging Release - 2026-09-02
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-09-03
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1794
+```
+Not his — routine staging release.
+
+```yaml
+number: 1791
+title: Fix fcKeys default fallbacks that mask real merge data
+author: kushel-fc
+state: closed
+merged: true
+closed: 2026-09-03
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1791
+```
+Kushel's own PR. Already Approved by dwiajik and Chamindu36 last sync — merged by marianabassi. He now has zero open PRs on brand-data-pipeline.
+
+```yaml
+number: 1789
+title: Production Release - 2026-09-01
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-09-03
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1789
+```
+Not his — routine production release.

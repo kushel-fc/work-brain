@@ -2,6 +2,8 @@
 
 Full raw Triage view (team BDD) — https://linear.app/fashioncloud/team/BDD/triage. Populated on sync. The FD-referenced/support-shaped subset of this list is curated into [`support/open.md`](../../support/open.md).
 
+Two items dropped out this cycle, neither via a BDD resolution: BDD-3117 was picked up by Kushel (now in [`sources/linear/my-issues.md`](my-issues.md)); BDD-3128 was moved to the Retailer Data team (now RDD-1648) — see [`archive/linear/team-transfers.md`](../../archive/linear/team-transfers.md).
+
 ---
 
 ```yaml
@@ -126,7 +128,7 @@ team: BDD
 updated: 2026-08-27
 url: https://linear.app/fashioncloud/issue/BDD-3150/pipemegatron-pipeline-mismatch-in-processing-capability-for-prices-fd
 ```
-Megatron's XML parser caps out at 500MB; PIPE can process larger files so dual-archives files (PME Legend PD import) that Megatron could never process — previously masked by DIMs manually chunking files. Needs a design decision.
+Megatron's XML parser caps out at 500MB; PIPE can process larger files so dual-archives files (PME Legend PD import) that Megatron could never process — previously masked by DIMs manually chunking files. Needs a design decision. The in-flight SAX-parser work ([product-service#2574](../github/product-service/open-prs.md)/[brand-data-pipeline#1744](../github/brand-data-pipeline/open-prs.md)) is a candidate fix; its merge conflict cleared this cycle.
 
 ---
 
@@ -285,20 +287,6 @@ Inconsistent multidownload EAN limits depending on search type (1000 vs 2000).
 ---
 
 ```yaml
-id: BDD-3117
-title: "FW: PME stockbase (FD: 672891)"
-priority: Low
-status: Triage
-assignee: unassigned
-team: BDD
-updated: 2026-08-24
-url: https://linear.app/fashioncloud/issue/BDD-3117/fw-pme-stockbase-fd-672891
-```
-Forwarded stockbase question, original contact out of office.
-
----
-
-```yaml
 id: BDD-3118
 title: Value mapping fails with multiple level1 mappings
 priority: No priority
@@ -309,20 +297,6 @@ updated: 2026-08-24
 url: https://linear.app/fashioncloud/issue/BDD-3118/value-mapping-fails-with-multiple-level1-mappings
 ```
 Internal bug (no FD ticket) — mapping up to 3 detailed-category level1s returns a comma-joined string instead of an array.
-
----
-
-```yaml
-id: BDD-3128
-title: Future stock niet zichtbaar (FD: 674093)
-priority: Low
-status: Triage
-assignee: unassigned
-team: BDD
-updated: 2026-08-25
-url: https://linear.app/fashioncloud/issue/BDD-3128/future-stock-niet-zichtbaar-fd-674093
-```
-Future stock not visible on Fashion Cloud site for a specific SKU despite being present in the feed.
 
 ---
 

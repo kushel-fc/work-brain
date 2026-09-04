@@ -3,6 +3,15 @@
 Capped at ~25 most recent. Older entries move to `../archive/support/`. Sourced from team BDD Done/Deployed issues carrying an FD reference.
 
 ```yaml
+id: BDD-3155
+title: "PIPE: meyer FEED2 data reprocessing is not working (FD: 674619)"
+priority: High
+closed: 2026-09-03
+url: https://linear.app/fashioncloud/issue/BDD-3155/pipe-meyer-feed2-data-reprocessing-is-not-working-fd-674619
+```
+Kushel's own ticket — was In Progress last sync (just picked up from Triage two syncs ago), now Done.
+
+```yaml
 id: BDD-2957
 title: "[dual-archive] G-star archiving creates a malformed/incomplete file (FD: 662655)"
 priority: High

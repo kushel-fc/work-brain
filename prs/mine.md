@@ -3,16 +3,16 @@
 PRs Kushel opened, across both repos. Populated on sync.
 
 ```yaml
-number: 1791
-repo: brand-data-pipeline
-title: Fix fcKeys default fallbacks that mask real merge data
+number: 2623
+repo: product-service
+title: "fix: process images taller than they are wide (BDD-3089)"
 state: open
-mergeable_state: unknown
-review_state: approved
-requested_reviewers: [irembbt, alirezaMoazenFashion]
-updated: 2026-09-02
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/1791
+mergeable_state: mergeable
+review_state: awaiting-first-review
+requested_reviewers: [abubakarwase, julsjacinto]
+updated: 2026-09-03
+url: https://github.com/fashioncloud/product-service/pull/2623
 ```
-Already Approved by dwiajik and Chamindu36 — the bar's met even though irembbt and alirezaMoazenFashion haven't weighed in yet. `mergeable_state` flapped from `mergeable` to `unknown` this cycle (GitHub recomputing, not a real conflict — same pattern seen on other brand-data-pipeline PRs). Still ready to merge.
+New — implements [BDD-3089](../sources/linear/my-issues.md). No human review yet; CodeRabbit has been through several passes (flagged, then approved, then commented again).
 
-His prior closed-without-merging PR (#2545, GTIN cleanup batch) is still parked in [`archive/prs/product-service.md`](../archive/prs/product-service.md), unrevisited.
+His prior PR [#1791](../archive/prs/brand-data-pipeline.md) (fcKeys default fallbacks) merged 2026-09-03 — he now has zero open PRs on brand-data-pipeline. His earlier self-closed PR (#2545, GTIN cleanup batch) is still parked in [`archive/prs/product-service.md`](../archive/prs/product-service.md), unrevisited.

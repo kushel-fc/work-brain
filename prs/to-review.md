@@ -3,32 +3,32 @@
 PRs where Kushel is a requested reviewer. Populated on sync.
 
 ```yaml
-number: 2616
+number: 2618
 repo: product-service
-title: Every NestJs service keeps the same promises and APIs should have OpenAPI spec
-author: Chamindu36
+title: BDD-3197 Add generic customAttributes field to pipe SKU pipeline
+author: dwiajik
 state: open
-mergeable_state: unknown
-review_state: awaiting-first-review
-requested_reviewers: [irembbt, alirezaMoazenFashion, dwiajik, julsjacinto, kushel-fc]
-updated: 2026-09-02
-url: https://github.com/fashioncloud/product-service/pull/2616
+mergeable_state: mergeable
+review_state: changes-requested
+requested_reviewers: [irembbt, kushel-fc, Chamindu36]
+updated: 2026-09-04
+url: https://github.com/fashioncloud/product-service/pull/2618
 ```
-New — team + individually names Kushel among 4 other reviewers, no reviews yet.
+New — individually names Kushel. Changes Requested is from Chamindu36 after extensive back-and-forth, not from Kushel — he hasn't reviewed yet.
 
 ```yaml
-number: 2607
-repo: product-service
-title: O'Neill brand migration
-author: MuniaL
+number: 1808
+repo: brand-data-pipeline
+title: Production Release - 2026-09-03
+author: FCMachineUser
 state: open
-mergeable_state: unknown
+mergeable_state: mergeable
 review_state: awaiting-first-review
-requested_reviewers: [abubakarwase, kushel-fc]
-updated: 2026-09-01
-url: https://github.com/fashioncloud/product-service/pull/2607
+requested_reviewers: [dwiajik, alirezaMoazenFashion, irembbt, kushel-fc]
+updated: 2026-09-03
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1808
 ```
-New — team + individually names Kushel. He's already left a COMMENTED review; julsjacinto has APPROVED.
+New — routine release PR, individually names him among 3 others.
 
 ```yaml
 number: 1744
@@ -36,13 +36,27 @@ repo: brand-data-pipeline
 title: "BDD-3159: allow experimental.xml_sax_parsing in feed_config.json validator"
 author: dwiajik
 state: open
-mergeable_state: unknown
-review_state: awaiting-first-review
-requested_reviewers: [julsjacinto, kushel-fc]
-updated: 2026-08-31
+mergeable_state: mergeable
+review_state: approved
+requested_reviewers: [kushel-fc]
+updated: 2026-09-04
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1744
 ```
-Still no reviews since flipping out of draft. Companion to product-service#2574 (BDD-3159 SAX parser, doesn't request him individually) — that companion just flipped to a real merge conflict, and a Dagster alert this cycle (pmeLegend FEED stream-abort) was called out in-thread as exactly the failure this SAX work is meant to fix.
+julsjacinto approved this cycle and its `mergeable_state` cleared to `mergeable` — companion product-service#2574 also cleared its conflict. Still awaiting Kushel's own review.
+
+```yaml
+number: 2607
+repo: product-service
+title: O'Neill brand migration
+author: MuniaL
+state: open
+mergeable_state: mergeable
+review_state: awaiting-first-review
+requested_reviewers: [abubakarwase, kushel-fc]
+updated: 2026-09-01
+url: https://github.com/fashioncloud/product-service/pull/2607
+```
+Unchanged since 09-01. Note: a prior sync claimed he'd left a COMMENTED review and julsjacinto had APPROVED — the API shows no completed reviews on this PR now, so that earlier note could not be reconfirmed this cycle.
 
 ```yaml
 number: 2514
@@ -66,7 +80,7 @@ title: Add helper script to delete GTINs from the downstream Fashion Cloud API
 author: dwiajik
 state: open
 draft: true
-mergeable_state: unknown
+mergeable_state: mergeable
 review_state: awaiting-first-review
 requested_reviewers: [abubakarwase, kushel-fc]
 updated: 2026-08-21
@@ -81,7 +95,7 @@ title: "BDD-2290 follow-up: Fix trace cell shape + global cell pollution"
 author: dushansilva
 state: open
 draft: true
-mergeable_state: unknown
+mergeable_state: mergeable
 review_state: awaiting-first-review
 requested_reviewers: [irembbt, kushel-fc]
 updated: 2026-06-24
@@ -89,4 +103,4 @@ url: https://github.com/fashioncloud/product-service/pull/1756
 ```
 Draft, stale — over 2 months with no activity.
 
-Dropped this cycle: **#2611** (product-service, "Added `create-variants` package") merged 2026-09-02 by julsjacinto — moved to `archive/prs/`. He was the sole named reviewer after Chamindu36's 17+ rounds of Changes Requested, but it merged without his review.
+Dropped this cycle: **#2616** (product-service, OpenAPI spec ticket) merged 2026-09-03 by Chamindu36 — moved to `archive/prs/`.

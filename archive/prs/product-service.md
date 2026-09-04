@@ -281,3 +281,58 @@ closed: 2026-09-02
 url: https://github.com/fashioncloud/product-service/pull/2611
 ```
 He was the sole named reviewer after Chamindu36's 17+ rounds ending in Changes Requested — merged without his review.
+
+```yaml
+number: 2617
+title: Staging Release - 2026-09-03
+author: github-actions[bot]
+state: closed
+merged: true
+closed: 2026-09-03
+url: https://github.com/fashioncloud/product-service/pull/2617
+```
+Not his — routine staging release.
+
+```yaml
+number: 2612
+title: Production Release - 2026-09-01
+author: github-actions[bot]
+state: closed
+merged: true
+closed: 2026-09-03
+url: https://github.com/fashioncloud/product-service/pull/2612
+```
+Not his — routine production release.
+
+```yaml
+number: 2604
+title: "feat: add geisha mapping rules"
+author: marianabassi
+state: closed
+merged: false
+closed: 2026-09-03
+url: https://github.com/fashioncloud/product-service/pull/2604
+```
+Closed without merging (not his). Companion brand-data-pipeline#1783 merged 09-01.
+
+```yaml
+number: 2616
+title: Every NestJs service keeps the same promises and APIs should have OpenAPI spec
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-09-03
+url: https://github.com/fashioncloud/product-service/pull/2616
+```
+Individually named Kushel among 4 other reviewers — merged by Chamindu36 without his review.
+
+```yaml
+number: 2613
+title: "Update `publishing-job` to allow publishing to stream"
+author: julsjacinto
+state: closed
+merged: true
+closed: 2026-09-03
+url: https://github.com/fashioncloud/product-service/pull/2613
+```
+Not his — team + 4 named reviewers, Kushel not among them.
