@@ -3,6 +3,33 @@
 Capped at ~25 most recent. Older entries move to `../archive/support/`. Sourced from team BDD Done/Deployed issues carrying an FD reference.
 
 ```yaml
+id: BDD-3107
+title: Blue Seven - AI generated image metadata is lost when receiving images via B2X (Intex) (FD: 673177)
+priority: Medium
+closed: 2026-09-04
+url: https://linear.app/fashioncloud/issue/BDD-3107/blue-seven-ai-generated-image-metadata-is-lost-when-receiving-images
+```
+Was sitting unassigned in `support/open.md`, flagged last cycle for new activity — picked up and resolved same window as the 09-04 bulk Triage assignment.
+
+```yaml
+id: BDD-2530
+title: PIPE Global transform doesn't catch feed-transform mistakes on string attributes (FD: 645951)
+priority: Low
+closed: 2026-09-04
+url: https://linear.app/fashioncloud/issue/BDD-2530/pipe-global-transform-doesnt-catch-feed-transform-mistakes-on-string
+```
+Fix had already shipped for Secrid pending release; now fully Deployed. Was unassigned in `support/open.md`.
+
+```yaml
+id: BDD-3089
+title: Process images that are taller than its wide
+priority: No priority
+closed: 2026-09-04
+url: https://linear.app/fashioncloud/issue/BDD-3089/process-images-that-are-taller-than-its-wide
+```
+Kushel's own internal ticket — shipped via [product-service#2623](../archive/prs/product-service.md), merged 2026-09-04.
+
+```yaml
 id: BDD-3155
 title: "PIPE: meyer FEED2 data reprocessing is not working (FD: 674619)"
 priority: High

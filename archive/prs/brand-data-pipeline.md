@@ -3,6 +3,17 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 1808
+title: Production Release - 2026-09-03
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-09-04
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1808
+```
+Kushel was an individually-requested reviewer among 3 others — merged by abirprantofc without his review.
+
+```yaml
 number: 1766
 title: Staging Release - 2026-08-31
 author: FCMachineUser

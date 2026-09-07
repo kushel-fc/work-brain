@@ -2,6 +2,21 @@
 
 One entry per sync run. Prune entries older than ~30 days.
 
+## 2026-09-07 (10:15 UTC)
+
+All three sources reachable this run — Linear, GitHub, Slack. Three-day gap since the last sync (08-04 → 09-07).
+
+- **Headline: a bulk Triage-clearing operation on 2026-09-04 ~13:45-13:47 UTC assigned ~12 previously-unassigned Triage tickets directly to Kushel in one shot** (all carry the identical updated timestamp) — BDD-3037, BDD-3129, BDD-3150, BDD-3157, BDD-3163, BDD-3181, BDD-3189 (Medium) and BDD-3091, BDD-3110, BDD-3152, BDD-3153, BDD-3168, BDD-3180 (Low), all landing at "Ready To Start." BDD-2518 (already his) had its status touched in the same pass. `support/open.md` dropped from 21 items to 5; his live Linear issue count went from 10 to 27. No individual item is urgent, but the aggregate is — flagged at the top of `today.md`. Couldn't determine from the API whether this was a deliberate manager reassignment or an automated triage sweep.
+- **New: BDD-3226 (Bestseller images stop propagating to mappedskus after force-update reprocess, FD 675515), High**, created and triaged straight to Kushel 09-04. Silent data-pipeline bug — confirmed on one GTIN, likely wider. Added to `today.md`.
+- **Three real OOM failures this week** on the `bestseller_FEED2`/`cecil_FEED` publish steps (09-05 bestseller, 09-06 cecil, 09-07 bestseller again — the last one flagged in Slack by Chamindu as a second weekend failure). Root-caused live in-thread this morning (Kushel, Chamindu, Juls, Aji) to a missing Terraform memory-optimization flag on the publishing-job; fixed via [product-service#2633](../sources/github/product-service/open-prs.md) (Aji, Approved, merged 09-07 08:07 UTC). Directly touches [BDD-3164](../sources/linear/my-issues.md), Kushel's own bestseller reprocessing ticket.
+- **Two tickets that were sitting unassigned in `support/open.md` got picked up and resolved**: BDD-3107 (Blue Seven AI-image-metadata) and BDD-2530 (PIPE Global transform / Secrid fix) — both moved to `support/recently-closed.md`. BDD-3089 (Kushel's own "images taller than wide" ticket) also shipped, via PR #2623 merged 09-04 — he now has **zero open PRs** on either repo.
+- **PR #1744** (brand-data-pipeline, SAX-parser validator) cleared its weeks-long `unknown` mergeable-state flapping to a clean `mergeable`, and is Approved by julsjacinto — Kushel is now the last outstanding reviewer, added to `today.md`.
+- **PR #1808** (his to-review queue, routine release PR) merged 09-04 without his review — moved to archive.
+- Two new individual review requests landed, both low-urgency: product-service#2631 (docs) and #2628 (CI chore).
+- Four old, previously-untracked internal tickets got touched 09-06 (BDD-2538 reopened after being Done, BDD-1417, BDD-2406, BDD-1495) — added to `my-issues.md` for the first time; none started.
+- Slack: quiet 3-day window overall (6 messages). Aside from the OOM cluster above, one new failure signature for sOliver/FEED (12 asset materializations, 09-06, no thread) and a recurrence-then-recovery of the established Megatron→Backend image-processing-delay pattern (WARN 09-04 17:06 UTC, recovered 09-05 01:49 UTC, ~10.5h) — same pattern as 08-20/08-23, not a fresh escalation.
+- Notified: no — nothing crossed the notification bar. No deadline passed with zero movement (no due dates set on any live issue). No flip to conflict/Changes-Requested on his own work (he has zero open PRs). No new Urgent-priority ticket landed unassigned (BDD-3226 is High, and it landed already assigned, not unassigned — the bulk-assignment batch is all Medium/Low). No Dagster alert recurred after having self-resolved in a way that reads as a fresh escalation — the Megatron→Backend recurrence is a repeat of an already-established recurring pattern (same bar applied in the 08-23/09-01 syncs), and the OOM cluster is a new active pattern, not a self-resolved one flaring back up. The bulk-assignment workload surge doesn't map to any listed notification trigger, but is called out prominently in `today.md` regardless since it's the most consequential thing this cycle.
+
 ## 2026-09-04 (08:45 UTC)
 
 All three sources reachable this run — Linear, GitHub, Slack.

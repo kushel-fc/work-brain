@@ -3,6 +3,66 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
+timestamp: 2026-09-07T02:39:13Z
+channel: brand-data-dev-alerts
+brand: bestseller
+summary: "bestseller__FEED2__publish_from_process_images — container exited, exit code 137 (OOM)"
+status: active
+linked_issue: null
+```
+Chamindu flagged a second failure over the weekend in-thread; Kushel diagnosed it as an OOM and initially proposed resizing, but Chamindu pushed back since bestseller already runs at the largest resource size and asked to investigate the root cause instead (CC Aji). Juls had an idea and paired with Kushel; Aji opened [product-service#2633](../sources/github/product-service/open-prs.md) — the publishing-job Terraform config never set `enable_node_memory_optimization`, so V8's heap was never bounded to the container's memory limit and the cgroup OOM-killer fired before GC could run. Already Approved, merged 2026-09-07 08:07 UTC. Same root cause as the cecil and bestseller OOMs below (09-05/09-06) — believed fixed now, not yet confirmed by a clean rerun.
+
+```yaml
+timestamp: 2026-09-06T10:03:01Z
+channel: brand-data-dev-alerts
+brand: sOliver
+summary: "sOliver/FEED — 12 asset materializations failed (download_images, extract, etc.)"
+status: active
+linked_issue: null
+```
+No thread or reaction visible. First occurrence of this failure signature for sOliver (distinct from the earlier enrichment-service 504 pattern that also hit sOliver).
+
+```yaml
+timestamp: 2026-09-06T01:25:20Z
+channel: brand-data-dev-alerts
+brand: cecil
+summary: "cecil__FEED__publish_from_map — container exited, exit code 137 (OOM)"
+status: active
+linked_issue: null
+```
+No thread or reaction visible. Third brand this window to hit the same publish-step OOM (bestseller 09-05, cecil 09-06, bestseller again 09-07) — all traced to the same publishing-job memory-optimization gap fixed by [product-service#2633](../sources/github/product-service/open-prs.md).
+
+```yaml
+timestamp: 2026-09-05T08:47:19Z
+channel: brand-data-dev-alerts
+brand: bestseller
+summary: "bestseller__FEED2__publish_from_map — container exited, exit code 137 (OOM)"
+status: active
+linked_issue: null
+```
+No thread or reaction visible. Same job as [BDD-3164](../sources/linear/my-issues.md) (Kushel's own B2B image reprocessing work) but a different, real OOM failure mode — not the previously-explained "exceeded 3h limit" pattern. First of three same-cause OOMs this window, root-caused and fixed via product-service#2633 (see 09-07 entry above).
+
+```yaml
+timestamp: 2026-09-05T01:49:00Z
+channel: brand-data-dev-alerts
+brand: platform (Megatron → Backend)
+summary: "Recovered: delays in image processing flow between Megatron and Backend (backend-service-UNPROCESSED-IMAGE-RECEIVED)"
+status: self-resolved
+linked_issue: null
+```
+Recovery of the WARN triggered 09-04 17:06 CEST (queue age back under threshold ~10h43m later). Same recurring alert pattern as the 08-20/08-23 occurrences.
+
+```yaml
+timestamp: 2026-09-04T15:06:00Z
+channel: brand-data-dev-alerts
+brand: platform (Megatron → Backend)
+summary: Delays in image processing flow between Megatron and Backend (backend-service-UNPROCESSED-IMAGE-RECEIVED), WARN threshold breach
+status: recurring
+linked_issue: null
+```
+Same established recurring pattern as 08-20/08-22-23 (queue age over threshold). Recovered ~09-05 01:49 UTC, see entry above.
+
+```yaml
 timestamp: 2026-09-03T19:38:06Z
 channel: brand-data-dev-alerts
 brand: lugina

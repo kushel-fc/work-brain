@@ -3,6 +3,17 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2623
+title: "fix: process images taller than they are wide (BDD-3089)"
+author: kushel-fc
+state: closed
+merged: true
+closed: 2026-09-04
+url: https://github.com/fashioncloud/product-service/pull/2623
+```
+Kushel's own PR, implementing BDD-3089. Merged by himself — he now has zero open PRs on either repo.
+
+```yaml
 number: 2520
 title: "BDD-2567 Add FTP/SFTP support for video downloading"
 author: kushel-fc
