@@ -2,7 +2,7 @@
 
 Assigned to Kushel, live (non-completed) statuses. Populated on sync — completed/canceled work stays in Linear's own history rather than being repeated here; see `git log` for what rolled off.
 
-**Note:** a bulk Triage-clearing operation landed 2026-09-04 ~13:45-13:47 UTC and assigned roughly a dozen previously-unassigned Triage tickets to Kushel in one shot (all show the same updated timestamp). They're listed below at "Ready To Start" — none have been worked yet. See `_meta/sync-log.md` for the full callout.
+**Note:** a bulk Triage-clearing operation landed 2026-09-04 ~13:45-13:47 UTC and assigned roughly a dozen previously-unassigned Triage tickets to Kushel in one shot (all show the same updated timestamp). Two have since shipped (BDD-3157, BDD-3152, both Done 2026-09-07 — see `support/recently-closed.md`); the rest are still listed below at "Ready To Start", not yet worked. See `_meta/sync-log.md` for the full callout.
 
 ---
 
@@ -27,10 +27,10 @@ priority: High
 status: In Progress
 assignee: Kushel Ramanayake
 team: BDD
-updated: 2026-09-04
+updated: 2026-09-08
 url: https://linear.app/fashioncloud/issue/BDD-3225/re-pepe-jeans-missing-image-report-fd-675342
 ```
-No change since last sync. Long AWWG/Pepe Jeans email thread: images repeatedly re-uploaded by the brand but still not showing on the Fashion Cloud frontend.
+Touched again this morning (still In Progress, no status change) — long AWWG/Pepe Jeans email thread: images repeatedly re-uploaded by the brand but still not showing on the Fashion Cloud frontend.
 
 ---
 
@@ -44,7 +44,7 @@ team: BDD
 updated: 2026-09-02
 url: https://linear.app/fashioncloud/issue/BDD-3164/bestseller-reprocess-data-to-enable-all-b2b-images-with-type-pack-to
 ```
-No status change, but directly relevant to a new finding this cycle: the `bestseller_FEED2` publish step has been hitting real OOMs (exit 137) on 09-05, 09-06 (cecil, same underlying job family) and again 09-07 — see [dagster-alerts/log.md](../../dagster-alerts/log.md). [product-service#2633](../github/product-service/open-prs.md) (Aji, already approved) fixes the root cause (publishing-job never had Node's V8 heap bounded to the container's memory limit) — merged 2026-09-07 08:07 UTC.
+No status change on the ticket itself, but the underlying `bestseller_FEED2` OOM saga continued this cycle: [product-service#2633](../github/product-service/open-prs.md) (the Node-memory-optimization Terraform fix, merged 09-07 08:07 UTC) did **not** hold — the same `publish_from_map` step hit exit 137 again 09-07 16:29 CEST. Juls confirmed in-thread the config change alone wasn't enough and real code changes are needed; Aji opened a follow-up, [product-service#2640](../github/product-service/open-prs.md) ("reduce memory footprint of style-group publishing"), 09-08 07:32 UTC. See [dagster-alerts/log.md](../../dagster-alerts/log.md).
 
 ---
 
@@ -175,20 +175,6 @@ Part of the 09-04 bulk assignment. Megatron's XML parser caps out at 500MB; PIPE
 ---
 
 ```yaml
-id: BDD-3157
-title: MAC - deletion of articles (FD: 674486)
-priority: Medium
-status: Ready To Start
-assignee: Kushel Ramanayake
-team: BDD
-updated: 2026-09-04
-url: https://linear.app/fashioncloud/issue/BDD-3157/mac-deletion-of-articles-fd-674486
-```
-Part of the 09-04 bulk assignment. Not started.
-
----
-
-```yaml
 id: BDD-3163
 title: Brand Offboarding - Delete data (FD: 674971)
 priority: Medium
@@ -281,20 +267,6 @@ assignee: Kushel Ramanayake
 team: BDD
 updated: 2026-09-04
 url: https://linear.app/fashioncloud/issue/BDD-3110/maximum-download-with-artnumbers-is-1000-eans-but-when-searching-on
-```
-Part of the 09-04 bulk assignment. Not started.
-
----
-
-```yaml
-id: BDD-3152
-title: Item deletion Pure Path (FD: 674578)
-priority: Low
-status: Ready To Start
-assignee: Kushel Ramanayake
-team: BDD
-updated: 2026-09-04
-url: https://linear.app/fashioncloud/issue/BDD-3152/item-deletion-pure-path-fd-674578
 ```
 Part of the 09-04 bulk assignment. Not started.
 

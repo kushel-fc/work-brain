@@ -2,7 +2,49 @@
 
 Full raw Triage view (team BDD) — https://linear.app/fashioncloud/team/BDD/triage. Populated on sync. The FD-referenced/support-shaped subset of this list is curated into [`support/open.md`](../../support/open.md).
 
-**Major change this cycle:** the backlog dropped from 23 items to 6. A bulk operation on 2026-09-04 ~13:45 UTC assigned roughly a dozen previously-unassigned tickets straight to Kushel (now in [`sources/linear/my-issues.md`](my-issues.md), all at "Ready To Start"). See `_meta/sync-log.md` for the full list.
+Backlog is back up to 9 after the 09-04 bulk-assignment drop to 6 — three new FD-referenced tickets landed 09-07, all Low priority. See `_meta/sync-log.md` for the bulk-assignment history.
+
+---
+
+```yaml
+id: BDD-3235
+title: Clara Orders using Dropshipping Feature (FD: 675743)
+priority: Low
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-09-07
+url: https://linear.app/fashioncloud/issue/BDD-3235/clara-orders-using-dropshipping-feature-fd-675743
+```
+New.
+
+---
+
+```yaml
+id: BDD-3230
+title: Delete eans rehab (FD: 675734)
+priority: Low
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-09-07
+url: https://linear.app/fashioncloud/issue/BDD-3230/delete-eans-rehab-fd-675734
+```
+New.
+
+---
+
+```yaml
+id: BDD-3229
+title: "RE: Cancellations SS27 (FD: 675432)"
+priority: Low
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-09-07
+url: https://linear.app/fashioncloud/issue/BDD-3229/re-cancellations-ss27-fd-675432
+```
+New.
 
 ---
 

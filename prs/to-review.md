@@ -8,13 +8,13 @@ repo: brand-data-pipeline
 title: "BDD-3159: allow experimental.xmSaxParsing in feed_config.json validator"
 author: dwiajik
 state: open
-mergeable_state: mergeable
+mergeable_state: unknown
 review_state: approved
 requested_reviewers: [kushel-fc]
-updated: 2026-09-04
+updated: 2026-09-07
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1744
 ```
-Now fully `mergeable`/CLEAN (was flapping `unknown` for weeks) and already Approved by julsjacinto — Kushel is the last outstanding reviewer. Directly relevant to [BDD-3150](../sources/linear/my-issues.md) (PIPE/Megatron file-size mismatch), which he now owns directly after the 09-04 bulk assignment.
+`mergeable_state` flapped back to `unknown` this cycle (was briefly `mergeable`/CLEAN last sync) — the established GitHub-recompute noise on this repo, not a real conflict. Still Approved by julsjacinto — Kushel remains the last outstanding reviewer. Directly relevant to [BDD-3150](../sources/linear/my-issues.md) (PIPE/Megatron file-size mismatch), which he owns.
 
 ```yaml
 number: 2618
@@ -24,25 +24,11 @@ author: dwiajik
 state: open
 mergeable_state: mergeable
 review_state: changes-requested
-requested_reviewers: [irembbt, kushel-fc, julsjacinto]
+requested_reviewers: [irembbt, kushel-fc, julsjacinto, Chamindu36]
 updated: 2026-09-07
 url: https://github.com/fashioncloud/product-service/pull/2618
 ```
-No change — Changes Requested is still from Chamindu36 (heavy back-and-forth since 09-03), not from Kushel; he hasn't reviewed yet. Its brand-data-pipeline companion (#1800, snocks) is already Approved and no longer shows in the open list — check whether it merged.
-
-```yaml
-number: 2631
-repo: product-service
-title: "docs(pd-observer): document PDCC calculation strategy, data model, and config"
-author: dwiajik
-state: open
-mergeable_state: mergeable
-review_state: awaiting-first-review
-requested_reviewers: [kushel-fc, abirprantofc]
-updated: 2026-09-07
-url: https://github.com/fashioncloud/product-service/pull/2631
-```
-New — team + individually names Kushel. Docs-only, low urgency.
+No change — Changes Requested is still from Chamindu36 (heavy back-and-forth since 09-03), not from Kushel; he hasn't reviewed yet.
 
 ```yaml
 number: 2628
@@ -50,27 +36,13 @@ repo: product-service
 title: "ci: add scheduled development env replication"
 author: betomoretti
 state: open
-mergeable_state: unknown
-review_state: awaiting-first-review
+mergeable_state: mergeable
+review_state: changes-requested
 requested_reviewers: [dwiajik, kushel-fc]
-updated: 2026-09-04
+updated: 2026-09-07
 url: https://github.com/fashioncloud/product-service/pull/2628
 ```
-New — team + individually names Kushel. CI chore.
-
-```yaml
-number: 2607
-repo: product-service
-title: O'Neill brand migration
-author: MuniaL
-state: open
-mergeable_state: unknown
-review_state: awaiting-first-review
-requested_reviewers: [abubakarwase, kushel-fc]
-updated: 2026-09-01
-url: https://github.com/fashioncloud/product-service/pull/2607
-```
-Unchanged since 09-01, now a week stale.
+Changes Requested landed this cycle — from Chamindu36 ("can we open a PR directly to development that is not cloned from Staging"), not from Kushel; he still hasn't reviewed.
 
 ```yaml
 number: 2514
@@ -117,4 +89,4 @@ url: https://github.com/fashioncloud/product-service/pull/1756
 ```
 Draft, stale — over 2 months with no activity.
 
-Dropped this cycle: **#1808** (brand-data-pipeline, Production Release 2026-09-03) merged 2026-09-04 by abirprantofc — moved to `archive/prs/`.
+Dropped this cycle: **#2607** (product-service, O'Neill brand migration) and **#2631** (product-service, PDCC docs) both closed 2026-09-07 without merging — moved to `archive/prs/`.

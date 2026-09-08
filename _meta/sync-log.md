@@ -2,6 +2,25 @@
 
 One entry per sync run. Prune entries older than ~30 days.
 
+## 2026-09-08 (09:35 UTC)
+
+All three sources reachable this run — Linear, GitHub, Slack. About a 23h gap since the last sync (09-07 10:15 → 09-08 09:35).
+
+- **Headline: the bestseller/cecil publishing OOM "fix" from last sync didn't hold.** [product-service#2633](../sources/github/product-service/open-prs.md) (Node memory-optimization Terraform flag, merged 09-07 08:07 UTC) was flagged last cycle as believed-fixed-but-unconfirmed — it recurred same day, 09-07 16:29 CEST, same `bestseller__FEED2__publish_from_map` exit-137 OOM. Juls confirmed in-thread the config change alone wasn't enough; Aji opened the real follow-up, [product-service#2640](../sources/github/product-service/open-prs.md) ("reduce memory footprint of style-group publishing"), 09-08 07:32 UTC, not yet merged. Directly touches [BDD-3164](../sources/linear/my-issues.md), Kushel's own ticket. Top of `today.md`.
+- **New: [process_enrichment_flow](../dagster-alerts/log.md) exceeded its 3h limit and is still running as of sync time** — Kushel flagged it himself in-thread this morning; Dushan had no explanation. Unresolved, added to `today.md`.
+- **New platform incident: PDS Kinesis write-throughput throttling**, 09-07 18:08-20:02 UTC — publishing-job's 2 Kinesis shards (provisioned for 1MiB/shard) hit ~2MiB of load, 72 records failed to publish. Each individual trigger self-resolved, but Aji root-caused it and opened [product-service#2642](../sources/github/product-service/open-prs.md) (shards 2→4 + retry improvements) the next morning. Not Kushel's own work, noted for context.
+- **New failure signature: `analytics_trigger_sensor`/`analytics` step**, exit code 1, twice ~6h apart (09-07 21:44 UTC, 09-08 03:46 UTC). No thread, no explanation yet.
+- **lugina/FEED confirmed as a recurring pattern** — first seen 09-03 (11 asset materializations failed), recurred identically 09-07 21:37 CEST. `dagster-alerts/log.md` entry updated from `active` to `recurring`.
+- **Two more of the 09-04 bulk-assignment batch shipped**: BDD-3157 (MAC deletion of articles) and BDD-3152 (Item deletion Pure Path), both Done 09-07. Batch now down to 10 remaining, all still unstarted.
+- **Three new FD-referenced Triage tickets landed 09-07** (BDD-3235, BDD-3230, BDD-3229), all Low — `support/open.md` back up to 9 items from 5.
+- **Kushel opened his first PR since going to zero on 09-04**: [product-service#2639](../prs/mine.md) (BDD-3089 follow-up, watermark-sizing rounding fix). Still draft; only CodeRabbit has reviewed so far (2 actionable comments), no human reviewer yet — GitHub's aggregate review state reads `changes-requested` off that bot pass alone, but since this is the PR's very first review (not a flip from an earlier clean state) and it's still a draft, not treated as notification-worthy.
+- **Two of his to-review PRs closed without merging**: #2607 (O'Neill migration, stuck at `unknown` mergeable state for two cycles) and #2631 (PDCC docs, closed same day it opened) — both moved to `archive/prs/`.
+- **PR #1744** flapped its `mergeable_state` back to `unknown` (was briefly `mergeable`/CLEAN last sync) — the established GitHub-recompute noise on brand-data-pipeline, not a real conflict. Still Approved, Kushel still the last outstanding reviewer.
+- **PR #2628** picked up Changes Requested from Chamindu36 (a process objection about branching off Staging, not a code review) — not from Kushel.
+- Backfill: product-service#2624 ("enable mavi on PIPE") merged 09-04 but was missed in the 09-07 sync (still showed open) — caught up and archived this cycle.
+- Slack: busier than recent cycles — 16 messages since last sync, concentrated in a ~2h window 09-07 evening (Kinesis cluster) plus the two analytics failures and one lugina recurrence.
+- Notified: no — nothing crossed the notification bar. No deadline passed with zero movement (no due dates set on any live issue). No flip to conflict/Changes-Requested on his own *human-reviewed* work (his new #2639's only review is an automated CodeRabbit pass on a still-draft PR, its first review rather than a flip). No new Urgent-priority ticket landed unassigned (the three new Triage items are Low). No Dagster alert recurred after having reached `self-resolved` status — the bestseller OOM and lugina recurrences were both previously `active`, not `self-resolved`, so they don't meet the literal bar, though the OOM recurrence is called out prominently in `today.md` regardless given how consequential it is.
+
 ## 2026-09-07 (10:15 UTC)
 
 All three sources reachable this run — Linear, GitHub, Slack. Three-day gap since the last sync (08-04 → 09-07).

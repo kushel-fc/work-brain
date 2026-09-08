@@ -4,7 +4,7 @@ FD-sourced/support-shaped tickets, by priority then age (oldest first within eac
 
 No High-priority tickets currently sitting unassigned in Triage.
 
-**This list shrank sharply this cycle** — from 21 items to 5. A bulk assignment on 2026-09-04 moved most of the previous Medium/Low backlog onto Kushel directly; see [`sources/linear/my-issues.md`](../sources/linear/my-issues.md) and `_meta/sync-log.md`.
+Back up to 9 items (from 5) — three new FD-referenced tickets landed 09-07, all Low priority. Still well below the pre-09-04 level; see [`sources/linear/my-issues.md`](../sources/linear/my-issues.md) and `_meta/sync-log.md` for the bulk-assignment history.
 
 ## Medium
 
@@ -29,13 +29,39 @@ PIPE silently mis-parses on a delimiter mismatch instead of erroring. Now the ol
 ## Low
 
 ```yaml
+id: BDD-3235
+title: Clara Orders using Dropshipping Feature (FD: 675743)
+priority: Low
+updated: 2026-09-07
+url: https://linear.app/fashioncloud/issue/BDD-3235/clara-orders-using-dropshipping-feature-fd-675743
+```
+New.
+
+```yaml
+id: BDD-3230
+title: Delete eans rehab (FD: 675734)
+priority: Low
+updated: 2026-09-07
+url: https://linear.app/fashioncloud/issue/BDD-3230/delete-eans-rehab-fd-675734
+```
+New.
+
+```yaml
+id: BDD-3229
+title: "RE: Cancellations SS27 (FD: 675432)"
+priority: Low
+updated: 2026-09-07
+url: https://linear.app/fashioncloud/issue/BDD-3229/re-cancellations-ss27-fd-675432
+```
+New.
+
+```yaml
 id: BDD-3227
 title: Related products (FD: 675420)
 priority: Low
 updated: 2026-09-04
 url: https://linear.app/fashioncloud/issue/BDD-3227/related-products-fd-675420
 ```
-New.
 
 ```yaml
 id: BDD-3109

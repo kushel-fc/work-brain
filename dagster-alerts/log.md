@@ -3,6 +3,46 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
+timestamp: 2026-09-08T03:46:41Z
+channel: brand-data-dev-alerts
+brand: platform (analytics_trigger_sensor)
+summary: "analytics step — essential container exited, exit code 1"
+status: active
+linked_issue: null
+```
+New failure signature. Fired twice, ~6h apart (2026-09-07 21:44:51 UTC and 2026-09-08 03:46:41 UTC), both launched by `analytics_trigger_sensor`, same commit. No thread, no reaction, no explanation in-channel yet.
+
+```yaml
+timestamp: 2026-09-07T20:53:40Z
+channel: brand-data-dev-alerts
+brand: platform (enrichment_file_sensor / process_enrichment_flow)
+summary: Exceeded run time limit of 3 hours — process_enrichment_flow
+status: active
+linked_issue: null
+```
+Kushel flagged in-thread 2026-09-08 07:17 UTC that the run was still going (well past the 3h alert); Dushan replied "thats weird" — no explanation yet, unresolved as of sync time.
+
+```yaml
+timestamp: 2026-09-07T18:08:27Z
+channel: brand-data-dev-alerts
+brand: platform (PDS / Kinesis)
+summary: PDS Kinesis write throttling + stream-publish log failures (size/color/style streams)
+status: self-resolved
+linked_issue: null
+```
+Cluster of trigger/recover cycles 2026-09-07 18:08–20:02 UTC across three related Datadog monitors (Kinesis write-throughput, stream-publish failures, stream-publish log failures) — each recovered within ~15-40min on its own. Root-caused next morning by Aji: PDS's 2 Kinesis shards were provisioned for 1MiB/shard but load hit ~2MiB, exceeding provisioned throughput (72 failed-to-publish records). Fix: increasing to 4 shards plus an improved KDS publishing retry mechanism, [product-service#2642](../sources/github/product-service/open-prs.md) (Aji, opened 2026-09-08 08:02 UTC). Not Kushel's own work, but a real platform incident worth tracking to close.
+
+```yaml
+timestamp: 2026-09-07T14:29:03Z
+channel: brand-data-dev-alerts
+brand: bestseller
+summary: "bestseller__FEED2__publish_from_map — container exited, exit code 137 (OOM), recurrence after fix"
+status: active
+linked_issue: null
+```
+[product-service#2633](../sources/github/product-service/open-prs.md)'s Node-memory-optimization fix (merged 09-07 08:07 UTC, see entry below) did **not** hold — same OOM pattern recurred same day. Juls confirmed in-thread: the Terraform config change alone wasn't enough, real code changes are needed. Aji opened a follow-up fix, [product-service#2640](../sources/github/product-service/open-prs.md) ("reduce memory footprint of style-group publishing"), 2026-09-08 07:32 UTC — not yet merged.
+
+```yaml
 timestamp: 2026-09-07T02:39:13Z
 channel: brand-data-dev-alerts
 brand: bestseller
@@ -10,7 +50,7 @@ summary: "bestseller__FEED2__publish_from_process_images — container exited, e
 status: active
 linked_issue: null
 ```
-Chamindu flagged a second failure over the weekend in-thread; Kushel diagnosed it as an OOM and initially proposed resizing, but Chamindu pushed back since bestseller already runs at the largest resource size and asked to investigate the root cause instead (CC Aji). Juls had an idea and paired with Kushel; Aji opened [product-service#2633](../sources/github/product-service/open-prs.md) — the publishing-job Terraform config never set `enable_node_memory_optimization`, so V8's heap was never bounded to the container's memory limit and the cgroup OOM-killer fired before GC could run. Already Approved, merged 2026-09-07 08:07 UTC. Same root cause as the cecil and bestseller OOMs below (09-05/09-06) — believed fixed now, not yet confirmed by a clean rerun.
+Chamindu flagged a second failure over the weekend in-thread; Kushel diagnosed it as an OOM and initially proposed resizing, but Chamindu pushed back since bestseller already runs at the largest resource size and asked to investigate the root cause instead (CC Aji). Juls had an idea and paired with Kushel; Aji opened [product-service#2633](../sources/github/product-service/open-prs.md) — the publishing-job Terraform config never set `enable_node_memory_optimization`, so V8's heap was never bounded to the container's memory limit and the cgroup OOM-killer fired before GC could run. Merged 2026-09-07 08:07 UTC, but did **not** hold — see the 09-07 14:29 UTC recurrence above and the real follow-up fix, product-service#2640. Same root cause as the cecil and bestseller OOMs below (09-05/09-06).
 
 ```yaml
 timestamp: 2026-09-06T10:03:01Z
@@ -67,10 +107,10 @@ timestamp: 2026-09-03T19:38:06Z
 channel: brand-data-dev-alerts
 brand: lugina
 summary: "lugina/FEED — 11 asset materializations failed (download_images, feed_transform, etc.)"
-status: active
+status: recurring
 linked_issue: null
 ```
-No thread or reaction visible — first occurrence of this brand in the log.
+Recurred 2026-09-07 19:37 UTC (see entry above) — same asset group and identical 11-failure count both times. No thread or reaction on either occurrence.
 
 ```yaml
 timestamp: 2026-09-03T14:16:35Z

@@ -3,6 +3,24 @@
 Capped at ~25 most recent. Older entries move to `../archive/support/`. Sourced from team BDD Done/Deployed issues carrying an FD reference.
 
 ```yaml
+id: BDD-3157
+title: MAC - deletion of articles (FD: 674486)
+priority: Medium
+closed: 2026-09-07
+url: https://linear.app/fashioncloud/issue/BDD-3157/mac-deletion-of-articles-fd-674486
+```
+Part of the 09-04 bulk Triage-clearing assignment — shipped three days after landing on him.
+
+```yaml
+id: BDD-3152
+title: Item deletion Pure Path (FD: 674578)
+priority: Low
+closed: 2026-09-07
+url: https://linear.app/fashioncloud/issue/BDD-3152/item-deletion-pure-path-fd-674578
+```
+Part of the 09-04 bulk Triage-clearing assignment — shipped three days after landing on him.
+
+```yaml
 id: BDD-3107
 title: Blue Seven - AI generated image metadata is lost when receiving images via B2X (Intex) (FD: 673177)
 priority: Medium

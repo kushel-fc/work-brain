@@ -3,6 +3,50 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2624
+title: "feat: enable mavi on PIPE"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-09-04
+url: https://github.com/fashioncloud/product-service/pull/2624
+```
+Backfill — merged 09-04, missed archiving in the 09-07 sync (still showed as open in the raw source file). Not his to review.
+
+```yaml
+number: 2633
+title: "fix(publishing-job): enable Node memory optimization to prevent OOM"
+author: aji
+state: closed
+merged: true
+closed: 2026-09-07
+url: https://github.com/fashioncloud/product-service/pull/2633
+```
+Fix for the bestseller/cecil `publish_from_map` OOM cluster (09-05/09-06/09-07) — already Approved, merged 09-07 08:07 UTC. Did not hold: the same OOM recurred 09-07 16:29 CEST on `bestseller__FEED2__publish_from_map`. Follow-up fix: [#2640](../../sources/github/product-service/open-prs.md).
+
+```yaml
+number: 2607
+title: O'Neill brand migration
+author: MuniaL
+state: closed
+merged: false
+closed: 2026-09-07
+url: https://github.com/fashioncloud/product-service/pull/2607
+```
+Was individually his to review (team + abubakarwase + kushel-fc), stuck at `unknown` mergeable state and no completed reviews visible via the API for two cycles running. Closed without merging.
+
+```yaml
+number: 2631
+title: "docs(pd-observer): document PDCC calculation strategy, data model, and config"
+author: dwiajik
+state: closed
+merged: false
+closed: 2026-09-07
+url: https://github.com/fashioncloud/product-service/pull/2631
+```
+Was individually his to review (team + kushel-fc + abirprantofc), docs-only, low urgency. Closed without merging, same day it was opened.
+
+```yaml
 number: 2623
 title: "fix: process images taller than they are wide (BDD-3089)"
 author: kushel-fc
