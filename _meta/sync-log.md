@@ -2,6 +2,21 @@
 
 One entry per sync run. Prune entries older than ~30 days.
 
+## 2026-09-09 (09:10 UTC)
+
+All three sources reachable this run — Linear, GitHub, Slack. About a 23.5h gap since the last sync (09-08 09:35 → 09-09 09:10).
+
+- **Headline: a second "believed-fixed" platform incident flared back up the same day.** [product-service#2642](../sources/github/product-service/open-prs.md) (Aji's Kinesis shard 2→4 + retry-jitter fix, merged 09-08 08:29 UTC) was meant to close out the 09-07 PDS Kinesis-throttling incident. Instead the same cluster recurred twice more 09-08 — 10:51-11:54 UTC (write-throughput metric hit 164, vs. 3 the first time) and again 18:47-20:01 UTC. Both self-resolved on their own within about an hour, but this is the second "fix didn't hold" pattern running in parallel with the bestseller OOM saga. Crossed the notification bar (a Dagster alert recurring after having reached `self-resolved` status) — notified.
+- **Good news: the bestseller/cecil OOM saga looks resolved.** The real fix, [product-service#2640](../archive/prs/product-service.md), merged 09-08 09:53 UTC — no recurrence in the ~24h since, unlike the earlier Terraform-only attempt. Not confirmed, just quiet. See [BDD-3164](../sources/linear/my-issues.md).
+- **Good news: [BDD-3225](../support/recently-closed.md) (Pepe Jeans missing-image report) resolved** — was at the top of `today.md` for two straight cycles.
+- **His to-review queue emptied out overnight.** [PR #1744](../archive/prs/brand-data-pipeline.md) (brand-data-pipeline, SAX-parser validator — his last outstanding review, pending for weeks) merged 09-08 09:41 UTC by dwiajik without him ever reviewing it. Two more of his to-review PRs also merged without him the same day: product-service #2618 (customAttributes) and #2628 (dev-env replication CI, which had Chamindu36's Changes Requested — she merged it herself). One new PR landed in the queue: [product-service#2651](../prs/to-review.md) (Sizes Module), individually names him among 3 others.
+- **His own PR #2639 came out of draft** — cleared several rounds of CodeRabbit comments, now a clean awaiting-first-review with no human reviewer yet. New own PR **#2650** (draft, reject non-image content in image downloads) opened 09-08, only CodeRabbit has commented so far.
+- **Two more of the 09-04 bulk-assignment batch got started** (not shipped): BDD-3163 (brand offboarding delete) moved Ready To Start → In Progress; BDD-3091 (Hugo Boss MM request) moved Ready To Start → In Review. Batch now down to 8 still-unstarted items.
+- **BDD-3227 (Related products) left BDD Triage — transferred to the Replenishment team** as RPL-2271, not resolved by BDD. Logged in `archive/linear/team-transfers.md`. Two new FD-referenced Triage tickets landed 09-08 (BDD-3237 Low, BDD-3236 Medium) — net Triage count 9 → 10.
+- **New Dagster signatures**: lugina's FEED/FEED2 `move_images_from_ftp_to_s3_job_sync` failed 09-09 08:18 UTC (distinct from its already-tracked asset-materialization pattern); riani recurred its 08-24 `trigger_enrichment_from_map` failure; noExcess hit its first "exceeded 3h limit"; a new pixyle "Failed to create collection" monitor fired for real after test notifications the same morning.
+- Slack: another busy window — roughly 20 messages since last sync, concentrated in two windows (09-08 midday Kinesis recurrence, 09-08 evening Kinesis recurrence + pixyle alerts).
+- Notified: **yes** — the PDS Kinesis incident recurred after having reached `self-resolved` status (twice, following a merged fix), which is the literal Dagster-alert notification-bar trigger. No deadline passed with zero movement. No flip to conflict/Changes-Requested on his own human-reviewed work (#2639 only cleared CodeRabbit rounds and left draft; #2650's only review is CodeRabbit on a new draft, its first review rather than a flip). No new Urgent-priority ticket landed unassigned (BDD-3237 is Low, BDD-3236 is Medium).
+
 ## 2026-09-08 (09:35 UTC)
 
 All three sources reachable this run — Linear, GitHub, Slack. About a 23h gap since the last sync (09-07 10:15 → 09-08 09:35).

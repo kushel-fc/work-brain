@@ -3,6 +3,39 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 1744
+title: "BDD-3159: allow experimental.xmSaxParsing in feed_config.json validator"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-09-08
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1744
+```
+His outstanding review for weeks (Approved by julsjacinto, `mergeable_state` flapping `unknown`/`mergeable`) — merged by dwiajik 09-08 09:41 UTC without Kushel ever leaving a review. Ties to [BDD-3150](../../sources/linear/my-issues.md), which he owns.
+
+```yaml
+number: 1800
+title: BDD-3197 Convert orderSettings to generic customAttributes
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-09-08
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1800
+```
+Not his. Companion to product-service#2618 (individually his), merged same time.
+
+```yaml
+number: 1803
+title: "fix(numph_FEED): source category from Product Group"
+author: hakansoylu1
+state: closed
+merged: false
+closed: 2026-09-08
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1803
+```
+Not his. Closed without merging.
+
+```yaml
 number: 1808
 title: Production Release - 2026-09-03
 author: FCMachineUser

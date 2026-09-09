@@ -13,3 +13,15 @@ transferred: 2026-09-03
 url: https://linear.app/fashioncloud/issue/RDD-1648/future-stock-niet-zichtbaar-fd-674093
 ```
 Was sitting unassigned in BDD Triage since 2026-08-25 with no BDD action; moved to the Retailer Data team and picked up there same week.
+
+```yaml
+id: BDD-3227 (now RPL-2271)
+title: Related products (FD: 675420)
+priority: Low
+transferred_to: Replenishment
+new_assignee: ali.nauman@fashion.cloud
+status_at_transfer: Todo
+transferred: 2026-09-08
+url: https://linear.app/fashioncloud/issue/RPL-2271/related-products-fd-675420
+```
+Was sitting unassigned in BDD Triage since 2026-09-04, untouched by BDD; moved to the Replenishment team same week, not yet started there.

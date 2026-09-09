@@ -3,6 +3,45 @@
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
 ```yaml
+number: 1829
+title: Isolate Dagster PR branch deployment S3 paths from development
+author: dwiajik
+state: open
+mergeable_state: mergeable
+review_state: awaiting-first-review
+requested_reviewers: [irembbt, alirezaMoazenFashion]
+updated: 2026-09-09
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1829
+```
+New. Team + 2 named reviewers, not his. Fixes PR branch deployments and real `development` writing to the same S3 config paths.
+
+```yaml
+number: 1826
+title: royRobson brand migration
+author: marianabassi
+state: open
+mergeable_state: unknown
+review_state: awaiting-first-review
+requested_reviewers: []
+updated: 2026-09-08
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1826
+```
+New. No reviewers requested yet. Companion to product-service#2647.
+
+```yaml
+number: 1825
+title: "pmeLegend: Add `experimental.xmSaxParsing` flag to `feed_config.json`"
+author: dwiajik
+state: open
+mergeable_state: mergeable
+review_state: awaiting-first-review
+requested_reviewers: [hakansoylu1, fashioncloud/dims]
+updated: 2026-09-09
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1825
+```
+New. Not his — follow-up now that [#1744](../../../archive/prs/brand-data-pipeline.md)'s validator support merged, this actually flips the flag on for pmeLegend (the brand behind the 09-03 stream-abort alert).
+
+```yaml
 number: 1819
 title: images + seasonyear
 author: Busra040
@@ -13,7 +52,7 @@ requested_reviewers: []
 updated: 2026-09-07
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1819
 ```
-New. No reviewers requested yet.
+No reviewers requested yet. Not his.
 
 ```yaml
 number: 1815
@@ -56,32 +95,6 @@ url: https://github.com/fashioncloud/brand-data-pipeline/pull/1810
 Approved and clean, no reviewers currently requested. Not his.
 
 ```yaml
-number: 1803
-title: "fix(numph_FEED): source category from Product Group"
-author: hakansoylu1
-state: open
-mergeable_state: unknown
-review_state: awaiting-first-review
-requested_reviewers: []
-updated: 2026-09-03
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/1803
-```
-Not his.
-
-```yaml
-number: 1800
-title: BDD-3197 Convert snocks orderSettings to generic customAttributes
-author: dwiajik
-state: open
-mergeable_state: unknown
-review_state: approved
-requested_reviewers: []
-updated: 2026-09-03
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/1800
-```
-Approved, no reviewers currently requested. Companion to product-service#2618 (customAttributes, individually his). Not his own to review.
-
-```yaml
 number: 1785
 title: "BDD-3161 Weekly image-reprocessing collector job + fan-out sensor"
 author: dwiajik
@@ -90,23 +103,10 @@ draft: true
 mergeable_state: mergeable
 review_state: awaiting-first-review
 requested_reviewers: []
-updated: 2026-09-02
+updated: 2026-09-08
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1785
 ```
 Draft, no reviewers requested. Not his.
-
-```yaml
-number: 1744
-title: "BDD-3159: allow experimental.xmSaxParsing in feed_config.json validator"
-author: dwiajik
-state: open
-mergeable_state: unknown
-review_state: approved
-requested_reviewers: [kushel-fc]
-updated: 2026-09-07
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/1744
-```
-Individually his to review. See [`prs/to-review.md`](../../../prs/to-review.md).
 
 ```yaml
 number: 1472
@@ -145,7 +145,7 @@ requested_reviewers: []
 updated: 2026-07-16
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1120
 ```
-Not his. Approved, `mergeable_state` still flapping `unknown` (previously flagged conflicting).
+Not his. Approved, `mergeable_state` still flapping `unknown`.
 
 ```yaml
 number: 1058

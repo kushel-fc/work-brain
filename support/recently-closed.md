@@ -3,6 +3,15 @@
 Capped at ~25 most recent. Older entries move to `../archive/support/`. Sourced from team BDD Done/Deployed issues carrying an FD reference.
 
 ```yaml
+id: BDD-3225
+title: "Re: Pepe Jeans - missing image report (FD: 675342)"
+priority: High
+closed: 2026-09-09
+url: https://linear.app/fashioncloud/issue/BDD-3225/re-pepe-jeans-missing-image-report-fd-675342
+```
+Resolved — the long AWWG/Pepe Jeans missing-image thread is done. Was at the top of `today.md` last two cycles.
+
+```yaml
 id: BDD-3157
 title: MAC - deletion of articles (FD: 674486)
 priority: Medium
@@ -204,26 +213,4 @@ closed: 2026-08-26
 url: https://linear.app/fashioncloud/issue/BDD-3131/pipe-gardeur-ean-deletion-fd-674154
 ```
 
-```yaml
-id: BDD-3130
-title: "PIPE: Data Reprocessing tool is not working (FD: 674143)"
-priority: High
-closed: 2026-08-25
-url: https://linear.app/fashioncloud/issue/BDD-3130/pipe-data-reprocessing-tool-is-not-working-fd-674143
-```
-
-```yaml
-id: BDD-3105
-title: Megatron Price PD Queues stuck (FD: 673110)
-priority: High
-closed: 2026-08-25
-url: https://linear.app/fashioncloud/issue/BDD-3105/megatron-price-pd-queues-stuck-fd-673110
-```
-
-```yaml
-id: BDD-3114
-title: EAN Deletion (FD: 673811)
-priority: Urgent
-closed: 2026-08-24
-url: https://linear.app/fashioncloud/issue/BDD-3114/ean-deletion-fd-673811
-```
+Older entries (BDD-3130, BDD-3105, BDD-3114) rolled off the ~25-item cap this cycle — see [`archive/support/recently-closed.md`](../archive/support/recently-closed.md).

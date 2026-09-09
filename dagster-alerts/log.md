@@ -3,6 +3,56 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
+timestamp: 2026-09-09T08:18:27Z
+channel: brand-data-dev-alerts
+brand: lugina
+summary: "lugina/FEED and FEED2 — move_images_from_ftp_to_s3_job_sync, container exited exit code 1"
+status: active
+linked_issue: null
+```
+New failure signature for lugina — both the FEED and FEED2 cron image-sync schedules failed on the FTP→S3 move step within the same minute (2026-09-09 08:18 UTC). Distinct from lugina's already-tracked "asset materializations failed" recurring pattern (last seen 09-07). No thread or reaction visible.
+
+```yaml
+timestamp: 2026-09-08T18:47:29Z
+channel: brand-data-dev-alerts
+brand: platform (PDS / Kinesis)
+summary: PDS stream-publish failures recurred a second and third time the same day, after the shard-increase fix already merged
+status: recurring
+linked_issue: null
+```
+The Kinesis-throttling/stream-publish cluster (previously logged as `self-resolved` after 09-07) recurred twice more on 09-08: 10:51-11:54 UTC (Kinesis write-throughput metric hit 164, vs. 3 on 09-07) and again 18:47-20:01 UTC. Both notable because [product-service#2642](../sources/github/product-service/open-prs.md) (Aji's shard 2→4 + retry-jitter fix) had already merged at 08:29 UTC that morning — the targeted fix did not hold, echoing the bestseller OOM saga. Each individual cluster still self-resolved within roughly an hour, no thread activity on either.
+
+```yaml
+timestamp: 2026-09-08T14:10:34Z
+channel: brand-data-dev-alerts
+brand: platform (pixyle / DES)
+summary: "Failed to create a collection in pixyle (des-worker CREATE_COLLECTION_FATAL_ERROR)"
+status: self-resolved
+linked_issue: null
+```
+First real trigger of a monitor Dushan appears to have just set up (several `[TEST]` notifications for a companion "Failed to export collection" alert fired the same morning). Triggered 14:10 UTC, recovered 15:14 UTC. No thread.
+
+```yaml
+timestamp: 2026-09-08T13:34:49Z
+channel: brand-data-dev-alerts
+brand: noExcess
+summary: noExcess_FEED run exceeded 3h time limit
+status: active
+linked_issue: null
+```
+First occurrence of this alert for noExcess. No thread or reaction visible.
+
+```yaml
+timestamp: 2026-09-08T13:18:15Z
+channel: brand-data-dev-alerts
+brand: riani
+summary: riani__FEED__trigger_enrichment_from_map — container exited, exit code 1
+status: recurring
+linked_issue: null
+```
+Same failure signature as the 08-24 occurrence for this brand. No thread this time.
+
+```yaml
 timestamp: 2026-09-08T03:46:41Z
 channel: brand-data-dev-alerts
 brand: platform (analytics_trigger_sensor)

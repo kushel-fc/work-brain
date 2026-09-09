@@ -2,7 +2,7 @@
 
 Assigned to Kushel, live (non-completed) statuses. Populated on sync — completed/canceled work stays in Linear's own history rather than being repeated here; see `git log` for what rolled off.
 
-**Note:** a bulk Triage-clearing operation landed 2026-09-04 ~13:45-13:47 UTC and assigned roughly a dozen previously-unassigned Triage tickets to Kushel in one shot (all show the same updated timestamp). Two have since shipped (BDD-3157, BDD-3152, both Done 2026-09-07 — see `support/recently-closed.md`); the rest are still listed below at "Ready To Start", not yet worked. See `_meta/sync-log.md` for the full callout.
+**Note:** a bulk Triage-clearing operation landed 2026-09-04 ~13:45-13:47 UTC and assigned roughly a dozen previously-unassigned Triage tickets to Kushel in one shot (all show the same updated timestamp). Two have since shipped (BDD-3157, BDD-3152, both Done 2026-09-07 — see `support/recently-closed.md`); two more got started this cycle (BDD-3163, BDD-3091); the rest are still listed below at "Ready To Start", not yet worked. See `_meta/sync-log.md` for the full callout.
 
 ---
 
@@ -21,20 +21,6 @@ New — created 2026-09-04. Silent data bug: after the BS bulk force-update repr
 ---
 
 ```yaml
-id: BDD-3225
-title: "Re: Pepe Jeans - missing image report (FD: 675342)"
-priority: High
-status: In Progress
-assignee: Kushel Ramanayake
-team: BDD
-updated: 2026-09-08
-url: https://linear.app/fashioncloud/issue/BDD-3225/re-pepe-jeans-missing-image-report-fd-675342
-```
-Touched again this morning (still In Progress, no status change) — long AWWG/Pepe Jeans email thread: images repeatedly re-uploaded by the brand but still not showing on the Fashion Cloud frontend.
-
----
-
-```yaml
 id: BDD-3164
 title: Bestseller - reprocess data to enable all B2B images with type "pack" to be visible to retailers (FD: 674996)
 priority: High
@@ -44,7 +30,7 @@ team: BDD
 updated: 2026-09-02
 url: https://linear.app/fashioncloud/issue/BDD-3164/bestseller-reprocess-data-to-enable-all-b2b-images-with-type-pack-to
 ```
-No status change on the ticket itself, but the underlying `bestseller_FEED2` OOM saga continued this cycle: [product-service#2633](../github/product-service/open-prs.md) (the Node-memory-optimization Terraform fix, merged 09-07 08:07 UTC) did **not** hold — the same `publish_from_map` step hit exit 137 again 09-07 16:29 CEST. Juls confirmed in-thread the config change alone wasn't enough and real code changes are needed; Aji opened a follow-up, [product-service#2640](../github/product-service/open-prs.md) ("reduce memory footprint of style-group publishing"), 09-08 07:32 UTC. See [dagster-alerts/log.md](../../dagster-alerts/log.md).
+No status change on the ticket itself, but the `bestseller_FEED2` OOM saga may finally be over: the real follow-up fix, [product-service#2640](../github/product-service/open-prs.md) ("reduce memory footprint of style-group publishing"), merged 09-08 09:53 UTC — and unlike the earlier Terraform-only attempt ([#2633](../../archive/prs/product-service.md)), no bestseller/cecil OOM has recurred in the roughly 24h since. Not confirmed as fixed yet, just quiet. See [dagster-alerts/log.md](../../dagster-alerts/log.md).
 
 ---
 
@@ -170,7 +156,7 @@ team: BDD
 updated: 2026-09-04
 url: https://linear.app/fashioncloud/issue/BDD-3150/pipemegatron-pipeline-mismatch-in-processing-capability-for-prices-fd
 ```
-Part of the 09-04 bulk assignment. Megatron's XML parser caps out at 500MB; PIPE can process larger files. The in-flight SAX-parser work ([brand-data-pipeline#1744](../github/brand-data-pipeline/open-prs.md), now Approved and mergeable, Kushel the last outstanding reviewer) is a candidate fix. Not started.
+Part of the 09-04 bulk assignment. Megatron's XML parser caps out at 500MB; PIPE can process larger files. The candidate fix, the SAX-parser work ([brand-data-pipeline#1744](../../archive/prs/brand-data-pipeline.md)), merged 09-08 — Kushel's long-standing outstanding review became moot when dwiajik merged it without waiting. Worth checking whether this ticket can now close. Not started.
 
 ---
 
@@ -178,13 +164,13 @@ Part of the 09-04 bulk assignment. Megatron's XML parser caps out at 500MB; PIPE
 id: BDD-3163
 title: Brand Offboarding - Delete data (FD: 674971)
 priority: Medium
-status: Ready To Start
+status: In Progress
 assignee: Kushel Ramanayake
 team: BDD
-updated: 2026-09-04
+updated: 2026-09-09
 url: https://linear.app/fashioncloud/issue/BDD-3163/brand-offboarding-delete-data-fd-674971
 ```
-Part of the 09-04 bulk assignment. Cross-check against the Notion "Brands that got offboarded" table before acting. Not started.
+Started this cycle (was Ready To Start). Part of the 09-04 bulk assignment. Cross-check against the Notion "Brands that got offboarded" table before acting.
 
 ---
 
@@ -248,13 +234,13 @@ Tech Debt label. Stale — untouched for over 3 months.
 id: BDD-3091
 title: "HUGO BOSS: request MM (FD: 672863)"
 priority: Low
-status: Ready To Start
+status: In Review
 assignee: Kushel Ramanayake
 team: BDD
-updated: 2026-09-04
+updated: 2026-09-09
 url: https://linear.app/fashioncloud/issue/BDD-3091/hugo-boss-request-mm-fd-672863
 ```
-Part of the 09-04 bulk assignment. Not started.
+Now In Review (was Ready To Start). Part of the 09-04 bulk assignment.
 
 ---
 

@@ -2,7 +2,35 @@
 
 Full raw Triage view (team BDD) — https://linear.app/fashioncloud/team/BDD/triage. Populated on sync. The FD-referenced/support-shaped subset of this list is curated into [`support/open.md`](../../support/open.md).
 
-Backlog is back up to 9 after the 09-04 bulk-assignment drop to 6 — three new FD-referenced tickets landed 09-07, all Low priority. See `_meta/sync-log.md` for the bulk-assignment history.
+Two new FD-referenced tickets landed 09-08 (BDD-3237 Low, BDD-3236 Medium). BDD-3227 left the list — transferred to the Replenishment team as RPL-2271, not resolved by BDD; see [`archive/linear/team-transfers.md`](../../archive/linear/team-transfers.md). Net: 9 → 10.
+
+---
+
+```yaml
+id: BDD-3237
+title: "PIPE: Superdry - deleting one image possible? (FD: 675898)"
+priority: Low
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-09-08
+url: https://linear.app/fashioncloud/issue/BDD-3237/pipe-superdry-deleting-one-image-possible-fd-675898
+```
+New.
+
+---
+
+```yaml
+id: BDD-3236
+title: "Cancels | Please remove | catwalk (FD: 675736)"
+priority: Medium
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-09-08
+url: https://linear.app/fashioncloud/issue/BDD-3236/cancels-please-remove-catwalk-fd-675736
+```
+New.
 
 ---
 
@@ -16,7 +44,6 @@ team: BDD
 updated: 2026-09-07
 url: https://linear.app/fashioncloud/issue/BDD-3235/clara-orders-using-dropshipping-feature-fd-675743
 ```
-New.
 
 ---
 
@@ -30,7 +57,6 @@ team: BDD
 updated: 2026-09-07
 url: https://linear.app/fashioncloud/issue/BDD-3230/delete-eans-rehab-fd-675734
 ```
-New.
 
 ---
 
@@ -44,7 +70,6 @@ team: BDD
 updated: 2026-09-07
 url: https://linear.app/fashioncloud/issue/BDD-3229/re-cancellations-ss27-fd-675432
 ```
-New.
 
 ---
 
@@ -58,21 +83,6 @@ team: BDD
 updated: 2026-09-07
 url: https://linear.app/fashioncloud/issue/BDD-3228/removing-model-images-fynch-hatton-fd-675667
 ```
-New — created and updated same day.
-
----
-
-```yaml
-id: BDD-3227
-title: Related products (FD: 675420)
-priority: Low
-status: Triage
-assignee: unassigned
-team: BDD
-updated: 2026-09-04
-url: https://linear.app/fashioncloud/issue/BDD-3227/related-products-fd-675420
-```
-New.
 
 ---
 
@@ -86,7 +96,7 @@ team: BDD
 updated: 2026-08-20
 url: https://linear.app/fashioncloud/issue/BDD-3043/incorrect-delimiter-not-shown-as-error-fd-672084
 ```
-PIPE silently mis-parses when the configured delimiter doesn't match the file (example: Rosner, `,` configured vs `;` actual). Untouched — did not get swept into the 09-04 bulk assignment despite being older than several items that did.
+PIPE silently mis-parses when the configured delimiter doesn't match the file (example: Rosner, `,` configured vs `;` actual). Oldest Medium item, still untouched.
 
 ---
 
@@ -100,7 +110,7 @@ team: BDD
 updated: 2026-08-20
 url: https://linear.app/fashioncloud/issue/BDD-3109/otto-problems-due-to-inconsistent-updatedsince-timestamp-in-product
 ```
-updatedSince not guaranteed to bump on every change — Otto missed additional images with the same timestamp as the first. Untouched by the bulk assignment.
+updatedSince not guaranteed to bump on every change — Otto missed additional images with the same timestamp as the first.
 
 ---
 
@@ -114,7 +124,7 @@ team: BDD
 updated: 2026-08-03
 url: https://linear.app/fashioncloud/issue/BDD-3005/er-doet-zich-een-herhalend-probleem-voor-fd-663296
 ```
-Recurring UI issue — navigating to a brand's Content > Productdata bounces back to the home page, blocking downloads. Untouched by the bulk assignment; now the oldest item in Triage.
+Recurring UI issue — navigating to a brand's Content > Productdata bounces back to the home page, blocking downloads. Oldest item in Triage overall.
 
 ---
 
@@ -128,4 +138,4 @@ team: BDD
 updated: 2026-07-08
 url: https://linear.app/fashioncloud/issue/BDD-2497/delete-pricelist-fails-in-development-fd-627912
 ```
-Pricelist deletion fails in the development environment after successful create + add-price calls. Untouched by the bulk assignment.
+Pricelist deletion fails in the development environment after successful create + add-price calls.

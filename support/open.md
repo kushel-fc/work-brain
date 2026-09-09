@@ -4,9 +4,18 @@ FD-sourced/support-shaped tickets, by priority then age (oldest first within eac
 
 No High-priority tickets currently sitting unassigned in Triage.
 
-Back up to 9 items (from 5) — three new FD-referenced tickets landed 09-07, all Low priority. Still well below the pre-09-04 level; see [`sources/linear/my-issues.md`](../sources/linear/my-issues.md) and `_meta/sync-log.md` for the bulk-assignment history.
+Up to 10 items (from 9) — two new tickets landed 09-08. BDD-3227 left this list not by resolving but by transferring to the Replenishment team; see [`archive/linear/team-transfers.md`](../archive/linear/team-transfers.md).
 
 ## Medium
+
+```yaml
+id: BDD-3236
+title: "Cancels | Please remove | catwalk (FD: 675736)"
+priority: Medium
+updated: 2026-09-08
+url: https://linear.app/fashioncloud/issue/BDD-3236/cancels-please-remove-catwalk-fd-675736
+```
+New.
 
 ```yaml
 id: BDD-3228
@@ -15,7 +24,6 @@ priority: Medium
 updated: 2026-09-07
 url: https://linear.app/fashioncloud/issue/BDD-3228/removing-model-images-fynch-hatton-fd-675667
 ```
-New.
 
 ```yaml
 id: BDD-3043
@@ -24,9 +32,18 @@ priority: Medium
 updated: 2026-08-20
 url: https://linear.app/fashioncloud/issue/BDD-3043/incorrect-delimiter-not-shown-as-error-fd-672084
 ```
-PIPE silently mis-parses on a delimiter mismatch instead of erroring. Now the oldest Medium item.
+PIPE silently mis-parses on a delimiter mismatch instead of erroring. Oldest Medium item.
 
 ## Low
+
+```yaml
+id: BDD-3237
+title: "PIPE: Superdry - deleting one image possible? (FD: 675898)"
+priority: Low
+updated: 2026-09-08
+url: https://linear.app/fashioncloud/issue/BDD-3237/pipe-superdry-deleting-one-image-possible-fd-675898
+```
+New.
 
 ```yaml
 id: BDD-3235
@@ -35,7 +52,6 @@ priority: Low
 updated: 2026-09-07
 url: https://linear.app/fashioncloud/issue/BDD-3235/clara-orders-using-dropshipping-feature-fd-675743
 ```
-New.
 
 ```yaml
 id: BDD-3230
@@ -44,7 +60,6 @@ priority: Low
 updated: 2026-09-07
 url: https://linear.app/fashioncloud/issue/BDD-3230/delete-eans-rehab-fd-675734
 ```
-New.
 
 ```yaml
 id: BDD-3229
@@ -52,15 +67,6 @@ title: "RE: Cancellations SS27 (FD: 675432)"
 priority: Low
 updated: 2026-09-07
 url: https://linear.app/fashioncloud/issue/BDD-3229/re-cancellations-ss27-fd-675432
-```
-New.
-
-```yaml
-id: BDD-3227
-title: Related products (FD: 675420)
-priority: Low
-updated: 2026-09-04
-url: https://linear.app/fashioncloud/issue/BDD-3227/related-products-fd-675420
 ```
 
 ```yaml
@@ -78,7 +84,7 @@ priority: Low
 updated: 2026-08-03
 url: https://linear.app/fashioncloud/issue/BDD-3005/er-doet-zich-een-herhalend-probleem-voor-fd-663296
 ```
-Recurring — Content > Productdata navigation bounces to home, blocks downloads. Now the oldest unassigned item overall.
+Recurring — Content > Productdata navigation bounces to home, blocks downloads. Oldest unassigned item overall.
 
 ```yaml
 id: BDD-2497

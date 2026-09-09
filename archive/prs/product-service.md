@@ -3,6 +3,105 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2640
+title: "fix(publishing-job): reduce memory footprint of style-group publishing"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-09-08
+url: https://github.com/fashioncloud/product-service/pull/2640
+```
+The real fix for the bestseller/cecil OOM cluster, after #2633's Terraform-only attempt didn't hold (see entry below). Approved by Chamindu36, merged 09-08 09:53 UTC — no recurrence in the ~24h since. See [BDD-3164](../../sources/linear/my-issues.md).
+
+```yaml
+number: 2642
+title: Add full jitter to Kinesis retry backoff, increase style stream shards BDD-3083 BDD-3085
+author: aji
+state: closed
+merged: true
+closed: 2026-09-08
+url: https://github.com/fashioncloud/product-service/pull/2642
+```
+Backfill — the PDS Kinesis-throttling fix (shards 2→4 + retry jitter), merged 09-08 08:29 UTC. Missed archiving last cycle since it was still open at that sync. Did not fully hold — see the two further Kinesis recurrences the same day in [`dagster-alerts/log.md`](../../dagster-alerts/log.md).
+
+```yaml
+number: 2628
+title: "ci: add scheduled development env replication"
+author: betomoretti
+state: closed
+merged: true
+closed: 2026-09-08
+url: https://github.com/fashioncloud/product-service/pull/2628
+```
+Was individually his to review — Chamindu36 had Changes Requested (a process objection, not code review) and then merged it herself without Kushel ever reviewing.
+
+```yaml
+number: 2618
+title: "BDD-3197 Add generic `customAttributes` field to pipe SKU pipeline"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-09-08
+url: https://github.com/fashioncloud/product-service/pull/2618
+```
+Was individually his to review — merged by dwiajik without his review, despite lingering Changes Requested from Chamindu36. Companion brand-data-pipeline#1800 also merged same day.
+
+```yaml
+number: 2574
+title: "BDD-3159 add SAX-based streaming XML parser (experimental, opt-in)"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-09-08
+url: https://github.com/fashioncloud/product-service/pull/2574
+```
+Not his to review. Companion to brand-data-pipeline#1744 (which was his). Merged by dwiajik.
+
+```yaml
+number: 2130
+title: donders brand migration
+author: MuniaL
+state: closed
+merged: false
+closed: 2026-09-08
+url: https://github.com/fashioncloud/product-service/pull/2130
+```
+Not his. Closed without merging.
+
+```yaml
+number: 1874
+title: Add helper script to delete GTINs from the downstream Fashion Cloud API
+author: dwiajik
+state: closed
+merged: false
+closed: 2026-09-08
+url: https://github.com/fashioncloud/product-service/pull/1874
+```
+Was individually his to review (draft, awaiting-first-review) — closed without merging.
+
+```yaml
+number: 1756
+title: "BDD-2290 follow-up: Fix trace cell shape + global cell pollution"
+author: dushansilva
+state: closed
+merged: false
+closed: 2026-09-08
+url: https://github.com/fashioncloud/product-service/pull/1756
+```
+Was individually his to review (draft, stale). Closed without merging.
+
+```yaml
+number: 1728
+title: "BDD-2292 + BDD-2293: brand-onboarding transform-run launch + concurrency guards"
+author: dushansilva
+state: closed
+merged: false
+closed: 2026-09-08
+url: https://github.com/fashioncloud/product-service/pull/1728
+```
+Not his. Closed without merging.
+
+```yaml
 number: 2624
 title: "feat: enable mavi on PIPE"
 author: FCMachineUser
