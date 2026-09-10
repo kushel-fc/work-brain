@@ -3,6 +3,61 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2651
+title: Implement Sizes Module for Size Variants in Product Data Service
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-09-09
+url: https://github.com/fashioncloud/product-service/pull/2651
+```
+Team + individually named Kushel among 3 others; merged 09-09 09:15 UTC, aggregate Approved.
+
+```yaml
+number: 2650
+title: "fix: Reject non-image content in image downloads before it can be marked processed"
+author: kushel-fc
+state: closed
+merged: false
+closed: 2026-09-09
+url: https://github.com/fashioncloud/product-service/pull/2650
+```
+His own draft PR — closed without merging 09-09 21:23 UTC. Only CodeRabbit had reviewed (2 actionable comments), no human reviewer ever weighed in.
+
+```yaml
+number: 2639
+title: "fix: widen watermark fallback safety margin (BDD-3089 follow-up)"
+author: kushel-fc
+state: closed
+merged: true
+closed: 2026-09-09
+url: https://github.com/fashioncloud/product-service/pull/2639
+```
+His own PR — merged 09-09 09:17 UTC, ready for review only one cycle before merging (no human review recorded, only CodeRabbit rounds addressed earlier).
+
+```yaml
+number: 2634
+title: "pd-observer: TTC episode reconstruction"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-09-09
+url: https://github.com/fashioncloud/product-service/pull/2634
+```
+Not his — merged 09-09 09:11 UTC.
+
+```yaml
+number: 2608
+title: BDD-3161 Add image-reprocessing-collector-job
+author: dwiajik
+state: closed
+merged: false
+closed: 2026-09-09
+url: https://github.com/fashioncloud/product-service/pull/2608
+```
+Draft, closed unmerged 09-09 13:12 UTC — re-submitted as [#2655](../../sources/github/product-service/open-prs.md).
+
+```yaml
 number: 2640
 title: "fix(publishing-job): reduce memory footprint of style-group publishing"
 author: dwiajik

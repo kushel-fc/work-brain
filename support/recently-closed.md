@@ -3,6 +3,42 @@
 Capped at ~25 most recent. Older entries move to `../archive/support/`. Sourced from team BDD Done/Deployed issues carrying an FD reference.
 
 ```yaml
+id: BDD-3240
+title: "Just Brands incorrect transformation (fixed) but data has not been re-processed (FD: 676128)"
+priority: Urgent
+closed: 2026-09-09
+url: https://linear.app/fashioncloud/issue/BDD-3240/just-brands-incorrect-transformation-fixed-but-data-has-not-been-re
+```
+New and closed same day — Urgent priority, created and Deployed 09-09 without ever appearing at a "live" status in a prior sync. Landed already assigned to Kushel, so it did not cross the new-unassigned-Urgent-ticket notification bar.
+
+```yaml
+id: BDD-3226
+title: Bestseller Images stop propagating before mappedskus after the force-update reprocess (FD: 675515)
+priority: High
+closed: 2026-09-09
+url: https://linear.app/fashioncloud/issue/BDD-3226/bestseller-images-stop-propagating-before-mappedskus-after-the-force
+```
+Kushel's own ticket — shipped via [brand-data-pipeline#1838](../archive/prs/brand-data-pipeline.md) (pagination fix for `list_s3_bucket_files`), merged 09-09 12:53 UTC. Was at the top of `today.md` for two cycles.
+
+```yaml
+id: BDD-3163
+title: Brand Offboarding - Delete data (FD: 674971)
+priority: Medium
+closed: 2026-09-09
+url: https://linear.app/fashioncloud/issue/BDD-3163/brand-offboarding-delete-data-fd-674971
+```
+Part of the 09-04 bulk Triage-clearing assignment — went In Progress → Deployed within this cycle. Cross-checked against the Notion "Brands that got offboarded" table per standing practice.
+
+```yaml
+id: BDD-1495
+title: "PIPE | CWF Image reprocessing - not gtins found / retool discrepency (FD: 486539)"
+priority: Low
+closed: 2026-09-09
+url: https://linear.app/fashioncloud/issue/BDD-1495/pipe-cwf-image-reprocessing-not-gtins-found-retool-discrepency-fd
+```
+Old ticket, resurfaced 09-06, now shipped.
+
+```yaml
 id: BDD-3225
 title: "Re: Pepe Jeans - missing image report (FD: 675342)"
 priority: High
@@ -181,36 +217,4 @@ closed: 2026-08-26
 url: https://linear.app/fashioncloud/issue/BDD-3113/ean-deletion-dk-company-fd-673791
 ```
 
-```yaml
-id: BDD-3135
-title: EAN deletion for redefined fashion (FD: 674177)
-priority: Medium
-closed: 2026-08-26
-url: https://linear.app/fashioncloud/issue/BDD-3135/ean-deletion-for-redefined-fashion-fd-674177
-```
-
-```yaml
-id: BDD-3116
-title: BettyBarclaySoCozy Deletion request (FD: 673893)
-priority: Medium
-closed: 2026-08-26
-url: https://linear.app/fashioncloud/issue/BDD-3116/bettybarclaysocozy-deletion-request-fd-673893
-```
-
-```yaml
-id: BDD-3127
-title: "PIPE: kaymans cavani ean deletion (FD: 674088)"
-priority: Low
-closed: 2026-08-26
-url: https://linear.app/fashioncloud/issue/BDD-3127/pipe-kaymans-cavani-ean-deletion-fd-674088
-```
-
-```yaml
-id: BDD-3131
-title: "PIPE: gardeur ean deletion (FD: 674154)"
-priority: Low
-closed: 2026-08-26
-url: https://linear.app/fashioncloud/issue/BDD-3131/pipe-gardeur-ean-deletion-fd-674154
-```
-
-Older entries (BDD-3130, BDD-3105, BDD-3114) rolled off the ~25-item cap this cycle — see [`archive/support/recently-closed.md`](../archive/support/recently-closed.md).
+Older entries (BDD-3130, BDD-3105, BDD-3114, BDD-3135, BDD-3116, BDD-3127, BDD-3131) rolled off the ~25-item cap this cycle — see [`archive/support/recently-closed.md`](../archive/support/recently-closed.md).

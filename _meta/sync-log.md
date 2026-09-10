@@ -2,6 +2,23 @@
 
 One entry per sync run. Prune entries older than ~30 days.
 
+## 2026-09-10 (08:40 UTC)
+
+All three sources reachable this run — Linear, GitHub, Slack. About a 23.5h gap since the last sync (09-09 09:10 → 09-10 08:40).
+
+- **Headline: a genuine clean-out cycle — his PR queues both emptied, two more tickets shipped, and no fresh incident crossed the notification bar.** He now has **zero open PRs on either repo** (own #2639 merged, #2650 closed unmerged, both 09-09) and his to-review queue is down to a single stale PR (#2514, unchanged 13 days) — #2651 (Sizes Module) merged 09-09 without needing further action from him.
+- **[BDD-3226](support/recently-closed.md) (his own bestseller/mappedskus ticket) shipped** — fix was [brand-data-pipeline#1838](archive/prs/brand-data-pipeline.md), opened and merged same-day 09-09 12:53 UTC. Two more of the 09-04 bulk-assignment batch also cleared: [BDD-3163](support/recently-closed.md) (brand offboarding delete) shipped, [BDD-3189](sources/linear/my-issues.md) moved to In Progress. Old ticket [BDD-1495](support/recently-closed.md) also shipped. Batch now down to 6 unstarted items.
+- **New: [BDD-3240](support/recently-closed.md)**, Urgent priority (Just Brands incorrect transformation) — created and Deployed same day 09-09, landed already assigned to Kushel so it didn't cross the new-unassigned-Urgent-ticket bar.
+- **The bestseller/cecil OOM saga now looks resolved** — [product-service#2640](archive/prs/product-service.md) has stayed quiet over 48h, the longest quiet window yet in that saga.
+- **PDS Kinesis throttling recurred twice more on 09-09** (18:28-18:53 and 21:00-21:40 CEST), now four total recurrences since the shard-increase fix merged — each still self-resolves within the hour. Not a fresh notification trigger since it was already `recurring` status from the prior sync, not a flip from `self-resolved`.
+- **process_enrichment_flow recurred a third time** (09-10 01:10 UTC breach), still completely unexplained after three occurrences across three days.
+- **lugina got root-caused**: Kushel confirmed via Munia (09-09 14:27 CEST) that the brand's images arrive on a separate FTP/SFTP from its product data — an apparently unsupported setup. Dushan flagged it again this morning before seeing that; Kushel confirmed 10:18 CEST a fix is expected from the brand "today." Still failing hourly as of sync time. `profuomo` hit the same failure signature 09-09, unconfirmed if related.
+- **New Dagster burst, 09-09 afternoon/evening**: iosByMaica (asset materializations), ara/PRICAT (12 failed), bueltel/PRICAT (10 failed), numph (new brand, exceeded 3h limit), sanetta (9 failed) — all first occurrences, no follow-up yet. Separately, a `trigger_enrichment_from_map` burst (same failure mode as riani's recurrence) hit esqualo, schmidtGroup, didriksons, sarto (twice), and roesch — Dushan acknowledged in-channel, looking into it.
+- **BDD-3235 left BDD Triage — transferred to Replenishment** as RPL-2280, picked up and already in In Review there same day. Two new FD-referenced Triage tickets landed (BDD-3241 Low — unusually pre-assigned despite Triage status — and BDD-3238 Medium) — net Triage count 10 → 11.
+- **Big GitHub PR wave**: 5 PRs dropped off product-service's open list (2651, 2650, 2639, 2634, 2608) and 4 off brand-data-pipeline's (1829, 1826, 1819, 1785) — mostly merged, two closed unmerged (#2650, #1785). Two of the BDD-3161 image-reprocessing-collector-job PRs (product-service#2608, brand-data-pipeline#1785) closed unmerged and were immediately re-submitted as #2655/#1839.
+- Slack: dense cycle — 78 top-level messages, dominated by lugina's hourly failures (48 of 78) plus two bursts (15:41-18:11 CEST enrichment failures, 18:28-22:00 CEST PDS Kinesis cluster).
+- Notified: **no** — nothing crossed the notification bar. No deadline passed with zero movement. No flip to conflict/Changes-Requested on his own work (he has zero open PRs, so no flip is possible). No new Urgent-priority ticket landed unassigned (BDD-3240 is Urgent but landed already assigned to him, not unassigned). No Dagster alert recurred after reaching `self-resolved` status — the PDS Kinesis recurrence continues an already-`recurring` pattern from the prior sync, not a fresh flip.
+
 ## 2026-09-09 (09:10 UTC)
 
 All three sources reachable this run — Linear, GitHub, Slack. About a 23.5h gap since the last sync (09-08 09:35 → 09-09 09:10).

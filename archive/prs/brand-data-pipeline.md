@@ -3,6 +3,61 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 1838
+title: "BDD-3226: Paginate list_s3_bucket_files to avoid silently dropping objects"
+author: kushel-fc
+state: closed
+merged: true
+closed: 2026-09-09
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1838
+```
+His own PR — opened and merged same cycle, 09-09 12:53 UTC. The actual fix for [BDD-3226](../../sources/linear/my-issues.md), now closed.
+
+```yaml
+number: 1829
+title: Isolate Dagster PR branch deployment S3 paths from development
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-09-09
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1829
+```
+Not his — merged 09-09 13:21 UTC.
+
+```yaml
+number: 1826
+title: royRobson brand migration
+author: marianabassi
+state: closed
+merged: true
+closed: 2026-09-09
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1826
+```
+Not his — merged 09-09 12:20 UTC. Companion product-service#2647 still open.
+
+```yaml
+number: 1819
+title: images + seasonyear
+author: Busra040
+state: closed
+merged: true
+closed: 2026-09-09
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1819
+```
+Not his — merged 09-09 14:51 UTC.
+
+```yaml
+number: 1785
+title: "BDD-3161 Weekly image-reprocessing collector job + fan-out sensor"
+author: dwiajik
+state: closed
+merged: false
+closed: 2026-09-09
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1785
+```
+Draft, closed unmerged 09-09 13:12 UTC — re-submitted as [#1839](../../sources/github/brand-data-pipeline/open-prs.md).
+
+```yaml
 number: 1744
 title: "BDD-3159: allow experimental.xmSaxParsing in feed_config.json validator"
 author: dwiajik

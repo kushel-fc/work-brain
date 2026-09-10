@@ -3,24 +3,94 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
-timestamp: 2026-09-09T08:18:27Z
+timestamp: 2026-09-10T08:18:04Z
 channel: brand-data-dev-alerts
 brand: lugina
-summary: "lugina/FEED and FEED2 — move_images_from_ftp_to_s3_job_sync, container exited exit code 1"
+summary: "lugina/FEED and FEED2 — move_images_from_ftp_to_s3_job_sync, root-caused, fix in motion"
 status: active
 linked_issue: null
 ```
-New failure signature for lugina — both the FEED and FEED2 cron image-sync schedules failed on the FTP→S3 move step within the same minute (2026-09-09 08:18 UTC). Distinct from lugina's already-tracked "asset materializations failed" recurring pattern (last seen 09-07). No thread or reaction visible.
+Continuation of the 09-09 08:18 UTC signature — fired roughly hourly on both FEED and FEED2 schedules through the entire window, still failing as of this sync. Root-caused 09-09 14:27 CEST: Kushel confirmed via Munia that the brand's images arrive on a different FTP/SFTP than its product data, with different paths, which the job can't resolve — likely an unsupported use case. Dushan flagged it again 09-10 09:16 CEST; Kushel confirmed 09-10 10:18 CEST that Munia will have the brand update their setup "today." Not yet fixed, but a fix is in motion rather than unexplained. `profuomo` hit the same `move_images_from_ftp_to_s3_job_sync` failure mode 09-09 16:03 CEST — a different brand, not yet confirmed as the same root cause.
 
 ```yaml
-timestamp: 2026-09-08T18:47:29Z
+timestamp: 2026-09-10T01:10:43Z
+channel: brand-data-dev-alerts
+brand: platform (enrichment_file_sensor / process_enrichment_flow)
+summary: Exceeded run time limit of 3 hours — process_enrichment_flow, recurred again
+status: active
+linked_issue: null
+```
+Same unresolved issue Kushel first flagged 2026-09-08 07:17 UTC (Dushan: "thats weird", no explanation given). Recurred again: a run started 22:09 UTC 09-09 breached the 3h cap around 01:10 UTC 09-10. Still no root cause or fix in-channel.
+
+```yaml
+timestamp: 2026-09-09T21:00:27Z
 channel: brand-data-dev-alerts
 brand: platform (PDS / Kinesis)
-summary: PDS stream-publish failures recurred a second and third time the same day, after the shard-increase fix already merged
+summary: PDS stream-publish failures recurred twice more on 09-09, now four separate recurrences after the shard-increase fix
 status: recurring
 linked_issue: null
 ```
-The Kinesis-throttling/stream-publish cluster (previously logged as `self-resolved` after 09-07) recurred twice more on 09-08: 10:51-11:54 UTC (Kinesis write-throughput metric hit 164, vs. 3 on 09-07) and again 18:47-20:01 UTC. Both notable because [product-service#2642](../sources/github/product-service/open-prs.md) (Aji's shard 2→4 + retry-jitter fix) had already merged at 08:29 UTC that morning — the targeted fix did not hold, echoing the bestseller OOM saga. Each individual cluster still self-resolved within roughly an hour, no thread activity on either.
+Continuation of the already-`recurring` cluster (self-resolved after 09-07, recurred twice on 09-08). Fired twice more on 09-09: 18:28-18:53 CEST and 21:00-21:40 CEST, each self-resolving within ~25-40 min as before — same behavior, root cause ([product-service#2642](../sources/github/product-service/open-prs.md)'s shard increase) still not holding. Two companion Datadog monitors ("PDS stream publish failures", "PDS stream publish log failures") fired alongside in the same bursts, also self-resolving; folded into this entry rather than tracked separately. Quiet since 22:00 CEST 09-09. Not treated as a fresh notification-bar trigger since this is a continuation of an already-`recurring` pattern, not a new flip from `self-resolved`.
+
+```yaml
+timestamp: 2026-09-09T16:11:38Z
+channel: brand-data-dev-alerts
+brand: iosByMaica
+summary: "iosByMaica/FEED — asset materializations failed (map/merge steps)"
+status: active
+linked_issue: null
+```
+New brand for this failure mode, 09-09 18:11:38 CEST. No thread or reaction visible.
+
+```yaml
+timestamp: 2026-09-09T15:25:58Z
+channel: brand-data-dev-alerts
+brand: multiple (esqualo, schmidtGroup, didriksons, sarto, roesch)
+summary: "trigger_enrichment_from_map — container exited, exit code 1, burst across 5 brands"
+status: active
+linked_issue: null
+```
+Same failure mode as riani's 09-08 recurrence, but a fresh burst hitting different brands 15:41–17:26 CEST 09-09: esqualo (15:41), schmidtGroup/didriksons/sarto simultaneously (16:20:56), roesch (16:23), sarto again (17:25:58). Dushan replied in-channel 16:27:04 CEST: "trigger enrichment failures i will look into them" — acknowledged, not yet resolved.
+
+```yaml
+timestamp: 2026-09-09T15:03:22Z
+channel: brand-data-dev-alerts
+brand: ara
+summary: "ara/PRICAT — 12 asset materializations failed"
+status: active
+linked_issue: null
+```
+09-09 17:03:22 CEST. No thread or reaction visible.
+
+```yaml
+timestamp: 2026-09-09T15:02:22Z
+channel: brand-data-dev-alerts
+brand: bueltel
+summary: "bueltel/PRICAT — 10 asset materializations failed"
+status: active
+linked_issue: null
+```
+09-09 17:02:22 CEST. No thread or reaction visible.
+
+```yaml
+timestamp: 2026-09-09T12:53:34Z
+channel: brand-data-dev-alerts
+brand: numph
+summary: numph_FEED_sync_images run exceeded 3h time limit
+status: active
+linked_issue: null
+```
+New brand for this failure mode, 09-09 14:53:34 CEST. No thread or reaction visible.
+
+```yaml
+timestamp: 2026-09-09T09:15:11Z
+channel: brand-data-dev-alerts
+brand: sanetta
+summary: "sanetta/FEED — 9 asset materializations failed"
+status: active
+linked_issue: null
+```
+09-09 11:15:11 CEST. No thread or reaction visible.
 
 ```yaml
 timestamp: 2026-09-08T14:10:34Z
@@ -61,16 +131,6 @@ status: active
 linked_issue: null
 ```
 New failure signature. Fired twice, ~6h apart (2026-09-07 21:44:51 UTC and 2026-09-08 03:46:41 UTC), both launched by `analytics_trigger_sensor`, same commit. No thread, no reaction, no explanation in-channel yet.
-
-```yaml
-timestamp: 2026-09-07T20:53:40Z
-channel: brand-data-dev-alerts
-brand: platform (enrichment_file_sensor / process_enrichment_flow)
-summary: Exceeded run time limit of 3 hours — process_enrichment_flow
-status: active
-linked_issue: null
-```
-Kushel flagged in-thread 2026-09-08 07:17 UTC that the run was still going (well past the 3h alert); Dushan replied "thats weird" — no explanation yet, unresolved as of sync time.
 
 ```yaml
 timestamp: 2026-09-07T18:08:27Z

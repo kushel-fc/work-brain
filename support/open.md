@@ -4,9 +4,18 @@ FD-sourced/support-shaped tickets, by priority then age (oldest first within eac
 
 No High-priority tickets currently sitting unassigned in Triage.
 
-Up to 10 items (from 9) — two new tickets landed 09-08. BDD-3227 left this list not by resolving but by transferring to the Replenishment team; see [`archive/linear/team-transfers.md`](../archive/linear/team-transfers.md).
+Up to 11 items (from 10) — two new tickets landed 09-09/09-10. BDD-3235 left this list not by resolving but by transferring to the Replenishment team; see [`archive/linear/team-transfers.md`](../archive/linear/team-transfers.md).
 
 ## Medium
+
+```yaml
+id: BDD-3238
+title: Produktbilder (FD: 676044)
+priority: Medium
+updated: 2026-09-09
+url: https://linear.app/fashioncloud/issue/BDD-3238/produktbilder-fd-676044
+```
+New.
 
 ```yaml
 id: BDD-3236
@@ -15,7 +24,6 @@ priority: Medium
 updated: 2026-09-08
 url: https://linear.app/fashioncloud/issue/BDD-3236/cancels-please-remove-catwalk-fd-675736
 ```
-New.
 
 ```yaml
 id: BDD-3228
@@ -37,20 +45,20 @@ PIPE silently mis-parses on a delimiter mismatch instead of erroring. Oldest Med
 ## Low
 
 ```yaml
+id: BDD-3241
+title: Stocks not correctly imported | Cavallaro (FD: 675804)
+priority: Low
+updated: 2026-09-10
+url: https://linear.app/fashioncloud/issue/BDD-3241/stocks-not-correctly-imported-cavallaro-fd-675804
+```
+New. Unusual — already carries an assignee (oleh.polishchuk) despite Triage status, so less "up for grabs" than the rest of this list.
+
+```yaml
 id: BDD-3237
 title: "PIPE: Superdry - deleting one image possible? (FD: 675898)"
 priority: Low
 updated: 2026-09-08
 url: https://linear.app/fashioncloud/issue/BDD-3237/pipe-superdry-deleting-one-image-possible-fd-675898
-```
-New.
-
-```yaml
-id: BDD-3235
-title: Clara Orders using Dropshipping Feature (FD: 675743)
-priority: Low
-updated: 2026-09-07
-url: https://linear.app/fashioncloud/issue/BDD-3235/clara-orders-using-dropshipping-feature-fd-675743
 ```
 
 ```yaml

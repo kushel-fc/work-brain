@@ -25,3 +25,15 @@ transferred: 2026-09-08
 url: https://linear.app/fashioncloud/issue/RPL-2271/related-products-fd-675420
 ```
 Was sitting unassigned in BDD Triage since 2026-09-04, untouched by BDD; moved to the Replenishment team same week, not yet started there.
+
+```yaml
+id: BDD-3235 (now RPL-2280)
+title: Clara Orders using Dropshipping Feature (FD: 675743)
+priority: Low
+transferred_to: Replenishment
+new_assignee: oleh.polishchuk@fashion.cloud
+status_at_transfer: In Review
+transferred: 2026-09-09
+url: https://linear.app/fashioncloud/issue/RPL-2280/clara-orders-using-dropshipping-feature-fd-675743
+```
+Was sitting unassigned in BDD Triage since 2026-09-07; moved to Replenishment and already picked up there (Todo → In Review same day).

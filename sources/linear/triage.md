@@ -2,7 +2,35 @@
 
 Full raw Triage view (team BDD) — https://linear.app/fashioncloud/team/BDD/triage. Populated on sync. The FD-referenced/support-shaped subset of this list is curated into [`support/open.md`](../../support/open.md).
 
-Two new FD-referenced tickets landed 09-08 (BDD-3237 Low, BDD-3236 Medium). BDD-3227 left the list — transferred to the Replenishment team as RPL-2271, not resolved by BDD; see [`archive/linear/team-transfers.md`](../../archive/linear/team-transfers.md). Net: 9 → 10.
+Two new FD-referenced tickets landed 09-09/09-10 (BDD-3241 Low, BDD-3238 Medium). BDD-3235 left the list — transferred to the Replenishment team as RPL-2280, not resolved by BDD; see [`archive/linear/team-transfers.md`](../../archive/linear/team-transfers.md). Net: 10 → 11.
+
+---
+
+```yaml
+id: BDD-3241
+title: Stocks not correctly imported | Cavallaro (FD: 675804)
+priority: Low
+status: Triage
+assignee: oleh.polishchuk@fashion.cloud
+team: BDD
+updated: 2026-09-10
+url: https://linear.app/fashioncloud/issue/BDD-3241/stocks-not-correctly-imported-cavallaro-fd-675804
+```
+New — unusual: carries an assignee already while still in Triage status. Not treated as unassigned in `support/open.md`.
+
+---
+
+```yaml
+id: BDD-3238
+title: Produktbilder (FD: 676044)
+priority: Medium
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-09-09
+url: https://linear.app/fashioncloud/issue/BDD-3238/produktbilder-fd-676044
+```
+New.
 
 ---
 
@@ -16,7 +44,6 @@ team: BDD
 updated: 2026-09-08
 url: https://linear.app/fashioncloud/issue/BDD-3237/pipe-superdry-deleting-one-image-possible-fd-675898
 ```
-New.
 
 ---
 
@@ -29,20 +56,6 @@ assignee: unassigned
 team: BDD
 updated: 2026-09-08
 url: https://linear.app/fashioncloud/issue/BDD-3236/cancels-please-remove-catwalk-fd-675736
-```
-New.
-
----
-
-```yaml
-id: BDD-3235
-title: Clara Orders using Dropshipping Feature (FD: 675743)
-priority: Low
-status: Triage
-assignee: unassigned
-team: BDD
-updated: 2026-09-07
-url: https://linear.app/fashioncloud/issue/BDD-3235/clara-orders-using-dropshipping-feature-fd-675743
 ```
 
 ---

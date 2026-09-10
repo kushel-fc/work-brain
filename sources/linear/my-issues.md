@@ -2,21 +2,7 @@
 
 Assigned to Kushel, live (non-completed) statuses. Populated on sync — completed/canceled work stays in Linear's own history rather than being repeated here; see `git log` for what rolled off.
 
-**Note:** a bulk Triage-clearing operation landed 2026-09-04 ~13:45-13:47 UTC and assigned roughly a dozen previously-unassigned Triage tickets to Kushel in one shot (all show the same updated timestamp). Two have since shipped (BDD-3157, BDD-3152, both Done 2026-09-07 — see `support/recently-closed.md`); two more got started this cycle (BDD-3163, BDD-3091); the rest are still listed below at "Ready To Start", not yet worked. See `_meta/sync-log.md` for the full callout.
-
----
-
-```yaml
-id: BDD-3226
-title: Bestseller Images stop propagating before mappedskus after the force-update reprocess (FD: 675515)
-priority: High
-status: Ready To Start
-assignee: Kushel Ramanayake
-team: BDD
-updated: 2026-09-04
-url: https://linear.app/fashioncloud/issue/BDD-3226/bestseller-images-stop-propagating-before-mappedskus-after-the-force
-```
-New — created 2026-09-04. Silent data bug: after the BS bulk force-update reprocess, new image placeholders reach `mergedskus` but never get written into `mappedskus` (the last step before publish), so the images never appear on the platform and the existing retry tooling can't see them either since it only reads `mappedskus`. Confirmed for one GTIN, reprocess covered many brands so likely wider. Has a diagnostic query attached for checking other GTINs. Not yet started.
+**Note:** a bulk Triage-clearing operation landed 2026-09-04 ~13:45-13:47 UTC and assigned roughly a dozen previously-unassigned Triage tickets to Kushel in one shot (all show the same updated timestamp). Five have since shipped (BDD-3157, BDD-3152, BDD-3163 all Done/Deployed — see `support/recently-closed.md`; BDD-3091 is In Review); the rest are still listed below at "Ready To Start", not yet worked. See `_meta/sync-log.md` for the full callout.
 
 ---
 
@@ -30,7 +16,7 @@ team: BDD
 updated: 2026-09-02
 url: https://linear.app/fashioncloud/issue/BDD-3164/bestseller-reprocess-data-to-enable-all-b2b-images-with-type-pack-to
 ```
-No status change on the ticket itself, but the `bestseller_FEED2` OOM saga may finally be over: the real follow-up fix, [product-service#2640](../github/product-service/open-prs.md) ("reduce memory footprint of style-group publishing"), merged 09-08 09:53 UTC — and unlike the earlier Terraform-only attempt ([#2633](../../archive/prs/product-service.md)), no bestseller/cecil OOM has recurred in the roughly 24h since. Not confirmed as fixed yet, just quiet. See [dagster-alerts/log.md](../../dagster-alerts/log.md).
+No status change on the ticket itself. The `bestseller_FEED2` OOM saga (see `dagster-alerts/log.md`) has now stayed quiet since [product-service#2640](../../archive/prs/product-service.md) merged 09-08 09:53 UTC — over 24h with zero recurrence, longer than any prior "quiet" window in this saga. Still not formally confirmed fixed.
 
 ---
 
@@ -44,7 +30,7 @@ team: BDD
 updated: 2026-08-18
 url: https://linear.app/fashioncloud/issue/BDD-2258/sample-xmlcsv-with-video-links-test-manufacturer-on-sftp
 ```
-Unblocked since BDD-2567 shipped — still not started, three weeks now.
+Unblocked since BDD-2567 shipped — still not started, over three weeks now.
 
 ---
 
@@ -100,7 +86,7 @@ team: BDD
 updated: 2026-09-07
 url: https://linear.app/fashioncloud/issue/BDD-2538/pvh-image-id-updates-without-actual-image-changes-more-information
 ```
-Reopened — was Done 2026-08-18 through 09-01, then bounced back to To Do and now Ready To Start. Not previously tracked here since it was closed at the last sync that would have caught it.
+No change since last sync.
 
 ---
 
@@ -114,7 +100,7 @@ team: BDD
 updated: 2026-09-06
 url: https://linear.app/fashioncloud/issue/BDD-2406/retry-des-calls-with-backoff-on-502503504-in-trigger-enrichment
 ```
-Internal tech-debt ticket (no FD), previously stale — touched 09-06, not previously appearing in this file. Not started.
+No change since last sync.
 
 ---
 
@@ -128,7 +114,7 @@ team: BDD
 updated: 2026-09-04
 url: https://linear.app/fashioncloud/issue/BDD-3037/artikel-data-florez-komt-niet-door-fd-671579
 ```
-Part of the 09-04 bulk Triage-clearing assignment (was unassigned since 08-10, oldest Medium item in the old backlog). Packshots/model photos not arriving via API for LAVIE Womenswear (Florez). Not started.
+Part of the 09-04 bulk Triage-clearing assignment. Not started.
 
 ---
 
@@ -142,7 +128,7 @@ team: BDD
 updated: 2026-09-04
 url: https://linear.app/fashioncloud/issue/BDD-3129/fwd-dringend-ansprechpartner-fd-674136
 ```
-Part of the 09-04 bulk assignment. Forwarded internal German email chain asking for a point of contact — unclear ask, needs triage. Not started.
+Part of the 09-04 bulk assignment. Not started.
 
 ---
 
@@ -156,21 +142,7 @@ team: BDD
 updated: 2026-09-04
 url: https://linear.app/fashioncloud/issue/BDD-3150/pipemegatron-pipeline-mismatch-in-processing-capability-for-prices-fd
 ```
-Part of the 09-04 bulk assignment. Megatron's XML parser caps out at 500MB; PIPE can process larger files. The candidate fix, the SAX-parser work ([brand-data-pipeline#1744](../../archive/prs/brand-data-pipeline.md)), merged 09-08 — Kushel's long-standing outstanding review became moot when dwiajik merged it without waiting. Worth checking whether this ticket can now close. Not started.
-
----
-
-```yaml
-id: BDD-3163
-title: Brand Offboarding - Delete data (FD: 674971)
-priority: Medium
-status: In Progress
-assignee: Kushel Ramanayake
-team: BDD
-updated: 2026-09-09
-url: https://linear.app/fashioncloud/issue/BDD-3163/brand-offboarding-delete-data-fd-674971
-```
-Started this cycle (was Ready To Start). Part of the 09-04 bulk assignment. Cross-check against the Notion "Brands that got offboarded" table before acting.
+Part of the 09-04 bulk assignment. The candidate SAX-parser fix ([brand-data-pipeline#1744](../../archive/prs/brand-data-pipeline.md)) merged 09-08; its follow-up flag-enable PR ([brand-data-pipeline#1825](../github/brand-data-pipeline/open-prs.md)) is now open too. Worth checking whether this ticket can close once #1825 lands. Not started.
 
 ---
 
@@ -192,13 +164,13 @@ Part of the 09-04 bulk assignment. Not started.
 id: BDD-3189
 title: information on sketch tag needed (FD: 675287)
 priority: Medium
-status: Ready To Start
+status: In Progress
 assignee: Kushel Ramanayake
 team: BDD
-updated: 2026-09-04
+updated: 2026-09-09
 url: https://linear.app/fashioncloud/issue/BDD-3189/information-on-sketch-tag-needed-fd-675287
 ```
-Part of the 09-04 bulk assignment. Not started.
+Started this cycle (was Ready To Start). Part of the 09-04 bulk assignment.
 
 ---
 
@@ -212,7 +184,7 @@ team: BDD
 updated: 2026-09-04
 url: https://linear.app/fashioncloud/issue/BDD-2518/convert-the-buffer-into-stream-in-extract-job
 ```
-Tech Debt label. Status touched in the same 09-04 batch (was already his, To Do → Ready To Start).
+Tech Debt label. Status touched in the 09-04 batch (was already his, To Do → Ready To Start).
 
 ---
 
@@ -226,7 +198,7 @@ team: BDD
 updated: 2026-05-21
 url: https://linear.app/fashioncloud/issue/BDD-1721/fix-images-failing-silently-with-no-error-message-captured
 ```
-Tech Debt label. Stale — untouched for over 3 months.
+Tech Debt label. Stale — untouched for over 3.5 months.
 
 ---
 
@@ -240,7 +212,7 @@ team: BDD
 updated: 2026-09-09
 url: https://linear.app/fashioncloud/issue/BDD-3091/hugo-boss-request-mm-fd-672863
 ```
-Now In Review (was Ready To Start). Part of the 09-04 bulk assignment.
+Part of the 09-04 bulk assignment. No change since last sync (already In Review).
 
 ---
 
@@ -268,7 +240,7 @@ team: BDD
 updated: 2026-09-04
 url: https://linear.app/fashioncloud/issue/BDD-3153/preise-siehe-auch-ticket-610189-fd-674585
 ```
-Part of the 09-04 bulk assignment. References an older ticket (610189), needs triage to check that link. Not started.
+Part of the 09-04 bulk assignment. Not started.
 
 ---
 
@@ -293,7 +265,7 @@ priority: Low
 status: Ready To Start
 assignee: Kushel Ramanayake
 team: BDD
-updated: 2026-09-04
+updated: 2026-09-07
 url: https://linear.app/fashioncloud/issue/BDD-3180/api-access-permission-error-fd-675082
 ```
 Part of the 09-04 bulk assignment. Not started.
@@ -310,21 +282,7 @@ team: BDD
 updated: 2026-09-06
 url: https://linear.app/fashioncloud/issue/BDD-1417/get-v2productsmediaimagesid-error-rate-spike-16k-errorsday-since-jan
 ```
-Old internal ticket (no FD), touched 09-06 — not previously appearing in this file.
-
----
-
-```yaml
-id: BDD-1495
-title: "PIPE | CWF Image reprocessing - not gtins found / retool discrepency (FD: 486539)"
-priority: Low
-status: To Do
-assignee: Kushel Ramanayake
-team: BDD
-updated: 2026-09-06
-url: https://linear.app/fashioncloud/issue/BDD-1495/pipe-cwf-image-reprocessing-not-gtins-found-retool-discrepency-fd
-```
-Old ticket, touched 09-06 — not previously appearing in this file.
+Old internal ticket (no FD). No change since last sync.
 
 ---
 
