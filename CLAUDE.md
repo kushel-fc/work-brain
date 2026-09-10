@@ -42,7 +42,8 @@ work-brain/
 ├── archive/                       # closed/merged/done items land here, never deleted
 └── _meta/
     ├── index.md                   # last sync time, counts, quick stats
-    └── sync-log.md                # one entry per sync run: what changed, what was flagged
+    ├── sync-log.md                # one entry per sync run: what changed, what was flagged
+    └── earmarks.md                # signal-triggered reminders — see "Earmarks" below
 ```
 
 ## Core principle: state, not history
@@ -123,6 +124,14 @@ Run by the `sync-work-brain` skill in `.claude/skills/sync-work-brain/SKILL.md`.
 
 Both files stay short — link to the relevant `sources/`/`support/`/`prs/` file for detail rather than duplicating it.
 
+## Earmarks (signal-triggered reminders)
+
+**Location**: `_meta/earmarks.md`.
+
+Most "what changed" detection in this repo is date/diff-driven (Phase 2's comparison against committed state). Earmarks cover the other case: "when X happens — a PR merges, an alert stops recurring, a brand fixes their setup — check/do Y," where X isn't on a schedule and a plain diff won't surface it on its own.
+
+**During every sync's Phase 2**, alongside the normal source diff, scan `_meta/earmarks.md`'s `Active` section against this cycle's fresh pull. On a match: surface it at the top of `today.md`, then move the entry into `Triggered / Dismissed` (or leave it `active` if it's a standing watch rather than a one-shot). Don't let stale earmarks pile up silently — if one's trigger condition no longer makes sense (the ticket closed some other way, the PR was abandoned), dismiss it with a note rather than leaving it active forever.
+
 ## Notification bar
 
 Only push a notification (outside the normal daily sync summary) when:
@@ -138,6 +147,7 @@ Otherwise, let the commit speak for itself — no notification for routine churn
 - Stage explicitly by path: `git add today.md this-week.md sources/linear/triage.md ...` — never `git add -A` or `git add .`.
 - One commit per sync run. Message format: `sync: <date> — <headline of what changed>`.
 - Run `git status` before committing if anything is ambiguous.
+- A `PreToolUse` hook (`.claude/hooks/block-git-add-all.sh`, wired in `.claude/settings.json`) blocks `git add -A`/`.`/`--all` outright — the rule above is enforced, not just stated.
 
 ## Archiving
 

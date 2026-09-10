@@ -31,6 +31,8 @@ For each source file, compare fresh data against what's currently on disk. This 
 
 Write these findings down (mentally or as your commit-message draft) — they drive both the `today.md`/`this-week.md` regeneration and the notification decision in Phase 4.
 
+**Also check `_meta/earmarks.md`'s `Active` section** against this cycle's fresh pull — these are the "when X happens, check Y" reminders a plain diff won't catch on its own (see `CLAUDE.md`'s Earmarks section). On a match, surface it at the top of `today.md` and move the entry to `Triggered / Dismissed`; otherwise leave active entries as-is.
+
 ## Phase 3 — Write
 1. Overwrite `sources/linear/my-issues.md`, `sources/linear/triage.md`, each `sources/linear/watched/*.md`, `sources/github/*/open-prs.md`, with current state (frontmatter + short prose per entry, per `CLAUDE.md`).
 2. Update `dagster-alerts/log.md`: append new alerts, flip status on ones that resolved or recurred, prune entries >30 days old to keep the file short.
@@ -38,6 +40,7 @@ Write these findings down (mentally or as your commit-message draft) — they dr
 4. Update `prs/mine.md` and `prs/to-review.md` from the GitHub data — these are curated/prioritized views, not raw dumps.
 5. Touch `shaping/*.md` only if something in scope changed.
 6. Move anything closed/merged/resolved into the matching `archive/` subfolder.
+6a. Update `_meta/earmarks.md` if Phase 2 found a match — move it to `Triggered / Dismissed` (or leave `active` if it's a standing watch).
 7. Regenerate `today.md` and `this-week.md` per the prioritization rules in `CLAUDE.md`. Link to detail files rather than duplicating their content.
 8. Append one entry to `_meta/sync-log.md`:
    ```markdown
