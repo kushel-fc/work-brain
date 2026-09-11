@@ -2,20 +2,7 @@
 
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
-Big wave this cycle: #1829, #1826, #1819, #1785 all left the open list (merged/closed), plus his own #1838 opened and merged same-day — see [`archive/prs/brand-data-pipeline.md`](../../../archive/prs/brand-data-pipeline.md). Two new PRs, #1842 and #1839.
-
-```yaml
-number: 1842
-title: updated seasonYear
-author: honeypsabu
-state: open
-mergeable_state: mergeable
-review_state: awaiting-first-review
-requested_reviewers: []
-updated: 2026-09-10
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/1842
-```
-New. No reviewers requested yet. Not his.
+#1842 (seasonYear) merged 09-10 and left the list — see [`archive/prs/brand-data-pipeline.md`](../../../archive/prs/brand-data-pipeline.md). No new PRs this cycle. Net count down to 10.
 
 ```yaml
 number: 1839
@@ -24,11 +11,11 @@ author: dwiajik
 state: open
 mergeable_state: mergeable
 review_state: awaiting-first-review
-requested_reviewers: [julsjacinto, alirezaMoazenFashion]
+requested_reviewers: [brand-data-dev (team), julsjacinto, alirezaMoazenFashion]
 updated: 2026-09-09
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1839
 ```
-New — team + 2 named reviewers, not his. Companion to product-service#2655; re-submission of BDD-3161 after #1785 closed unmerged 09-09.
+Not his. Companion to product-service#2655.
 
 ```yaml
 number: 1825
@@ -37,11 +24,11 @@ author: dwiajik
 state: open
 mergeable_state: mergeable
 review_state: awaiting-first-review
-requested_reviewers: [hakansoylu1, fashioncloud/dims]
+requested_reviewers: [hakansoylu1, dims (team)]
 updated: 2026-09-09
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1825
 ```
-Not his — follow-up now that #1744's validator support merged, this actually flips the flag on for pmeLegend.
+Not his. This is the flag-enable PR the [BDD-3150 earmark](../../../_meta/earmarks.md) is watching — no change this cycle, still open.
 
 ```yaml
 number: 1815
@@ -50,7 +37,7 @@ author: app/dependabot
 state: open
 mergeable_state: unknown
 review_state: awaiting-first-review
-requested_reviewers: [dwiajik, abubakarwase]
+requested_reviewers: [brand-data-dev (team), dwiajik, abubakarwase]
 updated: 2026-09-06
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1815
 ```
@@ -103,7 +90,7 @@ author: FCMachineUser
 state: open
 mergeable_state: unknown
 review_state: awaiting-first-review
-requested_reviewers: [dwiajik, irembbt]
+requested_reviewers: [brand-data-dev (team), dwiajik, irembbt]
 updated: 2026-07-23
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1263
 ```

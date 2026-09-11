@@ -3,6 +3,51 @@
 Capped at ~25 most recent. Older entries move to `../archive/support/`. Sourced from team BDD Done/Deployed issues carrying an FD reference.
 
 ```yaml
+id: BDD-3230
+title: Delete eans rehab (FD: 675734)
+priority: Low
+closed: 2026-09-10
+url: https://linear.app/fashioncloud/issue/BDD-3230/delete-eans-rehab-fd-675734
+```
+Landed in Triage unassigned 09-07, picked up and shipped all in this cycle — Triage → assigned → Deployed same window.
+
+```yaml
+id: BDD-3168
+title: API Image request problem (FD: 675101)
+priority: Low
+closed: 2026-09-10
+url: https://linear.app/fashioncloud/issue/BDD-3168/api-image-request-problem-fd-675101
+```
+Part of the 09-04 bulk Triage-clearing assignment — shipped after sitting Ready To Start since then.
+
+```yaml
+id: BDD-2538
+title: PVH - image ID updates without actual image changes - more information needed (FD: 650988)
+priority: Medium
+closed: 2026-09-10
+url: https://linear.app/fashioncloud/issue/BDD-2538/pvh-image-id-updates-without-actual-image-changes-more-information
+```
+Was Ready To Start, unchanged for several cycles — shipped this cycle.
+
+```yaml
+id: BDD-3001
+title: Corrupted images - GUESS (FD: 671049)
+priority: Medium
+closed: 2026-09-10
+url: https://linear.app/fashioncloud/issue/BDD-3001/corrupted-images-guess-fd-671049
+```
+Was In Progress last sync, now Deployed.
+
+```yaml
+id: BDD-2497
+title: Delete pricelist fails in development (FD: 627912)
+priority: Low
+closed: 2026-09-10
+url: https://linear.app/fashioncloud/issue/BDD-2497/delete-pricelist-fails-in-development-fd-627912
+```
+Jumped straight from unassigned Triage to Done without ever showing an intermediate assignee — was the oldest item in `support/open.md` besides BDD-3005.
+
+```yaml
 id: BDD-3240
 title: "Just Brands incorrect transformation (fixed) but data has not been re-processed (FD: 676128)"
 priority: Urgent
@@ -177,44 +222,4 @@ closed: 2026-08-27
 url: https://linear.app/fashioncloud/issue/BDD-2945/differences-in-platform-and-ow-fd-659386
 ```
 
-```yaml
-id: BDD-3133
-title: MSCH Copenhagen items deletion (FD: 674161)
-priority: Low
-closed: 2026-08-26
-url: https://linear.app/fashioncloud/issue/BDD-3133/msch-copenhagen-items-deletion-fd-674161
-```
-
-```yaml
-id: BDD-3138
-title: Cancel Articles for SS27. 2 Rino & Pelle (FD: 674099)
-priority: Medium
-closed: 2026-08-26
-url: https://linear.app/fashioncloud/issue/BDD-3138/cancel-articles-for-ss27-2-rino-and-pelle-fd-674099
-```
-
-```yaml
-id: BDD-3134
-title: "PIPE: awwg ean deletion (FD: 674169)"
-priority: Medium
-closed: 2026-08-26
-url: https://linear.app/fashioncloud/issue/BDD-3134/pipe-awwg-ean-deletion-fd-674169
-```
-
-```yaml
-id: BDD-3076
-title: megatron image issue ammann (FD: 672353)
-priority: Low
-closed: 2026-08-26
-url: https://linear.app/fashioncloud/issue/BDD-3076/megatron-image-issue-ammann-fd-672353
-```
-
-```yaml
-id: BDD-3113
-title: EAN Deletion DK COMPANY (FD: 673791)
-priority: Medium
-closed: 2026-08-26
-url: https://linear.app/fashioncloud/issue/BDD-3113/ean-deletion-dk-company-fd-673791
-```
-
-Older entries (BDD-3130, BDD-3105, BDD-3114, BDD-3135, BDD-3116, BDD-3127, BDD-3131) rolled off the ~25-item cap this cycle — see [`archive/support/recently-closed.md`](../archive/support/recently-closed.md).
+Older entries (BDD-3130, BDD-3105, BDD-3114, BDD-3135, BDD-3116, BDD-3127, BDD-3131, BDD-3133, BDD-3138, BDD-3134, BDD-3076, BDD-3113) rolled off the ~25-item cap across the last two cycles — see [`archive/support/recently-closed.md`](../archive/support/recently-closed.md).

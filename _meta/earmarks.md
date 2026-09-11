@@ -13,11 +13,9 @@ Each earmark has a `Trigger signal` (plain-language condition to watch for durin
 - **Related**: [sources/github/brand-data-pipeline/open-prs.md](../sources/github/brand-data-pipeline/open-prs.md)
 - **Status**: active
 
-- **Trigger signal**: lugina's `move_images_from_ftp_to_s3_job_sync` failures stop recurring (Munia was expected to update the brand's FTP setup "today," per Kushel's 09-10 10:18 CEST message)
-- **Surface**: Confirm the fix actually held before calling this resolved — flip [dagster-alerts/log.md](../dagster-alerts/log.md)'s lugina entry from `active` to `self-resolved`, and check whether `profuomo`'s same-signature failure (09-09) was related or coincidental.
-- **Related**: [dagster-alerts/log.md](../dagster-alerts/log.md)
-- **Status**: active
-
 ## Triggered / Dismissed
 
-_None yet._
+- **Trigger signal**: lugina's `move_images_from_ftp_to_s3_job_sync` failures stop recurring (Munia was expected to update the brand's FTP setup "today," per Kushel's 09-10 10:18 CEST message)
+- **Surface**: Confirm the fix actually held before calling this resolved.
+- **Related**: [dagster-alerts/log.md](../dagster-alerts/log.md)
+- **Status**: triggered 2026-09-11 — lugina's last failure was 09-10 14:18 UTC, ~19h quiet as of this sync; `profuomo` (same signature) also went quiet after one more recurrence 09-10. No explicit in-channel confirmation the fix landed, just absence of further failures — worth one more look next sync before treating as fully closed.

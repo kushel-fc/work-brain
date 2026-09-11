@@ -3,6 +3,17 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 1842
+title: updated seasonYear
+author: honeypsabu
+state: closed
+merged: true
+closed: 2026-09-10
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1842
+```
+Not his — no reviewers requested. Merged.
+
+```yaml
 number: 1838
 title: "BDD-3226: Paginate list_s3_bucket_files to avoid silently dropping objects"
 author: kushel-fc

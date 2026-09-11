@@ -2,33 +2,46 @@
 
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
-Big wave this cycle: #2651, #2650, #2639, #2634, #2608 all left the open list (merged/closed) — see [`archive/prs/product-service.md`](../../../archive/prs/product-service.md). One new PR, #2655.
+Two new PRs (#2668, #2666), two left the list this cycle (#2647 closed unmerged, #2643 merged) — see [`archive/prs/product-service.md`](../../../archive/prs/product-service.md). Net count unchanged at 7. Neither new PR names Kushel.
+
+```yaml
+number: 2668
+title: Enable royRobson on PIPE
+author: marianabassi
+state: open
+mergeable_state: mergeable
+review_state: awaiting-first-review
+requested_reviewers: [brand-data-dev (team), dwiajik, abirprantofc]
+updated: 2026-09-11
+url: https://github.com/fashioncloud/product-service/pull/2668
+```
+New — follow-on to #2647 (royRobson brand migration), which closed unmerged 09-10. Not his.
+
+```yaml
+number: 2666
+title: Enable SNOCKS on PIPE
+author: FCMachineUser
+state: open
+mergeable_state: mergeable
+review_state: approved
+requested_reviewers: [dwiajik, alirezaMoazenFashion]
+updated: 2026-09-10
+url: https://github.com/fashioncloud/product-service/pull/2666
+```
+New, already Approved. Not his.
 
 ```yaml
 number: 2655
 title: BDD-3161 Add image-reprocessing-collector-job
 author: dwiajik
 state: open
-mergeable_state: mergeable
+mergeable_state: unknown
 review_state: awaiting-first-review
-requested_reviewers: [abubakarwase, abirprantofc]
+requested_reviewers: [brand-data-dev (team), abubakarwase, abirprantofc]
 updated: 2026-09-10
 url: https://github.com/fashioncloud/product-service/pull/2655
 ```
-New — team-requested (brand-data-dev) plus abubakarwase/abirprantofc individually; Kushel not individually named. Re-submission of BDD-3161 after the earlier draft (#2608) closed unmerged 09-09. Companion to brand-data-pipeline#1839.
-
-```yaml
-number: 2647
-title: royRobson brand migration
-author: marianabassi
-state: open
-mergeable_state: unknown
-review_state: awaiting-first-review
-requested_reviewers: [dwiajik, abirprantofc]
-updated: 2026-09-08
-url: https://github.com/fashioncloud/product-service/pull/2647
-```
-Not his. Companion brand-data-pipeline#1826 merged 09-09; this one still open.
+Not his. Companion to brand-data-pipeline#1839. `mergeable_state` flipped mergeable → unknown this cycle — recompute noise, not a real conflict.
 
 ```yaml
 number: 2644
@@ -42,19 +55,6 @@ updated: 2026-09-08
 url: https://github.com/fashioncloud/product-service/pull/2644
 ```
 Not individually his. CodeRabbit's changes-requested pass is the only thing keeping the aggregate state from clearing.
-
-```yaml
-number: 2643
-title: add multi download module to pcs
-author: irembbt
-state: open
-mergeable_state: mergeable
-review_state: changes-requested
-requested_reviewers: [Chamindu36]
-updated: 2026-09-10
-url: https://github.com/fashioncloud/product-service/pull/2643
-```
-Not his — sole named reviewer is Chamindu36.
 
 ```yaml
 number: 2622
@@ -75,13 +75,13 @@ title: "feat(llm-based-agent-setup): add mutations tool group for SKU reprocessi
 author: dushansilva
 state: open
 draft: true
-mergeable_state: mergeable
+mergeable_state: unknown
 review_state: changes-requested
-requested_reviewers: [irembbt, kushel-fc, dwiajik, julsjacinto]
+requested_reviewers: [brand-data-dev (team), irembbt, kushel-fc, dwiajik, julsjacinto]
 updated: 2026-08-28
 url: https://github.com/fashioncloud/product-service/pull/2514
 ```
-Individually his to review. Draft, already has Changes Requested from someone else, now stale — 13 days unchanged (mergeable_state flipped unknown → mergeable this cycle, not a real signal since it's still nobody reviewing). See [`prs/to-review.md`](../../../prs/to-review.md).
+Individually his to review. Draft, already has Changes Requested from someone else, now 14 days unchanged. `mergeable_state` flapped mergeable → unknown this cycle, not a real signal since nobody's reviewing. See [`prs/to-review.md`](../../../prs/to-review.md).
 
 ```yaml
 number: 1737
@@ -94,4 +94,4 @@ requested_reviewers: [julsjacinto]
 updated: 2026-07-07
 url: https://github.com/fashioncloud/product-service/pull/1737
 ```
-Not his — sole named reviewer is julsjacinto. `mergeable_state` flapped back to `unknown` (was `conflicting` last cycle) — the established recompute noise.
+Not his — sole named reviewer is julsjacinto. Stale, over two months.

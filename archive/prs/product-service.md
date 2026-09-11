@@ -3,6 +3,28 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2647
+title: royRobson brand migration
+author: marianabassi
+state: closed
+merged: false
+closed: 2026-09-10
+url: https://github.com/fashioncloud/product-service/pull/2647
+```
+Not his. Closed unmerged — re-submitted as [#2668](../../sources/github/product-service/open-prs.md). Companion brand-data-pipeline#1826 had already merged 09-09.
+
+```yaml
+number: 2643
+title: add multi download module to pcs
+author: irembbt
+state: closed
+merged: true
+closed: 2026-09-10
+url: https://github.com/fashioncloud/product-service/pull/2643
+```
+Not his — sole named reviewer was Chamindu36. Merged.
+
+```yaml
 number: 2651
 title: Implement Sizes Module for Size Variants in Product Data Service
 author: Chamindu36

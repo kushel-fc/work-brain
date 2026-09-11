@@ -3,44 +3,114 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
-timestamp: 2026-09-10T08:18:04Z
+timestamp: 2026-09-11T09:03:17Z
 channel: brand-data-dev-alerts
-brand: lugina
-summary: "lugina/FEED and FEED2 — move_images_from_ftp_to_s3_job_sync, root-caused, fix in motion"
+brand: ammann
+summary: "ammann/FEED — process_images, exit code 137 (OOM), twice"
 status: active
 linked_issue: null
 ```
-Continuation of the 09-09 08:18 UTC signature — fired roughly hourly on both FEED and FEED2 schedules through the entire window, still failing as of this sync. Root-caused 09-09 14:27 CEST: Kushel confirmed via Munia that the brand's images arrive on a different FTP/SFTP than its product data, with different paths, which the job can't resolve — likely an unsupported use case. Dushan flagged it again 09-10 09:16 CEST; Kushel confirmed 09-10 10:18 CEST that Munia will have the brand update their setup "today." Not yet fixed, but a fix is in motion rather than unexplained. `profuomo` hit the same `move_images_from_ftp_to_s3_job_sync` failure mode 09-09 16:03 CEST — a different brand, not yet confirmed as the same root cause.
+New brand/step for this OOM signature. Two occurrences: 09-10 16:59:54 CEST and 09-11 11:03:17 CEST, roughly 18h apart. No thread. Same exit-137 family as the earlier bestseller/cecil and garcia OOMs, but a distinct step (`process_images`, not `publish_from_map`/`publish_from_process_images`) — not treated as the same incident.
 
 ```yaml
-timestamp: 2026-09-10T01:10:43Z
+timestamp: 2026-09-11T06:18:37Z
+channel: brand-data-dev-alerts
+brand: morganDeToi
+summary: "morganDeToi/FEED — 12 asset materializations failed (download_images, extract)"
+status: active
+linked_issue: null
+```
+New brand for this failure mode, 09-11 08:18:37 CEST. No thread or reaction visible.
+
+```yaml
+timestamp: 2026-09-10T16:44:27Z
+channel: brand-data-dev-alerts
+brand: platform (Datadog / product-service-logs-index)
+summary: Log index approached then hit its daily ingestion quota, self-resolved on quota reset
+status: self-resolved
+linked_issue: null
+```
+New alert type, not seen in this log before. Warning threshold (85%) hit 09-10 18:44 CEST, daily quota (100%) hit 18:51 CEST — no more logs indexed for `product-service-logs-index-` for the rest of the day. Both cleared automatically 09-11 08:03 CEST when the quota reset. No thread; no action taken or needed given the auto-recovery, but worth watching if it recurs — an index at 100% masks log-based alerting for the rest of that day.
+
+```yaml
+timestamp: 2026-09-11T02:43:09Z
 channel: brand-data-dev-alerts
 brand: platform (enrichment_file_sensor / process_enrichment_flow)
-summary: Exceeded run time limit of 3 hours — process_enrichment_flow, recurred again
+summary: Exceeded run time limit of 3 hours — process_enrichment_flow, recurred a fourth time
 status: active
 linked_issue: null
 ```
-Same unresolved issue Kushel first flagged 2026-09-08 07:17 UTC (Dushan: "thats weird", no explanation given). Recurred again: a run started 22:09 UTC 09-09 breached the 3h cap around 01:10 UTC 09-10. Still no root cause or fix in-channel.
+Same unresolved issue Kushel first flagged 2026-09-08 07:17 UTC (Dushan: "thats weird", no explanation given). Recurred again: a run started 23:42 UTC 09-10 breached the 3h cap around 02:43 UTC 09-11 — the fourth occurrence across four days. Still no root cause or fix in-channel.
 
 ```yaml
-timestamp: 2026-09-09T21:00:27Z
+timestamp: 2026-09-10T22:00:26Z
+channel: brand-data-dev-alerts
+brand: royRobson (ona)
+summary: ona__royRobson_FEED2 run exceeded 3h time limit
+status: active
+linked_issue: null
+```
+New brand for this failure mode, 09-11 00:00:26 CEST. Coincides with the royRobson brand-migration PR churn on GitHub this cycle (product-service#2647 closed unmerged, re-submitted as #2668) — plausibly related to the migration being mid-flight, not confirmed. No thread.
+
+```yaml
+timestamp: 2026-09-10T19:46:28Z
+channel: brand-data-dev-alerts
+brand: falke (ona)
+summary: ona__falke_PRICAT run exceeded 3h time limit
+status: active
+linked_issue: null
+```
+New brand for this failure mode, 09-10 21:46:28 CEST. No thread or reaction visible.
+
+```yaml
+timestamp: 2026-09-10T10:27:13Z
+channel: brand-data-dev-alerts
+brand: kultivate
+summary: kultivate_FEED run exceeded 3h time limit, twice same day
+status: active
+linked_issue: null
+```
+New brand for this failure mode. Two occurrences 09-10: 12:27:13 CEST and 19:53:05 CEST, roughly 7.5h apart — recurred within the same cycle it first appeared. No thread.
+
+```yaml
+timestamp: 2026-09-10T10:45:27Z
 channel: brand-data-dev-alerts
 brand: platform (PDS / Kinesis)
-summary: PDS stream-publish failures recurred twice more on 09-09, now four separate recurrences after the shard-increase fix
+summary: PDS stream-publish failures recurred twice more on 09-10, now six separate recurrences after the shard-increase fix
 status: recurring
 linked_issue: null
 ```
-Continuation of the already-`recurring` cluster (self-resolved after 09-07, recurred twice on 09-08). Fired twice more on 09-09: 18:28-18:53 CEST and 21:00-21:40 CEST, each self-resolving within ~25-40 min as before — same behavior, root cause ([product-service#2642](../sources/github/product-service/open-prs.md)'s shard increase) still not holding. Two companion Datadog monitors ("PDS stream publish failures", "PDS stream publish log failures") fired alongside in the same bursts, also self-resolving; folded into this entry rather than tracked separately. Quiet since 22:00 CEST 09-09. Not treated as a fresh notification-bar trigger since this is a continuation of an already-`recurring` pattern, not a new flip from `self-resolved`.
+Continuation of the already-`recurring` cluster (self-resolved after 09-07, recurred twice on 09-08, twice more on 09-09). Fired twice more on 09-10: 12:45-13:58 CEST and 17:03-17:20 CEST, both self-resolving as before — root cause ([product-service#2642](../sources/github/product-service/open-prs.md)'s shard increase) still not holding. Quiet since 17:20 CEST 09-10. Not treated as a fresh notification-bar trigger since this is a continuation of an already-`recurring` pattern, not a new flip from `self-resolved`.
 
 ```yaml
-timestamp: 2026-09-09T16:11:38Z
+timestamp: 2026-09-10T16:09:11Z
 channel: brand-data-dev-alerts
-brand: iosByMaica
-summary: "iosByMaica/FEED — asset materializations failed (map/merge steps)"
+brand: garcia
+summary: "garcia/FEED — publish_from_process_images, exit code 137 (OOM)"
 status: active
 linked_issue: null
 ```
-New brand for this failure mode, 09-09 18:11:38 CEST. No thread or reaction visible.
+New brand for this OOM signature, 09-10 18:09:11 CEST. Same exit-137 family as the bestseller/cecil publishing-step OOM saga, but a different brand and a different step (`publish_from_process_images`, not `publish_from_map`) — not folded into that (now-quiet) entry. No thread.
+
+```yaml
+timestamp: 2026-09-10T16:15:42Z
+channel: brand-data-dev-alerts
+brand: iosByMaica
+summary: "iosByMaica/FEED — asset materializations failed again (map/merge), now root-caused"
+status: active
+linked_issue: null
+```
+Recurrence of the 09-09 first occurrence (4 failures again, same map/merge steps). Kushel replied in-thread 09-10 18:27 CEST identifying the cause: both the global and manufacturer-specific merge rules are missing the `customAttributes` entry in `rootLevelAttributes`. Explained but not yet fixed.
+
+```yaml
+timestamp: 2026-09-10T09:03:09Z
+channel: brand-data-dev-alerts
+brand: lugina / profuomo
+summary: "lugina's move_images_from_ftp_to_s3_job_sync failures stopped after 09-10 14:18 UTC; profuomo also quiet after one more recurrence"
+status: self-resolved
+linked_issue: null
+```
+lugina fired hourly on both FEED/FEED2 schedules through 09-10 up to 14:18:13 UTC (16:18 CEST) — then stopped. Quiet for ~19h as of this sync (09-11 09:03 CEST), the longest gap since the pattern started, consistent with Kushel's 09-10 10:18 CEST message that Munia would have the brand update its FTP/SFTP setup "today." No explicit in-channel confirmation the fix landed — inferred from the absence of further failures, not a human all-clear. `profuomo` fired once more at 14:03 UTC 09-10 (24h after its first 09-09 occurrence, same signature) and has also been quiet since. See `_meta/earmarks.md` — this earmark's trigger condition is met; moved to Triggered/Dismissed. Worth a fresh look next sync to confirm both stay quiet before calling this fully resolved.
 
 ```yaml
 timestamp: 2026-09-09T15:25:58Z

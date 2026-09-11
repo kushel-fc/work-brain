@@ -4,9 +4,45 @@ FD-sourced/support-shaped tickets, by priority then age (oldest first within eac
 
 No High-priority tickets currently sitting unassigned in Triage.
 
-Up to 11 items (from 10) — two new tickets landed 09-09/09-10. BDD-3235 left this list not by resolving but by transferring to the Replenishment team; see [`archive/linear/team-transfers.md`](../archive/linear/team-transfers.md).
+Still 11 items — four moved out (three picked up individually by Kushel, one jumped straight to Done unassigned) and five new ones landed, roughly a wash. See `_meta/sync-log.md` for detail.
 
 ## Medium
+
+```yaml
+id: BDD-3247
+title: "PIPE: gtin deletion camelActive (FD: 676359)"
+priority: Medium
+updated: 2026-09-11
+url: https://linear.app/fashioncloud/issue/BDD-3247/pipe-gtin-deletion-camelactive-fd-676359
+```
+New.
+
+```yaml
+id: BDD-3246
+title: "PIPE: Becosoft image issue - Kultivate (FD: 676295)"
+priority: Medium
+updated: 2026-09-10
+url: https://linear.app/fashioncloud/issue/BDD-3246/pipe-becosoft-image-issue-kultivate-fd-676295
+```
+New.
+
+```yaml
+id: BDD-3245
+title: Articles appear under two brands - Bestseller (FD: 676293)
+priority: Medium
+updated: 2026-09-10
+url: https://linear.app/fashioncloud/issue/BDD-3245/articles-appear-under-two-brands-bestseller-fd-676293
+```
+New.
+
+```yaml
+id: BDD-3244
+title: "WG: Preise 5042 auf FC stimmen nicht - Nachricht (HTML) (FD: 676273)"
+priority: Medium
+updated: 2026-09-10
+url: https://linear.app/fashioncloud/issue/BDD-3244/wg-preise-5042-auf-fc-stimmen-nicht-nachricht-html-fd-676273
+```
+New.
 
 ```yaml
 id: BDD-3238
@@ -14,15 +50,6 @@ title: Produktbilder (FD: 676044)
 priority: Medium
 updated: 2026-09-09
 url: https://linear.app/fashioncloud/issue/BDD-3238/produktbilder-fd-676044
-```
-New.
-
-```yaml
-id: BDD-3236
-title: "Cancels | Please remove | catwalk (FD: 675736)"
-priority: Medium
-updated: 2026-09-08
-url: https://linear.app/fashioncloud/issue/BDD-3236/cancels-please-remove-catwalk-fd-675736
 ```
 
 ```yaml
@@ -51,31 +78,16 @@ priority: Low
 updated: 2026-09-10
 url: https://linear.app/fashioncloud/issue/BDD-3241/stocks-not-correctly-imported-cavallaro-fd-675804
 ```
-New. Unusual — already carries an assignee (oleh.polishchuk) despite Triage status, so less "up for grabs" than the rest of this list.
+Unusual — already carries an assignee (oleh.polishchuk) despite Triage status, so less "up for grabs" than the rest of this list.
 
 ```yaml
-id: BDD-3237
-title: "PIPE: Superdry - deleting one image possible? (FD: 675898)"
+id: BDD-3243
+title: German FC Attribut name not correct (FD: 676209)
 priority: Low
-updated: 2026-09-08
-url: https://linear.app/fashioncloud/issue/BDD-3237/pipe-superdry-deleting-one-image-possible-fd-675898
+updated: 2026-09-10
+url: https://linear.app/fashioncloud/issue/BDD-3243/german-fc-attribut-name-not-correct-fd-676209
 ```
-
-```yaml
-id: BDD-3230
-title: Delete eans rehab (FD: 675734)
-priority: Low
-updated: 2026-09-07
-url: https://linear.app/fashioncloud/issue/BDD-3230/delete-eans-rehab-fd-675734
-```
-
-```yaml
-id: BDD-3229
-title: "RE: Cancellations SS27 (FD: 675432)"
-priority: Low
-updated: 2026-09-07
-url: https://linear.app/fashioncloud/issue/BDD-3229/re-cancellations-ss27-fd-675432
-```
+New.
 
 ```yaml
 id: BDD-3109
@@ -93,11 +105,3 @@ updated: 2026-08-03
 url: https://linear.app/fashioncloud/issue/BDD-3005/er-doet-zich-een-herhalend-probleem-voor-fd-663296
 ```
 Recurring — Content > Productdata navigation bounces to home, blocks downloads. Oldest unassigned item overall.
-
-```yaml
-id: BDD-2497
-title: Delete pricelist fails in development (FD: 627912)
-priority: Low
-updated: 2026-07-08
-url: https://linear.app/fashioncloud/issue/BDD-2497/delete-pricelist-fails-in-development-fd-627912
-```

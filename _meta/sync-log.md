@@ -2,6 +2,24 @@
 
 One entry per sync run. Prune entries older than ~30 days.
 
+## 2026-09-11 (09:28 UTC)
+
+All three sources reachable this run — Linear, GitHub, Slack. About a 24.75h gap since the last sync (09-10 08:40 → 09-11 09:28).
+
+- **Headline: the biggest clean-out cycle yet — six tickets shipped in one window, including two long-stale internal tech-debt items that had been sitting for months.** [BDD-1721](archive/linear/closed-internal.md) ("images failing silently," untouched since 2026-05-21, over 3.5 months) and [BDD-1417](archive/linear/closed-internal.md) (old error-rate-spike ticket) both finally closed — neither carries an FD reference, so they're archived to a new `archive/linear/closed-internal.md` rather than `support/recently-closed.md`. Also shipped: [BDD-3230](support/recently-closed.md) (assigned from Triage and shipped in the same window), [BDD-2497](support/recently-closed.md) (jumped straight from unassigned Triage to Done, oldest item besides BDD-3005), [BDD-3168](support/recently-closed.md) (bulk-batch item), and [BDD-2538](support/recently-closed.md)/[BDD-3001](support/recently-closed.md) (both were In Progress/Ready to Start last sync).
+- **Three more Triage tickets got individually picked up by Kushel** (outside the 09-04 bulk batch): [BDD-3237](sources/linear/my-issues.md) (Superdry image deletion, already In Progress), BDD-3236 (catwalk cancels) and BDD-3229 (Cancellations SS27), both Ready To Start. Bulk batch itself now down to 9 remaining (BDD-3168 shipped this cycle).
+- **Linear Triage backlog held steady at 11** — four items left (the three picked-up-by-Kushel above, plus BDD-2497 resolving directly) and five new FD-referenced tickets landed (BDD-3247, BDD-3246, BDD-3245, BDD-3244 all Medium 09-10/09-11, BDD-3243 Low 09-10). No High/Urgent unassigned items.
+- **lugina's hourly `move_images_from_ftp_to_s3_job_sync` failures stopped** — last one 09-10 14:18 UTC, ~19h quiet as of this sync, consistent with Kushel's 09-10 message that the brand's FTP setup would be updated "today." `profuomo` (same signature) also went quiet after one more recurrence. The earmark tracking this triggered — moved to `_meta/earmarks.md`'s Triggered section, though there's no explicit in-channel confirmation, just absence of further failures.
+- **iosByMaica recurred and Kushel root-caused it himself in-thread**: both global and manufacturer-specific merge rules are missing `customAttributes` in `rootLevelAttributes`. Explained, not yet fixed.
+- **process_enrichment_flow recurred a fourth time** (09-11 02:43 UTC breach), still completely unexplained across four days.
+- **PDS Kinesis stream-publish failures recurred twice more on 09-10** (10:45-11:58 and 15:03-15:20 UTC), now six total recurrences since the shard-increase fix merged — each still self-resolves within the hour.
+- **A new OOM cluster is forming, echoing the bestseller/cecil saga**: ammann (`process_images`, exit 137, twice — 09-10 and 09-11) and garcia (`publish_from_process_images`, exit 137, once) — different brands/steps from that now-quiet saga, no thread or owner yet.
+- **New first-occurrence Dagster signatures**: morganDeToi (12 asset materializations), ona__royRobson_FEED2 and ona__falke_PRICAT (both exceeded 3h limit — royRobson's timing lines up with its brand-migration PR churn on GitHub this cycle), kultivate_FEED (exceeded 3h limit twice same day).
+- **New alert type: a Datadog log-index quota alert** — `product-service-logs-index-` hit its daily ingestion cap 09-10 evening (18:44-18:51 CEST), self-resolved automatically when the quota reset 09-11 morning (08:03 CEST). First time this log has seen this alert type.
+- **GitHub churn, none of it his**: product-service #2647 (royRobson brand migration) closed unmerged, re-submitted as #2668; #2643 merged. brand-data-pipeline #1842 merged. His own queues unchanged — zero open PRs, #2514 still the only to-review item (now 14 days stale).
+- Slack: unusually quiet on the human side — every message in the window was an automated Dagster/Datadog bot post except Kushel's own iosByMaica root-cause reply; no other human triage or discussion this cycle.
+- Notified: **no** — nothing crossed the notification bar. No deadline passed with zero movement. No flip to conflict/Changes-Requested on his own work (zero open PRs). No new Urgent-priority ticket landed unassigned (the five new Triage items are all Medium/Low). No Dagster alert recurred after reaching `self-resolved` status — the PDS Kinesis recurrence continues an already-`recurring` pattern, and lugina/profuomo went quiet (the opposite direction) rather than flipping to recurring.
+
 ## 2026-09-10 (08:40 UTC)
 
 All three sources reachable this run — Linear, GitHub, Slack. About a 23.5h gap since the last sync (09-09 09:10 → 09-10 08:40).

@@ -57,3 +57,43 @@ priority: Urgent
 closed: 2026-08-24
 url: https://linear.app/fashioncloud/issue/BDD-3114/ean-deletion-fd-673811
 ```
+
+```yaml
+id: BDD-3133
+title: MSCH Copenhagen items deletion (FD: 674161)
+priority: Low
+closed: 2026-08-26
+url: https://linear.app/fashioncloud/issue/BDD-3133/msch-copenhagen-items-deletion-fd-674161
+```
+
+```yaml
+id: BDD-3138
+title: Cancel Articles for SS27. 2 Rino & Pelle (FD: 674099)
+priority: Medium
+closed: 2026-08-26
+url: https://linear.app/fashioncloud/issue/BDD-3138/cancel-articles-for-ss27-2-rino-and-pelle-fd-674099
+```
+
+```yaml
+id: BDD-3134
+title: "PIPE: awwg ean deletion (FD: 674169)"
+priority: Medium
+closed: 2026-08-26
+url: https://linear.app/fashioncloud/issue/BDD-3134/pipe-awwg-ean-deletion-fd-674169
+```
+
+```yaml
+id: BDD-3076
+title: megatron image issue ammann (FD: 672353)
+priority: Low
+closed: 2026-08-26
+url: https://linear.app/fashioncloud/issue/BDD-3076/megatron-image-issue-ammann-fd-672353
+```
+
+```yaml
+id: BDD-3113
+title: EAN Deletion DK COMPANY (FD: 673791)
+priority: Medium
+closed: 2026-08-26
+url: https://linear.app/fashioncloud/issue/BDD-3113/ean-deletion-dk-company-fd-673791
+```
