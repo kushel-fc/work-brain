@@ -3,6 +3,136 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
+timestamp: 2026-09-14T03:50:41Z
+channel: brand-data-dev-alerts
+brand: platform (analytics_trigger_sensor)
+summary: "analytics step — essential container exited, exit code 1, twice more"
+status: recurring
+linked_issue: null
+```
+Fired again 09-11 12:54:12 CEST and 09-14 05:50:41 CEST — same signature as the earlier occurrences in this log (analytics step, exit code 1). No thread or reaction either time. A recurring, low-frequency background failure with no owner yet.
+
+```yaml
+timestamp: 2026-09-13T14:03:00Z
+channel: brand-data-dev-alerts
+brand: profuomo
+summary: "move_images_from_ftp_to_s3_job_sync recurred 3 more times (09-11, 09-12, 09-13, ~24h apart) after being called self-resolved last sync"
+status: recurring
+linked_issue: null
+```
+Last sync's `lugina / profuomo` entry (2026-09-10T09:03:09Z) called profuomo quiet after one recurrence and moved the linked earmark to Triggered/Dismissed with a note to check again. It didn't hold: profuomo fired on the identical job/step at almost exactly 16:03 CEST on 09-11, 09-12, and 09-13 — a daily pattern, not a one-off. Same signature as lugina's (which does appear to have stayed quiet since 09-10). No thread visible on any of the three. Crosses the notification bar (recurring after being called self-resolved).
+
+```yaml
+timestamp: 2026-09-13T10:13:21Z
+channel: brand-data-dev-alerts
+brand: sOliver
+summary: "sOliver/FEED2 — 12 asset materializations failed (download_images, extract, etc.)"
+status: active
+linked_issue: null
+```
+New occurrence for this brand/feed, 09-13 12:13:21 CEST. No thread or reaction visible.
+
+```yaml
+timestamp: 2026-09-12T13:50:34Z
+channel: brand-data-dev-alerts
+brand: platform (galvatron ECS)
+summary: ECS health check failures detected for galvatron service, six more trigger/recover cycles
+status: recurring
+linked_issue: null
+```
+Same flapping pattern as previous cycles — six short-lived trigger/recover pairs across 09-11 15:52–20:03 CEST and 09-12 04:52–15:50 CEST, each self-resolving within 2-6 minutes. Consistently `galvatron` only. No thread; treated as known noise, not a fresh incident.
+
+```yaml
+timestamp: 2026-09-12T06:03:29Z
+channel: brand-data-dev-alerts
+brand: platform (Datadog / product-service-logs-index)
+summary: Log index hit warning threshold then daily quota again, self-resolved on quota reset
+status: recurring
+linked_issue: null
+```
+Same pattern as the 09-10 occurrence logged last cycle: warning threshold (85%) hit 09-11 17:42 CEST, daily quota (100%) hit 23:46 CEST, both auto-recovered 09-12 08:03 CEST on quota reset. Second time this exact cycle has happened within a week — upgrading status from the prior "self-resolved" to "recurring" since it's now a pattern, not a one-off. No thread; no action needed given the auto-recovery, but worth a permanent fix (larger quota or noisier-source cleanup) if it keeps recurring.
+
+```yaml
+timestamp: 2026-09-11T19:42:27Z
+channel: brand-data-dev-alerts
+brand: platform (PDS / Kinesis)
+summary: PDS Kinesis write throttling + stream-publish log failures recurred several more times on 09-11
+status: recurring
+linked_issue: null
+```
+Continuation of the known post-shard-increase-fix recurring issue. This cycle: stream-publish failures triggered 12:45:28 CEST, re-triggered 13:45:29 CEST, recovered 13:59:28 CEST; Kinesis write-throttling triggered 21:22:27 CEST (spike to 104.0), recovered 21:42:27 CEST. No thread on any of these.
+
+```yaml
+timestamp: 2026-09-11T17:32:52Z
+channel: brand-data-dev-alerts
+brand: falke (ona)
+summary: ona__falke_FEED run exceeded 3h time limit
+status: active
+linked_issue: null
+```
+New job for this brand (previously only `ona__falke_PRICAT` had timed out, 09-10). No thread or reaction visible.
+
+```yaml
+timestamp: 2026-09-11T12:15:01Z
+channel: brand-data-dev-alerts
+brand: falke
+summary: "falke/FEED — 3 asset materializations failed (map/merge/publish_from_map), root-caused and fixed same day"
+status: self-resolved
+linked_issue: null
+```
+Same bug class as iosByMaica (09-09/09-10): merge rules missing the `customAttributes` entry in `rootLevelAttributes`. Kushel flagged it in-thread 14:51:56 CEST asking Aji whether the merge rules needed updating after the ordersettings change; Aji confirmed "done, please try again" at 15:19:53 CEST (raised_hands reaction). Likely fixed via [product-service#2675](../sources/github/product-service/open-prs.md), opened same day.
+
+```yaml
+timestamp: 2026-09-11T11:51:26Z
+channel: brand-data-dev-alerts
+brand: snocks
+summary: "snocks/FEED — 3 asset materializations failed (map/merge/publish_from_map)"
+status: active
+linked_issue: null
+```
+New brand for this failure mode, 09-11 13:51:26 CEST. No thread or reaction visible.
+
+```yaml
+timestamp: 2026-09-11T11:11:45Z
+channel: brand-data-dev-alerts
+brand: kultivate
+summary: kultivate_FEED run exceeded 3h time limit, a third time
+status: recurring
+linked_issue: null
+```
+Fired twice on 09-10 (12:27 and 19:53 CEST) per last sync's entry; recurred again 09-11 13:11:45 CEST. No thread.
+
+```yaml
+timestamp: 2026-09-11T11:02:43Z
+channel: brand-data-dev-alerts
+brand: platform (enrichment_file_sensor)
+summary: 5 asset materializations failed (map, merge, process_enrichment group)
+status: active
+linked_issue: null
+```
+Same sensor/asset family as the 2026-08-23 occurrence in this log. 09-11 13:02:43 CEST. No thread or reaction visible.
+
+```yaml
+timestamp: 2026-09-11T10:34:37Z
+channel: brand-data-dev-alerts
+brand: fashionCloud (dev)
+summary: "fashionCloud/FEED and FEED2 — 8 asset materializations failed each, launched by Dagster Dev User"
+status: self-resolved
+linked_issue: null
+```
+Both runs (12:34:06 and 12:34:37 CEST) were attributed to "Dagster Dev User" rather than a schedule/sensor, and both carry a `raising_hand` reaction — reads as an acknowledged manual test/dev run rather than a fresh production incident, unlike the earlier fashionCloud/fashionCloudQA entries in this log which fired via normal cron schedules.
+
+```yaml
+timestamp: 2026-09-11T10:16:32Z
+channel: brand-data-dev-alerts
+brand: rinoAndPelle
+summary: rinoAndPelle_FEED run exceeded 3h time limit
+status: active
+linked_issue: null
+```
+09-11 12:16:32 CEST. Prior occurrence in this log was 2026-08-24, three weeks earlier — treated as a fresh occurrence, not a tight recurrence. No thread.
+
+```yaml
 timestamp: 2026-09-11T09:03:17Z
 channel: brand-data-dev-alerts
 brand: ammann

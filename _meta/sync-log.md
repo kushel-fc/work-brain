@@ -2,6 +2,19 @@
 
 One entry per sync run. Prune entries older than ~30 days.
 
+## 2026-09-14 (08:46 UTC)
+
+- **profuomo's `move_images_from_ftp_to_s3_job_sync` recurred 3 more times (09-11/09-12/09-13, ~24h apart)** after last sync called it self-resolved alongside lugina — lugina itself stayed quiet. Crosses the notification bar (Dagster alert recurring rather than self-resolving). Earmark note updated; profuomo now tracked as its own `recurring` log entry.
+- **iosByMaica's merge-rule bug (missing `customAttributes` in `rootLevelAttributes`) spread to falke** — Kushel flagged it in-thread 09-11, Aji fixed it same day (~30 min turnaround). Likely landed via product-service#2675.
+- **BDD-3103's long-overdue Aug 25 deadline finally closed** — Deployed this cycle.
+- Two more tickets shipped: BDD-3091 (Hugo Boss MM) and BDD-3164 (Bestseller B2B pack images) — moved to `support/recently-closed.md`; 2 oldest entries (BDD-3136, BDD-2945) rolled off the 25-cap into archive.
+- One new internal ticket assigned: BDD-3252 (Off-Boarded Brands Deletion, Medium, To Do, not FD-referenced).
+- Triage backlog grew from 11 to 14 — nothing left this cycle, three new landed. Two of the three (BDD-3248, BDD-3249) are High priority and unassigned — first High-priority items sitting in Triage in a while, though not Urgent so no notification.
+- GitHub: product-service #2668/#2666 merged, three new PRs landed (#2677, #2676, #2675 — the last likely the falke fix); brand-data-pipeline #1810 merged, two new PRs landed (#1864, #1862). None of the five new PRs name Kushel. His own PR count stays at zero; PR #2514 (to-review) unchanged content-wise but now 17 days stale, `mergeable_state` flapped again.
+- product-service#1737 (not his) resolved from `unknown` to an actual merge conflict — first real signal on that stale PR in a while.
+- Dagster noise this cycle: PDS Kinesis/stream-publish throttling recurred several more times, ECS `galvatron` health checks flapped six more times, the Datadog log-index quota pattern recurred a second time (upgraded to `recurring`), `analytics_trigger_sensor` fired twice more, kultivate_FEED recurred a third time. New first-occurrence brands: sOliver/FEED2, snocks/FEED, ona__falke_FEED (distinct from falke_PRICAT), rinoAndPelle_FEED (first since 08-24). The ammann/garcia OOM cluster and `process_enrichment_flow`'s 3h-timeout recurrence both went quiet this cycle.
+- Notified: yes — profuomo's Dagster alert recurred after being called self-resolved last sync, crossing the notification bar.
+
 ## 2026-09-11 (09:28 UTC)
 
 All three sources reachable this run — Linear, GitHub, Slack. About a 24.75h gap since the last sync (09-10 08:40 → 09-11 09:28).

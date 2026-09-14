@@ -2,7 +2,33 @@
 
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
-#1842 (seasonYear) merged 09-10 and left the list — see [`archive/prs/brand-data-pipeline.md`](../../../archive/prs/brand-data-pipeline.md). No new PRs this cycle. Net count down to 10.
+Two new PRs (#1864, #1862), #1810 (Reonboarding Nump TRIMIT FEED) merged 09-11 and left the list — see [`archive/prs/brand-data-pipeline.md`](../../../archive/prs/brand-data-pipeline.md). Net count up to 11. Neither new PR names Kushel.
+
+```yaml
+number: 1864
+title: Update material logic
+author: hakansoylu1
+state: open
+mergeable_state: mergeable
+review_state: awaiting-first-review
+requested_reviewers: []
+updated: 2026-09-14
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1864
+```
+New, no reviewers requested yet. Not his.
+
+```yaml
+number: 1862
+title: "+ png images"
+author: MuniaL
+state: open
+mergeable_state: mergeable
+review_state: approved
+requested_reviewers: []
+updated: 2026-09-14
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1862
+```
+New, already Approved, no reviewers currently requested. Not his.
 
 ```yaml
 number: 1839
@@ -22,13 +48,13 @@ number: 1825
 title: "pmeLegend: Add `experimental.xmSaxParsing` flag to `feed_config.json`"
 author: dwiajik
 state: open
-mergeable_state: mergeable
+mergeable_state: unknown
 review_state: awaiting-first-review
 requested_reviewers: [hakansoylu1, dims (team)]
 updated: 2026-09-09
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1825
 ```
-Not his. This is the flag-enable PR the [BDD-3150 earmark](../../../_meta/earmarks.md) is watching — no change this cycle, still open.
+Not his. This is the flag-enable PR the [BDD-3150 earmark](../../../_meta/earmarks.md) is watching — `mergeable_state` flapped mergeable → unknown this cycle, recompute noise, still open and unreviewed.
 
 ```yaml
 number: 1815
@@ -56,19 +82,6 @@ updated: 2026-09-04
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1811
 ```
 Draft, no reviewers requested. Not his.
-
-```yaml
-number: 1810
-title: Reonboarding Nump TRIMIT FEED
-author: hakansoylu1
-state: open
-mergeable_state: mergeable
-review_state: approved
-requested_reviewers: []
-updated: 2026-09-08
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/1810
-```
-Approved and clean, no reviewers currently requested. Not his.
 
 ```yaml
 number: 1472

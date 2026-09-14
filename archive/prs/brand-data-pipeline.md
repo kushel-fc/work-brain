@@ -3,6 +3,17 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 1810
+title: Reonboarding Nump TRIMIT FEED
+author: hakansoylu1
+state: closed
+merged: true
+closed: 2026-09-11
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1810
+```
+Not his. Was already Approved and clean. Merged.
+
+```yaml
 number: 1842
 title: updated seasonYear
 author: honeypsabu

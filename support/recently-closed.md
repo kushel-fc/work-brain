@@ -3,6 +3,24 @@
 Capped at ~25 most recent. Older entries move to `../archive/support/`. Sourced from team BDD Done/Deployed issues carrying an FD reference.
 
 ```yaml
+id: BDD-3091
+title: "HUGO BOSS: request MM (FD: 672863)"
+priority: Low
+closed: 2026-09-14
+url: https://linear.app/fashioncloud/issue/BDD-3091/hugo-boss-request-mm-fd-672863
+```
+Part of the 09-04 bulk assignment — was In Review last sync, now Done.
+
+```yaml
+id: BDD-3164
+title: Bestseller - reprocess data to enable all B2B images with type "pack" to be visible to retailers (FD: 674996)
+priority: High
+closed: 2026-09-11
+url: https://linear.app/fashioncloud/issue/BDD-3164/bestseller-reprocess-data-to-enable-all-b2b-images-with-type-pack-to
+```
+Was In Progress last sync, now Deployed. The `bestseller_FEED2` OOM saga (see `dagster-alerts/log.md`) stayed quiet for the full stretch since product-service#2640 merged 09-08 — no recurrence surfaced before this ticket shipped.
+
+```yaml
 id: BDD-3230
 title: Delete eans rehab (FD: 675734)
 priority: Low
@@ -206,20 +224,4 @@ closed: 2026-08-27
 url: https://linear.app/fashioncloud/issue/BDD-3115/ned-international-bulk-reprocess-gtins-fd-673878
 ```
 
-```yaml
-id: BDD-3136
-title: Pricat backup file Studio Anneloes (FD: 672750)
-priority: High
-closed: 2026-08-27
-url: https://linear.app/fashioncloud/issue/BDD-3136/pricat-backup-file-studio-anneloes-fd-672750
-```
-
-```yaml
-id: BDD-2945
-title: Differences in platform and OW (FD: 659386)
-priority: Medium
-closed: 2026-08-27
-url: https://linear.app/fashioncloud/issue/BDD-2945/differences-in-platform-and-ow-fd-659386
-```
-
-Older entries (BDD-3130, BDD-3105, BDD-3114, BDD-3135, BDD-3116, BDD-3127, BDD-3131, BDD-3133, BDD-3138, BDD-3134, BDD-3076, BDD-3113) rolled off the ~25-item cap across the last two cycles — see [`archive/support/recently-closed.md`](../archive/support/recently-closed.md).
+Older entries (BDD-3130, BDD-3105, BDD-3114, BDD-3135, BDD-3116, BDD-3127, BDD-3131, BDD-3133, BDD-3138, BDD-3134, BDD-3076, BDD-3113, BDD-3136, BDD-2945) rolled off the ~25-item cap across the last three cycles — see [`archive/support/recently-closed.md`](../archive/support/recently-closed.md).

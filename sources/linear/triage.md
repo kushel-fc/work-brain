@@ -2,7 +2,51 @@
 
 Full raw Triage view (team BDD) — https://linear.app/fashioncloud/team/BDD/triage. Populated on sync. The FD-referenced/support-shaped subset of this list is curated into [`support/open.md`](../../support/open.md).
 
-Five items left the list this cycle — four picked up and assigned to Kushel individually (BDD-3237, BDD-3236, BDD-3229 now on `sources/linear/my-issues.md`; BDD-3230 assigned and shipped same-day, see `support/recently-closed.md`), and BDD-2497 jumped straight from Triage to Done without ever being assigned (also in `support/recently-closed.md`). Five new tickets landed (BDD-3247, BDD-3246, BDD-3245, BDD-3244, BDD-3243). Net count unchanged at 11.
+Five items left the list last cycle — four picked up and assigned to Kushel individually (BDD-3237, BDD-3236, BDD-3229 now on `sources/linear/my-issues.md`; BDD-3230 assigned and shipped same-day, see `support/recently-closed.md`), and BDD-2497 jumped straight from Triage to Done without ever being assigned (also in `support/recently-closed.md`). Five new tickets landed (BDD-3247, BDD-3246, BDD-3245, BDD-3244, BDD-3243). Net count unchanged at 11.
+
+**09-14 sync:** none of the 11 items above moved out this cycle. Three new tickets landed — BDD-3248 and BDD-3249 (both High), BDD-3251 (Medium) — bringing the total to 14. First High-priority unassigned items in this list in a while (see `support/open.md`); not Urgent, so doesn't cross the notification bar.
+
+---
+
+```yaml
+id: BDD-3248
+title: "Images uploading by API | Stout! Jeans (FD: 676401)"
+priority: High
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-09-14
+url: https://linear.app/fashioncloud/issue/BDD-3248/images-uploading-by-api-stout-jeans-fd-676401
+```
+New.
+
+---
+
+```yaml
+id: BDD-3249
+title: "error 403 bij downloaden foto's voor Bijnen (FD: 673023)"
+priority: High
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-09-11
+url: https://linear.app/fashioncloud/issue/BDD-3249/error-403-bij-downloaden-fotos-voor-bijnen-fd-673023
+```
+New. FD number (673023) is notably older than the ticket's Triage entry — likely a reopened/renewed report rather than a fresh issue.
+
+---
+
+```yaml
+id: BDD-3251
+title: Bybar Delete gtins and refresh Data Manager (FD: 676427)
+priority: Medium
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-09-11
+url: https://linear.app/fashioncloud/issue/BDD-3251/bybar-delete-gtins-and-refresh-data-manager-fd-676427
+```
+New.
 
 ---
 

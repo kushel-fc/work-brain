@@ -3,6 +3,28 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2668
+title: Enable royRobson on PIPE
+author: marianabassi
+state: closed
+merged: true
+closed: 2026-09-11
+url: https://github.com/fashioncloud/product-service/pull/2668
+```
+Not his. Follow-on to #2647 (closed unmerged 09-10). Merged.
+
+```yaml
+number: 2666
+title: Enable SNOCKS on PIPE
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-09-11
+url: https://github.com/fashioncloud/product-service/pull/2666
+```
+Not his. Merged.
+
+```yaml
 number: 2647
 title: royRobson brand migration
 author: marianabassi

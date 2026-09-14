@@ -97,3 +97,19 @@ priority: Medium
 closed: 2026-08-26
 url: https://linear.app/fashioncloud/issue/BDD-3113/ean-deletion-dk-company-fd-673791
 ```
+
+```yaml
+id: BDD-3136
+title: Pricat backup file Studio Anneloes (FD: 672750)
+priority: High
+closed: 2026-08-27
+url: https://linear.app/fashioncloud/issue/BDD-3136/pricat-backup-file-studio-anneloes-fd-672750
+```
+
+```yaml
+id: BDD-2945
+title: Differences in platform and OW (FD: 659386)
+priority: Medium
+closed: 2026-08-27
+url: https://linear.app/fashioncloud/issue/BDD-2945/differences-in-platform-and-ow-fd-659386
+```

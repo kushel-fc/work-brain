@@ -6,19 +6,21 @@ Assigned to Kushel, live (non-completed) statuses. Populated on sync — complet
 
 **Also new this cycle:** three more Triage tickets got individually picked up and assigned to Kushel outside the bulk batch — BDD-3237 (already In Progress), BDD-3229 and BDD-3236 (both Ready To Start).
 
+**09-14 sync:** BDD-3091 and BDD-3164 both shipped (Done/Deployed) — see `support/recently-closed.md`. One new internal ticket landed: BDD-3252 (Off-Boarded Brands Deletion, Medium, To Do — not FD-referenced).
+
 ---
 
 ```yaml
-id: BDD-3164
-title: Bestseller - reprocess data to enable all B2B images with type "pack" to be visible to retailers (FD: 674996)
-priority: High
-status: In Progress
+id: BDD-3252
+title: Off-Boarded Brands Deletion
+priority: Medium
+status: To Do
 assignee: Kushel Ramanayake
 team: BDD
-updated: 2026-09-02
-url: https://linear.app/fashioncloud/issue/BDD-3164/bestseller-reprocess-data-to-enable-all-b2b-images-with-type-pack-to
+updated: 2026-09-11
+url: https://linear.app/fashioncloud/issue/BDD-3252/off-boarded-brands-deletion
 ```
-No status change on the ticket itself. The `bestseller_FEED2` OOM saga (see `dagster-alerts/log.md`) has stayed quiet since [product-service#2640](../../archive/prs/product-service.md) merged 09-08 09:53 UTC — now over 48h with zero recurrence. Still not formally confirmed fixed.
+New — not FD-referenced (internal task, not a Triage pickup). Not started.
 
 ---
 
@@ -201,20 +203,6 @@ updated: 2026-09-06
 url: https://linear.app/fashioncloud/issue/BDD-2406/retry-des-calls-with-backoff-on-502503504-in-trigger-enrichment
 ```
 No change since last sync.
-
----
-
-```yaml
-id: BDD-3091
-title: "HUGO BOSS: request MM (FD: 672863)"
-priority: Low
-status: In Review
-assignee: Kushel Ramanayake
-team: BDD
-updated: 2026-09-09
-url: https://linear.app/fashioncloud/issue/BDD-3091/hugo-boss-request-mm-fd-672863
-```
-Part of the 09-04 bulk assignment. No change since last sync.
 
 ---
 
