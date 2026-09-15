@@ -2,33 +2,124 @@
 
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
-Two new PRs (#1864, #1862), #1810 (Reonboarding Nump TRIMIT FEED) merged 09-11 and left the list — see [`archive/prs/brand-data-pipeline.md`](../../../archive/prs/brand-data-pipeline.md). Net count up to 11. Neither new PR names Kushel.
+Same brand-migration wave as product-service: nine new PRs (#1869, #1871, #1872, #1874, #1875, #1876, #1878, #1879, #1880) for blueSeven, fynchHatton, milestone, cinque, polaris, swing, schumacher, dorisStreich — companions to the product-service PRs above. Two left the list, both merged 09-14 (#1864, #1862 — see `archive/prs/brand-data-pipeline.md`). Net count up to 18. Two new PRs name Kushel: #1878 (polaris) and #1871 (swing, already Approved by marianabassi but still names him as outstanding reviewer).
 
 ```yaml
-number: 1864
-title: Update material logic
-author: hakansoylu1
+number: 1880
+title: blueSeven brand migration
+author: alirezaMoazenFashion
 state: open
 mergeable_state: mergeable
 review_state: awaiting-first-review
 requested_reviewers: []
 updated: 2026-09-14
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/1864
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1880
 ```
 New, no reviewers requested yet. Not his.
 
 ```yaml
-number: 1862
-title: "+ png images"
-author: MuniaL
+number: 1879
+title: Add blueSeven FEED2 migration
+author: alirezaMoazenFashion
+state: open
+mergeable_state: mergeable
+review_state: awaiting-first-review
+requested_reviewers: []
+updated: 2026-09-15
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1879
+```
+New, no reviewers requested yet. Not his.
+
+```yaml
+number: 1878
+title: polaris brand migration
+author: alirezaMoazenFashion
+state: open
+mergeable_state: mergeable
+review_state: awaiting-first-review
+requested_reviewers: [kushel-fc]
+updated: 2026-09-15
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1878
+```
+New — individually his to review, sole named reviewer. Companion to product-service#2686 (doesn't name him). See [`prs/to-review.md`](../../../prs/to-review.md).
+
+```yaml
+number: 1876
+title: fynchHatton brand migration
+author: abirprantofc
+state: open
+mergeable_state: mergeable
+review_state: awaiting-first-review
+requested_reviewers: []
+updated: 2026-09-15
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1876
+```
+New, no reviewers requested yet. Not his.
+
+```yaml
+number: 1875
+title: milestone brand migration
+author: abirprantofc
+state: open
+mergeable_state: mergeable
+review_state: awaiting-first-review
+requested_reviewers: [marianabassi]
+updated: 2026-09-15
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1875
+```
+New. Not his.
+
+```yaml
+number: 1874
+title: cinque brand migration
+author: abirprantofc
+state: open
+mergeable_state: mergeable
+review_state: awaiting-first-review
+requested_reviewers: [marianabassi]
+updated: 2026-09-15
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1874
+```
+New. Not his (companion product-service#2689 does name him).
+
+```yaml
+number: 1872
+title: dorisStreich - FEED - INTEX migration
+author: alirezaMoazenFashion
 state: open
 mergeable_state: mergeable
 review_state: approved
-requested_reviewers: []
-updated: 2026-09-14
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/1862
+requested_reviewers: [irembbt, abirprantofc]
+updated: 2026-09-15
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1872
 ```
-New, already Approved, no reviewers currently requested. Not his.
+New, already Approved. Not his.
+
+```yaml
+number: 1871
+title: swing brand migration
+author: abirprantofc
+state: open
+mergeable_state: mergeable
+review_state: approved
+requested_reviewers: [marianabassi, kushel-fc]
+updated: 2026-09-14
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1871
+```
+New — already Approved by marianabassi, but still names Kushel as an outstanding requested reviewer. Companion to product-service#2683 (also names him). See [`prs/to-review.md`](../../../prs/to-review.md).
+
+```yaml
+number: 1869
+title: schumacher brand migration
+author: alirezaMoazenFashion
+state: open
+mergeable_state: mergeable
+review_state: awaiting-first-review
+requested_reviewers: []
+updated: 2026-09-15
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1869
+```
+New, no reviewers requested yet. Not his.
 
 ```yaml
 number: 1839
@@ -41,7 +132,7 @@ requested_reviewers: [brand-data-dev (team), julsjacinto, alirezaMoazenFashion]
 updated: 2026-09-09
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1839
 ```
-Not his. Companion to product-service#2655.
+Not his. Companion to product-service#2655. No change.
 
 ```yaml
 number: 1825
@@ -54,7 +145,7 @@ requested_reviewers: [hakansoylu1, dims (team)]
 updated: 2026-09-09
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1825
 ```
-Not his. This is the flag-enable PR the [BDD-3150 earmark](../../../_meta/earmarks.md) is watching — `mergeable_state` flapped mergeable → unknown this cycle, recompute noise, still open and unreviewed.
+Not his. Still open and unreviewed. **Note:** BDD-3150 (the PIPE/Megatron ticket this PR's earmark was tracking) shipped 09-14 anyway, without this PR merging — see `_meta/earmarks.md`. This PR itself is unchanged and no longer has an open earmark watching it.
 
 ```yaml
 number: 1815
@@ -67,7 +158,7 @@ requested_reviewers: [brand-data-dev (team), dwiajik, abubakarwase]
 updated: 2026-09-06
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1815
 ```
-Dependabot, not his.
+Dependabot, not his. No change.
 
 ```yaml
 number: 1811

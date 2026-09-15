@@ -3,6 +3,66 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
+timestamp: 2026-09-15T08:01:19Z
+channel: brand-data-dev-alerts
+brand: multiple (beheim, holyfashion, royRobson, profuomo)
+summary: "move_images_from_ftp_to_s3_job_sync failing across four brands, ~10 occurrences in under 24h — same exit-code-1 signature"
+status: recurring
+linked_issue: null
+```
+The profuomo/lugina pattern from the last few cycles has spread. Since last sync (2026-09-14 08:46 UTC): beheim__FEED2 fired three times (16:00, 00:01, 08:01 UTC — roughly 8h apart, on schedule); holyfashion__FEED fired three times (14:39, 22:39, 06:39 UTC — same ~8h cadence); royRobson__FEED2 fired three times in just over an hour (13:18, 14:18, 15:18 UTC — hourly schedule, failing every single run); profuomo__FEED fired three more times (14:03, 18:56, 19:08 UTC). All four share the identical failure signature: `Exception: Essential container in task exited, exit code: 1` on the `move_images_from_ftp_to_s3_job_sync` step. This no longer looks like a per-brand FTP/SFTP misconfiguration (the working theory for lugina/profuomo) — four unrelated brands hitting the same step with the same exit code, at each brand's own schedule cadence, points at something wrong with the move-images ECS task itself. No thread or owner on any of these. Worth a look — see `today.md`.
+
+```yaml
+timestamp: 2026-09-15T06:59:01Z
+channel: brand-data-dev-alerts
+brand: summum
+summary: summum__PRICAT__trigger_enrichment_from_map — container exited, exit code 1
+status: active
+linked_issue: null
+```
+New brand/step combination, first occurrence. No thread or reaction visible.
+
+```yaml
+timestamp: 2026-09-15T06:03:27Z
+channel: brand-data-dev-alerts
+brand: platform (Datadog log index)
+summary: Log index hit warning threshold then daily quota a third time, self-resolved on quota reset
+status: recurring
+linked_issue: null
+```
+Same `product-service-logs-index-` pattern as the last two cycles: triggered 02:06:27 UTC, recovered 06:03:26-27 UTC. Third occurrence now — flagged as worth a permanent fix (quota increase or volume reduction) if it keeps recurring at this rate.
+
+```yaml
+timestamp: 2026-09-15T00:43:52Z
+channel: brand-data-dev-alerts
+brand: blackstone
+summary: "blackstone_FEED and ona__blackstone_FEED both exceeded 3h run time limit"
+status: active
+linked_issue: null
+```
+New brand for this alert type, both the base and `ona__` prefixed jobs hit the limit within the same 30 seconds (00:43:22 and 00:43:52 UTC) — same underlying run. No thread visible.
+
+```yaml
+timestamp: 2026-09-14T19:32:27Z
+channel: brand-data-dev-alerts
+brand: platform (PDS / Kinesis)
+summary: PDS Kinesis write throttling warned and recovered within 11 minutes
+status: self-resolved
+linked_issue: null
+```
+Continuation of the known post-shard-increase-fix recurring issue: warned 19:21:27 UTC (metric 10.0), recovered 19:32:27 UTC. Shortest flare of this pattern seen so far. No thread.
+
+```yaml
+timestamp: 2026-09-14T16:16:28Z
+channel: brand-data-dev-alerts
+brand: falke
+summary: ona__falke_FEED exceeded 3h run time limit
+status: active
+linked_issue: null
+```
+Distinct from the ona__falke_FEED timeout logged 09-13 (different run) and from the merge-rule bug that hit falke 09-11 (already fixed). No thread visible.
+
+```yaml
 timestamp: 2026-09-14T03:50:41Z
 channel: brand-data-dev-alerts
 brand: platform (analytics_trigger_sensor)

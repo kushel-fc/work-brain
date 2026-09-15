@@ -8,12 +8,14 @@ Each earmark has a `Trigger signal` (plain-language condition to watch for durin
 
 ## Active
 
-- **Trigger signal**: `brand-data-pipeline#1825` (pmeLegend `experimental.xmSaxParsing` flag) merges
-- **Surface**: Check whether [BDD-3150](../sources/linear/my-issues.md) (PIPE/Megatron price-file size mismatch) can now close — the SAX-parser support it was waiting on ([#1744](../archive/prs/brand-data-pipeline.md)) already merged 09-08; #1825 is the last piece that actually flips the flag on for this brand.
-- **Related**: [sources/github/brand-data-pipeline/open-prs.md](../sources/github/brand-data-pipeline/open-prs.md)
-- **Status**: active
+_None currently._
 
 ## Triggered / Dismissed
+
+- **Trigger signal**: `brand-data-pipeline#1825` (pmeLegend `experimental.xmSaxParsing` flag) merges
+- **Surface**: Check whether [BDD-3150](../support/recently-closed.md) (PIPE/Megatron price-file size mismatch) can now close — the SAX-parser support it was waiting on ([#1744](../archive/prs/brand-data-pipeline.md)) already merged 09-08; #1825 was expected to be the last piece.
+- **Related**: [sources/github/brand-data-pipeline/open-prs.md](../sources/github/brand-data-pipeline/open-prs.md)
+- **Status**: dismissed 2026-09-15 — BDD-3150 shipped (Deployed 09-14, Done 09-15) without #1825 ever merging; #1825 is still open and unreviewed. The ticket closed through some other path, so the trigger condition this earmark was watching for is moot. Worth a look at what actually fixed it if it resurfaces.
 
 - **Trigger signal**: lugina's `move_images_from_ftp_to_s3_job_sync` failures stop recurring (Munia was expected to update the brand's FTP setup "today," per Kushel's 09-10 10:18 CEST message)
 - **Surface**: Confirm the fix actually held before calling this resolved.

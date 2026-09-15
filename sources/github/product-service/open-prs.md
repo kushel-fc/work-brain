@@ -2,46 +2,124 @@
 
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
-Three new PRs (#2677, #2676, #2675), two left the list this cycle (#2668, #2666 both merged 09-11) — see [`archive/prs/product-service.md`](../../../archive/prs/product-service.md). Net count up to 8. None of the new PRs name Kushel.
+Big jump: nine new PRs landed this cycle (#2681, #2683, #2684, #2686, #2689, #2690, #2692, #2693, #2694) — all same-shaped "brand migration"/"mapping rules" PRs from alirezaMoazenFashion and abirprantofc, paired with companion PRs on brand-data-pipeline for the same brands (blueSeven, fynchHatton, milestone, cinque, polaris, swing, schumacher, dorisStreich). Three PRs left the list, all merged 09-14 (#2677, #2676, #2675 — see `archive/prs/product-service.md`). Net count up to 14. Two of the new PRs name Kushel individually: #2689 (cinque) and #2683 (swing).
 
 ```yaml
-number: 2677
-title: Enable LLOYD Belts on PIPE
+number: 2694
+title: blueSeven mapping rules
 author: alirezaMoazenFashion
 state: open
 mergeable_state: mergeable
-review_state: approved
-requested_reviewers: [abubakarwase, julsjacinto]
+review_state: awaiting-first-review
+requested_reviewers: [brand-data-dev (team), irembbt, julsjacinto]
 updated: 2026-09-14
-url: https://github.com/fashioncloud/product-service/pull/2677
+url: https://github.com/fashioncloud/product-service/pull/2694
 ```
-New, already Approved. Not his.
+New. Not his.
 
 ```yaml
-number: 2676
-title: Alert on archived files exceeding Node's max string length
-author: dwiajik
+number: 2693
+title: Add blueSeven FEED2 mapping rules
+author: alirezaMoazenFashion
 state: open
 mergeable_state: mergeable
-review_state: approved
-requested_reviewers: [alirezaMoazenFashion]
-updated: 2026-09-11
-url: https://github.com/fashioncloud/product-service/pull/2676
+review_state: awaiting-first-review
+requested_reviewers: [brand-data-dev (team), abubakarwase, abirprantofc]
+updated: 2026-09-14
+url: https://github.com/fashioncloud/product-service/pull/2693
 ```
-New, already Approved. Not his.
+New. Not his. Companion to brand-data-pipeline#1880 (blueSeven brand migration).
 
 ```yaml
-number: 2675
-title: Fix ona-db-migration validator rejecting customAttributes (Map-of-embedded-schema)
-author: dwiajik
+number: 2692
+title: fynchHatton brand migration
+author: abirprantofc
 state: open
 mergeable_state: mergeable
-review_state: approved
-requested_reviewers: [irembbt, abirprantofc]
+review_state: awaiting-first-review
+requested_reviewers: [brand-data-dev (team), irembbt, julsjacinto]
 updated: 2026-09-14
-url: https://github.com/fashioncloud/product-service/pull/2675
+url: https://github.com/fashioncloud/product-service/pull/2692
 ```
-New, already Approved. Not his, but likely the code fix behind Aji's in-thread "done, please try again" that resolved falke's 09-11 merge-rule failure — same `customAttributes`/`rootLevelAttributes` bug class as iosByMaica. See `dagster-alerts/log.md`.
+New. Not his. Companion to brand-data-pipeline#1876.
+
+```yaml
+number: 2690
+title: milestone brand migration
+author: abirprantofc
+state: open
+mergeable_state: mergeable
+review_state: awaiting-first-review
+requested_reviewers: [brand-data-dev (team), dwiajik, alirezaMoazenFashion]
+updated: 2026-09-14
+url: https://github.com/fashioncloud/product-service/pull/2690
+```
+New. Not his.
+
+```yaml
+number: 2689
+title: cinque brand migration
+author: abirprantofc
+state: open
+mergeable_state: mergeable
+review_state: awaiting-first-review
+requested_reviewers: [brand-data-dev (team), irembbt, kushel-fc]
+updated: 2026-09-14
+url: https://github.com/fashioncloud/product-service/pull/2689
+```
+New — individually his to review. Companion to brand-data-pipeline#1874 (names marianabassi, not him). See [`prs/to-review.md`](../../../prs/to-review.md).
+
+```yaml
+number: 2686
+title: polaris brand migration mappings
+author: alirezaMoazenFashion
+state: open
+mergeable_state: mergeable
+review_state: awaiting-first-review
+requested_reviewers: [brand-data-dev (team), irembbt, abirprantofc]
+updated: 2026-09-14
+url: https://github.com/fashioncloud/product-service/pull/2686
+```
+New. Not his (companion brand-data-pipeline#1878 does name him).
+
+```yaml
+number: 2684
+title: dorisStreich - FEED - INTEX mapping rules
+author: alirezaMoazenFashion
+state: open
+mergeable_state: mergeable
+review_state: awaiting-first-review
+requested_reviewers: [brand-data-dev (team), dwiajik, abubakarwase]
+updated: 2026-09-14
+url: https://github.com/fashioncloud/product-service/pull/2684
+```
+New. Not his.
+
+```yaml
+number: 2683
+title: swing brand migration
+author: abirprantofc
+state: open
+mergeable_state: mergeable
+review_state: awaiting-first-review
+requested_reviewers: [brand-data-dev (team), kushel-fc, alirezaMoazenFashion]
+updated: 2026-09-14
+url: https://github.com/fashioncloud/product-service/pull/2683
+```
+New — individually his to review. Companion to brand-data-pipeline#1871 (already Approved by marianabassi, still names him as outstanding reviewer). See [`prs/to-review.md`](../../../prs/to-review.md).
+
+```yaml
+number: 2681
+title: schumacher mapping rules
+author: alirezaMoazenFashion
+state: open
+mergeable_state: mergeable
+review_state: awaiting-first-review
+requested_reviewers: [brand-data-dev (team), dwiajik, abirprantofc]
+updated: 2026-09-14
+url: https://github.com/fashioncloud/product-service/pull/2681
+```
+New. Not his.
 
 ```yaml
 number: 2655
@@ -54,7 +132,7 @@ requested_reviewers: [brand-data-dev (team), abubakarwase, abirprantofc]
 updated: 2026-09-10
 url: https://github.com/fashioncloud/product-service/pull/2655
 ```
-Not his. Companion to brand-data-pipeline#1839. `mergeable_state` resolved back to mergeable this cycle (was flapping unknown last sync).
+Not his. Companion to brand-data-pipeline#1839. No change since last sync.
 
 ```yaml
 number: 2644
@@ -67,7 +145,7 @@ requested_reviewers: [julsjacinto, abirprantofc]
 updated: 2026-09-08
 url: https://github.com/fashioncloud/product-service/pull/2644
 ```
-Not individually his. CodeRabbit's changes-requested pass is the only thing keeping the aggregate state from clearing.
+Not individually his. Unchanged — CodeRabbit's changes-requested pass still the only blocker.
 
 ```yaml
 number: 2622
@@ -80,7 +158,7 @@ requested_reviewers: [irembbt, physicalattraction, dushansilva]
 updated: 2026-09-08
 url: https://github.com/fashioncloud/product-service/pull/2622
 ```
-Not his — 3 named reviewers, none Kushel.
+Not his — 3 named reviewers, none Kushel. No change.
 
 ```yaml
 number: 2514
@@ -88,13 +166,13 @@ title: "feat(llm-based-agent-setup): add mutations tool group for SKU reprocessi
 author: dushansilva
 state: open
 draft: true
-mergeable_state: unknown
+mergeable_state: mergeable
 review_state: changes-requested
 requested_reviewers: [brand-data-dev (team), irembbt, kushel-fc, dwiajik, julsjacinto]
 updated: 2026-08-28
 url: https://github.com/fashioncloud/product-service/pull/2514
 ```
-Individually his to review. Draft, already has Changes Requested from someone else, now 17 days unchanged. `mergeable_state` flapped mergeable → unknown again this cycle, not a real signal since nobody's reviewing. See [`prs/to-review.md`](../../../prs/to-review.md).
+Individually his to review. Draft, already has Changes Requested from someone else, now 18 days unchanged. `mergeable_state` resolved back to mergeable this cycle. See [`prs/to-review.md`](../../../prs/to-review.md).
 
 ```yaml
 number: 1737
@@ -107,4 +185,4 @@ requested_reviewers: [julsjacinto]
 updated: 2026-07-07
 url: https://github.com/fashioncloud/product-service/pull/1737
 ```
-Not his — sole named reviewer is julsjacinto. Stale, over two months. `mergeable_state` resolved from unknown to an actual merge conflict this cycle — first real signal on this PR in a while, but not his so no action needed.
+Not his — sole named reviewer is julsjacinto. Stale, over two months. No change this cycle (still conflicting).

@@ -8,6 +8,64 @@ Assigned to Kushel, live (non-completed) statuses. Populated on sync — complet
 
 **09-14 sync:** BDD-3091 and BDD-3164 both shipped (Done/Deployed) — see `support/recently-closed.md`. One new internal ticket landed: BDD-3252 (Off-Boarded Brands Deletion, Medium, To Do — not FD-referenced).
 
+**09-15 sync:** Four tickets shipped — BDD-3236, BDD-3229, BDD-3180 (all Triage pickups), and BDD-3150 (the PIPE/Megatron price-mismatch ticket, see the note on it below). BDD-3251 (Bybar gtins) got individually picked up from Triage, Ready To Start. Three new items landed from a "Video Delivery" project — BDD-3206, BDD-3205, BDD-3223 (Slice 3.2: full CSV generation via PCS) — all Backlog, not started; this is the shaping work in `shaping/video-download-delivery.md` turning into real tickets. Net count unchanged at 18.
+
+---
+
+```yaml
+id: BDD-3206
+title: "3.2 Backend — Route the full request to PCS and append its CSV"
+priority: No priority
+status: Backlog
+assignee: Kushel Ramanayake
+team: BDD
+updated: 2026-09-14
+url: https://linear.app/fashioncloud/issue/BDD-3206/32-backend-route-the-full-request-to-pcs-and-append-its-csv
+```
+New. Part of the "Video Delivery" project, Slice 3.2 milestone, child of BDD-3223. Backend-side routing so a video+CSV download sends the full request to PCS instead of generating the CSV locally. Depends on BDD-3205 (the PCS module) and Slice 3.1. Not started.
+
+---
+
+```yaml
+id: BDD-3205
+title: "3.2 PCS — CSV generation module"
+priority: No priority
+status: Backlog
+assignee: Kushel Ramanayake
+team: BDD
+updated: 2026-09-14
+url: https://linear.app/fashioncloud/issue/BDD-3205/32-pcs-csv-generation-module
+```
+New. Part of the "Video Delivery" project, Slice 3.2 milestone, child of BDD-3223. New `CsvGenerationModule` in PCS, config-driven (no code change per column/language), artifact stored in S3 with a signed link. Open question flagged in the spec on artifact TTL. Not started.
+
+---
+
+```yaml
+id: BDD-3223
+title: "Slice 3.2 — Full CSV generation on PCS when video and CSV are selected"
+priority: No priority
+status: Backlog
+assignee: Kushel Ramanayake
+team: BDD
+updated: 2026-09-14
+url: https://linear.app/fashioncloud/issue/BDD-3223/slice-32-full-csv-generation-on-pcs-when-video-and-csv-are-selected
+```
+New. Parent of BDD-3206 and BDD-3205 — the Slice 3.2 milestone issue itself. Depends on Slice 3.1 and "N1". Not started.
+
+---
+
+```yaml
+id: BDD-3251
+title: Bybar Delete gtins and refresh Data Manager (FD: 676427)
+priority: Medium
+status: Ready To Start
+assignee: Kushel Ramanayake
+team: BDD
+updated: 2026-09-14
+url: https://linear.app/fashioncloud/issue/BDD-3251/bybar-delete-gtins-and-refresh-data-manager-fd-676427
+```
+New — picked up individually from Triage (was unassigned Medium since 09-11). Not started.
+
 ---
 
 ```yaml
@@ -20,7 +78,7 @@ team: BDD
 updated: 2026-09-11
 url: https://linear.app/fashioncloud/issue/BDD-3252/off-boarded-brands-deletion
 ```
-New — not FD-referenced (internal task, not a Triage pickup). Not started.
+Not FD-referenced (internal task, not a Triage pickup). Not started, no change since last sync.
 
 ---
 
@@ -95,34 +153,6 @@ New — picked up individually from Triage and started same day (was unassigned 
 ---
 
 ```yaml
-id: BDD-3236
-title: "Cancels | Please remove | catwalk (FD: 675736)"
-priority: Medium
-status: Ready To Start
-assignee: Kushel Ramanayake
-team: BDD
-updated: 2026-09-10
-url: https://linear.app/fashioncloud/issue/BDD-3236/cancels-please-remove-catwalk-fd-675736
-```
-New — picked up individually from Triage (was unassigned Medium since 09-08). Not started.
-
----
-
-```yaml
-id: BDD-3229
-title: "RE: Cancellations SS27 (FD: 675432)"
-priority: Low
-status: Ready To Start
-assignee: Kushel Ramanayake
-team: BDD
-updated: 2026-09-10
-url: https://linear.app/fashioncloud/issue/BDD-3229/re-cancellations-ss27-fd-675432
-```
-New — picked up individually from Triage (was unassigned Low since 09-07). Not started.
-
----
-
-```yaml
 id: BDD-3037
 title: Artikel data Florez komt niet door (FD: 671579)
 priority: Medium
@@ -147,20 +177,6 @@ updated: 2026-09-10
 url: https://linear.app/fashioncloud/issue/BDD-3129/fwd-dringend-ansprechpartner-fd-674136
 ```
 Part of the 09-04 bulk assignment. Not started.
-
----
-
-```yaml
-id: BDD-3150
-title: PIPE/Megatron Pipeline mismatch in processing capability for prices (FD: 674378)
-priority: Medium
-status: Ready To Start
-assignee: Kushel Ramanayake
-team: BDD
-updated: 2026-09-10
-url: https://linear.app/fashioncloud/issue/BDD-3150/pipemegatron-pipeline-mismatch-in-processing-capability-for-prices-fd
-```
-Part of the 09-04 bulk assignment. The candidate SAX-parser fix ([brand-data-pipeline#1744](../../archive/prs/brand-data-pipeline.md)) merged 09-08; its flag-enable follow-up ([brand-data-pipeline#1825](../github/brand-data-pipeline/open-prs.md)) is still open. See earmark in `_meta/earmarks.md` — check whether this can close once #1825 lands. Not started.
 
 ---
 
@@ -229,20 +245,6 @@ assignee: Kushel Ramanayake
 team: BDD
 updated: 2026-09-04
 url: https://linear.app/fashioncloud/issue/BDD-3153/preise-siehe-auch-ticket-610189-fd-674585
-```
-Part of the 09-04 bulk assignment. Not started.
-
----
-
-```yaml
-id: BDD-3180
-title: API access permission error (FD: 675082)
-priority: Low
-status: Ready To Start
-assignee: Kushel Ramanayake
-team: BDD
-updated: 2026-09-07
-url: https://linear.app/fashioncloud/issue/BDD-3180/api-access-permission-error-fd-675082
 ```
 Part of the 09-04 bulk assignment. Not started.
 

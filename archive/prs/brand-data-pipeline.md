@@ -3,6 +3,28 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 1864
+title: Update material logic
+author: hakansoylu1
+state: closed
+merged: true
+closed: 2026-09-14
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1864
+```
+Not his. Merged by hakansoylu1 (self-merge), no reviewers had been requested.
+
+```yaml
+number: 1862
+title: "+ png images"
+author: MuniaL
+state: closed
+merged: true
+closed: 2026-09-14
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1862
+```
+Not his. Merged by MuniaL (self-merge).
+
+```yaml
 number: 1810
 title: Reonboarding Nump TRIMIT FEED
 author: hakansoylu1

@@ -3,6 +3,39 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2677
+title: Enable LLOYD Belts on PIPE
+author: alirezaMoazenFashion
+state: closed
+merged: true
+closed: 2026-09-14
+url: https://github.com/fashioncloud/product-service/pull/2677
+```
+Not his. Merged by Chamindu36.
+
+```yaml
+number: 2676
+title: Alert on archived files exceeding Node's max string length
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-09-14
+url: https://github.com/fashioncloud/product-service/pull/2676
+```
+Not his. Merged by dwiajik (self-merge).
+
+```yaml
+number: 2675
+title: Fix ona-db-migration validator rejecting customAttributes (Map-of-embedded-schema)
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-09-14
+url: https://github.com/fashioncloud/product-service/pull/2675
+```
+Not his. Merged by abirprantofc — likely the code fix behind the falke merge-rule bug resolution (see `dagster-alerts/log.md`).
+
+```yaml
 number: 2668
 title: Enable royRobson on PIPE
 author: marianabassi

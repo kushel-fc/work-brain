@@ -6,6 +6,64 @@ Five items left the list last cycle — four picked up and assigned to Kushel in
 
 **09-14 sync:** none of the 11 items above moved out this cycle. Three new tickets landed — BDD-3248 and BDD-3249 (both High), BDD-3251 (Medium) — bringing the total to 14. First High-priority unassigned items in this list in a while (see `support/open.md`); not Urgent, so doesn't cross the notification bar.
 
+**09-15 sync:** BDD-3251 left (picked up, now on `sources/linear/my-issues.md`) and BDD-3247 left (assigned and shipped same-window, see `support/recently-closed.md`). Four new tickets landed: BDD-3260 (Low), BDD-3259 (Medium), BDD-3258 (Low), and **BDD-3263 — a Security-labeled Urgent ticket, unassigned, due 2026-09-17** (missing function-level authorization on `dim-admin-api` staging — any authenticated user can read every Assistant chat session platform-wide and call destructive admin endpoints). This is the first new Urgent-priority unassigned ticket in the tracked history of this log and crosses the notification bar — see `today.md`. Net count up to 16 (14 support-shaped, since BDD-3263 has no FD reference).
+
+---
+
+```yaml
+id: BDD-3263
+title: "[Security] Missing function-level authorization on dim-admin-api (staging)"
+priority: Urgent
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-09-15
+url: https://linear.app/fashioncloud/issue/BDD-3263/security-missing-function-level-authorization-on-dim-admin-api-staging
+```
+New. Not FD-referenced — internal security report, sourced from the Notion Vulnerabilities Registry (reported by Omar Essam). Any regular-user JWT gets full admin-API access on `dim-admin-api.staging.fashion.cloud`: can list and read every user's Assistant chat history platform-wide, plus call destructive endpoints (`DELETE /sku/bulk-delete`, `DELETE /media/bulk-remove`, merge-rule mutations). Swagger docs are unauthenticated too. Due 2026-09-17. Unassigned — flapped through a few statuses same morning (Triage → Todo → Backlog → Triage) before settling back in Triage, unassigned. See `today.md`.
+
+---
+
+```yaml
+id: BDD-3260
+title: "New bug on fashioncloud (FD: 676591)"
+priority: Low
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-09-14
+url: https://linear.app/fashioncloud/issue/BDD-3260/new-bug-on-fashioncloud-fd-676591
+```
+New.
+
+---
+
+```yaml
+id: BDD-3259
+title: "AW: Frage zu Artikelpreis (FD: 676723)"
+priority: Medium
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-09-14
+url: https://linear.app/fashioncloud/issue/BDD-3259/aw-frage-zu-artikelpreis-fd-676723
+```
+New.
+
+---
+
+```yaml
+id: BDD-3258
+title: "Numbered material part after semicolon leaks into previous composition in `transformMaterial` (FD: 676738)"
+priority: Low
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-09-14
+url: https://linear.app/fashioncloud/issue/BDD-3258/numbered-material-part-after-semicolon-leaks-into-previous-composition
+```
+New.
+
 ---
 
 ```yaml
@@ -33,34 +91,6 @@ updated: 2026-09-11
 url: https://linear.app/fashioncloud/issue/BDD-3249/error-403-bij-downloaden-fotos-voor-bijnen-fd-673023
 ```
 New. FD number (673023) is notably older than the ticket's Triage entry — likely a reopened/renewed report rather than a fresh issue.
-
----
-
-```yaml
-id: BDD-3251
-title: Bybar Delete gtins and refresh Data Manager (FD: 676427)
-priority: Medium
-status: Triage
-assignee: unassigned
-team: BDD
-updated: 2026-09-11
-url: https://linear.app/fashioncloud/issue/BDD-3251/bybar-delete-gtins-and-refresh-data-manager-fd-676427
-```
-New.
-
----
-
-```yaml
-id: BDD-3247
-title: "PIPE: gtin deletion camelActive (FD: 676359)"
-priority: Medium
-status: Triage
-assignee: unassigned
-team: BDD
-updated: 2026-09-11
-url: https://linear.app/fashioncloud/issue/BDD-3247/pipe-gtin-deletion-camelactive-fd-676359
-```
-New.
 
 ---
 

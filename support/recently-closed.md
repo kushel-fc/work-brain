@@ -3,6 +3,69 @@
 Capped at ~25 most recent. Older entries move to `../archive/support/`. Sourced from team BDD Done/Deployed issues carrying an FD reference.
 
 ```yaml
+id: BDD-3262
+title: "Remove items | Stieliz (FD: 676811)"
+priority: High
+closed: 2026-09-15
+url: https://linear.app/fashioncloud/issue/BDD-3262/remove-items-stieliz-fd-676811
+```
+New and closed same window — landed already assigned to Kushel and shipped before it ever showed at a "live" status in a prior sync.
+
+```yaml
+id: BDD-3261
+title: "AW: Fashion Cloud/ Preorder NILE 2/27 (FD: 676746)"
+priority: Urgent
+closed: 2026-09-14
+url: https://linear.app/fashioncloud/issue/BDD-3261/aw-fashion-cloud-preorder-nile-227-fd-676746
+```
+New and closed same day — Urgent, but landed already assigned to Kushel so it did not cross the new-unassigned-Urgent-ticket notification bar.
+
+```yaml
+id: BDD-3150
+title: PIPE/Megatron Pipeline mismatch in processing capability for prices (FD: 674378)
+priority: Medium
+closed: 2026-09-14
+url: https://linear.app/fashioncloud/issue/BDD-3150/pipemegatron-pipeline-mismatch-in-processing-capability-for-prices-fd
+```
+Part of the 09-04 bulk assignment. Shipped without the earmarked flag-enable PR ([brand-data-pipeline#1825](../sources/github/brand-data-pipeline/open-prs.md)) ever merging — that PR is still open and unreviewed. Resolved some other way; see `_meta/earmarks.md`.
+
+```yaml
+id: BDD-3229
+title: "RE: Cancellations SS27 (FD: 675432)"
+priority: Low
+closed: 2026-09-14
+url: https://linear.app/fashioncloud/issue/BDD-3229/re-cancellations-ss27-fd-675432
+```
+Picked up individually from Triage last cycle, shipped this one.
+
+```yaml
+id: BDD-3180
+title: API access permission error (FD: 675082)
+priority: Low
+closed: 2026-09-14
+url: https://linear.app/fashioncloud/issue/BDD-3180/api-access-permission-error-fd-675082
+```
+Part of the 09-04 bulk Triage-clearing assignment — shipped after sitting Ready To Start since then.
+
+```yaml
+id: BDD-3236
+title: "Cancels | Please remove | catwalk (FD: 675736)"
+priority: Medium
+closed: 2026-09-14
+url: https://linear.app/fashioncloud/issue/BDD-3236/cancels-please-remove-catwalk-fd-675736
+```
+Picked up individually from Triage last cycle, shipped this one.
+
+```yaml
+id: BDD-3247
+title: "PIPE: gtin deletion camelActive (FD: 676359)"
+priority: Medium
+closed: 2026-09-14
+url: https://linear.app/fashioncloud/issue/BDD-3247/pipe-gtin-deletion-camelactive-fd-676359
+```
+Landed in Triage unassigned 09-11, picked up and shipped all in this cycle — Triage → assigned → Deployed same window (bulk EAN-deletion request, ~60 GTINs).
+
+```yaml
 id: BDD-3091
 title: "HUGO BOSS: request MM (FD: 672863)"
 priority: Low
@@ -164,64 +227,4 @@ url: https://linear.app/fashioncloud/issue/BDD-3155/pipe-meyer-feed2-data-reproc
 ```
 Kushel's own ticket — was In Progress last sync (just picked up from Triage two syncs ago), now Done.
 
-```yaml
-id: BDD-2957
-title: "[dual-archive] G-star archiving creates a malformed/incomplete file (FD: 662655)"
-priority: High
-closed: 2026-09-02
-url: https://linear.app/fashioncloud/issue/BDD-2957/dual-archive-g-star-archiving-creates-a-malformedincomplete-file-fd
-```
-Kushel's own ticket — was In Review last sync, now Deployed. PIPE's dual-archive malformed-file fix shipped.
-
-```yaml
-id: BDD-3167
-title: Data completely missing - DKcompany (FD: 675069)
-priority: High
-closed: 2026-09-01
-url: https://linear.app/fashioncloud/issue/BDD-3167/data-completely-missing-dkcompany-fd-675069
-```
-Was flagged at the top of `today.md` last sync, speculatively tied to the onaDkCompany FEED Dagster run stuck since 2026-08-26. No Slack confirmation of a fix appeared this cycle — resolved through some other path; the Dagster run's own status is unconfirmed.
-
-```yaml
-id: BDD-3154
-title: "PIPE: Bestseller Feed2: Warnings for new languags (FD: 674613)"
-priority: High
-closed: 2026-08-31
-url: https://linear.app/fashioncloud/issue/BDD-3154/pipe-bestseller-feed2-warnings-for-new-languags-fd-674613
-```
-Backfilled — missed in the 2026-09-01 sync. Shipped via [product-service#2594](../archive/prs/product-service.md), merged same day.
-
-```yaml
-id: BDD-3103
-title: Need response until August 25 – Overview of fcKey Standard Value Translations (FD: 673052)
-priority: Medium
-closed: 2026-08-31
-url: https://linear.app/fashioncloud/issue/BDD-3103/need-response-until-august-25-overview-of-fckey-standard-value
-```
-Finally resolved — this is the ticket flagged in `today.md` for six straight sync cycles over its passed Aug 25 deadline.
-
-```yaml
-id: BDD-3112
-title: Cancellations SS27 (FD: 673398)
-priority: Medium
-closed: 2026-08-31
-url: https://linear.app/fashioncloud/issue/BDD-3112/cancellations-ss27-fd-673398
-```
-
-```yaml
-id: BDD-3111
-title: "PIPE: Bazlen FEED2 data not showing up in sku lifecycle (FD: 673391)"
-priority: Medium
-closed: 2026-08-27
-url: https://linear.app/fashioncloud/issue/BDD-3111/pipe-bazlen-feed2-data-not-showing-up-in-sku-lifecycle-fd-673391
-```
-
-```yaml
-id: BDD-3115
-title: Ned International Bulk reprocess gtins (FD: 673878)
-priority: Medium
-closed: 2026-08-27
-url: https://linear.app/fashioncloud/issue/BDD-3115/ned-international-bulk-reprocess-gtins-fd-673878
-```
-
-Older entries (BDD-3130, BDD-3105, BDD-3114, BDD-3135, BDD-3116, BDD-3127, BDD-3131, BDD-3133, BDD-3138, BDD-3134, BDD-3076, BDD-3113, BDD-3136, BDD-2945) rolled off the ~25-item cap across the last three cycles — see [`archive/support/recently-closed.md`](../archive/support/recently-closed.md).
+Older entries (BDD-2957, BDD-3167, BDD-3154, BDD-3103, BDD-3112, BDD-3111, BDD-3115, BDD-3130, BDD-3105, BDD-3114, BDD-3135, BDD-3116, BDD-3127, BDD-3131, BDD-3133, BDD-3138, BDD-3134, BDD-3076, BDD-3113, BDD-3136, BDD-2945) rolled off the ~25-item cap across the last four cycles — see [`archive/support/recently-closed.md`](../archive/support/recently-closed.md).
