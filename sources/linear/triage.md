@@ -1,26 +1,8 @@
-# Linear — Triage backlog (team BDD)
+# Linear — Triage (raw)
 
-Full raw Triage view (team BDD) — https://linear.app/fashioncloud/team/BDD/triage. Populated on sync. The FD-referenced/support-shaped subset of this list is curated into [`support/open.md`](../../support/open.md).
+Full raw Triage backlog for team BDD, sourced from https://linear.app/fashioncloud/team/BDD/triage. Populated on sync. See `support/open.md` for the FD-referenced/support-shaped curated subset.
 
-Five items left the list last cycle — four picked up and assigned to Kushel individually (BDD-3237, BDD-3236, BDD-3229 now on `sources/linear/my-issues.md`; BDD-3230 assigned and shipped same-day, see `support/recently-closed.md`), and BDD-2497 jumped straight from Triage to Done without ever being assigned (also in `support/recently-closed.md`). Five new tickets landed (BDD-3247, BDD-3246, BDD-3245, BDD-3244, BDD-3243). Net count unchanged at 11.
-
-**09-14 sync:** none of the 11 items above moved out this cycle. Three new tickets landed — BDD-3248 and BDD-3249 (both High), BDD-3251 (Medium) — bringing the total to 14. First High-priority unassigned items in this list in a while (see `support/open.md`); not Urgent, so doesn't cross the notification bar.
-
-**09-15 sync:** BDD-3251 left (picked up, now on `sources/linear/my-issues.md`) and BDD-3247 left (assigned and shipped same-window, see `support/recently-closed.md`). Four new tickets landed: BDD-3260 (Low), BDD-3259 (Medium), BDD-3258 (Low), and **BDD-3263 — a Security-labeled Urgent ticket, unassigned, due 2026-09-17** (missing function-level authorization on `dim-admin-api` staging — any authenticated user can read every Assistant chat session platform-wide and call destructive admin endpoints). This is the first new Urgent-priority unassigned ticket in the tracked history of this log and crosses the notification bar — see `today.md`. Net count up to 16 (14 support-shaped, since BDD-3263 has no FD reference).
-
----
-
-```yaml
-id: BDD-3263
-title: "[Security] Missing function-level authorization on dim-admin-api (staging)"
-priority: Urgent
-status: Triage
-assignee: unassigned
-team: BDD
-updated: 2026-09-15
-url: https://linear.app/fashioncloud/issue/BDD-3263/security-missing-function-level-authorization-on-dim-admin-api-staging
-```
-New. Not FD-referenced — internal security report, sourced from the Notion Vulnerabilities Registry (reported by Omar Essam). Any regular-user JWT gets full admin-API access on `dim-admin-api.staging.fashion.cloud`: can list and read every user's Assistant chat history platform-wide, plus call destructive endpoints (`DELETE /sku/bulk-delete`, `DELETE /media/bulk-remove`, merge-rule mutations). Swagger docs are unauthenticated too. Due 2026-09-17. Unassigned — flapped through a few statuses same morning (Triage → Todo → Backlog → Triage) before settling back in Triage, unassigned. See `today.md`.
+**09-16 sync:** First quiet cycle in a while — zero new tickets landed. Two items left: BDD-3249 (High, picked up and shipped same window — see `support/recently-closed.md`) and BDD-3246 (Medium, picked up, now In Progress — see `sources/linear/my-issues.md`). Net count down from 15 to 13.
 
 ---
 
@@ -34,7 +16,7 @@ team: BDD
 updated: 2026-09-14
 url: https://linear.app/fashioncloud/issue/BDD-3260/new-bug-on-fashioncloud-fd-676591
 ```
-New.
+No change since last sync.
 
 ---
 
@@ -48,7 +30,7 @@ team: BDD
 updated: 2026-09-14
 url: https://linear.app/fashioncloud/issue/BDD-3259/aw-frage-zu-artikelpreis-fd-676723
 ```
-New.
+No change since last sync.
 
 ---
 
@@ -62,7 +44,7 @@ team: BDD
 updated: 2026-09-14
 url: https://linear.app/fashioncloud/issue/BDD-3258/numbered-material-part-after-semicolon-leaks-into-previous-composition
 ```
-New.
+No change since last sync.
 
 ---
 
@@ -76,35 +58,7 @@ team: BDD
 updated: 2026-09-14
 url: https://linear.app/fashioncloud/issue/BDD-3248/images-uploading-by-api-stout-jeans-fd-676401
 ```
-New.
-
----
-
-```yaml
-id: BDD-3249
-title: "error 403 bij downloaden foto's voor Bijnen (FD: 673023)"
-priority: High
-status: Triage
-assignee: unassigned
-team: BDD
-updated: 2026-09-11
-url: https://linear.app/fashioncloud/issue/BDD-3249/error-403-bij-downloaden-fotos-voor-bijnen-fd-673023
-```
-New. FD number (673023) is notably older than the ticket's Triage entry — likely a reopened/renewed report rather than a fresh issue.
-
----
-
-```yaml
-id: BDD-3246
-title: "PIPE: Becosoft image issue - Kultivate (FD: 676295)"
-priority: Medium
-status: Triage
-assignee: unassigned
-team: BDD
-updated: 2026-09-10
-url: https://linear.app/fashioncloud/issue/BDD-3246/pipe-becosoft-image-issue-kultivate-fd-676295
-```
-New.
+No change since last sync. Aging a third cycle now, still the only High-priority unassigned item.
 
 ---
 
@@ -118,7 +72,7 @@ team: BDD
 updated: 2026-09-10
 url: https://linear.app/fashioncloud/issue/BDD-3245/articles-appear-under-two-brands-bestseller-fd-676293
 ```
-New.
+No change since last sync.
 
 ---
 
@@ -132,7 +86,7 @@ team: BDD
 updated: 2026-09-10
 url: https://linear.app/fashioncloud/issue/BDD-3244/wg-preise-5042-auf-fc-stimmen-nicht-nachricht-html-fd-676273
 ```
-New.
+No change since last sync.
 
 ---
 
@@ -143,7 +97,7 @@ priority: Low
 status: Triage
 assignee: oleh.polishchuk@fashion.cloud
 team: BDD
-updated: 2026-09-10
+updated: 2026-09-14
 url: https://linear.app/fashioncloud/issue/BDD-3241/stocks-not-correctly-imported-cavallaro-fd-675804
 ```
 Unusual: carries an assignee already while still in Triage status. Not treated as unassigned in `support/open.md`. No change since last sync.
@@ -160,7 +114,7 @@ team: BDD
 updated: 2026-09-10
 url: https://linear.app/fashioncloud/issue/BDD-3243/german-fc-attribut-name-not-correct-fd-676209
 ```
-New.
+No change since last sync.
 
 ---
 
@@ -230,4 +184,4 @@ team: BDD
 updated: 2026-08-03
 url: https://linear.app/fashioncloud/issue/BDD-3005/er-doet-zich-een-herhalend-probleem-voor-fd-663296
 ```
-Recurring UI issue — navigating to a brand's Content > Productdata bounces back to the home page, blocking downloads. Oldest item in Triage overall.
+Recurring UI issue — navigating to a brand's Content > Productdata bounces back to the home page, blocking downloads. Oldest item in Triage overall, now six weeks untouched.

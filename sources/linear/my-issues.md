@@ -2,13 +2,91 @@
 
 Assigned to Kushel, live (non-completed) statuses. Populated on sync — completed/canceled work stays in Linear's own history rather than being repeated here; see `git log` for what rolled off.
 
-**Note:** a bulk Triage-clearing operation landed 2026-09-04 ~13:45-13:47 UTC and assigned roughly a dozen previously-unassigned Triage tickets to Kushel in one shot (all show the same updated timestamp). Six have since shipped (BDD-3157, BDD-3152, BDD-3163, BDD-3168 all Done/Deployed — see `support/recently-closed.md`); the rest are still listed below, either Ready To Start or In Review. See `_meta/sync-log.md` for the full callout.
+**09-16 sync:** The 09-04 bulk-assignment batch is now fully closed out — its last 5 unstarted items (BDD-3037, BDD-3129, BDD-3181, BDD-3110, BDD-3153) were reassigned away from Kushel to Syed Muhammad Abu Bakar Wase, in two waves (3181/3110/3153 on 09-15 ~15:23 UTC, then 3037/3129 on 09-16 ~08:19 UTC). None of them had been started. Two Triage tickets were individually picked up: BDD-3249 (shipped same window, see `support/recently-closed.md`) and BDD-3246 (now In Progress, below). BDD-3263 (the Urgent security ticket from last cycle) shipped — Done, well ahead of its 09-17 deadline, see `support/recently-closed.md`. One new ticket landed on the Video Delivery project: BDD-3191 ("N1 — Document today's CSV generation logic"), Ready To Start.
 
-**Also new this cycle:** three more Triage tickets got individually picked up and assigned to Kushel outside the bulk batch — BDD-3237 (already In Progress), BDD-3229 and BDD-3236 (both Ready To Start).
+---
 
-**09-14 sync:** BDD-3091 and BDD-3164 both shipped (Done/Deployed) — see `support/recently-closed.md`. One new internal ticket landed: BDD-3252 (Off-Boarded Brands Deletion, Medium, To Do — not FD-referenced).
+```yaml
+id: BDD-3237
+title: "PIPE: Superdry - deleting one image possible? (FD: 675898)"
+priority: Low
+status: In Review
+assignee: Kushel Ramanayake
+team: BDD
+updated: 2026-09-16
+url: https://linear.app/fashioncloud/issue/BDD-3237/pipe-superdry-deleting-one-image-possible-fd-675898
+```
+Advanced from In Progress to In Review this cycle.
 
-**09-15 sync:** Four tickets shipped — BDD-3236, BDD-3229, BDD-3180 (all Triage pickups), and BDD-3150 (the PIPE/Megatron price-mismatch ticket, see the note on it below). BDD-3251 (Bybar gtins) got individually picked up from Triage, Ready To Start. Three new items landed from a "Video Delivery" project — BDD-3206, BDD-3205, BDD-3223 (Slice 3.2: full CSV generation via PCS) — all Backlog, not started; this is the shaping work in `shaping/video-download-delivery.md` turning into real tickets. Net count unchanged at 18.
+---
+
+```yaml
+id: BDD-3251
+title: Bybar Delete gtins and refresh Data Manager (FD: 676427)
+priority: Medium
+status: In Progress
+assignee: Kushel Ramanayake
+team: BDD
+updated: 2026-09-16
+url: https://linear.app/fashioncloud/issue/BDD-3251/bybar-delete-gtins-and-refresh-data-manager-fd-676427
+```
+Advanced from Ready To Start to In Progress this cycle.
+
+---
+
+```yaml
+id: BDD-3189
+title: information on sketch tag needed (FD: 675287)
+priority: Medium
+status: In Progress
+assignee: Kushel Ramanayake
+team: BDD
+updated: 2026-09-15
+url: https://linear.app/fashioncloud/issue/BDD-3189/information-on-sketch-tag-needed-fd-675287
+```
+No status change, just touched.
+
+---
+
+```yaml
+id: BDD-3246
+title: "PIPE: Becosoft image issue - Kultivate (FD: 676295)"
+priority: Medium
+status: In Progress
+assignee: Kushel Ramanayake
+team: BDD
+updated: 2026-09-15
+url: https://linear.app/fashioncloud/issue/BDD-3246/pipe-becosoft-image-issue-kultivate-fd-676295
+```
+New — picked up individually from Triage this cycle, already In Progress.
+
+---
+
+```yaml
+id: BDD-3223
+title: "Slice 3.2 — Full CSV generation on PCS when video and CSV are selected"
+priority: No priority
+status: Ready To Start
+assignee: Kushel Ramanayake
+team: BDD
+updated: 2026-09-15
+url: https://linear.app/fashioncloud/issue/BDD-3223/slice-32-full-csv-generation-on-pcs-when-video-and-csv-are-selected
+```
+Advanced from Backlog to Ready To Start this cycle. Parent of BDD-3206 and BDD-3205 — the Slice 3.2 milestone issue itself. Video Delivery project.
+
+---
+
+```yaml
+id: BDD-3191
+title: "N1 — Document today's CSV generation logic"
+priority: No priority
+status: Ready To Start
+assignee: Kushel Ramanayake
+team: BDD
+updated: 2026-09-15
+url: https://linear.app/fashioncloud/issue/BDD-3191/n1-document-todays-csv-generation-logic
+```
+New. Video Delivery project — a documentation prerequisite ("N1") referenced as a dependency by BDD-3206. Not started.
 
 ---
 
@@ -22,7 +100,7 @@ team: BDD
 updated: 2026-09-14
 url: https://linear.app/fashioncloud/issue/BDD-3206/32-backend-route-the-full-request-to-pcs-and-append-its-csv
 ```
-New. Part of the "Video Delivery" project, Slice 3.2 milestone, child of BDD-3223. Backend-side routing so a video+CSV download sends the full request to PCS instead of generating the CSV locally. Depends on BDD-3205 (the PCS module) and Slice 3.1. Not started.
+No change since last sync. Part of the "Video Delivery" project, Slice 3.2 milestone, child of BDD-3223. Depends on BDD-3205 and BDD-3191/Slice 3.1. Not started.
 
 ---
 
@@ -36,63 +114,7 @@ team: BDD
 updated: 2026-09-14
 url: https://linear.app/fashioncloud/issue/BDD-3205/32-pcs-csv-generation-module
 ```
-New. Part of the "Video Delivery" project, Slice 3.2 milestone, child of BDD-3223. New `CsvGenerationModule` in PCS, config-driven (no code change per column/language), artifact stored in S3 with a signed link. Open question flagged in the spec on artifact TTL. Not started.
-
----
-
-```yaml
-id: BDD-3223
-title: "Slice 3.2 — Full CSV generation on PCS when video and CSV are selected"
-priority: No priority
-status: Backlog
-assignee: Kushel Ramanayake
-team: BDD
-updated: 2026-09-14
-url: https://linear.app/fashioncloud/issue/BDD-3223/slice-32-full-csv-generation-on-pcs-when-video-and-csv-are-selected
-```
-New. Parent of BDD-3206 and BDD-3205 — the Slice 3.2 milestone issue itself. Depends on Slice 3.1 and "N1". Not started.
-
----
-
-```yaml
-id: BDD-3251
-title: Bybar Delete gtins and refresh Data Manager (FD: 676427)
-priority: Medium
-status: Ready To Start
-assignee: Kushel Ramanayake
-team: BDD
-updated: 2026-09-14
-url: https://linear.app/fashioncloud/issue/BDD-3251/bybar-delete-gtins-and-refresh-data-manager-fd-676427
-```
-New — picked up individually from Triage (was unassigned Medium since 09-11). Not started.
-
----
-
-```yaml
-id: BDD-3252
-title: Off-Boarded Brands Deletion
-priority: Medium
-status: To Do
-assignee: Kushel Ramanayake
-team: BDD
-updated: 2026-09-11
-url: https://linear.app/fashioncloud/issue/BDD-3252/off-boarded-brands-deletion
-```
-Not FD-referenced (internal task, not a Triage pickup). Not started, no change since last sync.
-
----
-
-```yaml
-id: BDD-2258
-title: Sample XML/CSV with video links + test manufacturer on SFTP
-priority: High
-status: Ready To Start
-assignee: Kushel Ramanayake
-team: BDD
-updated: 2026-08-18
-url: https://linear.app/fashioncloud/issue/BDD-2258/sample-xmlcsv-with-video-links-test-manufacturer-on-sftp
-```
-Unblocked since BDD-2567 shipped — still not started, over three weeks now.
+No change since last sync. Part of the "Video Delivery" project, Slice 3.2 milestone, child of BDD-3223. New `CsvGenerationModule` in PCS, config-driven, artifact stored in S3 with a signed link. Open question flagged in the spec on artifact TTL. Not started.
 
 ---
 
@@ -125,86 +147,16 @@ No change since last sync.
 ---
 
 ```yaml
-id: BDD-3189
-title: information on sketch tag needed (FD: 675287)
+id: BDD-3252
+title: Off-Boarded Brands Deletion
 priority: Medium
-status: In Progress
+status: To Do
 assignee: Kushel Ramanayake
 team: BDD
-updated: 2026-09-10
-url: https://linear.app/fashioncloud/issue/BDD-3189/information-on-sketch-tag-needed-fd-675287
+updated: 2026-09-11
+url: https://linear.app/fashioncloud/issue/BDD-3252/off-boarded-brands-deletion
 ```
-Part of the 09-04 bulk assignment. No status change (still In Progress).
-
----
-
-```yaml
-id: BDD-3237
-title: "PIPE: Superdry - deleting one image possible? (FD: 675898)"
-priority: Low
-status: In Progress
-assignee: Kushel Ramanayake
-team: BDD
-updated: 2026-09-10
-url: https://linear.app/fashioncloud/issue/BDD-3237/pipe-superdry-deleting-one-image-possible-fd-675898
-```
-New — picked up individually from Triage and started same day (was unassigned Low in Triage since 09-08).
-
----
-
-```yaml
-id: BDD-3037
-title: Artikel data Florez komt niet door (FD: 671579)
-priority: Medium
-status: Ready To Start
-assignee: Kushel Ramanayake
-team: BDD
-updated: 2026-09-10
-url: https://linear.app/fashioncloud/issue/BDD-3037/artikel-data-florez-komt-niet-door-fd-671579
-```
-Part of the 09-04 bulk Triage-clearing assignment. Not started — oldest of the batch.
-
----
-
-```yaml
-id: BDD-3129
-title: "Fwd: Dringend: Ansprechpartner (FD: 674136)"
-priority: Medium
-status: Ready To Start
-assignee: Kushel Ramanayake
-team: BDD
-updated: 2026-09-10
-url: https://linear.app/fashioncloud/issue/BDD-3129/fwd-dringend-ansprechpartner-fd-674136
-```
-Part of the 09-04 bulk assignment. Not started.
-
----
-
-```yaml
-id: BDD-3181
-title: Frage zu Artikelpreis (FD: 675078)
-priority: Medium
-status: Ready To Start
-assignee: Kushel Ramanayake
-team: BDD
-updated: 2026-09-10
-url: https://linear.app/fashioncloud/issue/BDD-3181/frage-zu-artikelpreis-fd-675078
-```
-Part of the 09-04 bulk assignment. Not started.
-
----
-
-```yaml
-id: BDD-2518
-title: Convert the Buffer into Stream in extract job
-priority: Medium
-status: Ready To Start
-assignee: Kushel Ramanayake
-team: BDD
-updated: 2026-09-10
-url: https://linear.app/fashioncloud/issue/BDD-2518/convert-the-buffer-into-stream-in-extract-job
-```
-Tech Debt label. Status touched in the 09-04 batch (was already his, To Do → Ready To Start). No change since.
+No change since last sync. Not FD-referenced (internal task).
 
 ---
 
@@ -218,35 +170,21 @@ team: BDD
 updated: 2026-09-06
 url: https://linear.app/fashioncloud/issue/BDD-2406/retry-des-calls-with-backoff-on-502503504-in-trigger-enrichment
 ```
-No change since last sync.
+No change since last sync. Internal tech-debt item, not started.
 
 ---
 
 ```yaml
-id: BDD-3110
-title: Maximum download with Art.Numbers is 1000 EANS - but when searching on EAN level it's 2000 (FD: 673275)
-priority: Low
+id: BDD-2518
+title: Convert the Buffer into Stream in extract job
+priority: Medium
 status: Ready To Start
 assignee: Kushel Ramanayake
 team: BDD
 updated: 2026-09-04
-url: https://linear.app/fashioncloud/issue/BDD-3110/maximum-download-with-artnumbers-is-1000-eans-but-when-searching-on
+url: https://linear.app/fashioncloud/issue/BDD-2518/convert-the-buffer-into-stream-in-extract-job
 ```
-Part of the 09-04 bulk assignment. Not started.
-
----
-
-```yaml
-id: BDD-3153
-title: Preise siehe auch Ticket 610189 (FD: 674585)
-priority: Low
-status: Ready To Start
-assignee: Kushel Ramanayake
-team: BDD
-updated: 2026-09-04
-url: https://linear.app/fashioncloud/issue/BDD-3153/preise-siehe-auch-ticket-610189-fd-674585
-```
-Part of the 09-04 bulk assignment. Not started.
+No change since last sync. Internal tech-debt item — unlike the rest of the 09-04 batch, this one stayed assigned to Kushel rather than getting reassigned away.
 
 ---
 
@@ -260,4 +198,18 @@ team: BDD
 updated: 2026-07-20
 url: https://linear.app/fashioncloud/issue/BDD-2079/enable-auth0-sso-for-des-bull-board-at-queue-admin
 ```
-On hold, low priority. No change.
+No change since last sync. Long on-hold.
+
+---
+
+```yaml
+id: BDD-2258
+title: Sample XML/CSV with video links + test manufacturer on SFTP
+priority: High
+status: Ready To Start
+assignee: Kushel Ramanayake
+team: BDD
+updated: 2026-08-18
+url: https://linear.app/fashioncloud/issue/BDD-2258/sample-xmlcsv-with-video-links-test-manufacturer-on-sftp
+```
+Unblocked since BDD-2567 shipped — still not started, now over four weeks.

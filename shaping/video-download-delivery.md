@@ -1,6 +1,6 @@
 ---
 status: active
-last_touched: 2026-09-15
+last_touched: 2026-09-16
 ---
 
 # Video download delivery on platform
@@ -9,7 +9,8 @@ Carried over from the old Notion "Parked" section. The underlying download suppo
 
 **09-15 update:** the delivery-options question this doc tracked has moved past shaping — a Linear project "Video Delivery" now exists with sliced work, and three tickets landed on Kushel this cycle, all Backlog/not started:
 
-- [BDD-3223](../sources/linear/my-issues.md) — Slice 3.2 milestone parent: "Full CSV generation on PCS when video and CSV are selected." Depends on Slice 3.1 (already shipped — the combined archive using the backend's existing CSV) and something referenced only as "N1".
+- [BDD-3223](../sources/linear/my-issues.md) — Slice 3.2 milestone parent: "Full CSV generation on PCS when video and CSV are selected." Depends on Slice 3.1 (already shipped — the combined archive using the backend's existing CSV) and "N1", which is now its own ticket (below). Advanced to Ready To Start this cycle.
+- [BDD-3191](../sources/linear/my-issues.md) — "N1": documenting today's CSV-generation logic, the dependency BDD-3223/3206 reference. New this cycle, Ready To Start.
 - [BDD-3205](../sources/linear/my-issues.md) — the PCS-side `CsvGenerationModule`: config-driven (no code change per column/language), artifact stored in S3, signed link returned on the resolve response. Open question in the spec itself: whether the artifact needs its own TTL or can reuse video's 14-day one.
 - [BDD-3206](../sources/linear/my-issues.md) — the backend-side routing: when video + data attributes are both requested, send the *full* request to PCS instead of generating the CSV locally; images-plus-data-attributes-without-video stays on the backend untouched.
 

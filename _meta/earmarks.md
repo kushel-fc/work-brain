@@ -8,7 +8,15 @@ Each earmark has a `Trigger signal` (plain-language condition to watch for durin
 
 ## Active
 
-_None currently._
+- **Trigger signal**: `brand-data-pipeline#1890` (baldessarini `credential_id` fix) merges
+- **Surface**: Confirm `baldessarini_FEED` actually stops failing — it failed on essentially every hourly run for ~21h straight (09-15/09-16) before this PR was even open, so merging alone isn't proof; check for a clean run afterward.
+- **Related**: [dagster-alerts/log.md](../dagster-alerts/log.md), [prs/mine.md](../prs/mine.md)
+- **Status**: active
+
+- **Trigger signal**: Kushel's "next release" ships (referenced 09-15 for both holyfashion and beheim's `move_images_from_ftp_to_s3_job_sync` failures)
+- **Surface**: Confirm both brands actually stop failing — the promise was made in-thread but both kept failing afterward through the end of this sync's capture window. Also check whether profuomo/royRobson (quiet this cycle) were part of the same release or a coincidence.
+- **Related**: [dagster-alerts/log.md](../dagster-alerts/log.md)
+- **Status**: active
 
 ## Triggered / Dismissed
 

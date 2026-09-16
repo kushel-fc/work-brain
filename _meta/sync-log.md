@@ -2,6 +2,19 @@
 
 One entry per sync run. Prune entries older than ~30 days.
 
+## 2026-09-16 (08:35 UTC)
+
+- **BDD-3263 (last cycle's Urgent security ticket) resolved** — Done, well ahead of its 09-17 deadline.
+- **The 09-04 bulk-assignment batch is fully closed out** — its last 5 unstarted items (BDD-3037, BDD-3129, BDD-3181, BDD-3110, BDD-3153) were reassigned away from Kushel to abubakarwase in two waves (09-15 ~15:23 UTC and 09-16 ~08:19 UTC), none ever started. This storyline, tracked since 09-07, is done.
+- **First quiet Triage-inflow cycle in a while** — zero new external tickets landed. Backlog shrank 15 → 13 as BDD-3249 (High, shipped) and BDD-3246 (Medium, now In Progress) were individually picked up.
+- **New ticket on the Video Delivery project**: BDD-3191 ("N1 — Document today's CSV generation logic"), Ready To Start.
+- **New Dagster incident: baldessarini_FEED failed on almost every hourly run for ~21h straight** (22 failed runs, 09-15 11:18 UTC through 09-16 08:18 UTC). Kushel opened his own fix same day — [brand-data-pipeline#1890](sources/github/brand-data-pipeline/open-prs.md) (stale `credential_id` swap) — but it hadn't merged by sync time, so the incident was still active. His first own PR since 09-09.
+- **Two more brands in the known move-images spread got a fix commitment but not a fix**: Kushel told Chamindu Rathnaweera "will be resolved with the next release" (holyfashion) and "will be fixed with the next release" (beheim) — both kept failing afterward. profuomo/royRobson (the other two brands in the spread) went quiet this cycle.
+- **gaborBags hit the same failure shape as baldessarini but was fixed same-day** — Kushel rotated an expired credential in 1Password, no recurrence.
+- GitHub: five new PRs landed on each repo (product-service #2697/#2698/#2705/#2708/#2709, brand-data-pipeline #1882/#1883/#1888/#1889/#1890); #2655/#1839 (image-reprocessing-collector-job pair) merged. **Review queue up to 6** (new: #2705, a real feature — per-manufacturer/feed lookback override — not another routine brand migration).
+- New Dagster alerts, none actioned yet: kultivate_FEED joined the "exceeded 3h limit" brands; hom_FEED hit a first-occurrence asset-materialization failure; a new Datadog signature (extract-job Node string-length limit) self-resolved in ~5 min.
+- Notified: no — nothing crossed the notification bar. No deadline passed with zero movement (BDD-3263's deadline was met, not missed). No flip to conflict/Changes-Requested on his own work (his only own PR, #1890, is clean). No new Urgent-priority ticket landed unassigned (zero new Triage items at all this cycle). No Dagster alert recurred after reaching `self-resolved` status — baldessarini and hom are first-occurrence active failures rather than repeats of something that had self-resolved, and gaborBags was a one-off that resolved cleanly rather than recurring.
+
 ## 2026-09-14 (08:46 UTC)
 
 - **profuomo's `move_images_from_ftp_to_s3_job_sync` recurred 3 more times (09-11/09-12/09-13, ~24h apart)** after last sync called it self-resolved alongside lugina — lugina itself stayed quiet. Crosses the notification bar (Dagster alert recurring rather than self-resolving). Earmark note updated; profuomo now tracked as its own `recurring` log entry.

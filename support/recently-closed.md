@@ -3,6 +3,24 @@
 Capped at ~25 most recent. Older entries move to `../archive/support/`. Sourced from team BDD Done/Deployed issues carrying an FD reference.
 
 ```yaml
+id: BDD-3263
+title: "[Security] Missing function-level authorization on dim-admin-api (staging)"
+priority: Urgent
+closed: 2026-09-16
+url: https://linear.app/fashioncloud/issue/BDD-3263/security-missing-function-level-authorization-on-dim-admin-api-staging
+```
+The Urgent, unassigned, 09-17-deadline security ticket flagged in `today.md` last cycle (crossed the notification bar then) — picked up and Done well ahead of its deadline. Not FD-referenced (internal security report via the Notion Vulnerabilities Registry), included here as an exception given its severity and the prior notification.
+
+```yaml
+id: BDD-3249
+title: "error 403 bij downloaden foto's voor Bijnen (FD: 673023)"
+priority: High
+closed: 2026-09-15
+url: https://linear.app/fashioncloud/issue/BDD-3249/error-403-bij-downloaden-fotos-voor-bijnen-fd-673023
+```
+Picked up individually from Triage and shipped same window. Was aging in `support/open.md` for two cycles; FD number was notably older than its Triage entry, suggesting a reopened/renewed report.
+
+```yaml
 id: BDD-3262
 title: "Remove items | Stieliz (FD: 676811)"
 priority: High
@@ -209,22 +227,4 @@ url: https://linear.app/fashioncloud/issue/BDD-2530/pipe-global-transform-doesnt
 ```
 Fix had already shipped for Secrid pending release; now fully Deployed. Was unassigned in `support/open.md`.
 
-```yaml
-id: BDD-3089
-title: Process images that are taller than its wide
-priority: No priority
-closed: 2026-09-04
-url: https://linear.app/fashioncloud/issue/BDD-3089/process-images-that-are-taller-than-its-wide
-```
-Kushel's own internal ticket — shipped via [product-service#2623](../archive/prs/product-service.md), merged 2026-09-04.
-
-```yaml
-id: BDD-3155
-title: "PIPE: meyer FEED2 data reprocessing is not working (FD: 674619)"
-priority: High
-closed: 2026-09-03
-url: https://linear.app/fashioncloud/issue/BDD-3155/pipe-meyer-feed2-data-reprocessing-is-not-working-fd-674619
-```
-Kushel's own ticket — was In Progress last sync (just picked up from Triage two syncs ago), now Done.
-
-Older entries (BDD-2957, BDD-3167, BDD-3154, BDD-3103, BDD-3112, BDD-3111, BDD-3115, BDD-3130, BDD-3105, BDD-3114, BDD-3135, BDD-3116, BDD-3127, BDD-3131, BDD-3133, BDD-3138, BDD-3134, BDD-3076, BDD-3113, BDD-3136, BDD-2945) rolled off the ~25-item cap across the last four cycles — see [`archive/support/recently-closed.md`](../archive/support/recently-closed.md).
+Older entries (BDD-3089, BDD-3155, BDD-2957, BDD-3167, BDD-3154, BDD-3103, BDD-3112, BDD-3111, BDD-3115, BDD-3130, BDD-3105, BDD-3114, BDD-3135, BDD-3116, BDD-3127, BDD-3131, BDD-3133, BDD-3138, BDD-3134, BDD-3076, BDD-3113, BDD-3136, BDD-2945) rolled off the ~25-item cap across the last five cycles — see [`archive/support/recently-closed.md`](../archive/support/recently-closed.md).

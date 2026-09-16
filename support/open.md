@@ -2,7 +2,7 @@
 
 FD-sourced/support-shaped tickets, by priority then age (oldest first within each tier). Sourced from the team BDD Triage view: https://linear.app/fashioncloud/team/BDD/triage. Populated on sync. Full raw Triage list (including non-FD internal items, e.g. the new BDD-3263 security ticket) lives in [`sources/linear/triage.md`](../sources/linear/triage.md).
 
-15 items now (was 14) — BDD-3251 and BDD-3247 moved out (picked up/shipped), four new landed (BDD-3260, BDD-3259, BDD-3258 here; BDD-3263 is Urgent but not FD-referenced so it's Triage-only, see `today.md`). Still 2 High.
+13 items now (was 15) — BDD-3249 and BDD-3246 both moved out this cycle (individually picked up from Triage; BDD-3249 shipped same window, BDD-3246 now In Progress). Zero new tickets landed — first quiet Triage-inflow cycle in a while. Down to 1 High.
 
 ## High
 
@@ -13,16 +13,7 @@ priority: High
 updated: 2026-09-14
 url: https://linear.app/fashioncloud/issue/BDD-3248/images-uploading-by-api-stout-jeans-fd-676401
 ```
-No change since last sync.
-
-```yaml
-id: BDD-3249
-title: "error 403 bij downloaden foto's voor Bijnen (FD: 673023)"
-priority: High
-updated: 2026-09-11
-url: https://linear.app/fashioncloud/issue/BDD-3249/error-403-bij-downloaden-fotos-voor-bijnen-fd-673023
-```
-No change since last sync. FD number is notably older than the Triage entry — likely a reopened/renewed report.
+No change since last sync. Aging a third cycle now, sole High-priority item.
 
 ## Medium
 
@@ -32,15 +23,6 @@ title: "AW: Frage zu Artikelpreis (FD: 676723)"
 priority: Medium
 updated: 2026-09-14
 url: https://linear.app/fashioncloud/issue/BDD-3259/aw-frage-zu-artikelpreis-fd-676723
-```
-New.
-
-```yaml
-id: BDD-3246
-title: "PIPE: Becosoft image issue - Kultivate (FD: 676295)"
-priority: Medium
-updated: 2026-09-10
-url: https://linear.app/fashioncloud/issue/BDD-3246/pipe-becosoft-image-issue-kultivate-fd-676295
 ```
 No change since last sync.
 

@@ -3,6 +3,106 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
+timestamp: 2026-09-16T06:38:45Z
+channel: brand-data-dev-alerts
+brand: holyfashion, beheim
+summary: "move_images_from_ftp_to_s3_job_sync continued failing on both brands after Kushel's fix commitment"
+status: recurring
+linked_issue: null
+```
+Continuation of the four-brand spread flagged last sync. This window: holyfashion fired three more times (2026-09-15T14:40:28Z, 22:39:04Z, 2026-09-16T06:38:45Z); beheim fired twice more (2026-09-15T16:01:25Z, 2026-09-16T00:00:44Z). Chamindu Rathnaweera pinged Kushel + abubakarwase in-thread 14:46:52Z asking for a look; Kushel replied 14:48:02Z "The holyfashion will be resolved with the next release. Will check the others" (🎗️ reaction), and separately on the beheim thread at 16:06:07Z "Will be fixed with the next release." Both brands kept failing after those messages — the release hadn't shipped by end of window. **profuomo and royRobson were quiet this cycle** (no occurrences) — only holyfashion/beheim are still active. Now has an owner and a fix commitment, unlike last cycle's "no owner yet."
+
+```yaml
+timestamp: 2026-09-16T06:03:27Z
+channel: brand-data-dev-alerts
+brand: platform (Datadog log index)
+summary: Log index hit warning threshold then daily quota a fourth time, self-resolved on quota reset
+status: recurring
+linked_issue: null
+```
+Same `product-service-logs-index-` pattern, fourth occurrence now (triggered 2026-09-15T19:12:27Z, recovered 2026-09-16T06:03:27Z on quota reset). Still no permanent fix in place.
+
+```yaml
+timestamp: 2026-09-16T04:51:35Z
+channel: brand-data-dev-alerts
+brand: platform (galvatron ECS)
+summary: ECS health check failures on galvatron, four more trigger/recover cycles
+status: recurring
+linked_issue: null
+```
+Four short flap cycles this window (2026-09-15T17:07:35Z→17:08:35Z, 19:02:36Z→19:07:35Z, 2026-09-16T00:52:35Z→00:55:35Z, 04:42:35Z→04:51:35Z), each self-resolving in 1-9 minutes. Same established noise pattern, no thread.
+
+```yaml
+timestamp: 2026-09-15T19:38:34Z
+channel: brand-data-dev-alerts
+brand: hom
+summary: hom_FEED — 11 asset materializations failed (download_images, feed_transform, etc.)
+status: active
+linked_issue: null
+```
+New brand for this failure signature, single occurrence. No thread, no reaction, no follow-up alert — unclear if it self-resolved or is still pending.
+
+```yaml
+timestamp: 2026-09-15T15:50:22Z
+channel: brand-data-dev-alerts
+brand: platform (analytics_trigger_sensor)
+summary: analytics step — essential container exited, exit code 1, once more
+status: recurring
+linked_issue: null
+```
+Same no-owner recurring pattern as previous cycles. No thread.
+
+```yaml
+timestamp: 2026-09-15T15:24:49Z
+channel: brand-data-dev-alerts
+brand: baldessarini
+summary: "baldessarini_FEED failing on nearly every hourly cron run — 22 failed runs across ~21h, own PR in flight"
+status: active
+linked_issue: null
+```
+**New signature, not previously tracked — the most consequential Dagster finding this cycle.** `baldessarini_FEED_cron_schedule` failed 10 asset materializations (download_images, extract, + downstream feed assets) on 22 separate runs spanning 2026-09-15T11:18:23Z through 2026-09-16T08:18:46Z — effectively every single hourly run in the whole window, zero successes. Kushel replied in-thread 15:24:49Z-15:24:54Z with a cross-channel link and "PR to fix this" — his own [brand-data-pipeline#1890](../sources/github/brand-data-pipeline/open-prs.md) (updates the job's stale `credential_id`), opened same day. Failures continued for ~17 more hours after the PR reference, so it hadn't merged/deployed by the end of the capture window. Top of `today.md` — his own fix, not yet shipped.
+
+```yaml
+timestamp: 2026-09-15T14:51:01Z
+channel: brand-data-dev-alerts
+brand: gaborBags
+summary: gaborBags_FEED — 10 asset materializations failed, resolved via credential rotation
+status: self-resolved
+linked_issue: null
+```
+New brand for this failure shape (download_images/extract chain, same as baldessarini above) — one-off occurrence 2026-09-15T11:48:03Z. Kushel replied in-thread 14:51:01Z: "Updated the password in 1PW." No further gaborBags alerts after the fix.
+
+```yaml
+timestamp: 2026-09-15T14:12:25Z
+channel: brand-data-dev-alerts
+brand: platform (extract-job, manufacturer unspecified)
+summary: Extract job's flat legacy-archive copy buffered a file exceeding Node's max string length
+status: self-resolved
+linked_issue: null
+```
+New Datadog signature, not previously tracked — possibly related to the archived-files string-limit alert from 09-14 ([product-service#2676](../archive/prs/product-service.md), merged) given the shared "Node max string length" description; [product-service#2708](../sources/github/product-service/open-prs.md) ("Scope archive string-limit alert to XML files", opened same day, already Approved) may be a further refinement. Triggered 14:12:25Z, recovered ~5 min later 14:17:25Z. One "eyes" reaction, no text reply. Worth watching for recurrence given the OOM-risk framing.
+
+```yaml
+timestamp: 2026-09-15T11:24:27Z
+channel: brand-data-dev-alerts
+brand: platform (product-data-service / PDS)
+summary: PDS stream-publish failures + Kinesis write-throttling, paired alerts, self-resolved in ~15 min
+status: self-resolved
+linked_issue: null
+```
+Continuation of the known post-shard-increase-fix recurring issue. Triggered together 11:24:27Z/11:24:29Z, recovered together ~11:39:28Z/11:39:29Z. No thread.
+
+```yaml
+timestamp: 2026-09-15T11:21:54Z
+channel: brand-data-dev-alerts
+brand: kultivate
+summary: kultivate_FEED run exceeded the 3h run-time-limit alert policy
+status: active
+linked_issue: null
+```
+New brand for this alert type — previously only blackstone_FEED/ona__blackstone_FEED and ona__falke_FEED had hit it. No thread. blackstone and falke's own 3h-limit alerts stayed quiet this window.
+
+```yaml
 timestamp: 2026-09-15T08:01:19Z
 channel: brand-data-dev-alerts
 brand: multiple (beheim, holyfashion, royRobson, profuomo)

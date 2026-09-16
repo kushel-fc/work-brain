@@ -3,6 +3,17 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 1839
+title: BDD-3161 Add image-reprocessing-collector-job weekly schedule
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-09-15
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1839
+```
+Not his. Merged by dwiajik (self-merge) 12:58:52 UTC. Companion to product-service#2655, also merged same day.
+
+```yaml
 number: 1864
 title: Update material logic
 author: hakansoylu1

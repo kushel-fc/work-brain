@@ -2,7 +2,21 @@
 
 PRs where Kushel is a requested reviewer. Populated on sync.
 
-Queue jumped from 1 to 5 this cycle — four new brand-migration PRs landed naming him, part of the larger nine-PR-pair wave (see `sources/github/*/open-prs.md`).
+Queue up to 6 (was 5) — one new PR landed naming him: [product-service#2705](../sources/github/product-service/open-prs.md) (per-manufacturer/feed lookback override).
+
+```yaml
+number: 2705
+repo: product-service
+title: Add per-manufacturer/feed lookback override, sourced from S3
+author: dwiajik
+state: open
+mergeable_state: mergeable
+review_state: awaiting-first-review
+requested_reviewers: [brand-data-dev (team), abubakarwase, kushel-fc]
+updated: 2026-09-16
+url: https://github.com/fashioncloud/product-service/pull/2705
+```
+New. Untouched since opening. Companion to brand-data-pipeline#1888 (doesn't name him).
 
 ```yaml
 number: 2689
@@ -16,7 +30,7 @@ requested_reviewers: [brand-data-dev (team), irembbt, kushel-fc]
 updated: 2026-09-14
 url: https://github.com/fashioncloud/product-service/pull/2689
 ```
-New. Untouched since opening.
+Untouched since opening, now 2 days stale.
 
 ```yaml
 number: 2683
@@ -30,7 +44,7 @@ requested_reviewers: [brand-data-dev (team), kushel-fc, alirezaMoazenFashion]
 updated: 2026-09-14
 url: https://github.com/fashioncloud/product-service/pull/2683
 ```
-New. Companion brand-data-pipeline#1871 (below) already has an approval — this half doesn't yet.
+Untouched since opening. Companion brand-data-pipeline#1871 (below) already has an approval — this half doesn't yet.
 
 ```yaml
 number: 1878
@@ -38,13 +52,13 @@ repo: brand-data-pipeline
 title: polaris brand migration
 author: alirezaMoazenFashion
 state: open
-mergeable_state: mergeable
+mergeable_state: unknown
 review_state: awaiting-first-review
 requested_reviewers: [kushel-fc]
 updated: 2026-09-15
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1878
 ```
-New. Sole named reviewer — nobody else has looked at this one yet.
+Sole named reviewer — nobody else has looked at this one yet. `mergeable_state` flapped from mergeable to unknown this cycle (GitHub recompute noise, not a real conflict).
 
 ```yaml
 number: 1871
@@ -58,7 +72,7 @@ requested_reviewers: [marianabassi, kushel-fc]
 updated: 2026-09-14
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1871
 ```
-New. marianabassi already approved; Kushel still listed as an outstanding requested reviewer — lowest-friction of the four new ones since someone else has already vetted it.
+marianabassi already approved; Kushel still listed as an outstanding requested reviewer — lowest-friction of the group since someone else has already vetted it.
 
 ```yaml
 number: 2514
@@ -73,4 +87,4 @@ requested_reviewers: [brand-data-dev (team), irembbt, kushel-fc, dwiajik, julsja
 updated: 2026-08-28
 url: https://github.com/fashioncloud/product-service/pull/2514
 ```
-Draft, already has Changes Requested from someone else. Still stale — now 18 days untouched.
+Draft, already has Changes Requested from someone else. Still stale — now 19 days untouched.

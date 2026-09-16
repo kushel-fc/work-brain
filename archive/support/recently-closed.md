@@ -3,6 +3,24 @@
 Older entries rolled off `support/recently-closed.md`'s ~25-item cap. Never deleted.
 
 ```yaml
+id: BDD-3089
+title: Process images that are taller than its wide
+priority: No priority
+closed: 2026-09-04
+url: https://linear.app/fashioncloud/issue/BDD-3089/process-images-that-are-taller-than-its-wide
+```
+Kushel's own internal ticket — shipped via [product-service#2623](../prs/product-service.md), merged 2026-09-04.
+
+```yaml
+id: BDD-3155
+title: "PIPE: meyer FEED2 data reprocessing is not working (FD: 674619)"
+priority: High
+closed: 2026-09-03
+url: https://linear.app/fashioncloud/issue/BDD-3155/pipe-meyer-feed2-data-reprocessing-is-not-working-fd-674619
+```
+Kushel's own ticket.
+
+```yaml
 id: BDD-3115
 title: Ned International Bulk reprocess gtins (FD: 673878)
 priority: Medium

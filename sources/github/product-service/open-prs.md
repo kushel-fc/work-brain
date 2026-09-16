@@ -2,7 +2,72 @@
 
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
-Big jump: nine new PRs landed this cycle (#2681, #2683, #2684, #2686, #2689, #2690, #2692, #2693, #2694) — all same-shaped "brand migration"/"mapping rules" PRs from alirezaMoazenFashion and abirprantofc, paired with companion PRs on brand-data-pipeline for the same brands (blueSeven, fynchHatton, milestone, cinque, polaris, swing, schumacher, dorisStreich). Three PRs left the list, all merged 09-14 (#2677, #2676, #2675 — see `archive/prs/product-service.md`). Net count up to 14. Two of the new PRs name Kushel individually: #2689 (cinque) and #2683 (swing).
+Five new PRs this cycle (#2697, #2698, #2705, #2708, #2709), one dropped off (#2655, merged 09-15 — see `archive/prs/product-service.md`). Net count up to 18. One new PR names Kushel individually: **#2705** (per-manufacturer/feed lookback override), companion to brand-data-pipeline#1888 (doesn't name him).
+
+```yaml
+number: 2709
+title: POST v1/colors/find Subtask 4 - PDS Endpoint implementation to find colors
+author: Chamindu36
+state: open
+mergeable_state: mergeable
+review_state: awaiting-first-review
+requested_reviewers: [brand-data-dev (team), dwiajik, irembbt]
+updated: 2026-09-16
+url: https://github.com/fashioncloud/product-service/pull/2709
+```
+New. Not his.
+
+```yaml
+number: 2708
+title: Scope archive string-limit alert to XML files
+author: dwiajik
+state: open
+mergeable_state: mergeable
+review_state: approved
+requested_reviewers: [alirezaMoazenFashion]
+updated: 2026-09-16
+url: https://github.com/fashioncloud/product-service/pull/2708
+```
+New, already Approved. Not his. Related to the archive string-limit Datadog alert seen in `dagster-alerts/log.md` on 09-14/09-15.
+
+```yaml
+number: 2705
+title: Add per-manufacturer/feed lookback override, sourced from S3
+author: dwiajik
+state: open
+mergeable_state: mergeable
+review_state: awaiting-first-review
+requested_reviewers: [brand-data-dev (team), abubakarwase, kushel-fc]
+updated: 2026-09-16
+url: https://github.com/fashioncloud/product-service/pull/2705
+```
+New — individually his to review. Companion to brand-data-pipeline#1888 (same feature, doesn't name him). See [`prs/to-review.md`](../../../prs/to-review.md).
+
+```yaml
+number: 2698
+title: authenticStyle brand migration
+author: marianabassi
+state: open
+mergeable_state: mergeable
+review_state: awaiting-first-review
+requested_reviewers: [brand-data-dev (team), irembbt, abubakarwase]
+updated: 2026-09-15
+url: https://github.com/fashioncloud/product-service/pull/2698
+```
+New. Not his. Companion to brand-data-pipeline#1883.
+
+```yaml
+number: 2697
+title: vanDeVelde brand migration
+author: marianabassi
+state: open
+mergeable_state: mergeable
+review_state: awaiting-first-review
+requested_reviewers: [brand-data-dev (team)]
+updated: 2026-09-15
+url: https://github.com/fashioncloud/product-service/pull/2697
+```
+New. Not his. Companion to brand-data-pipeline#1882.
 
 ```yaml
 number: 2694
@@ -15,7 +80,7 @@ requested_reviewers: [brand-data-dev (team), irembbt, julsjacinto]
 updated: 2026-09-14
 url: https://github.com/fashioncloud/product-service/pull/2694
 ```
-New. Not his.
+Not his. No change.
 
 ```yaml
 number: 2693
@@ -28,7 +93,7 @@ requested_reviewers: [brand-data-dev (team), abubakarwase, abirprantofc]
 updated: 2026-09-14
 url: https://github.com/fashioncloud/product-service/pull/2693
 ```
-New. Not his. Companion to brand-data-pipeline#1880 (blueSeven brand migration).
+Not his. Companion to brand-data-pipeline#1880. No change.
 
 ```yaml
 number: 2692
@@ -41,7 +106,7 @@ requested_reviewers: [brand-data-dev (team), irembbt, julsjacinto]
 updated: 2026-09-14
 url: https://github.com/fashioncloud/product-service/pull/2692
 ```
-New. Not his. Companion to brand-data-pipeline#1876.
+Not his. Companion to brand-data-pipeline#1876. No change.
 
 ```yaml
 number: 2690
@@ -54,7 +119,7 @@ requested_reviewers: [brand-data-dev (team), dwiajik, alirezaMoazenFashion]
 updated: 2026-09-14
 url: https://github.com/fashioncloud/product-service/pull/2690
 ```
-New. Not his.
+Not his. No change.
 
 ```yaml
 number: 2689
@@ -67,7 +132,7 @@ requested_reviewers: [brand-data-dev (team), irembbt, kushel-fc]
 updated: 2026-09-14
 url: https://github.com/fashioncloud/product-service/pull/2689
 ```
-New — individually his to review. Companion to brand-data-pipeline#1874 (names marianabassi, not him). See [`prs/to-review.md`](../../../prs/to-review.md).
+Individually his to review, still untouched. Companion to brand-data-pipeline#1874 (names marianabassi, not him). See [`prs/to-review.md`](../../../prs/to-review.md).
 
 ```yaml
 number: 2686
@@ -80,7 +145,7 @@ requested_reviewers: [brand-data-dev (team), irembbt, abirprantofc]
 updated: 2026-09-14
 url: https://github.com/fashioncloud/product-service/pull/2686
 ```
-New. Not his (companion brand-data-pipeline#1878 does name him).
+Not his (companion brand-data-pipeline#1878 does name him). No change.
 
 ```yaml
 number: 2684
@@ -93,7 +158,7 @@ requested_reviewers: [brand-data-dev (team), dwiajik, abubakarwase]
 updated: 2026-09-14
 url: https://github.com/fashioncloud/product-service/pull/2684
 ```
-New. Not his.
+Not his. No change.
 
 ```yaml
 number: 2683
@@ -106,7 +171,7 @@ requested_reviewers: [brand-data-dev (team), kushel-fc, alirezaMoazenFashion]
 updated: 2026-09-14
 url: https://github.com/fashioncloud/product-service/pull/2683
 ```
-New — individually his to review. Companion to brand-data-pipeline#1871 (already Approved by marianabassi, still names him as outstanding reviewer). See [`prs/to-review.md`](../../../prs/to-review.md).
+Individually his to review, still untouched. Companion to brand-data-pipeline#1871 (already Approved by marianabassi, still names him as outstanding reviewer). See [`prs/to-review.md`](../../../prs/to-review.md).
 
 ```yaml
 number: 2681
@@ -119,20 +184,7 @@ requested_reviewers: [brand-data-dev (team), dwiajik, abirprantofc]
 updated: 2026-09-14
 url: https://github.com/fashioncloud/product-service/pull/2681
 ```
-New. Not his.
-
-```yaml
-number: 2655
-title: BDD-3161 Add image-reprocessing-collector-job
-author: dwiajik
-state: open
-mergeable_state: mergeable
-review_state: awaiting-first-review
-requested_reviewers: [brand-data-dev (team), abubakarwase, abirprantofc]
-updated: 2026-09-10
-url: https://github.com/fashioncloud/product-service/pull/2655
-```
-Not his. Companion to brand-data-pipeline#1839. No change since last sync.
+Not his. No change.
 
 ```yaml
 number: 2644
@@ -158,7 +210,7 @@ requested_reviewers: [irembbt, physicalattraction, dushansilva]
 updated: 2026-09-08
 url: https://github.com/fashioncloud/product-service/pull/2622
 ```
-Not his — 3 named reviewers, none Kushel. No change.
+Not his. No change.
 
 ```yaml
 number: 2514
@@ -172,7 +224,7 @@ requested_reviewers: [brand-data-dev (team), irembbt, kushel-fc, dwiajik, julsja
 updated: 2026-08-28
 url: https://github.com/fashioncloud/product-service/pull/2514
 ```
-Individually his to review. Draft, already has Changes Requested from someone else, now 18 days unchanged. `mergeable_state` resolved back to mergeable this cycle. See [`prs/to-review.md`](../../../prs/to-review.md).
+Individually his to review. Draft, already has Changes Requested from someone else, now 19 days unchanged. See [`prs/to-review.md`](../../../prs/to-review.md).
 
 ```yaml
 number: 1737

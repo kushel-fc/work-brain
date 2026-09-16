@@ -3,6 +3,17 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2655
+title: BDD-3161 Add image-reprocessing-collector-job
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-09-15
+url: https://github.com/fashioncloud/product-service/pull/2655
+```
+Not his. Merged by dwiajik (self-merge) 08:55:07 UTC. Companion to brand-data-pipeline#1839, also merged same day.
+
+```yaml
 number: 2677
 title: Enable LLOYD Belts on PIPE
 author: alirezaMoazenFashion
