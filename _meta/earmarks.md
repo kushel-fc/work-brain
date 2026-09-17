@@ -8,17 +8,19 @@ Each earmark has a `Trigger signal` (plain-language condition to watch for durin
 
 ## Active
 
+(none active this cycle)
+
+## Triggered / Dismissed
+
 - **Trigger signal**: `brand-data-pipeline#1890` (baldessarini `credential_id` fix) merges
 - **Surface**: Confirm `baldessarini_FEED` actually stops failing — it failed on essentially every hourly run for ~21h straight (09-15/09-16) before this PR was even open, so merging alone isn't proof; check for a clean run afterward.
 - **Related**: [dagster-alerts/log.md](../dagster-alerts/log.md), [prs/mine.md](../prs/mine.md)
-- **Status**: active
+- **Status**: dismissed 2026-09-17 — PR merged 09-16 09:39 UTC; baldessarini_FEED failed once more at 10:18 UTC (most likely deploy lag) then stayed clean through the rest of the ~19h capture window. Reasonably confident this is resolved, but the observation window is short — worth a glance next cycle if it recurs.
 
 - **Trigger signal**: Kushel's "next release" ships (referenced 09-15 for both holyfashion and beheim's `move_images_from_ftp_to_s3_job_sync` failures)
 - **Surface**: Confirm both brands actually stop failing — the promise was made in-thread but both kept failing afterward through the end of this sync's capture window. Also check whether profuomo/royRobson (quiet this cycle) were part of the same release or a coincidence.
 - **Related**: [dagster-alerts/log.md](../dagster-alerts/log.md)
-- **Status**: active
-
-## Triggered / Dismissed
+- **Status**: dismissed 2026-09-17 — resolved via a different path than the earmark was watching for: Kushel added missing fields to 1Password in-thread 09-16 14:47 UTC rather than waiting on a release. Holyfashion and beheim both stayed quiet for the rest of the ~15h capture window afterward. profuomo/royRobson stayed quiet too but were already quiet last cycle, so their status is a coincidence, not confirmation of the same fix.
 
 - **Trigger signal**: `brand-data-pipeline#1825` (pmeLegend `experimental.xmSaxParsing` flag) merges
 - **Surface**: Check whether [BDD-3150](../support/recently-closed.md) (PIPE/Megatron price-file size mismatch) can now close — the SAX-parser support it was waiting on ([#1744](../archive/prs/brand-data-pipeline.md)) already merged 09-08; #1825 was expected to be the last piece.

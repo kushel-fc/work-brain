@@ -633,3 +633,69 @@ closed: 2026-09-03
 url: https://github.com/fashioncloud/product-service/pull/2613
 ```
 Not his — team + 4 named reviewers, Kushel not among them.
+
+```yaml
+number: 2705
+title: "BDD-3161  Add per-manufacturer/feed lookback override, sourced from S3"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-09-16
+url: https://github.com/fashioncloud/product-service/pull/2705
+```
+Individually named Kushel as reviewer — merged same-day he was added, without his review. Companion brand-data-pipeline#1888 also merged.
+
+```yaml
+number: 2709
+title: POST v1/colors/find Subtask 4 - PDS Endpoint implementation to find colors
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-09-16
+url: https://github.com/fashioncloud/product-service/pull/2709
+```
+Not his — team + dwiajik + irembbt.
+
+```yaml
+number: 2708
+title: Scope archive string-limit alert to XML files
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-09-16
+url: https://github.com/fashioncloud/product-service/pull/2708
+```
+Not his. Refinement to the archive string-limit Datadog alert seen in `dagster-alerts/log.md` 09-14/09-15.
+
+```yaml
+number: 2698
+title: authenticStyle brand migration
+author: marianabassi
+state: closed
+merged: false
+closed: 2026-09-16
+url: https://github.com/fashioncloud/product-service/pull/2698
+```
+Closed without merging (not his). Companion brand-data-pipeline#1883 merged same day.
+
+```yaml
+number: 2689
+title: cinque brand migration
+author: abirprantofc
+state: closed
+merged: false
+closed: 2026-09-16
+url: https://github.com/fashioncloud/product-service/pull/2689
+```
+Individually named Kushel as reviewer — closed without merging or being reviewed by him. Companion brand-data-pipeline#1874 merged same day.
+
+```yaml
+number: 2644
+title: Update README.md to reflect repository structure and clarify product data pipeline overview
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-09-16
+url: https://github.com/fashioncloud/product-service/pull/2644
+```
+Not individually his — julsjacinto + abirprantofc named. Merged after CodeRabbit's changes-requested pass cleared.

@@ -3,6 +3,86 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
+timestamp: 2026-09-17T03:51:01Z
+channel: brand-data-dev-alerts
+brand: platform (analytics_trigger_sensor)
+summary: analytics step — essential container exited, exit code 1, once more
+status: recurring
+linked_issue: null
+```
+Same no-owner recurring pattern, yet again. No thread.
+
+```yaml
+timestamp: 2026-09-17T01:21:28Z
+channel: brand-data-dev-alerts
+brand: platform (product-data-service / PDS)
+summary: "PDS stream-publish log failures triggered and recovered within 15 min"
+status: self-resolved
+linked_issue: null
+```
+Same `PUBLISHING_JOB_PD_STREAMS_FAILED` pattern as the paired 09-15 alert, this time without a simultaneous Kinesis-throttling alert. Triggered 01:21:28Z, recovered 01:36:29Z. No thread.
+
+```yaml
+timestamp: 2026-09-16T19:46:17Z
+channel: brand-data-dev-alerts
+brand: superdry
+summary: superdry__FEED__publish_from_map — container exited, exit code 137 (OOM)
+status: active
+linked_issue: null
+```
+New brand/step for this failure shape. Chamindu Rathnaweera pinged abubakarwase in-thread the next morning (09-17 08:59:48 CEST): "can you take a look into this" (eyes reaction). Unresolved as of this sync.
+
+```yaml
+timestamp: 2026-09-16T15:26:27Z
+channel: brand-data-dev-alerts
+brand: platform (PDS / Kinesis)
+summary: PDS Kinesis write throttling — triggered (metric 150), warned, then recovered within ~33 min
+status: self-resolved
+linked_issue: null
+```
+Continuation of the known post-shard-increase-fix recurring issue: triggered 14:54:28Z (metric value 150 — one of the higher spikes seen), warned 15:26:27Z, recovered 15:27:27Z. No thread.
+
+```yaml
+timestamp: 2026-09-16T15:09:59Z
+channel: brand-data-dev-alerts
+brand: zizzi
+summary: zizzi__FEED__trigger_enrichment_from_map — container exited, exit code 1
+status: recurring
+linked_issue: null
+```
+Different step from zizzi's known recurring asset-materialization pattern (last logged 08-24, `download_images`/`extract`/`feed_transform`) but same brand, same no-owner pattern. No thread.
+
+```yaml
+timestamp: 2026-09-16T14:38:51Z
+channel: brand-data-dev-alerts
+brand: holyfashion
+summary: "move_images_from_ftp_to_s3_job_sync failed once more, then Kushel fixed the actual root cause"
+status: self-resolved
+linked_issue: null
+```
+Continuation of the four-brand spread (holyfashion/beheim/profuomo/royRobson). This run failed 14:38:51Z; Kushel replied in-thread 14:47:36Z: "Added the missing fields to 1PW" — a direct credential/config fix, not the vague "next release" commitment from 09-15. No further holyfashion (or beheim) failures through the rest of this sync's capture window (~15h). Earmark dismissed — see `_meta/earmarks.md`.
+
+```yaml
+timestamp: 2026-09-16T13:57:10Z
+channel: brand-data-dev-alerts
+brand: gardeur
+summary: "gardeur/FEED2 — 11 asset materializations failed (download_images, feed_transform, global_transform, etc.)"
+status: active
+linked_issue: null
+```
+New brand for this failure signature, single occurrence so far. No thread, no reaction.
+
+```yaml
+timestamp: 2026-09-16T10:18:43Z
+channel: brand-data-dev-alerts
+brand: baldessarini
+summary: "baldessarini_FEED failed once more ~40 min after Kushel's credential fix merged, then stopped"
+status: self-resolved
+linked_issue: null
+```
+`baldessarini_FEED_cron_schedule` fired again at 10:18:43Z — after [brand-data-pipeline#1890](../sources/github/brand-data-pipeline/open-prs.md) merged at 09:39:00Z, most likely deploy lag rather than the fix not working. No further baldessarini failures through the rest of this sync's ~19h capture window. Earmark dismissed — see `_meta/earmarks.md`. Closes out the 22-failed-run incident flagged last cycle.
+
+```yaml
 timestamp: 2026-09-16T06:38:45Z
 channel: brand-data-dev-alerts
 brand: holyfashion, beheim

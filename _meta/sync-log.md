@@ -2,6 +2,16 @@
 
 One entry per sync run. Prune entries older than ~30 days.
 
+## 2026-09-17 (08:43 UTC)
+
+- **Both active earmarks resolved and dismissed.** His baldessarini_FEED fix ([brand-data-pipeline#1890](../prs/mine.md)) merged 09-16 09:39 UTC — one more failure ~40 min later (deploy lag), then clean through the rest of the capture window. holyfashion/beheim's move_images failures resolved too, but via a direct 1Password credential fix (09-16 14:47 UTC) rather than the "next release" he'd promised — both brands quiet afterward.
+- **Linear: workload continued shifting off Kushel onto Syed Muhammad Abu Bakar Wase (abubakarwase)** — this time pulling from started work, not just backlog. BDD-2539 (Bilder-API render limit, In Review) and BDD-3189 (sketch tag info, In Progress) both reassigned away from Kushel mid-flight. BDD-2518 (Buffer→Stream tech debt) unassigned entirely, moved to On-Hold. Separately, abubakarwase picked up BDD-3244 and BDD-3109 from Triage and shipped BDD-3228 (all previously unassigned). Six items moved off Kushel's tracked lists in one cycle.
+- **Linear: Video Delivery project got its first real movement.** All four Slice 3.2 tickets (BDD-3223/3205/3191/3206) advanced a stage. BDD-3251 and BDD-3246 both moved to In Review.
+- **Linear: BDD-3245 transferred to the Replenishment team** (now RPL-2334), same destination (oleh.polishchuk) as the BDD-3235/RPL-2280 transfer. BDD-3258 moved out of Triage into general backlog, still unassigned. Two new Triage tickets (BDD-3268, BDD-3266); BDD-3268 may be asking for the same fix that would resolve the kultivate/blackstone/falke 3h-run-time-limit Dagster pattern.
+- **GitHub: PR counts dropped sharply** — product-service 18→14, brand-data-pipeline 22→16 — as the brand-migration wave and the lookback-override feature (product-service#2705/brand-data-pipeline#1888, individually named Kushel) cleared. He now has zero open PRs of his own again. Review queue down to 5 (was 6): one new (#2723, documentation-only), #1878 and #1871 both flipped to Approved and are now waiting on his sign-off specifically.
+- **Slack: two new Dagster issues, neither his yet** — superdry_FEED OOM on publish_from_map (Chamindu pinged abubakarwase), gardeur/FEED2 multi-asset failure (single occurrence). zizzi_FEED failed on a new step, different from its known recurring pattern.
+- Notified: no — nothing crossed the notification bar (no deadline passed, no flip to conflict/Changes-Requested on his own work since he has none open, no new Urgent unassigned ticket, and both Dagster resolutions moved *toward* resolved rather than recurring after self-resolving).
+
 ## 2026-09-16 (08:35 UTC)
 
 - **BDD-3263 (last cycle's Urgent security ticket) resolved** — Done, well ahead of its 09-17 deadline.

@@ -346,3 +346,69 @@ closed: 2026-09-03
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1789
 ```
 Not his — routine production release.
+
+```yaml
+number: 1890
+title: Update credential_id for baldessarini FEED job
+author: kushel-fc
+state: closed
+merged: true
+closed: 2026-09-16
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1890
+```
+Kushel's own PR — same-day fix for the baldessarini Dagster incident. Merged 09-16T09:39 UTC. Baldessarini_FEED failed once more shortly after merge (10:18 UTC, likely deploy lag) then stayed quiet through the rest of the sync window — see `_meta/earmarks.md` and `dagster-alerts/log.md`. He now has zero open PRs.
+
+```yaml
+number: 1888
+title: Add per-brand image_reprocessing.lookback_days config + S3 sync
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-09-16
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1888
+```
+Not his (companion product-service#2705 named him). Both halves of the lookback-override feature merged same day.
+
+```yaml
+number: 1889
+title: images
+author: Busra040
+state: closed
+merged: true
+closed: 2026-09-16
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1889
+```
+Not his — no reviewers were ever requested.
+
+```yaml
+number: 1883
+title: authenticStyle brand migration
+author: marianabassi
+state: closed
+merged: true
+closed: 2026-09-16
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1883
+```
+Not his. Companion product-service#2698 closed without merging.
+
+```yaml
+number: 1882
+title: vanDeVelde brand migration
+author: marianabassi
+state: closed
+merged: true
+closed: 2026-09-16
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1882
+```
+Not his. Companion product-service#2697 still open.
+
+```yaml
+number: 1874
+title: cinque brand migration
+author: abirprantofc
+state: closed
+merged: true
+closed: 2026-09-16
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1874
+```
+Not his (companion product-service#2689 named Kushel and closed without merging). This half merged.

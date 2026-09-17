@@ -37,3 +37,15 @@ transferred: 2026-09-09
 url: https://linear.app/fashioncloud/issue/RPL-2280/clara-orders-using-dropshipping-feature-fd-675743
 ```
 Was sitting unassigned in BDD Triage since 2026-09-07; moved to Replenishment and already picked up there (Todo → In Review same day).
+
+```yaml
+id: BDD-3245 (now RPL-2334)
+title: Articles appear under two brands - Bestseller (FD: 676293)
+priority: Medium
+transferred_to: Replenishment
+new_assignee: oleh.polishchuk@fashion.cloud
+status_at_transfer: Todo
+transferred: 2026-09-16
+url: https://linear.app/fashioncloud/issue/RPL-2334/articles-appear-under-two-brands-bestseller-fd-676293
+```
+Was sitting unassigned in BDD Triage since 2026-09-10, untouched by BDD; moved to Replenishment and picked up there by oleh.polishchuk — the same person now handling both this and BDD-3241/RPL-2280, a repeat destination for this alert shape.

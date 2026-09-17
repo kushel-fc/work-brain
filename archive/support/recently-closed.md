@@ -3,6 +3,15 @@
 Older entries rolled off `support/recently-closed.md`'s ~25-item cap. Never deleted.
 
 ```yaml
+id: BDD-2530
+title: PIPE Global transform doesn't catch feed-transform mistakes on string attributes (FD: 645951)
+priority: Low
+closed: 2026-09-04
+url: https://linear.app/fashioncloud/issue/BDD-2530/pipe-global-transform-doesnt-catch-feed-transform-mistakes-on-string
+```
+Fix had already shipped for Secrid pending release; now fully Deployed. Was unassigned in `support/open.md`.
+
+```yaml
 id: BDD-3089
 title: Process images that are taller than its wide
 priority: No priority
