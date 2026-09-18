@@ -3,6 +3,15 @@
 Capped at ~25 most recent. Older entries move to `../archive/support/`. Sourced from team BDD Done/Deployed issues carrying an FD reference.
 
 ```yaml
+id: BDD-3237
+title: "PIPE: Superdry - deleting one image possible? (FD: 675898)"
+priority: Low
+closed: 2026-09-17
+url: https://linear.app/fashioncloud/issue/BDD-3237/pipe-superdry-deleting-one-image-possible-fd-675898
+```
+Shipped this cycle, In Review → Deployed. No change noted in the ticket beyond the status flip.
+
+```yaml
 id: BDD-3228
 title: Removing model images - Fynch Hatton (FD: 675667)
 priority: Medium
@@ -218,13 +227,4 @@ url: https://linear.app/fashioncloud/issue/BDD-3152/item-deletion-pure-path-fd-6
 ```
 Part of the 09-04 bulk Triage-clearing assignment — shipped three days after landing on him.
 
-```yaml
-id: BDD-3107
-title: Blue Seven - AI generated image metadata is lost when receiving images via B2X (Intex) (FD: 673177)
-priority: Medium
-closed: 2026-09-04
-url: https://linear.app/fashioncloud/issue/BDD-3107/blue-seven-ai-generated-image-metadata-is-lost-when-receiving-images
-```
-Was sitting unassigned in `support/open.md`, flagged last cycle for new activity — picked up and resolved same window as the 09-04 bulk Triage assignment.
-
-Older entries (BDD-2530, BDD-3089, BDD-3155, BDD-2957, BDD-3167, BDD-3154, BDD-3103, BDD-3112, BDD-3111, BDD-3115, BDD-3130, BDD-3105, BDD-3114, BDD-3135, BDD-3116, BDD-3127, BDD-3131, BDD-3133, BDD-3138, BDD-3134, BDD-3076, BDD-3113, BDD-3136, BDD-2945) rolled off the ~25-item cap across the last six cycles — see [`archive/support/recently-closed.md`](../archive/support/recently-closed.md).
+Older entries (BDD-2530, BDD-3089, BDD-3155, BDD-2957, BDD-3167, BDD-3154, BDD-3103, BDD-3112, BDD-3111, BDD-3115, BDD-3130, BDD-3105, BDD-3114, BDD-3135, BDD-3116, BDD-3127, BDD-3131, BDD-3133, BDD-3138, BDD-3134, BDD-3076, BDD-3113, BDD-3136, BDD-2945, BDD-3107) rolled off the ~25-item cap across the last seven cycles — see [`archive/support/recently-closed.md`](../archive/support/recently-closed.md).

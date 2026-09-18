@@ -412,3 +412,14 @@ closed: 2026-09-16
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1874
 ```
 Not his (companion product-service#2689 named Kushel and closed without merging). This half merged.
+
+```yaml
+number: 1825
+title: "pmeLegend: Add `experimental.xmSaxParsing` flag to `feed_config.json`"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-09-17
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1825
+```
+Not his. Merged 09-17 10:58 UTC after weeks open. The earmark tracking this PR was already dismissed as moot on 09-15 (BDD-3150 shipped via another path) — recorded here for completeness now that it's actually merged. See `_meta/earmarks.md`.

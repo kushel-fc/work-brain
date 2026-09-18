@@ -2,7 +2,74 @@
 
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
-Two new PRs this cycle (#2723, #2722, both from dwiajik — PD Kinesis AsyncAPI docs), six dropped off — four merged (#2709, #2708, #2705, #2644) and two closed without merging (#2698, #2689). Net count down from 18 to 14. **#2705** (lookback override, named Kushel) merged 09-16 14:37 — see `prs/to-review.md` and `today.md`. New PR **#2723** individually names Kushel alongside alirezaMoazenFashion.
+Five new PRs this cycle (#2738, #2737, #2735, #2732, #2728), two dropped off — #2722 merged, #2697 (vanDeVelde) closed without merging. Net count up from 14 to 17. **#2732** individually names Kushel (alongside dwiajik), already Approved. **#2723** flipped from awaiting-first-review to Changes Requested — see `prs/to-review.md`.
+
+```yaml
+number: 2738
+title: "BDD-3277 PoC: relay PDS style stream into per-consumer SQS queues"
+author: dwiajik
+state: open
+draft: true
+mergeable_state: mergeable
+review_state: awaiting-first-review
+requested_reviewers: []
+updated: 2026-09-18
+url: https://github.com/fashioncloud/product-service/pull/2738
+```
+New. Draft, no reviewers requested. Not his.
+
+```yaml
+number: 2737
+title: "feat(image-downloading): resolve FTP/SFTP credentials from 1Password"
+author: dwiajik
+state: open
+draft: true
+mergeable_state: mergeable
+review_state: changes-requested
+requested_reviewers: []
+updated: 2026-09-18
+url: https://github.com/fashioncloud/product-service/pull/2737
+```
+New. Draft, already Changes Requested, no reviewers requested. Not his.
+
+```yaml
+number: 2735
+title: Enhance size variant handling by adding articleNumber to relevant payloads and tests
+author: Chamindu36
+state: open
+mergeable_state: mergeable
+review_state: awaiting-first-review
+requested_reviewers: [brand-data-dev (team), abubakarwase, alirezaMoazenFashion]
+updated: 2026-09-18
+url: https://github.com/fashioncloud/product-service/pull/2735
+```
+New. Not his — team + abubakarwase + alirezaMoazenFashion named, not him individually.
+
+```yaml
+number: 2732
+title: "otto-image-upload: ECS Fargate scheduled task skeleton (Phase 1)"
+author: dushansilva
+state: open
+mergeable_state: mergeable
+review_state: approved
+requested_reviewers: [dwiajik, kushel-fc]
+updated: 2026-09-18
+url: https://github.com/fashioncloud/product-service/pull/2732
+```
+New — individually his to review, alongside dwiajik. Already Approved by someone else. See [`prs/to-review.md`](../../../prs/to-review.md).
+
+```yaml
+number: 2728
+title: add open api
+author: irembbt
+state: open
+mergeable_state: mergeable
+review_state: changes-requested
+requested_reviewers: [brand-data-dev (team), dwiajik, abirprantofc]
+updated: 2026-09-17
+url: https://github.com/fashioncloud/product-service/pull/2728
+```
+New. Not his.
 
 ```yaml
 number: 2723
@@ -10,38 +77,12 @@ title: "feat(event-definitions): document the PD Kinesis stream events in the As
 author: dwiajik
 state: open
 mergeable_state: mergeable
-review_state: awaiting-first-review
+review_state: changes-requested
 requested_reviewers: [kushel-fc, alirezaMoazenFashion]
-updated: 2026-09-17
+updated: 2026-09-18
 url: https://github.com/fashioncloud/product-service/pull/2723
 ```
-New — individually his to review. Documentation-only PR for the PD Kinesis streams (same streams behind the recurring Kinesis-throttling Dagster alerts). See [`prs/to-review.md`](../../../prs/to-review.md).
-
-```yaml
-number: 2722
-title: "fix(event-definitions): publish the correct event bus in the AsyncAPI"
-author: dwiajik
-state: open
-mergeable_state: mergeable
-review_state: approved
-requested_reviewers: [julsjacinto]
-updated: 2026-09-17
-url: https://github.com/fashioncloud/product-service/pull/2722
-```
-New. Not his — already Approved, companion doc fix to #2723.
-
-```yaml
-number: 2697
-title: vanDeVelde brand migration
-author: marianabassi
-state: open
-mergeable_state: unknown
-review_state: awaiting-first-review
-requested_reviewers: [brand-data-dev (team)]
-updated: 2026-09-15
-url: https://github.com/fashioncloud/product-service/pull/2697
-```
-Not his. `mergeable_state` flapped mergeable → unknown. No other change.
+Individually his to review. `review_state` flipped awaiting-first-review → changes-requested this cycle — someone else left comments before he got to it. See [`prs/to-review.md`](../../../prs/to-review.md).
 
 ```yaml
 number: 2694
@@ -61,13 +102,13 @@ number: 2693
 title: Add blueSeven FEED2 mapping rules
 author: alirezaMoazenFashion
 state: open
-mergeable_state: unknown
+mergeable_state: mergeable
 review_state: awaiting-first-review
 requested_reviewers: [brand-data-dev (team), abubakarwase, abirprantofc]
 updated: 2026-09-14
 url: https://github.com/fashioncloud/product-service/pull/2693
 ```
-Not his. Companion to brand-data-pipeline#1880. `mergeable_state` flapped mergeable → unknown.
+Not his. Companion to brand-data-pipeline#1880. `mergeable_state` flapped back to mergeable.
 
 ```yaml
 number: 2692
@@ -113,13 +154,13 @@ number: 2684
 title: dorisStreich - FEED - INTEX mapping rules
 author: alirezaMoazenFashion
 state: open
-mergeable_state: unknown
+mergeable_state: mergeable
 review_state: awaiting-first-review
 requested_reviewers: [brand-data-dev (team), dwiajik, abubakarwase]
 updated: 2026-09-14
 url: https://github.com/fashioncloud/product-service/pull/2684
 ```
-Not his. `mergeable_state` flapped mergeable → unknown.
+Not his. `mergeable_state` flapped back to mergeable.
 
 ```yaml
 number: 2683
@@ -132,7 +173,7 @@ requested_reviewers: [brand-data-dev (team), kushel-fc, alirezaMoazenFashion]
 updated: 2026-09-14
 url: https://github.com/fashioncloud/product-service/pull/2683
 ```
-Individually his to review, still untouched, now 3 days stale. Companion to brand-data-pipeline#1871 (already Approved by marianabassi, still names him as outstanding reviewer). `mergeable_state` flapped mergeable → unknown. See [`prs/to-review.md`](../../../prs/to-review.md).
+Individually his to review, still untouched, now 4 days stale. Companion to brand-data-pipeline#1871 (already Approved by marianabassi, still names him as outstanding reviewer). See [`prs/to-review.md`](../../../prs/to-review.md).
 
 ```yaml
 number: 2681
@@ -172,7 +213,7 @@ requested_reviewers: [brand-data-dev (team), irembbt, kushel-fc, dwiajik, julsja
 updated: 2026-08-28
 url: https://github.com/fashioncloud/product-service/pull/2514
 ```
-Individually his to review. Draft, already has Changes Requested from someone else, now 20 days unchanged. See [`prs/to-review.md`](../../../prs/to-review.md).
+Individually his to review. Draft, already has Changes Requested from someone else, now 21 days unchanged. See [`prs/to-review.md`](../../../prs/to-review.md).
 
 ```yaml
 number: 1737

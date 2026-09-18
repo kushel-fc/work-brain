@@ -699,3 +699,25 @@ closed: 2026-09-16
 url: https://github.com/fashioncloud/product-service/pull/2644
 ```
 Not individually his — julsjacinto + abirprantofc named. Merged after CodeRabbit's changes-requested pass cleared.
+
+```yaml
+number: 2722
+title: "fix(event-definitions): publish the correct event bus in the AsyncAPI"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-09-17
+url: https://github.com/fashioncloud/product-service/pull/2722
+```
+Not his — julsjacinto named. Merged, companion doc fix to #2723.
+
+```yaml
+number: 2697
+title: vanDeVelde brand migration
+author: marianabassi
+state: closed
+merged: false
+closed: 2026-09-17
+url: https://github.com/fashioncloud/product-service/pull/2697
+```
+Not his — team-only request. Closed without merging. Companion brand-data-pipeline#1882 merged 09-16. Same day, a separate fix PR (brand-data-pipeline#1912, "Fix vanDeVelde reversed season labels") appeared — possibly related, possibly why this one got closed in favor of a redo; not confirmed.

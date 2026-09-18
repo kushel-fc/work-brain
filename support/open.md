@@ -2,7 +2,7 @@
 
 FD-sourced/support-shaped tickets, by priority then age (oldest first within each tier). Sourced from the team BDD Triage view: https://linear.app/fashioncloud/team/BDD/triage. Populated on sync. Full raw Triage list lives in [`sources/linear/triage.md`](../sources/linear/triage.md).
 
-10 items now (was 13) — BDD-3244 and BDD-3109 both individually picked up by abubakarwase, BDD-3258 moved to general backlog (unassigned, no longer Triage), BDD-3245 transferred to the Replenishment team (now RPL-2334, see `archive/linear/team-transfers.md`). Two new: BDD-3266 (Medium), BDD-3268 (Low). Still just 1 High.
+9 items now (was 10) — BDD-3259 and BDD-3238 both individually picked up by abubakarwase this cycle (now In Progress / In Review, off Triage) — continuing the same workload-shift pattern flagged in recent cycles. One new: BDD-3278 (Low). Still just 1 High.
 
 ## High
 
@@ -13,7 +13,7 @@ priority: High
 updated: 2026-09-14
 url: https://linear.app/fashioncloud/issue/BDD-3248/images-uploading-by-api-stout-jeans-fd-676401
 ```
-No change since last sync. Aging a fourth cycle now, sole High-priority item.
+No change since last sync. Aging a fifth cycle now, sole High-priority item.
 
 ## Medium
 
@@ -25,24 +25,6 @@ updated: 2026-08-20
 url: https://linear.app/fashioncloud/issue/BDD-3043/incorrect-delimiter-not-shown-as-error-fd-672084
 ```
 PIPE silently mis-parses on a delimiter mismatch instead of erroring. Oldest Medium item, still untouched.
-
-```yaml
-id: BDD-3238
-title: Produktbilder (FD: 676044)
-priority: Medium
-updated: 2026-09-09
-url: https://linear.app/fashioncloud/issue/BDD-3238/produktbilder-fd-676044
-```
-No change since last sync.
-
-```yaml
-id: BDD-3259
-title: "AW: Frage zu Artikelpreis (FD: 676723)"
-priority: Medium
-updated: 2026-09-14
-url: https://linear.app/fashioncloud/issue/BDD-3259/aw-frage-zu-artikelpreis-fd-676723
-```
-No change since last sync.
 
 ```yaml
 id: BDD-3266
@@ -98,4 +80,13 @@ priority: Low
 updated: 2026-09-16
 url: https://linear.app/fashioncloud/issue/BDD-3268/update-resource-size-for-integration-which-run-for-longer-than-60
 ```
-New. Possibly related to the run-time-limit Dagster alerts (kultivate/blackstone/falke) — worth a look at whether this ticket is asking for the same fix.
+Possibly related to the run-time-limit Dagster alerts — now even more relevant given this cycle's mosMosh/vanDeVelde run-time-limit spree, see `dagster-alerts/log.md`.
+
+```yaml
+id: BDD-3278
+title: "PIPE: withblack ean deletion (FD: 677342)"
+priority: Low
+updated: 2026-09-18
+url: https://linear.app/fashioncloud/issue/BDD-3278/pipe-withblack-ean-deletion-fd-677342
+```
+New.

@@ -3,6 +3,116 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
+timestamp: 2026-09-18T06:03:29Z
+channel: brand-data-dev-alerts
+brand: platform (Datadog log index)
+summary: Log index hit warning threshold then daily quota a fifth time, self-resolved on quota reset
+status: recurring
+linked_issue: null
+```
+Same `product-service-logs-index-` pattern, fifth occurrence now (triggered 2026-09-17T11:14:30Z, daily quota reached 13:27:26Z, recovered 06:03:29Z on quota reset). Still no permanent fix in place.
+
+```yaml
+timestamp: 2026-09-17T23:08:38Z
+channel: brand-data-dev-alerts
+brand: mosMosh
+summary: "mosMosh__FEED image-processing OOM spree (10 occurrences) plus two run-time-limit breaches on the same sync job"
+status: active
+linked_issue: null
+```
+New brand for this failure shape. `process_images`/`process_images_sync` (exit code 137, OOM) fired 10 times between 2026-09-17T10:58:25Z and 23:08:38Z — 6 on the ad-hoc `process_images` step, 4 on the cron-scheduled `mosMosh_FEED_cron_image_sync_schedule` → `process_images_sync`. Two separate "exceeded run time limit of 3 hours" alerts on `mosMosh_FEED_sync_images` (started 07:57 and 08:15 UTC) look like the same underlying job getting OOM-killed and retried past its time budget rather than two distinct incidents. No thread, no reaction, unresolved as of this sync — possibly the pattern [BDD-3268](../support/open.md) is asking to fix (bumping resource size for long-running integrations).
+
+```yaml
+timestamp: 2026-09-17T21:24:28Z
+channel: brand-data-dev-alerts
+brand: platform (PDS / Kinesis)
+summary: Two more PDS Kinesis-throttling / stream-publish-failure flares, one hitting a new high (metric 257)
+status: self-resolved
+linked_issue: null
+```
+Continuation of the known post-shard-increase-fix recurring issue, two separate flares this window: 19:14:28Z→19:33:28Z (throttling peaked at metric 25, one "eyes" reaction) and 21:03:30Z→21:24:28Z (publish-failure metric hit 257 — the highest value seen in this pattern yet, well above the previous high of 150). Both self-resolved within ~20 minutes. No thread beyond reactions.
+
+```yaml
+timestamp: 2026-09-17T18:49:44Z
+channel: brand-data-dev-alerts
+brand: platform (analytics_trigger_sensor)
+summary: analytics step — essential container exited, exit code 1, once more
+status: recurring
+linked_issue: null
+```
+Same no-owner recurring pattern as previous cycles. No thread.
+
+```yaml
+timestamp: 2026-09-17T17:57:12Z
+channel: brand-data-dev-alerts
+brand: platform (process_enrichment_flow)
+summary: process_enrichment_flow run exceeded 3h time limit (enrichment_file_sensor)
+status: active
+linked_issue: null
+```
+New job for the run-time-limit pattern, distinct from mosMosh's. Started 2026-09-17T12:56 UTC. No thread, no reaction, unresolved.
+
+```yaml
+timestamp: 2026-09-17T16:19:13Z
+channel: brand-data-dev-alerts
+brand: garcia, riani
+summary: "trigger_enrichment_from_map failing on both brands (4 occurrences) — Dushan looking into it"
+status: active
+linked_issue: null
+```
+garcia (exit 137, OOM) fired twice (16:00:38Z, 16:19:13Z) and riani (exit code 1) fired twice (15:35:30Z, 16:11:10Z), all on the same `trigger_enrichment_from_map` step, 15:35Z–16:19Z. Dushan Silva posted in-channel 16:05:11Z: "will check trigger enrichment" — has an owner now, not yet confirmed resolved.
+
+```yaml
+timestamp: 2026-09-17T15:27:28Z
+channel: brand-data-dev-alerts
+brand: fuchsSchmitt
+summary: fuchsSchmitt__FEED__process_images_sync — container exited, exit code 137 (OOM)
+status: active
+linked_issue: null
+```
+New brand for this failure signature, single occurrence so far. No thread or reaction visible.
+
+```yaml
+timestamp: 2026-09-17T12:58:48Z
+channel: brand-data-dev-alerts
+brand: ara
+summary: "ara__PRICAT__process_images — 7 OOM exits (exit code 137) in a 16-minute window"
+status: active
+linked_issue: null
+```
+New brand for this failure shape. Fired seven times between 12:42:43Z and 12:58:48Z, all the same step. No thread or reaction visible, unresolved as of this sync.
+
+```yaml
+timestamp: 2026-09-17T12:43:44Z
+channel: brand-data-dev-alerts
+brand: ammann
+summary: ammann__FEED__process_images — container exited, exit code 137 (OOM)
+status: active
+linked_issue: null
+```
+Single occurrence, distinct from the earlier 08-20 `process_images_sync` OOM and the 08-25 FTP move-images failure for the same brand. No thread or reaction.
+
+```yaml
+timestamp: 2026-09-17T12:42:43Z
+channel: brand-data-dev-alerts
+brand: platform (collect_reprocessing_candidates)
+summary: collect_reprocessing_candidates — essential container exited, exit code 1
+status: active
+linked_issue: null
+```
+New job/step for this failure list, single occurrence. No thread or reaction.
+
+```yaml
+timestamp: 2026-09-17T12:24:08Z
+channel: brand-data-dev-alerts
+brand: vanDeVelde
+summary: ona__vanDeVelde_FEED run exceeded 3h time limit
+status: active
+linked_issue: null
+```
+Started 09:23 UTC. Same day, product-service#2697 (vanDeVelde brand migration) closed without merging and a new fix PR landed (brand-data-pipeline#1912, "Fix vanDeVelde reversed season labels") — possibly related to this run dragging past its limit, not confirmed.
+
+```yaml
 timestamp: 2026-09-17T03:51:01Z
 channel: brand-data-dev-alerts
 brand: platform (analytics_trigger_sensor)

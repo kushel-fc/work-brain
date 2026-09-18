@@ -2,7 +2,21 @@
 
 Full raw Triage backlog for team BDD, sourced from https://linear.app/fashioncloud/team/BDD/triage. Populated on sync. See `support/open.md` for the FD-referenced/support-shaped curated subset.
 
-**09-17 sync:** Down to 10 items (was 13 — or 12 by direct count, see `_meta/sync-log.md`). Two new: BDD-3268 (Low, integration resource-size), BDD-3266 (Medium, Brax AVIF support). Four left: BDD-3244 and BDD-3109 individually picked up by abubakarwase (now In Progress / Ready To Start, off Triage); BDD-3258 moved to general backlog (To Do) still unassigned, no longer Triage-shaped; BDD-3245 transferred to the Replenishment team as RPL-2334 — see `archive/linear/team-transfers.md`.
+**09-18 sync:** Down to 9 items (was 10). One new: BDD-3278 (Low, withblack EAN deletion). Two left, both picked up by Syed Muhammad Abu Bakar Wase (abubakarwase) — continuing the workload-shift pattern from prior cycles: BDD-3259 (now In Progress) and BDD-3238 (now In Review).
+
+---
+
+```yaml
+id: BDD-3278
+title: "PIPE: withblack ean deletion (FD: 677342)"
+priority: Low
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-09-18
+url: https://linear.app/fashioncloud/issue/BDD-3278/pipe-withblack-ean-deletion-fd-677342
+```
+New.
 
 ---
 
@@ -44,7 +58,7 @@ team: BDD
 updated: 2026-09-16
 url: https://linear.app/fashioncloud/issue/BDD-3266/brax-avif-support-images-pd-fd-677049
 ```
-New.
+No change since last sync.
 
 ---
 
@@ -77,20 +91,6 @@ Unusual: carries an assignee already while still in Triage status. Not treated a
 ---
 
 ```yaml
-id: BDD-3259
-title: "AW: Frage zu Artikelpreis (FD: 676723)"
-priority: Medium
-status: Triage
-assignee: unassigned
-team: BDD
-updated: 2026-09-14
-url: https://linear.app/fashioncloud/issue/BDD-3259/aw-frage-zu-artikelpreis-fd-676723
-```
-No change since last sync.
-
----
-
-```yaml
 id: BDD-3248
 title: "Images uploading by API | Stout! Jeans (FD: 676401)"
 priority: High
@@ -100,21 +100,7 @@ team: BDD
 updated: 2026-09-14
 url: https://linear.app/fashioncloud/issue/BDD-3248/images-uploading-by-api-stout-jeans-fd-676401
 ```
-No change since last sync. Aging a fourth cycle now, still the only High-priority unassigned item.
-
----
-
-```yaml
-id: BDD-3238
-title: Produktbilder (FD: 676044)
-priority: Medium
-status: Triage
-assignee: unassigned
-team: BDD
-updated: 2026-09-09
-url: https://linear.app/fashioncloud/issue/BDD-3238/produktbilder-fd-676044
-```
-No change since last sync.
+No change since last sync. Aging a fifth cycle now, still the only High-priority unassigned item.
 
 ---
 

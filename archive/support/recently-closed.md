@@ -200,3 +200,12 @@ priority: Medium
 closed: 2026-08-27
 url: https://linear.app/fashioncloud/issue/BDD-2945/differences-in-platform-and-ow-fd-659386
 ```
+
+```yaml
+id: BDD-3107
+title: Blue Seven - AI generated image metadata is lost when receiving images via B2X (Intex) (FD: 673177)
+priority: Medium
+closed: 2026-09-04
+url: https://linear.app/fashioncloud/issue/BDD-3107/blue-seven-ai-generated-image-metadata-is-lost-when-receiving-images
+```
+Was sitting unassigned in `support/open.md`, flagged for new activity — picked up and resolved same window as the 09-04 bulk Triage assignment.

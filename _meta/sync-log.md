@@ -2,6 +2,14 @@
 
 One entry per sync run. Prune entries older than ~30 days.
 
+## 2026-09-18 (08:50 UTC)
+
+- Linear: BDD-3237 (Superdry deleting one image) shipped — In Review → Deployed. Triage down to 9 (was 10): BDD-3259 and BDD-3238 both individually picked up by abubakarwase, continuing the workload-shift pattern from prior cycles; one new (BDD-3278, Low, withblack EAN deletion).
+- GitHub: product-service up 14→17 (5 new: #2738/#2737/#2735/#2732/#2728; 2 dropped — #2722 merged, #2697 vanDeVelde closed without merging). brand-data-pipeline up 16→20 (5 new: #1919/#1918/#1917/#1912/#1910; #1825 pmeLegend SAX-parsing flag finally merged, closing the loop on the earmark dismissed 09-15). Review queue up 5→6: new PR #2732 names him (already Approved); #2723 flipped from awaiting-first-review to Changes Requested. Still zero open PRs of his own.
+- **New, unowned Dagster pattern — the most consequential finding this cycle**: `mosMosh__FEED` hit 10 OOM kills (exit 137) plus 2 run-time-limit breaches on the same sync job over ~12h; `ara__PRICAT__process_images` OOM'd 7 times in 16 minutes. Several other one-off OOM/failure signatures with no owner (fuchsSchmitt, ammann, collect_reprocessing_candidates); garcia/riani trigger_enrichment_from_map failures do have an owner (Dushan Silva). PDS Kinesis publish-failure flare hit a new high (metric 257, prior max 150), self-resolved as usual. Datadog log-index quota recurred a fifth time.
+- vanDeVelde brand migration PR (product-service#2697) closed without merging same day a "reversed season labels" fix PR landed (brand-data-pipeline#1912) and `ona__vanDeVelde_FEED` hit a run-time-limit alert — possibly related, not confirmed.
+- Notified: no — nothing crossed the notification bar (no deadline newly reached, no flip to conflict/Changes-Requested on his own work, no new Urgent unassigned ticket, no Dagster alert recurring after self-resolving in the strict sense — the mosMosh/ara spree is new-and-escalating rather than a flip back to failing, so treated as a strong `today.md`/`this-week.md` callout instead).
+
 ## 2026-09-17 (08:43 UTC)
 
 - **Both active earmarks resolved and dismissed.** His baldessarini_FEED fix ([brand-data-pipeline#1890](../prs/mine.md)) merged 09-16 09:39 UTC — one more failure ~40 min later (deploy lag), then clean through the rest of the capture window. holyfashion/beheim's move_images failures resolved too, but via a direct 1Password credential fix (09-16 14:47 UTC) rather than the "next release" he'd promised — both brands quiet afterward.

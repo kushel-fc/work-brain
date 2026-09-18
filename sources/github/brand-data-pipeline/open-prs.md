@@ -2,7 +2,73 @@
 
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
-Zero new PRs this cycle. Six dropped off, all merged: #1890 (his own baldessarini credential fix), #1889, #1888 (lookback-override pair with product-service#2705), #1883, #1882, #1874. Net count down from 22 to 16. He now has zero open PRs of his own again.
+Five new PRs this cycle (#1919, #1918, #1917, #1912, #1910), one dropped off — #1825 (pmeLegend SAX-parsing flag) finally merged, closing out the long-tracked earmark PR (moot since BDD-3150 shipped via another path — see `_meta/earmarks.md`). Net count up from 16 to 20.
+
+```yaml
+number: 1919
+title: "feat(image-source): introduce image_source.credential_id for all image flows"
+author: dwiajik
+state: open
+draft: true
+mergeable_state: mergeable
+review_state: awaiting-first-review
+requested_reviewers: []
+updated: 2026-09-18
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1919
+```
+New. Draft, no reviewers requested. Not his. Likely the pipeline-side companion to product-service#2737 (FTP/SFTP credentials from 1Password).
+
+```yaml
+number: 1918
+title: Support/mustang
+author: Busra040
+state: open
+mergeable_state: mergeable
+review_state: awaiting-first-review
+requested_reviewers: []
+updated: 2026-09-18
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1918
+```
+New. Not his, no reviewers requested.
+
+```yaml
+number: 1917
+title: Fix Numph delivery scope
+author: hakansoylu1
+state: open
+mergeable_state: unknown
+review_state: approved
+requested_reviewers: []
+updated: 2026-09-18
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1917
+```
+New. Not his. Already Approved.
+
+```yaml
+number: 1912
+title: Fix vanDeVelde reversed season labels
+author: FCMachineUser
+state: open
+mergeable_state: mergeable
+review_state: changes-requested
+requested_reviewers: [irembbt, julsjacinto]
+updated: 2026-09-18
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1912
+```
+New. Not his. Landed same day product-service#2697 (vanDeVelde brand migration) closed without merging — possibly related, not confirmed. See `archive/prs/product-service.md`.
+
+```yaml
+number: 1910
+title: Enable experimental SAX XML parsing for falke, fraas, meierLederwaren and gstar
+author: dwiajik
+state: open
+mergeable_state: unknown
+review_state: awaiting-first-review
+requested_reviewers: []
+updated: 2026-09-18
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1910
+```
+New. Not his, no reviewers requested. Broader rollout of the SAX-parsing flag that #1825 (below, now merged) introduced for pmeLegend.
 
 ```yaml
 number: 1880
@@ -107,19 +173,6 @@ updated: 2026-09-16
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1869
 ```
 Not his. `review_state` flipped awaiting-first-review → approved.
-
-```yaml
-number: 1825
-title: "pmeLegend: Add `experimental.xmSaxParsing` flag to `feed_config.json`"
-author: dwiajik
-state: open
-mergeable_state: unknown
-review_state: awaiting-first-review
-requested_reviewers: [hakansoylu1, dims (team)]
-updated: 2026-09-09
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/1825
-```
-Not his. Still open and unreviewed, no change. BDD-3150 (the ticket this PR's earmark was tracking) shipped 09-14 anyway, without this PR merging — see `_meta/earmarks.md`.
 
 ```yaml
 number: 1815

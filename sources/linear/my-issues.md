@@ -2,7 +2,7 @@
 
 Assigned to Kushel, live (non-completed) statuses. Populated on sync — completed/canceled work stays in Linear's own history rather than being repeated here; see `git log` for what rolled off.
 
-**09-17 sync:** Down to 12 items (was 15) — three left, none of them shipped. **BDD-2539** (Bilder-API render limit) and **BDD-3189** (sketch tag info) were both reassigned away from Kushel to Syed Muhammad Abu Bakar Wase (abubakarwase) mid-flight — same pattern as the 09-04 batch reassignment, but this time pulling from his active, started work rather than an unstarted backlog. **BDD-2518** (Buffer→Stream tech debt) was unassigned entirely and moved to On-Hold. The Video Delivery project (BDD-3223/3205/3191/3206) all advanced a stage this cycle — good, steady progress. BDD-3251 and BDD-3246 both moved into In Review.
+**09-18 sync:** Down to 11 items (was 12) — **BDD-3237** (Superdry deleting one image) shipped, In Review → Deployed. Everything else held its status from yesterday's sync; no new reassignments this cycle.
 
 ---
 
@@ -87,20 +87,6 @@ updated: 2026-09-16
 url: https://linear.app/fashioncloud/issue/BDD-3206/32-backend-route-the-full-request-to-pcs-and-append-its-csv
 ```
 Advanced from Backlog to Ready To Start this cycle. Part of the "Video Delivery" project, Slice 3.2 milestone, child of BDD-3223. Depends on BDD-3205 and BDD-3191/Slice 3.1. Not started.
-
----
-
-```yaml
-id: BDD-3237
-title: "PIPE: Superdry - deleting one image possible? (FD: 675898)"
-priority: Low
-status: In Review
-assignee: Kushel Ramanayake
-team: BDD
-updated: 2026-09-16
-url: https://linear.app/fashioncloud/issue/BDD-3237/pipe-superdry-deleting-one-image-possible-fd-675898
-```
-No change since last sync.
 
 ---
 
