@@ -1,6 +1,6 @@
 ---
 status: active
-last_touched: 2026-09-16
+last_touched: 2026-09-21
 ---
 
 # Video download delivery on platform
@@ -14,4 +14,6 @@ Carried over from the old Notion "Parked" section. The underlying download suppo
 - [BDD-3205](../sources/linear/my-issues.md) — the PCS-side `CsvGenerationModule`: config-driven (no code change per column/language), artifact stored in S3, signed link returned on the resolve response. Open question in the spec itself: whether the artifact needs its own TTL or can reuse video's 14-day one.
 - [BDD-3206](../sources/linear/my-issues.md) — the backend-side routing: when video + data attributes are both requested, send the *full* request to PCS instead of generating the CSV locally; images-plus-data-attributes-without-video stays on the backend untouched.
 
-The routing rule in both specs is explicit that the existing images-only and images+CSV-without-video paths must not be refactored or "unified" as part of this — new path added beside the old one, not a replacement. Nothing started yet; this is now real backlog rather than an open decision, so tracking moves to `sources/linear/my-issues.md` for status and this file mainly for the shape of the work.
+The routing rule in both specs is explicit that the existing images-only and images+CSV-without-video paths must not be refactored or "unified" as part of this — new path added beside the old one, not a replacement. Tracking moves to `sources/linear/my-issues.md` for status and this file mainly for the shape of the work.
+
+**09-21 update:** first real code movement on Slice 3.2 — [BDD-3206](../sources/linear/my-issues.md) (backend routing) advanced Ready To Start → In Progress today. BDD-3223/3205/3191 remain In Progress, unchanged.

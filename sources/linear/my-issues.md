@@ -2,21 +2,7 @@
 
 Assigned to Kushel, live (non-completed) statuses. Populated on sync — completed/canceled work stays in Linear's own history rather than being repeated here; see `git log` for what rolled off.
 
-**09-18 sync:** Down to 11 items (was 12) — **BDD-3237** (Superdry deleting one image) shipped, In Review → Deployed. Everything else held its status from yesterday's sync; no new reassignments this cycle.
-
----
-
-```yaml
-id: BDD-3246
-title: "PIPE: Becosoft image issue - Kultivate (FD: 676295)"
-priority: Medium
-status: In Review
-assignee: Kushel Ramanayake
-team: BDD
-updated: 2026-09-17
-url: https://linear.app/fashioncloud/issue/BDD-3246/pipe-becosoft-image-issue-kultivate-fd-676295
-```
-Advanced from In Progress to In Review this cycle.
+**09-21 sync:** Down to 9 items (was 11) — **BDD-3246** (Kultivate Becosoft) shipped, In Review → Done. **BDD-3251** left the team entirely, transferred to Replenishment as RPL-2346 (see `archive/linear/team-transfers.md`) — unusual in that it was Kushel's own In Review work, not an unassigned backlog item, and it bounced back to Todo status there. **BDD-3206** advanced Ready To Start → In Progress today (09-21), the first real movement on the Video Delivery Slice 3.2 backend work.
 
 ---
 
@@ -63,30 +49,16 @@ Advanced from Ready To Start to In Progress this cycle. Video Delivery project �
 ---
 
 ```yaml
-id: BDD-3251
-title: Bybar Delete gtins and refresh Data Manager (FD: 676427)
-priority: Medium
-status: In Review
-assignee: Kushel Ramanayake
-team: BDD
-updated: 2026-09-16
-url: https://linear.app/fashioncloud/issue/BDD-3251/bybar-delete-gtins-and-refresh-data-manager-fd-676427
-```
-Advanced from In Progress to In Review this cycle.
-
----
-
-```yaml
 id: BDD-3206
 title: "3.2 Backend — Route the full request to PCS and append its CSV"
 priority: No priority
-status: Ready To Start
+status: In Progress
 assignee: Kushel Ramanayake
 team: BDD
-updated: 2026-09-16
+updated: 2026-09-21
 url: https://linear.app/fashioncloud/issue/BDD-3206/32-backend-route-the-full-request-to-pcs-and-append-its-csv
 ```
-Advanced from Backlog to Ready To Start this cycle. Part of the "Video Delivery" project, Slice 3.2 milestone, child of BDD-3223. Depends on BDD-3205 and BDD-3191/Slice 3.1. Not started.
+Advanced from Ready To Start to In Progress today (09-21) — first real movement on this sub-issue. Part of the "Video Delivery" project, Slice 3.2 milestone, child of BDD-3223. Depends on BDD-3205 and BDD-3191/Slice 3.1.
 
 ---
 

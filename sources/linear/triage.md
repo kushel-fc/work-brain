@@ -2,35 +2,7 @@
 
 Full raw Triage backlog for team BDD, sourced from https://linear.app/fashioncloud/team/BDD/triage. Populated on sync. See `support/open.md` for the FD-referenced/support-shaped curated subset.
 
-**09-18 sync:** Down to 9 items (was 10). One new: BDD-3278 (Low, withblack EAN deletion). Two left, both picked up by Syed Muhammad Abu Bakar Wase (abubakarwase) — continuing the workload-shift pattern from prior cycles: BDD-3259 (now In Progress) and BDD-3238 (now In Review).
-
----
-
-```yaml
-id: BDD-3278
-title: "PIPE: withblack ean deletion (FD: 677342)"
-priority: Low
-status: Triage
-assignee: unassigned
-team: BDD
-updated: 2026-09-18
-url: https://linear.app/fashioncloud/issue/BDD-3278/pipe-withblack-ean-deletion-fd-677342
-```
-New.
-
----
-
-```yaml
-id: BDD-3268
-title: "Update resource size for integration which run for longer than 60 minutes (FD: 677101)"
-priority: Low
-status: Triage
-assignee: unassigned
-team: BDD
-updated: 2026-09-16
-url: https://linear.app/fashioncloud/issue/BDD-3268/update-resource-size-for-integration-which-run-for-longer-than-60
-```
-New. Possibly related to the run-time-limit Dagster alerts (kultivate/blackstone/falke hitting the 3h cap) — worth cross-checking if this is asking for the same fix.
+**09-21 sync:** Down to 6 items (was 9). Zero new items landed — quiet inflow cycle. Three left: **BDD-3278** shipped same day it landed (Deployed); **BDD-3268** (bump resource size for long-running integrations — plausibly the fix for the mosMosh/ara OOM spree, see `dagster-alerts/log.md`) and **BDD-3266** (Brax AVIF support) both picked up by Syed Muhammad Abu Bakar Wase (abubakarwase), now In Progress / In Review — continuing the workload-shift pattern from prior cycles.
 
 ---
 
@@ -45,20 +17,6 @@ updated: 2026-09-16
 url: https://linear.app/fashioncloud/issue/BDD-3243/german-fc-attribut-name-not-correct-fd-676209
 ```
 Touched, still Triage/unassigned. No material change.
-
----
-
-```yaml
-id: BDD-3266
-title: "Brax - AVIF support images PD (FD: 677049)"
-priority: Medium
-status: Triage
-assignee: unassigned
-team: BDD
-updated: 2026-09-16
-url: https://linear.app/fashioncloud/issue/BDD-3266/brax-avif-support-images-pd-fd-677049
-```
-No change since last sync.
 
 ---
 

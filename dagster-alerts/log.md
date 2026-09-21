@@ -13,24 +13,34 @@ linked_issue: null
 Same `product-service-logs-index-` pattern, fifth occurrence now (triggered 2026-09-17T11:14:30Z, daily quota reached 13:27:26Z, recovered 06:03:29Z on quota reset). Still no permanent fix in place.
 
 ```yaml
-timestamp: 2026-09-17T23:08:38Z
+timestamp: 2026-09-21T08:35:55Z
 channel: brand-data-dev-alerts
 brand: mosMosh
-summary: "mosMosh__FEED image-processing OOM spree (10 occurrences) plus two run-time-limit breaches on the same sync job"
+summary: "mosMosh__FEED image-processing OOM spree now 21+ occurrences across 4 days, still no owner"
 status: active
 linked_issue: null
 ```
-New brand for this failure shape. `process_images`/`process_images_sync` (exit code 137, OOM) fired 10 times between 2026-09-17T10:58:25Z and 23:08:38Z — 6 on the ad-hoc `process_images` step, 4 on the cron-scheduled `mosMosh_FEED_cron_image_sync_schedule` → `process_images_sync`. Two separate "exceeded run time limit of 3 hours" alerts on `mosMosh_FEED_sync_images` (started 07:57 and 08:15 UTC) look like the same underlying job getting OOM-killed and retried past its time budget rather than two distinct incidents. No thread, no reaction, unresolved as of this sync — possibly the pattern [BDD-3268](../support/open.md) is asking to fix (bumping resource size for long-running integrations).
+New brand for this failure shape, first seen 2026-09-17. `process_images`/`process_images_sync` (exit code 137, OOM) fired 10 times 09-17, then 8 more 09-18 (12:42-13:13 UTC), then 3 more 09-21 (08:29-08:35 UTC) — 21+ occurrences total, still completely unowned, no thread or reaction at any point across four days. [BDD-3268](../support/open.md) (bump resource size for long-running integrations) — the ticket that looked like it might be the fix — was picked up by abubakarwase 09-18 and is now In Progress, but no fix has landed yet and the failures continued after he started it.
 
 ```yaml
-timestamp: 2026-09-17T21:24:28Z
+timestamp: 2026-09-19T00:50:40Z
 channel: brand-data-dev-alerts
-brand: platform (PDS / Kinesis)
-summary: Two more PDS Kinesis-throttling / stream-publish-failure flares, one hitting a new high (metric 257)
-status: self-resolved
+brand: meyer
+summary: "meyer__FEED__map — essential container exited, exit code 1 (cron-scheduled run)"
+status: active
 linked_issue: null
 ```
-Continuation of the known post-shard-increase-fix recurring issue, two separate flares this window: 19:14:28Z→19:33:28Z (throttling peaked at metric 25, one "eyes" reaction) and 21:03:30Z→21:24:28Z (publish-failure metric hit 257 — the highest value seen in this pattern yet, well above the previous high of 150). Both self-resolved within ~20 minutes. No thread beyond reactions.
+New failure signature for meyer, distinct from the earlier FEED2 reprocessing issue ([BDD-3155](../support/recently-closed.md), already shipped). Single occurrence, launched by `meyer_FEED_cron_schedule`. No thread, no reaction.
+
+```yaml
+timestamp: 2026-09-18T11:36:27Z
+channel: brand-data-dev-alerts
+brand: platform (PDS / Kinesis)
+summary: PDS Kinesis write-throttling flare hit a new all-time high (metric 609), self-resolved as usual
+status: recurring
+linked_issue: null
+```
+Continuation of the known post-shard-increase-fix recurring issue. Triggered 09-18 11:21:26 UTC at metric 609 — well above the prior high of 257 flagged two days earlier — recovered 09-18 11:36:27 UTC (metric 0.0), ~15 minutes. Root cause (shard capacity) still not holding under peak load; each flare keeps self-resolving on its own.
 
 ```yaml
 timestamp: 2026-09-17T18:49:44Z
@@ -43,14 +53,14 @@ linked_issue: null
 Same no-owner recurring pattern as previous cycles. No thread.
 
 ```yaml
-timestamp: 2026-09-17T17:57:12Z
+timestamp: 2026-09-18T23:57:41Z
 channel: brand-data-dev-alerts
 brand: platform (process_enrichment_flow)
-summary: process_enrichment_flow run exceeded 3h time limit (enrichment_file_sensor)
-status: active
+summary: process_enrichment_flow exceeded 3h time limit again — recurring, still unexplained
+status: recurring
 linked_issue: null
 ```
-New job for the run-time-limit pattern, distinct from mosMosh's. Started 2026-09-17T12:56 UTC. No thread, no reaction, unresolved.
+Chronic unresolved pattern, first flagged by Kushel 09-08. Recurred again: a run started 09-18 20:57 UTC breached the 3h cap 09-18 23:57 UTC (enrichment_file_sensor). No thread, no reaction, no root cause identified across any occurrence.
 
 ```yaml
 timestamp: 2026-09-17T16:19:13Z
@@ -73,14 +83,14 @@ linked_issue: null
 New brand for this failure signature, single occurrence so far. No thread or reaction visible.
 
 ```yaml
-timestamp: 2026-09-17T12:58:48Z
+timestamp: 2026-09-21T08:35:55Z
 channel: brand-data-dev-alerts
 brand: ara
-summary: "ara__PRICAT__process_images — 7 OOM exits (exit code 137) in a 16-minute window"
+summary: "ara__PRICAT__process_images OOM now 26+ occurrences across 4 days, still no owner"
 status: active
 linked_issue: null
 ```
-New brand for this failure shape. Fired seven times between 12:42:43Z and 12:58:48Z, all the same step. No thread or reaction visible, unresolved as of this sync.
+New brand for this failure shape, first seen 2026-09-17 (7 occurrences, 12:42-12:58 UTC). Recurred 09-18 (9 more, 12:42-12:52 UTC) and again 09-21 (8 more, 08:23-08:35 UTC) — 26+ occurrences total, all the same step, still completely unowned across four days. No thread or reaction at any point.
 
 ```yaml
 timestamp: 2026-09-17T12:43:44Z
@@ -1332,72 +1342,3 @@ linked_issue: null
 ```
 Fired 08-20 (thread, 2 replies) then escalated 08-22 22:44 UTC, finally recovering 08-23 05:24 UTC with a raised-hands reaction acknowledging the fix.
 
-```yaml
-timestamp: 2026-08-21T19:12:02Z
-channel: brand-data-dev-alerts
-brand: guess
-summary: guess__FEED__trigger_enrichment_from_map — container exited, exit code 137 (OOM)
-status: active
-linked_issue: null
-```
-No thread or reaction visible.
-
-```yaml
-timestamp: 2026-08-21T12:54:19Z
-channel: brand-data-dev-alerts
-brand: bazlen
-summary: bazlen_FEED2 run exceeded 3h time limit
-status: active
-linked_issue: null
-```
-No thread or reaction visible.
-
-```yaml
-timestamp: 2026-08-21T01:17:23Z
-channel: brand-data-dev-alerts
-brand: camelActive
-summary: camelActive_FEED2 run exceeded 3h time limit
-status: active
-linked_issue: null
-```
-No thread or reaction visible.
-
-```yaml
-timestamp: 2026-08-20T14:53:20Z
-channel: brand-data-dev-alerts
-brand: fashionCloud
-summary: fashionCloud/FEED — 9 asset materializations failed (download_images, feed_transform, etc.)
-status: recurring
-linked_issue: null
-```
-Fired twice on 08-20 (13:27 and 14:53 UTC), ~1.5h apart, same asset group and count.
-
-```yaml
-timestamp: 2026-08-20T13:29:31Z
-channel: brand-data-dev-alerts
-brand: ammann
-summary: ammann__FEED__process_images_sync — container exited, exit code 137 (OOM)
-status: active
-linked_issue: null
-```
-No thread or reaction visible. Distinct from the later FTP move_images_from_ftp_to_s3_job_sync failure for ammann on 08-25.
-
-```yaml
-timestamp: 2026-08-20T09:02:55Z
-channel: brand-data-dev-alerts
-brand: fashionCloudQA
-summary: fashionCloudQA/FEED — 9 asset materializations failed (download_images, download_videos, etc.)
-status: active
-linked_issue: null
-```
-"hand" reaction only; no confirmed resolution.
-
-```yaml
-timestamp: 2026-08-20T08:02:11Z
-channel: brand-data-dev-alerts
-brand: calamar
-summary: calamar/FEED2 — 9 asset materializations failed (download_images, feed_transform, global_transform)
-status: active
-linked_issue: null
-```
-No thread or reaction visible.

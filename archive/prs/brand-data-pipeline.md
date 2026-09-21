@@ -3,6 +3,39 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 1912
+title: Fix vanDeVelde reversed season labels
+author: FCMachineUser
+state: closed
+merged: false
+closed: 2026-09-18
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1912
+```
+Not his. Closed without merging, same day it opened — landed the same day product-service#2697 (vanDeVelde brand migration) also closed unmerged. Possibly related, never confirmed.
+
+```yaml
+number: 1917
+title: Fix Numph delivery scope
+author: hakansoylu1
+state: closed
+merged: true
+closed: 2026-09-18
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1917
+```
+Not his. Merged same day it opened.
+
+```yaml
+number: 1918
+title: Support/mustang
+author: Busra040
+state: closed
+merged: true
+closed: 2026-09-18
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1918
+```
+Not his. Merged same day it opened.
+
+```yaml
 number: 1839
 title: BDD-3161 Add image-reprocessing-collector-job weekly schedule
 author: dwiajik

@@ -3,13 +3,31 @@
 Capped at ~25 most recent. Older entries move to `../archive/support/`. Sourced from team BDD Done/Deployed issues carrying an FD reference.
 
 ```yaml
+id: BDD-3246
+title: "PIPE: Becosoft image issue - Kultivate (FD: 676295)"
+priority: Medium
+closed: 2026-09-18
+url: https://linear.app/fashioncloud/issue/BDD-3246/pipe-becosoft-image-issue-kultivate-fd-676295
+```
+Kushel's own ticket — In Review → Done. No change noted beyond the status flip.
+
+```yaml
+id: BDD-3278
+title: "PIPE: withblack ean deletion (FD: 677342)"
+priority: Low
+closed: 2026-09-18
+url: https://linear.app/fashioncloud/issue/BDD-3278/pipe-withblack-ean-deletion-fd-677342
+```
+Landed in Triage unassigned 09-18, picked up by abubakarwase and shipped same day.
+
+```yaml
 id: BDD-3237
 title: "PIPE: Superdry - deleting one image possible? (FD: 675898)"
 priority: Low
 closed: 2026-09-17
 url: https://linear.app/fashioncloud/issue/BDD-3237/pipe-superdry-deleting-one-image-possible-fd-675898
 ```
-Shipped this cycle, In Review → Deployed. No change noted in the ticket beyond the status flip.
+Shipped last cycle, In Review → Deployed. No change noted in the ticket beyond the status flip.
 
 ```yaml
 id: BDD-3228
@@ -209,22 +227,4 @@ url: https://linear.app/fashioncloud/issue/BDD-3225/re-pepe-jeans-missing-image-
 ```
 Resolved — the long AWWG/Pepe Jeans missing-image thread is done. Was at the top of `today.md` last two cycles.
 
-```yaml
-id: BDD-3157
-title: MAC - deletion of articles (FD: 674486)
-priority: Medium
-closed: 2026-09-07
-url: https://linear.app/fashioncloud/issue/BDD-3157/mac-deletion-of-articles-fd-674486
-```
-Part of the 09-04 bulk Triage-clearing assignment — shipped three days after landing on him.
-
-```yaml
-id: BDD-3152
-title: Item deletion Pure Path (FD: 674578)
-priority: Low
-closed: 2026-09-07
-url: https://linear.app/fashioncloud/issue/BDD-3152/item-deletion-pure-path-fd-674578
-```
-Part of the 09-04 bulk Triage-clearing assignment — shipped three days after landing on him.
-
-Older entries (BDD-2530, BDD-3089, BDD-3155, BDD-2957, BDD-3167, BDD-3154, BDD-3103, BDD-3112, BDD-3111, BDD-3115, BDD-3130, BDD-3105, BDD-3114, BDD-3135, BDD-3116, BDD-3127, BDD-3131, BDD-3133, BDD-3138, BDD-3134, BDD-3076, BDD-3113, BDD-3136, BDD-2945, BDD-3107) rolled off the ~25-item cap across the last seven cycles — see [`archive/support/recently-closed.md`](../archive/support/recently-closed.md).
+Older entries (BDD-2530, BDD-3089, BDD-3155, BDD-2957, BDD-3167, BDD-3154, BDD-3103, BDD-3112, BDD-3111, BDD-3115, BDD-3130, BDD-3105, BDD-3114, BDD-3135, BDD-3116, BDD-3127, BDD-3131, BDD-3133, BDD-3138, BDD-3134, BDD-3076, BDD-3113, BDD-3136, BDD-2945, BDD-3107, BDD-3157, BDD-3152) rolled off the ~25-item cap across the last eight cycles — see [`archive/support/recently-closed.md`](../archive/support/recently-closed.md).

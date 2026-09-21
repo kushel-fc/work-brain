@@ -2,7 +2,7 @@
 
 FD-sourced/support-shaped tickets, by priority then age (oldest first within each tier). Sourced from the team BDD Triage view: https://linear.app/fashioncloud/team/BDD/triage. Populated on sync. Full raw Triage list lives in [`sources/linear/triage.md`](../sources/linear/triage.md).
 
-9 items now (was 10) — BDD-3259 and BDD-3238 both individually picked up by abubakarwase this cycle (now In Progress / In Review, off Triage) — continuing the same workload-shift pattern flagged in recent cycles. One new: BDD-3278 (Low). Still just 1 High.
+6 items now (was 9) — quiet inflow cycle, zero new items. BDD-3278 shipped same day it landed; BDD-3268 and BDD-3266 both individually picked up by abubakarwase (now In Progress / In Review, off Triage) — continuing the same workload-shift pattern flagged in recent cycles. Still just 1 High.
 
 ## High
 
@@ -25,15 +25,6 @@ updated: 2026-08-20
 url: https://linear.app/fashioncloud/issue/BDD-3043/incorrect-delimiter-not-shown-as-error-fd-672084
 ```
 PIPE silently mis-parses on a delimiter mismatch instead of erroring. Oldest Medium item, still untouched.
-
-```yaml
-id: BDD-3266
-title: "Brax - AVIF support images PD (FD: 677049)"
-priority: Medium
-updated: 2026-09-16
-url: https://linear.app/fashioncloud/issue/BDD-3266/brax-avif-support-images-pd-fd-677049
-```
-New.
 
 ## Low
 
@@ -73,20 +64,3 @@ url: https://linear.app/fashioncloud/issue/BDD-3260/new-bug-on-fashioncloud-fd-6
 ```
 No change since last sync.
 
-```yaml
-id: BDD-3268
-title: "Update resource size for integration which run for longer than 60 minutes (FD: 677101)"
-priority: Low
-updated: 2026-09-16
-url: https://linear.app/fashioncloud/issue/BDD-3268/update-resource-size-for-integration-which-run-for-longer-than-60
-```
-Possibly related to the run-time-limit Dagster alerts — now even more relevant given this cycle's mosMosh/vanDeVelde run-time-limit spree, see `dagster-alerts/log.md`.
-
-```yaml
-id: BDD-3278
-title: "PIPE: withblack ean deletion (FD: 677342)"
-priority: Low
-updated: 2026-09-18
-url: https://linear.app/fashioncloud/issue/BDD-3278/pipe-withblack-ean-deletion-fd-677342
-```
-New.

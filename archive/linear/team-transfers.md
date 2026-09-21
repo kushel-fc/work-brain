@@ -49,3 +49,15 @@ transferred: 2026-09-16
 url: https://linear.app/fashioncloud/issue/RPL-2334/articles-appear-under-two-brands-bestseller-fd-676293
 ```
 Was sitting unassigned in BDD Triage since 2026-09-10, untouched by BDD; moved to Replenishment and picked up there by oleh.polishchuk — the same person now handling both this and BDD-3241/RPL-2280, a repeat destination for this alert shape.
+
+```yaml
+id: BDD-3251 (now RPL-2346)
+title: Bybar Delete gtins and refresh Data Manager (FD: 676427)
+priority: Medium
+transferred_to: Replenishment
+new_assignee: oleh.polishchuk@fashion.cloud
+status_at_transfer: Todo (was In Review)
+transferred: 2026-09-18
+url: https://linear.app/fashioncloud/issue/RPL-2346/bybar-delete-gtins-and-refresh-data-manager-fd-676427
+```
+Different shape from the prior transfers above — this was **Kushel's own active ticket**, already In Review, not an unassigned Triage backlog item. It bounced back to Todo status as part of the move to Replenishment (same repeat destination, oleh.polishchuk). Removed from `sources/linear/my-issues.md`.

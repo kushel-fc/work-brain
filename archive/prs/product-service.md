@@ -3,6 +3,39 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2723
+title: "feat(event-definitions): document the PD Kinesis stream events in the AsyncAPI"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-09-21
+url: https://github.com/fashioncloud/product-service/pull/2723
+```
+Individually his to review — had flipped to Changes Requested last cycle. Merged 09-21 07:22 UTC without him ever reviewing it. Off `prs/to-review.md`.
+
+```yaml
+number: 2732
+title: "otto-image-upload: ECS Fargate scheduled task skeleton (Phase 1)"
+author: dushansilva
+state: closed
+merged: true
+closed: 2026-09-18
+url: https://github.com/fashioncloud/product-service/pull/2732
+```
+Individually his to review, alongside dwiajik. Merged 09-18 12:10 UTC without him ever reviewing it. Off `prs/to-review.md`.
+
+```yaml
+number: 2735
+title: Enhance size variant handling by adding articleNumber to relevant payloads and tests
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-09-18
+url: https://github.com/fashioncloud/product-service/pull/2735
+```
+Not his — team + abubakarwase + alirezaMoazenFashion named. Merged same day it opened.
+
+```yaml
 number: 2655
 title: BDD-3161 Add image-reprocessing-collector-job
 author: dwiajik
