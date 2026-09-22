@@ -2,6 +2,17 @@
 
 One entry per sync run. Prune entries older than ~30 days.
 
+## 2026-09-22 (~08:50 UTC)
+
+Quietest cycle in a while — ~24h gap since last sync (09-21 08:46 → 09-22 ~08:50). All three sources reachable.
+
+- **Linear: zero changes.** Both his assigned-issue list and the team BDD Triage backlog are byte-for-byte identical to last sync — no new tickets, no status moves, no reassignments.
+- **Good news, unconfirmed: the mosMosh/ara OOM spree (4 days, 45+ occurrences) appears to have stopped.** Three more mosMosh hits right after last sync's cutoff (09-21 08:48-08:53 UTC), then nothing — zero mosMosh or ara occurrences for the rest of the ~24h window, the longest quiet stretch since it started 09-17. [BDD-3268](../support/open.md) (the resource-size fix) is still In Progress, not shipped, so not yet confidently attributable — added as an active earmark to confirm next cycle.
+- **riani's `trigger_enrichment_from_map` recurred 4 more times** (09-21), despite Dushan's 09-17 "will check" — garcia (paired with riani in that entry) stayed quiet this time.
+- **GitHub: he cleared one of his own review-queue items himself** — approved [product-service#2748](../sources/github/product-service/open-prs.md) this morning (08:45 UTC), down to dwiajik as the only outstanding reviewer there. Review queue 5→4. product-service 18→16 (one new bot PR #2750, three merged: #2742/#2728/#2622); brand-data-pipeline 17→18 (one new, #1929 "sizes", not his). #1871 (names him) resolved its months-long `unknown` mergeable state to a clean `mergeable`, corrected the approver attribution to dwiajik (not marianabassi as previously logged). product-service#1737 (not his) flipped from `unknown` to a real conflict after two-plus months of flapping.
+- Datadog log-index quota hit its warning→quota→recover cycle a sixth time, self-resolved as usual.
+- Notified: no — nothing crossed the notification bar. No deadline passed with zero movement. No flip to conflict/Changes-Requested on his own work (zero open PRs; his own review action on #2748 was an approval, not a flip against him). No new Urgent-priority ticket landed unassigned (zero new Triage items at all). No Dagster alert recurred after reaching self-resolved status — riani's recurrence continues from `active`, not a flip from `self-resolved`, and the mosMosh/ara quiet spell is the opposite direction (quiet, not recurring).
+
 ## 2026-09-21 (08:46 UTC)
 
 All three sources reachable this run. ~3-day gap since last sync (09-18 08:50 → 09-21 08:46).

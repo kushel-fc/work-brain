@@ -8,7 +8,10 @@ Each earmark has a `Trigger signal` (plain-language condition to watch for durin
 
 ## Active
 
-(none active this cycle)
+- **Trigger signal**: mosMosh/ara OOM sprees (`mosMosh__FEED__process_images`, `ara__PRICAT__process_images`) stay quiet for another full sync cycle
+- **Surface**: Confirm the 4-day, 45+-occurrence spree (09-17 through 09-21) is actually over before calling it resolved — it went quiet after 09-21 08:53 UTC (3 more mosMosh hits, then nothing for ~24h), but [BDD-3268](../support/open.md) (the resource-size-bump ticket that looked like the fix) is still In Progress, not shipped, so the quiet spell isn't yet attributable to a confirmed fix.
+- **Related**: [dagster-alerts/log.md](../dagster-alerts/log.md)
+- **Status**: active
 
 ## Triggered / Dismissed
 

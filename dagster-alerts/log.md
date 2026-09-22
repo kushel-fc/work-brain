@@ -3,6 +3,46 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
+timestamp: 2026-09-22T06:03:28Z
+channel: brand-data-dev-alerts
+brand: platform (Datadog log index)
+summary: Log index hit warning threshold then daily quota a sixth time, self-resolved on quota reset
+status: recurring
+linked_issue: null
+```
+Same `product-service-logs-index-` pattern, sixth occurrence now (warning 09-21 14:52:28 UTC, quota reached 09-22 00:29:26 UTC, recovered 06:03:28 UTC on quota reset). Still no permanent fix in place.
+
+```yaml
+timestamp: 2026-09-21T16:25:53Z
+channel: brand-data-dev-alerts
+brand: riani
+summary: "riani__FEED__trigger_enrichment_from_map recurred 4 more times, despite Dushan's 09-17 'will check' — still unfixed"
+status: recurring
+linked_issue: null
+```
+Same step/signature as the 09-17 garcia+riani entry (Dushan said "will check trigger enrichment" that day). garcia stayed quiet this cycle, but riani fired four more times alone: 10:26:54, 13:06:04, 13:57:46, 16:25:53 UTC on 09-21. No further thread activity visible since the 09-17 acknowledgment — whatever Dushan looked into hasn't landed yet.
+
+```yaml
+timestamp: 2026-09-21T08:53:30Z
+channel: brand-data-dev-alerts
+brand: mosMosh, ara
+summary: "mosMosh/ara OOM sprees appear to have stopped — quiet for the rest of this cycle after 3 more mosMosh hits right at the start"
+status: self-resolved
+linked_issue: null
+```
+The 4-day, 45+-occurrence spree (mosMosh 21+, ara 26+ as of last sync) continued for exactly 3 more mosMosh hits right after last sync's cutoff (08:48:28, 08:52:29, 08:53:30 UTC 09-21) — then nothing. Zero further mosMosh or ara occurrences for the rest of the ~24h window, the longest quiet stretch since the spree started 09-17. [BDD-3268](../support/open.md) (resource-size bump) is still In Progress per Linear, not marked done — so this can't be confidently attributed to that fix landing yet. Worth a fresh look next sync before calling it fully resolved; total tally now mosMosh 24+, ara 26+ (unchanged this cycle).
+
+```yaml
+timestamp: 2026-09-21T09:53:35Z
+channel: brand-data-dev-alerts
+brand: platform (galvatron ECS)
+summary: ECS health check failures detected for galvatron service, one more brief trigger/recover cycle
+status: recurring
+linked_issue: null
+```
+Triggered 09:52:35 UTC, recovered ~1 minute later — same established noise pattern, no thread.
+
+```yaml
 timestamp: 2026-09-18T06:03:29Z
 channel: brand-data-dev-alerts
 brand: platform (Datadog log index)

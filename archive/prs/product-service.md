@@ -3,6 +3,39 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2742
+title: Enable CINQUE on PIPE
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-09-22
+url: https://github.com/fashioncloud/product-service/pull/2742
+```
+Not his — dwiajik + julsjacinto named. Merged 09-22 07:48 UTC.
+
+```yaml
+number: 2728
+title: add open api
+author: irembbt
+state: closed
+merged: true
+closed: 2026-09-22
+url: https://github.com/fashioncloud/product-service/pull/2728
+```
+Not his — team + dwiajik + abirprantofc named. Had Changes Requested last cycle; merged 09-22 08:19 UTC.
+
+```yaml
+number: 2622
+title: Add architecture rules glossary and test suite documentation
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-09-21
+url: https://github.com/fashioncloud/product-service/pull/2622
+```
+Not his — irembbt + physicalattraction + dushansilva named. Had Changes Requested; merged 09-21 09:58 UTC.
+
+```yaml
 number: 2723
 title: "feat(event-definitions): document the PD Kinesis stream events in the AsyncAPI"
 author: dwiajik
