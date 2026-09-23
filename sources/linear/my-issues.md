@@ -2,7 +2,7 @@
 
 Assigned to Kushel, live (non-completed) statuses. Populated on sync — completed/canceled work stays in Linear's own history rather than being repeated here; see `git log` for what rolled off.
 
-**09-21 sync:** Down to 9 items (was 11) — **BDD-3246** (Kultivate Becosoft) shipped, In Review → Done. **BDD-3251** left the team entirely, transferred to Replenishment as RPL-2346 (see `archive/linear/team-transfers.md`) — unusual in that it was Kushel's own In Review work, not an unassigned backlog item, and it bounced back to Todo status there. **BDD-3206** advanced Ready To Start → In Progress today (09-21), the first real movement on the Video Delivery Slice 3.2 backend work.
+**09-23 sync:** Down to 8 items (was 9). **BDD-3117** (FW: PME stockbase, FD 672891) shipped - In Progress -> Done 09-23 08:17 UTC, moved to `support/recently-closed.md`. **Video Delivery Slice 3.2 moved to In Review** - BDD-3205 (09-22 08:57 UTC), then BDD-3206 and parent BDD-3223 (09-22 21:56 UTC), matching his new PR stack (product-service#2753 merged, #2754 approved-but-blocked). BDD-3191 (N1 docs) stays In Progress.
 
 ---
 
@@ -10,13 +10,13 @@ Assigned to Kushel, live (non-completed) statuses. Populated on sync — complet
 id: BDD-3223
 title: "Slice 3.2 — Full CSV generation on PCS when video and CSV are selected"
 priority: No priority
-status: In Progress
+status: In Review
 assignee: Kushel Ramanayake
 team: BDD
-updated: 2026-09-16
+updated: 2026-09-22
 url: https://linear.app/fashioncloud/issue/BDD-3223/slice-32-full-csv-generation-on-pcs-when-video-and-csv-are-selected
 ```
-Advanced from Ready To Start to In Progress this cycle. Parent of BDD-3206 and BDD-3205 — the Slice 3.2 milestone issue itself. Video Delivery project.
+Advanced In Progress -> In Review 09-22 21:56 UTC. Parent of BDD-3206 and BDD-3205 - the Slice 3.2 milestone issue itself. Video Delivery project. Code is in the 4-part product-service stack (#2753 merged, #2754 open, parts 3-4 not yet opened).
 
 ---
 
@@ -24,13 +24,13 @@ Advanced from Ready To Start to In Progress this cycle. Parent of BDD-3206 and B
 id: BDD-3205
 title: "3.2 PCS — CSV generation module"
 priority: No priority
-status: In Progress
+status: In Review
 assignee: Kushel Ramanayake
 team: BDD
-updated: 2026-09-16
+updated: 2026-09-22
 url: https://linear.app/fashioncloud/issue/BDD-3205/32-pcs-csv-generation-module
 ```
-Advanced from Backlog to In Progress this cycle. Part of the "Video Delivery" project, Slice 3.2 milestone, child of BDD-3223. New `CsvGenerationModule` in PCS, config-driven, artifact stored in S3 with a signed link.
+Advanced In Progress -> In Review 09-22 08:57 UTC. `@repo/csv-generation` package is product-service#2754 (2/4), approved by Chamindu36 and irembbt, still `BLOCKED` on merge. Child of BDD-3223.
 
 ---
 
@@ -44,7 +44,7 @@ team: BDD
 updated: 2026-09-16
 url: https://linear.app/fashioncloud/issue/BDD-3191/n1-document-todays-csv-generation-logic
 ```
-Advanced from Ready To Start to In Progress this cycle. Video Delivery project — the documentation prerequisite ("N1") referenced as a dependency by BDD-3206.
+Still In Progress, unchanged since 09-16 - now the only Slice 3.2 ticket not in review. Video Delivery project — the documentation prerequisite ("N1") referenced as a dependency by BDD-3206.
 
 ---
 
@@ -52,27 +52,13 @@ Advanced from Ready To Start to In Progress this cycle. Video Delivery project �
 id: BDD-3206
 title: "3.2 Backend — Route the full request to PCS and append its CSV"
 priority: No priority
-status: In Progress
+status: In Review
 assignee: Kushel Ramanayake
 team: BDD
-updated: 2026-09-21
+updated: 2026-09-22
 url: https://linear.app/fashioncloud/issue/BDD-3206/32-backend-route-the-full-request-to-pcs-and-append-its-csv
 ```
-Advanced from Ready To Start to In Progress today (09-21) — first real movement on this sub-issue. Part of the "Video Delivery" project, Slice 3.2 milestone, child of BDD-3223. Depends on BDD-3205 and BDD-3191/Slice 3.1.
-
----
-
-```yaml
-id: BDD-3117
-title: "FW: PME stockbase (FD: 672891)"
-priority: Medium
-status: In Progress
-assignee: Kushel Ramanayake
-team: BDD
-updated: 2026-09-10
-url: https://linear.app/fashioncloud/issue/BDD-3117/fw-pme-stockbase-fd-672891
-```
-No change since last sync.
+Advanced In Progress -> In Review 09-22 21:56 UTC, a day after first moving to In Progress. Child of BDD-3223. Depends on BDD-3205 and BDD-3191.
 
 ---
 

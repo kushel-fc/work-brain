@@ -2,7 +2,21 @@
 
 Full raw Triage backlog for team BDD, sourced from https://linear.app/fashioncloud/team/BDD/triage. Populated on sync. See `support/open.md` for the FD-referenced/support-shaped curated subset.
 
-**09-21 sync:** Down to 6 items (was 9). Zero new items landed — quiet inflow cycle. Three left: **BDD-3278** shipped same day it landed (Deployed); **BDD-3268** (bump resource size for long-running integrations — plausibly the fix for the mosMosh/ara OOM spree, see `dagster-alerts/log.md`) and **BDD-3266** (Brax AVIF support) both picked up by Syed Muhammad Abu Bakar Wase (abubakarwase), now In Progress / In Review — continuing the workload-shift pattern from prior cycles.
+**09-23 sync:** Up to 7 items (was 6). One new: **BDD-3296** (Medium, Altex SS27 cancellations). Nothing left Triage; every other item is unchanged since last sync.
+
+---
+
+```yaml
+id: BDD-3296
+title: "RE: Cancellations SS27 (FD: 677256)"
+priority: Medium
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-09-22
+url: https://linear.app/fashioncloud/issue/BDD-3296/re-cancellations-ss27-fd-677256
+```
+New 09-22. Altex (Funky Buddha) sent an SS27 cancellations file. Same request shape as BDD-3112/BDD-3229 (earlier "Cancellations SS27" tickets, both shipped by Kushel).
 
 ---
 
@@ -58,7 +72,7 @@ team: BDD
 updated: 2026-09-14
 url: https://linear.app/fashioncloud/issue/BDD-3248/images-uploading-by-api-stout-jeans-fd-676401
 ```
-No change since last sync. Aging a fifth cycle now, still the only High-priority unassigned item.
+No change since last sync. Aging a seventh cycle now, still the only High-priority unassigned item.
 
 ---
 

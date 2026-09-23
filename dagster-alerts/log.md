@@ -3,6 +3,36 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
+timestamp: 2026-09-22T18:49:01Z
+channel: brand-data-dev-alerts
+brand: sOliver
+summary: "sOliver__FEED2__map - app container has no exit code after task stopped (exit 1)"
+status: active
+linked_issue: null
+```
+Single failure from the scheduled `sOliver_FEED2_cron_schedule` run (57ff4f7a) on the mapping step, 20:49 CEST. Different step from the older sOliver/FEED2 entries in this log (download_images/extract). No thread or reaction; unclear yet whether it's a one-off ECS task stop or the start of a pattern.
+
+```yaml
+timestamp: 2026-09-22T14:58:35Z
+channel: brand-data-dev-alerts
+brand: platform (galvatron ECS)
+summary: ECS health check failures on galvatron, one more brief trigger/recover cycle
+status: self-resolved
+linked_issue: null
+```
+Triggered 14:52:35 UTC, recovered 14:58:35 UTC (value 2.0 at peak). Same known flapping pattern, galvatron only.
+
+```yaml
+timestamp: 2026-09-22T09:16:08Z
+channel: brand-data-dev-alerts
+brand: riani
+summary: "riani__FEED__trigger_enrichment_from_map failed once more (exit 1) - fifth cycle running"
+status: recurring
+linked_issue: null
+```
+One more occurrence (run 4198c7b4, 11:16 CEST), down from four the prior cycle. Someone reacted with :wave:, no thread reply. Still no fix landed since Dushan's 09-17 "will check."
+
+```yaml
 timestamp: 2026-09-22T06:03:28Z
 channel: brand-data-dev-alerts
 brand: platform (Datadog log index)
@@ -30,7 +60,7 @@ summary: "mosMosh/ara OOM sprees appear to have stopped — quiet for the rest o
 status: self-resolved
 linked_issue: null
 ```
-The 4-day, 45+-occurrence spree (mosMosh 21+, ara 26+ as of last sync) continued for exactly 3 more mosMosh hits right after last sync's cutoff (08:48:28, 08:52:29, 08:53:30 UTC 09-21) — then nothing. Zero further mosMosh or ara occurrences for the rest of the ~24h window, the longest quiet stretch since the spree started 09-17. [BDD-3268](../support/open.md) (resource-size bump) is still In Progress per Linear, not marked done — so this can't be confidently attributed to that fix landing yet. Worth a fresh look next sync before calling it fully resolved; total tally now mosMosh 24+, ara 26+ (unchanged this cycle).
+The 4-day, 45+-occurrence spree (mosMosh 21+, ara 26+ as of last sync) continued for exactly 3 more mosMosh hits right after last sync's cutoff (08:48:28, 08:52:29, 08:53:30 UTC 09-21) — then nothing. Zero further mosMosh or ara occurrences for the rest of the ~24h window, the longest quiet stretch since the spree started 09-17. [BDD-3268](../support/open.md) (resource-size bump) is still In Progress per Linear, not marked done — so this can't be confidently attributed to that fix landing yet. Worth a fresh look next sync before calling it fully resolved; total tally now mosMosh 24+, ara 26+ (unchanged this cycle). **09-23 sync: confirmed quiet a second full cycle** (zero mosMosh/ara alerts 09-22 08:50 to 09-23 08:45 UTC); BDD-3268 still In Progress, so the stop is still not attributable to that fix.
 
 ```yaml
 timestamp: 2026-09-21T09:53:35Z
@@ -1361,24 +1391,4 @@ status: active
 linked_issue: null
 ```
 4 thread replies spanning ~6 hours; extended discussion, no confirmed resolution visible.
-
-```yaml
-timestamp: 2026-08-23T11:06:49Z
-channel: brand-data-dev-alerts
-brand: platform (enrichment_file_sensor / map step)
-summary: App container has no exit code after task stopped, exit code 1 (map step)
-status: recurring
-linked_issue: null
-```
-Same sensor/step/error fired on 08-22 and again on 08-23, ~24h apart; no thread or resolution visible.
-
-```yaml
-timestamp: 2026-08-23T05:24:46Z
-channel: brand-data-dev-alerts
-brand: platform (Megatron → Backend)
-summary: Delays in product data processing flow between Megatron and Backend (backend-service-UNPROCESSED-IMAGE-RECEIVED)
-status: recurring
-linked_issue: null
-```
-Fired 08-20 (thread, 2 replies) then escalated 08-22 22:44 UTC, finally recovering 08-23 05:24 UTC with a raised-hands reaction acknowledging the fix.
 

@@ -2,6 +2,17 @@
 
 One entry per sync run. Prune entries older than ~30 days.
 
+## 2026-09-23 (~08:50 UTC)
+
+About 24h since the last sync (09-22 ~08:50 to 09-23 ~08:50). Linear, GitHub and Slack were all reachable.
+
+- **Earmark triggered: the mosMosh/ara OOM spree is over.** Zero alerts for a second full cycle, about 48h since the last hit. It still can't be credited to BDD-3268 (In Progress, no update since 09-18). Earmark moved to Triggered.
+- **Kushel opened his first PRs since 09-16, a 4-part split of the Video Delivery Slice 3.2 CSV work.** #2752 closed, #2753 (1/4) merged, and #2754 (2/4) is open. #2754 got Changes Requested from Chamindu36 at 09-22 13:31 UTC, then his approval at 09-23 08:17 UTC, so the net state is approved but `BLOCKED`. In Linear, BDD-3205, BDD-3206 and BDD-3223 all moved to In Review.
+- Linear: BDD-3117 (PME stockbase) shipped, Done 09-23, so his issues go 9 to 8. One new Triage ticket, BDD-3296 (Medium, Altex SS27 cancellations), so Triage goes 6 to 7. Nothing left Triage.
+- GitHub: review queue 4 to 3, because brand-data-pipeline#1871 merged without his review (its companion product-service#2683 is still waiting on him, zero human reviews). product-service 16 to 14, brand-data-pipeline 18 to 19. Every mergeable state resolved this cycle.
+- Slack was quiet (4 messages): riani `trigger_enrichment_from_map` 1 more (still recurring), a new sOliver FEED2 `map` failure, and a galvatron health-check blip. Dagster log pruned by 2 entries older than 30 days, now 139 in total.
+- Notified: no. Nothing crossed the notification bar. No deadline passed with zero movement. #2754's Changes Requested came and cleared inside this window on a brand-new PR, so the current state is approved, not a flip against him. No new Urgent unassigned ticket (BDD-3296 is Medium). riani continues as an existing `recurring` alert rather than coming back after self-resolving.
+
 ## 2026-09-22 (~08:50 UTC)
 
 Quietest cycle in a while — ~24h gap since last sync (09-21 08:46 → 09-22 ~08:50). All three sources reachable.

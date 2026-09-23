@@ -8,12 +8,14 @@ Each earmark has a `Trigger signal` (plain-language condition to watch for durin
 
 ## Active
 
+_None right now._
+
+## Triggered / Dismissed
+
 - **Trigger signal**: mosMosh/ara OOM sprees (`mosMosh__FEED__process_images`, `ara__PRICAT__process_images`) stay quiet for another full sync cycle
 - **Surface**: Confirm the 4-day, 45+-occurrence spree (09-17 through 09-21) is actually over before calling it resolved — it went quiet after 09-21 08:53 UTC (3 more mosMosh hits, then nothing for ~24h), but [BDD-3268](../support/open.md) (the resource-size-bump ticket that looked like the fix) is still In Progress, not shipped, so the quiet spell isn't yet attributable to a confirmed fix.
 - **Related**: [dagster-alerts/log.md](../dagster-alerts/log.md)
-- **Status**: active
-
-## Triggered / Dismissed
+- **Status**: triggered 2026-09-23. Second full quiet cycle (zero mosMosh/ara alerts 09-22 08:50 to 09-23 08:45 UTC, ~48h total since the last hit at 09-21 08:53 UTC). Treating the spree as over. It still can't be credited to BDD-3268, which is In Progress with no update since 09-18, so it stopped for some other reason or on its own. If it comes back, reopen it as a new `recurring` entry in the Dagster log instead of reviving this earmark.
 
 - **Trigger signal**: `brand-data-pipeline#1890` (baldessarini `credential_id` fix) merges
 - **Surface**: Confirm `baldessarini_FEED` actually stops failing — it failed on essentially every hourly run for ~21h straight (09-15/09-16) before this PR was even open, so merging alone isn't proof; check for a clean run afterward.

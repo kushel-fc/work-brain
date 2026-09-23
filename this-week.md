@@ -3,35 +3,34 @@
 Everything in [`today.md`](today.md), plus:
 
 ## Active work (in progress or newly assigned)
-- **[BDD-3206](sources/linear/my-issues.md) / [BDD-3223](sources/linear/my-issues.md) / [BDD-3205](sources/linear/my-issues.md) / [BDD-3191](sources/linear/my-issues.md)** — Video Delivery Slice 3.2, all unchanged this cycle (no Linear movement since 09-21). See `shaping/video-download-delivery.md`.
-- **[BDD-2258](sources/linear/my-issues.md)** — Sample XML/CSV with video links + test manufacturer on SFTP, Ready to Start, unblocked since BDD-2567 shipped 08-31 — still not started, over five weeks stale.
-- **[BDD-3117](sources/linear/my-issues.md)** — "FW: PME stockbase", In Progress. No change.
-- **[BDD-3252](sources/linear/my-issues.md)** — Off-Boarded Brands Deletion, To Do, not FD-referenced. No change.
-- **[BDD-2406](sources/linear/my-issues.md)** — internal tech-debt item, Ready To Start, untouched.
+- **Video Delivery Slice 3.2**: [BDD-3223](sources/linear/my-issues.md) / [BDD-3205](sources/linear/my-issues.md) / [BDD-3206](sources/linear/my-issues.md) are In Review. [BDD-3191](sources/linear/my-issues.md) (N1 docs) is still In Progress. The PR stack is #2753 merged, #2754 approved but blocked, parts 3/4 not open yet. See `shaping/video-download-delivery.md`.
+- **[BDD-2258](sources/linear/my-issues.md)**: Sample XML/CSV with video links + test manufacturer on SFTP. Ready to Start and unblocked since 08-31, but still not started (over five weeks stale).
+- **[BDD-3252](sources/linear/my-issues.md)**: Off-Boarded Brands Deletion, To Do, not FD-referenced. No change.
+- **[BDD-2406](sources/linear/my-issues.md)**: internal tech-debt item, Ready To Start, untouched.
 
 ## Off his plate (standing, not this cycle)
-- **[BDD-2079](sources/linear/my-issues.md)** (Auth0 SSO for DES Bull Board) remains On-Hold, long-parked, still assigned to Kushel.
+- **[BDD-2079](sources/linear/my-issues.md)** (Auth0 SSO for DES Bull Board) is still On-Hold, long parked, still assigned to Kushel.
 
 ## PR backlog
-- **Zero open PRs of his own.**
-- **Review queue down to 4** (was 5) — see `today.md` for detail. He personally cleared [#2748](sources/github/product-service/open-prs.md) this morning; [#2683](prs/to-review.md) untouched (over a week stale), [#2514](prs/to-review.md) stale draft (25 days), [#1878](prs/to-review.md)/[#1871](prs/to-review.md) both Approved-and-waiting-on-him.
-- Brand-migration PR wave continues, mostly not his: blueSeven/fynchHatton/milestone/schumacher/polaris/swing pairs still working through review. product-service down 18→16 (one new, three merged), brand-data-pipeline up 17→18 (one new, "sizes" #1929).
-- **product-service#1737** (not his) flipped from months of `unknown` mergeable state to a real conflict — worth a glance if it ever becomes his.
+- **One open PR of his own:** [product-service#2754](prs/mine.md), approved but still blocked on merge. See `today.md`.
+- **Review queue is 3:** [#2683](prs/to-review.md) (swing, 9 days, its pipeline half already merged), [#1878](prs/to-review.md) (polaris, sole reviewer), [#2514](prs/to-review.md) (stale draft).
+- **Churn:** product-service went 16 to 14 (2 new, 4 dropped: #2748/#2737/#2750 merged, #2681 closed) and brand-data-pipeline went 18 to 19 (3 new, #1871/#1919 merged). GitHub resolved every mergeable state this cycle. Four old pipeline PRs (#1263, #1120, #1058, #1055, none his) now show real conflicts, and product-service#1737 is still conflicting.
 
-## Aged, unassigned Triage tickets (visibility only — not necessarily his)
-Unchanged this cycle — still 6 support-shaped items, identical to last sync:
-- [BDD-3005](support/open.md) (Low) — open since 2026-08-03, oldest unassigned item, now seven-plus weeks.
-- [BDD-3043](support/open.md) (Medium) — open since 2026-08-20, oldest Medium, sole Medium item.
-- [BDD-3241](support/open.md) (Low) — already carries an assignee (oleh.polishchuk) despite Triage status.
-- [BDD-3243](support/open.md) (Low), [BDD-3260](support/open.md) (Low) — no material change.
-- **[BDD-3248](support/open.md) — sole remaining High-priority item, aging a sixth cycle now.**
+## Aged, unassigned Triage tickets (visibility only, not necessarily his)
+7 support-shaped items (was 6):
+- [BDD-3005](support/open.md) (Low): open since 2026-08-03, the oldest unassigned item, now seven-plus weeks.
+- [BDD-3043](support/open.md) (Medium): open since 2026-08-20, the oldest Medium.
+- [BDD-3241](support/open.md) (Low): already has an assignee (oleh.polishchuk) despite being in Triage.
+- [BDD-3243](support/open.md) (Low) and [BDD-3260](support/open.md) (Low): no material change.
+- [BDD-3296](support/open.md) (Medium): new 09-22, not aged yet.
+- **[BDD-3248](support/open.md) is still the only High-priority item, now aging a seventh cycle.**
 
-## Shaping — waiting on his input
-- [Video download delivery](shaping/video-download-delivery.md) — active, no movement this cycle.
+## Shaping (waiting on his input)
+- [Video download delivery](shaping/video-download-delivery.md): active, and Slice 3.2 is now in review.
 
-## Dagster — recurring patterns to watch
-- **mosMosh/ara OOM sprees — quiet for the first time in 4 days**, but unconfirmed as resolved (see `today.md` and the new active earmark in `_meta/earmarks.md`). [BDD-3268](support/open.md) still In Progress.
-- **riani — `trigger_enrichment_from_map` recurred again** (4x on 09-21), despite Dushan's 09-17 "will check." Still unfixed.
-- **Datadog log-index quota — sixth occurrence**, self-resolves on quota reset each time, no permanent fix.
-- **process_enrichment_flow, PDS Kinesis, meyer__FEED__map, ECS galvatron — all quiet or routine this window**, no new escalations.
+## Dagster (recurring patterns to watch)
+- **The mosMosh/ara OOM sprees are over**: quiet for about 48h and the earmark is closed. The cause of the stop is still unknown, since BDD-3268 hasn't shipped.
+- **riani `trigger_enrichment_from_map`**: 1 more failure (was 4 last cycle), still no fix since Dushan's 09-17 "will check."
+- **sOliver FEED2 `map`**: 1 new failure, watch whether it repeats.
+- **Datadog log-index quota, process_enrichment_flow, PDS Kinesis, galvatron ECS**: all quiet or routine this window.
 - Full log: [`dagster-alerts/log.md`](dagster-alerts/log.md).

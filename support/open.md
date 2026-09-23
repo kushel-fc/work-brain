@@ -2,7 +2,7 @@
 
 FD-sourced/support-shaped tickets, by priority then age (oldest first within each tier). Sourced from the team BDD Triage view: https://linear.app/fashioncloud/team/BDD/triage. Populated on sync. Full raw Triage list lives in [`sources/linear/triage.md`](../sources/linear/triage.md).
 
-6 items now (was 9) — quiet inflow cycle, zero new items. BDD-3278 shipped same day it landed; BDD-3268 and BDD-3266 both individually picked up by abubakarwase (now In Progress / In Review, off Triage) — continuing the same workload-shift pattern flagged in recent cycles. Still just 1 High.
+7 items now (was 6). One new: BDD-3296 (Medium, Altex SS27 cancellations, 09-22). Nothing picked up or closed off the list this cycle. Still just 1 High.
 
 ## High
 
@@ -13,7 +13,7 @@ priority: High
 updated: 2026-09-14
 url: https://linear.app/fashioncloud/issue/BDD-3248/images-uploading-by-api-stout-jeans-fd-676401
 ```
-No change since last sync. Aging a fifth cycle now, sole High-priority item.
+No change since last sync. Aging a seventh cycle now, sole High-priority item.
 
 ## Medium
 
@@ -25,6 +25,15 @@ updated: 2026-08-20
 url: https://linear.app/fashioncloud/issue/BDD-3043/incorrect-delimiter-not-shown-as-error-fd-672084
 ```
 PIPE silently mis-parses on a delimiter mismatch instead of erroring. Oldest Medium item, still untouched.
+
+```yaml
+id: BDD-3296
+title: "RE: Cancellations SS27 (FD: 677256)"
+priority: Medium
+updated: 2026-09-22
+url: https://linear.app/fashioncloud/issue/BDD-3296/re-cancellations-ss27-fd-677256
+```
+New. Altex SS27 cancellations file - repeat of a request type Kushel has handled before (BDD-3112, BDD-3229).
 
 ## Low
 

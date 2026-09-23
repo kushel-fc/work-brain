@@ -3,6 +3,28 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 1871
+title: swing brand migration
+author: abirprantofc
+state: closed
+merged: true
+closed: 2026-09-23
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1871
+```
+Was in his review queue (named alongside marianabassi). Merged 09-23 08:33 UTC on dwiajik's approval, without Kushel reviewing. Companion product-service#2683 still open and still names him.
+
+```yaml
+number: 1919
+title: "feat(image-source): introduce image_source.credential_id for all image flows"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-09-22
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1919
+```
+Not his. Merged 09-22 13:58 UTC with product-service#2737.
+
+```yaml
 number: 1912
 title: Fix vanDeVelde reversed season labels
 author: FCMachineUser

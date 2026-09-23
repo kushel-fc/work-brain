@@ -1,6 +1,6 @@
 ---
 status: active
-last_touched: 2026-09-21
+last_touched: 2026-09-23
 ---
 
 # Video download delivery on platform
@@ -17,3 +17,5 @@ Carried over from the old Notion "Parked" section. The underlying download suppo
 The routing rule in both specs is explicit that the existing images-only and images+CSV-without-video paths must not be refactored or "unified" as part of this — new path added beside the old one, not a replacement. Tracking moves to `sources/linear/my-issues.md` for status and this file mainly for the shape of the work.
 
 **09-21 update:** first real code movement on Slice 3.2 — [BDD-3206](../sources/linear/my-issues.md) (backend routing) advanced Ready To Start → In Progress today. BDD-3223/3205/3191 remain In Progress, unchanged.
+
+**09-23 update:** Slice 3.2 reached review. BDD-3205, BDD-3206 and parent BDD-3223 all moved to In Review on 09-22 (BDD-3191, the N1 docs ticket, is still In Progress). The code is going up as a 4-part product-service stack: [#2753](../archive/prs/product-service.md) (1/4, PCS S3 bucket infra) merged 09-22, [#2754](../prs/mine.md) (2/4, `@repo/csv-generation` package) is approved but still blocked on merge, and parts 3/4 aren't open yet. #2754's description says the package ports the backend's CSV export logic (`columnNames.ts`, `getCsvContent.ts`) into a config-driven form, which matches the "no code change per column/language" requirement above.

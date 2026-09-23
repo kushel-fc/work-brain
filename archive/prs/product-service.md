@@ -3,6 +3,72 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2753
+title: "1/4: Provision PCS general S3 bucket infrastructure"
+author: kushel-fc
+state: closed
+merged: true
+closed: 2026-09-22
+url: https://github.com/fashioncloud/product-service/pull/2753
+```
+**His own.** Opened and merged inside the 09-22 window (never appeared on the open list). 1/4 of the Video Delivery Slice 3.2 CSV-generation stack split out of #2752.
+
+```yaml
+number: 2752
+title: "3.2 PCS - Full CSV generation on PCS when video and CSV are selected"
+author: kushel-fc
+state: closed
+merged: false
+closed: 2026-09-22
+url: https://github.com/fashioncloud/product-service/pull/2752
+```
+**His own.** Opened and closed unmerged 09-22 - replaced by a 4-part split for easier review (#2753 merged, #2754 open).
+
+```yaml
+number: 2748
+title: Require all four shoeMaterial parts before keeping the attribute
+author: abubakarwase
+state: closed
+merged: true
+closed: 2026-09-22
+url: https://github.com/fashioncloud/product-service/pull/2748
+```
+Kushel approved it 09-22 08:45 UTC; merged 12:38 UTC same day.
+
+```yaml
+number: 2737
+title: "feat(image-downloading): resolve FTP/SFTP credentials from 1Password"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-09-22
+url: https://github.com/fashioncloud/product-service/pull/2737
+```
+Not his. Merged 09-22 13:58 UTC alongside its pipeline companion #1919.
+
+```yaml
+number: 2750
+title: Staging Release - 2026-09-21
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-09-22
+url: https://github.com/fashioncloud/product-service/pull/2750
+```
+Routine staging release bot PR. Merged 09-22 10:17 UTC.
+
+```yaml
+number: 2681
+title: schumacher mapping rules
+author: alirezaMoazenFashion
+state: closed
+merged: false
+closed: 2026-09-22
+url: https://github.com/fashioncloud/product-service/pull/2681
+```
+Not his. Closed unmerged 09-22 13:40 UTC (pipeline companion #1869 still open and Approved).
+
+```yaml
 number: 2742
 title: Enable CINQUE on PIPE
 author: FCMachineUser

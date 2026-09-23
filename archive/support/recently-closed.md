@@ -3,6 +3,17 @@
 Older entries rolled off `support/recently-closed.md`'s ~25-item cap. Never deleted.
 
 ```yaml
+id: BDD-3225
+title: "Re: Pepe Jeans - missing image report (FD: 675342)"
+priority: High
+closed: 2026-09-09
+url: https://linear.app/fashioncloud/issue/BDD-3225/re-pepe-jeans-missing-image-report-fd-675342
+```
+Resolved — the long AWWG/Pepe Jeans missing-image thread is done. Was at the top of `today.md` last two cycles.
+
+Older entries (BDD-2530, BDD-3089, BDD-3155, BDD-2957, BDD-3167, BDD-3154, BDD-3103, BDD-3112, BDD-3111, BDD-3115, BDD-3130, BDD-3105, BDD-3114, BDD-3135, BDD-3116, BDD-3127, BDD-3131, BDD-3133, BDD-3138, BDD-3134, BDD-3076, BDD-3113, BDD-3136, BDD-2945, BDD-3107, BDD-3157, BDD-3152) rolled off the ~25-item cap across the last eight cycles — see [`archive/support/recently-closed.md`](../archive/support/recently-closed.md).
+
+```yaml
 id: BDD-2530
 title: PIPE Global transform doesn't catch feed-transform mistakes on string attributes (FD: 645951)
 priority: Low

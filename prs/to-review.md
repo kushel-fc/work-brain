@@ -2,7 +2,7 @@
 
 PRs where Kushel is a requested reviewer. Populated on sync.
 
-Queue down to 4 (was 5) — **he reviewed and approved [product-service#2748](../sources/github/product-service/open-prs.md) himself this morning** (09-22 08:45 UTC, shoeMaterial attribute validation), so GitHub no longer lists him as a requested reviewer on it. dwiajik is the only one left outstanding there. No new PRs landed naming him this cycle.
+Queue down to 3 (was 4). **brand-data-pipeline#1871 (swing) merged 09-23 08:33 UTC on dwiajik's approval without his review**, so it's off the queue; its product-service companion #2683 is still here. No new PRs name him this cycle.
 
 ```yaml
 number: 2683
@@ -13,10 +13,10 @@ state: open
 mergeable_state: mergeable
 review_state: awaiting-first-review
 requested_reviewers: [brand-data-dev (team), kushel-fc, alirezaMoazenFashion]
-updated: 2026-09-14
+updated: 2026-09-23
 url: https://github.com/fashioncloud/product-service/pull/2683
 ```
-Untouched since opening, now over a week stale. Companion brand-data-pipeline#1871 (below) already has an approval and a clean mergeable state — this half doesn't yet.
+Still no human reviews, nine days after opening. `updated` moved to today only because of Spacelift bot comments. Its companion brand-data-pipeline#1871 merged this morning without him, so this half is now the one holding up the swing migration.
 
 ```yaml
 number: 1878
@@ -30,21 +30,7 @@ requested_reviewers: [kushel-fc]
 updated: 2026-09-16
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1878
 ```
-Sole named reviewer. dwiajik commented, marianabassi approved, but GitHub's aggregate `reviewDecision` is still empty — his own review is what's outstanding. No change since last cycle.
-
-```yaml
-number: 1871
-repo: brand-data-pipeline
-title: swing brand migration
-author: abirprantofc
-state: open
-mergeable_state: mergeable
-review_state: approved
-requested_reviewers: [marianabassi, kushel-fc]
-updated: 2026-09-14
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/1871
-```
-`mergeable_state` resolved from `unknown` to a clean `mergeable` this cycle. Approved by dwiajik (correcting a prior sync's note that attributed the approval to marianabassi) — Kushel still listed as an outstanding requested reviewer.
+Sole named reviewer. dwiajik commented, marianabassi approved, but GitHub's aggregate `reviewDecision` is still empty, so his review is the one outstanding. `mergeStateStatus` is `BLOCKED`. No activity since 09-16.
 
 ```yaml
 number: 2514
@@ -59,4 +45,4 @@ requested_reviewers: [brand-data-dev (team), irembbt, kushel-fc, dwiajik, julsja
 updated: 2026-08-28
 url: https://github.com/fashioncloud/product-service/pull/2514
 ```
-Draft, already has Changes Requested from someone else. Still stale — now 25 days untouched.
+Draft, already has Changes Requested from someone else. Still stale, now 26 days untouched.
