@@ -2,7 +2,49 @@
 
 Full raw Triage backlog for team BDD, sourced from https://linear.app/fashioncloud/team/BDD/triage. Populated on sync. See `support/open.md` for the FD-referenced/support-shaped curated subset.
 
-**09-23 sync:** Up to 7 items (was 6). One new: **BDD-3296** (Medium, Altex SS27 cancellations). Nothing left Triage; every other item is unchanged since last sync.
+**09-24 sync:** Up to 10 items (was 7). Three new on 09-24: **BDD-3306** (Medium, CWF GTIN `0` removal), **BDD-3304** (Medium, Blackstone EAN deletion), and **BDD-3305** (no priority, internal feature request already assigned to Dushan). Nothing left Triage; the other seven are unchanged.
+
+---
+
+```yaml
+id: BDD-3306
+title: Remove gtin for CWF (FD: 678159)
+priority: Medium
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-09-24
+url: https://linear.app/fashioncloud/issue/BDD-3306/remove-gtin-for-cwf-fd-678159
+```
+New 09-24. CWF has a GTIN of literally `0`, which is reportedly blocking the Showroom stock importer. Asks for it to be deleted.
+
+---
+
+```yaml
+id: BDD-3305
+title: Allow successful files to continue when others fail
+priority: No priority
+status: Triage
+assignee: dushan.silva@fashion.cloud
+team: BDD
+updated: 2026-09-24
+url: https://linear.app/fashioncloud/issue/BDD-3305/allow-successful-files-to-continue-when-others-fail
+```
+New 09-24, internal feature request from Munia (not FD-referenced). A sanetta run with 4 files stopped at the parse job because 3 had bad EAN formatting, so the 1 good file was never processed either. Already assigned to Dushan while still in Triage.
+
+---
+
+```yaml
+id: BDD-3304
+title: Deleting EANs | Blackstone (FD: 678060)
+priority: Medium
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-09-24
+url: https://linear.app/fashioncloud/issue/BDD-3304/deleting-eans-blackstone-fd-678060
+```
+New 09-24. Routine EAN-deletion request, 33 EANs for Blackstone.
 
 ---
 
@@ -72,7 +114,7 @@ team: BDD
 updated: 2026-09-14
 url: https://linear.app/fashioncloud/issue/BDD-3248/images-uploading-by-api-stout-jeans-fd-676401
 ```
-No change since last sync. Aging a seventh cycle now, still the only High-priority unassigned item.
+No change since last sync. Aging an eighth cycle now, still the only High-priority unassigned item.
 
 ---
 
@@ -100,4 +142,4 @@ team: BDD
 updated: 2026-08-03
 url: https://linear.app/fashioncloud/issue/BDD-3005/er-doet-zich-een-herhalend-probleem-voor-fd-663296
 ```
-Recurring UI issue — navigating to a brand's Content > Productdata bounces back to the home page, blocking downloads. Oldest item in Triage overall, now six-plus weeks untouched.
+Recurring UI issue — navigating to a brand's Content > Productdata bounces back to the home page, blocking downloads. Oldest item in Triage overall, now seven-plus weeks untouched.

@@ -3,6 +3,50 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 1940
+title: "Update flags"
+author: hakansoylu1
+state: closed
+merged: true
+closed: 2026-09-23
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1940
+```
+Not his. Merged 09-23 12:31 UTC.
+
+```yaml
+number: 1939
+title: "feat(image-sync): reject archival on a server we do not own"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-09-23
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1939
+```
+Not his. Merged 09-23 11:04 UTC.
+
+```yaml
+number: 1934
+title: "feat(image-source): per-brand network placement via use_expensive_static_ip"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-09-23
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1934
+```
+Not his. Merged 09-23 11:26 UTC.
+
+```yaml
+number: 1929
+title: "sizes"
+author: Busra040
+state: closed
+merged: true
+closed: 2026-09-23
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1929
+```
+Not his. Merged 09-23 11:45 UTC.
+
+```yaml
 number: 1871
 title: swing brand migration
 author: abirprantofc

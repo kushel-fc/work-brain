@@ -2,7 +2,7 @@
 
 Assigned to Kushel, live (non-completed) statuses. Populated on sync — completed/canceled work stays in Linear's own history rather than being repeated here; see `git log` for what rolled off.
 
-**09-23 sync:** Down to 8 items (was 9). **BDD-3117** (FW: PME stockbase, FD 672891) shipped - In Progress -> Done 09-23 08:17 UTC, moved to `support/recently-closed.md`. **Video Delivery Slice 3.2 moved to In Review** - BDD-3205 (09-22 08:57 UTC), then BDD-3206 and parent BDD-3223 (09-22 21:56 UTC), matching his new PR stack (product-service#2753 merged, #2754 approved-but-blocked). BDD-3191 (N1 docs) stays In Progress.
+**09-24 sync:** Down to 7 items (was 8). **BDD-3252** (Off-Boarded Brands Deletion) is no longer his: Linear shows it reassigned to Mariana Bassi da Silva and moved To Do -> In Review on 09-21 15:35 UTC (earlier syncs missed that move). Still open in team BDD, just no longer assigned to him, so dropped from this list rather than archived. Slice 3.2 part 2/4 (product-service#2754) merged 09-23 15:46 UTC and part 3/4 (#2767) opened 09-23 18:04 UTC; all three Slice 3.2 tickets are still In Review.
 
 ---
 
@@ -13,10 +13,10 @@ priority: No priority
 status: In Review
 assignee: Kushel Ramanayake
 team: BDD
-updated: 2026-09-22
+updated: 2026-09-23
 url: https://linear.app/fashioncloud/issue/BDD-3223/slice-32-full-csv-generation-on-pcs-when-video-and-csv-are-selected
 ```
-Advanced In Progress -> In Review 09-22 21:56 UTC. Parent of BDD-3206 and BDD-3205 - the Slice 3.2 milestone issue itself. Video Delivery project. Code is in the 4-part product-service stack (#2753 merged, #2754 open, parts 3-4 not yet opened).
+Advanced In Progress -> In Review 09-22 21:56 UTC. Parent of BDD-3206 and BDD-3205 - the Slice 3.2 milestone issue itself. Video Delivery project. Code is in the 4-part product-service stack: #2753 and #2754 merged, #2767 (3/4) open since 09-23, part 4 not opened yet.
 
 ---
 
@@ -30,7 +30,7 @@ team: BDD
 updated: 2026-09-22
 url: https://linear.app/fashioncloud/issue/BDD-3205/32-pcs-csv-generation-module
 ```
-Advanced In Progress -> In Review 09-22 08:57 UTC. `@repo/csv-generation` package is product-service#2754 (2/4), approved by Chamindu36 and irembbt, still `BLOCKED` on merge. Child of BDD-3223.
+Advanced In Progress -> In Review 09-22 08:57 UTC. `@repo/csv-generation` package (product-service#2754, 2/4) merged 09-23 15:46 UTC. The PCS CSV generation module itself is #2767 (3/4), open and awaiting human review. Child of BDD-3223.
 
 ---
 
@@ -59,20 +59,6 @@ updated: 2026-09-22
 url: https://linear.app/fashioncloud/issue/BDD-3206/32-backend-route-the-full-request-to-pcs-and-append-its-csv
 ```
 Advanced In Progress -> In Review 09-22 21:56 UTC, a day after first moving to In Progress. Child of BDD-3223. Depends on BDD-3205 and BDD-3191.
-
----
-
-```yaml
-id: BDD-3252
-title: Off-Boarded Brands Deletion
-priority: Medium
-status: To Do
-assignee: Kushel Ramanayake
-team: BDD
-updated: 2026-09-11
-url: https://linear.app/fashioncloud/issue/BDD-3252/off-boarded-brands-deletion
-```
-No change since last sync. Not FD-referenced (internal task).
 
 ---
 
@@ -114,4 +100,4 @@ team: BDD
 updated: 2026-08-18
 url: https://linear.app/fashioncloud/issue/BDD-2258/sample-xmlcsv-with-video-links-test-manufacturer-on-sftp
 ```
-Unblocked since BDD-2567 shipped — still not started, now over four weeks since its own last update.
+Unblocked since BDD-2567 shipped, still not started. Last updated 08-18, over five weeks ago.

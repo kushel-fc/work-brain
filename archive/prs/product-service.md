@@ -3,6 +3,39 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2754
+title: "2/4: Add @repo/csv-generation package"
+author: kushel-fc
+state: closed
+merged: true
+closed: 2026-09-23
+url: https://github.com/fashioncloud/product-service/pull/2754
+```
+**His own.** Merged 09-23 15:46 UTC, after Chamindu36 approved (following his own Changes Requested on 09-22) and irembbt approved. 2/4 of the Slice 3.2 stack.
+
+```yaml
+number: 2762
+title: "studioAnneloes: enable @work by studioAnneloes"
+author: marianabassi
+state: closed
+merged: true
+closed: 2026-09-23
+url: https://github.com/fashioncloud/product-service/pull/2762
+```
+Not his. Merged 09-23 09:44 UTC.
+
+```yaml
+number: 2746
+title: "otto-image-upload: real business logic (Phase 2)"
+author: dushansilva
+state: closed
+merged: true
+closed: 2026-09-23
+url: https://github.com/fashioncloud/product-service/pull/2746
+```
+Not his. Merged 09-23 12:29 UTC.
+
+```yaml
 number: 2753
 title: "1/4: Provision PCS general S3 bucket infrastructure"
 author: kushel-fc

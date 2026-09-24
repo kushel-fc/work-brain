@@ -2,59 +2,33 @@
 
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
-Up to 19 (was 18). Three new: #1934 and #1939 (dwiajik, image-source/image-sync), #1940 (hakansoylu1, "Update flags"). Two merged: **#1871 (swing brand migration - was in his review queue, merged 09-23 08:33 UTC without his review)** and #1919 (image_source.credential_id) - see [`archive/prs/brand-data-pipeline.md`](../../../archive/prs/brand-data-pipeline.md). Every mergeable state resolved to a real read this cycle.
+Down to 17 (was 19). Two new: **#1945 (dwiajik, BDD-3273 external image sync, names Kushel)** and #1941 (Busra040, "config"). Four merged 09-23, none his: #1940 (flags), #1939 and #1934 (dwiajik image-sync/image-source), and #1929 (sizes). See [`archive/prs/brand-data-pipeline.md`](../../../archive/prs/brand-data-pipeline.md). Mergeable states unchanged from last cycle once GitHub finished recomputing; #1263, #1120, #1058 and #1055 (none his) still conflict.
 
 ```yaml
-number: 1940
-title: Update flags
-author: hakansoylu1
-state: open
-mergeable_state: mergeable
-review_state: awaiting-first-review
-requested_reviewers: []
-updated: 2026-09-23
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/1940
-```
-New. Not his.
-
-```yaml
-number: 1939
-title: "feat(image-sync): reject archival on a server we do not own"
+number: 1945
+title: "feat(image-sync): branch to collect + download for external brands"
 author: dwiajik
 state: open
 mergeable_state: mergeable
 review_state: awaiting-first-review
-requested_reviewers: [abubakarwase, alirezaMoazenFashion]
+requested_reviewers: [brand-data-dev (team), kushel-fc, abirprantofc]
 updated: 2026-09-23
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/1939
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1945
 ```
-New. Not his.
+New 09-23 11:59 UTC, **names Kushel individually**. The Dagster half of BDD-3273: picks the image-sync branch per brand from `image_sync.from_external_server`. The description says product-service#2764 must merge first. Only a CodeRabbit comment so far. See [`prs/to-review.md`](../../../prs/to-review.md).
 
 ```yaml
-number: 1934
-title: "feat(image-source): per-brand network placement via use_expensive_static_ip"
-author: dwiajik
-state: open
-mergeable_state: mergeable
-review_state: awaiting-first-review
-requested_reviewers: [brand-data-dev (team), irembbt, abubakarwase]
-updated: 2026-09-22
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/1934
-```
-New. Not his.
-
-```yaml
-number: 1929
-title: sizes
+number: 1941
+title: config
 author: Busra040
 state: open
 mergeable_state: mergeable
 review_state: awaiting-first-review
 requested_reviewers: []
-updated: 2026-09-21
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/1929
+updated: 2026-09-23
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1941
 ```
-Not his. No change.
+New, not his. No reviewers requested.
 
 ```yaml
 number: 1910
@@ -80,7 +54,7 @@ requested_reviewers: []
 updated: 2026-09-14
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1880
 ```
-Not his. `mergeable_state` unknown -> mergeable.
+Not his. No change.
 
 ```yaml
 number: 1879
@@ -93,7 +67,7 @@ requested_reviewers: []
 updated: 2026-09-15
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1879
 ```
-Not his. `mergeable_state` unknown -> mergeable.
+Not his. No change.
 
 ```yaml
 number: 1878
@@ -119,7 +93,7 @@ requested_reviewers: []
 updated: 2026-09-23
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1876
 ```
-Not his. `mergeable_state` unknown -> mergeable.
+Not his. No change.
 
 ```yaml
 number: 1875
@@ -132,7 +106,7 @@ requested_reviewers: [marianabassi]
 updated: 2026-09-23
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1875
 ```
-Not his. `mergeable_state` unknown -> mergeable.
+Not his. No change.
 
 ```yaml
 number: 1872
@@ -145,7 +119,7 @@ requested_reviewers: [irembbt, abirprantofc]
 updated: 2026-09-15
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1872
 ```
-Not his. `mergeable_state` unknown -> mergeable.
+Not his. No change.
 
 ```yaml
 number: 1869
@@ -158,7 +132,7 @@ requested_reviewers: []
 updated: 2026-09-16
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1869
 ```
-Not his. `mergeable_state` unknown -> mergeable.
+Not his. No change.
 
 ```yaml
 number: 1815
@@ -185,7 +159,7 @@ requested_reviewers: []
 updated: 2026-09-04
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1811
 ```
-Not his. `mergeable_state` unknown -> mergeable.
+Not his. No change.
 
 ```yaml
 number: 1472
@@ -198,7 +172,7 @@ requested_reviewers: []
 updated: 2026-08-04
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1472
 ```
-Not his. `mergeable_state` unknown -> mergeable.
+Not his. No change.
 
 ```yaml
 number: 1263
@@ -211,7 +185,7 @@ requested_reviewers: [brand-data-dev (team), dwiajik, irembbt]
 updated: 2026-07-23
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1263
 ```
-Not his. `mergeable_state` unknown -> conflicting.
+Not his. No change.
 
 ```yaml
 number: 1120
@@ -224,7 +198,7 @@ requested_reviewers: []
 updated: 2026-07-16
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1120
 ```
-Not his. `mergeable_state` unknown -> conflicting.
+Not his. No change.
 
 ```yaml
 number: 1058
@@ -238,7 +212,7 @@ requested_reviewers: [Chamindu36]
 updated: 2026-07-07
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1058
 ```
-Not his. `mergeable_state` unknown -> conflicting.
+Not his. No change.
 
 ```yaml
 number: 1055
@@ -251,4 +225,4 @@ requested_reviewers: []
 updated: 2026-07-07
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1055
 ```
-Not his. `mergeable_state` unknown -> conflicting.
+Not his. No change.

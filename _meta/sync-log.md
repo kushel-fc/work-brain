@@ -2,6 +2,18 @@
 
 One entry per sync run. Prune entries older than ~30 days.
 
+## 2026-09-24 (~08:45 UTC)
+
+About 24h since the last sync (09-23 ~08:50 to 09-24 ~08:45). Linear, GitHub and Slack were all reachable.
+
+- **The Slice 3.2 stack moved up one step.** Kushel's product-service#2754 (2/4) merged 09-23 15:46 UTC, and #2767 (3/4, PCS CSV generation module) opened at 18:04 UTC. CodeRabbit requested changes, he answered, and CodeRabbit approved within two hours. No human review yet, so it's `BLOCKED`. BDD-3205/3206/3223 are still In Review.
+- **Linear correction: BDD-3252 (Off-Boarded Brands Deletion) isn't his.** It was reassigned to Mariana and moved to In Review on 09-21 15:35 UTC. The 09-22 and 09-23 syncs missed this and kept listing it as his To Do. My issues go 8 to 7.
+- Linear: three new Triage tickets on 09-24, so Triage goes 7 to 10. BDD-3306 (Medium, CWF GTIN `0` reportedly blocking the Showroom stock importer), BDD-3304 (Medium, Blackstone EAN deletion), and BDD-3305 (no priority, internal feature request already assigned to Dushan). support/open.md goes 7 to 9. Nothing left Triage.
+- GitHub: review queue 3 to 4, because brand-data-pipeline#1945 (dwiajik, BDD-3273) names him. It waits on product-service#2764 merging first. product-service 14 to 13 (#2767/#2764 new; #2754/#2762/#2746 merged), brand-data-pipeline 19 to 17 (#1945/#1941 new; #1940/#1939/#1934/#1929 merged). A first `gh` read showed transient `unknown` mergeable states right after the merges; a second read resolved them, and no real state changed.
+- Slack was quiet (2 alerts): `viaVai_FEED_sync_images` exceeded the 3h run limit, and digel/FEED had 12 asset failures. Both are new for their brands. riani and sOliver didn't recur. Dagster log pruned by 6 entries from 08-24, now 135 in total.
+- Earmarks: none active, nothing to check.
+- Notified: no. Nothing crossed the notification bar. No deadline passed with zero movement. His own #2767 got Changes Requested from CodeRabbit only, which it then replaced with an approval inside the same window, so it isn't a human Changes Requested or a conflict. No new Urgent unassigned ticket (both new FD tickets are Medium). No Dagster alert came back after self-resolving; both alerts this cycle are first occurrences.
+
 ## 2026-09-23 (~08:50 UTC)
 
 About 24h since the last sync (09-22 ~08:50 to 09-23 ~08:50). Linear, GitHub and Slack were all reachable.

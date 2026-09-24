@@ -2,46 +2,33 @@
 
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
-Down to 14 (was 16). Two new: **#2754 (Kushel's own, 2/4 of the Video Delivery Slice 3.2 CSV-generation stack)** and #2762 (studioAnneloes @work enable, marianabassi). Four dropped off: #2748 (merged 09-22 12:38 UTC, the one he approved last cycle), #2737 (merged), #2750 (staging release, merged), #2681 (schumacher mapping rules, closed unmerged) - see [`archive/prs/product-service.md`](../../../archive/prs/product-service.md). He also opened and merged #2753 (1/4, PCS S3 bucket infra) and closed #2752 (the pre-split parent) inside the same window; both archived. All mergeable states resolved to a real read this cycle (no `unknown`s) - #1737 (not his) still reads a real conflict (`CONFLICTING`/`DIRTY`), confirming last cycle's read.
+Down to 13 (was 14). Two new: **#2767 (Kushel's own, 3/4 of the Slice 3.2 stack)** and #2764 (dwiajik, collect job for external image sources, BDD-3273). Three merged 09-23: **#2754 (his 2/4, 15:46 UTC)**, #2762 (studioAnneloes) and #2746 (otto-image-upload Phase 2), see [`archive/prs/product-service.md`](../../../archive/prs/product-service.md). A first read showed several `unknown` mergeable states (GitHub recomputing after the merges); a second read a minute later resolved them all, so the values below are the resolved ones. #1737 (not his) still conflicts.
 
 ```yaml
-number: 2762
-title: "studioAnneloes: enable @work by studioAnneloes"
-author: marianabassi
-state: open
-mergeable_state: mergeable
-review_state: awaiting-first-review
-requested_reviewers: [brand-data-dev (team), dwiajik, julsjacinto]
-updated: 2026-09-23
-url: https://github.com/fashioncloud/product-service/pull/2762
-```
-New. Not his.
-
-```yaml
-number: 2754
-title: "2/4: Add @repo/csv-generation package"
+number: 2767
+title: "3/4: Add PCS CSV generation module"
 author: kushel-fc
 state: open
 mergeable_state: mergeable
 review_state: awaiting-first-review
-requested_reviewers: [abubakarwase]
+requested_reviewers: [brand-data-dev (team), julsjacinto, alirezaMoazenFashion]
 updated: 2026-09-23
-url: https://github.com/fashioncloud/product-service/pull/2754
+url: https://github.com/fashioncloud/product-service/pull/2767
 ```
-**His own.** 2/4 of the split of #2752 (BDD-3205/BDD-3223 CSV generation on PCS): new `@repo/csv-generation` package. Opened 09-22 10:01 UTC; heavy review day - Chamindu36 requested changes 09-22 13:31 UTC, Kushel iterated through the evening, and Chamindu36 approved 09-23 08:17 UTC. Also approved by irembbt; CodeRabbit's latest review is an approval. All checks green. `mergeStateStatus` still `BLOCKED` with GitHub's aggregate `reviewDecision` empty and abubakarwase still requested - likely waiting on a required/code-owner review. See [`prs/mine.md`](../../../prs/mine.md).
+**His own.** 3/4 of the Video Delivery Slice 3.2 stack (BDD-3205/BDD-3223), opened 09-23 18:04 UTC against `development`. CodeRabbit requested changes at 18:14 UTC; he replied to six threads around 19:51 UTC and CodeRabbit approved at 20:00 UTC. No human reviews yet. 9 checks pass, 1 skipped. `mergeStateStatus: BLOCKED`, waiting on human review. See [`prs/mine.md`](../../../prs/mine.md).
 
 ```yaml
-number: 2746
-title: "otto-image-upload: real business logic (Phase 2)"
-author: dushansilva
+number: 2764
+title: "feat(collect-images): add the collect job for external image sources"
+author: dwiajik
 state: open
 mergeable_state: mergeable
 review_state: changes-requested
-requested_reviewers: [julsjacinto]
+requested_reviewers: [brand-data-dev (team), irembbt, julsjacinto]
 updated: 2026-09-23
-url: https://github.com/fashioncloud/product-service/pull/2746
+url: https://github.com/fashioncloud/product-service/pull/2764
 ```
-Not his. Requested reviewers now [julsjacinto]; came out of draft.
+New, not his. BDD-3273 (product-service half). The Changes Requested so far is CodeRabbit's only. Its pipeline companion brand-data-pipeline#1945 does name Kushel and says this one must merge first.
 
 ```yaml
 number: 2744

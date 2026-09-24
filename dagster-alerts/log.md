@@ -3,6 +3,26 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
+timestamp: 2026-09-23T15:00:10Z
+channel: brand-data-dev-alerts
+brand: viaVai
+summary: viaVai_FEED_sync_images exceeded 3h run time limit (run c64a523f, started 11:59 UTC)
+status: active
+linked_issue: null
+```
+Scheduled image-sync run (`viaVai_FEED_cron_image_sync_schedule`) still `started` at the 3h mark. No thread or reaction. First run-time-limit alert for viaVai in this log; it only appeared before as one of the brands hit by the 08-31 ECR incident.
+
+```yaml
+timestamp: 2026-09-23T12:04:11Z
+channel: brand-data-dev-alerts
+brand: digel
+summary: digel/FEED - 12 asset materializations failed (download_images, extract, ...)
+status: active
+linked_issue: null
+```
+Scheduled `digel_FEED_cron_schedule` run (e0bb88b6). First digel entry in this log. No thread or reaction.
+
+```yaml
 timestamp: 2026-09-22T18:49:01Z
 channel: brand-data-dev-alerts
 brand: sOliver
@@ -1331,64 +1351,4 @@ status: recurring
 linked_issue: null
 ```
 Warning-threshold and quota-reached pairs fired repeatedly across 08-21, 08-22, 08-24, and 08-25, each auto-recovering after the daily quota reset.
-
-```yaml
-timestamp: 2026-08-24T21:33:59Z
-channel: brand-data-dev-alerts
-brand: redmond
-summary: redmond/FEED — 12 asset materializations failed
-status: active
-linked_issue: null
-```
-No thread or reaction visible.
-
-```yaml
-timestamp: 2026-08-24T10:53:02Z
-channel: brand-data-dev-alerts
-brand: marcAurel
-summary: marcAurel/FEED — 9 asset materializations failed
-status: active
-linked_issue: null
-```
-1 thread reply ~30 min later; content not visible in channel history.
-
-```yaml
-timestamp: 2026-08-24T10:16:51Z
-channel: brand-data-dev-alerts
-brand: rinoAndPelle
-summary: rinoAndPelle_FEED run exceeded 3h time limit
-status: active
-linked_issue: null
-```
-1 thread reply ~3h later; content not visible.
-
-```yaml
-timestamp: 2026-08-24T08:41:22Z
-channel: brand-data-dev-alerts
-brand: riani
-summary: riani__FEED__trigger_enrichment_from_map — container exited, exit code 1
-status: active
-linked_issue: null
-```
-"eyes" reaction plus 1 thread reply ~2h later; resolution not visible.
-
-```yaml
-timestamp: 2026-08-24T08:26:48Z
-channel: brand-data-dev-alerts
-brand: zizzi
-summary: zizzi/FEED — recurring asset materialization failures (download_images/extract/feed_transform)
-status: recurring
-linked_issue: null
-```
-Fired at least 6 times across 08-20 through 08-24 (cron-triggered most days, plus manual retries), typically 9-12 assets failing each run. No explicit resolution text.
-
-```yaml
-timestamp: 2026-08-24T07:42:03Z
-channel: brand-data-dev-alerts
-brand: ftcCashmere
-summary: ftcCashmere__FEED__map — container exited, exit code 1
-status: active
-linked_issue: null
-```
-4 thread replies spanning ~6 hours; extended discussion, no confirmed resolution visible.
 

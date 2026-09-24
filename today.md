@@ -1,12 +1,15 @@
 # Today
 
-1. **Earmark triggered: the mosMosh/ara OOM spree is over.** It has now been quiet for a second full cycle, about 48h since the last hit at 09-21 08:53 UTC. The stop still can't be credited to [BDD-3268](support/open.md), which is In Progress with no update since 09-18. Earmark closed; see `_meta/earmarks.md`.
-2. **His own [product-service#2754](prs/mine.md) (2/4 CSV-generation package) is approved but blocked.** Chamindu36 approved at 08:17 UTC today, after requesting changes yesterday afternoon, and irembbt approved too. All checks pass, but GitHub still shows `BLOCKED` with abubakarwase requested, so it probably needs one more required review. Parts 3/4 of the stack are still to open.
-3. **Review queue down to 3** (was 4). [brand-data-pipeline#1871](archive/prs/brand-data-pipeline.md) (swing) merged this morning without him. Its companion [product-service#2683](prs/to-review.md) is now the half holding up the swing migration: 9 days old, zero human reviews. The other two are [brand-data-pipeline#1878](prs/to-review.md) (he's the sole reviewer, idle since 09-16) and [#2514](prs/to-review.md) (stale draft, 26 days).
-4. **[BDD-2258](sources/linear/my-issues.md) is still not started.** It's been unblocked since 08-31 and hasn't been updated in over five weeks.
+1. **His own [product-service#2767](prs/mine.md) (3/4, PCS CSV generation module) needs a human reviewer.** Opened 09-23 18:04 UTC. CodeRabbit is satisfied (approved 20:00 UTC after he answered its threads) and checks pass, but no human has reviewed it and it's `BLOCKED`. The requested reviewers are julsjacinto, alirezaMoazenFashion and the team. It's the next step of the Slice 3.2 stack, and part 4/4 comes after it.
+2. **Review queue up to 4** (was 3):
+   - [product-service#2683](prs/to-review.md) (swing): 10 days, zero human reviews. Its pipeline half already merged, so this is what's holding up the swing migration.
+   - [brand-data-pipeline#1878](prs/to-review.md) (polaris): he's the sole named reviewer, 8 days idle.
+   - **New:** [brand-data-pipeline#1945](prs/to-review.md) (dwiajik, BDD-3273 external image sync). It can't merge before product-service#2764, so it isn't urgent.
+   - [#2514](prs/to-review.md): stale draft, 27 days.
+3. **[BDD-2258](sources/linear/my-issues.md) (High) is still not started.** It's been unblocked since 08-31 and hasn't been updated since 08-18.
 
 ## Worth noting (not urgent)
-- **Video Delivery Slice 3.2 reached review.** BDD-3205, BDD-3206 and BDD-3223 all moved to In Review 09-22, and #2753 (1/4, PCS S3 infra) merged. BDD-3191 (N1 docs) is the only Slice 3.2 ticket still In Progress.
-- **[BDD-3117](support/recently-closed.md) (PME stockbase, his own) shipped**, Done 09-23 08:17 UTC.
-- **New Triage ticket [BDD-3296](support/open.md)** (Medium): Altex SS27 cancellations, the same kind of request as BDD-3112/BDD-3229, both of which he handled before.
-- **Dagster was quiet: 4 messages in 24h.** riani's `trigger_enrichment_from_map` failed once more (down from 4), sOliver FEED2 `map` failed once (new step for that brand), and galvatron had one health-check trigger/recover blip.
+- **[product-service#2754](archive/prs/product-service.md) (2/4) merged** 09-23 15:46 UTC, so 2 of the 4 Slice 3.2 PRs are in.
+- **[BDD-3252](sources/linear/my-issues.md) (Off-Boarded Brands Deletion) is off his list.** It was reassigned to Mariana and moved to In Review on 09-21, which earlier syncs missed. He now has 7 open issues.
+- **Three new Triage tickets on 09-24** ([support/open.md](support/open.md)). [BDD-3306](support/open.md) (Medium) is the one with impact: a GTIN of `0` on CWF is reportedly blocking the Showroom stock importer. The others are [BDD-3304](support/open.md) (routine Blackstone EAN deletion) and BDD-3305 (internal feature request, already Dushan's).
+- **Dagster was quiet: 2 alerts in 24h**, both new for their brands and with no follow-up yet. `viaVai_FEED_sync_images` exceeded the 3h run limit, and digel/FEED had 12 asset materializations fail. riani and sOliver didn't recur. See [dagster-alerts/log.md](dagster-alerts/log.md).
