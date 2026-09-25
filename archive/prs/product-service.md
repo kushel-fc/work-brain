@@ -3,6 +3,50 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2738
+title: "BDD-3277 PoC: relay PDS style stream into per-consumer SQS queues"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-09-25
+url: https://github.com/fashioncloud/product-service/pull/2738
+```
+Not his. Merged 09-25 07:37 UTC.
+
+```yaml
+number: 2692
+title: fynchHatton brand migration
+author: abirprantofc
+state: closed
+merged: false
+closed: 2026-09-25
+url: https://github.com/fashioncloud/product-service/pull/2692
+```
+Not his. Closed without merging 09-25 07:19 UTC. Its pipeline companion brand-data-pipeline#1876 merged a few minutes earlier.
+
+```yaml
+number: 2690
+title: milestone brand migration
+author: abirprantofc
+state: closed
+merged: false
+closed: 2026-09-25
+url: https://github.com/fashioncloud/product-service/pull/2690
+```
+Not his. Closed without merging 09-25 07:24 UTC. Its pipeline companion brand-data-pipeline#1875 merged 07:13 UTC.
+
+```yaml
+number: 2683
+title: swing brand migration
+author: abirprantofc
+state: closed
+merged: false
+closed: 2026-09-24
+url: https://github.com/fashioncloud/product-service/pull/2683
+```
+**Was on his review queue** (named individually, 11 days with zero human reviews). Closed without merging 09-24 15:41 UTC. Its pipeline half (brand-data-pipeline#1871) had already merged 09-23. The swing FEED started running and failing on `download_images` 09-25 (missing `filename_pattern`, fixed in config by Abir).
+
+```yaml
 number: 2754
 title: "2/4: Add @repo/csv-generation package"
 author: kushel-fc

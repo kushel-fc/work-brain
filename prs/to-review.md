@@ -2,35 +2,21 @@
 
 PRs where Kushel is a requested reviewer. Populated on sync.
 
-Queue up to 4 (was 3). New: **brand-data-pipeline#1945** (dwiajik, BDD-3273 external image sync), which names him individually. Nothing left the queue.
+Queue down to 3 (was 4). He approved **brand-data-pipeline#1945** 09-24 15:12 UTC (and, unasked, its dependency product-service#2764 on 09-25 08:28 UTC). **product-service#2683** (swing) closed without merging 09-24 after 11 days with no human review. One new: **product-service#2783** (dushansilva), which already has three approvals.
 
 ```yaml
-number: 1945
-repo: brand-data-pipeline
-title: "feat(image-sync): branch to collect + download for external brands"
-author: dwiajik
-state: open
-mergeable_state: mergeable
-review_state: awaiting-first-review
-requested_reviewers: [brand-data-dev (team), kushel-fc, abirprantofc]
-updated: 2026-09-23
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/1945
-```
-New 09-23. The Dagster half of BDD-3273. It depends on product-service#2764 (not on his list), which the description says must merge first and which still has CodeRabbit's Changes Requested. So there's no rush to merge, but it's a fresh review ask. Only a CodeRabbit comment so far.
-
-```yaml
-number: 2683
+number: 2783
 repo: product-service
-title: swing brand migration
-author: abirprantofc
+title: "otto-image-upload: temporarily switch to CloudWatch logging (diagnostic)"
+author: dushansilva
 state: open
 mergeable_state: mergeable
-review_state: awaiting-first-review
-requested_reviewers: [brand-data-dev (team), kushel-fc, alirezaMoazenFashion]
-updated: 2026-09-23
-url: https://github.com/fashioncloud/product-service/pull/2683
+review_state: approved
+requested_reviewers: [kushel-fc]
+updated: 2026-09-25
+url: https://github.com/fashioncloud/product-service/pull/2783
 ```
-Still no human reviews, ten days after opening. Its companion brand-data-pipeline#1871 merged 09-23 without him, so this half is the one holding up the swing migration.
+New 09-25 08:20 UTC. A one-flag diagnostic change (`enable_firelens_logging = false`) to find out why INFO/WARNING logs from otto-image-upload never reach Datadog. Chamindu36, CodeRabbit and dwiajik approved it within 8 minutes and it's `CLEAN`, so his review doesn't block the merge.
 
 ```yaml
 number: 1878
@@ -44,7 +30,7 @@ requested_reviewers: [kushel-fc]
 updated: 2026-09-16
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1878
 ```
-Sole named reviewer. dwiajik commented, marianabassi approved, but GitHub's aggregate `reviewDecision` is still empty, so his review is the one outstanding. `mergeStateStatus` is `BLOCKED`. No activity since 09-16, now 8 days idle.
+Sole named reviewer, 9 days idle. marianabassi approved, but it's still `BLOCKED`. The author opened a Polaris iteration 2 on 09-24 (brand-data-pipeline#1951, approved by dwiajik, with product-service#2773), which may supersede this one. Worth checking with alirezaMoazenFashion before reviewing it.
 
 ```yaml
 number: 2514
@@ -59,4 +45,4 @@ requested_reviewers: [brand-data-dev (team), irembbt, kushel-fc, dwiajik, julsja
 updated: 2026-08-28
 url: https://github.com/fashioncloud/product-service/pull/2514
 ```
-Draft, already has Changes Requested from someone else. Still stale, now 27 days untouched.
+Draft, already has Changes Requested from someone else. Stale, 28 days untouched.

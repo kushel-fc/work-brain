@@ -2,7 +2,7 @@
 
 FD-sourced/support-shaped tickets, by priority then age (oldest first within each tier). Sourced from the team BDD Triage view: https://linear.app/fashioncloud/team/BDD/triage. Populated on sync. Full raw Triage list lives in [`sources/linear/triage.md`](../sources/linear/triage.md).
 
-9 items now (was 7). Two new on 09-24: BDD-3306 (Medium, CWF GTIN `0` blocking the Showroom stock importer) and BDD-3304 (Medium, Blackstone EAN deletion). Nothing picked up or closed off the list this cycle. Still just 1 High. BDD-3305 (also new in Triage) is an internal feature request already assigned to Dushan, so it's not listed here.
+11 items now (was 9), 3 of them High (was 1). New: **BDD-3312** (High, Citizen image deletion), BDD-3309 (Medium, Falke placeholder images) and BDD-3310 (Low, royRobson FEED2 config). **BDD-3311** (High, Xsensible full sync) came back to Triage from In Review, still assigned to Oleh. Left: BDD-3304 shipped (see [`recently-closed.md`](recently-closed.md)), and BDD-3296 was picked up by abubakarwase (In Progress). BDD-3305 is an internal feature request already assigned to Dushan, so it isn't listed here.
 
 ## High
 
@@ -13,7 +13,25 @@ priority: High
 updated: 2026-09-14
 url: https://linear.app/fashioncloud/issue/BDD-3248/images-uploading-by-api-stout-jeans-fd-676401
 ```
-No change since last sync. Aging an eighth cycle now, sole High-priority item.
+No change since last sync. Aging a ninth cycle, now the oldest of three High items.
+
+```yaml
+id: BDD-3311
+title: "Search service full sync - Brand reassignment (FD: 677360)"
+priority: High
+updated: 2026-09-24
+url: https://linear.app/fashioncloud/issue/BDD-3311/search-service-full-sync-brand-reassignment-fd-677360
+```
+Back in Triage 09-24 after a week of Todo, In Progress, In Review. Xsensible's Nimco brand reassignment needs a search-service full sync. Still assigned to oleh.polishchuk, so not up for grabs. The ticket says "we are on weak footing with the brand."
+
+```yaml
+id: BDD-3312
+title: "Citizen - delete image (FD: 678232)"
+priority: High
+updated: 2026-09-25
+url: https://linear.app/fashioncloud/issue/BDD-3312/citizen-delete-image-fd-678232
+```
+New 09-25. The brand shared an image by accident; asks for it to be removed from the frontend for one article (GTIN 4974374355324). Small, but time-sensitive for the brand.
 
 ## Medium
 
@@ -27,31 +45,22 @@ url: https://linear.app/fashioncloud/issue/BDD-3043/incorrect-delimiter-not-show
 PIPE silently mis-parses on a delimiter mismatch instead of erroring. Oldest Medium item, still untouched.
 
 ```yaml
-id: BDD-3296
-title: "RE: Cancellations SS27 (FD: 677256)"
-priority: Medium
-updated: 2026-09-22
-url: https://linear.app/fashioncloud/issue/BDD-3296/re-cancellations-ss27-fd-677256
-```
-New. Altex SS27 cancellations file - repeat of a request type Kushel has handled before (BDD-3112, BDD-3229).
-
-```yaml
-id: BDD-3304
-title: Deleting EANs | Blackstone (FD: 678060)
-priority: Medium
-updated: 2026-09-24
-url: https://linear.app/fashioncloud/issue/BDD-3304/deleting-eans-blackstone-fd-678060
-```
-New. Routine deletion of 33 Blackstone EANs.
-
-```yaml
 id: BDD-3306
 title: Remove gtin for CWF (FD: 678159)
 priority: Medium
 updated: 2026-09-24
 url: https://linear.app/fashioncloud/issue/BDD-3306/remove-gtin-for-cwf-fd-678159
 ```
-New. A GTIN of `0` on CWF is reportedly blocking the Showroom stock importer, so it has more downstream impact than a typical deletion request.
+A GTIN of `0` on CWF is reportedly blocking the Showroom stock importer, so it has more downstream impact than a typical deletion request.
+
+```yaml
+id: BDD-3309
+title: "product images Falke (FD: 678029)"
+priority: Medium
+updated: 2026-09-24
+url: https://linear.app/fashioncloud/issue/BDD-3309/product-images-falke-fd-678029
+```
+New 09-24. EK Fashion (retailer) reports Falke products coming through with a placeholder image and no product image, which blocks them selling online.
 
 ## Low
 
@@ -62,7 +71,7 @@ priority: Low
 updated: 2026-08-03
 url: https://linear.app/fashioncloud/issue/BDD-3005/er-doet-zich-een-herhalend-probleem-voor-fd-663296
 ```
-Recurring — Content > Productdata navigation bounces to home, blocks downloads. Oldest unassigned item overall, seven-plus weeks now.
+Recurring — Content > Productdata navigation bounces to home, blocks downloads. Oldest unassigned item overall, nearly eight weeks now.
 
 ```yaml
 id: BDD-3243
@@ -91,3 +100,11 @@ url: https://linear.app/fashioncloud/issue/BDD-3260/new-bug-on-fashioncloud-fd-6
 ```
 No change since last sync.
 
+```yaml
+id: BDD-3310
+title: "Update royRobson_FEED2 config (FD: 678213)"
+priority: Low
+updated: 2026-09-24
+url: https://linear.app/fashioncloud/issue/BDD-3310/update-royrobson-feed2-config-fd-678213
+```
+New 09-24. One-line config change: set `resources_size` to `L` in `royRobson_FEED2`.

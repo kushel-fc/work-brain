@@ -2,7 +2,7 @@
 
 PRs Kushel opened, across both repos. Populated on sync.
 
-**One open PR.** The Video Delivery Slice 3.2 stack (BDD-3205/BDD-3223) has moved up one step: **#2754 (2/4, `@repo/csv-generation`) merged 09-23 15:46 UTC**, and #2767 (3/4) opened the same evening. #2753 (1/4) merged 09-22. Part 4/4 isn't open yet. Closed/merged ones are in [`archive/prs/product-service.md`](../archive/prs/product-service.md).
+**One open PR, now with 7 unanswered human review threads.** The Video Delivery Slice 3.2 stack (BDD-3205/BDD-3223) is unchanged in shape: #2753 (1/4) and #2754 (2/4) merged, #2767 (3/4) open, 4/4 not opened yet. Closed/merged ones are in [`archive/prs/product-service.md`](../archive/prs/product-service.md).
 
 ```yaml
 number: 2767
@@ -12,10 +12,14 @@ author: kushel-fc
 state: open
 mergeable_state: mergeable
 review_state: awaiting-first-review
-requested_reviewers: [brand-data-dev (team), julsjacinto, alirezaMoazenFashion]
-updated: 2026-09-23
+requested_reviewers: [julsjacinto, alirezaMoazenFashion]
+updated: 2026-09-24
 url: https://github.com/fashioncloud/product-service/pull/2767
 ```
-Opened 09-23 18:04 UTC. CodeRabbit requested changes at 18:14 UTC; he answered six threads around 19:51 UTC and CodeRabbit approved at 20:00 UTC. No human review yet. Checks pass (9 success, 1 skipped). `BLOCKED` until a human reviewer approves. Chamindu36, who reviewed 2/4, isn't on the reviewer list for this one.
+CodeRabbit approved 09-23 20:00 UTC after he answered its six threads. On 09-24 two human reviewers commented, with no approve or request-changes verdict:
+- **Chamindu36** (11:34 to 11:36 UTC, `csv-generation.service.ts`): use proper TSDoc, and move the helper functions out of the service class into their own file.
+- **irembbt** (12:22 to 12:32 UTC): should the multi-download DTO carry `language` (asked twice); does one failing language fail the whole "all languages" generation; confirm the filename date format matches backend's CSV. Plus a top-level question on where `multi-download/resolve` gets called (answer: the next PR, 4/4).
+
+He hasn't replied to any of them yet. Still `BLOCKED` on a human approval.
 
 His earlier self-closed PR (#2545, GTIN cleanup batch) is still parked in [`archive/prs/product-service.md`](../archive/prs/product-service.md), unrevisited.

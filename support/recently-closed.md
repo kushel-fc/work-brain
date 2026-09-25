@@ -3,6 +3,15 @@
 Capped at ~25 most recent. Older entries move to `../archive/support/`. Sourced from team BDD Done/Deployed issues carrying an FD reference.
 
 ```yaml
+id: BDD-3304
+title: Deleting EANs | Blackstone (FD: 678060)
+priority: Medium
+closed: 2026-09-24
+url: https://linear.app/fashioncloud/issue/BDD-3304/deleting-eans-blackstone-fd-678060
+```
+Landed in Triage 09-24 07:34 UTC and went straight to Deployed at 08:55 UTC, just after last sync. 33 Blackstone EANs.
+
+```yaml
 id: BDD-3117
 title: "FW: PME stockbase (FD: 672891)"
 priority: Medium
@@ -217,12 +226,3 @@ closed: 2026-09-09
 url: https://linear.app/fashioncloud/issue/BDD-3163/brand-offboarding-delete-data-fd-674971
 ```
 Part of the 09-04 bulk Triage-clearing assignment — went In Progress → Deployed within this cycle. Cross-checked against the Notion "Brands that got offboarded" table per standing practice.
-
-```yaml
-id: BDD-1495
-title: "PIPE | CWF Image reprocessing - not gtins found / retool discrepency (FD: 486539)"
-priority: Low
-closed: 2026-09-09
-url: https://linear.app/fashioncloud/issue/BDD-1495/pipe-cwf-image-reprocessing-not-gtins-found-retool-discrepency-fd
-```
-Old ticket, resurfaced 09-06, now shipped.

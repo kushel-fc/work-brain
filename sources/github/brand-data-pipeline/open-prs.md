@@ -2,7 +2,46 @@
 
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
-Down to 17 (was 19). Two new: **#1945 (dwiajik, BDD-3273 external image sync, names Kushel)** and #1941 (Busra040, "config"). Four merged 09-23, none his: #1940 (flags), #1939 and #1934 (dwiajik image-sync/image-source), and #1929 (sizes). See [`archive/prs/brand-data-pipeline.md`](../../../archive/prs/brand-data-pipeline.md). Mergeable states unchanged from last cycle once GitHub finished recomputing; #1263, #1120, #1058 and #1055 (none his) still conflict.
+Still 17. Three new: #1955 (automated production release, 09-25), #1951 (Polaris iteration 2) and #1947 (schumacher iteration 2). Three left: #1876 (fynchHatton) and #1875 (milestone) merged 09-25 around 07:13 UTC, and #1869 (schumacher iteration 1) closed 09-24 without merging, replaced by #1947. See [`archive/prs/brand-data-pipeline.md`](../../../archive/prs/brand-data-pipeline.md). **Kushel approved #1945**, so it's off his queue. A first read showed many `unknown` mergeable states; a second read resolved them all. #1263, #1120, #1058 and #1055 (none his) still conflict.
+
+```yaml
+number: 1955
+title: Production Release - 2026-09-25
+author: FCMachineUser
+state: open
+mergeable_state: mergeable
+review_state: awaiting-first-review
+requested_reviewers: [brand-data-dev (team), irembbt, abirprantofc]
+updated: 2026-09-25
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1955
+```
+New 09-25 08:45 UTC. Automated production-release PR, triggered by irembbt. Not his.
+
+```yaml
+number: 1951
+title: Polaris FEED brand migration
+author: alirezaMoazenFashion
+state: open
+mergeable_state: mergeable
+review_state: (no decision yet)
+requested_reviewers: []
+updated: 2026-09-25
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1951
+```
+New 09-24, not his. Polaris iteration 2 (branch `bdd-polaris-FEED-iteration-2`), paired with product-service#2773. dwiajik approved 09-25 05:56 UTC, but GitHub's aggregate decision is still empty and merge state is `BLOCKED`. It overlaps with the older #1878 (iteration 1), which still names Kushel.
+
+```yaml
+number: 1947
+title: schumacher brand migration
+author: alirezaMoazenFashion
+state: open
+mergeable_state: mergeable
+review_state: approved
+requested_reviewers: []
+updated: 2026-09-25
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1947
+```
+New 09-24, not his. Schumacher iteration 2, replacing #1869 (closed 09-24 without merging). dwiajik approved 09-25. Paired with product-service#2769.
 
 ```yaml
 number: 1945
@@ -10,12 +49,12 @@ title: "feat(image-sync): branch to collect + download for external brands"
 author: dwiajik
 state: open
 mergeable_state: mergeable
-review_state: awaiting-first-review
-requested_reviewers: [brand-data-dev (team), kushel-fc, abirprantofc]
-updated: 2026-09-23
+review_state: approved
+requested_reviewers: [abirprantofc]
+updated: 2026-09-24
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1945
 ```
-New 09-23 11:59 UTC, **names Kushel individually**. The Dagster half of BDD-3273: picks the image-sync branch per brand from `image_sync.from_external_server`. The description says product-service#2764 must merge first. Only a CodeRabbit comment so far. See [`prs/to-review.md`](../../../prs/to-review.md).
+The Dagster half of BDD-3273. **Kushel approved it 09-24 15:12 UTC**, so it has left his queue. `CLEAN`, but the description says product-service#2764 must merge first. #2764 is approved now too (he approved it 09-25 08:28 UTC).
 
 ```yaml
 number: 1941
@@ -83,32 +122,6 @@ url: https://github.com/fashioncloud/brand-data-pipeline/pull/1878
 Individually his to review, sole named reviewer. dwiajik commented, marianabassi approved - his own review still outstanding. No activity since 09-16. See [`prs/to-review.md`](../../../prs/to-review.md).
 
 ```yaml
-number: 1876
-title: fynchHatton brand migration
-author: abirprantofc
-state: open
-mergeable_state: mergeable
-review_state: awaiting-first-review
-requested_reviewers: []
-updated: 2026-09-23
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/1876
-```
-Not his. No change.
-
-```yaml
-number: 1875
-title: milestone brand migration
-author: abirprantofc
-state: open
-mergeable_state: mergeable
-review_state: awaiting-first-review
-requested_reviewers: [marianabassi]
-updated: 2026-09-23
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/1875
-```
-Not his. No change.
-
-```yaml
 number: 1872
 title: dorisStreich - FEED - INTEX migration
 author: alirezaMoazenFashion
@@ -118,19 +131,6 @@ review_state: approved
 requested_reviewers: [irembbt, abirprantofc]
 updated: 2026-09-15
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1872
-```
-Not his. No change.
-
-```yaml
-number: 1869
-title: schumacher brand migration
-author: alirezaMoazenFashion
-state: open
-mergeable_state: mergeable
-review_state: approved
-requested_reviewers: []
-updated: 2026-09-16
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/1869
 ```
 Not his. No change.
 

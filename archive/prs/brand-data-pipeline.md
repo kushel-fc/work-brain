@@ -3,6 +3,39 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 1876
+title: fynchHatton brand migration
+author: abirprantofc
+state: closed
+merged: true
+closed: 2026-09-25
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1876
+```
+Not his. Merged 09-25 07:12 UTC.
+
+```yaml
+number: 1875
+title: milestone brand migration
+author: abirprantofc
+state: closed
+merged: true
+closed: 2026-09-25
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1875
+```
+Not his. Merged 09-25 07:13 UTC.
+
+```yaml
+number: 1869
+title: schumacher brand migration
+author: alirezaMoazenFashion
+state: closed
+merged: false
+closed: 2026-09-24
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1869
+```
+Not his. Closed without merging 09-24 10:26 UTC, even though it was approved. Replaced by #1947 (iteration 2), opened half an hour later.
+
+```yaml
 number: 1940
 title: "Update flags"
 author: hakansoylu1

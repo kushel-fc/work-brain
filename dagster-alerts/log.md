@@ -3,14 +3,64 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
+timestamp: 2026-09-25T08:21:31Z
+channel: brand-data-dev-alerts
+brand: swing
+summary: "swing__FEED__download_images - essential container exited (exit 1), twice"
+status: self-resolved
+linked_issue: null
+```
+Two failures (runs 3f494041 at 07:24 UTC and 359b080b at 08:21 UTC). First swing entry in this log, right after the swing migration went live (brand-data-pipeline#1871 merged 09-23). In the thread Aji explained that `filename_pattern` is still required even though image download doesn't use it, and suggested `*` as a placeholder. Abir replied "Fixed it." No clean run confirmed inside this capture window.
+
+```yaml
+timestamp: 2026-09-25T06:48:32Z
+channel: brand-data-dev-alerts
+brand: viaVai
+summary: "viaVai__FEED__move_images_from_ftp_to_s3_job_sync - task stopped by user (exit 137), run c64a523f"
+status: self-resolved
+linked_issue: null
+```
+Follow-up to the 09-23 run-time-limit alert: the same run (c64a523f, started 09-23 11:59 UTC) was stopped manually after about 43h. So it's cleared, but the cause of the hang is unknown. No thread. Watch whether the next scheduled image sync hangs as well.
+
+```yaml
+timestamp: 2026-09-25T04:07:42Z
+channel: brand-data-dev-alerts
+brand: platform (analytics_trigger_sensor)
+summary: analytics step - essential container exited, exit code 1, once more
+status: recurring
+linked_issue: null
+```
+First hit since 09-17, about 8 days quiet. Same no-owner recurring pattern. No thread.
+
+```yaml
+timestamp: 2026-09-24T17:15:16Z
+channel: brand-data-dev-alerts
+brand: stateOfArt
+summary: stateOfArt/PRICAT - 11 asset materializations failed (download_images, feed_transform, ...)
+status: active
+linked_issue: null
+```
+Scheduled `stateOfArt_PRICAT_cron_schedule` run (73aa2dd5). First stateOfArt entry in this log. No thread or reaction.
+
+```yaml
+timestamp: 2026-09-24T14:20:36Z
+channel: brand-data-dev-alerts
+brand: woden
+summary: woden/FEED - 11 asset materializations failed (download_images, feed_transform, ...)
+status: active
+linked_issue: null
+```
+Scheduled `woden_FEED_cron_schedule` run (609fb604). First woden entry in this log. No thread or reaction.
+
+```yaml
 timestamp: 2026-09-23T15:00:10Z
 channel: brand-data-dev-alerts
 brand: viaVai
 summary: viaVai_FEED_sync_images exceeded 3h run time limit (run c64a523f, started 11:59 UTC)
-status: active
+status: self-resolved
 linked_issue: null
 ```
-Scheduled image-sync run (`viaVai_FEED_cron_image_sync_schedule`) still `started` at the 3h mark. No thread or reaction. First run-time-limit alert for viaVai in this log; it only appeared before as one of the brands hit by the 08-31 ECR incident.
+Scheduled image-sync run (`viaVai_FEED_cron_image_sync_schedule`) still `started` at the 3h mark. No thread or reaction. First run-time-limit alert for viaVai in this log; it only appeared before as one of the brands hit by the 08-31 ECR incident. **Update 09-25:** the same run was stopped by a user at 06:48 UTC (about 43h after it started); see the 09-25 entry.
 
 ```yaml
 timestamp: 2026-09-23T12:04:11Z
@@ -1291,64 +1341,3 @@ status: self-resolved
 linked_issue: null
 ```
 Triggered 09:49 UTC, recovered 10 minutes later at 09:59 UTC.
-
-```yaml
-timestamp: 2026-08-25T21:49:35Z
-channel: brand-data-dev-alerts
-brand: platform (ECS/galvatron)
-summary: ECS health check failures detected in production
-status: recurring
-linked_issue: null
-```
-Same monitor (galvatron service) triggered and auto-recovered three times on 2026-08-25 (00:07→00:14, 02:07→02:10, 23:42→23:49 UTC). Each cycle self-recovered within ~7 minutes; no human intervention noted.
-
-```yaml
-timestamp: 2026-08-25T15:21:20Z
-channel: brand-data-dev-alerts
-brand: multiple (~25 brand feeds)
-summary: Mass move_images_from_ftp_to_s3_job_sync failures (FTP connectivity)
-status: self-resolved
-linked_issue: null
-```
-Roughly 25 distinct brand/feed image-sync jobs (calamar, ninaVonC, ammann, olsen, roesch, ara, bugatti, miriade, hoegl, olymp, unitedBrands, hattric, ray, airon, masai, hatico, GKKninaVonC, lerros, ewers, felina, lawOfTheSea, marcAurel, leComte, gardeur, richAndRoyal, and more) failed identically ("Essential container in task exited, exit code: 1") between 14:21 and 17:21 CEST. Chamindu flagged it to Kushel in a thread; Kushel confirmed retries succeeded — transient FTP connectivity issue, no ticket needed.
-
-```yaml
-timestamp: 2026-08-25T12:23:42Z
-channel: brand-data-dev-alerts
-brand: platform (analytics asset / analytics_trigger_sensor)
-summary: Asset materialization failed for `analytics`
-status: recurring
-linked_issue: null
-```
-Fired via analytics_trigger_sensor on 2026-08-20 and twice back-to-back on 2026-08-25, each with only an "eyes" reaction — no confirmed resolution.
-
-```yaml
-timestamp: 2026-08-25T10:41:10Z
-channel: brand-data-dev-alerts
-brand: pmeLegend
-summary: pmeLegend_FEED run exceeded 3h time limit
-status: recurring
-linked_issue: null
-```
-Fired twice on 2026-08-25 (09:41 and 10:41 UTC), both with only an "eyes" reaction — no resolution mentioned.
-
-```yaml
-timestamp: 2026-08-25T08:46:04Z
-channel: brand-data-dev-alerts
-brand: fashionCloud
-summary: fashionCloud/FEED2 — 8 asset materializations failed (download_images, feed_transform, etc.)
-status: active
-linked_issue: null
-```
-No thread or reaction visible.
-
-```yaml
-timestamp: 2026-08-25T06:03:27Z
-channel: brand-data-dev-alerts
-brand: platform (logging infra)
-summary: product-service-logs-index approaching/hitting daily log ingestion quota
-status: recurring
-linked_issue: null
-```
-Warning-threshold and quota-reached pairs fired repeatedly across 08-21, 08-22, 08-24, and 08-25, each auto-recovering after the daily quota reset.
-

@@ -2,9 +2,55 @@
 
 Full raw Triage backlog for team BDD, sourced from https://linear.app/fashioncloud/team/BDD/triage. Populated on sync. See `support/open.md` for the FD-referenced/support-shaped curated subset.
 
-**09-24 sync:** Up to 10 items (was 7). Three new on 09-24: **BDD-3306** (Medium, CWF GTIN `0` removal), **BDD-3304** (Medium, Blackstone EAN deletion), and **BDD-3305** (no priority, internal feature request already assigned to Dushan). Nothing left Triage; the other seven are unchanged.
+**09-25 sync:** Up to 12 items (was 10). Three new: **BDD-3312** (High, Citizen image deletion, 09-25), BDD-3309 (Medium, Falke placeholder images) and BDD-3310 (Low, royRobson FEED2 config). **BDD-3311** (High, Xsensible search-service full sync, assigned to Oleh) moved back into Triage from In Review on 09-24. Two left: BDD-3304 (Blackstone EANs) went straight to Deployed 09-24 08:55 UTC, and BDD-3296 (Altex SS27 cancellations) was picked up by abubakarwase, In Progress since 09-24.
 
----
+```yaml
+id: BDD-3312
+title: Citizen - delete image (FD: 678232)
+priority: High
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-09-25
+url: https://linear.app/fashioncloud/issue/BDD-3312/citizen-delete-image-fd-678232
+```
+New 09-25 07:43 UTC. The brand shared an image by accident; asks for it to be removed from the frontend for one article (GTIN 4974374355324). Small job, but time-sensitive for the brand.
+
+```yaml
+id: BDD-3311
+title: Search service full sync - Brand reassignment (FD: 677360)
+priority: High
+status: Triage
+assignee: oleh.polishchuk@fashion.cloud
+team: BDD
+updated: 2026-09-24
+url: https://linear.app/fashioncloud/issue/BDD-3311/search-service-full-sync-brand-reassignment-fd-677360
+```
+Not new: created 09-18, went Todo, In Progress, In Review, then back to Triage 09-24 13:53 UTC. Xsensible's Nimco brand reassignment needs a search-service full sync. Still assigned to Oleh. Flagged "on weak footing with the brand."
+
+```yaml
+id: BDD-3310
+title: Update royRobson_FEED2 config (FD: 678213)
+priority: Low
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-09-24
+url: https://linear.app/fashioncloud/issue/BDD-3310/update-royrobson-feed2-config-fd-678213
+```
+New 09-24. One-line config change: set `resources_size` to `L` in `royRobson_FEED2`.
+
+```yaml
+id: BDD-3309
+title: product images Falke (FD: 678029)
+priority: Medium
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-09-24
+url: https://linear.app/fashioncloud/issue/BDD-3309/product-images-falke-fd-678029
+```
+New 09-24. A retailer (EK Fashion) reports that Falke products arrive with a placeholder image and no product image, so they can't sell them online.
 
 ```yaml
 id: BDD-3306
@@ -16,7 +62,7 @@ team: BDD
 updated: 2026-09-24
 url: https://linear.app/fashioncloud/issue/BDD-3306/remove-gtin-for-cwf-fd-678159
 ```
-New 09-24. CWF has a GTIN of literally `0`, which is reportedly blocking the Showroom stock importer. Asks for it to be deleted.
+CWF has a GTIN of literally `0`, which is reportedly blocking the Showroom stock importer. Asks for it to be deleted.
 
 ---
 
@@ -30,35 +76,7 @@ team: BDD
 updated: 2026-09-24
 url: https://linear.app/fashioncloud/issue/BDD-3305/allow-successful-files-to-continue-when-others-fail
 ```
-New 09-24, internal feature request from Munia (not FD-referenced). A sanetta run with 4 files stopped at the parse job because 3 had bad EAN formatting, so the 1 good file was never processed either. Already assigned to Dushan while still in Triage.
-
----
-
-```yaml
-id: BDD-3304
-title: Deleting EANs | Blackstone (FD: 678060)
-priority: Medium
-status: Triage
-assignee: unassigned
-team: BDD
-updated: 2026-09-24
-url: https://linear.app/fashioncloud/issue/BDD-3304/deleting-eans-blackstone-fd-678060
-```
-New 09-24. Routine EAN-deletion request, 33 EANs for Blackstone.
-
----
-
-```yaml
-id: BDD-3296
-title: "RE: Cancellations SS27 (FD: 677256)"
-priority: Medium
-status: Triage
-assignee: unassigned
-team: BDD
-updated: 2026-09-22
-url: https://linear.app/fashioncloud/issue/BDD-3296/re-cancellations-ss27-fd-677256
-```
-New 09-22. Altex (Funky Buddha) sent an SS27 cancellations file. Same request shape as BDD-3112/BDD-3229 (earlier "Cancellations SS27" tickets, both shipped by Kushel).
+Internal feature request from Munia (not FD-referenced). A sanetta run with 4 files stopped at the parse job because 3 had bad EAN formatting, so the 1 good file was never processed either. Already assigned to Dushan while still in Triage.
 
 ---
 
@@ -114,7 +132,7 @@ team: BDD
 updated: 2026-09-14
 url: https://linear.app/fashioncloud/issue/BDD-3248/images-uploading-by-api-stout-jeans-fd-676401
 ```
-No change since last sync. Aging an eighth cycle now, still the only High-priority unassigned item.
+No change since last sync. Aging a ninth cycle. No longer the only High item: BDD-3312 landed 09-25 and BDD-3311 came back to Triage.
 
 ---
 

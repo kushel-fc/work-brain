@@ -2,7 +2,7 @@
 
 Assigned to Kushel, live (non-completed) statuses. Populated on sync — completed/canceled work stays in Linear's own history rather than being repeated here; see `git log` for what rolled off.
 
-**09-24 sync:** Down to 7 items (was 8). **BDD-3252** (Off-Boarded Brands Deletion) is no longer his: Linear shows it reassigned to Mariana Bassi da Silva and moved To Do -> In Review on 09-21 15:35 UTC (earlier syncs missed that move). Still open in team BDD, just no longer assigned to him, so dropped from this list rather than archived. Slice 3.2 part 2/4 (product-service#2754) merged 09-23 15:46 UTC and part 3/4 (#2767) opened 09-23 18:04 UTC; all three Slice 3.2 tickets are still In Review.
+**09-25 sync:** No changes: still 7 items, same statuses. The three Slice 3.2 tickets are still In Review. Their open PR (product-service#2767, 3/4) got 7 human review threads on 09-24 that he hasn't answered yet.
 
 ---
 

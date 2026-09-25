@@ -3,6 +3,15 @@
 Older entries rolled off `support/recently-closed.md`'s ~25-item cap. Never deleted.
 
 ```yaml
+id: BDD-1495
+title: "PIPE | CWF Image reprocessing - not gtins found / retool discrepency (FD: 486539)"
+priority: Low
+closed: 2026-09-09
+url: https://linear.app/fashioncloud/issue/BDD-1495/pipe-cwf-image-reprocessing-not-gtins-found-retool-discrepency-fd
+```
+Old ticket, resurfaced 09-06, now shipped.
+
+```yaml
 id: BDD-3225
 title: "Re: Pepe Jeans - missing image report (FD: 675342)"
 priority: High

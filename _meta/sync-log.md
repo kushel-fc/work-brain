@@ -2,6 +2,18 @@
 
 One entry per sync run. Prune entries older than ~30 days.
 
+## 2026-09-25 (~08:50 UTC)
+
+About 24h since the last sync (09-24 ~08:45 to 09-25 ~08:50). Linear (claude.ai connector), GitHub (`gh`) and Slack (claude.ai connector) were all reachable. The `plugin:engineering:*` Linear/Slack/GitHub MCP servers needed auth and weren't used.
+
+- **His own product-service#2767 (3/4) got its first human review:** 7 inline threads plus a top-level question from Chamindu36 and irembbt on 09-24, with no approve or request-changes verdict. He hasn't replied. It's still `BLOCKED` and is the top item in `today.md`.
+- **Review queue 4 to 3.** He approved brand-data-pipeline#1945 (09-24) and, unasked, its dependency product-service#2764 (09-25). product-service#2683 (swing) closed without merging. New: product-service#2783 (dushansilva, otto-image-upload diagnostic), which already has three approvals.
+- Linear: his issues are unchanged (7). Triage 10 to 12, with 3 High (was 1). New: BDD-3312 (High, Citizen image deletion, unassigned), BDD-3309 (Medium, Falke) and BDD-3310 (Low, royRobson config). BDD-3311 (High, assigned to Oleh) went back from In Review to Triage. BDD-3304 shipped (Deployed 09-24) and BDD-3296 was picked up by abubakarwase. support/open.md 9 to 11. recently-closed kept at 25, with BDD-1495 rolled into the archive.
+- GitHub: product-service stayed at 13 (4 new, 1 merged, 3 closed) and brand-data-pipeline at 17 (3 new, 2 merged, 1 closed). Both repos have a 09-25 production-release PR. A first read showed many `unknown` mergeable states; a second read resolved them, and no real state changed.
+- Slack (6 alerts): the stuck viaVai image-sync run from 09-23 was stopped manually after about 43h. woden/FEED and stateOfArt/PRICAT each had 11 asset failures (first occurrences). swing `download_images` failed twice and Abir fixed the config in-thread. The `analytics` step failure came back after 8 quiet days. Dagster log pruned by 6 entries from 08-25, now 134.
+- Earmarks: none active, nothing to check.
+- Notified: no. Nothing crossed the notification bar. No deadline passed with zero movement. #2767 got review comments, not a Changes Requested or a conflict. The new unassigned ticket (BDD-3312) is High, not Urgent. The `analytics` failure is an existing `recurring` entry continuing, not one that came back after self-resolving.
+
 ## 2026-09-24 (~08:45 UTC)
 
 About 24h since the last sync (09-23 ~08:50 to 09-24 ~08:45). Linear, GitHub and Slack were all reachable.
