@@ -3,6 +3,83 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2767
+title: "3/4: Add PCS CSV generation module"
+author: kushel-fc
+state: closed
+merged: true
+closed: 2026-09-28
+url: https://github.com/fashioncloud/product-service/pull/2767
+```
+**His own.** 3/4 of Video Delivery Slice 3.2 (BDD-3205/BDD-3223). He answered the 09-24 human threads 09-25 around 11:35 UTC. CodeRabbit re-reviewed (Changes Requested, then dismissed, then approved 14:39 UTC) and dwiajik approved at 14:46 UTC. He merged it himself 09-28 07:41 UTC.
+
+```yaml
+number: 2784
+title: Production Release - 2026-09-25
+author: github-actions
+state: closed
+merged: true
+closed: 2026-09-25
+url: https://github.com/fashioncloud/product-service/pull/2784
+```
+Not his. Automated 09-25 production release, merged by irembbt 09-25 09:30 UTC.
+
+```yaml
+number: 2783
+title: "otto-image-upload: temporarily switch to CloudWatch logging (diagnostic)"
+author: dushansilva
+state: closed
+merged: false
+closed: 2026-09-25
+url: https://github.com/fashioncloud/product-service/pull/2783
+```
+Was on his review queue. Closed without merging 09-25 14:15 UTC despite three approvals. He never reviewed it.
+
+```yaml
+number: 2773
+title: Polaris mapping rules
+author: alirezaMoazenFashion
+state: closed
+merged: false
+closed: 2026-09-25
+url: https://github.com/fashioncloud/product-service/pull/2773
+```
+Not his. Polaris iteration 2 mapping rules, closed without merging 09-25 12:58 UTC. The pipeline half (brand-data-pipeline#1951) merged.
+
+```yaml
+number: 2769
+title: schumacher brand migration
+author: alirezaMoazenFashion
+state: closed
+merged: false
+closed: 2026-09-25
+url: https://github.com/fashioncloud/product-service/pull/2769
+```
+Not his. Schumacher iteration 2 mapping rules, closed without merging 09-25 13:03 UTC. The pipeline half (brand-data-pipeline#1947) merged.
+
+```yaml
+number: 2764
+title: "feat(collect-images): add the collect job for external image sources"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-09-25
+url: https://github.com/fashioncloud/product-service/pull/2764
+```
+Not his (dwiajik, BDD-3273). He approved it, unasked, 09-25 08:28 UTC. Merged by dwiajik 09-25 09:16 UTC.
+
+```yaml
+number: 2684
+title: dorisStreich - FEED - INTEX mapping rules
+author: alirezaMoazenFashion
+state: closed
+merged: false
+closed: 2026-09-25
+url: https://github.com/fashioncloud/product-service/pull/2684
+```
+Not his. dorisStreich FEED INTEX mapping rules, closed without merging 09-25 14:07 UTC, together with brand-data-pipeline#1872.
+
+```yaml
 number: 2738
 title: "BDD-3277 PoC: relay PDS style stream into per-consumer SQS queues"
 author: dwiajik

@@ -2,6 +2,17 @@
 
 One entry per sync run. Prune entries older than ~30 days.
 
+## 2026-09-28 (~08:45 UTC)
+
+About 72h since the last sync (09-25 ~08:50 to 09-28 ~08:45, a weekend in between). GitHub (`gh`) and Slack (claude.ai connector) were reachable. **Linear was not:** no Linear tools were available in this session (the claude.ai Linear connector wasn't loaded and `plugin:engineering:linear` needs auth). So `sources/linear/*`, `support/*` and the Linear parts of `today.md`/`this-week.md` are carried forward from 09-25 unchanged and marked as such.
+
+- **His own product-service#2767 (3/4) merged 09-28 07:41 UTC.** He posted replies on the review threads 09-25, CodeRabbit and dwiajik approved that afternoon, and he merged it himself. He has zero open PRs; Slice 3.2 part 4/4 isn't open yet.
+- **Review queue 3 to 5.** New individual asks: product-service#2785 (PDS Streams SDK contract, stage 1/4, blocks stage 2/4 #2798), #2801 (enable DOROTHEE SCHUMACHER on PIPE) and #2792 (blueSeven mapping rules). #2783 closed without his review. brand-data-pipeline#1878 (Polaris iteration 1) now conflicts after iteration 2 (#1951) merged, and is very likely superseded.
+- GitHub: product-service 13 to 11 (5 new, 3 merged, 4 closed), brand-data-pipeline 17 to 13 (1 new, 4 merged, 1 closed). Both 09-25 production releases merged. Polaris and schumacher iteration 2 merged, with automated PIPE-enable PRs opened 09-27. brand-data-pipeline#1880/#1879 (blueSeven) newly conflict. The first read had `unknown` mergeable states; a second read resolved them.
+- Slack (10 messages over 3 days): **`mosMosh_FEED` went over the 3h run limit 09-27 11:05 UTC**, the first mosMosh alert since the 09-17 to 09-21 spree ended, logged as `recurring` per the 09-23 earmark note. A new cinque FEED2 `download_images` failure. `analytics` failed once more on 09-25. A PDS relay Lambda error burst (new monitor) came right after the BDD-3277 PoC merged; Aji deployed a fix and it recovered. Two galvatron health-check blips, both recovered. Dagster log pruned by 26 entries older than 08-29, now 114.
+- Earmarks: none active, nothing to check.
+- Notified: yes. mosMosh came back after being closed out as self-resolved, and that's a Dagster alert recurring (status: recurring), which meets the bar. It's a single hit so far, so the notification is kept low-key. Nothing else crossed: his only PR merged rather than conflicting, and there's no Linear data for new Urgent tickets or passed deadlines, since Linear wasn't reachable.
+
 ## 2026-09-25 (~08:50 UTC)
 
 About 24h since the last sync (09-24 ~08:45 to 09-25 ~08:50). Linear (claude.ai connector), GitHub (`gh`) and Slack (claude.ai connector) were all reachable. The `plugin:engineering:*` Linear/Slack/GitHub MCP servers needed auth and weren't used.
@@ -252,17 +263,6 @@ All three sources reachable this run — Linear, GitHub, Slack.
 - Dagster onaDkCompany FEED from 2026-08-26 is still shown active, now ~5 days past its 3h limit with zero Slack follow-up across five sync cycles.
 - Notified: no — nothing crossed the notification bar (BDD-3103's deadline already flagged as passed in prior syncs, and unconfirmed this cycle rather than newly reached; no flip to conflict/Changes-Requested on his own open work — #2520 is improving, not worsening, and #2569's conflict flip isn't his own PR; no new Urgent unassigned ticket confirmable, Linear unavailable; the Megatron→Backend alert's recurrence continues a pattern already tagged `recurring` from prior syncs rather than a fresh flip from self-resolved).
 
-## 2026-08-28 (08:05 UTC)
-
-- Big PR wave from 2026-08-27 landed: 6 brand-migration PRs on brand-data-pipeline (incl. #1734/#1736 "pointtec brand migration") and 9 on product-service all closed. His to-review queue on brand-data-pipeline is now empty — #1734, which was waiting on him, got merged by abirprantofc without his review.
-- His own PR #2545 (remove 13 offboarded brands from brands_on_megatron) — he closed it himself (not merged) after an open question came up about how to handle certain GTINs; will re-visit as a batch. His other own PR, #2520, is unchanged: still Changes Requested from Chamindu36, now 3+ days.
-- New PRs adding him as reviewer: product-service #2576 (Enable Sanetta on PIPE, already Approved) and #2569 (publishing job for size/color/style events, no reviews yet).
-- Linear: BDD-3136, BDD-2945, BDD-3115, BDD-3111 all moved Triage → Done since last sync (moved to `support/recently-closed.md`). New Triage item BDD-3150 (Medium, PIPE/Megatron 500MB parser mismatch for price files). New assignment for Kushel: BDD-3036 (Noah Group sketch-flag bug, Medium, To Do).
-- BDD-3103's Aug 25 deadline is now 3 days passed, still no movement.
-- Slack: 16 new Dagster alerts since last sync (2026-08-27 08:09 UTC through this morning). Notable: a "connector_type undefined" credential-config error now spans 5 brands (gabba, endurance x2, guidoMariaKretschmer, ecco, verweijFashion) over 24h — looks systemic, not a one-off; guess/FEED and dBrand/FEED each failed twice more; alberto hit a second OOM (team decided to bump its resource size); bruehl's "no valid SKUs" failure was root-caused to EAN values corrupted into Excel scientific notation in the source file (same symptom hit citizen, unconfirmed root cause there).
-- Dagster onaDkCompany FEED from 2026-08-26 is still shown active, now ~2 days past its 3h limit with zero Slack follow-up across three sync cycles.
-- Notified: no — nothing crossed the notification bar (BDD-3103's deadline was already flagged as passed in prior syncs, not newly reached; no flip to conflict/Changes-Requested on his own open work — #2520 unchanged and #2545 was a self-closure, not an externally-forced one; no new Urgent unassigned ticket; the recurring Dagster alerts this cycle were already active/unresolved before, not alerts that had self-resolved and then came back).
-
 ## 2026-09-01
 
 Linear MCP reachable again this run (first time since 2026-08-28) — full Linear refresh done, replacing the carried-forward stale data from the last three syncs.
@@ -284,38 +284,3 @@ Linear MCP reachable again this run (first time since 2026-08-28) — full Linea
 - Linear: four tickets shipped (BDD-3236, BDD-3229, BDD-3180, BDD-3150). BDD-3150 (PIPE/Megatron) closed without the earmarked brand-data-pipeline#1825 ever merging — that PR is still open; earmark dismissed as moot. BDD-3247 went Triage → assigned → Deployed same window. New: BDD-3251 picked up from Triage; three new "Video Delivery" project tickets (BDD-3223/3205/3206, Slice 3.2) landed on him, turning the parked shaping doc into real backlog. Triage backlog up to 16 (four new, two left).
 - GitHub: a nine-PR-pair brand-migration wave landed across both repos (blueSeven, fynchHatton, milestone, cinque, polaris, swing, schumacher, dorisStreich) — all mergeable, routine. Four of the new PRs name Kushel as reviewer (product-service#2689/#2683, brand-data-pipeline#1878/#1871), pushing his to-review queue from 1 to 5. Five PRs merged (product-service#2677/#2676/#2675, brand-data-pipeline#1864/#1862), none his. Zero open PRs of his own, unchanged.
 - Notified: yes — BDD-3263 (new Urgent, unassigned, security, 2-day deadline) clearly crosses the bar. The Dagster FTP-move spread is flagged prominently in `today.md` but doesn't strictly meet the "recurs after self-resolving" wording (it's an escalating pattern, not a flip back to failing), so treated as a strong today.md callout rather than a second notification trigger.
-
-## 2026-08-27 (08:36 UTC)
-
-- New: Kushel added as a requested reviewer on brand-data-pipeline PR #1734 ("pointtec brand migration") — already Approved by dwiajik, he's the outstanding reviewer. Added to `today.md`.
-- New PRs (not his): product-service #2562, #2561; brand-data-pipeline #1736 (companion to #1734, same title/author).
-- brand-data-pipeline mergeable-state reads are flapping between mergeable/conflicting/unknown across repeated checks within the same minute (GitHub still computing) — wrote `unknown` for all as the honest current read rather than trusting any single snapshot; not treated as a real conflict, including the #1645/#1120/#1263/#1058 entries flagged conflicting yesterday.
-- product-service #2548 mergeable_state resolved from unknown to mergeable.
-- Linear (my-issues, Triage/support) unchanged since this morning's sync.
-- Slack: zero new messages in #brand-data-dev-alerts since the last sync (08:09:45Z) — quiet since.
-- BDD-3103's Aug 25 deadline still 2 days passed, no movement (unchanged from this morning).
-- Dagster onaDkCompany FEED still shown active, now ~19h past its 3h limit — no new Slack follow-up.
-- Notified: no — nothing crossed the notification bar (no deadline newly reached, no flip to conflict/Changes-Requested on his own work, no new Urgent unassigned ticket, no Dagster alert newly recurring).
-
-## 2026-08-27
-
-- His own PR #2545 flipped to Approved (was awaiting-first-review) — ready to merge.
-- New: Kushel added as a requested reviewer on PR #2514 (draft, already Changes Requested from others).
-- PR #2118 and #1744 (product-service) closed without merging — moved to `archive/prs/product-service.md`.
-- Several brand-data-pipeline PRs resolved from "unknown" to an actual mergeable_state; #1645 and #1120 (both previously Approved) now show a merge conflict — none are his own.
-- Linear (my-issues, Triage/support) unchanged since last sync — same tickets, same statuses.
-- BDD-3103's Aug 25 deadline is now 2 days passed, still no movement.
-- Dagster: 4 new alerts this morning — gabba and endurance both failing on the same missing-credential (`connector_type`) config issue, actively being triaged by Kushel + Abir; sanetta fired twice back-to-back; alberto hit an OOM. onaDkCompany FEED from yesterday is still showing active 15+ hours past its run limit with no visible follow-up.
-- Notified: no — nothing crossed the notification bar (no deadline-with-zero-movement newly reached, no flip to conflict/Changes-Requested on his own work, no new Urgent unassigned ticket, no Dagster alert recurring after self-resolving).
-
-## 2026-08-26
-
-First real sync (repo scaffold was placeholders until now).
-
-- Populated `sources/linear/my-issues.md` (7 live-status issues), `sources/linear/triage.md` (25 raw), `support/open.md` (23 FD-shaped, 2 High), `support/recently-closed.md` (11).
-- Populated GitHub PR sources for both repos (18 + 10 open PRs); curated `prs/mine.md` (2) and `prs/to-review.md` (3).
-- Populated `dagster-alerts/log.md` from #brand-data-dev-alerts (23 entries, 12 active/unresolved, 7 recurring).
-- His own PR #2520 (BDD-2567) has Changes Requested from Chamindu36 — flagged in `today.md`.
-- BDD-3103's Aug 25 response deadline has passed with no movement — flagged in `today.md`.
-- Dagster: onaDkCompany FEED run still active past its 3h limit as of sync time — flagged in `today.md`.
-- Notified: no — first sync, no prior state to diff against for a "what changed" alert; today.md/this-week.md themselves carry the initial priority view.

@@ -2,85 +2,73 @@
 
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
-Still 13. Four new: #2784 (automated production release, 09-25), **#2783 (dushansilva, otto-image-upload CloudWatch diagnostic, names Kushel)**, #2773 (Polaris mapping rules) and #2769 (schumacher). Four left: #2738 (BDD-3277 PoC) merged 09-25 07:37 UTC; #2692 (fynchHatton), #2690 (milestone) and **#2683 (swing, which was on his review list)** closed without merging. See [`archive/prs/product-service.md`](../../../archive/prs/product-service.md). A first read showed several `unknown` mergeable states; a second read resolved them all. #1737 (not his) still conflicts.
+Down from 13 to 11. Five new: #2802 (Enable Polaris brands on PIPE, 09-27), **#2801 (Enable DOROTHEE SCHUMACHER on PIPE, names Kushel)**, #2798 (PDS Streams SDK stage 2/4, draft), **#2792 (blueSeven FEED/FEED2 mapping rules, names Kushel)** and **#2785 (PDS Streams SDK `subscribe()` API surface, names Kushel)**. Seven left: **Kushel's own #2767 (3/4) merged 09-28 07:41 UTC**, #2784 (09-25 production release) and #2764 (BDD-3273 collect job) merged 09-25, and #2783, #2773, #2769 and #2684 closed without merging. See [`archive/prs/product-service.md`](../../../archive/prs/product-service.md). A first read showed several `unknown` mergeable states; a second read resolved them, and only #1737 (not his) conflicts.
 
 ```yaml
-number: 2784
-title: Production Release - 2026-09-25
-author: github-actions
-state: open
-mergeable_state: mergeable
-review_state: awaiting-first-review
-requested_reviewers: [brand-data-dev (team), abubakarwase, alirezaMoazenFashion]
-updated: 2026-09-25
-url: https://github.com/fashioncloud/product-service/pull/2784
-```
-New 09-25 08:45 UTC. Automated production-release PR, triggered by irembbt. Not his.
-
-```yaml
-number: 2783
-title: "otto-image-upload: temporarily switch to CloudWatch logging (diagnostic)"
-author: dushansilva
-state: open
-mergeable_state: mergeable
-review_state: approved
-requested_reviewers: [kushel-fc]
-updated: 2026-09-25
-url: https://github.com/fashioncloud/product-service/pull/2783
-```
-New 09-25 08:20 UTC, **names Kushel individually**. Diagnostic-only: turns off Firelens so the `app` container logs go to CloudWatch, because INFO/WARNING logs from production runs never reached Datadog. Chamindu36, CodeRabbit and dwiajik approved it within 8 minutes, and it's `CLEAN`. His review isn't blocking the merge. See [`prs/to-review.md`](../../../prs/to-review.md).
-
-```yaml
-number: 2773
-title: Polaris mapping rules
-author: alirezaMoazenFashion
+number: 2802
+title: Enable Polaris brands on PIPE
+author: FCMachineUser
 state: open
 mergeable_state: mergeable
 review_state: awaiting-first-review
 requested_reviewers: [brand-data-dev (team), irembbt, abirprantofc]
-updated: 2026-09-24
-url: https://github.com/fashioncloud/product-service/pull/2773
+updated: 2026-09-27
+url: https://github.com/fashioncloud/product-service/pull/2802
 ```
-New 09-24, not his. Polaris iteration 2 (103 mapping-rule upserts), paired with brand-data-pipeline#1951.
+New 09-27, automated (FCMachineUser). Moves the four Polaris brand IDs from `brands_on_megatron` to `brands_on_pipe`, following Polaris iteration 2 (brand-data-pipeline#1951) merging 09-25. Not his.
 
 ```yaml
-number: 2769
-title: schumacher brand migration
+number: 2801
+title: Enable DOROTHEE SCHUMACHER on PIPE
+author: FCMachineUser
+state: open
+mergeable_state: mergeable
+review_state: awaiting-first-review
+requested_reviewers: [brand-data-dev (team), abubakarwase, kushel-fc]
+updated: 2026-09-27
+url: https://github.com/fashioncloud/product-service/pull/2801
+```
+New 09-27, automated (FCMachineUser), **names Kushel individually**. Fully routes DOROTHEE SCHUMACHER (schumacher_FEED) EventBridge traffic from Megatron to PIPE, following schumacher iteration 2 (brand-data-pipeline#1947) merging 09-25. No reviews yet, `BLOCKED`. See [`prs/to-review.md`](../../../prs/to-review.md).
+
+```yaml
+number: 2798
+title: "PDS Streams SDK: thin receive-decode-ack path (stage 2/4)"
+author: dwiajik
+state: open
+draft: true
+mergeable_state: mergeable
+review_state: (no decision yet)
+requested_reviewers: []
+updated: 2026-09-28
+url: https://github.com/fashioncloud/product-service/pull/2798
+```
+New 09-25, draft, not his. Stage 2/4 of the PDS Streams SDK (BDD-3093): wires `subscribe()`/`iterate()` to a real SQS queue with the minimum receive-decode-ack path. Stacked on #2785.
+
+```yaml
+number: 2792
+title: blueSeven FEED and FEED2 mapping rules
 author: alirezaMoazenFashion
 state: open
 mergeable_state: mergeable
 review_state: awaiting-first-review
-requested_reviewers: [brand-data-dev (team), abubakarwase, julsjacinto]
-updated: 2026-09-24
-url: https://github.com/fashioncloud/product-service/pull/2769
+requested_reviewers: [brand-data-dev (team), dwiajik, kushel-fc]
+updated: 2026-09-25
+url: https://github.com/fashioncloud/product-service/pull/2792
 ```
-New 09-24, not his. Schumacher iteration 2 (30 mapping rules), paired with brand-data-pipeline#1947.
+New 09-25, **names Kushel individually**. The shared manufacturer-scoped blueSeven mapping-rule payload for the FEED and FEED2 INTEX migrations (112 rules, DRY_RUN defaults to true). No reviews yet. The older blueSeven PRs (#2694, #2693) are still open alongside it. See [`prs/to-review.md`](../../../prs/to-review.md).
 
 ```yaml
-number: 2767
-title: "3/4: Add PCS CSV generation module"
-author: kushel-fc
-state: open
-mergeable_state: mergeable
-review_state: awaiting-first-review
-requested_reviewers: [julsjacinto, alirezaMoazenFashion]
-updated: 2026-09-24
-url: https://github.com/fashioncloud/product-service/pull/2767
-```
-**His own.** 3/4 of the Video Delivery Slice 3.2 stack (BDD-3205/BDD-3223). CodeRabbit approved 09-23. On 09-24 **Chamindu36 (2 threads) and irembbt (5 threads plus a top-level question) left review comments**, with no approve or request-changes verdict. Kushel hasn't replied yet. Still `BLOCKED`. See [`prs/mine.md`](../../../prs/mine.md).
-
-```yaml
-number: 2764
-title: "feat(collect-images): add the collect job for external image sources"
+number: 2785
+title: "PDS Streams SDK: subscribe() API surface"
 author: dwiajik
 state: open
 mergeable_state: mergeable
-review_state: approved
-requested_reviewers: [irembbt, julsjacinto]
-updated: 2026-09-25
-url: https://github.com/fashioncloud/product-service/pull/2764
+review_state: awaiting-first-review
+requested_reviewers: [brand-data-dev (team), julsjacinto, kushel-fc, Chamindu36]
+updated: 2026-09-28
+url: https://github.com/fashioncloud/product-service/pull/2785
 ```
-Not his, but **Kushel approved it 09-25 08:28 UTC** (he wasn't a named reviewer). CodeRabbit went through five more Changes Requested rounds before approving at 07:55 UTC. Still `BLOCKED` on merge rules. BDD-3273 product-service half; brand-data-pipeline#1945 waits on it.
+New 09-25, **names Kushel individually** (with julsjacinto and Chamindu36). Stage 1/4 of the PDS Streams SDK (BDD-3093): the typed public API surface only, where `subscribe()`/`iterate()` throw `NotImplementedError`, up for review of the contract shape. CodeRabbit went through three Changes Requested rounds with dwiajik, then approved. No human review yet. See [`prs/to-review.md`](../../../prs/to-review.md).
 
 ```yaml
 number: 2744
@@ -132,19 +120,6 @@ review_state: awaiting-first-review
 requested_reviewers: [brand-data-dev (team), irembbt, abirprantofc]
 updated: 2026-09-14
 url: https://github.com/fashioncloud/product-service/pull/2686
-```
-Not his. No change.
-
-```yaml
-number: 2684
-title: dorisStreich - FEED - INTEX mapping rules
-author: alirezaMoazenFashion
-state: open
-mergeable_state: mergeable
-review_state: awaiting-first-review
-requested_reviewers: [brand-data-dev (team), dwiajik, abubakarwase]
-updated: 2026-09-14
-url: https://github.com/fashioncloud/product-service/pull/2684
 ```
 Not his. No change.
 

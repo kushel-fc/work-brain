@@ -3,6 +3,61 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 1955
+title: Production Release - 2026-09-25
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-09-25
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1955
+```
+Not his. Automated 09-25 production release, merged by irembbt 09-25 09:30 UTC.
+
+```yaml
+number: 1951
+title: Polaris FEED brand migration
+author: alirezaMoazenFashion
+state: closed
+merged: true
+closed: 2026-09-25
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1951
+```
+Not his. Polaris iteration 2, merged by the author 09-25 12:36 UTC. Supersedes #1878 (iteration 1, still on his review list and now conflicting).
+
+```yaml
+number: 1947
+title: schumacher brand migration
+author: alirezaMoazenFashion
+state: closed
+merged: true
+closed: 2026-09-25
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1947
+```
+Not his. Schumacher iteration 2, merged by the author 09-25 12:23 UTC.
+
+```yaml
+number: 1945
+title: "feat(image-sync): branch to collect + download for external brands"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-09-25
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1945
+```
+Not his (dwiajik, BDD-3273). He approved it 09-24 15:12 UTC. Merged by dwiajik 09-25 09:16 UTC, right after product-service#2764.
+
+```yaml
+number: 1872
+title: dorisStreich - FEED - INTEX migration
+author: alirezaMoazenFashion
+state: closed
+merged: false
+closed: 2026-09-25
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1872
+```
+Not his. dorisStreich FEED INTEX migration, closed without merging 09-25 14:07 UTC.
+
+```yaml
 number: 1876
 title: fynchHatton brand migration
 author: abirprantofc

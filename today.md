@@ -1,14 +1,17 @@
 # Today
 
-1. **Answer the 7 human review threads on his own [product-service#2767](prs/mine.md) (3/4, PCS CSV generation module).** Chamindu36 and irembbt reviewed it 09-24 (TSDoc, moving helpers out of the service class, `language` on the multi-download DTO, per-language failure behaviour, filename date format vs backend, where `multi-download/resolve` is called). Neither approved or requested changes. It's still `BLOCKED`, and part 4/4 of Slice 3.2 comes after it.
-2. **Review queue is 3** (was 4), and nothing in it is blocking a merge:
-   - **New:** [product-service#2783](prs/to-review.md) (dushansilva, otto-image-upload CloudWatch diagnostic). It already has three approvals and is `CLEAN`, so this is a quick look at most.
-   - [brand-data-pipeline#1878](prs/to-review.md) (polaris iteration 1): he's the sole named reviewer, 9 days idle. The author opened iteration 2 (brand-data-pipeline#1951 + product-service#2773) on 09-24, so check whether #1878 still matters before reviewing.
-   - [#2514](prs/to-review.md): stale draft, 28 days.
-3. **[BDD-2258](sources/linear/my-issues.md) (High) is still not started.** It's been unblocked since 08-31 and hasn't been updated since 08-18.
+> **Linear wasn't reachable this sync (09-28).** The Linear sections below are carried forward from 09-25. GitHub and Slack are current.
+
+1. **Review queue grew from 3 to 5, with three new asks that name him individually:**
+   - [product-service#2785](prs/to-review.md) (dwiajik, PDS Streams SDK `subscribe()` contract, stage 1/4). This one blocks a stack: stage 2/4 (#2798) is waiting on this shape review. CodeRabbit has approved; there's no human review yet.
+   - [product-service#2801](prs/to-review.md) (automated, enable DOROTHEE SCHUMACHER on PIPE). This is the go-live flip after schumacher iteration 2 merged 09-25.
+   - [product-service#2792](prs/to-review.md) (blueSeven mapping rules, 112 rules). Older blueSeven PRs are still open and conflicting, so ask which set is current first.
+   - [brand-data-pipeline#1878](prs/to-review.md) now conflicts, and Polaris iteration 2 has already merged. Ask for it to be closed; don't review it. [#2514](prs/to-review.md) is still a stale draft (31 days).
+2. **Open Video Delivery Slice 3.2 part 4/4.** [#2767](archive/prs/product-service.md) (3/4) merged 09-28 07:41 UTC, so he has zero open PRs and 4/4 is next. See [shaping](shaping/video-download-delivery.md).
+3. **mosMosh is back: `mosMosh_FEED` went over the 3h run limit 09-27** (run eb61e7cd, started 08:04 UTC). It's the first mosMosh alert since the 09-17 to 09-21 spree ended, and nobody has followed up in-thread. See [dagster-alerts/log.md](dagster-alerts/log.md).
+4. **[BDD-2258](sources/linear/my-issues.md) (High) is still not started** as of 09-25. It's been unblocked since 08-31.
 
 ## Worth noting (not urgent)
-- **He cleared two BDD-3273 reviews:** approved [brand-data-pipeline#1945](sources/github/brand-data-pipeline/open-prs.md) 09-24 and its dependency product-service#2764 09-25. Both are approved; #2764 has to merge first.
-- **The swing migration's product-service half ([#2683](archive/prs/product-service.md)) closed without merging** 09-24, so it's off his queue. The swing FEED then failed twice on `download_images` (missing `filename_pattern`); Abir fixed the config in-thread.
-- **Triage went 10 to 12, with 3 High items now (was 1)** ([support/open.md](support/open.md)). [BDD-3312](support/open.md) (new, Citizen asks to remove an image shared by accident, unassigned) and [BDD-3311](support/open.md) (Xsensible full sync, back in Triage, still Oleh's) join BDD-3248. Also new: BDD-3309 (Medium, Falke placeholder images) and BDD-3310 (Low, royRobson config). BDD-3304 shipped and BDD-3296 was picked up by abubakarwase.
-- **Dagster: 6 alerts.** The stuck viaVai image-sync run from 09-23 was stopped manually after about 43h. woden/FEED and stateOfArt/PRICAT each had 11 asset failures (both first occurrences). The `analytics` step failure came back after 8 quiet days. See [dagster-alerts/log.md](dagster-alerts/log.md).
+- **Dagster was fairly quiet over the weekend (10 messages):** a new cinque FEED2 `download_images` failure (same shape as swing's missing-`filename_pattern` issue from 09-25), the `analytics` step failing once more, two galvatron health-check blips, and a PDS relay Lambda error burst on 09-25 right after the BDD-3277 PoC merged. Aji deployed a fix for that and it recovered.
+- **Brand migrations are moving to PIPE:** Polaris and schumacher iteration 2 merged 09-25, and automated PIPE-enable PRs are open for both (product-service#2802 Polaris, #2801 schumacher). dorisStreich INTEX (product-service#2684 + brand-data-pipeline#1872) closed without merging.
+- **Carried from 09-25 (not re-checked):** Triage stood at 12 with 3 High ([BDD-3312](support/open.md) Citizen image deletion unassigned, [BDD-3311](support/open.md), [BDD-3248](support/open.md)).

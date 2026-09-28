@@ -3,6 +3,56 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
+timestamp: 2026-09-27T23:47:37Z
+channel: brand-data-dev-alerts
+brand: platform (galvatron ECS)
+summary: ECS health check failures on galvatron, two more trigger/recover cycles
+status: self-resolved
+linked_issue: null
+```
+Two cycles: 22:47 UTC triggered, recovered 22:55; 23:47 UTC triggered, recovered 23:57. Same long-running blip pattern as earlier galvatron entries. Each recovered inside about 10 minutes. No thread.
+
+```yaml
+timestamp: 2026-09-27T11:05:20Z
+channel: brand-data-dev-alerts
+brand: mosMosh
+summary: "mosMosh_FEED exceeded the 3h run time limit (run eb61e7cd, started 08:04 UTC)"
+status: recurring
+linked_issue: null
+```
+**This is the first mosMosh alert since the 09-17 to 09-21 OOM/run-time-limit spree went quiet** (last hit 09-21 08:53 UTC, closed out as over in the 09-23 earmark). That earmark said to reopen any return as a new `recurring` entry, so this is that entry. One hit so far, and there was no thread or follow-up by the end of this capture window (09-28 ~08:45 UTC). Whether the run was stopped or finished isn't visible from Slack. BDD-3268 (resource-size bump) wasn't confirmed shipped as of the last Linear read (09-25).
+
+```yaml
+timestamp: 2026-09-27T08:29:39Z
+channel: brand-data-dev-alerts
+brand: cinque
+summary: "cinque__FEED2__download_images - essential container exited (exit 1), 3 asset events"
+status: active
+linked_issue: null
+```
+First cinque entry in this log. cinque was part of the 09-15 brand-migration wave. The signature matches the swing `download_images` failure from 09-25, which was a missing `filename_pattern` config, so check that first. No thread.
+
+```yaml
+timestamp: 2026-09-25T21:39:40Z
+channel: brand-data-dev-alerts
+brand: platform (analytics_trigger_sensor)
+summary: analytics step - essential container exited, exit code 1, once more
+status: recurring
+linked_issue: null
+```
+Second hit on 09-25 (the first was 04:07 UTC). Same recurring pattern with no owner. No thread.
+
+```yaml
+timestamp: 2026-09-25T12:51:25Z
+channel: brand-data-dev-alerts
+brand: platform (PDS stream relay Lambda)
+summary: "PDS relay Lambda erroring (pds-stream-relay-*-production): 307 errors, re-triggered at 13:51 UTC with 155, recovered 13:57 UTC"
+status: self-resolved
+linked_issue: null
+```
+First alert from this monitor, about 5h after the BDD-3277 PoC (product-service#2738, relay PDS stream into per-consumer SQS queues) merged 09-25 07:37 UTC. Aji in-thread at 13:17 UTC: "Fix is being deployed, and the alert works." It recovered at 13:57 UTC and stayed quiet for the rest of the window.
+
+```yaml
 timestamp: 2026-09-25T08:21:31Z
 channel: brand-data-dev-alerts
 brand: swing
@@ -1091,253 +1141,3 @@ status: self-resolved
 linked_issue: null
 ```
 Triggered 10:52 UTC, recovered ~3 minutes later — brief blip, no thread.
-
-```yaml
-timestamp: 2026-08-29T06:03:29Z
-channel: brand-data-dev-alerts
-brand: platform (product-service-logs-index)
-summary: Log Index daily ingestion quota reached (100%), logging paused for the index
-status: self-resolved
-linked_issue: null
-```
-Warning threshold (85%) fired 08-28 14:20 UTC, escalated to 100%/quota-reached 08-28 19:03 UTC, recovered when the daily quota reset 08-29 06:03 UTC.
-
-```yaml
-timestamp: 2026-08-28T12:17:56Z
-channel: brand-data-dev-alerts
-brand: muellerMeirer
-summary: muellerMeirer_FEED_cron_image_sync_schedule run failed — Runtime.ImportModuleError, Cannot find module 'index'
-status: active
-linked_issue: null
-```
-Looks like a Lambda packaging/deploy issue rather than a data problem — no thread or follow-up visible.
-
-```yaml
-timestamp: 2026-08-28T11:40:44Z
-channel: brand-data-dev-alerts
-brand: verweijFashion
-summary: verweijFashion_FEED run exceeded 3h time limit
-status: active
-linked_issue: null
-```
-Started 08:40 UTC — distinct from verweijFashion's connector_type credential failure logged below the same morning. No thread or reaction visible.
-
-```yaml
-timestamp: 2026-08-28T07:48:04Z
-channel: brand-data-dev-alerts
-brand: verweijFashion
-summary: verweijFashion/FEED — 10 asset materializations failed (unsupported connector_type in FTP/SFTP credential item)
-status: active
-linked_issue: null
-```
-Same "Unsupported connector_type 'undefined'" credential error seen repeatedly across brands since yesterday morning (gabba, endurance, guidoMariaKretschmer, ecco — see below). Aji flagged the specific credential item, cc'd Mariana.
-
-```yaml
-timestamp: 2026-08-27T22:03:09Z
-channel: brand-data-dev-alerts
-brand: sOliver
-summary: sOliver__FEED__trigger_enrichment_from_map — container exited, exit code 1
-status: active
-linked_issue: null
-```
-No thread or reaction visible.
-
-```yaml
-timestamp: 2026-08-27T16:26:02Z
-channel: brand-data-dev-alerts
-brand: guess
-summary: guess__FEED__trigger_enrichment_from_map — container exited, exit code 137 (OOM)
-status: recurring
-linked_issue: null
-```
-Second OOM on the same failing step within ~15 minutes (see entry below) — no reaction/thread this time.
-
-```yaml
-timestamp: 2026-08-27T16:10:58Z
-channel: brand-data-dev-alerts
-brand: guess
-summary: guess__FEED__trigger_enrichment_from_map — container exited, exit code 137 (OOM)
-status: recurring
-linked_issue: null
-```
-raising_hand reaction only.
-
-```yaml
-timestamp: 2026-08-27T15:34:50Z
-channel: brand-data-dev-alerts
-brand: dBrand
-summary: dBrand/FEED — 10 asset materializations failed
-status: recurring
-linked_issue: null
-```
-Second failure on this brand within ~8 minutes (see entry below) — no thread or reaction visible.
-
-```yaml
-timestamp: 2026-08-27T15:26:18Z
-channel: brand-data-dev-alerts
-brand: dBrand
-summary: dBrand/FEED — 10 asset materializations failed
-status: recurring
-linked_issue: null
-```
-No thread or reaction visible.
-
-```yaml
-timestamp: 2026-08-27T15:18:15Z
-channel: brand-data-dev-alerts
-brand: ecco
-summary: ecco/FEED — 10 asset materializations failed (unsupported connector_type in FTP/SFTP credential item)
-status: active
-linked_issue: null
-```
-Same connector_type credential-config issue as gabba/endurance/guidoMariaKretschmer. Kushel flagged the credential item to Alireza directly ("Credential should be updated").
-
-```yaml
-timestamp: 2026-08-27T14:08:02Z
-channel: brand-data-dev-alerts
-brand: citizen
-summary: citizen/FEED — 11 asset materializations failed (no valid SKUs produced)
-status: active
-linked_issue: null
-```
-Aji: rows were read from the extracted CSV but no valid SKUs were produced — relevantJsonObject/gtinField path may be wrong. Same symptom as bruehl below.
-
-```yaml
-timestamp: 2026-08-27T12:49:15Z
-channel: brand-data-dev-alerts
-brand: tommyHilfiger
-summary: tommyHilfiger__FEED__trigger_enrichment_from_map — container exited, exit code 1
-status: active
-linked_issue: null
-```
-raising_hand reaction only, no resolution visible.
-
-```yaml
-timestamp: 2026-08-27T11:54:32Z
-channel: brand-data-dev-alerts
-brand: platform (enrichment_file_sensor)
-summary: 5 asset materializations failed (map, merge, publish_from_map, process_enrichment...)
-status: active
-linked_issue: null
-```
-No thread or reaction visible.
-
-```yaml
-timestamp: 2026-08-27T09:53:26Z
-channel: brand-data-dev-alerts
-brand: bruehl
-summary: bruehl/FEED — 11 asset materializations failed (no valid SKUs produced)
-status: active
-linked_issue: null
-```
-Aji dug in and found the root cause: all 3,795 rows in the Brühl CSV have `EANCode` corrupted into Excel scientific notation (e.g. `4,04147E+12`) instead of a real 13-digit GTIN — a source data-quality issue, not a pipeline bug. No fix/re-request to the brand confirmed yet.
-
-```yaml
-timestamp: 2026-08-27T09:24:48Z
-channel: brand-data-dev-alerts
-brand: camelActive
-summary: camelActive/FEED2 — 11 asset materializations failed
-status: active
-linked_issue: null
-```
-Aji stopped the hanging job and said he'd reprocess the data.
-
-```yaml
-timestamp: 2026-08-27T09:21:47Z
-channel: brand-data-dev-alerts
-brand: guidoMariaKretschmer
-summary: guidoMariaKretschmer/FEED — 10 asset materializations failed (unsupported connector_type in FTP/SFTP credential item)
-status: active
-linked_issue: null
-```
-Same connector_type credential-config issue as gabba/endurance. Kushel flagged Alireza and pointed him to Abir for help.
-
-```yaml
-timestamp: 2026-08-27T08:51:09Z
-channel: brand-data-dev-alerts
-brand: pmeLegend
-summary: pmeLegend/FEED — 11 asset materializations failed
-status: active
-linked_issue: null
-```
-Aji stopped the hanging job and said he'd reprocess the data.
-
-```yaml
-timestamp: 2026-08-27T08:50:08Z
-channel: brand-data-dev-alerts
-brand: alberto
-summary: alberto__FEED__publish_from_map — container exited, exit code 137 (OOM)
-status: recurring
-linked_issue: null
-```
-Second OOM on this brand/step (previous one 2026-08-27T07:30:45Z). Kushel asked Aji whether to increase the resource size — Aji agreed.
-
-```yaml
-timestamp: 2026-08-27T08:24:00Z
-channel: brand-data-dev-alerts
-brand: endurance
-summary: endurance/FEED — 10 asset materializations failed (unsupported connector_type in FTP/SFTP credential item)
-status: recurring
-linked_issue: null
-```
-Second occurrence of the same credential-config issue for this brand (previous 2026-08-27T07:46:50Z) — part of a wider pattern hitting multiple brands this week (gabba, guidoMariaKretschmer, ecco, verweijFashion), looks like a systemic brand-onboarding credential gap rather than a one-off.
-
-```yaml
-timestamp: 2026-08-27T07:51:52Z
-channel: brand-data-dev-alerts
-brand: gabba
-summary: gabba/FEED — 10 asset materializations failed (unsupported connector_type in FTP/SFTP credential item)
-status: active
-linked_issue: null
-```
-Fired twice 07:46 and 07:51 UTC, ~5 min apart. Kushel triaged in-thread: credential item is missing host/filepath/filename_pattern/connector_type. Abir (07:05 CEST) confirmed understanding and said he'd fix and rerun. Same root cause as the endurance failure below — looks like a new brand-onboarding credential setup issue.
-
-```yaml
-timestamp: 2026-08-27T07:46:50Z
-channel: brand-data-dev-alerts
-brand: endurance
-summary: endurance/FEED — 10 asset materializations failed (unsupported connector_type in FTP/SFTP credential item)
-status: active
-linked_issue: null
-```
-Same "Unsupported connector_type 'undefined'" credential error as gabba above. Kushel tagged Abir in-thread; no reply yet as of sync time.
-
-```yaml
-timestamp: 2026-08-27T07:30:45Z
-channel: brand-data-dev-alerts
-brand: alberto
-summary: alberto__FEED__publish_from_map — container exited, exit code 137 (OOM)
-status: active
-linked_issue: null
-```
-Aji commented "probably a reprocessing job and hit OOM" — cause identified, no fix confirmed.
-
-```yaml
-timestamp: 2026-08-27T06:58:37Z
-channel: brand-data-dev-alerts
-brand: sanetta
-summary: sanetta/FEED — 3 asset materializations failed (map, merge, publish_from_map)
-status: recurring
-linked_issue: null
-```
-Fired twice, 06:57 and 06:58 UTC, ~1.5 min apart, identical failure. No thread or reaction visible.
-
-```yaml
-timestamp: 2026-08-26T16:25:32Z
-channel: brand-data-dev-alerts
-brand: onaDkCompany
-summary: ona__dkCompany_FEED run exceeded 3h time limit
-status: active
-linked_issue: BDD-3167
-```
-Run 161bb902 started 13:24 UTC 08-26, still shown active as of last check (now ~7 days past its 3h limit). Zero Slack follow-up across seven sync cycles. The linked Linear ticket, [BDD-3167](../support/recently-closed.md) "Data completely missing - DKcompany" (FD 675069), was resolved 2026-09-01 — but no Slack message in this cycle's window confirmed the underlying run itself was fixed, so the correlation stays unconfirmed and the run's own status here is stale.
-
-```yaml
-timestamp: 2026-08-26T09:59:35Z
-channel: brand-data-dev-alerts
-brand: product-data-service
-summary: PDS request metrics absent (no pds.http.request telemetry for 1h)
-status: self-resolved
-linked_issue: null
-```
-Triggered 09:49 UTC, recovered 10 minutes later at 09:59 UTC.
