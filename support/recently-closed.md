@@ -3,6 +3,60 @@
 Capped at ~25 most recent. Older entries move to `../archive/support/`. Sourced from team BDD Done/Deployed issues carrying an FD reference.
 
 ```yaml
+id: BDD-3005
+title: "Er doet zich een herhalend probleem voor (FD: 663296)"
+priority: Low
+closed: 2026-09-28
+url: https://linear.app/fashioncloud/issue/BDD-3005/er-doet-zich-een-herhalend-probleem-voor-fd-663296
+```
+Open since 2026-08-03, the oldest unassigned Triage item for about eight weeks. Closed as Done 09-28 15:00 UTC in the triage sweep, with no assignee.
+
+```yaml
+id: BDD-3043
+title: "Incorrect delimiter not shown as error (FD: 672084)"
+priority: Medium
+closed: 2026-09-28
+url: https://linear.app/fashioncloud/issue/BDD-3043/incorrect-delimiter-not-shown-as-error-fd-672084
+```
+Open since 08-11, the oldest Medium. Done 09-28 14:59 UTC, assigned to Junell Jacinto.
+
+```yaml
+id: BDD-3241
+title: "Stocks not correctly imported | Cavallaro (FD: 675804)"
+priority: Low
+closed: 2026-09-28
+url: https://linear.app/fashioncloud/issue/BDD-3241/stocks-not-correctly-imported-cavallaro-fd-675804
+```
+Oleh's. Done 09-28 14:59 UTC.
+
+```yaml
+id: BDD-3243
+title: "German FC Attribut name not correct (FD: 676209)"
+priority: Low
+closed: 2026-09-28
+url: https://linear.app/fashioncloud/issue/BDD-3243/german-fc-attribut-name-not-correct-fd-676209
+```
+Dushan's. Done 09-28 14:58 UTC.
+
+```yaml
+id: BDD-3306
+title: "Remove gtin for CWF (FD: 678159)"
+priority: Medium
+closed: 2026-09-28
+url: https://linear.app/fashioncloud/issue/BDD-3306/remove-gtin-for-cwf-fd-678159
+```
+abubakarwase's. Done 09-28 11:10 UTC. This was the CWF GTIN `0` reportedly blocking the Showroom stock importer.
+
+```yaml
+id: BDD-3312
+title: "Citizen - delete image (FD: 678232)"
+priority: High
+closed: 2026-09-25
+url: https://linear.app/fashioncloud/issue/BDD-3312/citizen-delete-image-fd-678232
+```
+abubakarwase's. Done 09-25 12:34 UTC, about five hours after it landed. The 09-28 sync couldn't see this because Linear was unreachable.
+
+```yaml
 id: BDD-3304
 title: Deleting EANs | Blackstone (FD: 678060)
 priority: Medium
@@ -172,57 +226,3 @@ closed: 2026-09-10
 url: https://linear.app/fashioncloud/issue/BDD-3168/api-image-request-problem-fd-675101
 ```
 Part of the 09-04 bulk Triage-clearing assignment — shipped after sitting Ready To Start since then.
-
-```yaml
-id: BDD-2538
-title: PVH - image ID updates without actual image changes - more information needed (FD: 650988)
-priority: Medium
-closed: 2026-09-10
-url: https://linear.app/fashioncloud/issue/BDD-2538/pvh-image-id-updates-without-actual-image-changes-more-information
-```
-Was Ready To Start, unchanged for several cycles — shipped this cycle.
-
-```yaml
-id: BDD-3001
-title: Corrupted images - GUESS (FD: 671049)
-priority: Medium
-closed: 2026-09-10
-url: https://linear.app/fashioncloud/issue/BDD-3001/corrupted-images-guess-fd-671049
-```
-Was In Progress last sync, now Deployed.
-
-```yaml
-id: BDD-2497
-title: Delete pricelist fails in development (FD: 627912)
-priority: Low
-closed: 2026-09-10
-url: https://linear.app/fashioncloud/issue/BDD-2497/delete-pricelist-fails-in-development-fd-627912
-```
-Jumped straight from unassigned Triage to Done without ever showing an intermediate assignee — was the oldest item in `support/open.md` besides BDD-3005.
-
-```yaml
-id: BDD-3240
-title: "Just Brands incorrect transformation (fixed) but data has not been re-processed (FD: 676128)"
-priority: Urgent
-closed: 2026-09-09
-url: https://linear.app/fashioncloud/issue/BDD-3240/just-brands-incorrect-transformation-fixed-but-data-has-not-been-re
-```
-New and closed same day — Urgent priority, created and Deployed 09-09 without ever appearing at a "live" status in a prior sync. Landed already assigned to Kushel, so it did not cross the new-unassigned-Urgent-ticket notification bar.
-
-```yaml
-id: BDD-3226
-title: Bestseller Images stop propagating before mappedskus after the force-update reprocess (FD: 675515)
-priority: High
-closed: 2026-09-09
-url: https://linear.app/fashioncloud/issue/BDD-3226/bestseller-images-stop-propagating-before-mappedskus-after-the-force
-```
-Kushel's own ticket — shipped via [brand-data-pipeline#1838](../archive/prs/brand-data-pipeline.md) (pagination fix for `list_s3_bucket_files`), merged 09-09 12:53 UTC. Was at the top of `today.md` for two cycles.
-
-```yaml
-id: BDD-3163
-title: Brand Offboarding - Delete data (FD: 674971)
-priority: Medium
-closed: 2026-09-09
-url: https://linear.app/fashioncloud/issue/BDD-3163/brand-offboarding-delete-data-fd-674971
-```
-Part of the 09-04 bulk Triage-clearing assignment — went In Progress → Deployed within this cycle. Cross-checked against the Notion "Brands that got offboarded" table per standing practice.

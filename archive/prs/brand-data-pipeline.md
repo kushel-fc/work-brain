@@ -3,6 +3,61 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 1968
+title: "sarto: refactor and remove sketch images"
+author: marianabassi
+state: closed
+merged: true
+closed: 2026-09-28
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1968
+```
+Not his. marianabassi merged it 09-28 19:28 UTC.
+
+```yaml
+number: 1971
+title: "Staging Release - 2026-09-28"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-09-28
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1971
+```
+Not his. Automated. Chamindu36 merged it 09-28 14:59 UTC.
+
+```yaml
+number: 1970
+title: "change sample articles"
+author: MuniaL
+state: closed
+merged: true
+closed: 2026-09-28
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1970
+```
+Not his. Chamindu36 merged it 09-28 14:56 UTC.
+
+```yaml
+number: 1878
+title: "polaris brand migration"
+author: alirezaMoazenFashion
+state: closed
+merged: false
+closed: 2026-09-28
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1878
+```
+Was on his review list. Polaris iteration 1, superseded by #1951. Closed without merging 09-28 14:21 UTC, as the last sync expected.
+
+```yaml
+number: 1967
+title: "Enable image_sync for the brands that missed the setting during migration"
+author: marianabassi
+state: closed
+merged: true
+closed: 2026-09-28
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1967
+```
+Not his. marianabassi merged it 09-28 10:16 UTC.
+
+```yaml
 number: 1955
 title: Production Release - 2026-09-25
 author: FCMachineUser

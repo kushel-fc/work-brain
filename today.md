@@ -1,17 +1,14 @@
 # Today
 
-> **Linear wasn't reachable this sync (09-28).** The Linear sections below are carried forward from 09-25. GitHub and Slack are current.
-
-1. **Review queue grew from 3 to 5, with three new asks that name him individually:**
-   - [product-service#2785](prs/to-review.md) (dwiajik, PDS Streams SDK `subscribe()` contract, stage 1/4). This one blocks a stack: stage 2/4 (#2798) is waiting on this shape review. CodeRabbit has approved; there's no human review yet.
-   - [product-service#2801](prs/to-review.md) (automated, enable DOROTHEE SCHUMACHER on PIPE). This is the go-live flip after schumacher iteration 2 merged 09-25.
-   - [product-service#2792](prs/to-review.md) (blueSeven mapping rules, 112 rules). Older blueSeven PRs are still open and conflicting, so ask which set is current first.
-   - [brand-data-pipeline#1878](prs/to-review.md) now conflicts, and Polaris iteration 2 has already merged. Ask for it to be closed; don't review it. [#2514](prs/to-review.md) is still a stale draft (31 days).
-2. **Open Video Delivery Slice 3.2 part 4/4.** [#2767](archive/prs/product-service.md) (3/4) merged 09-28 07:41 UTC, so he has zero open PRs and 4/4 is next. See [shaping](shaping/video-download-delivery.md).
-3. **mosMosh is back: `mosMosh_FEED` went over the 3h run limit 09-27** (run eb61e7cd, started 08:04 UTC). It's the first mosMosh alert since the 09-17 to 09-21 spree ended, and nobody has followed up in-thread. See [dagster-alerts/log.md](dagster-alerts/log.md).
-4. **[BDD-2258](sources/linear/my-issues.md) (High) is still not started** as of 09-25. It's been unblocked since 08-31.
+1. **Finish Video Delivery Slice 3.2 on the backend side.** All four product-service parts are merged ([#2806](archive/prs/product-service.md), 4/4, merged 09-28), and BDD-3205/BDD-3191 are Done. What still holds BDD-3206/BDD-3223 open:
+   - [backend#7043](prs/mine.md): irembbt's Changes Requested from 09-24 is still the standing verdict. He pushed 09-27 and nobody has re-reviewed, so ask irembbt to take another look.
+   - [backend#7048](prs/mine.md): approved and mergeable. Only he can merge it, and nothing blocks it.
+2. **Review [product-service#2808](prs/to-review.md)** (ONA Mongo AWS auth fix, names him). BlueSeven's migration is stuck at the Phase 3 extract until this lands, so it's blocking alirezaMoazenFashion.
+3. **Review [brand-data-pipeline#1969](prs/to-review.md)** (retire `image_sync.credential_id`, BDD-3280). cinque_FEED2 is one of the eight configs it touches, and cinque's `download_images` [failed again](dagster-alerts/log.md) at 09-28 23:30 UTC.
+4. **[BDD-2258](sources/linear/my-issues.md) (High) is still not started.** It's been Ready To Start since 08-31 and was last touched 08-18. With the Slice 3.2 PCS work merged, it's the next High item that only he can do.
 
 ## Worth noting (not urgent)
-- **Dagster was fairly quiet over the weekend (10 messages):** a new cinque FEED2 `download_images` failure (same shape as swing's missing-`filename_pattern` issue from 09-25), the `analytics` step failing once more, two galvatron health-check blips, and a PDS relay Lambda error burst on 09-25 right after the BDD-3277 PoC merged. Aji deployed a fix for that and it recovered.
-- **Brand migrations are moving to PIPE:** Polaris and schumacher iteration 2 merged 09-25, and automated PIPE-enable PRs are open for both (product-service#2802 Polaris, #2801 schumacher). dorisStreich INTEX (product-service#2684 + brand-data-pipeline#1872) closed without merging.
-- **Carried from 09-25 (not re-checked):** Triage stood at 12 with 3 High ([BDD-3312](support/open.md) Citizen image deletion unassigned, [BDD-3311](support/open.md), [BDD-3248](support/open.md)).
+- **Triage is down to 2 (was 12) and support/open.md is empty.** A 09-28 sweep, mostly by abubakarwase, shipped, canceled or picked up every support ticket. See [support/recently-closed.md](support/recently-closed.md).
+- **dorisStreich FEED failed twice 09-28** (9 asset failures, then `publish_from_map`), and "Enable Doris Streich fully on PIPE" (product-service#2810) merged the next morning. It isn't his PR, but check the post-flip runs before assuming the migration is healthy. See [dagster-alerts/log.md](dagster-alerts/log.md).
+- **mosMosh has been quiet since the 09-27 run-limit hit.** The `analytics` step failed once more 09-28 (existing `recurring` pattern).
+- **His review queue went from 5 to 3.** He approved #2785, #2801 and #2798 (all merged) and both staging releases. PDS SDK stage 3/4 (product-service#2813) is up as a draft, and he may get asked next.

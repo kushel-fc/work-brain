@@ -2,6 +2,17 @@
 
 One entry per sync run. Prune entries older than ~30 days.
 
+## 2026-09-29 (~08:45 UTC)
+
+About 24h since the last sync (09-28 ~08:45 to 09-29 ~08:45). Linear (claude.ai connector), GitHub (`gh`) and Slack (claude.ai connector) were all reachable, so the Linear data carried forward from 09-25 is now refreshed. The `plugin:engineering:*` servers needed auth and weren't used.
+
+- **The Slice 3.2 product-service stack is complete.** His own #2806 (4/4) opened and merged 09-28 (12:23 UTC). BDD-3205 and BDD-3191 went Done, so my issues went 7 to 5. BDD-3206/BDD-3223 stay In Review, waiting on backend#7043. That PR has irembbt's Changes Requested from 09-24 standing, with no re-review after his 09-27 push. backend#7048 is approved and his to merge. The backend repo is outside the regular pull; I checked it via `gh search prs --author` and added it to `prs/mine.md`.
+- **Triage went from 12 to 2 and support/open.md from 11 to 0** after a 09-28 sweep. Six shipped (BDD-3312, BDD-3306, BDD-3043, BDD-3241, BDD-3243, BDD-3005), three were canceled (BDD-3248, BDD-3260, BDD-3310), and two were picked up by others (BDD-3311, BDD-3309). The only new ticket, BDD-3325, is internal and owned by Dushan. recently-closed is kept at 25, and 6 older entries rolled into the archive.
+- **Review queue 5 to 3.** He approved #2785, #2801 and #2798, and all merged. #2792 and brand-data-pipeline#1878 closed. New individual asks: product-service#2808 (ONA Mongo AWS auth, blocks blueSeven) and brand-data-pipeline#1969 (BDD-3280). product-service went 11 to 8 and brand-data-pipeline 13 to 14. brand-data-pipeline#1956 newly conflicts (not his). A first read showed `unknown` mergeable states; a second read resolved them.
+- Slack (4 alerts): cinque FEED2 `download_images` failed again, so the entry went `active` to `recurring`. dorisStreich FEED had 9 asset failures and then a `publish_from_map` failure, first occurrences, the evening before its PIPE-enable PR (product-service#2810) merged. `analytics` failed once more. mosMosh has been quiet since 09-27. Dagster log pruned by 1 entry (08-29), now 117.
+- Earmarks: none active, nothing to check.
+- Notified: no. Nothing crossed the notification bar. No deadline passed with zero movement (no due dates on his live issues). No flip to conflict or Changes Requested on his own PRs in the tracked repos: #2806 merged, and backend#7043's Changes Requested dates from 09-24, before this cycle. No new Urgent unassigned ticket (BDD-3326 is High and not in Triage). cinque recurred, but its earlier entry was `active` and never self-resolved, so by the precedent in this log (profuomo 09-14, mosMosh 09-28) it continues an open problem rather than coming back after resolving. It's flagged in `today.md` instead.
+
 ## 2026-09-28 (~08:45 UTC)
 
 About 72h since the last sync (09-25 ~08:50 to 09-28 ~08:45, a weekend in between). GitHub (`gh`) and Slack (claude.ai connector) were reachable. **Linear was not:** no Linear tools were available in this session (the claude.ai Linear connector wasn't loaded and `plugin:engineering:linear` needs auth). So `sources/linear/*`, `support/*` and the Linear parts of `today.md`/`this-week.md` are carried forward from 09-25 unchanged and marked as such.

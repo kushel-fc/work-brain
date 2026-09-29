@@ -3,6 +3,160 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2812
+title: "Move `product-data-service-sdk` to `packages/external`"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-09-29
+url: https://github.com/fashioncloud/product-service/pull/2812
+```
+Not his. dwiajik merged it himself 09-29 08:14 UTC.
+
+```yaml
+number: 2810
+title: "Enable Doris Streich fully on PIPE"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-09-29
+url: https://github.com/fashioncloud/product-service/pull/2810
+```
+Not his. Automated. marianabassi merged it 09-29 07:45 UTC. This came right after dorisStreich FEED failed twice in prod on 09-28 (see `dagster-alerts/log.md`).
+
+```yaml
+number: 2798
+title: "PDS Streams SDK: thin receive-decode-ack path (stage 2/4)"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-09-29
+url: https://github.com/fashioncloud/product-service/pull/2798
+```
+Not his, but **he approved it**, with Chamindu36 and CodeRabbit, after a long review loop in which Chamindu36 had requested changes. dwiajik merged it 09-29 07:00 UTC. BDD-3316 is Done.
+
+```yaml
+number: 2801
+title: "Enable DOROTHEE SCHUMACHER and Polaris brands on PIPE"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-09-28
+url: https://github.com/fashioncloud/product-service/pull/2801
+```
+Was on his review list. **He approved it**, it was retitled to cover Polaris as well (replacing #2802), and alirezaMoazenFashion merged it 09-28 12:24 UTC. A revert PR (#2811) was opened and then closed without merging.
+
+```yaml
+number: 2806
+title: "4/4: Wire multi-download resolve to CSV generation, thread video/csv independence"
+author: kushel-fc
+state: closed
+merged: true
+closed: 2026-09-28
+url: https://github.com/fashioncloud/product-service/pull/2806
+```
+**His own.** The last part of Video Delivery Slice 3.2. Opened 09-28 10:50 UTC. CodeRabbit requested changes twice and then approved, and Chamindu36 and irembbt approved. He merged it himself 12:23 UTC, completing the product-service stack. BDD-3205 and BDD-3191 went Done about two hours later.
+
+```yaml
+number: 2803
+title: "fix(image-sync-collector): only collect images that still need downloading"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-09-28
+url: https://github.com/fashioncloud/product-service/pull/2803
+```
+Not his. dwiajik merged it 09-28 12:02 UTC.
+
+```yaml
+number: 2805
+title: "Staging Release - 2026-09-28"
+author: github-actions
+state: closed
+merged: true
+closed: 2026-09-28
+url: https://github.com/fashioncloud/product-service/pull/2805
+```
+Not his. Automated. Chamindu36 merged it 09-28 09:42 UTC.
+
+```yaml
+number: 2804
+title: "Remove Hugo Boss publishing logic from utils and workflows"
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-09-28
+url: https://github.com/fashioncloud/product-service/pull/2804
+```
+Not his. Chamindu36 merged it 09-28 09:36 UTC. Part of BDD-3295 (Hugo Boss support).
+
+```yaml
+number: 2785
+title: "PDS Streams SDK: subscribe() API surface"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-09-28
+url: https://github.com/fashioncloud/product-service/pull/2785
+```
+Was on his review list (stage 1/4, the contract review). **He left comments and approved.** dwiajik merged it 09-28 09:32 UTC. BDD-3315 is Done.
+
+```yaml
+number: 2811
+title: "Revert: Enable DOROTHEE SCHUMACHER and Polaris brands on PIPE"
+author: marianabassi
+state: closed
+merged: false
+closed: 2026-09-28
+url: https://github.com/fashioncloud/product-service/pull/2811
+```
+Not his. A revert of #2801. It was closed without merging, so #2801 stays live.
+
+```yaml
+number: 2807
+title: "fix(models): declare aws4 for MongoDB AWS auth in pruned job images"
+author: alirezaMoazenFashion
+state: closed
+merged: false
+closed: 2026-09-28
+url: https://github.com/fashioncloud/product-service/pull/2807
+```
+Not his. Closed without merging and replaced by #2808, which names him.
+
+```yaml
+number: 2802
+title: "Enable Polaris brands on PIPE"
+author: FCMachineUser
+state: closed
+merged: false
+closed: 2026-09-28
+url: https://github.com/fashioncloud/product-service/pull/2802
+```
+Not his. Closed 09-28 11:54 UTC after Polaris was folded into #2801.
+
+```yaml
+number: 2792
+title: "blueSeven FEED and FEED2 mapping rules"
+author: alirezaMoazenFashion
+state: closed
+merged: false
+closed: 2026-09-28
+url: https://github.com/fashioncloud/product-service/pull/2792
+```
+Was on his review list. Closed without merging 09-28 12:12 UTC. The older blueSeven PRs (#2694/#2693) are still open, and blueSeven is blocked at the ONA extract (see #2808).
+
+```yaml
+number: 1737
+title: "add histogram endpoint to pdo"
+author: irembbt
+state: closed
+merged: false
+closed: 2026-09-28
+url: https://github.com/fashioncloud/product-service/pull/1737
+```
+Not his. It had been conflicting for a long time. Closed without merging 09-28 12:23 UTC.
+
+```yaml
 number: 2767
 title: "3/4: Add PCS CSV generation module"
 author: kushel-fc

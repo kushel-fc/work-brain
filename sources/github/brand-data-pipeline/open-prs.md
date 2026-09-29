@@ -2,20 +2,46 @@
 
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
-Down from 17 to 13. One new: #1956 (MuniaL, Hugo Boss adjustments, approved by Chamindu36). Five left: #1955 (09-25 production release), #1951 (Polaris iteration 2), #1947 (schumacher iteration 2) and #1945 (BDD-3273, which Kushel approved) all merged 09-25, and #1872 (dorisStreich INTEX) closed without merging. See [`archive/prs/brand-data-pipeline.md`](../../../archive/prs/brand-data-pipeline.md). **#1878 (polaris iteration 1, on his review list) now conflicts**, and so do #1880 and #1879 (blueSeven). All three are probably fallout from the iteration-2 migrations merging. #1263, #1120, #1058 and #1055 (none his) still conflict.
+Up from 13 to 14. Two new: #1972 (09-29 staging release, which he approved) and **#1969 (dwiajik, retire `image_sync.credential_id`, BDD-3280, names Kushel)**. One left: **#1878 (Polaris iteration 1, on his review list) closed 09-28 14:21 UTC**, as expected. Opened and merged inside the window: #1971 (09-28 staging release), #1970, #1968 (sarto sketch-image refactor) and #1967 (enable image_sync for brands that missed it during migration). See [`archive/prs/brand-data-pipeline.md`](../../../archive/prs/brand-data-pipeline.md). After a second read: #1956 (Hugo Boss adjustments) **newly conflicts**, and #1880, #1879, #1263, #1120, #1058 and #1055 still conflict. None of those are his.
+
+```yaml
+number: 1972
+title: Staging Release - 2026-09-29
+author: FCMachineUser
+state: open
+mergeable_state: mergeable
+review_state: approved
+requested_reviewers: []
+updated: 2026-09-29
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1972
+```
+New 09-29 08:24 UTC, automated (triggered by irembbt). Approved by Kushel and dwiajik. CI state is `CLEAN`. Paired with product-service#2809.
+
+```yaml
+number: 1969
+title: "refactor(image-source): retire image_sync.credential_id"
+author: dwiajik
+state: open
+mergeable_state: mergeable
+review_state: awaiting-first-review
+requested_reviewers: [brand-data-dev (team), irembbt, kushel-fc]
+updated: 2026-09-28
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1969
+```
+New 09-28 11:42 UTC, **names Kushel individually**. Closes BDD-3280. It moves eight brand configs (cinque_FEED2, holyfashion, lugina x2, marcOPolo_PRICAT, profuomo, royRobson_FEED2, studioanneloes) from `image_sync.credential_id` to `image_source.credential_id` and drops the old key. Several of those brands had recent `download_images`/FTP-move alerts, so a mis-migrated credential would show up in Dagster. See [`prs/to-review.md`](../../../prs/to-review.md).
 
 ```yaml
 number: 1956
 title: Hugo boss adjustments
 author: MuniaL
 state: open
-mergeable_state: mergeable
+mergeable_state: conflicting
 review_state: approved
 requested_reviewers: []
 updated: 2026-09-25
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1956
 ```
-New 09-25, not his. Hugo Boss config adjustments. Chamindu36 approved it and it's `CLEAN`, but it isn't merged yet.
+Opened 09-25, not his. Hugo Boss config adjustments, approved by Chamindu36. **It now conflicts**, probably because Chamindu36's product-service#2804 (removing Hugo Boss publishing logic) and other 09-28 merges landed first.
 
 ```yaml
 number: 1941
@@ -68,19 +94,6 @@ updated: 2026-09-15
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1879
 ```
 Not his. No change.
-
-```yaml
-number: 1878
-title: polaris brand migration
-author: alirezaMoazenFashion
-state: open
-mergeable_state: conflicting
-review_state: awaiting-first-review
-requested_reviewers: [kushel-fc]
-updated: 2026-09-16
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/1878
-```
-Individually his to review, sole named reviewer. marianabassi approved, and his own review is still outstanding. **Now conflicts**, after Polaris iteration 2 (#1951) merged 09-25 and product-service#2802 opened 09-27 to move Polaris onto PIPE. That makes it very likely superseded. No activity since 09-16. See [`prs/to-review.md`](../../../prs/to-review.md).
 
 ```yaml
 number: 1815

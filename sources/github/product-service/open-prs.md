@@ -2,73 +2,47 @@
 
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
-Down from 13 to 11. Five new: #2802 (Enable Polaris brands on PIPE, 09-27), **#2801 (Enable DOROTHEE SCHUMACHER on PIPE, names Kushel)**, #2798 (PDS Streams SDK stage 2/4, draft), **#2792 (blueSeven FEED/FEED2 mapping rules, names Kushel)** and **#2785 (PDS Streams SDK `subscribe()` API surface, names Kushel)**. Seven left: **Kushel's own #2767 (3/4) merged 09-28 07:41 UTC**, #2784 (09-25 production release) and #2764 (BDD-3273 collect job) merged 09-25, and #2783, #2773, #2769 and #2684 closed without merging. See [`archive/prs/product-service.md`](../../../archive/prs/product-service.md). A first read showed several `unknown` mergeable states; a second read resolved them, and only #1737 (not his) conflicts.
+Down from 11 to 8. Three new: #2813 (PDS Streams SDK stage 3/4, draft), #2809 (09-28 staging release, which he approved) and **#2808 (alirezaMoazenFashion, restore Mongo AWS auth for ONA extract, names Kushel)**. Six left. Merged: **#2785 (SDK stage 1/4) 09-28 09:32 UTC and #2798 (stage 2/4) 09-29 07:00 UTC, both of which he approved**, and **#2801 (schumacher + Polaris on PIPE) 09-28 12:24 UTC, also approved by him**. Closed without merging: #2802 (Polaris on PIPE, folded into #2801), #2792 (blueSeven rules) and #1737. Other PRs opened and merged inside the window: **his own #2806 (Slice 3.2 4/4)**, #2812, #2810 (Doris Streich fully on PIPE), #2805, #2804 and #2803. #2811 (a revert of #2801) and #2807 opened and closed without merging. See [`archive/prs/product-service.md`](../../../archive/prs/product-service.md). A first read showed several `unknown` mergeable states; a second read resolved them all to mergeable, so nothing on product-service conflicts now.
 
 ```yaml
-number: 2802
-title: Enable Polaris brands on PIPE
-author: FCMachineUser
-state: open
-mergeable_state: mergeable
-review_state: awaiting-first-review
-requested_reviewers: [brand-data-dev (team), irembbt, abirprantofc]
-updated: 2026-09-27
-url: https://github.com/fashioncloud/product-service/pull/2802
-```
-New 09-27, automated (FCMachineUser). Moves the four Polaris brand IDs from `brands_on_megatron` to `brands_on_pipe`, following Polaris iteration 2 (brand-data-pipeline#1951) merging 09-25. Not his.
-
-```yaml
-number: 2801
-title: Enable DOROTHEE SCHUMACHER on PIPE
-author: FCMachineUser
-state: open
-mergeable_state: mergeable
-review_state: awaiting-first-review
-requested_reviewers: [brand-data-dev (team), abubakarwase, kushel-fc]
-updated: 2026-09-27
-url: https://github.com/fashioncloud/product-service/pull/2801
-```
-New 09-27, automated (FCMachineUser), **names Kushel individually**. Fully routes DOROTHEE SCHUMACHER (schumacher_FEED) EventBridge traffic from Megatron to PIPE, following schumacher iteration 2 (brand-data-pipeline#1947) merging 09-25. No reviews yet, `BLOCKED`. See [`prs/to-review.md`](../../../prs/to-review.md).
-
-```yaml
-number: 2798
-title: "PDS Streams SDK: thin receive-decode-ack path (stage 2/4)"
+number: 2813
+title: "PDS Streams SDK: correct under load and failure (stage 3/4)"
 author: dwiajik
 state: open
 draft: true
 mergeable_state: mergeable
-review_state: (no decision yet)
+review_state: awaiting-first-review
 requested_reviewers: []
-updated: 2026-09-28
-url: https://github.com/fashioncloud/product-service/pull/2798
+updated: 2026-09-29
+url: https://github.com/fashioncloud/product-service/pull/2813
 ```
-New 09-25, draft, not his. Stage 2/4 of the PDS Streams SDK (BDD-3093): wires `subscribe()`/`iterate()` to a real SQS queue with the minimum receive-decode-ack path. Stacked on #2785.
+New 09-29 08:36 UTC, draft. Stage 3/4 of the PDS SDK (BDD-3317), covering batched acks, heartbeat and shutdown. No reviewers requested yet. He reviewed stages 1 and 2, so he'll probably be asked on this one too.
 
 ```yaml
-number: 2792
-title: blueSeven FEED and FEED2 mapping rules
+number: 2809
+title: Staging Release - 2026-09-28
+author: github-actions
+state: open
+mergeable_state: mergeable
+review_state: approved
+requested_reviewers: [irembbt, julsjacinto]
+updated: 2026-09-29
+url: https://github.com/fashioncloud/product-service/pull/2809
+```
+New 09-28, automated. Approved by dwiajik and Kushel. CI state is `UNSTABLE`. Paired with brand-data-pipeline#1972.
+
+```yaml
+number: 2808
+title: "fix(extract): restore Mongo AWS auth and expose ONA startup failures"
 author: alirezaMoazenFashion
 state: open
 mergeable_state: mergeable
 review_state: awaiting-first-review
-requested_reviewers: [brand-data-dev (team), dwiajik, kushel-fc]
-updated: 2026-09-25
-url: https://github.com/fashioncloud/product-service/pull/2792
-```
-New 09-25, **names Kushel individually**. The shared manufacturer-scoped blueSeven mapping-rule payload for the FEED and FEED2 INTEX migrations (112 rules, DRY_RUN defaults to true). No reviews yet. The older blueSeven PRs (#2694, #2693) are still open alongside it. See [`prs/to-review.md`](../../../prs/to-review.md).
-
-```yaml
-number: 2785
-title: "PDS Streams SDK: subscribe() API surface"
-author: dwiajik
-state: open
-mergeable_state: mergeable
-review_state: awaiting-first-review
-requested_reviewers: [brand-data-dev (team), julsjacinto, kushel-fc, Chamindu36]
+requested_reviewers: [brand-data-dev (team), abubakarwase, kushel-fc]
 updated: 2026-09-28
-url: https://github.com/fashioncloud/product-service/pull/2785
+url: https://github.com/fashioncloud/product-service/pull/2808
 ```
-New 09-25, **names Kushel individually** (with julsjacinto and Chamindu36). Stage 1/4 of the PDS Streams SDK (BDD-3093): the typed public API surface only, where `subscribe()`/`iterate()` throw `NotImplementedError`, up for review of the contract shape. CodeRabbit went through three Changes Requested rounds with dwiajik, then approved. No human review yet. See [`prs/to-review.md`](../../../prs/to-review.md).
+New 09-28 14:53 UTC, **names Kushel individually**. BlueSeven's migration is stuck at the ONA Phase 3 extract. The fix adds the missing `aws4` dependency for `MONGODB-AWS` auth and surfaces startup failures that currently only reach Datadog. It replaces #2807, which was closed. `BLOCKED` on review. See [`prs/to-review.md`](../../../prs/to-review.md).
 
 ```yaml
 number: 2744
@@ -136,16 +110,3 @@ updated: 2026-08-28
 url: https://github.com/fashioncloud/product-service/pull/2514
 ```
 Individually his to review. Draft, already Changes Requested from someone else, now 26 days unchanged. See [`prs/to-review.md`](../../../prs/to-review.md).
-
-```yaml
-number: 1737
-title: add histogram endpoint to pdo
-author: irembbt
-state: open
-mergeable_state: conflicting
-review_state: awaiting-first-review
-requested_reviewers: [julsjacinto]
-updated: 2026-07-07
-url: https://github.com/fashioncloud/product-service/pull/1737
-```
-Not his. No change.

@@ -3,6 +3,46 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
+timestamp: 2026-09-28T23:30:17Z
+channel: brand-data-dev-alerts
+brand: cinque
+summary: "cinque__FEED2__download_images - essential container exited (exit 1), 3 asset events, again"
+status: recurring
+linked_issue: null
+```
+The second hit, about 40h after the first (09-27 08:29 UTC). Same step and signature, from the scheduled cron (run 6bba2863). Nobody has replied in a thread either time. cinque_FEED2 is one of the eight configs whose credential key brand-data-pipeline#1969 migrates. That PR isn't merged yet, so it isn't the cause, but it's the obvious place to look. brand-data-pipeline#1967 (enable image_sync for brands that missed it during migration) merged 09-28 10:16 UTC, before this failure.
+
+```yaml
+timestamp: 2026-09-28T16:27:40Z
+channel: brand-data-dev-alerts
+brand: dorisStreich
+summary: "dorisStreich__FEED__publish_from_map - essential container exited (exit 1)"
+status: active
+linked_issue: null
+```
+About an hour after the 9-asset failure below, on the same brand and the same commit (run 41a36b29). No thread. product-service#2810 ("Enable Doris Streich fully on PIPE") merged the next morning (09-29 07:45 UTC). It's unclear whether the go-live flip went ahead with these failures known, or whether the failures were part of the pre-flip runs. Worth a look before calling the migration healthy.
+
+```yaml
+timestamp: 2026-09-28T15:25:52Z
+channel: brand-data-dev-alerts
+brand: dorisStreich
+summary: "dorisStreich/FEED - 9 asset materializations failed (download_images, feed_transform, global_transform, ...)"
+status: active
+linked_issue: null
+```
+First dorisStreich entry in this log (run 6e016bdf). dorisStreich is mid-migration: BDD-2842 is at "Step 1 [Ona]", its INTEX PRs closed 09-25, and the PIPE enable merged 09-29. No thread.
+
+```yaml
+timestamp: 2026-09-28T13:51:52Z
+channel: brand-data-dev-alerts
+brand: platform (analytics_trigger_sensor)
+summary: analytics step - essential container exited, exit code 1, once more
+status: recurring
+linked_issue: null
+```
+Same long-running no-owner pattern (run 9f9558f4), last seen 09-25. No thread.
+
+```yaml
 timestamp: 2026-09-27T23:47:37Z
 channel: brand-data-dev-alerts
 brand: platform (galvatron ECS)
@@ -27,10 +67,10 @@ timestamp: 2026-09-27T08:29:39Z
 channel: brand-data-dev-alerts
 brand: cinque
 summary: "cinque__FEED2__download_images - essential container exited (exit 1), 3 asset events"
-status: active
+status: recurring
 linked_issue: null
 ```
-First cinque entry in this log. cinque was part of the 09-15 brand-migration wave. The signature matches the swing `download_images` failure from 09-25, which was a missing `filename_pattern` config, so check that first. No thread.
+First cinque entry in this log. cinque was part of the 09-15 brand-migration wave. The signature matches the swing `download_images` failure from 09-25, which was a missing `filename_pattern` config, so check that first. No thread. **Recurred 09-28 23:30 UTC (see above), so it isn't a one-off.**
 
 ```yaml
 timestamp: 2026-09-25T21:39:40Z
@@ -1131,13 +1171,3 @@ status: recurring
 linked_issue: null
 ```
 Same alert as the 2026-08-20→08-23 incident, firing again. Warned 08-29 16:58 UTC, recovered 08-30 15:41 UTC (~23h) with no human thread activity either time — appears to clear itself without intervention.
-
-```yaml
-timestamp: 2026-08-29T10:55:34Z
-channel: brand-data-dev-alerts
-brand: platform (galvatron ECS)
-summary: ECS health check failures detected for galvatron service
-status: self-resolved
-linked_issue: null
-```
-Triggered 10:52 UTC, recovered ~3 minutes later — brief blip, no thread.
