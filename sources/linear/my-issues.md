@@ -2,7 +2,7 @@
 
 Assigned to Kushel, live (non-completed) statuses. Populated on sync — completed/canceled work stays in Linear's own history rather than being repeated here; see `git log` for what rolled off.
 
-**09-29 sync:** 7 to 5. BDD-3205 (PCS CSV module) and BDD-3191 (N1 docs) both went to Done 09-28 14:17 UTC, after the whole product-service Slice 3.2 stack merged (4/4, #2806, 12:23 UTC). BDD-3223 and BDD-3206 are still In Review. BDD-3206's code is backend#7043, which still has Changes Requested from irembbt (09-24) on it. See [`archive/linear/closed-internal.md`](../../archive/linear/closed-internal.md).
+**09-30 sync:** No change, still 5. Nothing assigned to him was updated in Linear since 09-28. BDD-3223 and BDD-3206 stay In Review, waiting on backend#7043, where irembbt's 09-24 Changes Requested still stands. BDD-2258 (High) has now been Ready To Start for a month.
 
 ---
 

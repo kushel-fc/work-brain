@@ -3,6 +3,171 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2813
+title: "PDS Streams SDK: queue throughput, consumer DLQs and shutdown (stage 3/4)"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-09-30
+url: https://github.com/fashioncloud/product-service/pull/2813
+```
+Not his. dwiajik merged it 09-30 08:23 UTC, out of draft and without Kushel's review (he reviewed stages 1 and 2).
+
+```yaml
+number: 2825
+title: "Production Release - 2026-09-29"
+author: github-actions
+state: closed
+merged: true
+closed: 2026-09-29
+url: https://github.com/fashioncloud/product-service/pull/2825
+```
+Automated. Merged 15:19 UTC. Opened and merged inside the window.
+
+```yaml
+number: 2823
+title: "Staging Release - 2026-09-29"
+author: github-actions
+state: closed
+merged: true
+closed: 2026-09-29
+url: https://github.com/fashioncloud/product-service/pull/2823
+```
+Automated. Merged 14:56 UTC. Opened and merged inside the window.
+
+```yaml
+number: 2822
+title: "BDD-3329 Publish product-data-schema to the npm org"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-09-30
+url: https://github.com/fashioncloud/product-service/pull/2822
+```
+Not his. Merged 07:56 UTC. Its first publish run failed, and #2827 is the fix.
+
+```yaml
+number: 2821
+title: "Implement persona management in AssistantController and related services"
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-09-29
+url: https://github.com/fashioncloud/product-service/pull/2821
+```
+Not his. Merged 13:18 UTC.
+
+```yaml
+number: 2820
+title: "Staging Release - 2026-09-29"
+author: github-actions
+state: closed
+merged: true
+closed: 2026-09-29
+url: https://github.com/fashioncloud/product-service/pull/2820
+```
+Automated. Merged 12:35 UTC.
+
+```yaml
+number: 2819
+title: "Production Release - 2026-09-29"
+author: github-actions
+state: closed
+merged: true
+closed: 2026-09-29
+url: https://github.com/fashioncloud/product-service/pull/2819
+```
+Automated. Merged 13:17 UTC.
+
+```yaml
+number: 2817
+title: "Add Custom Hugoboss POS catalog import workflow"
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-09-29
+url: https://github.com/fashioncloud/product-service/pull/2817
+```
+Not his. Merged 12:02 UTC.
+
+```yaml
+number: 2816
+title: "Enable SWING, Hey Kyla, and FYNCH-HATTON on PIPE"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-09-29
+url: https://github.com/fashioncloud/product-service/pull/2816
+```
+Automated. Merged 11:07 UTC. fynchHatton_FEED2 exceeded its 3h run limit that evening (see `dagster-alerts/log.md`).
+
+```yaml
+number: 2815
+title: "Enable milestone on PIPE"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-09-29
+url: https://github.com/fashioncloud/product-service/pull/2815
+```
+Automated. Merged 10:30 UTC.
+
+```yaml
+number: 2814
+title: "BDD-3327 Create the product-data-schema package"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-09-29
+url: https://github.com/fashioncloud/product-service/pull/2814
+```
+Not his. Merged 12:47 UTC.
+
+```yaml
+number: 2809
+title: "Staging Release - 2026-09-28"
+author: github-actions
+state: closed
+merged: true
+closed: 2026-09-29
+url: https://github.com/fashioncloud/product-service/pull/2809
+```
+Automated. He approved it. irembbt merged it 09-29 11:54 UTC.
+
+```yaml
+number: 2694
+title: "blueSeven mapping rules"
+author: alirezaMoazenFashion
+state: closed
+merged: false
+closed: 2026-09-29
+url: https://github.com/fashioncloud/product-service/pull/2694
+```
+Not his. Closed without merging 17:07 UTC after sitting unreviewed since 09-14.
+
+```yaml
+number: 2693
+title: "Add blueSeven FEED2 mapping rules"
+author: alirezaMoazenFashion
+state: closed
+merged: false
+closed: 2026-09-29
+url: https://github.com/fashioncloud/product-service/pull/2693
+```
+Not his. Closed without merging 17:07 UTC.
+
+```yaml
+number: 2686
+title: "polaris brand migration mappings"
+author: alirezaMoazenFashion
+state: closed
+merged: false
+closed: 2026-09-29
+url: https://github.com/fashioncloud/product-service/pull/2686
+```
+Not his. Closed without merging 17:07 UTC. Polaris went live on PIPE via #2801 on 09-28.
+
+```yaml
 number: 2812
 title: "Move `product-data-service-sdk` to `packages/external`"
 author: dwiajik

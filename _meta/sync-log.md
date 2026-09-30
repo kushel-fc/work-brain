@@ -2,6 +2,19 @@
 
 One entry per sync run. Prune entries older than ~30 days.
 
+## 2026-09-30 (~08:45 UTC)
+
+About 24h since the last sync (09-29 ~08:45 to 09-30 ~08:45). Linear (claude.ai connector), GitHub (`gh`) and Slack (claude.ai connector) were all reachable. The `plugin:engineering:*` servers needed auth and weren't used.
+
+- **Quiet day for his own work.** No Linear changes on his 5 live issues. backend#7043 still has irembbt's 09-24 Changes Requested and no re-review since his 09-27 push. backend#7048 is still approved and unmerged. He opened and merged one small PR, brand-data-pipeline#1978 (fynchHatton/milestone config, 09-29 14:14 UTC).
+- **fynchHatton_FEED2 exceeded its 3h run limit** on the run that started 16:41 UTC, on go-live day and about 2.5h after #1978 merged. It's a first occurrence, someone claimed it with a :raising_hand: reaction, and there's no thread. Flagged in `today.md` because it follows his own change.
+- **Review queue 3 to 4.** New: product-service#2826 (Chamindu36, package version/publishing scripts). brand-data-pipeline#1969 flipped mergeable to conflicting (not his PR). #2808 still has zero reviews two days in, and it blocks blueSeven. PDS SDK stage 3/4 (#2813) merged 09-30 without being sent to him.
+- **Big 09-29 release day.** product-service went 8 to 6: 13 PRs merged, 3 stale blueSeven/polaris mapping PRs closed, and 3 new. brand-data-pipeline went 14 to 12, with 11 merged. None were his to review except as noted. The last read resolved every `unknown` mergeable state.
+- Linear: Triage 2 to 1 (BDD-3325 canceled 09-29 08:46 UTC). support/open.md still empty.
+- Slack (5 alerts): PDS stream-publish failures flared twice (09-29 14:47, 09-30 01:56 UTC). Both self-resolved within 15 min, and Aji traced the first to a transient `EAI_AGAIN` DNS failure to Kinesis. fynchHatton_FEED2 and authenticstyle_FEED_sync_images each exceeded 3h (first occurrences, `active`). cinque, dorisStreich and mosMosh were quiet. Dagster log +4, pruned 1 (08-30), now 120.
+- Earmarks: none active, nothing to check.
+- Notified: no. Nothing crossed the notification bar. No deadline passed with zero movement (no due dates on his live issues). No flip to conflict or Changes Requested on his own PRs: #1978 merged cleanly, and backend#7043's Changes Requested dates from 09-24. #1969's conflict flip isn't his PR. No new Urgent unassigned ticket (Triage has no new tickets at all). The PDS flares repeat a pattern that self-resolves every time, so it isn't a `recurring` status flip. fynchHatton and authenticstyle are first occurrences.
+
 ## 2026-09-29 (~08:45 UTC)
 
 About 24h since the last sync (09-28 ~08:45 to 09-29 ~08:45). Linear (claude.ai connector), GitHub (`gh`) and Slack (claude.ai connector) were all reachable, so the Linear data carried forward from 09-25 is now refreshed. The `plugin:engineering:*` servers needed auth and weren't used.

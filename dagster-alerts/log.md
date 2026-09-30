@@ -3,6 +3,46 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
+timestamp: 2026-09-30T01:56:32Z
+channel: brand-data-dev-alerts
+brand: platform (product-data-service / PDS)
+summary: "PDS stream-publish log failures (PUBLISHING_JOB_PD_STREAMS_FAILED) triggered and recovered within 15 min, second flare in ~11h"
+status: self-resolved
+linked_issue: null
+```
+Triggered 01:56:32Z, recovered 02:11:35Z. The log monitor fired alone, without the paired Kinesis-records monitor this time. No thread. This is the same self-clearing pattern as 09-15, 09-17 and yesterday afternoon. It has never needed a human to clear it, so it's tagged `self-resolved` rather than `recurring`.
+
+```yaml
+timestamp: 2026-09-29T22:59:33Z
+channel: brand-data-dev-alerts
+brand: authenticstyle
+summary: "authenticstyle_FEED_sync_images exceeded the 3h run time limit (run ca5f3d99, started 19:58 UTC)"
+status: active
+linked_issue: null
+```
+First occurrence of this job in the log. It came from the scheduled image-sync cron. No thread or reaction. Whether the run finished or was stopped isn't visible from Slack.
+
+```yaml
+timestamp: 2026-09-29T19:42:12Z
+channel: brand-data-dev-alerts
+brand: fynchHatton
+summary: "fynchHatton_FEED2 exceeded the 3h run time limit (run b57a86af, started 16:41 UTC)"
+status: active
+linked_issue: null
+```
+First occurrence. It came on go-live day: product-service#2816 (SWING, Hey Kyla and FYNCH-HATTON on PIPE) merged 11:07 UTC, and **Kushel's own brand-data-pipeline#1978** (config.json for fynchHatton and milestone) merged 14:14 UTC, about 2.5h before this run started. Someone reacted with :raising_hand: (claiming it) but there's no thread. It may just be a large first full run after migration, but worth checking the next scheduled run.
+
+```yaml
+timestamp: 2026-09-29T14:47:29Z
+channel: brand-data-dev-alerts
+brand: platform (product-data-service / PDS)
+summary: "PDS stream publish failures (metric 31) + PUBLISHING_JOB_PD_STREAMS_FAILED log alert, paired, recovered in ~15 min"
+status: self-resolved
+linked_issue: null
+```
+Both monitors triggered 14:47 UTC and recovered 15:02 UTC. Aji replied in-thread with the error: `ERR_HTTP2_STREAM_CANCEL` caused by `getaddrinfo EAI_AGAIN kinesis.eu-central-1.amazonaws.com`. That's a transient DNS lookup failure to the Kinesis endpoint, not throttling. Two :eyes: reactions. It lines up with the day's PDS SDK / product-data-schema merges, but nothing links them directly.
+
+```yaml
 timestamp: 2026-09-28T23:30:17Z
 channel: brand-data-dev-alerts
 brand: cinque
@@ -1161,13 +1201,3 @@ status: self-resolved
 linked_issue: null
 ```
 Same "no valid SKUs produced" / relevantJsonObject-gtinField symptom as bruehl and citizen (see below) — third brand hit by this pattern. honey.sabu confirmed it's the brand uploading a bad EAN format and can be ignored; Aji closed it out in-thread within ~7 minutes.
-
-```yaml
-timestamp: 2026-08-30T15:41:59Z
-channel: brand-data-dev-alerts
-brand: platform (Megatron → Backend)
-summary: Delays in image processing flow between Megatron and Backend (backend-service-UNPROCESSED-IMAGE-RECEIVED)
-status: recurring
-linked_issue: null
-```
-Same alert as the 2026-08-20→08-23 incident, firing again. Warned 08-29 16:58 UTC, recovered 08-30 15:41 UTC (~23h) with no human thread activity either time — appears to clear itself without intervention.

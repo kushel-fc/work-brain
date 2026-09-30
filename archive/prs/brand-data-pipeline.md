@@ -3,6 +3,127 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 1978
+title: "Update config.json for fynchHatton & milestone"
+author: kushel-fc
+state: closed
+merged: true
+closed: 2026-09-29
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1978
+```
+**His own.** Opened 13:51 UTC, approved by abirprantofc and dwiajik, and merged by him 14:14 UTC (+2/-2). Companion to product-service#2815/#2816. fynchHatton_FEED2 exceeded its 3h run limit on the run that started 16:41 UTC (see `dagster-alerts/log.md`).
+
+```yaml
+number: 1981
+title: "Production Release - 2026-09-29"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-09-29
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1981
+```
+Automated. Merged 15:19 UTC.
+
+```yaml
+number: 1980
+title: "Staging Release - 2026-09-29"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-09-29
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1980
+```
+Automated. Merged 14:57 UTC.
+
+```yaml
+number: 1979
+title: "Implement weekend blackout rules for feed and image sync schedules; enforce cron limits in validation"
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-09-29
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1979
+```
+Not his. Merged 14:46 UTC.
+
+```yaml
+number: 1977
+title: "Staging Release - 2026-09-29"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-09-29
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1977
+```
+Automated. Merged 12:34 UTC.
+
+```yaml
+number: 1976
+title: "Update analytics staleness threshold to 12 hours and adjust related documentation"
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-09-29
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1976
+```
+Not his. Merged 12:28 UTC. Touches the long-running `analytics` alert pattern.
+
+```yaml
+number: 1975
+title: "Reduce feed-processing cron: once a day for all multi-run feeds, bestseller_FEED2 4x a day"
+author: dushansilva
+state: closed
+merged: true
+closed: 2026-09-29
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1975
+```
+Not his. Merged 12:24 UTC.
+
+```yaml
+number: 1974
+title: "Production Release - 2026-09-29"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-09-29
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1974
+```
+Automated. Merged 13:17 UTC.
+
+```yaml
+number: 1973
+title: "Add remaining manufacturers to TRIGGER_ENRICHMENT_SUPPORTED_MANUFACTURERS"
+author: dushansilva
+state: closed
+merged: true
+closed: 2026-09-29
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1973
+```
+Not his. Merged 09:11 UTC.
+
+```yaml
+number: 1972
+title: "Staging Release - 2026-09-29"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-09-29
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1972
+```
+Automated. He approved it. irembbt merged it 11:54 UTC.
+
+```yaml
+number: 1941
+title: "config"
+author: Busra040
+state: closed
+merged: true
+closed: 2026-09-29
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1941
+```
+Not his. marianabassi merged it 10:32 UTC.
+
+```yaml
 number: 1968
 title: "sarto: refactor and remove sketch images"
 author: marianabassi
