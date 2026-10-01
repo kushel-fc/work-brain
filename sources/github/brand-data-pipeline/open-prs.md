@@ -2,7 +2,21 @@
 
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
-Down from 14 to 12. No new PRs. Two left, both merged: #1972 (09-29 staging release, which he approved, 11:54 UTC) and #1941 (Busra040 `config`, 10:32 UTC). Opened and merged inside the window: **his own #1978 (config.json for fynchHatton and milestone, 09-29 13:51 to 14:14 UTC)**, #1979 (weekend blackout rules for feed and image-sync schedules), #1976 (analytics staleness threshold to 12h), #1975 (feed-processing cron cut to once a day, bestseller_FEED2 4x), #1973 (trigger-enrichment manufacturer list) and four release PRs (#1981, #1980, #1977, #1974). See [`archive/prs/brand-data-pipeline.md`](../../../archive/prs/brand-data-pipeline.md). After a second read: **#1969 (on his review list) newly conflicts**. #1956, #1880, #1879, #1263, #1120, #1058 and #1055 still conflict. None of those are his.
+Still 12. One new: #1990 (dwiajik, draft, stops the ECS task when a Dagster run is cancelled). That follows the 09-30 thread where Kushel and Aji found hanging ECS tasks behind cancelled runs. One left: #1910 (dwiajik, experimental SAX XML parsing for fraas, gstar and meierLederwaren) merged 09-30 10:41 UTC. Opened and merged inside the window: #1989 (chantelle article number input), #1987 (Delete pioneer, see BDD-3339), #1986 (aaiko PRICAT organizationId), #1984 (images), #1983 (marc o polo feed) and three release PRs (#1988, #1985, #1982). None were his. See [`archive/prs/brand-data-pipeline.md`](../../../archive/prs/brand-data-pipeline.md). After a second read, mergeable states are unchanged: #1969 (on his review list), #1956, #1880, #1879, #1263, #1120, #1058 and #1055 conflict.
+
+```yaml
+number: 1990
+title: Stop ECS tasks when a Dagster run is cancelled
+author: dwiajik
+state: open
+draft: true
+mergeable_state: mergeable
+review_state: awaiting-first-review
+requested_reviewers: []
+updated: 2026-10-01
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1990
+```
+New 10-01 08:41 UTC, draft. +250/-36. Cancelling a run left its Fargate task running, because Dagster's interrupt handler only reaches the main thread and the pool threads polling for task completion never saw it. Not his, but it's the fix for what he ran into in the fynchHatton thread.
 
 ```yaml
 number: 1969
@@ -15,7 +29,7 @@ requested_reviewers: [brand-data-dev (team), irembbt, kushel-fc]
 updated: 2026-09-28
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1969
 ```
-**Names Kushel individually. Newly conflicts** (was mergeable 09-29), still no reviews. Opened 09-28 11:42 UTC. Closes BDD-3280. It moves eight brand configs (cinque_FEED2, holyfashion, lugina x2, marcOPolo_PRICAT, profuomo, royRobson_FEED2, studioanneloes) from `image_sync.credential_id` to `image_source.credential_id` and drops the old key. Several of those brands had recent `download_images`/FTP-move alerts, so a mis-migrated credential would show up in Dagster. See [`prs/to-review.md`](../../../prs/to-review.md).
+**Names Kushel individually. Still conflicts** (since 09-30), still no reviews. Opened 09-28 11:42 UTC. Closes BDD-3280. It moves eight brand configs (cinque_FEED2, holyfashion, lugina x2, marcOPolo_PRICAT, profuomo, royRobson_FEED2, studioanneloes) from `image_sync.credential_id` to `image_source.credential_id` and drops the old key. Several of those brands had recent `download_images`/FTP-move alerts, so a mis-migrated credential would show up in Dagster. See [`prs/to-review.md`](../../../prs/to-review.md).
 
 ```yaml
 number: 1956
@@ -29,19 +43,6 @@ updated: 2026-09-25
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1956
 ```
 Opened 09-25, not his. Hugo Boss config adjustments, approved by Chamindu36. Still conflicts, probably because Chamindu36's product-service#2804 (removing Hugo Boss publishing logic) and other 09-28 merges landed first.
-
-```yaml
-number: 1910
-title: Enable experimental SAX XML parsing for falke, fraas, meierLederwaren and gstar
-author: dwiajik
-state: open
-mergeable_state: mergeable
-review_state: awaiting-first-review
-requested_reviewers: [hakansoylu1, dims (team)]
-updated: 2026-09-22
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/1910
-```
-Not his. Requested reviewers now [hakansoylu1, dims (team)].
 
 ```yaml
 number: 1880

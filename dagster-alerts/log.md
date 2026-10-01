@@ -3,6 +3,86 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
+timestamp: 2026-10-01T05:31:44Z
+channel: brand-data-dev-alerts
+brand: swing
+summary: "swing_FEED exceeded the 3h run time limit (run c72869ee, started 02:31 UTC)"
+status: active
+linked_issue: null
+```
+First run-limit hit for swing. It came from the scheduled feed cron, two days after swing went fully on PIPE (product-service#2816, 09-29). No thread or reaction. It started before dwiajik's directory-listing timeout fix (product-service#2836) merged at 08:18 UTC, so it may be part of the FTP hang wave below, but the alert doesn't say which step was running.
+
+```yaml
+timestamp: 2026-09-30T19:16:41Z
+channel: brand-data-dev-alerts
+brand: gabor
+summary: "gabor_FEED_sync_images exceeded the 3h run time limit again (run 1ae21469, started 16:15 UTC)"
+status: recurring
+linked_issue: null
+```
+The second gabor image-sync hang in six hours (the first was run e31e1dcf, in the wave entry below). No thread. Same signature as the rest of the wave.
+
+```yaml
+timestamp: 2026-09-30T15:18:14Z
+channel: brand-data-dev-alerts
+brand: cinque
+summary: "cinque__FEED2__move_images_from_ftp_to_s3_job_sync - essential container exited (exit 1), twice (09:17 and 15:18 UTC)"
+status: recurring
+linked_issue: null
+```
+Runs 116ce5ba and b2bd7872, both from the image-sync cron. This is a different step from the 09-27/09-28 `download_images` failures, but it's the same brand and both are FTP image steps. No thread on either. cinque_FEED2 is one of the configs brand-data-pipeline#1969 migrates, and that PR is still unmerged (and now conflicting).
+
+```yaml
+timestamp: 2026-09-30T13:11:18Z
+channel: brand-data-dev-alerts
+brand: multiple (carsJeans, gabor, tamaris, gantFootwear, hanro)
+summary: "Five *_sync_images jobs exceeded the 3h run time limit within 15 min (13:11 to 13:26 UTC), all started 10:10 to 10:25 UTC"
+status: active
+linked_issue: null
+```
+carsJeans_FEED (b2a505e6), gabor_FEED (e31e1dcf), tamaris_PRICAT (69a51261), gantFootwear_FEED (1503e782) and hanro_FEED (e2323c3a). Each got one :thinking_face: reaction and no thread. This looks like the hang dwiajik described in product-service#2836: the image-sync collector bounded the FTP credential fetch but not the directory `LIST`, so a blocked FTP data connection leaves the task running until something kills it. #2836 merged 10-01 08:18 UTC. That's after this wave and after swing (above), so the fix isn't confirmed yet. authenticstyle (09-29) and fynchHatton (below) look like the same thing. Aji also pointed out that cancelling a Dagster run leaves its ECS task running (see the fynchHatton thread), and brand-data-pipeline#1990 (draft) addresses that.
+
+```yaml
+timestamp: 2026-09-30T12:54:14Z
+channel: brand-data-dev-alerts
+brand: blueSeven
+summary: "ona__blueSeven_FEED2 exceeded the 3h run time limit (run d1835521, started 09:53 UTC)"
+status: active
+linked_issue: product-service#2832
+```
+The production ONA seed for blueSeven. Per product-service#2832, its data steps finished but image download stalled after 496 downloads, with FTP data-connection timeouts. The PR's hypothesis (stated as unproven) is that the old downloader never closed its FTP connections. #2832 names Kushel as a reviewer and is approved by Chamindu36. blueSeven's migration stays blocked at Phase 3 Step 1 until it lands.
+
+```yaml
+timestamp: 2026-09-30T12:44:11Z
+channel: brand-data-dev-alerts
+brand: skiny
+summary: "skiny__FEED__process_images_sync - essential container exited, exit code 137 (2 asset events)"
+status: active
+linked_issue: null
+```
+First skiny entry in this log. Exit 137 usually means the container was OOM-killed. From the image-sync cron (run 20a93b66). No thread.
+
+```yaml
+timestamp: 2026-09-30T12:16:35Z
+channel: brand-data-dev-alerts
+brand: fynchHatton
+summary: "fynchHatton_FEED2_sync_images exceeded the 3h run time limit (run 5592e2cd, started 09:15 UTC)"
+status: active
+linked_issue: null
+```
+**Kushel handled this one in-thread.** 12:25 UTC: the brand's image FTP has a connection problem, so he disabled the schedule until it's fixed, and Honey is checking with the brand. milestone (the other brand in his #1978) is working. He cancelled the run, and Aji pointed out the ECS task was still hanging. Kushel then found and stopped the hanging tasks from two earlier runs he had cancelled, plus one more from about 5 days ago (Dagster run a65402eb) that he stopped at 15:40 UTC. This explains the 09-29 fynchHatton_FEED2 run-limit hit below.
+
+```yaml
+timestamp: 2026-09-30T09:50:33Z
+channel: brand-data-dev-alerts
+brand: blueSeven
+summary: "blueSeven/FEED2 - 9 asset materializations failed (download_images, feed_transform, global_transform, ...)"
+status: active
+linked_issue: null
+```
+Run 596d6be6, not from a schedule. It's a few minutes before the ONA blueSeven FEED2 run (d1835521, above) started, so it's probably an earlier attempt in the same migration step. No thread.
+
+```yaml
 timestamp: 2026-09-30T01:56:32Z
 channel: brand-data-dev-alerts
 brand: platform (product-data-service / PDS)
@@ -20,17 +100,17 @@ summary: "authenticstyle_FEED_sync_images exceeded the 3h run time limit (run ca
 status: active
 linked_issue: null
 ```
-First occurrence of this job in the log. It came from the scheduled image-sync cron. No thread or reaction. Whether the run finished or was stopped isn't visible from Slack.
+First occurrence of this job in the log. It came from the scheduled image-sync cron. No thread or reaction. Whether the run finished or was stopped isn't visible from Slack. **Update 09-30:** five more `*_sync_images` jobs hung the same way the next day (wave entry above). The likely cause is the unbounded FTP directory listing that product-service#2836 fixed on 10-01.
 
 ```yaml
 timestamp: 2026-09-29T19:42:12Z
 channel: brand-data-dev-alerts
 brand: fynchHatton
 summary: "fynchHatton_FEED2 exceeded the 3h run time limit (run b57a86af, started 16:41 UTC)"
-status: active
+status: recurring
 linked_issue: null
 ```
-First occurrence. It came on go-live day: product-service#2816 (SWING, Hey Kyla and FYNCH-HATTON on PIPE) merged 11:07 UTC, and **Kushel's own brand-data-pipeline#1978** (config.json for fynchHatton and milestone) merged 14:14 UTC, about 2.5h before this run started. Someone reacted with :raising_hand: (claiming it) but there's no thread. It may just be a large first full run after migration, but worth checking the next scheduled run.
+First occurrence. It came on go-live day: product-service#2816 (SWING, Hey Kyla and FYNCH-HATTON on PIPE) merged 11:07 UTC, and **Kushel's own brand-data-pipeline#1978** (config.json for fynchHatton and milestone) merged 14:14 UTC, about 2.5h before this run started. Someone reacted with :raising_hand: (claiming it) but there's no thread. **Update 09-30:** it hit the limit again on the image-sync job (entry above), and Kushel traced it to the brand's image FTP connection, not his config change. The schedule is disabled until the brand fixes it.
 
 ```yaml
 timestamp: 2026-09-29T14:47:29Z
@@ -1142,62 +1222,3 @@ linked_issue: null
 ```
 Triggered 17:17:36 UTC, recovered ~3 minutes later — brief blip, no thread.
 
-```yaml
-timestamp: 2026-08-31T14:31:00Z
-channel: brand-data-dev-alerts
-brand: sOliver
-summary: sOliver__FEED__trigger_enrichment_from_map — container exited, exit code 1
-status: active
-linked_issue: null
-```
-Same `AxiosError: Request failed with status code 504` from `DataEnrichmentService.makeRequest` as the entry below — fired again ~15 minutes after Dushan claimed ownership of "enrichment stuff" in-channel, meaning the underlying enrichment-service timeout was still unresolved as of this occurrence.
-
-```yaml
-timestamp: 2026-08-31T14:12:56Z
-channel: brand-data-dev-alerts
-brand: multiple (fabienne, swarovski, ceceba, denham, sOliver)
-summary: 5 brands' trigger_enrichment_from_map steps failed, container exit code 1
-status: active
-linked_issue: null
-```
-Started right after the ECR/datadog-agent incident below cleared (see next entry) — likely a retry-backlog side effect rather than a recurrence of the same root cause. Aji's reply on the sOliver instance (14:31 UTC) traced it to `AxiosError: Request failed with status code 504` from `DataEnrichmentService.makeRequest` — the internal enrichment service itself was timing out. Dushan claimed ownership ("enrichemnt stuff are mine") at 14:16 UTC, but sOliver failed again with the same error 15 minutes later (see entry above) — not actually resolved by that claim.
-
-```yaml
-timestamp: 2026-08-31T12:31:00Z
-channel: brand-data-dev-alerts
-brand: platform (ECR / datadog-agent sidecar)
-summary: ~36 brand pipelines plus the analytics_trigger_sensor failed simultaneously — ECS tasks couldn't pull the datadog/agent:7 sidecar image
-status: self-resolved
-linked_issue: null
-```
-Systemic infra incident, not a brand-data issue. First diagnosed on the hoegl_FEED2_cron_schedule run: `CannotPullContainerError: pull image manifest has been retried 7 time(s): failed to resolve ref .../datadog/agent:7 ... not found`. Aji flagged it as a permissions issue; Chamindu confirmed at 12:34 UTC ("It's permissions ... let's update permission for all") and owned the fix. Dushan publicly called it out at 12:39 UTC ("many jobs are failing seems like due to failing to pull dd agent"). Roughly 36 distinct brand/schedule failures hit between 12:31 and 13:06 UTC (hoegl, viaVai, lawOfTheSea, fuchsSchmitt, newZealandAuckland, nile, redraft, airon, mavi, rabe, mustang, carsJeans, ray, katag, gant, pmeLegend, leComte, bruehl, halsueberkopf, picard, lcredi, carloLanza, donders, lerros, lieblingsstueck, beheim, calamar, cecil, lolaLiza, vanBommel, tam, vinciVici, susa, and others), plus the `analytics` sensor firing ~11 times in the same window. No explicit "all clear" was posted, but the error signature changed after ~14:12 UTC (see enrichment-service entry above), implying the ECR pull issue itself was fixed by then — marked self-resolved on that basis, not a confirmed all-clear.
-
-```yaml
-timestamp: 2026-08-31T11:40:11Z
-channel: brand-data-dev-alerts
-brand: ivko
-summary: ivko/FEED — 9 asset materializations failed
-status: active
-linked_issue: null
-```
-No thread or reaction visible. Occurred shortly before the ECR/datadog-agent cascade started — possibly an early, isolated instance of it rather than a separate issue.
-
-```yaml
-timestamp: 2026-08-31T10:03:13Z
-channel: brand-data-dev-alerts
-brand: sOliver
-summary: sOliver/FEED — 12 asset materializations failed (download_images/extract)
-status: active
-linked_issue: null
-```
-Kushel replied in-thread ("fetch failed / Just says this") but no diagnosis or fix confirmed. Distinct from sOliver's later 504 enrichment-timeout failure the same day (see top entry).
-
-```yaml
-timestamp: 2026-08-31T07:53:05Z
-channel: brand-data-dev-alerts
-brand: calida
-summary: calida/FEED — 11 asset materializations failed (no valid SKUs — EAN format)
-status: self-resolved
-linked_issue: null
-```
-Same "no valid SKUs produced" / relevantJsonObject-gtinField symptom as bruehl and citizen (see below) — third brand hit by this pattern. honey.sabu confirmed it's the brand uploading a bad EAN format and can be ignored; Aji closed it out in-thread within ~7 minutes.

@@ -1,6 +1,6 @@
 ---
 status: active
-last_touched: 2026-09-23
+last_touched: 2026-10-01
 ---
 
 # Video download delivery on platform
@@ -23,3 +23,5 @@ The routing rule in both specs is explicit that the existing images-only and ima
 **09-28 update:** Three of four merged. [#2767](../archive/prs/product-service.md) (3/4, PCS CSV generation module) merged 09-28 07:41 UTC after dwiajik's approval 09-25. Part 4/4 (calling `multi-download/resolve` into the new module, as he told irembbt in review) isn't open yet. Linear status for BDD-3205/3206/3223 wasn't refreshed this sync because Linear wasn't reachable.
 
 **09-29 update:** The product-service stack is done. [#2806](../archive/prs/product-service.md) (4/4, wiring `multi-download/resolve` into CSV generation, with video/csv independence) opened and merged 09-28 (12:23 UTC). BDD-3205 and BDD-3191 (N1) went Done 09-28 14:17 UTC. BDD-3223 (parent) and BDD-3206 are still In Review. The remaining piece is the backend side: [backend#7043](../prs/mine.md) (BDD-3206 routing) has had Changes Requested from irembbt since 09-24, and nobody has re-reviewed after his 09-27 push. backend#7048 (a `getCsvContent` sort fix) is approved and ready to merge.
+
+**10-01 update:** Work has started on the next slice. [BDD-3213](../sources/linear/my-issues.md) (Slice 5, "Downloads are accountable and countable") was assigned to him and moved Backlog to In Progress at 08:41 UTC. It covers one audit entry per download with videos grouped by brand, a separate per-SKU download-counts collection, and observability (bytes delivered, archive build duration, failure rate). Two open questions are written into the ticket. First, PCS has no MongoDB today, and where that store lives ("N3") was deferred to its own discussion, so the ticket says the slice can't start until that lands. Second, it needs a decision on whether the audit records intent (written at token creation, inside the PCS request) or delivery (bytes actually left, which only the backend knows). Slice 3.2 hasn't changed: backend#7043 is still waiting on irembbt's re-review and #7048 is still unmerged.

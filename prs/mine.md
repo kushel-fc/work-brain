@@ -2,7 +2,7 @@
 
 PRs Kushel opened, across both repos. Populated on sync.
 
-**Zero open in product-service or brand-data-pipeline.** He opened and merged one small PR inside the window: [brand-data-pipeline#1978](../archive/prs/brand-data-pipeline.md) (config.json for fynchHatton and milestone, +2/-2, approved by abirprantofc and dwiajik, merged 09-29 14:14 UTC). It went with the automated PIPE-enable PRs for those brands (product-service#2815/#2816). fynchHatton_FEED2 then exceeded its 3h run limit on the run that started 16:41 UTC, see [`dagster-alerts/log.md`](../dagster-alerts/log.md). The Slice 3.2 product-service stack is finished (#2806, 4/4, merged 09-28).
+**Zero open in product-service or brand-data-pipeline**, and he opened none this cycle. His last one, [brand-data-pipeline#1978](../archive/prs/brand-data-pipeline.md) (fynchHatton/milestone config), merged 09-29. The fynchHatton run-limit alerts that followed turned out to be the brand's image FTP, not his config. He disabled the schedule 09-30, see [`dagster-alerts/log.md`](../dagster-alerts/log.md).
 
 ## Outside the tracked repos (backend)
 
@@ -20,7 +20,7 @@ requested_reviewers: [dwiajik, abubakarwase, msamprz, maria-subero, irembbt]
 updated: 2026-09-27
 url: https://github.com/fashioncloud/backend/pull/7043
 ```
-The backend half of Slice 3.2. aledileo requested changes and then approved (09-23). **irembbt's Changes Requested from 09-24 11:59 UTC is still the standing verdict.** He pushed again 09-27 19:10 UTC and nobody has re-reviewed, now three days on. No change this cycle. Now that the PCS side has merged, this is the last blocker on BDD-3206/BDD-3223.
+The backend half of Slice 3.2. aledileo requested changes and then approved (09-23). **irembbt's Changes Requested from 09-24 11:59 UTC is still the standing verdict.** He pushed again 09-27 19:10 UTC and nobody has re-reviewed, now four days on. No change this cycle. Now that the PCS side has merged, this is the last blocker on BDD-3206/BDD-3223.
 
 ```yaml
 number: 7048
@@ -34,6 +34,6 @@ requested_reviewers: [irembbt, abubakarwase, dwiajik]
 updated: 2026-09-27
 url: https://github.com/fashioncloud/backend/pull/7048
 ```
-dwiajik approved it 09-23. It's mergeable and ready for him to merge, still unmerged this cycle.
+dwiajik approved it 09-23. It's mergeable and ready for him to merge, still unmerged eight days later.
 
 His earlier self-closed PR (#2545, GTIN cleanup batch) is still parked in the archive, unrevisited.

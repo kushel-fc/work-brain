@@ -2,6 +2,20 @@
 
 One entry per sync run. Prune entries older than ~30 days.
 
+## 2026-10-01 (~08:50 UTC)
+
+About 24h since the last sync (09-30 ~08:45 to 10-01 ~08:50). Linear (claude.ai connector), GitHub (`gh`) and Slack (claude.ai connector) were all reachable. The `plugin:engineering:*` servers needed auth and weren't used.
+
+- **New on his plate: BDD-3213 (Video Delivery Slice 5, download audit and counts)** was assigned and moved Backlog to In Progress 10-01 08:41 UTC, so my issues went 5 to 6. The ticket says it's blocked on N3 (where PCS's Mongo lives) and needs an intent-vs-delivery decision first. Shaping doc updated. Slice 3.2 didn't move: backend#7043 is still waiting on irembbt's re-review (four days after his push), and #7048 is still approved and unmerged.
+- **Image-sync FTP hang wave.** Five `*_sync_images` jobs (carsJeans, gabor, tamaris, gantFootwear, hanro) hit the 3h limit within 15 min on 09-30, gabor did it again that evening (`recurring`), and swing_FEED followed overnight. Kushel handled fynchHatton in-thread: it was the brand's image FTP, so he disabled the schedule, and with Aji he found and stopped hanging ECS tasks behind cancelled runs, including one from about 5 days ago. dwiajik's directory-listing timeout fix (product-service#2836) merged 10-01 08:18 UTC, after all of the alerts, so it isn't confirmed. The draft brand-data-pipeline#1990 makes run cancellation stop the ECS task.
+- **blueSeven ONA FEED2 stalled on image download** (3h limit). The fix is product-service#2832, which is new in his review queue.
+- **Review queue 4 to 5.** He approved #2826 (merged 09-30) and PDS SDK stage 4/4 #2829 (still open, so it's off his list). New: #2832 and #2838. #2808 is three days without any review. #2514 newly conflicts, and #1969 still does.
+- GitHub: product-service 6 to 9 (4 new, #2826 merged, 11 more opened and merged in the window). #2827 newly conflicts (not his). brand-data-pipeline stays at 12 (#1990 new, #1910 merged, 8 more opened and merged in the window). All archived.
+- Linear: Triage 1 to 2. New: BDD-3339 (Delete Pioneer, FD 679013, Medium, unassigned), so support/open.md has 1 again. Its PIPE config removal (#1987) merged half an hour before the ticket was filed.
+- Slack (13 alerts): also cinque FEED2 FTP move failed twice (`recurring`), skiny `process_images_sync` exit 137 (first), and blueSeven FEED2 had 9 asset failures. The 09-29 fynchHatton and authenticstyle entries were updated with the root cause. PDS, mosMosh, dorisStreich and `analytics` were quiet. Dagster log +8, pruned 6 (08-31), now 122.
+- Earmarks: none active, nothing to check.
+- Notified: no. Nothing crossed the notification bar. No deadline passed with zero movement (no due dates on his live issues). No flip to conflict or Changes Requested on his own PRs (none open in the tracked repos, and the backend ones are unchanged). BDD-3339 is Medium, not Urgent. gabor and cinque repeated within an open, never-resolved problem rather than coming back after self-resolving, which by precedent in this log (cinque 09-29, profuomo 09-14) gets a `today.md` callout instead. The wave is the top Dagster item there.
+
 ## 2026-09-30 (~08:45 UTC)
 
 About 24h since the last sync (09-29 ~08:45 to 09-30 ~08:45). Linear (claude.ai connector), GitHub (`gh`) and Slack (claude.ai connector) were all reachable. The `plugin:engineering:*` servers needed auth and weren't used.
@@ -273,19 +287,6 @@ All three sources reachable this run — Linear, GitHub, Slack.
 - Linear: 3 new Triage tickets (BDD-3181 Medium, BDD-3180 Low, BDD-3168 Low), all FD-referenced, added to `support/open.md`. No High-priority items unassigned. BDD-2530's updated timestamp jumped from 07-09 to 09-01 with no visible status change yet — flagged for a look.
 - Slack: quiet-ish window since 2026-08-31T14:12:56Z. The enrichment-service 504 timeout pattern continues — Dushan claimed ownership in-channel but sOliver hit the same error again ~15 min later, so it isn't actually fixed. Two more galvatron ECS health-check blips, both self-resolved within minutes (established pattern). New: `bestseller_FEED2` fired "exceeded 3h limit" twice (09-01, 09-02) — both explained in-thread by Kushel himself as his own BDD-3164 reprocessing work, not bugs.
 - Notified: no — nothing crossed the notification bar (no deadline passed with zero movement; his own PR #1791 is Approved, not a conflict/Changes-Requested flip; no new Urgent unassigned ticket, the 3 new Triage items are Medium/Low; no Dagster alert recurred after self-resolving — the enrichment 504 and galvatron patterns were already active/recurring before this cycle, not fresh flips).
-
-## 2026-08-31 (08:41 UTC)
-
-- **Linear unavailable this run**: the Linear MCP server requires interactive OAuth, which isn't available in this non-interactive scheduled run. All Linear-derived files (`sources/linear/*`, `support/*`) are unchanged, carried forward from the 2026-08-28 pull, and flagged with a staleness note. `today.md`/`this-week.md` still surfaced BDD-3103's deadline (now 6 days passed) since the deadline date itself doesn't need a fresh pull to compute.
-- His own PR #2520 (BDD-2567) made real progress: he pushed a fix on 08-28 addressing julsjacinto's review, and julsjacinto + dwiajik have since approved. Aggregate state still reads `changes-requested` only because Chamindu36 (requested changes 08-24) hasn't re-reviewed — reframed in `today.md` from "stalled" to "needs a nudge."
-- PR wave: #2576 (product-service, Enable Sanetta) merged 08-28 without needing his review. Three brand-data-pipeline PRs also merged 08-28: #1749 (calida ai tags), #1747 (cron schedules), #1645 (clean up disabled Dagster automations) — none were his to review. All four archived.
-- New: he's now an individually-requested reviewer on brand-data-pipeline #1766 ("Staging Release - 2026-08-31") — his review queue there is active again after a few quiet days.
-- PR #2569 (he's a requested reviewer, not his own) flipped from mergeable to a merge conflict since last sync — still no reviews from any of the 4 requested reviewers.
-- 7 new open PRs surfaced on product-service (#2600, #2599, #2598, #2595, #2589, #2587, #2586) and 1 on brand-data-pipeline (#1763) — none involve Kushel as reviewer.
-- BDD-3103's Aug 25 deadline is now 6 days passed (per last Linear pull — status unconfirmed this cycle).
-- Slack: 6 new items since 08-28 07:48 UTC. Notable: the "no valid SKUs" EAN-corruption pattern hit a third brand (calida, self-resolved/ignorable — same root cause as bruehl/citizen). The Megatron→Backend image-processing-delay alert recurred (self-resolved again after ~23h, no human intervention either time). Two new one-off failures with no follow-up: verweijFashion_FEED exceeded its 3h limit, and muellerMeirer's image-sync cron failed with a Lambda "Cannot find module 'index'" error (looks like a packaging/deploy issue). The connector_type credential error that spread across 5 brands has gone quiet — no new occurrences since 08-27.
-- Dagster onaDkCompany FEED from 2026-08-26 is still shown active, now ~5 days past its 3h limit with zero Slack follow-up across five sync cycles.
-- Notified: no — nothing crossed the notification bar (BDD-3103's deadline already flagged as passed in prior syncs, and unconfirmed this cycle rather than newly reached; no flip to conflict/Changes-Requested on his own open work — #2520 is improving, not worsening, and #2569's conflict flip isn't his own PR; no new Urgent unassigned ticket confirmable, Linear unavailable; the Megatron→Backend alert's recurrence continues a pattern already tagged `recurring` from prior syncs rather than a fresh flip from self-resolved).
 
 ## 2026-09-01
 

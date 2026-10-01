@@ -3,6 +3,105 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 1910
+title: "Enable experimental SAX XML parsing for fraas, gstar and meierLederwaren"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-09-30
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1910
+```
+Not his. Merged 10:41 UTC (falke was dropped from the title since the last sync).
+
+```yaml
+number: 1989
+title: "chantelle: add article number input"
+author: marianabassi
+state: closed
+merged: true
+closed: 2026-10-01
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1989
+```
+Not his. Merged 10-01 08:18 UTC.
+
+```yaml
+number: 1988
+title: "Production Release - 2026-09-30"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-10-01
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1988
+```
+Automated. Merged 10-01 08:18 UTC.
+
+```yaml
+number: 1987
+title: "Delete pioneer"
+author: Dionpiet97
+state: closed
+merged: true
+closed: 2026-09-30
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1987
+```
+Not his. Merged 14:53 UTC. Removes the pioneer_FEED job config. Related to BDD-3339 (Pioneer data deletion, in Triage).
+
+```yaml
+number: 1986
+title: "Update organizationId input aaiko PRICAT"
+author: Dionpiet97
+state: closed
+merged: true
+closed: 2026-09-30
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1986
+```
+Not his. Merged 13:58 UTC.
+
+```yaml
+number: 1985
+title: "Staging Release - 2026-09-30"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-09-30
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1985
+```
+Automated. Merged 14:24 UTC.
+
+```yaml
+number: 1984
+title: "images"
+author: Busra040
+state: closed
+merged: true
+closed: 2026-09-30
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1984
+```
+Not his. Merged 13:15 UTC.
+
+```yaml
+number: 1983
+title: "Support/marc o polo feed"
+author: Busra040
+state: closed
+merged: true
+closed: 2026-09-30
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1983
+```
+Not his. Merged 12:03 UTC.
+
+```yaml
+number: 1982
+title: "Staging Release - 2026-09-30"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-09-30
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1982
+```
+Automated. Merged 11:40 UTC.
+
+```yaml
 number: 1978
 title: "Update config.json for fynchHatton & milestone"
 author: kushel-fc

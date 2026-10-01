@@ -2,7 +2,21 @@
 
 PRs where Kushel is a requested reviewer. Populated on sync.
 
-The queue went from 3 to 4. One new individual ask: **product-service#2826** (Chamindu36, package version management and publishing scripts), opened 09-30 07:59 UTC. **brand-data-pipeline#1969 newly conflicts**, so dwiajik will need to rebase before it can merge. #2808 has now gone two days with no review from anyone. Not in the queue but worth knowing: PDS SDK stage 3/4 (#2813) came out of draft and merged 09-30 without being sent to him.
+The queue went from 4 to 5. **He approved and cleared #2826** (merged 09-30 09:47 UTC) and approved PDS SDK stage 4/4 (#2829) this morning, which took him off its requested list. Two new individual asks: **product-service#2832** (the FTP connection fix blocking blueSeven) and **product-service#2838** (product-data-schema release changeset). #2808 has now gone three days with no review from anyone. #1969 still conflicts, and #2514 now conflicts too.
+
+```yaml
+number: 2832
+repo: product-service
+title: "fix(image-downloader): close FTP connections and bound transfers"
+author: FCMachineUser
+state: open
+mergeable_state: mergeable
+review_state: approved
+requested_reviewers: [kushel-fc, abirprantofc]
+updated: 2026-09-30
+url: https://github.com/fashioncloud/product-service/pull/2832
+```
+New 09-30 11:43 UTC. blueSeven's production ONA seed (run d1835521) finished its data steps, but image download stalled after 496 downloads with FTP data-connection timeouts. The old downloader opened a new pooled FTP connection per image and never closed it. This gives each transfer its own client that's always closed, using `basic-ftp`. The PR calls connection exhaustion "a supported hypothesis", not a proven cause. +442/-13 across 9 files. Chamindu36 approved 14:21 UTC. **blueSeven's migration stays blocked at Phase 3 Step 1 until this lands**, so along with #2808 it's the one blocking someone else.
 
 ```yaml
 number: 2808
@@ -16,21 +30,21 @@ requested_reviewers: [brand-data-dev (team), abubakarwase, kushel-fc]
 updated: 2026-09-28
 url: https://github.com/fashioncloud/product-service/pull/2808
 ```
-Opened 09-28 14:53 UTC. It adds the missing `aws4` dependency for `MONGODB-AWS` auth in pruned job images and makes ONA extract startup failures visible outside Datadog. BlueSeven's migration is blocked at the Phase 3 extract until this lands, so it's the one blocking someone else. +414/-12 across 11 files. **Still no reviews from anyone.**
+Opened 09-28 14:53 UTC. It adds the missing `aws4` dependency for `MONGODB-AWS` auth in pruned job images and makes ONA extract startup failures visible outside Datadog. +414/-12 across 11 files. **Still no reviews from anyone, three days in.** The blueSeven ONA run did get through its data steps on 09-30 (per #2832), so the Mongo extract may already work some other way. Worth asking alirezaMoazenFashion whether this is still needed.
 
 ```yaml
-number: 2826
+number: 2838
 repo: product-service
-title: Add scripts for package version management and publishing workflows
-author: Chamindu36
+title: "chore: release @fashioncloud/product-data-schema"
+author: dwiajik
 state: open
 mergeable_state: mergeable
 review_state: awaiting-first-review
-requested_reviewers: [brand-data-dev (team), julsjacinto, kushel-fc]
+requested_reviewers: [brand-data-dev (team), irembbt, kushel-fc]
 updated: 2026-09-30
-url: https://github.com/fashioncloud/product-service/pull/2826
+url: https://github.com/fashioncloud/product-service/pull/2838
 ```
-New 09-30 07:59 UTC. Tooling for versioning and publishing the repo's packages, arriving the same morning as the first npm publish of `product-data-schema` (#2822) and its CI fix (#2827). +588/-108 across 6 files. CodeRabbit requested changes and then approved. No human review yet.
+New 09-30 13:40 UTC. A one-file changeset (+5) that bumps `@fashioncloud/product-data-schema` to 1.0.2 on the next production release. The description says the first publish is still blocked: npm trusted publishing (OIDC) can only be set up on a package that already exists. A quick review.
 
 ```yaml
 number: 1969
@@ -44,7 +58,7 @@ requested_reviewers: [brand-data-dev (team), irembbt, kushel-fc]
 updated: 2026-09-28
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1969
 ```
-Opened 09-28 11:42 UTC. Closes BDD-3280. It moves eight configs to `image_source.credential_id` and drops the old key. **Newly conflicts** after the 09-29 config merges, so the author needs to rebase first. cinque_FEED2 is one of the eight. cinque was quiet this cycle, but it has failed on `download_images` twice (09-27, 09-28). +52/-32 across 13 files.
+Opened 09-28 11:42 UTC. Closes BDD-3280. It moves eight configs to `image_source.credential_id` and drops the old key. **Still conflicts** and hasn't been rebased, so a review isn't worth doing yet. cinque_FEED2 is one of the eight, and it failed on `move_images_from_ftp_to_s3_job_sync` twice on 09-30. +52/-32 across 13 files.
 
 ```yaml
 number: 2514
@@ -53,10 +67,10 @@ title: "feat(llm-based-agent-setup): add mutations tool group for SKU reprocessi
 author: dushansilva
 state: open
 draft: true
-mergeable_state: mergeable
+mergeable_state: conflicting
 review_state: changes-requested
 requested_reviewers: [brand-data-dev (team), irembbt, kushel-fc, dwiajik, julsjacinto]
 updated: 2026-08-28
 url: https://github.com/fashioncloud/product-service/pull/2514
 ```
-Draft, and it already has Changes Requested from someone else. Stale: 33 days untouched.
+Draft, already has Changes Requested from someone else, and **now conflicts**. Stale: 34 days untouched.

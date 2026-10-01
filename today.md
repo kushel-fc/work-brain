@@ -1,16 +1,17 @@
 # Today
 
-1. **Finish Video Delivery Slice 3.2 on the backend side.** Nothing moved here since 09-27. BDD-3206/BDD-3223 are still held open by:
-   - [backend#7043](prs/mine.md): irembbt's Changes Requested from 09-24 is still the standing verdict. He pushed 09-27 and nobody has re-reviewed in three days, so ask irembbt directly.
+1. **Review [product-service#2832](prs/to-review.md)** (FTP connection fix in the image downloader). blueSeven's production ONA seed stalled on image download 09-30 and stays blocked at Phase 3 Step 1 until this lands. Chamindu36 approved it, and he and abirprantofc are the only individual reviewers requested.
+2. **Unblock or ask about [product-service#2808](prs/to-review.md)** (ONA Mongo AWS auth). Three days with no review from anyone. blueSeven's data steps got through on 09-30, so ask alirezaMoazenFashion whether it's still needed before reviewing 400+ lines.
+3. **Finish Video Delivery Slice 3.2 on the backend side.** Still stuck:
+   - [backend#7043](prs/mine.md): irembbt's Changes Requested from 09-24 still stands. Nobody has re-reviewed since his 09-27 push, four days ago. Ask irembbt directly.
    - [backend#7048](prs/mine.md): approved and mergeable since 09-23. Only he can merge it, and nothing blocks it.
-2. **Review [product-service#2808](prs/to-review.md)** (ONA Mongo AWS auth fix). It's now two days with no review from anyone, and blueSeven's migration stays stuck at the Phase 3 extract until it lands. It's blocking alirezaMoazenFashion.
-3. **Check fynchHatton_FEED2's next run.** It [exceeded its 3h limit](dagster-alerts/log.md) on the run that started 16:41 UTC 09-29. That was go-live day, about 2.5h after his own config PR ([brand-data-pipeline#1978](prs/mine.md)) merged. Someone claimed it with a reaction but didn't write anything. It's probably a big first run, but it's his change, so confirm.
-4. **Review [product-service#2826](prs/to-review.md)** (Chamindu36, package version/publishing scripts, new this morning, names him).
-5. **[BDD-2258](sources/linear/my-issues.md) (High) is still not started.** It's been Ready To Start since 08-31, now a month. It's the next High item that only he can do.
+4. **Decide the open questions on [BDD-3213](sources/linear/my-issues.md)** (Slice 5, new, In Progress as of this morning). The ticket says it can't start until the PCS Mongo location (N3) is settled, and it needs a decision on whether the audit records intent or delivery. See [shaping](shaping/video-download-delivery.md).
+5. **Check the image-sync hang wave is over.** Five `*_sync_images` jobs (carsJeans, gabor x2, tamaris, gantFootwear, hanro) plus swing_FEED hit the 3h limit 09-30 to 10-01. dwiajik's directory-listing timeout fix (product-service#2836) merged 10-01 08:18 UTC, after all of them. Confirm the next runs finish, and check for hanging ECS tasks behind cancelled runs. See [dagster-alerts/log.md](dagster-alerts/log.md).
+6. **Review [product-service#2838](prs/to-review.md)**: a 5-line release changeset, quick.
 
 ## Worth noting (not urgent)
-- **[brand-data-pipeline#1969](prs/to-review.md) (on his review list) newly conflicts.** dwiajik needs to rebase before a review is worth doing.
-- **PDS stream publishing flared twice** (09-29 14:47 and 09-30 01:56 UTC), and both cleared within 15 min. Aji traced the first to a transient DNS failure (`EAI_AGAIN`) reaching the Kinesis endpoint. See [dagster-alerts/log.md](dagster-alerts/log.md).
-- **authenticstyle_FEED_sync_images exceeded 3h** (first occurrence, no thread).
-- **Busy release day 09-29, none of it his to review:** PDS SDK stage 3/4 (#2813) merged 09-30 without being sent to him, `product-data-schema` got created and published to npm (#2814, #2822, CI fix #2827 pending), and weekend-blackout plus once-a-day feed crons landed on brand-data-pipeline (#1979, #1975).
-- **Triage is down to 1** (BDD-3325 canceled). support/open.md is still empty.
+- **fynchHatton is handled.** He traced the run-limit hits to the brand's image FTP, disabled the schedule, and stopped the hanging ECS tasks (including one from about 5 days ago). Honey is following up with the brand. dwiajik's draft brand-data-pipeline#1990 will make cancelling a run stop its ECS task.
+- **New support ticket [BDD-3339](support/open.md)** (Delete Pioneer, Medium, unassigned). The PIPE config was already removed (brand-data-pipeline#1987), but the Mongo deletion isn't shown anywhere.
+- **cinque_FEED2 failed twice more** on the FTP-to-S3 move step. It's one of the configs in the still-conflicting [#1969](prs/to-review.md).
+- He approved #2826 (merged) and PDS SDK stage 4/4 (#2829, still open).
+- [BDD-2258](sources/linear/my-issues.md) (High) is still Ready To Start, six weeks untouched.

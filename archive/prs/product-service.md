@@ -3,6 +3,138 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2826
+title: "Add scripts for package version management and publishing workflows"
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-09-30
+url: https://github.com/fashioncloud/product-service/pull/2826
+```
+Was on his review list. **He approved it 09:36 UTC** after irembbt and dwiajik, and Chamindu36 merged it 09:47 UTC.
+
+```yaml
+number: 2842
+title: "product-data-schema: timestamps are Dates, with the wire shape derived"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-01
+url: https://github.com/fashioncloud/product-service/pull/2842
+```
+Not his. Opened and merged inside the window, 08:25 UTC.
+
+```yaml
+number: 2841
+title: "Production Release - 2026-09-30"
+author: github-actions
+state: closed
+merged: true
+closed: 2026-10-01
+url: https://github.com/fashioncloud/product-service/pull/2841
+```
+Automated. Merged 10-01 08:18 UTC.
+
+```yaml
+number: 2839
+title: "feat: Enhance agent setup with Technical and Product Support personas"
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-09-30
+url: https://github.com/fashioncloud/product-service/pull/2839
+```
+Not his. Opened and merged inside the window, 14:13 UTC.
+
+```yaml
+number: 2837
+title: "Staging Release - 2026-09-30"
+author: github-actions
+state: closed
+merged: true
+closed: 2026-09-30
+url: https://github.com/fashioncloud/product-service/pull/2837
+```
+Automated. Merged 14:24 UTC.
+
+```yaml
+number: 2836
+title: "fix(source-connector): set timeout on directory listings"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-01
+url: https://github.com/fashioncloud/product-service/pull/2836
+```
+Not his. Merged 10-01 08:18 UTC. Bounds the FTP directory listing in the image-sync collector, the likely cause of the 09-30 `*_sync_images` hang wave (see `dagster-alerts/log.md`).
+
+```yaml
+number: 2835
+title: "verpass: enable brand on PIPE"
+author: marianabassi
+state: closed
+merged: true
+closed: 2026-09-30
+url: https://github.com/fashioncloud/product-service/pull/2835
+```
+Not his. Merged 12:29 UTC.
+
+```yaml
+number: 2834
+title: "BDD-3332 Rename assistant personas to TECHNICAL_SUPPORT / PRODUCT_SUPPORT"
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-09-30
+url: https://github.com/fashioncloud/product-service/pull/2834
+```
+Not his. Merged 12:26 UTC.
+
+```yaml
+number: 2833
+title: "chore: integrate Changesets for version management and publishing"
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-09-30
+url: https://github.com/fashioncloud/product-service/pull/2833
+```
+Not his. Merged 12:30 UTC.
+
+```yaml
+number: 2831
+title: "PDS stream relay: consumer IAM permissions, and snake_case resource names"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-09-30
+url: https://github.com/fashioncloud/product-service/pull/2831
+```
+Not his. Merged 13:21 UTC.
+
+```yaml
+number: 2830
+title: "Staging Release - 2026-09-30"
+author: github-actions
+state: closed
+merged: true
+closed: 2026-09-30
+url: https://github.com/fashioncloud/product-service/pull/2830
+```
+Automated. Merged 11:54 UTC.
+
+```yaml
+number: 2828
+title: "chore: exercise the publish workflow"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-09-30
+url: https://github.com/fashioncloud/product-service/pull/2828
+```
+Not his. Merged 11:22 UTC.
+
+```yaml
 number: 2813
 title: "PDS Streams SDK: queue throughput, consumer DLQs and shutdown (stage 3/4)"
 author: dwiajik

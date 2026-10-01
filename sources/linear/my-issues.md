@@ -2,7 +2,21 @@
 
 Assigned to Kushel, live (non-completed) statuses. Populated on sync — completed/canceled work stays in Linear's own history rather than being repeated here; see `git log` for what rolled off.
 
-**09-30 sync:** No change, still 5. Nothing assigned to him was updated in Linear since 09-28. BDD-3223 and BDD-3206 stay In Review, waiting on backend#7043, where irembbt's 09-24 Changes Requested still stands. BDD-2258 (High) has now been Ready To Start for a month.
+**10-01 sync:** Up from 5 to 6. **New: BDD-3213 (Slice 5, download audit and counts) was moved Backlog to In Progress and assigned to him at 10-01 08:41 UTC.** Nothing else changed. BDD-3223 and BDD-3206 stay In Review, waiting on backend#7043, where irembbt's 09-24 Changes Requested still stands. BDD-2258 (High) is still Ready To Start, untouched since 08-18.
+
+---
+
+```yaml
+id: BDD-3213
+title: "Slice 5 — Downloads are accountable and countable"
+priority: No priority
+status: In Progress
+assignee: Kushel Ramanayake
+team: BDD
+updated: 2026-10-01
+url: https://linear.app/fashioncloud/issue/BDD-3213/slice-5-downloads-are-accountable-and-countable
+```
+New this cycle. Video Delivery project, Slice 5 milestone, created by Irem Bulut 09-03 and started 10-01 08:41 UTC. Scope: one audit entry per download (not per video) plus a separate per-SKU download-counts collection, and observability (bytes delivered, build duration, failure rate). The ticket text says it can't start until N3 (where PCS's Mongo lives) is decided, and also lists Slice 2 as a dependency. It also asks for a decision first on whether the audit records intent (token creation) or delivery (bytes actually left), since that decides whether the backend has to report back.
 
 ---
 
