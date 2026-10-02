@@ -3,6 +3,105 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2832
+title: "fix(image-downloader): close FTP connections and bound transfers"
+author: FCMachineUser
+state: closed
+merged: false
+closed: 2026-10-01
+url: https://github.com/fashioncloud/product-service/pull/2832
+```
+Was on his review list (approved by Chamindu36). **Closed unmerged 14:04 UTC**, superseded by #2846. He never reviewed it.
+
+```yaml
+number: 2838
+title: "chore: release @fashioncloud/product-data-schema"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-01
+url: https://github.com/fashioncloud/product-service/pull/2838
+```
+Was on his review list. Chamindu36 approved and merged it 14:36 UTC, without his review.
+
+```yaml
+number: 2829
+title: "PDS Streams SDK: resolve claim-check payloads (stage 4/4)"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-01
+url: https://github.com/fashioncloud/product-service/pull/2829
+```
+He approved it 08:06 UTC. Merged 08:48 UTC. The last stage of the PDS Streams SDK series.
+
+```yaml
+number: 2849
+title: "Production Release - 2026-10-01"
+author: github-actions
+state: closed
+merged: true
+closed: 2026-10-01
+url: https://github.com/fashioncloud/product-service/pull/2849
+```
+Release PR, merged 14:47 UTC. Carried #2836 and #2846 (FTP fixes).
+
+```yaml
+number: 2848
+title: "Staging Release - 2026-10-01"
+author: github-actions
+state: closed
+merged: true
+closed: 2026-10-01
+url: https://github.com/fashioncloud/product-service/pull/2848
+```
+Release PR, merged 14:21 UTC.
+
+```yaml
+number: 2847
+title: "Block shorttooth for brands fully migrated to pipe with image sync"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-01
+url: https://github.com/fashioncloud/product-service/pull/2847
+```
+Not his. Opened and merged inside the window, 13:27 UTC.
+
+```yaml
+number: 2846
+title: "fix(image-downloader): reuse one FTP connection per run and bound each transfer"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-01
+url: https://github.com/fashioncloud/product-service/pull/2846
+```
+Not his. Supersedes #2832 (blueSeven ONA image-download stall). Merged 14:02 UTC.
+
+```yaml
+number: 2844
+title: "Update GATEWAY_URL in configuration and documentation; enhance CI workflow for schema and prompt verification"
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-10-01
+url: https://github.com/fashioncloud/product-service/pull/2844
+```
+Not his. Merged 13:09 UTC.
+
+```yaml
+number: 2843
+title: "product-data-schema: type fcKeys as the normalized vocabulary"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-01
+url: https://github.com/fashioncloud/product-service/pull/2843
+```
+Not his. Merged 10:27 UTC.
+
+```yaml
 number: 2826
 title: "Add scripts for package version management and publishing workflows"
 author: Chamindu36

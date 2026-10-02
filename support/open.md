@@ -2,7 +2,7 @@
 
 FD-sourced/support-shaped tickets, by priority then age (oldest first within each tier). Sourced from the team BDD Triage view: https://linear.app/fashioncloud/team/BDD/triage. Populated on sync. Full raw Triage list lives in [`sources/linear/triage.md`](../sources/linear/triage.md).
 
-**One open, the first since the 09-28 sweep.** BDD-3339 (Pioneer data deletion) landed 09-30. BDD-3305 is still in Triage but it's an internal feature request Dushan owns, so it isn't listed here.
+**One open, and it's a different one.** BDD-3339 (Pioneer data deletion) left Triage 10-01: abubakarwase picked it up and it's In Progress, so it isn't listed here anymore. New: BDD-3343 (JustBrands B2B orders question, Low). BDD-3305 is still in Triage but it's an internal feature request Dushan owns, so it isn't listed here.
 
 ## High
 
@@ -10,18 +10,18 @@ _None._
 
 ## Medium
 
-```yaml
-id: BDD-3339
-title: Delete pioneer (FD: 679013)
-priority: Medium
-status: Triage
-assignee: unassigned
-team: BDD
-updated: 2026-09-30
-url: https://linear.app/fashioncloud/issue/BDD-3339/delete-pioneer-fd-679013
-```
-Filed 09-30 15:20 UTC by Dion Piet: delete all data for Pioneer (brandId `642d745148199600117b88b0`), all EANs from PIPE and Mongo. Dion's brand-data-pipeline#1987 ("Delete pioneer") merged at 14:53 UTC, about half an hour before the ticket was filed. That probably covers the PIPE config side, but the ticket also asks for the Mongo data, which the PR doesn't show. Cross-check against the Notion offboarding table.
+_None._
 
 ## Low
 
-_None._
+```yaml
+id: BDD-3343
+title: "Orders through B2B | JustBrands (FD: 679204)"
+priority: Low
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-10-02
+url: https://linear.app/fashioncloud/issue/BDD-3343/orders-through-b2b-justbrands-fd-679204
+```
+Filed 10-02 08:25 UTC by Nic. Support believed Just Brands (`5b0d3d77a9a80b4f882ca107`) didn't use the B2B portal, since the order history only shows Longtail (EL) orders, but JB sent a B2B order (IO272464, "Justbrands Premium"). The ask is to check how that flow runs, because JB is moving to a new ERP. A question about the order flow, not a data fix.

@@ -3,6 +3,72 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 1990
+title: "Stop ECS tasks when a Dagster run is terminated"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-01
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1990
+```
+Not his. Out of draft and merged 10:27 UTC. The fix for the hanging ECS tasks he and Aji found in the 09-30 fynchHatton thread.
+
+```yaml
+number: 1996
+title: "certificate"
+author: Busra040
+state: closed
+merged: true
+closed: 2026-10-02
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1996
+```
+Not his. Merged 08:14 UTC.
+
+```yaml
+number: 1995
+title: "Production Release - 2026-10-01"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-10-01
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1995
+```
+Release PR, merged 14:47 UTC.
+
+```yaml
+number: 1994
+title: "images ftp"
+author: Busra040
+state: closed
+merged: true
+closed: 2026-10-01
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1994
+```
+Not his. Merged 13:51 UTC.
+
+```yaml
+number: 1992
+title: "Staging Release - 2026-10-01"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-10-01
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1992
+```
+Release PR, merged 14:21 UTC.
+
+```yaml
+number: 1991
+title: "update visibility flags"
+author: MuniaL
+state: closed
+merged: true
+closed: 2026-10-01
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1991
+```
+Not his. Merged 11:53 UTC.
+
+```yaml
 number: 1910
 title: "Enable experimental SAX XML parsing for fraas, gstar and meierLederwaren"
 author: dwiajik

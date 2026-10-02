@@ -2,19 +2,19 @@
 
 Full raw Triage backlog for team BDD, sourced from https://linear.app/fashioncloud/team/BDD/triage. Populated on sync. See `support/open.md` for the FD-referenced/support-shaped curated subset.
 
-**10-01 sync:** Up from 1 to 2. New: BDD-3339 (Delete pioneer, FD 679013, Medium, unassigned), filed 09-30 15:20 UTC by Dion Piet. BDD-3305 is unchanged.
+**10-02 sync:** Still 2. BDD-3339 (Delete pioneer) left Triage: abubakarwase took it and moved it to In Progress 10-01 10:06 UTC. New: BDD-3343 (Orders through B2B, JustBrands, FD 679204, Low, unassigned), filed 10-02 08:25 UTC. BDD-3305 is unchanged.
 
 ```yaml
-id: BDD-3339
-title: Delete pioneer (FD: 679013)
-priority: Medium
+id: BDD-3343
+title: "Orders through B2B | JustBrands (FD: 679204)"
+priority: Low
 status: Triage
 assignee: unassigned
 team: BDD
-updated: 2026-09-30
-url: https://linear.app/fashioncloud/issue/BDD-3339/delete-pioneer-fd-679013
+updated: 2026-10-02
+url: https://linear.app/fashioncloud/issue/BDD-3343/orders-through-b2b-justbrands-fd-679204
 ```
-New 09-30. Brand offboarding: delete all Pioneer data (brandId `642d745148199600117b88b0`), all EANs from PIPE and Mongo. Support-shaped, see [`support/open.md`](../../support/open.md).
+New 10-02. Support asked how Just Brands (`5b0d3d77a9a80b4f882ca107`) is placing B2B orders (order IO272464, "Justbrands Premium"), since the order history only shows Longtail (EL) orders. JB are moving to a new ERP. Support-shaped, see [`support/open.md`](../../support/open.md).
 
 ```yaml
 id: BDD-3305

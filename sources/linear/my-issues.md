@@ -2,8 +2,7 @@
 
 Assigned to Kushel, live (non-completed) statuses. Populated on sync — completed/canceled work stays in Linear's own history rather than being repeated here; see `git log` for what rolled off.
 
-**10-01 sync:** Up from 5 to 6. **New: BDD-3213 (Slice 5, download audit and counts) was moved Backlog to In Progress and assigned to him at 10-01 08:41 UTC.** Nothing else changed. BDD-3223 and BDD-3206 stay In Review, waiting on backend#7043, where irembbt's 09-24 Changes Requested still stands. BDD-2258 (High) is still Ready To Start, untouched since 08-18.
-
+**10-02 sync:** Still 6, and none of them changed in Linear this cycle. **Correction to last sync:** BDD-3213's "blocked on N3" was out of date. N3 itself ([BDD-3193](https://linear.app/fashioncloud/issue/BDD-3193/n3-decide-where-the-pcs-audit-collection-lives), "Decide where the PCS audit collection lives", assigned to him) was marked Done on 09-29 and touched again 10-01 13:48 UTC. The ticket body doesn't record which option was picked. BDD-3223 and BDD-3206 stay In Review behind backend#7043. BDD-2258 (High) is still Ready To Start, untouched since 08-18.
 ---
 
 ```yaml
@@ -16,7 +15,7 @@ team: BDD
 updated: 2026-10-01
 url: https://linear.app/fashioncloud/issue/BDD-3213/slice-5-downloads-are-accountable-and-countable
 ```
-New this cycle. Video Delivery project, Slice 5 milestone, created by Irem Bulut 09-03 and started 10-01 08:41 UTC. Scope: one audit entry per download (not per video) plus a separate per-SKU download-counts collection, and observability (bytes delivered, build duration, failure rate). The ticket text says it can't start until N3 (where PCS's Mongo lives) is decided, and also lists Slice 2 as a dependency. It also asks for a decision first on whether the audit records intent (token creation) or delivery (bytes actually left), since that decides whether the backend has to report back.
+Assigned 10-01. Video Delivery project, Slice 5 milestone, created by Irem Bulut 09-03 and started 10-01 08:41 UTC. Scope: one audit entry per download (not per video) plus a separate per-SKU download-counts collection, and observability (bytes delivered, build duration, failure rate). The ticket text says it can't start until N3 (where PCS's Mongo lives) is decided. That gate is now cleared: N3 (BDD-3193) has been Done since 09-29, though its ticket doesn't say which store was chosen. The ticket also lists Slice 2 as a dependency. It also asks for a decision first on whether the audit records intent (token creation) or delivery (bytes actually left), since that decides whether the backend has to report back.
 
 ---
 

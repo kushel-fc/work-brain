@@ -2,21 +2,20 @@
 
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
-Still 12. One new: #1990 (dwiajik, draft, stops the ECS task when a Dagster run is cancelled). That follows the 09-30 thread where Kushel and Aji found hanging ECS tasks behind cancelled runs. One left: #1910 (dwiajik, experimental SAX XML parsing for fraas, gstar and meierLederwaren) merged 09-30 10:41 UTC. Opened and merged inside the window: #1989 (chantelle article number input), #1987 (Delete pioneer, see BDD-3339), #1986 (aaiko PRICAT organizationId), #1984 (images), #1983 (marc o polo feed) and three release PRs (#1988, #1985, #1982). None were his. See [`archive/prs/brand-data-pipeline.md`](../../../archive/prs/brand-data-pipeline.md). After a second read, mergeable states are unchanged: #1969 (on his review list), #1956, #1880, #1879, #1263, #1120, #1058 and #1055 conflict.
+Still 12. One left: #1990 (dwiajik, stop ECS tasks when a Dagster run is cancelled) came out of draft and merged 10-01 10:27 UTC. One new: #1993 (Busra040, royRobson_FEED2 config). Opened and merged inside the window: #1996 (certificate), #1994 (images ftp), #1991 (visibility flags) and the 10-01 staging and production releases (#1992, #1995). None were his. See [`archive/prs/brand-data-pipeline.md`](../../../archive/prs/brand-data-pipeline.md). After a second read, mergeable states are unchanged: #1969 (on his review list), #1956, #1880, #1879, #1263, #1120, #1058 and #1055 conflict.
 
 ```yaml
-number: 1990
-title: Stop ECS tasks when a Dagster run is cancelled
-author: dwiajik
+number: 1993
+title: "Support/roy robson"
+author: Busra040
 state: open
-draft: true
 mergeable_state: mergeable
 review_state: awaiting-first-review
 requested_reviewers: []
 updated: 2026-10-01
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/1990
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1993
 ```
-New 10-01 08:41 UTC, draft. +250/-36. Cancelling a run left its Fargate task running, because Dagster's interrupt handler only reaches the main thread and the pool threads polling for task completion never saw it. Not his, but it's the fix for what he ran into in the fynchHatton thread.
+New 10-01 13:43 UTC. +3/-1 in royRobson_FEED2's `config.json` and `transformation.ts`. Opened the same day royRobson's move-images job failed because its URL was switched to SFTP without the images being moved (see [`dagster-alerts/log.md`](../../../dagster-alerts/log.md)). Not his.
 
 ```yaml
 number: 1969
@@ -29,7 +28,7 @@ requested_reviewers: [brand-data-dev (team), irembbt, kushel-fc]
 updated: 2026-09-28
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/1969
 ```
-**Names Kushel individually. Still conflicts** (since 09-30), still no reviews. Opened 09-28 11:42 UTC. Closes BDD-3280. It moves eight brand configs (cinque_FEED2, holyfashion, lugina x2, marcOPolo_PRICAT, profuomo, royRobson_FEED2, studioanneloes) from `image_sync.credential_id` to `image_source.credential_id` and drops the old key. Several of those brands had recent `download_images`/FTP-move alerts, so a mis-migrated credential would show up in Dagster. See [`prs/to-review.md`](../../../prs/to-review.md).
+**Names Kushel individually. Still conflicts** (since 09-30), still no reviews, not rebased. Opened 09-28 11:42 UTC. Closes BDD-3280. It moves eight brand configs (cinque_FEED2, holyfashion, lugina x2, marcOPolo_PRICAT, profuomo, royRobson_FEED2, studioanneloes) from `image_sync.credential_id` to `image_source.credential_id` and drops the old key. Several of those brands had recent `download_images`/FTP-move alerts, so a mis-migrated credential would show up in Dagster. See [`prs/to-review.md`](../../../prs/to-review.md).
 
 ```yaml
 number: 1956

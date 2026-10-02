@@ -3,6 +3,76 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
+timestamp: 2026-10-02T08:14:55Z
+channel: brand-data-dev-alerts
+brand: beltsBugatti
+summary: "beltsBugatti/FEED - 11 asset materializations failed (download_images, feed_transform, global_transform, ...)"
+status: active
+linked_issue: null
+```
+First beltsBugatti entry in this log. Run cf33bc3f was started by hand ("Dagster Dim User"), not by a schedule. The Slack attachment is cut off before the failing step and error. No thread or reaction yet.
+
+```yaml
+timestamp: 2026-10-02T01:52:36Z
+channel: brand-data-dev-alerts
+brand: platform (galvatron ECS)
+summary: ECS health check failures detected for galvatron service
+status: self-resolved
+linked_issue: null
+```
+Triggered 01:52 UTC, recovered 01:56 UTC. The usual short galvatron blip, no thread.
+
+```yaml
+timestamp: 2026-10-01T19:15:51Z
+channel: brand-data-dev-alerts
+brand: gabor
+summary: "gabor_FEED_sync_images exceeded the 3h run time limit twice more after the 10-01 release (runs c58e49b3 and 8baf26e0)"
+status: recurring
+linked_issue: product-service#2851
+```
+c58e49b3 started 15:00 UTC by hand ("Dagster Dev User") and alerted 18:01 UTC. 8baf26e0 started 16:15 UTC from the schedule and alerted 19:15 UTC. **Both started after the 10-01 production release** (product-service#2849, merged 14:47 UTC), which carried the directory-listing timeout (#2836) and the one-connection-per-run downloader fix (#2846). So those fixes didn't stop gabor hanging, though it isn't visible whether the release had finished deploying by 15:00. dwiajik opened product-service#2851 ("run FTP commands with timeout") at 19:38 UTC. It describes a move-images run for a 184,189-image brand that hung 4.5h+ on an untimed `MKD` for the archive folder. That's the gabor job (see the thread in the entry below). #2851 has three CodeRabbit Changes Requested passes and no human review yet. No thread on either alert.
+
+```yaml
+timestamp: 2026-10-01T15:18:12Z
+channel: brand-data-dev-alerts
+brand: cinque
+summary: "cinque__FEED2__move_images_from_ftp_to_s3_job_sync - essential container exited (exit 1), twice more (09:17 and 15:18 UTC)"
+status: recurring
+linked_issue: null
+```
+Runs 79c54422 and d68e05e7, from the image-sync cron. The same two time slots as 09-30, so it fails on every scheduled run now. No thread on either one. brand-data-pipeline#1969, which migrates cinque_FEED2's credential key, still conflicts and isn't merged.
+
+```yaml
+timestamp: 2026-10-01T14:08:24Z
+channel: brand-data-dev-alerts
+brand: multiple (gabor, blueSeven, swing)
+summary: "Hanging image tasks stopped by hand: gabor move_images x2 (13:56 UTC), blueSeven FEED2 download_images (13:59), swing FEED download_images (14:08), all exit 137 \"Task stopped by user\""
+status: self-resolved
+linked_issue: null
+```
+This is the clean-up, not a new failure. Aji said in the gabor thread (entry below) that he'd kill the hanging jobs, and these four "Task stopped by user" events followed within the hour. They cover gabor runs fc645d26 and 1ae21469, blueSeven's ONA seed d1835521 and swing c72869ee, which matches the 09-30/10-01 entries further down.
+
+```yaml
+timestamp: 2026-10-01T13:16:10Z
+channel: brand-data-dev-alerts
+brand: multiple (gabor, carsJeans)
+summary: "gabor_FEED_sync_images (fc645d26) and carsJeans_FEED_sync_images (6a4120de) exceeded the 3h run time limit again, both started ~10:10-10:15 UTC"
+status: recurring
+linked_issue: null
+```
+Repeats of the 09-30 wave, same time of day. carsJeans: Aji replied "expected" (:white_check_mark:). gabor: Aji called it "not expected" and found hanging jobs that had been running for 27h, 21h and 3h. Listing `/productImages` on the brand's FTP also hung in FileZilla, then came back with 184k images (130 GiB). He killed the jobs. **Kushel asked whether the hanging would be fixed by the next release, and Aji said it should be.** tamaris, gantFootwear, hanro and authenticstyle didn't repeat this cycle.
+
+```yaml
+timestamp: 2026-10-01T11:18:14Z
+channel: brand-data-dev-alerts
+brand: royRobson
+summary: "royRobson__FEED2__move_images_from_ftp_to_s3_job_sync - essential container exited (exit 1), 4 asset events"
+status: active
+linked_issue: null
+```
+First royRobson failure in this log since the 09-15 move-images spread. This one has a known cause. Dushan pulled in abubakarwase, who explained: the file PIPE reads is broken, and Büsra had filed FD 678845 asking for all images to move from FTP to SFTP, which he pushed back on as not a dev topic. The brand's URL was then switched to SFTP (brand-data-pipeline#1984, merged 09-30) without the images being moved, so there's no `productImages` folder there. Dushan asked for a follow-up with the DIMs, since the job costs Dagster credit while it's known to fail. Büsra's brand-data-pipeline#1993 ("Support/roy robson", royRobson_FEED2 config, +3/-1) opened 13:43 UTC and isn't merged.
+
+```yaml
 timestamp: 2026-10-01T05:31:44Z
 channel: brand-data-dev-alerts
 brand: swing
@@ -10,7 +80,7 @@ summary: "swing_FEED exceeded the 3h run time limit (run c72869ee, started 02:31
 status: active
 linked_issue: null
 ```
-First run-limit hit for swing. It came from the scheduled feed cron, two days after swing went fully on PIPE (product-service#2816, 09-29). No thread or reaction. It started before dwiajik's directory-listing timeout fix (product-service#2836) merged at 08:18 UTC, so it may be part of the FTP hang wave below, but the alert doesn't say which step was running.
+First run-limit hit for swing. It came from the scheduled feed cron, two days after swing went fully on PIPE (product-service#2816, 09-29). No thread or reaction. It started before dwiajik's directory-listing timeout fix (product-service#2836) merged at 08:18 UTC, so it may be part of the FTP hang wave below, but the alert doesn't say which step was running. **Update 10-01:** the step was `download_images`. The task was stopped by hand at 14:08 UTC (exit 137) during Aji's clean-up of hanging jobs.
 
 ```yaml
 timestamp: 2026-09-30T19:16:41Z
@@ -41,6 +111,7 @@ status: active
 linked_issue: null
 ```
 carsJeans_FEED (b2a505e6), gabor_FEED (e31e1dcf), tamaris_PRICAT (69a51261), gantFootwear_FEED (1503e782) and hanro_FEED (e2323c3a). Each got one :thinking_face: reaction and no thread. This looks like the hang dwiajik described in product-service#2836: the image-sync collector bounded the FTP credential fetch but not the directory `LIST`, so a blocked FTP data connection leaves the task running until something kills it. #2836 merged 10-01 08:18 UTC. That's after this wave and after swing (above), so the fix isn't confirmed yet. authenticstyle (09-29) and fynchHatton (below) look like the same thing. Aji also pointed out that cancelling a Dagster run leaves its ECS task running (see the fynchHatton thread), and brand-data-pipeline#1990 (draft) addresses that.
+**Update 10-01:** #1990 merged 10:27 UTC. gabor and carsJeans hit the limit again on 10-01, and gabor kept hanging after the 14:47 UTC release (entries above). dwiajik's product-service#2851 targets the remaining cause: per-file FTP commands (`MKD`, `SIZE`, `RENAME`) with no timeout. tamaris, gantFootwear and hanro were quiet.
 
 ```yaml
 timestamp: 2026-09-30T12:54:14Z
@@ -51,6 +122,7 @@ status: active
 linked_issue: product-service#2832
 ```
 The production ONA seed for blueSeven. Per product-service#2832, its data steps finished but image download stalled after 496 downloads, with FTP data-connection timeouts. The PR's hypothesis (stated as unproven) is that the old downloader never closed its FTP connections. #2832 names Kushel as a reviewer and is approved by Chamindu36. blueSeven's migration stays blocked at Phase 3 Step 1 until it lands.
+**Update 10-01:** #2832 was closed unmerged at 14:04 UTC. dwiajik superseded it with product-service#2846 (reuse one FTP connection per run, bound each transfer), which merged 14:02 UTC and went out in production release #2849 at 14:47 UTC. The stuck run's download task was stopped by hand at 13:59 UTC. No re-run of the blueSeven seed shows in Slack yet.
 
 ```yaml
 timestamp: 2026-09-30T12:44:11Z
@@ -1191,34 +1263,3 @@ status: self-resolved
 linked_issue: BDD-3164
 ```
 Kushel replied in-thread ("This was the image reprocessing") ~2.5h later — expected, tied to his own [BDD-3164](../sources/linear/my-issues.md) B2B image reprocessing work, not a bug. Second occurrence of this same job exceeding its limit (see entry below).
-
-```yaml
-timestamp: 2026-09-01T19:06:10Z
-channel: brand-data-dev-alerts
-brand: platform (analytics asset / analytics_trigger_sensor)
-summary: Asset materialization failed for `analytics`, container exit code 1
-status: recurring
-linked_issue: null
-```
-Same sensor/asset as the prior 2026-08-20/08-25 occurrences — no thread or reaction this time either.
-
-```yaml
-timestamp: 2026-09-01T18:34:01Z
-channel: brand-data-dev-alerts
-brand: bestseller
-summary: bestseller_FEED2 run exceeded 3h time limit
-status: self-resolved
-linked_issue: BDD-3164
-```
-Kushel replied in-thread ("Still on the merge step") a minute later — same explanation as the entry above, tied to his BDD-3164 reprocessing work.
-
-```yaml
-timestamp: 2026-09-01T17:20:35Z
-channel: brand-data-dev-alerts
-brand: platform (galvatron ECS)
-summary: ECS health check failures detected for galvatron service
-status: self-resolved
-linked_issue: null
-```
-Triggered 17:17:36 UTC, recovered ~3 minutes later — brief blip, no thread.
-

@@ -8,7 +8,10 @@ Each earmark has a `Trigger signal` (plain-language condition to watch for durin
 
 ## Active
 
-_None right now._
+- **Trigger signal**: `product-service#2851` (dwiajik, "run FTP commands with timeout") merges and ships in a production release
+- **Surface**: Confirm `gabor_FEED_sync_images` stops hitting the 3h limit. gabor kept hanging after the 10-01 release that carried #2836 and #2846, so those fixes weren't enough, and #2851 is the next candidate. Also check whether cinque_FEED2's move-images failures (exit 1, a different signature) change with it.
+- **Related**: [dagster-alerts/log.md](../dagster-alerts/log.md), [sources/github/product-service/open-prs.md](../sources/github/product-service/open-prs.md)
+- **Status**: active (added 2026-10-02)
 
 ## Triggered / Dismissed
 
