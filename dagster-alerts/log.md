@@ -3,6 +3,66 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
+timestamp: 2026-10-05T08:38:51Z
+channel: brand-data-dev-alerts
+brand: gabor
+summary: "gabor__FEED__move_images_from_ftp_to_s3_job_sync - essential container exited (exit 1), 4 asset events (run 07445ae6)"
+status: active
+linked_issue: product-service#2851
+```
+**First gabor alert since product-service#2851 (FTP command timeouts) shipped**, in production release #2854, merged 10-05 07:37 UTC. Run 07445ae6 was started by hand ("Dagster Dev User"). The signature is new for gabor: the move-images job exited with code 1, where every earlier gabor alert was a 3h hang on `gabor_FEED_sync_images`. That fits #2851's timeouts now firing on the bad connection instead of hanging, but the Slack attachment cuts off before the error text, so that's a guess. No thread yet. The underlying FTP connection problem isn't fixed (the #2851 description says its cause wasn't confirmed).
+
+```yaml
+timestamp: 2026-10-04T08:40:12Z
+channel: brand-data-dev-alerts
+brand: skiny
+summary: "skiny__FEED__process_images - essential container exited, exit code 137 (2 asset events, run 892810e7)"
+status: recurring
+linked_issue: null
+```
+Second skiny exit-137 (likely OOM) after 09-30 (`process_images_sync`, entry below). This one is the FEED `process_images` step. No thread.
+
+```yaml
+timestamp: 2026-10-04T08:35:41Z
+channel: brand-data-dev-alerts
+brand: fynchHatton
+summary: "fynchHatton__FEED2__download_images - essential container exited (exit 1), three runs in one minute (f3e685ef, 568ca2c6, 711c0916)"
+status: recurring
+linked_issue: null
+```
+Three alerts at 08:35:41, 08:36:11 and 08:36:41 UTC, each 3 asset events. Kushel disabled the fynchHatton image-sync schedule on 09-30 because the brand's image FTP had a connection problem (entry from 09-30 below). These are the FEED2 `download_images` step, so they come from a different job than the one he disabled. Launch source isn't shown. Most likely the same FTP problem, not confirmed. No thread.
+
+```yaml
+timestamp: 2026-10-02T13:11:24Z
+channel: brand-data-dev-alerts
+brand: carsJeans
+summary: "carsJeans_FEED_sync_images exceeded the 3h run time limit (run c505fbc6, started 10:10 UTC from the schedule)"
+status: recurring
+linked_issue: product-service#2851
+```
+Third carsJeans run-limit hit (09-30, 10-01, now 10-02). #2851 had merged at 10:08 UTC, two minutes before this run started, but it didn't reach production until release #2854 on 10-05 07:37 UTC, so this run didn't have it. No thread. No carsJeans alert since.
+
+```yaml
+timestamp: 2026-10-02T10:03:55Z
+channel: brand-data-dev-alerts
+brand: sOliver
+summary: "sOliver/FEED - 12 asset materializations failed (download_images, extract, ...), run b85d0ac6 from the schedule"
+status: self-resolved
+linked_issue: null
+```
+Aji posted the error in-thread: `AggregateError [ETIMEDOUT]` on connect. His rerun succeeded (13:33 UTC). Same 12-asset shape as the earlier sOliver/FEED entries.
+
+```yaml
+timestamp: 2026-10-02T09:18:12Z
+channel: brand-data-dev-alerts
+brand: cinque
+summary: "cinque__FEED2__move_images_from_ftp_to_s3_job_sync - essential container exited (exit 1), run 563cb30b"
+status: self-resolved
+linked_issue: null
+```
+**Root cause found and fixed by Aji in-thread.** The error was a `ZodError` from `CredentialsClient.getFtpCredentialItemById`: `filenamePattern` was undefined. That's the same missing-`filename_pattern` cause as swing's 09-25 failure. He added the `filename_pattern`, and the rerun succeeded (10:44 UTC). No cinque alert since, so the every-scheduled-run streak from 09-27 is over. It wasn't brand-data-pipeline#1969.
+
+```yaml
 timestamp: 2026-10-02T08:14:55Z
 channel: brand-data-dev-alerts
 brand: beltsBugatti
@@ -37,10 +97,10 @@ timestamp: 2026-10-01T15:18:12Z
 channel: brand-data-dev-alerts
 brand: cinque
 summary: "cinque__FEED2__move_images_from_ftp_to_s3_job_sync - essential container exited (exit 1), twice more (09:17 and 15:18 UTC)"
-status: recurring
+status: self-resolved
 linked_issue: null
 ```
-Runs 79c54422 and d68e05e7, from the image-sync cron. The same two time slots as 09-30, so it fails on every scheduled run now. No thread on either one. brand-data-pipeline#1969, which migrates cinque_FEED2's credential key, still conflicts and isn't merged.
+Runs 79c54422 and d68e05e7, from the image-sync cron. The same two time slots as 09-30, so it fails on every scheduled run now. No thread on either one. brand-data-pipeline#1969, which migrates cinque_FEED2's credential key, still conflicts and isn't merged. **Update 10-05:** fixed 10-02 by Aji (missing `filename_pattern`), see the 10-02 entry above.
 
 ```yaml
 timestamp: 2026-10-01T14:08:24Z
@@ -1174,92 +1234,3 @@ linked_issue: null
 ```
 No thread or reaction visible. Same job as [BDD-3164](../sources/linear/my-issues.md) (Kushel's own B2B image reprocessing work) but a different, real OOM failure mode — not the previously-explained "exceeded 3h limit" pattern. First of three same-cause OOMs this window, root-caused and fixed via product-service#2633 (see 09-07 entry above).
 
-```yaml
-timestamp: 2026-09-05T01:49:00Z
-channel: brand-data-dev-alerts
-brand: platform (Megatron → Backend)
-summary: "Recovered: delays in image processing flow between Megatron and Backend (backend-service-UNPROCESSED-IMAGE-RECEIVED)"
-status: self-resolved
-linked_issue: null
-```
-Recovery of the WARN triggered 09-04 17:06 CEST (queue age back under threshold ~10h43m later). Same recurring alert pattern as the 08-20/08-23 occurrences.
-
-```yaml
-timestamp: 2026-09-04T15:06:00Z
-channel: brand-data-dev-alerts
-brand: platform (Megatron → Backend)
-summary: Delays in image processing flow between Megatron and Backend (backend-service-UNPROCESSED-IMAGE-RECEIVED), WARN threshold breach
-status: recurring
-linked_issue: null
-```
-Same established recurring pattern as 08-20/08-22-23 (queue age over threshold). Recovered ~09-05 01:49 UTC, see entry above.
-
-```yaml
-timestamp: 2026-09-03T19:38:06Z
-channel: brand-data-dev-alerts
-brand: lugina
-summary: "lugina/FEED — 11 asset materializations failed (download_images, feed_transform, etc.)"
-status: recurring
-linked_issue: null
-```
-Recurred 2026-09-07 19:37 UTC (see entry above) — same asset group and identical 11-failure count both times. No thread or reaction on either occurrence.
-
-```yaml
-timestamp: 2026-09-03T14:16:35Z
-channel: brand-data-dev-alerts
-brand: platform (galvatron ECS)
-summary: ECS health check failures detected for galvatron service
-status: self-resolved
-linked_issue: null
-```
-Triggered 14:12:35 UTC, recovered ~4 minutes later — same recurring galvatron health-check blip pattern as prior syncs, no thread.
-
-```yaml
-timestamp: 2026-09-03T12:01:59Z
-channel: brand-data-dev-alerts
-brand: ara
-summary: "ara__PRICAT__process_images — container exited, exit code 137 (OOM)"
-status: active
-linked_issue: null
-```
-No thread or reaction visible. First OOM logged for ara specifically (distinct from the earlier ara credential-id fix, brand-data-pipeline#1795, merged same day).
-
-```yaml
-timestamp: 2026-09-03T07:56:05Z
-channel: brand-data-dev-alerts
-brand: pmeLegend
-summary: "pmeLegend/FEED — 11 asset materializations failed: stream aborted reading large XML (Products_20260903085537513.xml)"
-status: active
-linked_issue: null
-```
-Kushel replied in-thread with the exact stream-abort error; Aji confirmed this will be fixed by the SAX-based streaming XML parser already in flight ([product-service#2574](../sources/github/product-service/open-prs.md) / [brand-data-pipeline#1744](../sources/github/brand-data-pipeline/open-prs.md), BDD-3159) and linked a related Megatron alert. Directly relevant to [BDD-3150](../support/open.md) (PIPE/Megatron file-size mismatch, which specifically calls out PME Legend PD import) — explained, not yet fixed.
-
-```yaml
-timestamp: 2026-09-02T09:02:50Z
-channel: brand-data-dev-alerts
-brand: bestseller
-summary: "bestseller__FEED2__publish_from_map — container exited, exit code 1 (\"App container has no exit code after task stopped\")"
-status: active
-linked_issue: null
-```
-No thread or reaction. Different failing step than the known recurring "exceeded 3h run time limit" pattern on this same job (tied to Kushel's [BDD-3164](../sources/linear/my-issues.md) reprocessing) — an ECS task/container-level failure in the publish step, not a runtime-limit issue. Worth watching for a repeat before treating as the same known pattern.
-
-```yaml
-timestamp: 2026-09-02T08:23:35Z
-channel: brand-data-dev-alerts
-brand: platform (galvatron ECS)
-summary: ECS health check failures detected for galvatron service
-status: self-resolved
-linked_issue: null
-```
-Triggered 08:12:35 UTC, recovered ~11 minutes later — same recurring galvatron health-check blip pattern as prior syncs, no thread.
-
-```yaml
-timestamp: 2026-09-02T04:46:33Z
-channel: brand-data-dev-alerts
-brand: bestseller
-summary: bestseller_FEED2 run exceeded 3h time limit
-status: self-resolved
-linked_issue: BDD-3164
-```
-Kushel replied in-thread ("This was the image reprocessing") ~2.5h later — expected, tied to his own [BDD-3164](../sources/linear/my-issues.md) B2B image reprocessing work, not a bug. Second occurrence of this same job exceeding its limit (see entry below).

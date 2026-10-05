@@ -2,6 +2,18 @@
 
 One entry per sync run. Prune entries older than ~30 days.
 
+## 2026-10-05 (~08:45 UTC)
+
+About 72h since the last sync (10-02 ~08:45 to 10-05 ~08:45, across the weekend). Linear (claude.ai connector), GitHub (`gh`) and Slack (claude.ai connector) were all reachable. The `plugin:engineering:*` servers needed auth and weren't used.
+
+- **His own backend#7043 (Slice 3.2, BDD-3206) flipped to a merge conflict** with `staging`. A second read confirmed `CONFLICTING`/`DIRTY`. irembbt's 09-24 Changes Requested still stands, with no re-review in eight days. backend#7048 is still approved and mergeable. Shaping doc updated.
+- **Earmark fired: product-service#2851 (FTP command timeouts) merged 10-02 10:08 UTC and shipped in production release #2854 (10-05 07:37 UTC).** The first gabor run since (08:38 UTC, by hand) failed on move-images with exit 1 instead of a 3h hang. Too early to call it fixed, so the earmark moved to Triggered and a new "gabor quiet for a full cycle" earmark replaced it.
+- **Review queue 3 to 2, still none reviewed by him.** #2514 closed unmerged 10-02. #1969 was rebased and is mergeable now. #2808 is seven days with no review. He approved the 10-05 production release #2857.
+- Slack (9 messages): cinque_FEED2 move-images fixed by Aji (missing `filename_pattern`, rerun OK), which ends its streak. sOliver FEED ETIMEDOUT, rerun OK. carsJeans 3h limit again (10-02, before the fix shipped). fynchHatton FEED2 `download_images` failed three times 10-04 (`recurring`). skiny exit 137 again 10-04 (`recurring`). gabor move-images exit 1 on 10-05. One Slackbot AWS SNS subscription confirmation, not an alert. Dagster log +6, pruned 9 (09-02 to 09-05), now 123.
+- GitHub: product-service 9 to 6 (#2851, #2850 merged; #2827, #2514 closed; #2857 new; #2852, #2855 and three releases opened and merged in the window). brand-data-pipeline stays at the same 12 (#1997, #1998, #1999, #2001 and two releases opened and merged in the window). All archived.
+- Linear: none of his 6 live issues changed. Triage stays at 2. BDD-3343 (JustBrands) moved to Replenishment as RPL-2397 (Oleh Polishchuk), logged in team-transfers. New: BDD-3344 (Marc O'Polo PRICAT reprocessing, FD 679215, Low, unassigned), now the only item in support/open.md.
+- Notified: yes. His own PR backend#7043 flipped to a merge conflict, which is on the bar ("a PR of his flips to a merge conflict"). backend isn't one of the two tracked repos, but it's listed in prs/mine.md as his and it's the last blocker on BDD-3206. Nothing else crossed the bar: no due dates on his live issues, BDD-3344 is Low, and fynchHatton, skiny and carsJeans are repeats inside open, never-resolved problems, which by precedent in this log (cinque 09-29, profuomo 09-14, gabor 10-02) get a today.md callout instead.
+
 ## 2026-10-02 (~08:45 UTC)
 
 About 24h since the last sync (10-01 ~08:50 to 10-02 ~08:45). Linear (claude.ai connector), GitHub (`gh`) and Slack (claude.ai connector) were all reachable. The `plugin:engineering:*` servers needed auth and weren't used.
@@ -250,56 +262,6 @@ All three sources reachable this run — Linear, GitHub, Slack. Three-day gap si
 - Four old, previously-untracked internal tickets got touched 09-06 (BDD-2538 reopened after being Done, BDD-1417, BDD-2406, BDD-1495) — added to `my-issues.md` for the first time; none started.
 - Slack: quiet 3-day window overall (6 messages). Aside from the OOM cluster above, one new failure signature for sOliver/FEED (12 asset materializations, 09-06, no thread) and a recurrence-then-recovery of the established Megatron→Backend image-processing-delay pattern (WARN 09-04 17:06 UTC, recovered 09-05 01:49 UTC, ~10.5h) — same pattern as 08-20/08-23, not a fresh escalation.
 - Notified: no — nothing crossed the notification bar. No deadline passed with zero movement (no due dates set on any live issue). No flip to conflict/Changes-Requested on his own work (he has zero open PRs). No new Urgent-priority ticket landed unassigned (BDD-3226 is High, and it landed already assigned, not unassigned — the bulk-assignment batch is all Medium/Low). No Dagster alert recurred after having self-resolved in a way that reads as a fresh escalation — the Megatron→Backend recurrence is a repeat of an already-established recurring pattern (same bar applied in the 08-23/09-01 syncs), and the OOM cluster is a new active pattern, not a self-resolved one flaring back up. The bulk-assignment workload surge doesn't map to any listed notification trigger, but is called out prominently in `today.md` regardless since it's the most consequential thing this cycle.
-
-## 2026-09-04 (08:45 UTC)
-
-All three sources reachable this run — Linear, GitHub, Slack.
-
-- **New assignment: BDD-3225 (Re: Pepe Jeans - missing image report, FD 675342), High.** Created 09-03, picked up and started same day — long AWWG/Pepe Jeans thread about images that keep failing to display despite repeated re-uploads. Added to `today.md`.
-- **New internal ticket: BDD-3089 (Process images taller than wide), In Review** — already has an implementation up, his own new PR [product-service#2623](../sources/github/product-service/open-prs.md).
-- **BDD-3117 (FW: PME stockbase, FD 672891) picked up by Kushel** — was sitting unassigned in Triage (Low) since 08-24, now his and In Progress. Moved out of `support/open.md`/`triage.md` into `my-issues.md`.
-- **BDD-3128 (Future stock niet zichtbaar, FD 674093) left BDD entirely** — transferred to the Retailer Data team (now RDD-1648), picked up there by Mo Shahmohammadi. Logged in new `archive/linear/team-transfers.md` rather than `recently-closed.md`, since BDD didn't resolve it.
-- **BDD-3036 (Noah Group sketch-flag) reassigned away from Kushel** — now Dushan's, still To Do. Removed from `my-issues.md`.
-- **BDD-3155 (his own meyer FEED2 reprocessing ticket) shipped** — Done, moved to `support/recently-closed.md`.
-- **His own PR #1791 (brand-data-pipeline) merged** 2026-09-03 by marianabassi — he now has zero open PRs on brand-data-pipeline. New own PR #2623 (product-service, BDD-3089) opened same day, no reviews yet.
-- **New review request: brand-data-pipeline#1808** (routine Production Release PR) individually names him among 3 others.
-- **New review request: product-service#2618** (BDD-3197 customAttributes) individually names him; already has Changes Requested from Chamindu36 after extensive back-and-forth — not from Kushel.
-- **His to-review PR #1744 got an approval** (julsjacinto) and its `mergeable_state` cleared from `unknown` to `mergeable` — companion product-service#2574 also cleared its real merge conflict from last cycle. Both tie to BDD-3150 (PIPE/Megatron file-size mismatch) and the pmeLegend Dagster alerts. He's now the last outstanding reviewer on #1744.
-- **PR wave, none individually his**: product-service #2617 (staging release), #2612 (production release), #2604 (closed, not merged — geisha mapping rules) all closed 09-03; #2616 (OpenAPI spec — was individually his to review) merged by Chamindu36 without his review; #2613 (publishing-job stream) merged. brand-data-pipeline #1795 (Ara credential fix), #1799 (PME Legend note), #1794 (staging release), #1789 (production release) all merged 09-03.
-- **New PRs opened, none individually his**: product-service #2624 (mavi enable, already approved), #2622 (Chamindu36 architecture docs, changes requested). brand-data-pipeline #1811 (mongodb chunk sync, draft), #1810 (Nump TRIMIT reonboarding), #1803 (numph fix), #1800 (BDD-3197 snocks companion to product-service#2618, approved).
-- **Three `mergeable_state` reads flipped from the long-standing `unknown` flapping to real conflicts** — product-service#1737, #1728 and brand-data-pipeline#1120, #1058 (none are his own or individually his to review).
-- Note: product-service#2607 (O'Neill migration, individually his) shows zero completed reviews via the API this cycle, though a prior sync's note claimed he'd left a COMMENTED review with julsjacinto APPROVED — could not reconfirm that either way this cycle, flagged in `sources/github/product-service/open-prs.md` rather than silently restated.
-- Slack: quiet cycle, only 4 messages since last sync, none threaded. New: lugina/FEED 11 assets failed (first occurrence of this brand); ara__PRICAT__process_images hit an OOM (new for this brand/step); one ~4-minute galvatron ECS health-check blip (established self-resolving pattern). The 09-03 pmeLegend stream-abort and bestseller publish_from_map issues did not recur.
-- Notified: no — nothing crossed the notification bar. No deadline passed with zero movement (no due dates set on any live issue). No flip to conflict/Changes-Requested on his own work (his own PR #1791 merged cleanly; his new PR #2623 has only a CodeRabbit changes-requested pass, not a human reviewer, and its aggregate review state is still awaiting-first-review). No new Urgent-priority ticket landed unassigned (BDD-3225 is High and already assigned, not unassigned; no new Triage items appeared at all this cycle). No Dagster alert recurred after self-resolving (lugina and the ara OOM are first occurrences, not repeats of something previously resolved; the galvatron blip continues its already-established recurring-but-self-resolving pattern).
-
-## 2026-09-03 (09:15 UTC)
-
-All three sources reachable this run — Linear, GitHub, Slack.
-
-- **BDD-3155 (PIPE: meyer FEED2 data reprocessing, FD 674619) picked up by Kushel** — was sitting unassigned in Triage at Medium priority last sync, now his, bumped to High, In Progress. Added to `today.md`.
-- **BDD-2957 (his own G-star dual-archive ticket) shipped** — Deployed, moved from `my-issues.md` to `support/recently-closed.md`.
-- **New Triage item**: BDD-3189 (Medium, "information on sketch tag needed"), FD-referenced — added to `support/open.md`.
-- **New review request**: product-service #2616 ("Every NestJs service... OpenAPI spec", Chamindu36) — team + individually names him among 4 other reviewers.
-- **His review request #2611 merged without his review** (2026-09-02) — he was sole named reviewer after Chamindu36's 17+ rounds of Changes Requested; moved to `archive/prs/`. Also merged this cycle, not his: product-service #2587 (Enable ECCO on PIPE), brand-data-pipeline #1780 (Post Migration Clean up) and #1784 (O'Neill migration, companion to his still-open product-service#2607).
-- **New PRs opened**, none individually his: product-service #2617 (Staging Release, bot), brand-data-pipeline #1799 ("add PME Legend note"), #1795 (Ara credential-id fix).
-- **His own PR #1791** and his to-review **#1744** both flapped `mergeable_state` from `mergeable`/`mergeable` to `unknown` — the established GitHub-recompute noise on brand-data-pipeline, not real conflicts.
-- **product-service#2574 (SAX parser, companion to #1744) flipped to a real merge conflict** — not his own PR, so no notification, but directly relevant to the Slack finding below.
-- Slack: a pmeLegend FEED run failed 11 asset materializations 2026-09-03 09:56 CEST — stream aborted reading a large XML file. Kushel and Aji explained in-thread that the in-flight SAX-parser work (#1744/#2574, BDD-3159) is meant to fix exactly this; it also directly matches BDD-3150's PIPE/Megatron file-size-mismatch description, which specifically names PME Legend. Explained, not yet fixed — logged as `active`.
-- Slack: a second, unexplained failure hit `bestseller_FEED2` on 2026-09-02 (`publish_from_map`, container exited without an exit code) — no thread, no reaction. Distinct failure signature from the well-established "exceeded 3h limit" pattern on the same job; worth watching for a repeat before assuming it's routine.
-- Notified: no — nothing crossed the notification bar. No deadline passed with zero movement (no due dates set on any live issue). No flip to conflict/Changes-Requested on his own PR (only his own open PR, #1791, flapped to `unknown` mergeable state, not a real conflict, and stayed Approved). No new Urgent-priority ticket landed unassigned (BDD-3189 is Medium). No Dagster alert recurred after self-resolving (both new alerts are first occurrences of their specific failure signature, not repeats of something that had already self-resolved).
-
-## 2026-09-02 (08:40 UTC)
-
-All three sources reachable this run — Linear, GitHub, Slack.
-
-- **BDD-3167 (Data completely missing - DKcompany, High) resolved** — closed 2026-09-01. It was speculatively tied to the onaDkCompany Dagster run stuck since 2026-08-26, but no Slack message this cycle confirmed that run itself got fixed; the run's own status in `dagster-alerts/log.md` is now flagged stale/unconfirmed rather than treated as resolved.
-- **His own PR #1791** (brand-data-pipeline, "Fix fcKeys default fallbacks that mask real merge data") is new and already Approved by dwiajik and Chamindu36 — ready to merge, two other requested reviewers haven't weighed in but the bar is met.
-- **Two new individual review requests** landed on him: product-service #2611 ("Added `create-variants` package" — sole named reviewer, after 17+ rounds of Chamindu36 comments ending in Changes Requested) and #2607 (O'Neill brand migration, team + individual, he'd already left a comment).
-- **PR wave**: #2605 (product-service, StreamPublisher partition keys — he was a requested reviewer) merged 09-01 without his review. brand-data-pipeline #1783 (geisha FEED migration, not his) also merged 09-01. 8 other PRs opened across both repos this cycle (2613, 2612, 2608, 2604-companion review still open, 1794, 1789, 1785, 1784) — none individually his to review.
-- **Backfill**: product-service #2594 (his own PR, LANGUAGE_CODES fix) and BDD-3154 (the Linear ticket it shipped) were merged/closed 08-31 but missed being archived/logged in the 09-01 sync — caught up this cycle.
-- Linear: 3 new Triage tickets (BDD-3181 Medium, BDD-3180 Low, BDD-3168 Low), all FD-referenced, added to `support/open.md`. No High-priority items unassigned. BDD-2530's updated timestamp jumped from 07-09 to 09-01 with no visible status change yet — flagged for a look.
-- Slack: quiet-ish window since 2026-08-31T14:12:56Z. The enrichment-service 504 timeout pattern continues — Dushan claimed ownership in-channel but sOliver hit the same error again ~15 min later, so it isn't actually fixed. Two more galvatron ECS health-check blips, both self-resolved within minutes (established pattern). New: `bestseller_FEED2` fired "exceeded 3h limit" twice (09-01, 09-02) — both explained in-thread by Kushel himself as his own BDD-3164 reprocessing work, not bugs.
-- Notified: no — nothing crossed the notification bar (no deadline passed with zero movement; his own PR #1791 is Approved, not a conflict/Changes-Requested flip; no new Urgent unassigned ticket, the 3 new Triage items are Medium/Low; no Dagster alert recurred after self-resolving — the enrichment 504 and galvatron patterns were already active/recurring before this cycle, not fresh flips).
 
 ## 2026-09-15
 

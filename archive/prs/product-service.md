@@ -3,6 +3,105 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2856
+title: "Staging Release - 2026-10-05"
+author: app/github-actions
+state: closed
+merged: true
+closed: 2026-10-05
+url: https://github.com/fashioncloud/product-service/pull/2856
+```
+Opened and merged 10-05 (08:27 to 08:33 UTC). Routine. Not his.
+
+```yaml
+number: 2855
+title: "pds-stream-relay: test filter bestseller org ID"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-05
+url: https://github.com/fashioncloud/product-service/pull/2855
+```
+Opened and merged 10-05 (07:41 to 08:15 UTC). Riding in production release #2857. Not his.
+
+```yaml
+number: 2854
+title: "Production Release - 2026-10-02"
+author: app/github-actions
+state: closed
+merged: true
+closed: 2026-10-05
+url: https://github.com/fashioncloud/product-service/pull/2854
+```
+Opened 10-02 14:48 UTC, merged 10-05 07:37 UTC. **Carried #2851 (FTP command timeouts) to production**, the trigger for the gabor earmark. Not his.
+
+```yaml
+number: 2853
+title: "Staging Release - 2026-10-02"
+author: app/github-actions
+state: closed
+merged: true
+closed: 2026-10-02
+url: https://github.com/fashioncloud/product-service/pull/2853
+```
+Opened and merged 10-02. Routine. Not his.
+
+```yaml
+number: 2852
+title: "feat(pds): move claim-check payloads to a BDD-owned bucket (BDD-3340)"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-02
+url: https://github.com/fashioncloud/product-service/pull/2852
+```
+Opened and merged 10-02. Not his.
+
+```yaml
+number: 2514
+title: "feat(llm-based-agent-setup): add mutations tool group for SKU reprocessing and mapping-rule updates"
+author: dushansilva
+state: closed
+merged: false
+closed: 2026-10-02
+url: https://github.com/fashioncloud/product-service/pull/2514
+```
+**Was on his review list.** Closed unmerged 10-02 14:40 UTC, after 35 days as a conflicting draft with Changes Requested from someone else. He never reviewed it.
+
+```yaml
+number: 2851
+title: "fix: run FTP commands with timeout"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-02
+url: https://github.com/fashioncloud/product-service/pull/2851
+```
+Merged 10-02 10:08 UTC by dwiajik, shipped in production release #2854 on 10-05 07:37 UTC. The follow-up fix for the gabor move-images hangs. Not his.
+
+```yaml
+number: 2850
+title: "Productionize the PDS stream relay"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-02
+url: https://github.com/fashioncloud/product-service/pull/2850
+```
+Merged 10-02 13:56 UTC. Part of BDD-3282. Not his.
+
+```yaml
+number: 2827
+title: "fix(ci): pass the tarball to npm as an absolute path"
+author: dwiajik
+state: closed
+merged: false
+closed: 2026-10-02
+url: https://github.com/fashioncloud/product-service/pull/2827
+```
+Closed unmerged 10-02 10:38 UTC after conflicting since 09-30. Not his.
+
+```yaml
 number: 2832
 title: "fix(image-downloader): close FTP connections and bound transfers"
 author: FCMachineUser

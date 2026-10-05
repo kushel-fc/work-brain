@@ -3,6 +3,18 @@
 Triage items that left team BDD by being reassigned to a different team, not by being resolved. Never deleted — kept here so `triage.md`/`support/open.md` staying silent on an ID doesn't read as "fixed."
 
 ```yaml
+id: BDD-3343 (now RPL-2397)
+title: "Orders through B2B | JustBrands (FD: 679204)"
+priority: Low
+transferred_to: Replenishment
+new_assignee: oleh.polishchuk@fashion.cloud
+status_at_transfer: Todo
+transferred: 2026-10-02
+url: https://linear.app/fashioncloud/issue/RPL-2397/orders-through-b2b-justbrands-fd-679204
+```
+Filed in BDD Triage 10-02 08:25 UTC and moved to Replenishment (Support Requests project) at 14:34 UTC the same day. Not yet started there. It was a B2B order-flow question, not a data fix.
+
+```yaml
 id: BDD-3128 (now RDD-1648)
 title: Future stock niet zichtbaar (FD: 674093)
 priority: Low

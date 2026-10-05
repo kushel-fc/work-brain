@@ -2,33 +2,20 @@
 
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
-Still 9. Three left: **#2832 (FTP connection fix, was on his review list) was closed unmerged 10-01 14:04 UTC**, superseded by dwiajik's #2846. **#2838 (product-data-schema release changeset, was on his list) merged 14:36 UTC** with Chamindu36's approval only. #2829 (PDS SDK stage 4/4, which he'd approved) merged 08:48 UTC. Three new: #2851 (dwiajik, FTP command timeouts for move-images, the follow-up to the gabor hang), #2850 (dwiajik, productionize the PDS stream relay) and #2845 (dwiajik, draft PDS helper script). None name him individually. Opened and merged inside the window: #2846 (reuse one FTP connection per run), #2847 (block shorttooth for brands fully on PIPE with image sync), #2844, #2843 and the 10-01 staging and production releases (#2848, #2849). See [`archive/prs/product-service.md`](../../../archive/prs/product-service.md). After a second read, mergeable states match last sync: #2827 and #2514 conflict, everything else is mergeable.
+9 to 6. Four left: **#2851 (FTP command timeouts, the gabor fix) merged 10-02 10:08 UTC** and shipped to production in release #2854 (merged 10-05 07:37 UTC). #2850 (PDS stream relay) merged 10-02 13:56 UTC. #2827 (CI tarball path) was closed unmerged 10-02 10:38 UTC. **#2514 (on his review list) was closed unmerged 10-02 14:40 UTC.** One new: #2857, the 10-05 production release, which he approved 08:35 UTC. Opened and merged inside the window: #2852 (PDS claim-check payloads to a BDD-owned bucket, BDD-3340), #2855 (pds-stream-relay bestseller filter test), and the 10-02 staging/production and 10-05 staging releases (#2853, #2854, #2856). None of those were his. See [`archive/prs/product-service.md`](../../../archive/prs/product-service.md). The `gh pr list` read showed every non-release PR as `UNKNOWN`, but a second read had all six mergeable.
 
 ```yaml
-number: 2851
-title: "fix: run FTP commands with timeout"
-author: dwiajik
+number: 2857
+title: "Production Release - 2026-10-05"
+author: app/github-actions
 state: open
 mergeable_state: mergeable
-review_state: changes-requested
-requested_reviewers: [brand-data-dev (team), irembbt, alirezaMoazenFashion]
-updated: 2026-10-02
-url: https://github.com/fashioncloud/product-service/pull/2851
+review_state: approved
+requested_reviewers: [irembbt, julsjacinto]
+updated: 2026-10-05
+url: https://github.com/fashioncloud/product-service/pull/2857
 ```
-New 10-01 19:38 UTC. +294/-57 across 4 files. A move-images run for a 184,189-image brand on plain FTP (the gabor job) hung 4.5h+ on the `MKD` for the archive folder, because none of the per-file commands (`MKD`, `SIZE`, `RENAME`) had a timeout and `promise-ftp` has no keepalive. The PR says it hasn't confirmed why the connection went bad. The Changes Requested is CodeRabbit only (three passes). Not his to review, but it's the open fix for the gabor hangs in [`dagster-alerts/log.md`](../../../dagster-alerts/log.md).
-
-```yaml
-number: 2850
-title: "Productionize the PDS stream relay"
-author: dwiajik
-state: open
-mergeable_state: mergeable
-review_state: changes-requested
-requested_reviewers: [brand-data-dev (team), abubakarwase, julsjacinto]
-updated: 2026-10-02
-url: https://github.com/fashioncloud/product-service/pull/2850
-```
-New 10-01 14:41 UTC. Part of BDD-3282. +891/-514 across 32 files. Fixes three places where the relay lost records without alerting, and stops the relay writing to consumer DLQs. The Changes Requested is CodeRabbit only. Not his.
+New 10-05 08:35 UTC, triggered by dwiajik. Carries only #2855 (pds-stream-relay test filter for the bestseller org) plus the staging release merge. **Kushel approved it 08:35 UTC.** Not merged yet. brand-data-pipeline had nothing to release.
 
 ```yaml
 number: 2845
@@ -42,7 +29,7 @@ requested_reviewers: []
 updated: 2026-10-01
 url: https://github.com/fashioncloud/product-service/pull/2845
 ```
-New 10-01 11:40 UTC, draft. +486/-0. A local helper for reading a consumer's SQS queue with the PDS SDK. Not his.
+Opened 10-01 11:40 UTC, draft. +486/-0. A local helper for reading a consumer's SQS queue with the PDS SDK. Not his. No change.
 
 ```yaml
 number: 2840
@@ -56,20 +43,7 @@ requested_reviewers: []
 updated: 2026-10-01
 url: https://github.com/fashioncloud/product-service/pull/2840
 ```
-Opened 09-30 13:55 UTC, draft. Retitled since last sync (was "Take the level and event types from the shared schema (publisher)"). Not his.
-
-```yaml
-number: 2827
-title: "fix(ci): pass the tarball to npm as an absolute path"
-author: dwiajik
-state: open
-mergeable_state: conflicting
-review_state: awaiting-first-review
-requested_reviewers: [brand-data-dev (team), abirprantofc, alirezaMoazenFashion]
-updated: 2026-09-30
-url: https://github.com/fashioncloud/product-service/pull/2827
-```
-Still conflicts, probably since the Changesets publishing work (#2826, #2833) reworked the same workflow. Not his.
+Opened 09-30 13:55 UTC, draft. Not his. No change.
 
 ```yaml
 number: 2824
@@ -96,7 +70,7 @@ requested_reviewers: [brand-data-dev (team), abubakarwase, kushel-fc]
 updated: 2026-09-28
 url: https://github.com/fashioncloud/product-service/pull/2808
 ```
-**Names Kushel individually.** Still no reviews from anyone, four days in. See [`prs/to-review.md`](../../../prs/to-review.md).
+**Names Kushel individually.** Still no reviews from anyone, seven days in, and no push since 09-28. See [`prs/to-review.md`](../../../prs/to-review.md).
 
 ```yaml
 number: 2744
@@ -112,16 +86,3 @@ url: https://github.com/fashioncloud/product-service/pull/2744
 ```
 Not his. No change.
 
-```yaml
-number: 2514
-title: "feat(llm-based-agent-setup): add mutations tool group for SKU reprocessing and mapping-rule updates"
-author: dushansilva
-state: open
-draft: true
-mergeable_state: conflicting
-review_state: changes-requested
-requested_reviewers: [brand-data-dev (team), irembbt, kushel-fc, dwiajik, julsjacinto]
-updated: 2026-08-28
-url: https://github.com/fashioncloud/product-service/pull/2514
-```
-Individually his to review. Draft, already Changes Requested from someone else, 35 days unchanged, and still conflicts. See [`prs/to-review.md`](../../../prs/to-review.md).

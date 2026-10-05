@@ -3,6 +3,72 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2002
+title: "Production Release - 2026-10-02"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-10-05
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2002
+```
+Opened 10-02 14:48 UTC, merged 10-05 07:37 UTC. Routine. Not his.
+
+```yaml
+number: 2001
+title: "Fraas Fix TypeError Certificates"
+author: hakansoylu1
+state: closed
+merged: true
+closed: 2026-10-02
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2001
+```
+Opened and merged 10-02. Not his.
+
+```yaml
+number: 2000
+title: "Staging Release - 2026-10-02"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-10-02
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2000
+```
+Opened and merged 10-02. Routine. Not his.
+
+```yaml
+number: 1999
+title: "added isAIImage attribute"
+author: honeypsabu
+state: closed
+merged: true
+closed: 2026-10-02
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1999
+```
+Opened and merged 10-02. Not his.
+
+```yaml
+number: 1998
+title: "Enable feed and image archival for brands fully migrated to pipe"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-02
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1998
+```
+Opened and merged 10-02. Not his.
+
+```yaml
+number: 1997
+title: "update size mapping"
+author: MuniaL
+state: closed
+merged: true
+closed: 2026-10-02
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1997
+```
+Opened and merged 10-02. Not his.
+
+```yaml
 number: 1990
 title: "Stop ECS tasks when a Dagster run is terminated"
 author: dwiajik

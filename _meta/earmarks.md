@@ -8,12 +8,17 @@ Each earmark has a `Trigger signal` (plain-language condition to watch for durin
 
 ## Active
 
+- **Trigger signal**: gabor (`gabor_FEED_sync_images` or `gabor__FEED__move_images_from_ftp_to_s3_job_sync`) goes a full sync cycle with no alerts, now that product-service#2851 is in production
+- **Surface**: Only then call the gabor FTP problem fixed. The first post-release gabor run (07445ae6, 10-05 08:38 UTC) failed with exit 1 instead of hanging, which looks like #2851's timeouts firing on a still-bad connection. Also check carsJeans (3h limit 09-30, 10-01, 10-02) and whether anyone works out why the gabor FTP connection goes bad, since #2851 says it couldn't confirm that.
+- **Related**: [dagster-alerts/log.md](../dagster-alerts/log.md), [archive/prs/product-service.md](../archive/prs/product-service.md)
+- **Status**: active (added 2026-10-05)
+
+## Triggered / Dismissed
+
 - **Trigger signal**: `product-service#2851` (dwiajik, "run FTP commands with timeout") merges and ships in a production release
 - **Surface**: Confirm `gabor_FEED_sync_images` stops hitting the 3h limit. gabor kept hanging after the 10-01 release that carried #2836 and #2846, so those fixes weren't enough, and #2851 is the next candidate. Also check whether cinque_FEED2's move-images failures (exit 1, a different signature) change with it.
 - **Related**: [dagster-alerts/log.md](../dagster-alerts/log.md), [sources/github/product-service/open-prs.md](../sources/github/product-service/open-prs.md)
-- **Status**: active (added 2026-10-02)
-
-## Triggered / Dismissed
+- **Status**: triggered 2026-10-05. #2851 merged 10-02 10:08 UTC and shipped in production release #2854 (merged 10-05 07:37 UTC). The only gabor alert since was a hand-started move-images run at 08:38 UTC that exited 1 rather than hanging 3h, about an hour after the release, so it's too early to say the hangs are fixed. Replaced by the gabor-quiet earmark above. cinque_FEED2's failures were a separate cause (missing `filename_pattern`, fixed by Aji 10-02), so they don't tell us anything about #2851.
 
 - **Trigger signal**: mosMosh/ara OOM sprees (`mosMosh__FEED__process_images`, `ara__PRICAT__process_images`) stay quiet for another full sync cycle
 - **Surface**: Confirm the 4-day, 45+-occurrence spree (09-17 through 09-21) is actually over before calling it resolved — it went quiet after 09-21 08:53 UTC (3 more mosMosh hits, then nothing for ~24h), but [BDD-3268](../support/open.md) (the resource-size-bump ticket that looked like the fix) is still In Progress, not shipped, so the quiet spell isn't yet attributable to a confirmed fix.

@@ -1,6 +1,6 @@
 ---
 status: active
-last_touched: 2026-10-01
+last_touched: 2026-10-05
 ---
 
 # Video download delivery on platform
@@ -27,3 +27,5 @@ The routing rule in both specs is explicit that the existing images-only and ima
 **10-01 update:** Work has started on the next slice. [BDD-3213](../sources/linear/my-issues.md) (Slice 5, "Downloads are accountable and countable") was assigned to him and moved Backlog to In Progress at 08:41 UTC. It covers one audit entry per download with videos grouped by brand, a separate per-SKU download-counts collection, and observability (bytes delivered, archive build duration, failure rate). Two open questions are written into the ticket. First, PCS has no MongoDB today, and where that store lives ("N3") was deferred to its own discussion, so the ticket says the slice can't start until that lands. Second, it needs a decision on whether the audit records intent (written at token creation, inside the PCS request) or delivery (bytes actually left, which only the backend knows). Slice 3.2 hasn't changed: backend#7043 is still waiting on irembbt's re-review and #7048 is still unmerged.
 
 **10-02 update:** The N3 gate isn't open anymore. [BDD-3193](https://linear.app/fashioncloud/issue/BDD-3193/n3-decide-where-the-pcs-audit-collection-lives) (N3, assigned to him) has been Done since 09-29, so the 10-01 note above was out of date when it was written. The ticket body still lists the three options (the existing Product Service cluster, a new cluster, or the content cluster being retired) and doesn't record which one was picked, so check that the decision and its reasoning are written down somewhere before Slice 5 provisions anything. The intent-vs-delivery question for the audit is still open. Slice 3.2 hasn't moved: backend#7043 is waiting on irembbt's re-review (five days since his push), and #7048 is approved and unmerged.
+
+**10-05 update:** Slice 3.2 slipped back a step. [backend#7043](../prs/mine.md) (BDD-3206) now conflicts with `staging`, on top of irembbt's Changes Requested from 09-24 that nobody has re-reviewed. It needs a rebase before the re-review ask. Slice 5 (BDD-3213) has no movement since it started 10-01.

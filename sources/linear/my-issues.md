@@ -2,7 +2,7 @@
 
 Assigned to Kushel, live (non-completed) statuses. Populated on sync — completed/canceled work stays in Linear's own history rather than being repeated here; see `git log` for what rolled off.
 
-**10-02 sync:** Still 6, and none of them changed in Linear this cycle. **Correction to last sync:** BDD-3213's "blocked on N3" was out of date. N3 itself ([BDD-3193](https://linear.app/fashioncloud/issue/BDD-3193/n3-decide-where-the-pcs-audit-collection-lives), "Decide where the PCS audit collection lives", assigned to him) was marked Done on 09-29 and touched again 10-01 13:48 UTC. The ticket body doesn't record which option was picked. BDD-3223 and BDD-3206 stay In Review behind backend#7043. BDD-2258 (High) is still Ready To Start, untouched since 08-18.
+**10-05 sync:** Still 6, and none of them changed in Linear since 10-01. BDD-3223 and BDD-3206 stay In Review behind backend#7043, which **now has a merge conflict** on top of irembbt's standing Changes Requested. BDD-3213 (Slice 5) is still In Progress with no update since it started 10-01. BDD-2258 (High) is still Ready To Start, untouched since 08-18.
 ---
 
 ```yaml
@@ -43,7 +43,7 @@ team: BDD
 updated: 2026-09-22
 url: https://linear.app/fashioncloud/issue/BDD-3206/32-backend-route-the-full-request-to-pcs-and-append-its-csv
 ```
-In Review since 09-22. Child of BDD-3223. Both dependencies (BDD-3205, BDD-3191) are now Done. The code is [backend#7043](https://github.com/fashioncloud/backend/pull/7043), which is outside the two repos this brain tracks. It's mergeable, but irembbt requested changes 09-24 and hasn't re-reviewed since. His last push was 09-27 19:10 UTC. A related fix, backend#7048 (sort images before resolving filenames), is approved by dwiajik and mergeable.
+In Review since 09-22. Child of BDD-3223. Both dependencies (BDD-3205, BDD-3191) are now Done. The code is [backend#7043](https://github.com/fashioncloud/backend/pull/7043), which is outside the two repos this brain tracks. irembbt requested changes 09-24 and hasn't re-reviewed since, and as of 10-05 it also conflicts with `staging`. His last push was 09-27 19:10 UTC. A related fix, backend#7048 (sort images before resolving filenames), is approved by dwiajik and mergeable.
 
 ---
 
@@ -85,4 +85,4 @@ team: BDD
 updated: 2026-08-18
 url: https://linear.app/fashioncloud/issue/BDD-2258/sample-xmlcsv-with-video-links-test-manufacturer-on-sftp
 ```
-Unblocked since BDD-2567 shipped, still not started. Last updated 08-18, about six weeks ago.
+Unblocked since BDD-2567 shipped, still not started. Last updated 08-18, about seven weeks ago.
