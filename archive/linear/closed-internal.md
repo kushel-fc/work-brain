@@ -3,6 +3,24 @@
 Kushel's own internal/tech-debt tickets that shipped, without an FD reference — so they don't belong in `support/recently-closed.md` (FD-sourced only) but shouldn't just vanish from `sources/linear/my-issues.md` silently either. Never deleted.
 
 ```yaml
+id: BDD-3223
+title: "Slice 3.2 — Full CSV generation on PCS when video and CSV are selected"
+priority: No priority
+closed: 2026-10-05
+url: https://linear.app/fashioncloud/issue/BDD-3223/slice-32-full-csv-generation-on-pcs-when-video-and-csv-are-selected
+```
+Slice 3.2 milestone parent. Done 10-05 18:54 UTC, after its last child BDD-3206 closed. The same minute he opened backend#7066 (BDD-3223: serve every initiator's CSV through one POST and `GET /downloads/:id`), which is still open, see [`prs/mine.md`](../../prs/mine.md).
+
+```yaml
+id: BDD-3206
+title: "3.2 Backend — Route the full request to PCS and append its CSV"
+priority: No priority
+closed: 2026-10-05
+url: https://linear.app/fashioncloud/issue/BDD-3206/32-backend-route-the-full-request-to-pcs-and-append-its-csv
+```
+Done 10-05 11:39 UTC, when he merged backend#7043. irembbt approved it 10-05 11:00 UTC, eleven days after her Changes Requested. backend#7048 (getCsvContent sort fix) merged alongside it.
+
+```yaml
 id: BDD-3205
 title: "3.2 PCS — CSV generation module"
 priority: No priority

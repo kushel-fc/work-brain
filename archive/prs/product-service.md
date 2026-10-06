@@ -3,6 +3,83 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2861
+title: "Onboard product-content-service as first consumer of PDS queue BDD-3284"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-06
+url: https://github.com/fashioncloud/product-service/pull/2861
+```
+Opened 10-06 07:52 UTC, merged 08:29 UTC. Not his.
+
+```yaml
+number: 2860
+title: "BDD-3330 SDK to use schema from `product-data-schema`"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-06
+url: https://github.com/fashioncloud/product-service/pull/2860
+```
+Opened 10-05 14:40 UTC, merged 10-06 07:39 UTC. Not his.
+
+```yaml
+number: 2859
+title: "BDD-3330 Declare schema for published media"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-05
+url: https://github.com/fashioncloud/product-service/pull/2859
+```
+Opened and merged 10-05 (12:06 to 14:59 UTC). Not his.
+
+```yaml
+number: 2858
+title: "Revert the generic CreateVariants and the PayloadFor export"
+author: dwiajik
+state: closed
+merged: false
+closed: 2026-10-05
+url: https://github.com/fashioncloud/product-service/pull/2858
+```
+Opened 10-05 11:21 UTC, closed unmerged. Not his.
+
+```yaml
+number: 2840
+title: "BDD-3330 Use the product-data-schema package in the publisher and the payload builders"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-05
+url: https://github.com/fashioncloud/product-service/pull/2840
+```
+Opened 09-30 as a draft, merged 10-05 10:51 UTC. Not his.
+
+```yaml
+number: 2808
+title: "fix(extract): restore Mongo AWS auth and expose ONA startup failures"
+author: alirezaMoazenFashion
+state: closed
+merged: false
+closed: 2026-10-05
+url: https://github.com/fashioncloud/product-service/pull/2808
+```
+**Was on his review list.** Closed unmerged 10-05 10:02 UTC by its author after seven days with no reviews from anyone. No reason given on the PR.
+
+```yaml
+number: 2857
+title: "Production Release - 2026-10-05"
+author: app/github-actions
+state: closed
+merged: true
+closed: 2026-10-05
+url: https://github.com/fashioncloud/product-service/pull/2857
+```
+Merged 10-05 08:48 UTC. He approved it 08:35 UTC. Carried #2855 only.
+
+```yaml
 number: 2856
 title: "Staging Release - 2026-10-05"
 author: app/github-actions

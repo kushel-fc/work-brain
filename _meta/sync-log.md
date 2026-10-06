@@ -2,6 +2,18 @@
 
 One entry per sync run. Prune entries older than ~30 days.
 
+## 2026-10-06 (~08:45 UTC)
+
+About 24h since the last sync. Linear (claude.ai connector), GitHub (`gh`) and Slack (claude.ai connector) were all reachable. The `plugin:engineering:*` servers needed auth and weren't used.
+
+- **Slice 3.2 shipped.** irembbt approved backend#7043 10-05 11:00 UTC. He cleared the `staging` conflict flagged last sync and merged it and #7048 at 11:39 UTC. BDD-3206 went Done then, BDD-3223 at 18:54 UTC. Both moved to `archive/linear/closed-internal.md`, the PRs to a new `archive/prs/backend.md`. He opened a follow-up, backend#7066 (BDD-3223, one POST plus `GET /downloads/:id` for every initiator's CSV), already approved by dwiajik, CI running at sync time. Live issues 6 to 4.
+- **Review queue 2 to 0.** He approved brand-data-pipeline#1969 (merged 10-05 15:12 UTC). product-service#2808 was closed unmerged by its author with no reviews.
+- Earmark (gabor quiet a full cycle) not met: two more hand-started move-images runs failed with exit 1 at 08:47 and 08:55 UTC 10-05, just after the last sync. Quiet about 24h since. Left active with a note.
+- Slack (3 messages): the two gabor runs above, and carsJeans hitting the 3h limit on a run that started 10-05 10:10 UTC, after #2851 reached production, so #2851 didn't fix it. Dagster log +2, pruned 2 (09-05, 09-06), still 123.
+- Linear: two new Low unassigned FD tickets in Triage (BDD-3349 alchemists export AccessDenied on the brand-data-dev role, BDD-3350 retailer can't open product pages on Android). Triage 2 to 4, support/open.md 1 to 3.
+- GitHub: product-service 6 to 3 (#2857, #2840 merged; #2808 closed; #2858 to #2861 opened and closed inside the window). brand-data-pipeline 12 to 11 (#1969 merged; #2003, #2004, #2005 opened and merged inside the window). All archived.
+- Notified: no. Nothing crossed the bar. His only open PR (backend#7066) is approved and mergeable, not conflicting or Changes Requested. No due dates on his live issues. Both new tickets are Low. carsJeans and gabor are repeats inside open, never-resolved problems, which by precedent in this log get a today.md callout instead.
+
 ## 2026-10-05 (~08:45 UTC)
 
 About 72h since the last sync (10-02 ~08:45 to 10-05 ~08:45, across the weekend). Linear (claude.ai connector), GitHub (`gh`) and Slack (claude.ai connector) were all reachable. The `plugin:engineering:*` servers needed auth and weren't used.

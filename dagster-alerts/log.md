@@ -3,6 +3,26 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
+timestamp: 2026-10-05T13:11:22Z
+channel: brand-data-dev-alerts
+brand: carsJeans
+summary: "carsJeans_FEED_sync_images exceeded the 3h run time limit (run b657dd99, started 10:10 UTC from the schedule)"
+status: recurring
+linked_issue: product-service#2851
+```
+**Fourth carsJeans run-limit hit (09-30, 10-01, 10-02, now 10-05), and the first since product-service#2851 (FTP command timeouts) reached production** in release #2854 at 07:37 UTC, about 2.5h before this run started. So #2851 didn't stop carsJeans hanging, unless the deploy hadn't finished by 10:10 UTC, which the alert doesn't show. No thread.
+
+```yaml
+timestamp: 2026-10-05T08:55:25Z
+channel: brand-data-dev-alerts
+brand: gabor
+summary: "gabor__FEED__move_images_from_ftp_to_s3_job_sync - essential container exited (exit 1), two more hand-started runs (d2473ee4 08:47 UTC, 6eb7d915 08:55 UTC)"
+status: recurring
+linked_issue: product-service#2851
+```
+Two more hand-started ("Dagster Dev User") gabor move-images runs failing with exit 1, eight minutes apart, right after the 10-05 sync and within 20 minutes of the 08:38 UTC run below. Same exit-1 signature, no 3h hang. Both carry one raised-hand reaction (someone picked it up) but no thread. **No gabor alert since 08:55 UTC**, about 24h to this sync.
+
+```yaml
 timestamp: 2026-10-05T08:38:51Z
 channel: brand-data-dev-alerts
 brand: gabor
@@ -1213,24 +1233,3 @@ status: active
 linked_issue: null
 ```
 No thread or reaction visible. First occurrence of this failure signature for sOliver (distinct from the earlier enrichment-service 504 pattern that also hit sOliver).
-
-```yaml
-timestamp: 2026-09-06T01:25:20Z
-channel: brand-data-dev-alerts
-brand: cecil
-summary: "cecil__FEED__publish_from_map — container exited, exit code 137 (OOM)"
-status: active
-linked_issue: null
-```
-No thread or reaction visible. Third brand this window to hit the same publish-step OOM (bestseller 09-05, cecil 09-06, bestseller again 09-07) — all traced to the same publishing-job memory-optimization gap fixed by [product-service#2633](../sources/github/product-service/open-prs.md).
-
-```yaml
-timestamp: 2026-09-05T08:47:19Z
-channel: brand-data-dev-alerts
-brand: bestseller
-summary: "bestseller__FEED2__publish_from_map — container exited, exit code 137 (OOM)"
-status: active
-linked_issue: null
-```
-No thread or reaction visible. Same job as [BDD-3164](../sources/linear/my-issues.md) (Kushel's own B2B image reprocessing work) but a different, real OOM failure mode — not the previously-explained "exceeded 3h limit" pattern. First of three same-cause OOMs this window, root-caused and fixed via product-service#2633 (see 09-07 entry above).
-

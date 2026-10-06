@@ -3,6 +3,50 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2005
+title: "Update season and target group"
+author: hakansoylu1
+state: closed
+merged: true
+closed: 2026-10-05
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2005
+```
+Opened and merged 10-05 (14:03 to 14:14 UTC). Not his.
+
+```yaml
+number: 2004
+title: "Update Numph Transformation"
+author: hakansoylu1
+state: closed
+merged: true
+closed: 2026-10-05
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2004
+```
+Opened and merged 10-05 (12:14 to 14:06 UTC). Not his.
+
+```yaml
+number: 2003
+title: "Image sync: once a day for 34 brands with no images found in 30 days"
+author: dushansilva
+state: closed
+merged: true
+closed: 2026-10-05
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2003
+```
+Opened and merged 10-05 (09:22 to 09:51 UTC). Cuts image-sync frequency for 34 quiet brands. gabor, carsJeans and fynchHatton aren't in it. Not his.
+
+```yaml
+number: 1969
+title: "refactor(image-source): retire image_sync.credential_id"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-05
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1969
+```
+**Was on his review list.** He approved it 10-05 12:17 UTC (the only review) and dwiajik merged it 15:12 UTC. Closes BDD-3280.
+
+```yaml
 number: 2002
 title: "Production Release - 2026-10-02"
 author: FCMachineUser

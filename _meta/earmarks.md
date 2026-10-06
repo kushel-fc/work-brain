@@ -11,7 +11,7 @@ Each earmark has a `Trigger signal` (plain-language condition to watch for durin
 - **Trigger signal**: gabor (`gabor_FEED_sync_images` or `gabor__FEED__move_images_from_ftp_to_s3_job_sync`) goes a full sync cycle with no alerts, now that product-service#2851 is in production
 - **Surface**: Only then call the gabor FTP problem fixed. The first post-release gabor run (07445ae6, 10-05 08:38 UTC) failed with exit 1 instead of hanging, which looks like #2851's timeouts firing on a still-bad connection. Also check carsJeans (3h limit 09-30, 10-01, 10-02) and whether anyone works out why the gabor FTP connection goes bad, since #2851 says it couldn't confirm that.
 - **Related**: [dagster-alerts/log.md](../dagster-alerts/log.md), [archive/prs/product-service.md](../archive/prs/product-service.md)
-- **Status**: active (added 2026-10-05)
+- **Status**: active (added 2026-10-05). Not met at the 10-06 sync: two more hand-started gabor move-images runs failed with exit 1 at 08:47 and 08:55 UTC 10-05, ten minutes after the last sync. Quiet since 08:55 UTC (about 24h), so if the next cycle is also clean it fires. carsJeans hit the 3h limit again on a run that started 10:10 UTC 10-05, after #2851 reached production, so #2851 didn't fix carsJeans.
 
 ## Triggered / Dismissed
 
