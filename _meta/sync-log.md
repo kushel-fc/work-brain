@@ -2,6 +2,17 @@
 
 One entry per sync run. Prune entries older than ~30 days.
 
+## 2026-10-07 (~08:45 UTC)
+
+About 24h since the last sync. Linear (claude.ai connector), GitHub (`gh`) and Slack (claude.ai connector) were all reachable. The `plugin:engineering:*` servers needed auth and weren't used.
+
+- **Earmark fired: gabor quiet a full cycle.** No gabor alert since 10-05 08:55 UTC (about 48h). Marked `self-resolved` and moved the earmark to Triggered. carsJeans isn't covered: it hit the 3h limit a fifth time 10-06.
+- **Both his open PRs merged.** backend#7066 (BDD-3223 follow-up) merged 10-07 07:07 UTC with dwiajik's and irembbt's approvals. He also opened and merged product-service#2866 on 10-06 (cap the PCS CSV signed-URL lifetime at 7 days, approved by Chamindu36). #2866 landed after the 10-06 production release, so it's staging only. New earmark to get it into production before `enable_pcs_csv_generation` goes on there. Shaping doc updated. Zero open PRs, review queue still empty.
+- Linear: his 4 live issues unchanged. New Triage ticket BDD-3351 (Medium, unassigned, FD 679762): Zalando PSERR_62 image download failures, blamed on the signed CDN URL query string. Triage 4 to 5, support/open.md 3 to 4.
+- Slack (10 messages): new PDS stream relay `style`/`color` undelivered CloudWatch alarms at 11:59 UTC 10-06, same 5-minute window as the production release. carsJeans 3h (fifth). process_enrichment_flow 3h (first since 09-18). First-time bazlen_FEED2 3h hang and unitedBrands FEED 11 asset failures. Datadog log index warning, quota and recovery (3 messages, one entry). Dagster log +6, pruned 2 (09-06, 09-07), now 127.
+- GitHub: product-service stays at 3 (#2824 merged, #2862 new; #2863 to #2868 opened and merged in the window). brand-data-pipeline 11 to 12 (#2011 new; #2006 to #2010 and #2012 opened and merged in the window). Mergeable states unchanged after a second read. All archived, plus backend#7066.
+- Notified: no. Nothing crossed the bar. His PRs merged rather than flipping to conflict or Changes Requested. No due dates on his live issues. BDD-3351 is Medium, not Urgent. The PDS relay undelivered alarm is a new monitor, not a recurrence of the 09-25 Lambda-error alarm. carsJeans, process_enrichment_flow and the log index quota are repeats inside open, never-resolved patterns already marked `recurring`, which by precedent in this log get a today.md callout instead.
+
 ## 2026-10-06 (~08:45 UTC)
 
 About 24h since the last sync. Linear (claude.ai connector), GitHub (`gh`) and Slack (claude.ai connector) were all reachable. The `plugin:engineering:*` servers needed auth and weren't used.

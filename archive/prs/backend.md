@@ -3,6 +3,17 @@
 His own backend PRs that were listed in `prs/mine.md` (backend isn't one of the two tracked repos), moved here once merged or closed. Never deleted.
 
 ```yaml
+number: 7066
+title: "BDD-3223: Serve the CSV of every download initiator through one POST and GET /downloads/:id"
+author: kushel-fc
+state: closed
+merged: true
+closed: 2026-10-07
+url: https://github.com/fashioncloud/backend/pull/7066
+```
+Opened 10-05 18:54 UTC against `staging`, merged 10-07 07:07 UTC. Approved by dwiajik and irembbt. abirprantofc was still a requested reviewer at merge.
+
+```yaml
 number: 7048
 title: "fix(getCsvContent): sort images before resolving filenames, not after"
 author: kushel-fc

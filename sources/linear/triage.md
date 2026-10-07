@@ -2,7 +2,19 @@
 
 Full raw Triage backlog for team BDD, sourced from https://linear.app/fashioncloud/team/BDD/triage. Populated on sync. See `support/open.md` for the FD-referenced/support-shaped curated subset.
 
-**10-06 sync:** 2 to 4, two new FD tickets both filed 10-05 ~12:05 UTC, both Low and unassigned: BDD-3349 (a support colleague's alchemists export fails with AccessDenied because the tool forces the brand-data-dev IAM role) and BDD-3350 (a retailer, Korona Store Samara, can't open product pages from an Android phone for about two months). BDD-3344 got an `updated` bump 10-05 14:58 UTC but is still Triage and unassigned, with no visible field change. BDD-3305 is unchanged.
+**10-07 sync:** 4 to 5. New: BDD-3351 (Medium, unassigned), filed 10-07 07:58 UTC by Fernand Ramat. Zalando can't download some images we send (PSERR_62) and suspects special characters in the signed CloudFront query string. The other four are unchanged.
+
+```yaml
+id: BDD-3351
+title: "Zalando PSERR_62 image download failures: check URL encoding of PDS image links (CDN vs. PDS/BI wrapper) (FD: 679762)"
+priority: Medium
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-10-07
+url: https://linear.app/fashioncloud/issue/BDD-3351/zalando-pserr-62-image-download-failures-check-url-encoding-of-pds
+```
+New 10-07. Zalando returns PSERR_62 on some image downloads. Their tech team blames the signed CloudFront URL's query parameters (`Expires`, `Key-Pair-Id`, `Signature` with `~` characters) as unsafe under RFC 1738, and asks for URLs without `$`, `&` or `%`, plus answers on firewalls, rate limits and versioning. Support-shaped, see [`support/open.md`](../../support/open.md).
 
 ```yaml
 id: BDD-3350

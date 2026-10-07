@@ -3,6 +3,66 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
+timestamp: 2026-10-07T06:03:28Z
+channel: brand-data-dev-alerts
+brand: platform (Datadog log index)
+summary: "Log index hit warning threshold then daily quota again, self-resolved on quota reset"
+status: recurring
+linked_issue: null
+```
+Same `product-service-logs-index` pattern, first logged occurrence since 09-22 (warning 10-06 14:03:27 UTC, quota reached 15:46:30 UTC, recovered 10-07 06:03:28 UTC on quota reset). With the quota hit mid-afternoon, product-service logs weren't indexed for about 14h, which overlaps the PDS relay alarm and enrichment hang below. No thread. Still no owner or permanent fix.
+
+```yaml
+timestamp: 2026-10-06T15:04:23Z
+channel: brand-data-dev-alerts
+brand: platform (process_enrichment_flow)
+summary: "process_enrichment_flow exceeded the 3h run time limit (run 4501f204, started 12:04 UTC from enrichment_file_sensor)"
+status: recurring
+linked_issue: null
+```
+First logged since 09-18. Same chronic pattern Kushel first flagged 09-08, still no root cause. No thread, no reaction.
+
+```yaml
+timestamp: 2026-10-06T13:11:18Z
+channel: brand-data-dev-alerts
+brand: carsJeans
+summary: "carsJeans_FEED_sync_images exceeded the 3h run time limit (run 04894c57, started 10:10 UTC from the schedule)"
+status: recurring
+linked_issue: product-service#2851
+```
+Fifth carsJeans run-limit hit (09-30, 10-01, 10-02, 10-05, now 10-06), the second since product-service#2851 reached production. Same 10:10 UTC scheduled start every time. So #2851 didn't fix carsJeans, unlike gabor (quiet since 10-05 08:55 UTC). Aji called the 10-01 carsJeans hang "expected" in-thread, which may mean the job is just slow for this brand rather than stuck, but nobody has said so since. No thread.
+
+```yaml
+timestamp: 2026-10-06T11:59:06Z
+channel: brand-data-dev-alerts
+brand: platform (PDS stream relay)
+summary: "CloudWatch alarms pds-stream-relay-style-undelivered-production and pds-stream-relay-color-undelivered-production entered ALARM (26 style records undelivered in the 11:54 UTC window)"
+status: active
+linked_issue: BDD-3284
+```
+New monitor, delivered to the channel by email from SNS. Per the alarm description, the relay dropped records a consumer queue refused; each one is logged as `PDS_STREAM_RELAY_UNDELIVERED` in `/aws/lambda/pds-stream-relay-{style,color}-production` with a reason and sequence number, and can be re-read from Kinesis within the 2-day retention (so until about 10-08 11:54 UTC). The datapoint falls in the same 5-minute bucket as the 10-06 production releases (product-service#2865, 11:54:49 UTC), and PCS became the first PDS queue consumer that morning (#2861), so a deploy-time hiccup is plausible but not confirmed. Different signature from the 09-25 relay Lambda error alarm (`self-resolved`). One :eyes: on each, no thread, no OK/recovery message in the channel. Not his.
+
+```yaml
+timestamp: 2026-10-06T09:14:43Z
+channel: brand-data-dev-alerts
+brand: unitedBrands
+summary: "unitedBrands_FEED - 11 asset materializations failed, incl. download_images and feed_transform (run 4ebbc06e, scheduled)"
+status: active
+linked_issue: null
+```
+First unitedBrands alert in the log. Scheduled run. The attachment cuts off before the error. No thread.
+
+```yaml
+timestamp: 2026-10-06T09:01:40Z
+channel: brand-data-dev-alerts
+brand: bazlen
+summary: "bazlen_FEED2 exceeded the 3h run time limit (run 02c560eb, started 06:00 UTC from the schedule)"
+status: active
+linked_issue: null
+```
+First bazlen alert in the log. Whole-job hang (not an image sync), scheduled. No thread.
+
+```yaml
 timestamp: 2026-10-05T13:11:22Z
 channel: brand-data-dev-alerts
 brand: carsJeans
@@ -17,10 +77,11 @@ timestamp: 2026-10-05T08:55:25Z
 channel: brand-data-dev-alerts
 brand: gabor
 summary: "gabor__FEED__move_images_from_ftp_to_s3_job_sync - essential container exited (exit 1), two more hand-started runs (d2473ee4 08:47 UTC, 6eb7d915 08:55 UTC)"
-status: recurring
+status: self-resolved
 linked_issue: product-service#2851
 ```
 Two more hand-started ("Dagster Dev User") gabor move-images runs failing with exit 1, eight minutes apart, right after the 10-05 sync and within 20 minutes of the 08:38 UTC run below. Same exit-1 signature, no 3h hang. Both carry one raised-hand reaction (someone picked it up) but no thread. **No gabor alert since 08:55 UTC**, about 24h to this sync.
+**Update 10-07:** Still no gabor alert, about 48h now across two full sync cycles, so marked `self-resolved` and the earmark fired. Credit plausibly goes to product-service#2851 (FTP command timeouts), but the underlying FTP connection problem was never explained.
 
 ```yaml
 timestamp: 2026-10-05T08:38:51Z
@@ -1214,22 +1275,3 @@ linked_issue: null
 ```
 [product-service#2633](../sources/github/product-service/open-prs.md)'s Node-memory-optimization fix (merged 09-07 08:07 UTC, see entry below) did **not** hold — same OOM pattern recurred same day. Juls confirmed in-thread: the Terraform config change alone wasn't enough, real code changes are needed. Aji opened a follow-up fix, [product-service#2640](../sources/github/product-service/open-prs.md) ("reduce memory footprint of style-group publishing"), 2026-09-08 07:32 UTC — not yet merged.
 
-```yaml
-timestamp: 2026-09-07T02:39:13Z
-channel: brand-data-dev-alerts
-brand: bestseller
-summary: "bestseller__FEED2__publish_from_process_images — container exited, exit code 137 (OOM)"
-status: active
-linked_issue: null
-```
-Chamindu flagged a second failure over the weekend in-thread; Kushel diagnosed it as an OOM and initially proposed resizing, but Chamindu pushed back since bestseller already runs at the largest resource size and asked to investigate the root cause instead (CC Aji). Juls had an idea and paired with Kushel; Aji opened [product-service#2633](../sources/github/product-service/open-prs.md) — the publishing-job Terraform config never set `enable_node_memory_optimization`, so V8's heap was never bounded to the container's memory limit and the cgroup OOM-killer fired before GC could run. Merged 2026-09-07 08:07 UTC, but did **not** hold — see the 09-07 14:29 UTC recurrence above and the real follow-up fix, product-service#2640. Same root cause as the cecil and bestseller OOMs below (09-05/09-06).
-
-```yaml
-timestamp: 2026-09-06T10:03:01Z
-channel: brand-data-dev-alerts
-brand: sOliver
-summary: "sOliver/FEED — 12 asset materializations failed (download_images, extract, etc.)"
-status: active
-linked_issue: null
-```
-No thread or reaction visible. First occurrence of this failure signature for sOliver (distinct from the earlier enrichment-service 504 pattern that also hit sOliver).

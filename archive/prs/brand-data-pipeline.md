@@ -3,6 +3,72 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2012
+title: "Staging Release - 2026-10-06"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-10-06
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2012
+```
+Staging release, merged 15:28 UTC.
+
+```yaml
+number: 2010
+title: "meierLederWaren: fix certificates moving from manufacturerAttributes"
+author: marianabassi
+state: closed
+merged: true
+closed: 2026-10-06
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2010
+```
+Opened and merged inside the window, merged 10:58 UTC. Not his.
+
+```yaml
+number: 2009
+title: "Update flags vanWinkel"
+author: Dionpiet97
+state: closed
+merged: true
+closed: 2026-10-06
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2009
+```
+Opened and merged inside the window, merged 09:45 UTC. Not his.
+
+```yaml
+number: 2008
+title: "update images"
+author: MuniaL
+state: closed
+merged: true
+closed: 2026-10-06
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2008
+```
+Opened and merged inside the window, merged 09:34 UTC. Not his.
+
+```yaml
+number: 2007
+title: "Production Release - 2026-10-06"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-10-06
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2007
+```
+Production release, merged 11:54 UTC.
+
+```yaml
+number: 2006
+title: "Staging Release - 2026-10-06"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-10-06
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2006
+```
+Staging release, merged 09:12 UTC.
+
+```yaml
 number: 2005
 title: "Update season and target group"
 author: hakansoylu1

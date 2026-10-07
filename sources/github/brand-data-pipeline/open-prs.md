@@ -2,7 +2,21 @@
 
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
-12 to 11. **#1969 (on his review list) merged 10-05 15:12 UTC**, after Kushel approved it 12:17 UTC (the only review). No new open PRs. Opened and merged inside the window: #2003 (dushansilva, image sync once a day for 34 brands with no images found in 30 days, which doesn't include gabor, carsJeans or fynchHatton), #2004 and #2005 (hakansoylu1, Numph transformation and season/target group). The 10-02 production release #2002 merged 10-05 07:37 UTC. See [`archive/prs/brand-data-pipeline.md`](../../../archive/prs/brand-data-pipeline.md). None of the eleven names him. After a second read, #1956, #1880, #1879, #1263, #1120, #1058 and #1055 still conflict, as before.
+11 to 12. New: #2011 (hakansoylu1, draft, "Feat/brand migration agent local", +856/-311 under `brand-migration/agent/`). Opened and merged inside the window: #2008 (MuniaL, update images), #2009 (Dionpiet97, vanWinkel flags), #2010 (marianabassi, meierLederWaren certificates fix) and releases #2006, #2007 (production, 11:54 UTC 10-06) and #2012 (staging). See [`archive/prs/brand-data-pipeline.md`](../../../archive/prs/brand-data-pipeline.md). None of the twelve names him. After a second read, #1956, #1880, #1879, #1263, #1120, #1058 and #1055 still conflict, as before.
+
+```yaml
+number: 2011
+title: "Feat/brand migration agent local"
+author: hakansoylu1
+state: open
+draft: true
+mergeable_state: mergeable
+review_state: awaiting-first-review
+requested_reviewers: []
+updated: 2026-10-06
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2011
+```
+Opened 10-06 13:31 UTC, draft, no description. +856/-311, a local CLI agent under `brand-migration/agent/` with steps for feed transform, global transform, mapping and merge jobs. Not his.
 
 ```yaml
 number: 1993

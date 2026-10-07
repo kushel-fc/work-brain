@@ -3,6 +3,83 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2868
+title: "Enhance AssistantController to support Product Support persona"
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-10-07
+url: https://github.com/fashioncloud/product-service/pull/2868
+```
+Opened and merged inside the window, merged 10-07 08:38 UTC. Not his.
+
+```yaml
+number: 2867
+title: "Staging Release - 2026-10-06"
+author: github-actions
+state: closed
+merged: true
+closed: 2026-10-06
+url: https://github.com/fashioncloud/product-service/pull/2867
+```
+Staging release, merged 15:28 UTC. Carries his #2866.
+
+```yaml
+number: 2866
+title: "BDD-3223: Cap the CSV artifact signed-URL lifetime at the S3 limit"
+author: kushel-fc
+state: closed
+merged: true
+closed: 2026-10-06
+url: https://github.com/fashioncloud/product-service/pull/2866
+```
+**His.** Opened 13:31 UTC, merged 13:48 UTC, approved by Chamindu36. +33/-3. PCS's `CsvArtifactStore.store` failed when the caller left out `ttlSeconds`, because the 14-day default is past S3's one-week limit for SigV4 presigned URLs. Now capped at 7 days. Merged after the 11:54 UTC production release, so staging only so far.
+
+```yaml
+number: 2865
+title: "Production Release - 2026-10-06"
+author: github-actions
+state: closed
+merged: true
+closed: 2026-10-06
+url: https://github.com/fashioncloud/product-service/pull/2865
+```
+Production release, merged 11:54 UTC.
+
+```yaml
+number: 2864
+title: "BDD-3328 Regenerate the AsyncAPI from the pinned schemas"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-07
+url: https://github.com/fashioncloud/product-service/pull/2864
+```
+Opened and merged inside the window, merged 10-07 08:31 UTC. Not his.
+
+```yaml
+number: 2863
+title: "Staging Release - 2026-10-06"
+author: github-actions
+state: closed
+merged: true
+closed: 2026-10-06
+url: https://github.com/fashioncloud/product-service/pull/2863
+```
+Staging release, merged 09:12 UTC.
+
+```yaml
+number: 2824
+title: "Pin the product-data-schema to the zod schemas BDD-3328"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-06
+url: https://github.com/fashioncloud/product-service/pull/2824
+```
+Opened 09-30, merged 10-06 13:46 UTC. Not his.
+
+```yaml
 number: 2861
 title: "Onboard product-content-service as first consumer of PDS queue BDD-3284"
 author: dwiajik

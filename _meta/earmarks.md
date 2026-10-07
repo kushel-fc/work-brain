@@ -8,12 +8,17 @@ Each earmark has a `Trigger signal` (plain-language condition to watch for durin
 
 ## Active
 
+- **Trigger signal**: product-service#2866 (his, cap the PCS CSV artifact signed-URL lifetime at 7 days) ships in a product-service production release
+- **Surface**: Until it does, PCS's `CsvArtifactStore.store` in production fails whenever a caller leaves out `ttlSeconds` (the 14-day default is past S3's one-week SigV4 limit). backend#7066 merged 10-07, so check this is in production before `enable_pcs_csv_generation` is turned on there.
+- **Related**: [archive/prs/product-service.md](../archive/prs/product-service.md), [archive/prs/backend.md](../archive/prs/backend.md)
+- **Status**: active (added 2026-10-07). #2866 merged 10-06 13:48 UTC, after that day's production release (#2865, 11:54 UTC), and went out in staging release #2867.
+
+## Triggered / Dismissed
+
 - **Trigger signal**: gabor (`gabor_FEED_sync_images` or `gabor__FEED__move_images_from_ftp_to_s3_job_sync`) goes a full sync cycle with no alerts, now that product-service#2851 is in production
 - **Surface**: Only then call the gabor FTP problem fixed. The first post-release gabor run (07445ae6, 10-05 08:38 UTC) failed with exit 1 instead of hanging, which looks like #2851's timeouts firing on a still-bad connection. Also check carsJeans (3h limit 09-30, 10-01, 10-02) and whether anyone works out why the gabor FTP connection goes bad, since #2851 says it couldn't confirm that.
 - **Related**: [dagster-alerts/log.md](../dagster-alerts/log.md), [archive/prs/product-service.md](../archive/prs/product-service.md)
-- **Status**: active (added 2026-10-05). Not met at the 10-06 sync: two more hand-started gabor move-images runs failed with exit 1 at 08:47 and 08:55 UTC 10-05, ten minutes after the last sync. Quiet since 08:55 UTC (about 24h), so if the next cycle is also clean it fires. carsJeans hit the 3h limit again on a run that started 10:10 UTC 10-05, after #2851 reached production, so #2851 didn't fix carsJeans.
-
-## Triggered / Dismissed
+- **Status**: triggered 2026-10-07. No gabor alert at all between the 10-06 and 10-07 syncs, and none since 10-05 08:55 UTC (about 48h). Calling gabor's FTP problem fixed, most likely by #2851, though nobody explained why the connection went bad. Not met for carsJeans: it hit the 3h limit a fifth time on 10-06 (run 04894c57, 10:10 UTC start), so it's a separate problem #2851 doesn't cover. Earlier note: Not met at the 10-06 sync: two more hand-started gabor move-images runs failed with exit 1 at 08:47 and 08:55 UTC 10-05, ten minutes after the last sync. Quiet since 08:55 UTC (about 24h), so if the next cycle is also clean it fires. carsJeans hit the 3h limit again on a run that started 10:10 UTC 10-05, after #2851 reached production, so #2851 didn't fix carsJeans.
 
 - **Trigger signal**: `product-service#2851` (dwiajik, "run FTP commands with timeout") merges and ships in a production release
 - **Surface**: Confirm `gabor_FEED_sync_images` stops hitting the 3h limit. gabor kept hanging after the 10-01 release that carried #2836 and #2846, so those fixes weren't enough, and #2851 is the next candidate. Also check whether cinque_FEED2's move-images failures (exit 1, a different signature) change with it.

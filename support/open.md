@@ -2,7 +2,7 @@
 
 FD-sourced/support-shaped tickets, by priority then age (oldest first within each tier). Sourced from the team BDD Triage view: https://linear.app/fashioncloud/team/BDD/triage. Populated on sync. Full raw Triage list lives in [`sources/linear/triage.md`](../sources/linear/triage.md).
 
-**Three open, all Low and unassigned.** Two new on 10-05: BDD-3349 (alchemists export AccessDenied on the brand-data-dev role) and BDD-3350 (retailer can't open product pages on Android). BDD-3344 (Marc O'Polo PRICAT reprocessing) is four days untouched. BDD-3305 is still in Triage but it's an internal feature request Dushan owns, so it isn't listed here.
+**Four open, all unassigned.** New 10-07: BDD-3351 (Medium, Zalando PSERR_62 image download failures on signed CDN URLs). The three Low ones from last sync are unchanged: BDD-3344 (Marc O'Polo PRICAT reprocessing, five days untouched), BDD-3349 (alchemists export AccessDenied) and BDD-3350 (retailer can't open product pages on Android). BDD-3305 is still in Triage but it's an internal feature request Dushan owns, so it isn't listed here.
 
 ## High
 
@@ -10,7 +10,17 @@ _None._
 
 ## Medium
 
-_None._
+```yaml
+id: BDD-3351
+title: "Zalando PSERR_62 image download failures: check URL encoding of PDS image links (CDN vs. PDS/BI wrapper) (FD: 679762)"
+priority: Medium
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-10-07
+url: https://linear.app/fashioncloud/issue/BDD-3351/zalando-pserr-62-image-download-failures-check-url-encoding-of-pds
+```
+Filed 10-07 07:58 UTC by Fernand Ramat. Zalando can't download some product images we send through the PDS/CDN and gets PSERR_62. Their tech team thinks the query parameters on our signed CloudFront URLs (`Expires`, `Key-Pair-Id`, and a `Signature` containing `~`) count as unsafe under RFC 1738. They ask that URLs avoid `$`, `&` and `%` and use only one `?`, and want to know whether a firewall or rate limit is in the way and whether there's versioning so they can retry. The title asks BDD to compare the raw CDN link with the PDS/BI wrapper link. Note `&` between query parameters is unavoidable in a signed URL, so the answer may be a different URL form rather than an encoding fix.
 
 ## Low
 

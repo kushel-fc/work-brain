@@ -2,7 +2,7 @@
 
 Assigned to Kushel, live (non-completed) statuses. Populated on sync — completed/canceled work stays in Linear's own history rather than being repeated here; see `git log` for what rolled off.
 
-**10-06 sync:** 6 to 4. **Slice 3.2 is done.** irembbt approved backend#7043 10-05 11:00 UTC, he resolved the conflict and merged it (and #7048) at 11:39 UTC, and BDD-3206 went Done the same minute. BDD-3223 (parent) went Done 18:54 UTC, when he opened the follow-up backend#7066. Both moved to [`archive/linear/closed-internal.md`](../../archive/linear/closed-internal.md). Nothing new assigned. BDD-3213 (Slice 5) still has no update since it started 10-01. BDD-2258 (High) is still Ready To Start, untouched since 08-18.
+**10-07 sync:** No change, still 4. Nothing new assigned and none of the four moved. BDD-3223 (Done) got an `updated` bump 10-06 13:31 UTC when his follow-up product-service#2866 linked to it. BDD-3213 (Slice 5) still has no update since it started 10-01. BDD-2258 (High) is still Ready To Start, untouched since 08-18.
 ---
 
 ```yaml
