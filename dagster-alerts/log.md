@@ -3,6 +3,46 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
+timestamp: 2026-10-07T17:20:59Z
+channel: brand-data-dev-alerts
+brand: bestseller
+summary: "bestseller_FEED2 exceeded the 3h run time limit (run 5376e95d, started 14:20 UTC from the schedule)"
+status: active
+linked_issue: null
+```
+First 3h run-limit hit for bestseller_FEED2 in this log (its earlier entries were the September publish OOMs, since pruned). Same day honeypsabu updated bestseller's brand IDs after the brand deleted 7 profiles (brand-data-pipeline#2021 still open, product-service#2877 merged 10-08 08:19 UTC). Nothing links the two yet. One :white_check_mark:, no thread.
+
+```yaml
+timestamp: 2026-10-07T13:11:44Z
+channel: brand-data-dev-alerts
+brand: carsJeans
+summary: "carsJeans_FEED_sync_images exceeded the 3h run time limit (run 4d87a5a7, started 10:11 UTC from the schedule)"
+status: recurring
+linked_issue: product-service#2851
+```
+Sixth carsJeans run-limit hit (09-30, 10-01, 10-02, 10-05, 10-06, now 10-07), the same 10:10 UTC scheduled start, and the third since #2851 reached production. One :white_check_mark:, no thread, still no owner.
+
+```yaml
+timestamp: 2026-10-07T12:42:35Z
+channel: brand-data-dev-alerts
+brand: platform (galvatron ECS)
+summary: ECS health check failures on galvatron, one trigger/recover cycle
+status: self-resolved
+linked_issue: null
+```
+Triggered 12:42 UTC (value 2.0), recovered 12:52 UTC. Same known galvatron flapping pattern. No thread.
+
+```yaml
+timestamp: 2026-10-07T09:15:11Z
+channel: brand-data-dev-alerts
+brand: liebeskind
+summary: "liebeskind__FEED2__download_images - essential container exited (exit 1), AxiosError timeout of 5000ms in CredentialsClient.getCredentialItemById"
+status: self-resolved
+linked_issue: null
+```
+Run 2117babc, scheduled. Aji posted the stack trace in-thread: the image-downloading job timed out after 5s fetching the source credential. He didn't know why, reran it, and the rerun (85104831) succeeded 13:34 UTC.
+
+```yaml
 timestamp: 2026-10-07T06:03:28Z
 channel: brand-data-dev-alerts
 brand: platform (Datadog log index)
@@ -1254,24 +1294,3 @@ status: active
 linked_issue: null
 ```
 New failure signature. Fired twice, ~6h apart (2026-09-07 21:44:51 UTC and 2026-09-08 03:46:41 UTC), both launched by `analytics_trigger_sensor`, same commit. No thread, no reaction, no explanation in-channel yet.
-
-```yaml
-timestamp: 2026-09-07T18:08:27Z
-channel: brand-data-dev-alerts
-brand: platform (PDS / Kinesis)
-summary: PDS Kinesis write throttling + stream-publish log failures (size/color/style streams)
-status: self-resolved
-linked_issue: null
-```
-Cluster of trigger/recover cycles 2026-09-07 18:08–20:02 UTC across three related Datadog monitors (Kinesis write-throughput, stream-publish failures, stream-publish log failures) — each recovered within ~15-40min on its own. Root-caused next morning by Aji: PDS's 2 Kinesis shards were provisioned for 1MiB/shard but load hit ~2MiB, exceeding provisioned throughput (72 failed-to-publish records). Fix: increasing to 4 shards plus an improved KDS publishing retry mechanism, [product-service#2642](../sources/github/product-service/open-prs.md) (Aji, opened 2026-09-08 08:02 UTC). Not Kushel's own work, but a real platform incident worth tracking to close.
-
-```yaml
-timestamp: 2026-09-07T14:29:03Z
-channel: brand-data-dev-alerts
-brand: bestseller
-summary: "bestseller__FEED2__publish_from_map — container exited, exit code 137 (OOM), recurrence after fix"
-status: active
-linked_issue: null
-```
-[product-service#2633](../sources/github/product-service/open-prs.md)'s Node-memory-optimization fix (merged 09-07 08:07 UTC, see entry below) did **not** hold — same OOM pattern recurred same day. Juls confirmed in-thread: the Terraform config change alone wasn't enough, real code changes are needed. Aji opened a follow-up fix, [product-service#2640](../sources/github/product-service/open-prs.md) ("reduce memory footprint of style-group publishing"), 2026-09-08 07:32 UTC — not yet merged.
-

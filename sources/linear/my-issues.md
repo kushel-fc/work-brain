@@ -2,7 +2,22 @@
 
 Assigned to Kushel, live (non-completed) statuses. Populated on sync — completed/canceled work stays in Linear's own history rather than being repeated here; see `git log` for what rolled off.
 
-**10-07 sync:** No change, still 4. Nothing new assigned and none of the four moved. BDD-3223 (Done) got an `updated` bump 10-06 13:31 UTC when his follow-up product-service#2866 linked to it. BDD-3213 (Slice 5) still has no update since it started 10-01. BDD-2258 (High) is still Ready To Start, untouched since 08-18.
+**10-08 sync:** Still 4, but two swapped. BDD-2258 (High, sample XML/CSV with video links on SFTP) was Canceled 10-08 07:59 UTC after about seven weeks at Ready To Start, see [`archive/linear/closed-internal.md`](../../archive/linear/closed-internal.md). BDD-3214 (5.1 PCS aggregated audit entry, a child of Slice 5) shows up for the first time, already In Review, with his product-service#2870 (1/3) open against it. BDD-3213, BDD-2406 and BDD-2079 unchanged.
+
+---
+
+```yaml
+id: BDD-3214
+title: "5.1 PCS — Aggregated audit entry"
+priority: No priority
+status: In Review
+assignee: Kushel Ramanayake
+team: BDD
+updated: 2026-10-07
+url: https://linear.app/fashioncloud/issue/BDD-3214/51-pcs-aggregated-audit-entry
+```
+Child of BDD-3213 (Slice 5). Started 09-30, moved to In Review 10-07 20:16 UTC. An `AuditModule` in PCS writing one `multi-download-audit-entry` per download, videos grouped by brand, with `outcome`/`csvOutcome`, three indexes and no TTL. The ticket leaves two questions open: whether `failed` is reachable (write on the failure path or not) and whether `FILE_DOWNLOADED` gets registered. First PR of three is [product-service#2870](../github/product-service/open-prs.md), approved by Chamindu36 and dwiajik.
+
 ---
 
 ```yaml
@@ -44,17 +59,3 @@ updated: 2026-07-20
 url: https://linear.app/fashioncloud/issue/BDD-2079/enable-auth0-sso-for-des-bull-board-at-queue-admin
 ```
 No change since last sync. Long on-hold.
-
----
-
-```yaml
-id: BDD-2258
-title: Sample XML/CSV with video links + test manufacturer on SFTP
-priority: High
-status: Ready To Start
-assignee: Kushel Ramanayake
-team: BDD
-updated: 2026-08-18
-url: https://linear.app/fashioncloud/issue/BDD-2258/sample-xmlcsv-with-video-links-test-manufacturer-on-sftp
-```
-Unblocked since BDD-2567 shipped, still not started. Last updated 08-18, about seven weeks ago. No change.

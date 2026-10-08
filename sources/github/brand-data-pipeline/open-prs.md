@@ -2,7 +2,59 @@
 
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
-11 to 12. New: #2011 (hakansoylu1, draft, "Feat/brand migration agent local", +856/-311 under `brand-migration/agent/`). Opened and merged inside the window: #2008 (MuniaL, update images), #2009 (Dionpiet97, vanWinkel flags), #2010 (marianabassi, meierLederWaren certificates fix) and releases #2006, #2007 (production, 11:54 UTC 10-06) and #2012 (staging). See [`archive/prs/brand-data-pipeline.md`](../../../archive/prs/brand-data-pipeline.md). None of the twelve names him. After a second read, #1956, #1880, #1879, #1263, #1120, #1058 and #1055 still conflict, as before.
+12 to 16. New: **his own #2013** (fashionCloud FEED/FEED2 videos, `organizationId` and `asLanguages`, approved by dwiajik, clean), #2019 (dependabot urllib3 bump in `/brand-migration`, **names him individually**), #2021 (honeypsabu, bestseller brand IDs) and #2023 (10-08 production release). Opened and merged inside the window: #2015 (lady day onboarding), #2016 (ftcCashmere credential id), #2017 (sartoFashion), #2018 (Triumph status input), #2022 (organizationId) and staging release #2020. #2014 (inga-ar, more mappings) opened and closed unmerged. See [`archive/prs/brand-data-pipeline.md`](../../../archive/prs/brand-data-pipeline.md). Older PRs' mergeable states read `unknown` on this pass and are left at their last known values.
+
+```yaml
+number: 2023
+title: "Production Release - 2026-10-08"
+author: FCMachineUser
+state: open
+mergeable_state: blocked
+review_state: awaiting-first-review
+requested_reviewers: []
+updated: 2026-10-08
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2023
+```
+Opened 10-08 08:11 UTC. Routine production release. Not his.
+
+```yaml
+number: 2021
+title: "updated brand IDs"
+author: honeypsabu
+state: open
+mergeable_state: blocked
+review_state: awaiting-first-review
+requested_reviewers: []
+updated: 2026-10-08
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2021
+```
+Opened 10-08 07:52 UTC. +19/-19 in bestseller_FEED and FEED2 transformations: bestseller deleted 7 profiles and the brand IDs need to point at the new ones. Companion product-service#2877 already merged. Not his.
+
+```yaml
+number: 2019
+title: "Bump urllib3 from 2.7.0 to 2.8.0 in /brand-migration in the uv group across 1 directory"
+author: app/dependabot
+state: open
+mergeable_state: blocked
+review_state: awaiting-first-review
+requested_reviewers: [brand-data-dev, kushel-fc, alirezaMoazenFashion]
+updated: 2026-10-07
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2019
+```
+Opened 10-07 15:38 UTC. Dependabot bump, names him individually. See [`prs/to-review.md`](../../../prs/to-review.md).
+
+```yaml
+number: 2013
+title: "fashionCloud FEED/FEED2: add videos, organizationId and asLanguages attributes"
+author: kushel-fc
+state: open
+mergeable_state: clean
+review_state: approved
+requested_reviewers: []
+updated: 2026-10-08
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2013
+```
+His. Opened 10-07 10:05 UTC, +931/-575. Reads `Video URL` into videos for both fashionCloud feeds, turns on `video_processing_enabled`, and adds `organizationId` and translated `manufacturerAttributes` so product-service's `validateTransformationFile` accepts the files. dwiajik approved 10-08 08:23 UTC. See [`prs/mine.md`](../../../prs/mine.md).
 
 ```yaml
 number: 2011
@@ -13,7 +65,7 @@ draft: true
 mergeable_state: mergeable
 review_state: awaiting-first-review
 requested_reviewers: []
-updated: 2026-10-06
+updated: 2026-10-07
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/2011
 ```
 Opened 10-06 13:31 UTC, draft, no description. +856/-311, a local CLI agent under `brand-migration/agent/` with steps for feed transform, global transform, mapping and merge jobs. Not his.

@@ -2,6 +2,18 @@
 
 One entry per sync run. Prune entries older than ~30 days.
 
+## 2026-10-08 (~08:45 UTC)
+
+About 24h since the last sync. Linear (claude.ai connector), GitHub (`gh`) and Slack (claude.ai connector) were all reachable. The `plugin:engineering:*` servers needed auth and weren't used.
+
+- **Two new PRs of his, both approved.** product-service#2870 (BDD-3214 1/3, content-models package and the audit schema on the content cluster) got Changes Requested from Chamindu36 10-07 09:58 UTC, then her approval 10-08 07:44 UTC and dwiajik's at 08:23 UTC. Still blocked, with irembbt and julsjacinto requested. brand-data-pipeline#2013 (fashionCloud FEED/FEED2 videos) is approved and clean.
+- Linear: BDD-2258 (High) Canceled after seven weeks untouched, archived to closed-internal. BDD-3214 (Slice 5 child) is new on his list, already In Review. Shaping doc updated: content cluster looks like the N3 answer.
+- Triage 5 to 6: four new FD tickets, two High (BDD-3358, BDD-3359, PME Legend image reprocessing tool) and two Medium (BDD-3357, BDD-3360). BDD-3351, BDD-3344 and BDD-3350 were picked up and are In Review, not Done, so nothing moved to recently-closed. support/open.md 4 to 5.
+- Earmark (#2866 to production) not met yet: it's in production release product-service#2878, opened 10-08 08:11 UTC and not merged.
+- Slack (5 messages): carsJeans 3h (sixth), first bestseller_FEED2 3h hang, liebeskind download_images credential timeout (Aji reran it, passed), galvatron ECS blip. Dagster log +4, pruned 2 (09-07), now 129.
+- GitHub: product-service 3 to 4, brand-data-pipeline 12 to 16. 15 PRs merged or closed inside the window, all archived. One new review request for him (brand-data-pipeline#2019, dependabot).
+- Notified: no. #2870's Changes Requested was answered and replaced by the same reviewer's approval before this sync, so there's nothing left to act on. The two new tickets are High, not Urgent. No due dates on his live issues. carsJeans is a repeat inside an already `recurring` pattern, and bestseller_FEED2 is a first occurrence.
+
 ## 2026-10-07 (~08:45 UTC)
 
 About 24h since the last sync. Linear (claude.ai connector), GitHub (`gh`) and Slack (claude.ai connector) were all reachable. The `plugin:engineering:*` servers needed auth and weren't used.

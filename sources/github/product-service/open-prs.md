@@ -2,7 +2,33 @@
 
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
-3 to 3. **No open PR names him.** #2824 (BDD-3328, pin the product-data-schema to the zod schemas) merged 10-06 13:46 UTC. New: #2862 (dwiajik, BDD-3284 PCS probe on the PDS queues). Opened and merged inside the window: **his own #2866** (BDD-3223, cap the CSV artifact signed-URL lifetime at the 7-day S3 limit, opened 13:31 and merged 13:48 UTC 10-06, approved by Chamindu36), dwiajik's #2864 (BDD-3328 AsyncAPI regen), Chamindu36's #2868 (AssistantController Product Support persona), and releases #2863, #2865 (production, 11:54 UTC) and #2867 (staging, 15:28 UTC). #2866 merged after the production release, so it's only in staging so far. See [`archive/prs/product-service.md`](../../../archive/prs/product-service.md). Mergeable states for #2845 and #2744 read `unknown` first, `mergeable` on a second read.
+3 to 4. New: **his own #2870** (BDD-3214 1/3, content-models package with the content cluster connection and the `multiDownloadAuditEntries` schema) and the 10-08 production release #2878, which carries his #2866. #2862 (dwiajik, PCS probe on the PDS queues) merged 10-07 09:52 UTC. Opened and merged inside the window: #2869, #2871 (BDD-3283 relay alarms), #2873 to #2875 (CI syncs), #2877 (bestseller brand IDs) and staging release #2876. See [`archive/prs/product-service.md`](../../../archive/prs/product-service.md).
+
+```yaml
+number: 2878
+title: "Production Release - 2026-10-08"
+author: app/github-actions
+state: open
+mergeable_state: blocked
+review_state: awaiting-first-review
+requested_reviewers: [dwiajik, abirprantofc]
+updated: 2026-10-08
+url: https://github.com/fashioncloud/product-service/pull/2878
+```
+Opened 10-08 08:11 UTC, not merged at sync time. Its commits include his #2866 (CSV signed-URL cap), #2862, #2864, #2868, #2869, #2871 and #2824. Once this merges, #2866 is in production (earmarked). Not his.
+
+```yaml
+number: 2870
+title: "BDD-3214: content-models package with the content cluster connection and the multiDownloadAuditEntries schema (1/3)"
+author: kushel-fc
+state: open
+mergeable_state: blocked
+review_state: approved
+requested_reviewers: [irembbt, julsjacinto]
+updated: 2026-10-08
+url: https://github.com/fashioncloud/product-service/pull/2870
+```
+His. Opened 10-07 09:54 UTC, +981/-4. First of three for Slice 5's audit entry. Chamindu36 requested changes 09:58 UTC 10-07, he replied 20:35 UTC, then Chamindu36 approved 07:44 UTC and dwiajik 08:23 UTC 10-08. Still blocked, with irembbt and julsjacinto requested. See [`prs/mine.md`](../../../prs/mine.md).
 
 ```yaml
 number: 2845
@@ -17,19 +43,6 @@ updated: 2026-10-01
 url: https://github.com/fashioncloud/product-service/pull/2845
 ```
 Opened 10-01 11:40 UTC, draft. +486/-0. A local helper for reading a consumer's SQS queue with the PDS SDK. Not his. No change this cycle.
-
-```yaml
-number: 2862
-title: "BDD-3284 PCS to receive from the PDS queues and measure"
-author: dwiajik
-state: open
-mergeable_state: mergeable
-review_state: changes-requested
-requested_reviewers: [julsjacinto, alirezaMoazenFashion]
-updated: 2026-10-07
-url: https://github.com/fashioncloud/product-service/pull/2862
-```
-Opened 10-06 08:45 UTC. +149/-2. A probe in PCS that subscribes to the PDS queues, acks everything and emits metrics through `MetricsService`, to prove the relay to FIFO queue to SDK path before PCS relies on it. irembbt approved 10-07 08:40 UTC. The Changes Requested is CodeRabbit's, two minutes later. Not his.
 
 ```yaml
 number: 2744

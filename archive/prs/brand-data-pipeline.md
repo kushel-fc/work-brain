@@ -3,6 +3,83 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2022
+title: "organizationId"
+author: Busra040
+state: closed
+merged: true
+closed: 2026-10-08
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2022
+```
+Opened and merged inside the window.
+
+```yaml
+number: 2020
+title: "Staging Release - 2026-10-08"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-10-08
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2020
+```
+Staging release, merged 07:21 UTC.
+
+```yaml
+number: 2018
+title: "Triumph Fix Status Input"
+author: hakansoylu1
+state: closed
+merged: true
+closed: 2026-10-07
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2018
+```
+Opened and merged inside the window.
+
+```yaml
+number: 2017
+title: "Update sartoFashion"
+author: Dionpiet97
+state: closed
+merged: true
+closed: 2026-10-07
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2017
+```
+Opened and merged inside the window.
+
+```yaml
+number: 2016
+title: "ftcCashmere: change credential id"
+author: marianabassi
+state: closed
+merged: true
+closed: 2026-10-07
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2016
+```
+Opened and merged inside the window.
+
+```yaml
+number: 2015
+title: "onboarding lady day"
+author: honeypsabu
+state: closed
+merged: true
+closed: 2026-10-07
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2015
+```
+Opened and merged inside the window.
+
+```yaml
+number: 2014
+title: "add more mappings"
+author: inga-ar
+state: closed
+merged: false
+closed: 2026-10-07
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2014
+```
+Opened and closed unmerged inside the window.
+
+```yaml
 number: 2012
 title: "Staging Release - 2026-10-06"
 author: FCMachineUser

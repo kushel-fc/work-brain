@@ -11,7 +11,7 @@ Each earmark has a `Trigger signal` (plain-language condition to watch for durin
 - **Trigger signal**: product-service#2866 (his, cap the PCS CSV artifact signed-URL lifetime at 7 days) ships in a product-service production release
 - **Surface**: Until it does, PCS's `CsvArtifactStore.store` in production fails whenever a caller leaves out `ttlSeconds` (the 14-day default is past S3's one-week SigV4 limit). backend#7066 merged 10-07, so check this is in production before `enable_pcs_csv_generation` is turned on there.
 - **Related**: [archive/prs/product-service.md](../archive/prs/product-service.md), [archive/prs/backend.md](../archive/prs/backend.md)
-- **Status**: active (added 2026-10-07). #2866 merged 10-06 13:48 UTC, after that day's production release (#2865, 11:54 UTC), and went out in staging release #2867.
+- **Status**: active (added 2026-10-07). #2866 merged 10-06 13:48 UTC, after that day's production release (#2865, 11:54 UTC), and went out in staging release #2867. Not met at the 10-08 sync: #2866 is in production release product-service#2878, opened 10-08 08:11 UTC and not merged yet.
 
 ## Triggered / Dismissed
 

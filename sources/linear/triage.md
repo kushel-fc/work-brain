@@ -2,31 +2,55 @@
 
 Full raw Triage backlog for team BDD, sourced from https://linear.app/fashioncloud/team/BDD/triage. Populated on sync. See `support/open.md` for the FD-referenced/support-shaped curated subset.
 
-**10-07 sync:** 4 to 5. New: BDD-3351 (Medium, unassigned), filed 10-07 07:58 UTC by Fernand Ramat. Zalando can't download some images we send (PSERR_62) and suspects special characters in the signed CloudFront query string. The other four are unchanged.
+**10-08 sync:** 5 to 6. Four new FD tickets, all unassigned: two High from Hakan Soylu about the image reprocessing tool on PME Legend (BDD-3358, BDD-3359), BDD-3357 (Medium, PIPE image 403) and BDD-3360 (Medium, Högl article deletion). Three left Triage, none Done: BDD-3351 (Zalando PSERR_62) went to abubakarwase, BDD-3344 (Marc O'Polo reprocessing) and BDD-3350 (Android product pages) to Irem Bulut, all three In Review 10-07.
 
 ```yaml
-id: BDD-3351
-title: "Zalando PSERR_62 image download failures: check URL encoding of PDS image links (CDN vs. PDS/BI wrapper) (FD: 679762)"
+id: BDD-3360
+title: "Högl - delete articles (FD: 679913)"
+priority: Medium
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-10-08
+url: https://linear.app/fashioncloud/issue/BDD-3360/hogl-delete-articles-fd-679913
+```
+New 10-08 06:19 UTC. Support-shaped, see [`support/open.md`](../../support/open.md).
+
+```yaml
+id: BDD-3359
+title: "Image reprocessing tooling shows no failed images for NOS (FD: 679889)"
+priority: High
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-10-07
+url: https://linear.app/fashioncloud/issue/BDD-3359/image-reprocessing-tooling-shows-no-failed-images-for-nos-fd-679889
+```
+New 10-07 19:48 UTC. Support-shaped, see [`support/open.md`](../../support/open.md).
+
+```yaml
+id: BDD-3358
+title: "Unable to trigger image reprocessing PME Legend (FD: 679888)"
+priority: High
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-10-07
+url: https://linear.app/fashioncloud/issue/BDD-3358/unable-to-trigger-image-reprocessing-pme-legend-fd-679888
+```
+New 10-07 19:39 UTC. Support-shaped, see [`support/open.md`](../../support/open.md).
+
+```yaml
+id: BDD-3357
+title: "Error 403 - forbidden when PIPE process image (FD: 679834)"
 priority: Medium
 status: Triage
 assignee: unassigned
 team: BDD
 updated: 2026-10-07
-url: https://linear.app/fashioncloud/issue/BDD-3351/zalando-pserr-62-image-download-failures-check-url-encoding-of-pds
+url: https://linear.app/fashioncloud/issue/BDD-3357/error-403-forbidden-when-pipe-process-image-fd-679834
 ```
-New 10-07. Zalando returns PSERR_62 on some image downloads. Their tech team blames the signed CloudFront URL's query parameters (`Expires`, `Key-Pair-Id`, `Signature` with `~` characters) as unsafe under RFC 1738, and asks for URLs without `$`, `&` or `%`, plus answers on firewalls, rate limits and versioning. Support-shaped, see [`support/open.md`](../../support/open.md).
-
-```yaml
-id: BDD-3350
-title: "(FD: 679177)"
-priority: Low
-status: Triage
-assignee: unassigned
-team: BDD
-updated: 2026-10-05
-url: https://linear.app/fashioncloud/issue/BDD-3350/fd-679177
-```
-New 10-05. No real title. A retailer (Korona Store & Marc Cain Store Samara) says the product content pages for all their brands bounce back to the home page on an Android phone, for about two months. Desktop works. Reads like a frontend/mobile issue more than brand data. Support-shaped, see [`support/open.md`](../../support/open.md).
+New 10-07 13:33 UTC. Support-shaped, see [`support/open.md`](../../support/open.md).
 
 ```yaml
 id: BDD-3349
@@ -38,19 +62,7 @@ team: BDD
 updated: 2026-10-05
 url: https://linear.app/fashioncloud/issue/BDD-3349/tool-forcing-brand-data-dev-role-causing-accessdenied-error-fd-679547
 ```
-New 10-05. Inga Arutiunian's alchemists export fails with `sts:AssumeRole` AccessDenied on `role/brand-data-dev`. Core team found the tool forces the BDD role, which her SSO permission set can't assume. Support-shaped (internal requester), see [`support/open.md`](../../support/open.md).
-
-```yaml
-id: BDD-3344
-title: "PIPE: Marc O Polo - data reprocessing (FD: 679215)"
-priority: Low
-status: Triage
-assignee: unassigned
-team: BDD
-updated: 2026-10-05
-url: https://linear.app/fashioncloud/issue/BDD-3344/pipe-marc-o-polo-data-reprocessing-fd-679215
-```
-Filed 10-02, four days in Triage. Büsra needs a large PRICAT reprocess for Marc O'Polo (two files, SP2027 and FW2026) after delivery date was added to the transformation. The self-serve tool only handles batches of 5K, so she's asking for help or a faster way. Support-shaped, see [`support/open.md`](../../support/open.md).
+Filed 10-05, unchanged. Inga Arutiunian's alchemists export fails with `sts:AssumeRole` AccessDenied on `role/brand-data-dev`. Core team found the tool forces the BDD role, which her SSO permission set can't assume. Support-shaped (internal requester), see [`support/open.md`](../../support/open.md).
 
 ```yaml
 id: BDD-3305

@@ -3,6 +3,94 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2877
+title: "updated bestseller brand IDs"
+author: honeypsabu
+state: closed
+merged: true
+closed: 2026-10-08
+url: https://github.com/fashioncloud/product-service/pull/2877
+```
+Bestseller brand-ID update after the brand deleted 7 profiles. Opened and merged inside the window.
+
+```yaml
+number: 2876
+title: "Staging Release - 2026-10-08"
+author: app/github-actions
+state: closed
+merged: true
+closed: 2026-10-08
+url: https://github.com/fashioncloud/product-service/pull/2876
+```
+Staging release, merged 07:21 UTC.
+
+```yaml
+number: 2875
+title: "Remove dev branch recreation workflow"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-07
+url: https://github.com/fashioncloud/product-service/pull/2875
+```
+CI chore, opened and merged inside the window.
+
+```yaml
+number: 2874
+title: "Sync the 2026-10-07 release commits into development"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-07
+url: https://github.com/fashioncloud/product-service/pull/2874
+```
+CI chore, opened and merged inside the window.
+
+```yaml
+number: 2873
+title: "ci: sync production back into development after a release"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-07
+url: https://github.com/fashioncloud/product-service/pull/2873
+```
+CI chore, opened and merged inside the window.
+
+```yaml
+number: 2871
+title: "BDD-3283 Alarm on relay iterator age and Lambda timeout proximity"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-07
+url: https://github.com/fashioncloud/product-service/pull/2871
+```
+More PDS stream relay alarms. Opened and merged inside the window.
+
+```yaml
+number: 2869
+title: "Connecting PDS as a target for PSM tooling Agnetcore setup with private networking and Authentication"
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-10-07
+url: https://github.com/fashioncloud/product-service/pull/2869
+```
+Opened and merged inside the window.
+
+```yaml
+number: 2862
+title: "BDD-3284 PCS to receive from the PDS queues and measure"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-07
+url: https://github.com/fashioncloud/product-service/pull/2862
+```
+PCS probe on the PDS queues. Merged 09:52 UTC 10-07. Not his.
+
+```yaml
 number: 2868
 title: "Enhance AssistantController to support Product Support persona"
 author: Chamindu36

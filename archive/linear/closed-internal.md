@@ -3,6 +3,15 @@
 Kushel's own internal/tech-debt tickets that shipped, without an FD reference — so they don't belong in `support/recently-closed.md` (FD-sourced only) but shouldn't just vanish from `sources/linear/my-issues.md` silently either. Never deleted.
 
 ```yaml
+id: BDD-2258
+title: Sample XML/CSV with video links + test manufacturer on SFTP
+priority: High
+closed: 2026-10-08
+url: https://linear.app/fashioncloud/issue/BDD-2258/sample-xmlcsv-with-video-links-test-manufacturer-on-sftp
+```
+Canceled (not Done) 10-08 07:59 UTC. Had sat at Ready To Start since BDD-2567 shipped 08-31, last touched 08-18. No reason visible in the fields pulled.
+
+```yaml
 id: BDD-3223
 title: "Slice 3.2 — Full CSV generation on PCS when video and CSV are selected"
 priority: No priority

@@ -1,6 +1,6 @@
 ---
 status: active
-last_touched: 2026-10-05
+last_touched: 2026-10-08
 ---
 
 # Video download delivery on platform
@@ -33,3 +33,5 @@ The routing rule in both specs is explicit that the existing images-only and ima
 **10-06 update:** Slice 3.2 is done. irembbt approved [backend#7043](../archive/prs/backend.md) 10-05 11:00 UTC. He cleared the `staging` conflict and merged it and #7048 at 11:39 UTC. BDD-3206 went Done then, and BDD-3223 at 18:54 UTC. He opened a follow-up, [backend#7066](../prs/mine.md) (one POST plus `GET /downloads/:id` serving every initiator's CSV, behind `enable_pcs_csv_generation`), which dwiajik has approved. Slice 5 ([BDD-3213](../sources/linear/my-issues.md)) is now the only open Video Delivery item on him and still has no movement since 10-01. The intent-vs-delivery question and writing down the N3 outcome are both still open.
 
 **10-07 update:** Slice 3.2's follow-ups are merged. [backend#7066](../archive/prs/backend.md) merged 10-07 07:07 UTC (approved by dwiajik and irembbt). His product-service#2866 (cap the PCS CSV artifact signed-URL lifetime at S3's 7-day limit, since the 14-day default made `CsvArtifactStore.store` fail) merged 10-06 13:48 UTC but is only in staging so far, which matters before `enable_pcs_csv_generation` goes on in production (earmarked). Slice 5 ([BDD-3213](../sources/linear/my-issues.md)) still has no movement since 10-01, and the intent-vs-delivery and N3 write-up questions are still open.
+
+**10-08 update:** Slice 5 is moving. [BDD-3214](../sources/linear/my-issues.md) (5.1 PCS aggregated audit entry, child of BDD-3213) went In Review 10-07, with his [product-service#2870](../prs/mine.md) (1/3) adding a content-models package, the content cluster connection and the `multiDownloadAuditEntries` schema. Chamindu36 and dwiajik have approved it. So the N3 store looks like the content cluster, though BDD-3193 still doesn't say so. BDD-3214 itself leaves two questions open: whether the `failed` outcome is reachable, and whether `FILE_DOWNLOADED` gets registered. BDD-2258 (sample XML/CSV with video links on SFTP) was Canceled 10-08. product-service#2866 is in production release #2878, not merged yet.
