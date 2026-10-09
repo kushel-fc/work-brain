@@ -3,6 +3,56 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
+timestamp: 2026-10-09T08:05:50Z
+channel: brand-data-dev-alerts
+brand: adidas
+summary: "adidas_FEED: 11 asset materializations failed (run 5702599d, from the schedule), starting at download_images and feed_transform"
+status: active
+linked_issue: null
+```
+First adidas entry in this log. Chamindu tagged Irem in-thread, no explanation yet.
+
+```yaml
+timestamp: 2026-10-08T17:38:21Z
+channel: brand-data-dev-alerts
+brand: ftcCashmere
+summary: "ftcCashmere_FEED2: 12 asset materializations failed (run 8894da95, from the schedule), starting at download_images and extract"
+status: active
+linked_issue: null
+```
+No thread. Same brand as Triage ticket BDD-3357 (PIPE gets 403 Forbidden downloading ftcCashmere images from `shop.ftc-cashmere.com`), so possibly the same cause, but nothing confirms it.
+
+```yaml
+timestamp: 2026-10-08T16:25:59Z
+channel: brand-data-dev-alerts
+brand: bestseller
+summary: "bestseller_FEED2 exceeded the 3h run time limit again (run d92a669d, started 13:25 UTC)"
+status: active
+linked_issue: BDD-3362
+```
+Second bestseller_FEED2 hang in two days. Irem explained in-thread: she's reprocessing 7 Bestseller brands, about 300k GTINs, for FD 679941 (BDD-3362, High, In Progress). So this one is an expected long run, not a fault. Likely explains the 10-07 hit too, though nobody said so for that one.
+
+```yaml
+timestamp: 2026-10-08T13:59:40Z
+channel: brand-data-dev-alerts
+brand: platform (PDS media 5xx)
+summary: "PDS media 5xx rate monitor: warn 13:56, triggered 13:59 (0.02), warn 14:20, recovered 14:21 UTC"
+status: self-resolved
+linked_issue: product-service#2894
+```
+New Datadog monitor (99.5% availability SLO on PDS sign/generate/find_sizes and similar endpoints), first time it fired. **Kushel turned off the PCS CSV generation flag in production while it was firing**, asked Aji if a deploy caused it. Aji: mostly `find_sizes`, 2s Mongo timeouts, likely heavy writes on the primary. He said the flag could go back on, and opened product-service#2894 (read PDS from Mongo secondaries, merged 15:13 UTC, in production release #2899, open at sync time). Aji also wants a PCS monitor, now dwiajik's product-service#2902. Chamindu tagged Irem and abubakarwase on the warn thread.
+
+```yaml
+timestamp: 2026-10-08T13:11:32Z
+channel: brand-data-dev-alerts
+brand: carsJeans
+summary: "carsJeans_FEED_sync_images exceeded the 3h run time limit (run 23ee330e, started 10:10 UTC from the schedule)"
+status: recurring
+linked_issue: product-service#2851
+```
+Seventh carsJeans run-limit hit (09-30, 10-01, 10-02, 10-05, 10-06, 10-07, now 10-08), the same 10:10 UTC scheduled start. No thread, still no owner.
+
+```yaml
 timestamp: 2026-10-07T17:20:59Z
 channel: brand-data-dev-alerts
 brand: bestseller
@@ -1254,43 +1304,3 @@ status: active
 linked_issue: null
 ```
 09-09 11:15:11 CEST. No thread or reaction visible.
-
-```yaml
-timestamp: 2026-09-08T14:10:34Z
-channel: brand-data-dev-alerts
-brand: platform (pixyle / DES)
-summary: "Failed to create a collection in pixyle (des-worker CREATE_COLLECTION_FATAL_ERROR)"
-status: self-resolved
-linked_issue: null
-```
-First real trigger of a monitor Dushan appears to have just set up (several `[TEST]` notifications for a companion "Failed to export collection" alert fired the same morning). Triggered 14:10 UTC, recovered 15:14 UTC. No thread.
-
-```yaml
-timestamp: 2026-09-08T13:34:49Z
-channel: brand-data-dev-alerts
-brand: noExcess
-summary: noExcess_FEED run exceeded 3h time limit
-status: active
-linked_issue: null
-```
-First occurrence of this alert for noExcess. No thread or reaction visible.
-
-```yaml
-timestamp: 2026-09-08T13:18:15Z
-channel: brand-data-dev-alerts
-brand: riani
-summary: riani__FEED__trigger_enrichment_from_map — container exited, exit code 1
-status: recurring
-linked_issue: null
-```
-Same failure signature as the 08-24 occurrence for this brand. No thread this time.
-
-```yaml
-timestamp: 2026-09-08T03:46:41Z
-channel: brand-data-dev-alerts
-brand: platform (analytics_trigger_sensor)
-summary: "analytics step — essential container exited, exit code 1"
-status: active
-linked_issue: null
-```
-New failure signature. Fired twice, ~6h apart (2026-09-07 21:44:51 UTC and 2026-09-08 03:46:41 UTC), both launched by `analytics_trigger_sensor`, same commit. No thread, no reaction, no explanation in-channel yet.

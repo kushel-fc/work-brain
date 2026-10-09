@@ -3,6 +3,72 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2025
+title: "Production Release - 2026-10-08"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-10-08
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2025
+```
+Release. Merged 10-08 12:27 UTC.
+
+```yaml
+number: 2024
+title: "Staging Release - 2026-10-08"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-10-08
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2024
+```
+Release. Merged 10-08 11:48 UTC.
+
+```yaml
+number: 2023
+title: "Production Release - 2026-10-08"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-10-08
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2023
+```
+Release. Merged 10-08 08:39 UTC.
+
+```yaml
+number: 2021
+title: "updated brand IDs"
+author: honeypsabu
+state: closed
+merged: true
+closed: 2026-10-08
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2021
+```
+Merged 10-08 08:51 UTC.
+
+```yaml
+number: 2013
+title: "fashionCloud FEED/FEED2: add videos, organizationId and asLanguages attributes"
+author: kushel-fc
+state: closed
+merged: true
+closed: 2026-10-08
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2013
+```
+**His.** fashionCloud FEED/FEED2 videos, `organizationId`, `asLanguages`. Approved by dwiajik, merged 08:34 UTC.
+
+```yaml
+number: 1993
+title: "Support/roy robson"
+author: Busra040
+state: closed
+merged: false
+closed: 2026-10-08
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/1993
+```
+Busra040's royRobson FEED2 fix, closed unmerged with no reviews.
+
+```yaml
 number: 2022
 title: "organizationId"
 author: Busra040

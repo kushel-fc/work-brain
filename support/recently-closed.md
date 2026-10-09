@@ -3,6 +3,15 @@
 Capped at ~25 most recent. Older entries move to `../archive/support/`. Sourced from team BDD Done/Deployed issues carrying an FD reference.
 
 ```yaml
+id: BDD-3360
+title: "Högl - delete articles (FD: 679913)"
+priority: Medium
+closed: 2026-10-08
+url: https://linear.app/fashioncloud/issue/BDD-3360/hogl-delete-articles-fd-679913
+```
+Filed 10-08 06:19 UTC, picked up by Irem Bulut and Deployed 12:07 UTC the same day.
+
+```yaml
 id: BDD-3005
 title: "Er doet zich een herhalend probleem voor (FD: 663296)"
 priority: Low
@@ -217,12 +226,3 @@ closed: 2026-09-10
 url: https://linear.app/fashioncloud/issue/BDD-3230/delete-eans-rehab-fd-675734
 ```
 Landed in Triage unassigned 09-07, picked up and shipped all in this cycle — Triage → assigned → Deployed same window.
-
-```yaml
-id: BDD-3168
-title: API Image request problem (FD: 675101)
-priority: Low
-closed: 2026-09-10
-url: https://linear.app/fashioncloud/issue/BDD-3168/api-image-request-problem-fd-675101
-```
-Part of the 09-04 bulk Triage-clearing assignment — shipped after sitting Ready To Start since then.

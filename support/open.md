@@ -2,33 +2,7 @@
 
 FD-sourced/support-shaped tickets, by priority then age (oldest first within each tier). Sourced from the team BDD Triage view: https://linear.app/fashioncloud/team/BDD/triage. Populated on sync. Full raw Triage list lives in [`sources/linear/triage.md`](../sources/linear/triage.md).
 
-**Five open, all unassigned. Two are High.** New since last sync: BDD-3358 and BDD-3359 (both High, filed 10-07 evening by Hakan Soylu, both about the image reprocessing tool on PME Legend), BDD-3357 (Medium, PIPE image 403) and BDD-3360 (Medium, Högl article deletion). Picked up and moved to In Review 10-07, so off this list but not closed: BDD-3351 (abubakarwase), BDD-3344 and BDD-3350 (Irem Bulut). BDD-3349 is unchanged. BDD-3305 is still an internal feature request Dushan owns, not listed here.
-
-## High
-
-```yaml
-id: BDD-3358
-title: "Unable to trigger image reprocessing PME Legend (FD: 679888)"
-priority: High
-status: Triage
-assignee: unassigned
-team: BDD
-updated: 2026-10-07
-url: https://linear.app/fashioncloud/issue/BDD-3358/unable-to-trigger-image-reprocessing-pme-legend-fd-679888
-```
-Filed 10-07 19:39 UTC by Hakan Soylu. The reprocessing tool errors when he submits Image URLs (tried 20, has about 1000 to do). Example source URLs are on `jbcdngate.azurewebsites.net` with a `code=` query parameter. High because brands and retailers have been complaining about missing images for days or weeks.
-
-```yaml
-id: BDD-3359
-title: "Image reprocessing tooling shows no failed images for NOS (FD: 679889)"
-priority: High
-status: Triage
-assignee: unassigned
-team: BDD
-updated: 2026-10-07
-url: https://linear.app/fashioncloud/issue/BDD-3359/image-reprocessing-tooling-shows-no-failed-images-for-nos-fd-679889
-```
-Filed 10-07 19:48 UTC by Hakan Soylu. For pmeLegend FEED with "Nos" selected, the tool shows no failed images to reprocess, yet NOS articles have URLs still "Unprocessed". He links them to a run that finalized after fetching only 15. Same brand as BDD-3358, so likely worth handling together.
+**Three open, all unassigned. No High left.** Irem Bulut picked up both High PME Legend tickets (BDD-3358 In Progress since 10-08 09:54 UTC, BDD-3359 In Progress, updated 10-09 08:38 UTC) and shipped BDD-3360 (Högl deletion, Deployed 10-08, see [`recently-closed.md`](recently-closed.md)). New: BDD-3386 (Medium, Hatico prices). BDD-3357 and BDD-3349 unchanged. BDD-3305 is still an internal feature request Dushan owns, not listed here.
 
 ## Medium
 
@@ -42,19 +16,19 @@ team: BDD
 updated: 2026-10-07
 url: https://linear.app/fashioncloud/issue/BDD-3357/error-403-forbidden-when-pipe-process-image-fd-679834
 ```
-Filed 10-07 13:33 UTC. PIPE image processing gets 403 Forbidden. Description not pulled this sync.
+Filed 10-07 13:33 UTC. Someone working on FTC Cashmere images: PIPE gets 403 Forbidden on `shop.ftc-cashmere.com` image URLs that open fine in a browser. ftcCashmere_FEED2 also failed 12 asset materializations 10-08 17:38 UTC (see [Dagster log](../dagster-alerts/log.md)), maybe related.
 
 ```yaml
-id: BDD-3360
-title: "Högl - delete articles (FD: 679913)"
+id: BDD-3386
+title: "Preise nicht aktuell (FD: 679995)"
 priority: Medium
 status: Triage
 assignee: unassigned
 team: BDD
 updated: 2026-10-08
-url: https://linear.app/fashioncloud/issue/BDD-3360/hogl-delete-articles-fd-679913
+url: https://linear.app/fashioncloud/issue/BDD-3386/preise-nicht-aktuell-fd-679995
 ```
-Filed 10-08 06:19 UTC. Article deletion request for Högl. Description not pulled this sync.
+Filed 10-08 12:21 UTC by Hatico's IT (in German). Prices still carry 40% discounts that were turned off 09-30. The brand checked the FC archive and says its exported price list has had no discounts since 10-01. Asks for the price import to be checked.
 
 ## Low
 

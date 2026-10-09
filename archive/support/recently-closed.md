@@ -3,6 +3,15 @@
 Older entries rolled off `support/recently-closed.md`'s ~25-item cap. Never deleted.
 
 ```yaml
+id: BDD-3168
+title: API Image request problem (FD: 675101)
+priority: Low
+closed: 2026-09-10
+url: https://linear.app/fashioncloud/issue/BDD-3168/api-image-request-problem-fd-675101
+```
+Part of the 09-04 bulk Triage-clearing assignment — shipped after sitting Ready To Start since then.
+
+```yaml
 id: BDD-2538
 title: PVH - image ID updates without actual image changes - more information needed (FD: 650988)
 priority: Medium

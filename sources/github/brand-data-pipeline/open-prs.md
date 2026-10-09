@@ -2,33 +2,7 @@
 
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
-12 to 16. New: **his own #2013** (fashionCloud FEED/FEED2 videos, `organizationId` and `asLanguages`, approved by dwiajik, clean), #2019 (dependabot urllib3 bump in `/brand-migration`, **names him individually**), #2021 (honeypsabu, bestseller brand IDs) and #2023 (10-08 production release). Opened and merged inside the window: #2015 (lady day onboarding), #2016 (ftcCashmere credential id), #2017 (sartoFashion), #2018 (Triumph status input), #2022 (organizationId) and staging release #2020. #2014 (inga-ar, more mappings) opened and closed unmerged. See [`archive/prs/brand-data-pipeline.md`](../../../archive/prs/brand-data-pipeline.md). Older PRs' mergeable states read `unknown` on this pass and are left at their last known values.
-
-```yaml
-number: 2023
-title: "Production Release - 2026-10-08"
-author: FCMachineUser
-state: open
-mergeable_state: blocked
-review_state: awaiting-first-review
-requested_reviewers: []
-updated: 2026-10-08
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/2023
-```
-Opened 10-08 08:11 UTC. Routine production release. Not his.
-
-```yaml
-number: 2021
-title: "updated brand IDs"
-author: honeypsabu
-state: open
-mergeable_state: blocked
-review_state: awaiting-first-review
-requested_reviewers: []
-updated: 2026-10-08
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/2021
-```
-Opened 10-08 07:52 UTC. +19/-19 in bestseller_FEED and FEED2 transformations: bestseller deleted 7 profiles and the brand IDs need to point at the new ones. Companion product-service#2877 already merged. Not his.
+16 to 12. Off the list: **his own #2013** (fashionCloud FEED/FEED2 videos) merged 10-08 08:34 UTC, #2021 (bestseller brand IDs) merged 08:51 UTC, production release #2023 merged 08:39 UTC, and #1993 (Busra040, royRobson) closed unmerged 09:14 UTC. Staging #2024 and production #2025 opened and merged inside the window. No new open PRs. Older PRs' mergeable states read `unknown` on this pass and are left at their last known values. See [`archive/prs/brand-data-pipeline.md`](../../../archive/prs/brand-data-pipeline.md).
 
 ```yaml
 number: 2019
@@ -44,19 +18,6 @@ url: https://github.com/fashioncloud/brand-data-pipeline/pull/2019
 Opened 10-07 15:38 UTC. Dependabot bump, names him individually. See [`prs/to-review.md`](../../../prs/to-review.md).
 
 ```yaml
-number: 2013
-title: "fashionCloud FEED/FEED2: add videos, organizationId and asLanguages attributes"
-author: kushel-fc
-state: open
-mergeable_state: clean
-review_state: approved
-requested_reviewers: []
-updated: 2026-10-08
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/2013
-```
-His. Opened 10-07 10:05 UTC, +931/-575. Reads `Video URL` into videos for both fashionCloud feeds, turns on `video_processing_enabled`, and adds `organizationId` and translated `manufacturerAttributes` so product-service's `validateTransformationFile` accepts the files. dwiajik approved 10-08 08:23 UTC. See [`prs/mine.md`](../../../prs/mine.md).
-
-```yaml
 number: 2011
 title: "Feat/brand migration agent local"
 author: hakansoylu1
@@ -69,19 +30,6 @@ updated: 2026-10-07
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/2011
 ```
 Opened 10-06 13:31 UTC, draft, no description. +856/-311, a local CLI agent under `brand-migration/agent/` with steps for feed transform, global transform, mapping and merge jobs. Not his.
-
-```yaml
-number: 1993
-title: "Support/roy robson"
-author: Busra040
-state: open
-mergeable_state: mergeable
-review_state: awaiting-first-review
-requested_reviewers: []
-updated: 2026-10-01
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/1993
-```
-Opened 10-01 13:43 UTC. +3/-1 in royRobson_FEED2's `config.json` and `transformation.ts`. Opened the same day royRobson's move-images job failed because its URL was switched to SFTP without the images being moved (see [`dagster-alerts/log.md`](../../../dagster-alerts/log.md)). Not his.
 
 ```yaml
 number: 1956

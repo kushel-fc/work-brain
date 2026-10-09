@@ -1,6 +1,6 @@
 ---
 status: active
-last_touched: 2026-10-08
+last_touched: 2026-10-09
 ---
 
 # Video download delivery on platform
@@ -35,3 +35,5 @@ The routing rule in both specs is explicit that the existing images-only and ima
 **10-07 update:** Slice 3.2's follow-ups are merged. [backend#7066](../archive/prs/backend.md) merged 10-07 07:07 UTC (approved by dwiajik and irembbt). His product-service#2866 (cap the PCS CSV artifact signed-URL lifetime at S3's 7-day limit, since the 14-day default made `CsvArtifactStore.store` fail) merged 10-06 13:48 UTC but is only in staging so far, which matters before `enable_pcs_csv_generation` goes on in production (earmarked). Slice 5 ([BDD-3213](../sources/linear/my-issues.md)) still has no movement since 10-01, and the intent-vs-delivery and N3 write-up questions are still open.
 
 **10-08 update:** Slice 5 is moving. [BDD-3214](../sources/linear/my-issues.md) (5.1 PCS aggregated audit entry, child of BDD-3213) went In Review 10-07, with his [product-service#2870](../prs/mine.md) (1/3) adding a content-models package, the content cluster connection and the `multiDownloadAuditEntries` schema. Chamindu36 and dwiajik have approved it. So the N3 store looks like the content cluster, though BDD-3193 still doesn't say so. BDD-3214 itself leaves two questions open: whether the `failed` outcome is reachable, and whether `FILE_DOWNLOADED` gets registered. BDD-2258 (sample XML/CSV with video links on SFTP) was Canceled 10-08. product-service#2866 is in production release #2878, not merged yet.
+
+**10-09 update:** product-service#2866 reached production with release #2878 (merged 10-08 08:39 UTC), and `enable_pcs_csv_generation` was on in production by 10-08 afternoon: during the PDS media 5xx alert at 13:59 UTC he turned it off, then Aji said it could go back on (2s Mongo timeouts on PDS `find_sizes`, fixed by #2894 reading from secondaries, in production release #2899, not merged at sync time). Whether the flag is back on isn't visible here. Slice 5: [product-service#2870](../archive/prs/product-service.md) (1/3) merged 10-08 12:31 UTC and BDD-3214 went Done the same minute, probably off the PR link, though parts 2/3 and 3/3 aren't open yet. [BDD-3213](../sources/linear/my-issues.md) is still In Progress. The `failed`-outcome, `FILE_DOWNLOADED`, intent-vs-delivery and N3 write-up questions are still open.

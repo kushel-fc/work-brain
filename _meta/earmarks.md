@@ -8,12 +8,14 @@ Each earmark has a `Trigger signal` (plain-language condition to watch for durin
 
 ## Active
 
+_None._
+
+## Triggered / Dismissed
+
 - **Trigger signal**: product-service#2866 (his, cap the PCS CSV artifact signed-URL lifetime at 7 days) ships in a product-service production release
 - **Surface**: Until it does, PCS's `CsvArtifactStore.store` in production fails whenever a caller leaves out `ttlSeconds` (the 14-day default is past S3's one-week SigV4 limit). backend#7066 merged 10-07, so check this is in production before `enable_pcs_csv_generation` is turned on there.
 - **Related**: [archive/prs/product-service.md](../archive/prs/product-service.md), [archive/prs/backend.md](../archive/prs/backend.md)
-- **Status**: active (added 2026-10-07). #2866 merged 10-06 13:48 UTC, after that day's production release (#2865, 11:54 UTC), and went out in staging release #2867. Not met at the 10-08 sync: #2866 is in production release product-service#2878, opened 10-08 08:11 UTC and not merged yet.
-
-## Triggered / Dismissed
+- **Status**: triggered 2026-10-09 (added 2026-10-07). Production release product-service#2878 merged 10-08 08:39 UTC, a few minutes before the 10-08 sync wrote it up as still open, so #2866 has been in production since then. The flag did go on in production: during the 10-08 13:59 UTC PDS media 5xx alert Kushel said in-thread he had turned off PCS CSV generation for now, and Aji said it could go back on. Whether it was turned back on isn't visible from the sources. Earlier note: #2866 merged 10-06 13:48 UTC, after that day's production release (#2865, 11:54 UTC), and went out in staging release #2867. Not met at the 10-08 sync: #2866 is in production release product-service#2878, opened 10-08 08:11 UTC and not merged yet.
 
 - **Trigger signal**: gabor (`gabor_FEED_sync_images` or `gabor__FEED__move_images_from_ftp_to_s3_job_sync`) goes a full sync cycle with no alerts, now that product-service#2851 is in production
 - **Surface**: Only then call the gabor FTP problem fixed. The first post-release gabor run (07445ae6, 10-05 08:38 UTC) failed with exit 1 instead of hanging, which looks like #2851's timeouts firing on a still-bad connection. Also check carsJeans (3h limit 09-30, 10-01, 10-02) and whether anyone works out why the gabor FTP connection goes bad, since #2851 says it couldn't confirm that.

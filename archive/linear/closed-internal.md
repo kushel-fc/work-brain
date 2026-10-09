@@ -3,6 +3,15 @@
 Kushel's own internal/tech-debt tickets that shipped, without an FD reference — so they don't belong in `support/recently-closed.md` (FD-sourced only) but shouldn't just vanish from `sources/linear/my-issues.md` silently either. Never deleted.
 
 ```yaml
+id: BDD-3214
+title: "5.1 PCS — Aggregated audit entry"
+priority: No priority
+closed: 2026-10-08
+url: https://linear.app/fashioncloud/issue/BDD-3214/51-pcs-aggregated-audit-entry
+```
+Done 10-08 12:31 UTC, the same minute product-service#2870 (1/3: content-models package, content cluster connection, `multiDownloadAuditEntries` schema) merged. Parts 2/3 and 3/3 aren't open yet, so the auto-close probably came from the PR link. Child of BDD-3213 (Slice 5), which is still In Progress.
+
+```yaml
 id: BDD-2258
 title: Sample XML/CSV with video links + test manufacturer on SFTP
 priority: High

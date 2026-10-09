@@ -2,21 +2,7 @@
 
 Assigned to Kushel, live (non-completed) statuses. Populated on sync — completed/canceled work stays in Linear's own history rather than being repeated here; see `git log` for what rolled off.
 
-**10-08 sync:** Still 4, but two swapped. BDD-2258 (High, sample XML/CSV with video links on SFTP) was Canceled 10-08 07:59 UTC after about seven weeks at Ready To Start, see [`archive/linear/closed-internal.md`](../../archive/linear/closed-internal.md). BDD-3214 (5.1 PCS aggregated audit entry, a child of Slice 5) shows up for the first time, already In Review, with his product-service#2870 (1/3) open against it. BDD-3213, BDD-2406 and BDD-2079 unchanged.
-
----
-
-```yaml
-id: BDD-3214
-title: "5.1 PCS — Aggregated audit entry"
-priority: No priority
-status: In Review
-assignee: Kushel Ramanayake
-team: BDD
-updated: 2026-10-07
-url: https://linear.app/fashioncloud/issue/BDD-3214/51-pcs-aggregated-audit-entry
-```
-Child of BDD-3213 (Slice 5). Started 09-30, moved to In Review 10-07 20:16 UTC. An `AuditModule` in PCS writing one `multi-download-audit-entry` per download, videos grouped by brand, with `outcome`/`csvOutcome`, three indexes and no TTL. The ticket leaves two questions open: whether `failed` is reachable (write on the failure path or not) and whether `FILE_DOWNLOADED` gets registered. First PR of three is [product-service#2870](../github/product-service/open-prs.md), approved by Chamindu36 and dwiajik.
+**10-09 sync:** 4 to 3. BDD-3214 (5.1 PCS aggregated audit entry) went Done 10-08 12:31 UTC, the minute his product-service#2870 merged. That PR was only 1/3, so Linear likely closed it off the PR link, not because the slice is finished. See [`archive/linear/closed-internal.md`](../../archive/linear/closed-internal.md). BDD-3213, BDD-2406 and BDD-2079 unchanged.
 
 ---
 

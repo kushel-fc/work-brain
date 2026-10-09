@@ -3,6 +3,259 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2901
+title: "Use snake_case nouns for Terraform names in CodeRabbit rule"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-09
+url: https://github.com/fashioncloud/product-service/pull/2901
+```
+Merged 10-09 08:28 UTC.
+
+```yaml
+number: 2898
+title: "Staging Release - 2026-10-09"
+author: app/github-actions
+state: closed
+merged: true
+closed: 2026-10-09
+url: https://github.com/fashioncloud/product-service/pull/2898
+```
+Release. Merged 10-09 08:02 UTC.
+
+```yaml
+number: 2897
+title: "Hold ten messages per handler by default in the PDS SDK"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-09
+url: https://github.com/fashioncloud/product-service/pull/2897
+```
+Merged 10-09 07:26 UTC.
+
+```yaml
+number: 2896
+title: "PCS: Increase PDS stream throughput"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-09
+url: https://github.com/fashioncloud/product-service/pull/2896
+```
+Merged 10-09 07:24 UTC.
+
+```yaml
+number: 2895
+title: "COR-1864: Add development Content and Product Atlas clusters"
+author: betomoretti
+state: closed
+merged: true
+closed: 2026-10-08
+url: https://github.com/fashioncloud/product-service/pull/2895
+```
+Merged 10-08 14:57 UTC.
+
+```yaml
+number: 2894
+title: "Read from MongoDB secondaries in product-data-service"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-08
+url: https://github.com/fashioncloud/product-service/pull/2894
+```
+Aji's fix after the 10-08 PDS media 5xx alert (2s Mongo timeouts on the primary). In production release #2899, open at sync time.
+
+```yaml
+number: 2893
+title: "Production Release - 2026-10-08"
+author: app/github-actions
+state: closed
+merged: true
+closed: 2026-10-08
+url: https://github.com/fashioncloud/product-service/pull/2893
+```
+Release. Merged 10-08 14:27 UTC.
+
+```yaml
+number: 2892
+title: "Prioritize image reprocessing candidates by status"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-08
+url: https://github.com/fashioncloud/product-service/pull/2892
+```
+dwiajik. Image reprocessing candidates ordered by status, near the PME Legend reprocessing tickets (BDD-3358/3359).
+
+```yaml
+number: 2891
+title: "Validate filter fields for each stream"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-08
+url: https://github.com/fashioncloud/product-service/pull/2891
+```
+Merged 10-08 14:14 UTC.
+
+```yaml
+number: 2890
+title: "Staging Release - 2026-10-08"
+author: app/github-actions
+state: closed
+merged: true
+closed: 2026-10-08
+url: https://github.com/fashioncloud/product-service/pull/2890
+```
+Release. Merged 10-08 13:34 UTC.
+
+```yaml
+number: 2889
+title: "PCS: Switch the PDS probe on"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-08
+url: https://github.com/fashioncloud/product-service/pull/2889
+```
+Merged 10-08 13:05 UTC.
+
+```yaml
+number: 2888
+title: "Add CPU autoscaling to product-data-service and product-content-service"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-08
+url: https://github.com/fashioncloud/product-service/pull/2888
+```
+Merged 10-08 13:02 UTC.
+
+```yaml
+number: 2887
+title: "Staging Release - 2026-10-08"
+author: app/github-actions
+state: closed
+merged: true
+closed: 2026-10-08
+url: https://github.com/fashioncloud/product-service/pull/2887
+```
+Release. Merged 10-08 12:11 UTC.
+
+```yaml
+number: 2886
+title: "Production Release - 2026-10-08"
+author: app/github-actions
+state: closed
+merged: true
+closed: 2026-10-08
+url: https://github.com/fashioncloud/product-service/pull/2886
+```
+Release. Merged 10-08 12:27 UTC.
+
+```yaml
+number: 2885
+title: "Fix PdsProbeService failing to start on a type-only import"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-08
+url: https://github.com/fashioncloud/product-service/pull/2885
+```
+Merged 10-08 12:10 UTC.
+
+```yaml
+number: 2884
+title: "Staging Release - 2026-10-08"
+author: app/github-actions
+state: closed
+merged: true
+closed: 2026-10-08
+url: https://github.com/fashioncloud/product-service/pull/2884
+```
+Release. Merged 10-08 11:48 UTC.
+
+```yaml
+number: 2883
+title: "Let a consumer read its own dead-letter queue"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-08
+url: https://github.com/fashioncloud/product-service/pull/2883
+```
+Merged 10-08 10:49 UTC.
+
+```yaml
+number: 2882
+title: "otto-image-upload: read article number from ArtNr column"
+author: dushansilva
+state: closed
+merged: true
+closed: 2026-10-08
+url: https://github.com/fashioncloud/product-service/pull/2882
+```
+Merged 10-08 10:10 UTC.
+
+```yaml
+number: 2881
+title: "fix nos season"
+author: irembbt
+state: closed
+merged: true
+closed: 2026-10-08
+url: https://github.com/fashioncloud/product-service/pull/2881
+```
+Merged 10-08 11:24 UTC.
+
+```yaml
+number: 2880
+title: "Per-consumer maxReceiveCount, and a 2-day queue retention"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-08
+url: https://github.com/fashioncloud/product-service/pull/2880
+```
+Merged 10-08 10:48 UTC.
+
+```yaml
+number: 2879
+title: "Add delete-brand-product-data script and related files"
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-10-08
+url: https://github.com/fashioncloud/product-service/pull/2879
+```
+Chamindu36. delete-brand-product-data script (BDD-3361, Done 10-08).
+
+```yaml
+number: 2878
+title: "Production Release - 2026-10-08"
+author: app/github-actions
+state: closed
+merged: true
+closed: 2026-10-08
+url: https://github.com/fashioncloud/product-service/pull/2878
+```
+Production release carrying his #2866 (CSV signed-URL cap). Merged 08:39 UTC, which fired the #2866 earmark.
+
+```yaml
+number: 2870
+title: "BDD-3214: content-models package with the content cluster connection and the multiDownloadAuditEntries schema (1/3)"
+author: kushel-fc
+state: closed
+merged: true
+closed: 2026-10-08
+url: https://github.com/fashioncloud/product-service/pull/2870
+```
+**His.** BDD-3214 1/3 (content-models package, content cluster connection, `multiDownloadAuditEntries` schema). Approved by Chamindu36 and dwiajik, merged 12:31 UTC; BDD-3214 went Done the same minute. In production release #2893.
+
+```yaml
 number: 2877
 title: "updated bestseller brand IDs"
 author: honeypsabu
