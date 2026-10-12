@@ -3,6 +3,86 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
+timestamp: 2026-10-12T06:06:08Z
+channel: brand-data-dev-alerts
+brand: platform (process_enrichment_flow)
+summary: "process_enrichment_flow exceeded the 3h run time limit (run 454aa07c, started 03:05 UTC from enrichment_file_sensor)"
+status: recurring
+linked_issue: null
+```
+Second since 09-18 (the last was 10-06). Same chronic pattern, still no root cause. No thread.
+
+```yaml
+timestamp: 2026-10-11T22:07:35Z
+channel: brand-data-dev-alerts
+brand: platform (galvatron ECS)
+summary: ECS health check failures on galvatron, one trigger/recover cycle
+status: self-resolved
+linked_issue: null
+```
+Triggered 22:07 UTC (value 2.0), recovered 22:14 UTC. Same known galvatron flapping. No thread.
+
+```yaml
+timestamp: 2026-10-11T16:25:27Z
+channel: brand-data-dev-alerts
+brand: platform (PCS 5xx)
+summary: "PCS ALB target 5xx ratio monitor: triggered 16:25, recovered 16:40 UTC"
+status: recurring
+linked_issue: null
+```
+Third PCS 5xx episode in three days (see the two 10-09 entries below). Only the ALB monitor fired this time, not the app-level `pcs.http` one. No thread, no reaction. PCS is where his CSV generation and Slice 5 audit code runs.
+
+```yaml
+timestamp: 2026-10-11T08:24:42Z
+channel: brand-data-dev-alerts
+brand: skiny, fuchsSchmitt, ftcCashmere
+summary: "Morning image burst: ftcCashmere__FEED2__download_images exit 1 twice (runs 76d44c90, 6a1988a9, 08:24-08:25 UTC); fuchsSchmitt__FEED__process_images exit 137 (run 095f7d31, 08:28 UTC); skiny__FEED__process_images exit 137 (run 69329467, 08:40 UTC)"
+status: active
+linked_issue: BDD-3357
+```
+Each has one :eyes:, no thread. ftcCashmere is its third failing run since 10-08 and still matches BDD-3357 (PIPE 403 on `shop.ftc-cashmere.com` images, unassigned). skiny's third exit 137 (09-30, 10-04, now) and fuchsSchmitt's second (first 09-17) both look like OOM on image processing. No owner.
+
+```yaml
+timestamp: 2026-10-09T22:00:20Z
+channel: brand-data-dev-alerts
+brand: platform (PCS 5xx)
+summary: "PCS content API 5xx rate and SLO burn rate: triggered 22:00 (0.4), recovered 22:15; triggered again 22:53 (0.167, burn 73x), recovered 23:09 UTC"
+status: self-resolved
+linked_issue: null
+```
+Two short cycles about an hour apart, late evening. No thread, no reaction.
+
+```yaml
+timestamp: 2026-10-09T17:38:17Z
+channel: brand-data-dev-alerts
+brand: ftcCashmere
+summary: "ftcCashmere_FEED2: 12 asset materializations failed (run 30f26970, from the schedule), starting at download_images and extract"
+status: recurring
+linked_issue: BDD-3357
+```
+Same as the 10-08 entry, one day later. Flipped to `recurring`. No thread.
+
+```yaml
+timestamp: 2026-10-09T15:17:23Z
+channel: brand-data-dev-alerts
+brand: platform (PCS 5xx)
+summary: "PCS content API 5xx rate (0.009 to 0.012) and PCS ALB target 5xx ratio: warn/trigger flapping 15:17 to 15:34 UTC, then recovered"
+status: self-resolved
+linked_issue: product-service#2902
+```
+First firing of the new PCS monitors from dwiajik's product-service#2900/#2902 (merged 09:15 UTC that morning). Barely over the 1% threshold. One :eyes:, no thread. Whether `enable_pcs_csv_generation` was back on in production by then isn't visible in the sources.
+
+```yaml
+timestamp: 2026-10-09T13:11:42Z
+channel: brand-data-dev-alerts
+brand: carsJeans
+summary: "carsJeans_FEED_sync_images exceeded the 3h run time limit (run ff0ceb9d, started 10:10 UTC from the schedule)"
+status: recurring
+linked_issue: product-service#2851
+```
+Eighth carsJeans run-limit hit, same 10:10 UTC start. None on 10-10 or 10-11. No thread, still no owner.
+
+```yaml
 timestamp: 2026-10-09T08:05:50Z
 channel: brand-data-dev-alerts
 brand: adidas
@@ -17,7 +97,7 @@ timestamp: 2026-10-08T17:38:21Z
 channel: brand-data-dev-alerts
 brand: ftcCashmere
 summary: "ftcCashmere_FEED2: 12 asset materializations failed (run 8894da95, from the schedule), starting at download_images and extract"
-status: active
+status: recurring
 linked_issue: null
 ```
 No thread. Same brand as Triage ticket BDD-3357 (PIPE gets 403 Forbidden downloading ftcCashmere images from `shop.ftc-cashmere.com`), so possibly the same cause, but nothing confirms it.
@@ -1064,243 +1144,3 @@ status: recurring
 linked_issue: null
 ```
 Same pattern as the 09-10 occurrence logged last cycle: warning threshold (85%) hit 09-11 17:42 CEST, daily quota (100%) hit 23:46 CEST, both auto-recovered 09-12 08:03 CEST on quota reset. Second time this exact cycle has happened within a week — upgrading status from the prior "self-resolved" to "recurring" since it's now a pattern, not a one-off. No thread; no action needed given the auto-recovery, but worth a permanent fix (larger quota or noisier-source cleanup) if it keeps recurring.
-
-```yaml
-timestamp: 2026-09-11T19:42:27Z
-channel: brand-data-dev-alerts
-brand: platform (PDS / Kinesis)
-summary: PDS Kinesis write throttling + stream-publish log failures recurred several more times on 09-11
-status: recurring
-linked_issue: null
-```
-Continuation of the known post-shard-increase-fix recurring issue. This cycle: stream-publish failures triggered 12:45:28 CEST, re-triggered 13:45:29 CEST, recovered 13:59:28 CEST; Kinesis write-throttling triggered 21:22:27 CEST (spike to 104.0), recovered 21:42:27 CEST. No thread on any of these.
-
-```yaml
-timestamp: 2026-09-11T17:32:52Z
-channel: brand-data-dev-alerts
-brand: falke (ona)
-summary: ona__falke_FEED run exceeded 3h time limit
-status: active
-linked_issue: null
-```
-New job for this brand (previously only `ona__falke_PRICAT` had timed out, 09-10). No thread or reaction visible.
-
-```yaml
-timestamp: 2026-09-11T12:15:01Z
-channel: brand-data-dev-alerts
-brand: falke
-summary: "falke/FEED — 3 asset materializations failed (map/merge/publish_from_map), root-caused and fixed same day"
-status: self-resolved
-linked_issue: null
-```
-Same bug class as iosByMaica (09-09/09-10): merge rules missing the `customAttributes` entry in `rootLevelAttributes`. Kushel flagged it in-thread 14:51:56 CEST asking Aji whether the merge rules needed updating after the ordersettings change; Aji confirmed "done, please try again" at 15:19:53 CEST (raised_hands reaction). Likely fixed via [product-service#2675](../sources/github/product-service/open-prs.md), opened same day.
-
-```yaml
-timestamp: 2026-09-11T11:51:26Z
-channel: brand-data-dev-alerts
-brand: snocks
-summary: "snocks/FEED — 3 asset materializations failed (map/merge/publish_from_map)"
-status: active
-linked_issue: null
-```
-New brand for this failure mode, 09-11 13:51:26 CEST. No thread or reaction visible.
-
-```yaml
-timestamp: 2026-09-11T11:11:45Z
-channel: brand-data-dev-alerts
-brand: kultivate
-summary: kultivate_FEED run exceeded 3h time limit, a third time
-status: recurring
-linked_issue: null
-```
-Fired twice on 09-10 (12:27 and 19:53 CEST) per last sync's entry; recurred again 09-11 13:11:45 CEST. No thread.
-
-```yaml
-timestamp: 2026-09-11T11:02:43Z
-channel: brand-data-dev-alerts
-brand: platform (enrichment_file_sensor)
-summary: 5 asset materializations failed (map, merge, process_enrichment group)
-status: active
-linked_issue: null
-```
-Same sensor/asset family as the 2026-08-23 occurrence in this log. 09-11 13:02:43 CEST. No thread or reaction visible.
-
-```yaml
-timestamp: 2026-09-11T10:34:37Z
-channel: brand-data-dev-alerts
-brand: fashionCloud (dev)
-summary: "fashionCloud/FEED and FEED2 — 8 asset materializations failed each, launched by Dagster Dev User"
-status: self-resolved
-linked_issue: null
-```
-Both runs (12:34:06 and 12:34:37 CEST) were attributed to "Dagster Dev User" rather than a schedule/sensor, and both carry a `raising_hand` reaction — reads as an acknowledged manual test/dev run rather than a fresh production incident, unlike the earlier fashionCloud/fashionCloudQA entries in this log which fired via normal cron schedules.
-
-```yaml
-timestamp: 2026-09-11T10:16:32Z
-channel: brand-data-dev-alerts
-brand: rinoAndPelle
-summary: rinoAndPelle_FEED run exceeded 3h time limit
-status: active
-linked_issue: null
-```
-09-11 12:16:32 CEST. Prior occurrence in this log was 2026-08-24, three weeks earlier — treated as a fresh occurrence, not a tight recurrence. No thread.
-
-```yaml
-timestamp: 2026-09-11T09:03:17Z
-channel: brand-data-dev-alerts
-brand: ammann
-summary: "ammann/FEED — process_images, exit code 137 (OOM), twice"
-status: active
-linked_issue: null
-```
-New brand/step for this OOM signature. Two occurrences: 09-10 16:59:54 CEST and 09-11 11:03:17 CEST, roughly 18h apart. No thread. Same exit-137 family as the earlier bestseller/cecil and garcia OOMs, but a distinct step (`process_images`, not `publish_from_map`/`publish_from_process_images`) — not treated as the same incident.
-
-```yaml
-timestamp: 2026-09-11T06:18:37Z
-channel: brand-data-dev-alerts
-brand: morganDeToi
-summary: "morganDeToi/FEED — 12 asset materializations failed (download_images, extract)"
-status: active
-linked_issue: null
-```
-New brand for this failure mode, 09-11 08:18:37 CEST. No thread or reaction visible.
-
-```yaml
-timestamp: 2026-09-10T16:44:27Z
-channel: brand-data-dev-alerts
-brand: platform (Datadog / product-service-logs-index)
-summary: Log index approached then hit its daily ingestion quota, self-resolved on quota reset
-status: self-resolved
-linked_issue: null
-```
-New alert type, not seen in this log before. Warning threshold (85%) hit 09-10 18:44 CEST, daily quota (100%) hit 18:51 CEST — no more logs indexed for `product-service-logs-index-` for the rest of the day. Both cleared automatically 09-11 08:03 CEST when the quota reset. No thread; no action taken or needed given the auto-recovery, but worth watching if it recurs — an index at 100% masks log-based alerting for the rest of that day.
-
-```yaml
-timestamp: 2026-09-11T02:43:09Z
-channel: brand-data-dev-alerts
-brand: platform (enrichment_file_sensor / process_enrichment_flow)
-summary: Exceeded run time limit of 3 hours — process_enrichment_flow, recurred a fourth time
-status: active
-linked_issue: null
-```
-Same unresolved issue Kushel first flagged 2026-09-08 07:17 UTC (Dushan: "thats weird", no explanation given). Recurred again: a run started 23:42 UTC 09-10 breached the 3h cap around 02:43 UTC 09-11 — the fourth occurrence across four days. Still no root cause or fix in-channel.
-
-```yaml
-timestamp: 2026-09-10T22:00:26Z
-channel: brand-data-dev-alerts
-brand: royRobson (ona)
-summary: ona__royRobson_FEED2 run exceeded 3h time limit
-status: active
-linked_issue: null
-```
-New brand for this failure mode, 09-11 00:00:26 CEST. Coincides with the royRobson brand-migration PR churn on GitHub this cycle (product-service#2647 closed unmerged, re-submitted as #2668) — plausibly related to the migration being mid-flight, not confirmed. No thread.
-
-```yaml
-timestamp: 2026-09-10T19:46:28Z
-channel: brand-data-dev-alerts
-brand: falke (ona)
-summary: ona__falke_PRICAT run exceeded 3h time limit
-status: active
-linked_issue: null
-```
-New brand for this failure mode, 09-10 21:46:28 CEST. No thread or reaction visible.
-
-```yaml
-timestamp: 2026-09-10T10:27:13Z
-channel: brand-data-dev-alerts
-brand: kultivate
-summary: kultivate_FEED run exceeded 3h time limit, twice same day
-status: active
-linked_issue: null
-```
-New brand for this failure mode. Two occurrences 09-10: 12:27:13 CEST and 19:53:05 CEST, roughly 7.5h apart — recurred within the same cycle it first appeared. No thread.
-
-```yaml
-timestamp: 2026-09-10T10:45:27Z
-channel: brand-data-dev-alerts
-brand: platform (PDS / Kinesis)
-summary: PDS stream-publish failures recurred twice more on 09-10, now six separate recurrences after the shard-increase fix
-status: recurring
-linked_issue: null
-```
-Continuation of the already-`recurring` cluster (self-resolved after 09-07, recurred twice on 09-08, twice more on 09-09). Fired twice more on 09-10: 12:45-13:58 CEST and 17:03-17:20 CEST, both self-resolving as before — root cause ([product-service#2642](../sources/github/product-service/open-prs.md)'s shard increase) still not holding. Quiet since 17:20 CEST 09-10. Not treated as a fresh notification-bar trigger since this is a continuation of an already-`recurring` pattern, not a new flip from `self-resolved`.
-
-```yaml
-timestamp: 2026-09-10T16:09:11Z
-channel: brand-data-dev-alerts
-brand: garcia
-summary: "garcia/FEED — publish_from_process_images, exit code 137 (OOM)"
-status: active
-linked_issue: null
-```
-New brand for this OOM signature, 09-10 18:09:11 CEST. Same exit-137 family as the bestseller/cecil publishing-step OOM saga, but a different brand and a different step (`publish_from_process_images`, not `publish_from_map`) — not folded into that (now-quiet) entry. No thread.
-
-```yaml
-timestamp: 2026-09-10T16:15:42Z
-channel: brand-data-dev-alerts
-brand: iosByMaica
-summary: "iosByMaica/FEED — asset materializations failed again (map/merge), now root-caused"
-status: active
-linked_issue: null
-```
-Recurrence of the 09-09 first occurrence (4 failures again, same map/merge steps). Kushel replied in-thread 09-10 18:27 CEST identifying the cause: both the global and manufacturer-specific merge rules are missing the `customAttributes` entry in `rootLevelAttributes`. Explained but not yet fixed.
-
-```yaml
-timestamp: 2026-09-10T09:03:09Z
-channel: brand-data-dev-alerts
-brand: lugina / profuomo
-summary: "lugina's move_images_from_ftp_to_s3_job_sync failures stopped after 09-10 14:18 UTC; profuomo also quiet after one more recurrence"
-status: self-resolved
-linked_issue: null
-```
-lugina fired hourly on both FEED/FEED2 schedules through 09-10 up to 14:18:13 UTC (16:18 CEST) — then stopped. Quiet for ~19h as of this sync (09-11 09:03 CEST), the longest gap since the pattern started, consistent with Kushel's 09-10 10:18 CEST message that Munia would have the brand update its FTP/SFTP setup "today." No explicit in-channel confirmation the fix landed — inferred from the absence of further failures, not a human all-clear. `profuomo` fired once more at 14:03 UTC 09-10 (24h after its first 09-09 occurrence, same signature) and has also been quiet since. See `_meta/earmarks.md` — this earmark's trigger condition is met; moved to Triggered/Dismissed. Worth a fresh look next sync to confirm both stay quiet before calling this fully resolved.
-
-```yaml
-timestamp: 2026-09-09T15:25:58Z
-channel: brand-data-dev-alerts
-brand: multiple (esqualo, schmidtGroup, didriksons, sarto, roesch)
-summary: "trigger_enrichment_from_map — container exited, exit code 1, burst across 5 brands"
-status: active
-linked_issue: null
-```
-Same failure mode as riani's 09-08 recurrence, but a fresh burst hitting different brands 15:41–17:26 CEST 09-09: esqualo (15:41), schmidtGroup/didriksons/sarto simultaneously (16:20:56), roesch (16:23), sarto again (17:25:58). Dushan replied in-channel 16:27:04 CEST: "trigger enrichment failures i will look into them" — acknowledged, not yet resolved.
-
-```yaml
-timestamp: 2026-09-09T15:03:22Z
-channel: brand-data-dev-alerts
-brand: ara
-summary: "ara/PRICAT — 12 asset materializations failed"
-status: active
-linked_issue: null
-```
-09-09 17:03:22 CEST. No thread or reaction visible.
-
-```yaml
-timestamp: 2026-09-09T15:02:22Z
-channel: brand-data-dev-alerts
-brand: bueltel
-summary: "bueltel/PRICAT — 10 asset materializations failed"
-status: active
-linked_issue: null
-```
-09-09 17:02:22 CEST. No thread or reaction visible.
-
-```yaml
-timestamp: 2026-09-09T12:53:34Z
-channel: brand-data-dev-alerts
-brand: numph
-summary: numph_FEED_sync_images run exceeded 3h time limit
-status: active
-linked_issue: null
-```
-New brand for this failure mode, 09-09 14:53:34 CEST. No thread or reaction visible.
-
-```yaml
-timestamp: 2026-09-09T09:15:11Z
-channel: brand-data-dev-alerts
-brand: sanetta
-summary: "sanetta/FEED — 9 asset materializations failed"
-status: active
-linked_issue: null
-```
-09-09 11:15:11 CEST. No thread or reaction visible.

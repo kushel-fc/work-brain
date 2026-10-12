@@ -3,6 +3,50 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2031
+title: "oneills: add productCharacteristics input"
+author: marianabassi
+state: closed
+merged: true
+closed: 2026-10-09
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2031
+```
+Opened and merged inside the window, 12:53 UTC.
+
+```yaml
+number: 2028
+title: "Production Release - 2026-10-09"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-10-09
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2028
+```
+Release. Merged 10:15 UTC.
+
+```yaml
+number: 2027
+title: "Staging Release - 2026-10-09"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-10-09
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2027
+```
+Release. Merged 09:48 UTC.
+
+```yaml
+number: 2026
+title: "images ftp -> sftp"
+author: Busra040
+state: closed
+merged: true
+closed: 2026-10-09
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2026
+```
+Opened and merged inside the window, 09:13 UTC.
+
+```yaml
 number: 2025
 title: "Production Release - 2026-10-08"
 author: FCMachineUser

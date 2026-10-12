@@ -3,6 +3,60 @@
 Older entries rolled off `support/recently-closed.md`'s ~25-item cap. Never deleted.
 
 ```yaml
+id: BDD-3180
+title: API access permission error (FD: 675082)
+priority: Low
+closed: 2026-09-14
+url: https://linear.app/fashioncloud/issue/BDD-3180/api-access-permission-error-fd-675082
+```
+Part of the 09-04 bulk Triage-clearing assignment — shipped after sitting Ready To Start since then.
+
+```yaml
+id: BDD-3236
+title: "Cancels | Please remove | catwalk (FD: 675736)"
+priority: Medium
+closed: 2026-09-14
+url: https://linear.app/fashioncloud/issue/BDD-3236/cancels-please-remove-catwalk-fd-675736
+```
+Picked up individually from Triage last cycle, shipped this one.
+
+```yaml
+id: BDD-3247
+title: "PIPE: gtin deletion camelActive (FD: 676359)"
+priority: Medium
+closed: 2026-09-14
+url: https://linear.app/fashioncloud/issue/BDD-3247/pipe-gtin-deletion-camelactive-fd-676359
+```
+Landed in Triage unassigned 09-11, picked up and shipped all in this cycle — Triage → assigned → Deployed same window (bulk EAN-deletion request, ~60 GTINs).
+
+```yaml
+id: BDD-3091
+title: "HUGO BOSS: request MM (FD: 672863)"
+priority: Low
+closed: 2026-09-14
+url: https://linear.app/fashioncloud/issue/BDD-3091/hugo-boss-request-mm-fd-672863
+```
+Part of the 09-04 bulk assignment — was In Review last sync, now Done.
+
+```yaml
+id: BDD-3164
+title: Bestseller - reprocess data to enable all B2B images with type "pack" to be visible to retailers (FD: 674996)
+priority: High
+closed: 2026-09-11
+url: https://linear.app/fashioncloud/issue/BDD-3164/bestseller-reprocess-data-to-enable-all-b2b-images-with-type-pack-to
+```
+Was In Progress last sync, now Deployed. The `bestseller_FEED2` OOM saga (see `dagster-alerts/log.md`) stayed quiet for the full stretch since product-service#2640 merged 09-08 — no recurrence surfaced before this ticket shipped.
+
+```yaml
+id: BDD-3230
+title: Delete eans rehab (FD: 675734)
+priority: Low
+closed: 2026-09-10
+url: https://linear.app/fashioncloud/issue/BDD-3230/delete-eans-rehab-fd-675734
+```
+Landed in Triage unassigned 09-07, picked up and shipped all in this cycle — Triage → assigned → Deployed same window.
+
+```yaml
 id: BDD-3168
 title: API Image request problem (FD: 675101)
 priority: Low

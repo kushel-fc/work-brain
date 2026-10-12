@@ -2,7 +2,31 @@
 
 Full raw Triage backlog for team BDD, sourced from https://linear.app/fashioncloud/team/BDD/triage. Populated on sync. See `support/open.md` for the FD-referenced/support-shaped curated subset.
 
-**10-09 sync:** 6 to 4. One new FD ticket, BDD-3386 (Medium, Hatico prices still show a discount that ended 09-30). Three left Triage, all to Irem Bulut: BDD-3360 (Högl deletion) went Deployed 10-08 12:07 UTC, BDD-3358 and BDD-3359 (both High, PME Legend image reprocessing tool) are In Progress.
+**10-12 sync:** 4 to 6. Two new FD tickets, both Medium and unassigned: BDD-3388 (10-09, merge step still uses `backend_db` data so removed certificates stay in `manufacturerAttributes`) and BDD-3405 (10-12, delete Ballin F/W 2026 GTINs). Nothing left Triage this cycle. BDD-3386, BDD-3357, BDD-3349 and BDD-3305 unchanged.
+
+```yaml
+id: BDD-3405
+title: "Delete gtins for ballin (FD: 680460)"
+priority: Medium
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-10-12
+url: https://linear.app/fashioncloud/issue/BDD-3405
+```
+New 10-12 08:10 UTC. Support-shaped, see [`support/open.md`](../../support/open.md).
+
+```yaml
+id: BDD-3388
+title: "Issue on removing SA certificate information (FD: 680121)"
+priority: Medium
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-10-09
+url: https://linear.app/fashioncloud/issue/BDD-3388
+```
+New 10-09 09:46 UTC. Support-shaped, see [`support/open.md`](../../support/open.md).
 
 ```yaml
 id: BDD-3386
@@ -14,7 +38,7 @@ team: BDD
 updated: 2026-10-08
 url: https://linear.app/fashioncloud/issue/BDD-3386/preise-nicht-aktuell-fd-679995
 ```
-New 10-08 12:21 UTC. Support-shaped, see [`support/open.md`](../../support/open.md).
+Filed 10-08, unchanged. Support-shaped, see [`support/open.md`](../../support/open.md).
 
 ```yaml
 id: BDD-3357

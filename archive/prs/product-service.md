@@ -3,6 +3,138 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2913
+title: "Production Release - 2026-10-09"
+author: app/github-actions
+state: closed
+merged: true
+closed: 2026-10-12
+url: https://github.com/fashioncloud/product-service/pull/2913
+```
+Release, opened 10-09 after #2899 merged. Carries #2906, #2907, #2909, #2910. Merged 10-12 07:54 UTC.
+
+```yaml
+number: 2911
+title: "Staging Release - 2026-10-09"
+author: app/github-actions
+state: closed
+merged: true
+closed: 2026-10-09
+url: https://github.com/fashioncloud/product-service/pull/2911
+```
+Release. Merged 13:14 UTC.
+
+```yaml
+number: 2910
+title: "Refactor product support prompts for clarity and consistency"
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-10-09
+url: https://github.com/fashioncloud/product-service/pull/2910
+```
+Opened and merged inside the window, 12:46 UTC.
+
+```yaml
+number: 2909
+title: "Enhance IAM role policy for PDS authentication"
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-10-09
+url: https://github.com/fashioncloud/product-service/pull/2909
+```
+Opened and merged inside the window, 12:14 UTC.
+
+```yaml
+number: 2907
+title: "Enable Blue Seven on PIPE"
+author: honeypsabu
+state: closed
+merged: true
+closed: 2026-10-09
+url: https://github.com/fashioncloud/product-service/pull/2907
+```
+Opened and merged inside the window, 12:22 UTC.
+
+```yaml
+number: 2906
+title: "Serve PDS /asyncapi.json at the root"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-09
+url: https://github.com/fashioncloud/product-service/pull/2906
+```
+Opened and merged inside the window, 11:30 UTC.
+
+```yaml
+number: 2905
+title: "Staging Release - 2026-10-09"
+author: app/github-actions
+state: closed
+merged: true
+closed: 2026-10-09
+url: https://github.com/fashioncloud/product-service/pull/2905
+```
+Release. Merged 09:48 UTC.
+
+```yaml
+number: 2904
+title: "Refactor package structure and update dependencies in PDS"
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-10-09
+url: https://github.com/fashioncloud/product-service/pull/2904
+```
+Opened and merged inside the window, 09:42 UTC.
+
+```yaml
+number: 2902
+title: "PCS: Add ALB target 5xx ratio SLO and monitor, enable prod monitoring"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-09
+url: https://github.com/fashioncloud/product-service/pull/2902
+```
+Kushel approved 10-09 08:45 UTC. Merged 09:14 UTC. Its PCS monitors first fired 15:17 UTC the same day, see the Dagster log.
+
+```yaml
+number: 2900
+title: "PDS: Add ALB target request widget, 5xx ratio monitor and SLO"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-09
+url: https://github.com/fashioncloud/product-service/pull/2900
+```
+Kushel approved 10-09 08:45 UTC. Merged 09:15 UTC.
+
+```yaml
+number: 2899
+title: "Production Release - 2026-10-09"
+author: app/github-actions
+state: closed
+merged: true
+closed: 2026-10-09
+url: https://github.com/fashioncloud/product-service/pull/2899
+```
+Kushel approved 08:28 UTC. Merged 10:15 UTC, so Aji's PDS Mongo-secondaries fix (#2894) for the 10-08 PDS 5xx is in production.
+
+```yaml
+number: 2744
+title: "fix(ona-db-migration): fail closed on environment, verify AWS account before publish"
+author: dwiajik
+state: closed
+merged: false
+closed: 2026-10-09
+url: https://github.com/fashioncloud/product-service/pull/2744
+```
+Draft since 09-18. Closed unmerged 10-09 10:55 UTC.
+
+```yaml
 number: 2901
 title: "Use snake_case nouns for Terraform names in CodeRabbit rule"
 author: dwiajik

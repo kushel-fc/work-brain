@@ -3,6 +3,60 @@
 Capped at ~25 most recent. Older entries move to `../archive/support/`. Sourced from team BDD Done/Deployed issues carrying an FD reference.
 
 ```yaml
+id: BDD-3362
+title: "Reprocess Bestseller Data (FD: 679941)"
+priority: High
+closed: 2026-10-12
+url: https://linear.app/fashioncloud/issue/BDD-3362/reprocess-bestseller-data-fd-679941
+```
+Filed 10-08, Irem Bulut's 300k-GTIN reprocess of seven Bestseller brands (the cause of the 10-07/10-08 bestseller_FEED2 3h hangs). Done 10-12 07:38 UTC.
+
+```yaml
+id: BDD-3344
+title: "PIPE: Marc O Polo - data reprocessing (FD: 679215)"
+priority: Low
+closed: 2026-10-12
+url: https://linear.app/fashioncloud/issue/BDD-3344/pipe-marc-o-polo-data-reprocessing-fd-679215
+```
+Filed 10-02, left Triage to Irem Bulut by 10-08 (In Review). Done 10-12 07:39 UTC.
+
+```yaml
+id: BDD-3359
+title: "Image reprocessing tooling shows no failed images for NOS (FD: 679889)"
+priority: High
+closed: 2026-10-09
+url: https://linear.app/fashioncloud/issue/BDD-3359/image-reprocessing-tooling-shows-no-failed-images-for-nos-fd-679889
+```
+PME Legend image reprocessing tool, filed 10-07. Irem Bulut, Done 10-09 14:19 UTC.
+
+```yaml
+id: BDD-3358
+title: "Unable to trigger image reprocessing PME Legend (FD: 679888)"
+priority: High
+closed: 2026-10-09
+url: https://linear.app/fashioncloud/issue/BDD-3358/unable-to-trigger-image-reprocessing-pme-legend-fd-679888
+```
+Companion to BDD-3359, filed 10-07. Irem Bulut, Done 10-09 14:19 UTC.
+
+```yaml
+id: BDD-3389
+title: "Items deletion (FD: 680166)"
+priority: Low
+closed: 2026-10-09
+url: https://linear.app/fashioncloud/issue/BDD-3389/items-deletion-fd-680166
+```
+Filed 10-09 12:58 UTC and Done by Irem Bulut 14:19 UTC the same afternoon, between syncs, so it never showed in Triage here.
+
+```yaml
+id: BDD-3345
+title: "Images archived even when failed - bug (FD: 679245)"
+priority: Medium
+closed: 2026-10-09
+url: https://linear.app/fashioncloud/issue/BDD-3345/images-archived-even-when-failed-bug-fd-679245
+```
+Filed 10-02, picked up by Syed Muhammad Abu Bakar Wase. Done 10-09 08:35 UTC.
+
+```yaml
 id: BDD-3360
 title: "Högl - delete articles (FD: 679913)"
 priority: Medium
@@ -172,57 +226,3 @@ closed: 2026-09-14
 url: https://linear.app/fashioncloud/issue/BDD-3229/re-cancellations-ss27-fd-675432
 ```
 Picked up individually from Triage last cycle, shipped this one.
-
-```yaml
-id: BDD-3180
-title: API access permission error (FD: 675082)
-priority: Low
-closed: 2026-09-14
-url: https://linear.app/fashioncloud/issue/BDD-3180/api-access-permission-error-fd-675082
-```
-Part of the 09-04 bulk Triage-clearing assignment — shipped after sitting Ready To Start since then.
-
-```yaml
-id: BDD-3236
-title: "Cancels | Please remove | catwalk (FD: 675736)"
-priority: Medium
-closed: 2026-09-14
-url: https://linear.app/fashioncloud/issue/BDD-3236/cancels-please-remove-catwalk-fd-675736
-```
-Picked up individually from Triage last cycle, shipped this one.
-
-```yaml
-id: BDD-3247
-title: "PIPE: gtin deletion camelActive (FD: 676359)"
-priority: Medium
-closed: 2026-09-14
-url: https://linear.app/fashioncloud/issue/BDD-3247/pipe-gtin-deletion-camelactive-fd-676359
-```
-Landed in Triage unassigned 09-11, picked up and shipped all in this cycle — Triage → assigned → Deployed same window (bulk EAN-deletion request, ~60 GTINs).
-
-```yaml
-id: BDD-3091
-title: "HUGO BOSS: request MM (FD: 672863)"
-priority: Low
-closed: 2026-09-14
-url: https://linear.app/fashioncloud/issue/BDD-3091/hugo-boss-request-mm-fd-672863
-```
-Part of the 09-04 bulk assignment — was In Review last sync, now Done.
-
-```yaml
-id: BDD-3164
-title: Bestseller - reprocess data to enable all B2B images with type "pack" to be visible to retailers (FD: 674996)
-priority: High
-closed: 2026-09-11
-url: https://linear.app/fashioncloud/issue/BDD-3164/bestseller-reprocess-data-to-enable-all-b2b-images-with-type-pack-to
-```
-Was In Progress last sync, now Deployed. The `bestseller_FEED2` OOM saga (see `dagster-alerts/log.md`) stayed quiet for the full stretch since product-service#2640 merged 09-08 — no recurrence surfaced before this ticket shipped.
-
-```yaml
-id: BDD-3230
-title: Delete eans rehab (FD: 675734)
-priority: Low
-closed: 2026-09-10
-url: https://linear.app/fashioncloud/issue/BDD-3230/delete-eans-rehab-fd-675734
-```
-Landed in Triage unassigned 09-07, picked up and shipped all in this cycle — Triage → assigned → Deployed same window.

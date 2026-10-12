@@ -2,6 +2,18 @@
 
 One entry per sync run. Prune entries older than ~30 days.
 
+## 2026-10-12 (~08:50 UTC)
+
+About 72h since the last sync (Friday 10-09 to Monday 10-12, no weekend runs). Linear (claude.ai connector), GitHub (`gh`) and Slack (claude.ai connector) were all reachable. The `plugin:engineering:*` servers needed auth and weren't used.
+
+- **Three new PRs of his, all opened 10-09.** backend#7085 (BDD-3223 parity follow-up) **now conflicts**, probably from backend#7078 (monolith to `apps/backend` Nx app, merged 10-10), and has no human review. product-service#2912 (Slice 5 part 2/3) was approved by Chamindu36 10-12 08:22 UTC and is clean. product-service#2916 (PCS side of the parity follow-up, deploys first) has only CodeRabbit's approval. Both new tickets' PRs link to already-Done tickets (BDD-3214, BDD-3223), which stayed Done. Shaping doc updated.
+- **New PCS 5xx monitors fired three times.** dwiajik's #2902 merged 10-09 09:14 UTC. Its monitors fired 10-09 15:17 UTC, 10-09 22:00 to 23:09 UTC (two cycles, up to 40%) and 10-11 16:25 UTC. All self-resolved, no thread. Marked `recurring`.
+- Production release #2899 merged 10-09 10:15 UTC, so Aji's PDS fix #2894 is in production. Release #2913 merged 10-12 07:54 UTC.
+- Linear: his 3 live issues unchanged. Triage 4 to 6: BDD-3388 and BDD-3405 new (both Medium). Six FD tickets closed (BDD-3358, BDD-3359, BDD-3362 High; BDD-3345; BDD-3344, BDD-3389 Low), added to recently-closed, and six oldest rolled to archive. support/open.md 3 to 5.
+- Slack (29 messages): PCS 5xx (20, three entries), ftcCashmere_FEED2 failing again 10-09 and 10-11 (flipped to `recurring`, likely BDD-3357), carsJeans 3h (eighth, 10-09), process_enrichment_flow 3h (10-12), skiny and fuchsSchmitt exit 137, galvatron blip. Dagster log +8, pruned 24 (09-09 to 09-11), now 114.
+- GitHub: product-service 5 to 5 (#2899, #2900, #2902 merged, #2744 closed unmerged; #2912, #2914, #2915, #2916 new). brand-data-pipeline 12 to 15 (#2029, #2030, #2032 new; #2026, #2031 and releases merged inside the window). All archived. Review queue unchanged (#2019).
+- Notified: yes. His own backend#7085 is in conflict, and the PCS 5xx alert came back twice after self-resolving. No due dates on his issues, and no new Urgent tickets.
+
 ## 2026-10-09 (~08:50 UTC)
 
 About 24h since the last sync. Linear (claude.ai connector), GitHub (`gh`) and Slack (claude.ai connector) were all reachable. The `plugin:engineering:*` servers needed auth and weren't used.

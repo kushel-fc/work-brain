@@ -16,6 +16,6 @@ requested_reviewers: [brand-data-dev, kushel-fc, alirezaMoazenFashion]
 updated: 2026-10-07
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/2019
 ```
-Dependabot patch bump, opened 10-07 15:38 UTC. Names him alongside alirezaMoazenFashion and the brand-data-dev team. Mergeable state read `unknown` this pass.
+Dependabot patch bump, opened 10-07 15:38 UTC. Names him alongside alirezaMoazenFashion and the brand-data-dev team. Unchanged since. Mergeable state read `unknown` again, blocked on review.
 
-Through the brand-data-dev team, not by name: dwiajik's product-service#2900 and #2902 (ALB 5xx SLOs for PDS and PCS) and production release #2899. He already approved all three on 10-09 between 08:28 and 08:45 UTC, so nothing is waiting on him. Outside the two tracked repos, `gh` still lists a pile of dependabot bumps on data-enrichment-service, price-importer and others. Not tracked here.
+The team-routed ones from last sync (product-service#2899, #2900, #2902) all merged 10-09 with his approvals. No new review requests name him or route through the brand-data-dev team on the two tracked repos, apart from his own PRs. Outside the two tracked repos, `gh` still lists dependabot bumps on data-enrichment-service, price-importer and others. Not tracked here.
