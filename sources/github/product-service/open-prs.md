@@ -2,59 +2,33 @@
 
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
-5 to 5, but all different except #2845. Off the list: #2899 (production release with Aji's #2894 PDS fix, merged 10-09 10:15 UTC), #2900 and #2902 (dwiajik's PDS/PCS ALB 5xx SLOs, merged 09:14/09:15 UTC), #2744 (dwiajik's draft, closed unmerged). New: **his own #2912 and #2916**, plus Chamindu36's #2914 and #2915 (PDS replay worker). Opened and merged inside the window: #2904, #2906, #2907, #2909, #2910, staging releases #2905 and #2911, and production release #2913 (merged 10-12 07:54 UTC). See [`archive/prs/product-service.md`](../../../archive/prs/product-service.md).
+5 to 3. Off the list, all merged 10-12: **his own #2912 (09:02 UTC, by Chamindu36) and #2916 (10:26 UTC, by him)**, and Chamindu36's #2914 and #2915 (PDS replay worker). New: **his own #2929** (rename PCS's database) and Chamindu36's #2928 (PDS replay writer, names him as reviewer). Opened and merged inside the window: his #2917 (Slice 5 part 3/3), #2918, #2921, #2923, #2924, #2925, #2926, #2927, staging release #2920 and production release #2922 (10-12 12:10 UTC, after #2916 and #2917 merged). See [`archive/prs/product-service.md`](../../../archive/prs/product-service.md).
 
 ```yaml
-number: 2916
-title: "BDD-3223: Accept 2000 GTINs per resolve and fix the CSV image extension, description and dropped-GTIN reporting"
+number: 2929
+title: "BDD-3214: name PCS's database fc_product_content_service"
 author: kushel-fc
+state: open
+mergeable_state: unstable
+review_state: approved
+requested_reviewers: [abubakarwase]
+updated: 2026-10-13
+url: https://github.com/fashioncloud/product-service/pull/2929
+```
+His. Opened 10-13 08:33 UTC. See [`prs/mine.md`](../../../prs/mine.md).
+
+```yaml
+number: 2928
+title: "Implement Replay writer code reusing the pds-relay-core logic."
+author: Chamindu36
 state: open
 mergeable_state: blocked
-review_state: awaiting-first-review
-requested_reviewers: [brand-data-dev (team), dwiajik, abirprantofc]
-updated: 2026-10-09
-url: https://github.com/fashioncloud/product-service/pull/2916
+review_state: changes-requested
+requested_reviewers: [irembbt, kushel-fc]
+updated: 2026-10-13
+url: https://github.com/fashioncloud/product-service/pull/2928
 ```
-His. Opened 10-09 15:04 UTC. See [`prs/mine.md`](../../../prs/mine.md).
-
-```yaml
-number: 2915
-title: "Add replay worker infrastructure and IAM roles for ECS"
-author: Chamindu36
-state: open
-mergeable_state: mergeable
-review_state: approved
-requested_reviewers: [irembbt, julsjacinto]
-updated: 2026-10-09
-url: https://github.com/fashioncloud/product-service/pull/2915
-```
-Opened 10-09 14:41 UTC, +300/-0. PDS Replay infrastructure. dwiajik approved; GitHub's aggregate still says Changes Requested from CodeRabbit's first pass. Not his.
-
-```yaml
-number: 2914
-title: "Implement replay job db module and supportive functions to handle slot claiming."
-author: Chamindu36
-state: open
-mergeable_state: mergeable
-review_state: approved
-requested_reviewers: [abubakarwase, alirezaMoazenFashion]
-updated: 2026-10-09
-url: https://github.com/fashioncloud/product-service/pull/2914
-```
-Opened 10-09 14:10 UTC, +1055/-3. PDS Replay job DB module. dwiajik approved after a long thread; aggregate still shows CodeRabbit's Changes Requested. Not his.
-
-```yaml
-number: 2912
-title: "BDD-3214: map a resolve request to its download audit entry (2/3)"
-author: kushel-fc
-state: open
-mergeable_state: clean
-review_state: approved
-requested_reviewers: [irembbt, abirprantofc]
-updated: 2026-10-12
-url: https://github.com/fashioncloud/product-service/pull/2912
-```
-His. Approved by Chamindu36 10-12 08:22 UTC, clean. See [`prs/mine.md`](../../../prs/mine.md).
+Opened 10-13 08:01 UTC, +1306/-156. PDS replay writer. Names him. See [`prs/to-review.md`](../../../prs/to-review.md).
 
 ```yaml
 number: 2845

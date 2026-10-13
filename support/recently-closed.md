@@ -3,6 +3,15 @@
 Capped at ~25 most recent. Older entries move to `../archive/support/`. Sourced from team BDD Done/Deployed issues carrying an FD reference.
 
 ```yaml
+id: BDD-3405
+title: "Delete gtins for ballin (FD: 680460)"
+priority: Medium
+closed: 2026-10-12
+url: https://linear.app/fashioncloud/issue/BDD-3405
+```
+Filed 10-12 08:10 UTC, Ballin F/W 2026 GTIN deletion. Irem Bulut took it straight out of Triage and closed it 08:54 UTC, minutes after the 10-12 sync listed it as open.
+
+```yaml
 id: BDD-3362
 title: "Reprocess Bestseller Data (FD: 679941)"
 priority: High
@@ -217,12 +226,3 @@ closed: 2026-09-14
 url: https://linear.app/fashioncloud/issue/BDD-3150/pipemegatron-pipeline-mismatch-in-processing-capability-for-prices-fd
 ```
 Part of the 09-04 bulk assignment. Shipped without the earmarked flag-enable PR ([brand-data-pipeline#1825](../sources/github/brand-data-pipeline/open-prs.md)) ever merging — that PR is still open and unreviewed. Resolved some other way; see `_meta/earmarks.md`.
-
-```yaml
-id: BDD-3229
-title: "RE: Cancellations SS27 (FD: 675432)"
-priority: Low
-closed: 2026-09-14
-url: https://linear.app/fashioncloud/issue/BDD-3229/re-cancellations-ss27-fd-675432
-```
-Picked up individually from Triage last cycle, shipped this one.

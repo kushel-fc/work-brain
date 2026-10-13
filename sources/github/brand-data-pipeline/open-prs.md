@@ -2,46 +2,33 @@
 
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
-12 to 15. Three new, none his: inga-ar's #2030 (SMS article filtering) and #2032 (bra detailed size), both approved by hakansoylu1, and honeypsabu's #2029 (timezone brand migration). Opened and merged inside the window: #2026 (images ftp to sftp), #2031 (oneills productCharacteristics), staging #2027, production #2028. Older PRs' mergeable states mostly read `unknown` again and are left at their last known values. See [`archive/prs/brand-data-pipeline.md`](../../../archive/prs/brand-data-pipeline.md).
+15 to 14. Off the list, all merged: inga-ar's #2030 and #2032 (10-12), honeypsabu's #2029 (10-13 08:34 UTC). New, none his: inga-ar's #2044 (material normalization) and dwiajik's #2039 (SAX XML parsing for bugatti, profuomo, mustang, schmidtGroup). Opened and merged inside the window: #2033, #2035, #2037, #2038 (revert pmeLegend FEED resources_size after SAX), #2040, #2041, #2042, #2043, staging #2034 and production #2036 (10-12 12:10 UTC, paired with product-service#2922). Older PRs' mergeable states mostly read `unknown` again and are left at their last known values. See [`archive/prs/brand-data-pipeline.md`](../../../archive/prs/brand-data-pipeline.md).
 
 ```yaml
-number: 2032
-title: "add bra detailed size"
+number: 2044
+title: "implement material normalization"
 author: inga-ar
-state: open
-mergeable_state: mergeable
-review_state: approved
-requested_reviewers: []
-updated: 2026-10-12
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/2032
-```
-Opened 10-12 08:32 UTC, +98/-6. hakansoylu1 approved. Not his.
-
-```yaml
-number: 2030
-title: "add SMS article filtering"
-author: inga-ar
-state: open
-mergeable_state: mergeable
-review_state: approved
-requested_reviewers: []
-updated: 2026-10-09
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/2030
-```
-Opened 10-09 12:45 UTC, +28/-1. hakansoylu1 approved. Not his.
-
-```yaml
-number: 2029
-title: "timezone brand migration"
-author: honeypsabu
 state: open
 mergeable_state: mergeable
 review_state: awaiting-first-review
 requested_reviewers: []
-updated: 2026-10-09
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/2029
+updated: 2026-10-13
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2044
 ```
-Opened 10-09 11:55 UTC, +217/-386. No reviewers. Not his.
+Opened 10-13 08:42 UTC, +52/-6. No reviewers yet. Not his.
+
+```yaml
+number: 2039
+title: "Enable SAX XML parsing for bugatti, profuomo, mustang and schmidtGroup"
+author: dwiajik
+state: open
+mergeable_state: unknown
+review_state: awaiting-first-review
+requested_reviewers: [hakansoylu1]
+updated: 2026-10-13
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2039
+```
+Opened 10-12 14:32 UTC, +936/-395. Only CodeRabbit has commented. Not his.
 
 ```yaml
 number: 2019

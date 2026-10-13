@@ -3,6 +3,149 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2043
+title: "Remove peta approved vegan"
+author: marianabassi
+state: closed
+merged: true
+closed: 2026-10-13
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2043
+```
+Opened and merged inside the window, 08:37 UTC. Not his.
+
+```yaml
+number: 2042
+title: "citizen: image folder temp fix"
+author: marianabassi
+state: closed
+merged: true
+closed: 2026-10-13
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2042
+```
+Opened and merged inside the window, 08:35 UTC. Not his.
+
+```yaml
+number: 2041
+title: "remove PETA-Approved Vegan from brand transformation"
+author: marianabassi
+state: closed
+merged: true
+closed: 2026-10-13
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2041
+```
+Opened and merged inside the window, 07:05 UTC. Not his.
+
+```yaml
+number: 2040
+title: "katag: add brand name variation"
+author: marianabassi
+state: closed
+merged: true
+closed: 2026-10-13
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2040
+```
+Opened and merged inside the window, 07:05 UTC. Not his.
+
+```yaml
+number: 2038
+title: "Revert pmeLegend FEED resources_size after using SAX"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-13
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2038
+```
+Opened and merged inside the window, 06:53 UTC. Not his.
+
+```yaml
+number: 2037
+title: "CWF Add orderIncrement"
+author: hakansoylu1
+state: closed
+merged: true
+closed: 2026-10-12
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2037
+```
+Opened and merged inside the window, 15:31 UTC. Not his.
+
+```yaml
+number: 2036
+title: "Production Release - 2026-10-12"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-10-12
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2036
+```
+Release, paired with product-service#2922. Merged 12:10 UTC.
+
+```yaml
+number: 2035
+title: "Image reprocessing collector: add feed whitelist"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-12
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2035
+```
+Opened and merged inside the window, 12:54 UTC. Not his.
+
+```yaml
+number: 2034
+title: "Staging Release - 2026-10-12"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-10-12
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2034
+```
+Release. Merged 12:00 UTC.
+
+```yaml
+number: 2033
+title: "updated archival"
+author: honeypsabu
+state: closed
+merged: true
+closed: 2026-10-12
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2033
+```
+Opened and merged inside the window, 13:44 UTC. Not his.
+
+```yaml
+number: 2032
+title: "add bra detailed size"
+author: inga-ar
+state: closed
+merged: true
+closed: 2026-10-12
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2032
+```
+Approved by hakansoylu1, merged 12:10 UTC. Not his.
+
+```yaml
+number: 2030
+title: "add SMS article filtering"
+author: inga-ar
+state: closed
+merged: true
+closed: 2026-10-12
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2030
+```
+Approved by hakansoylu1, merged 11:55 UTC. Not his.
+
+```yaml
+number: 2029
+title: "timezone brand migration"
+author: honeypsabu
+state: closed
+merged: true
+closed: 2026-10-13
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2029
+```
+Merged 10-13 08:34 UTC. Not his.
+
+```yaml
 number: 2031
 title: "oneills: add productCharacteristics input"
 author: marianabassi

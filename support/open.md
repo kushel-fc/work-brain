@@ -2,7 +2,7 @@
 
 FD-sourced/support-shaped tickets, by priority then age (oldest first within each tier). Sourced from the team BDD Triage view: https://linear.app/fashioncloud/team/BDD/triage. Populated on sync. Full raw Triage list lives in [`sources/linear/triage.md`](../sources/linear/triage.md).
 
-**Five open, all unassigned, no High.** Two new Mediums: BDD-3388 (certificate removal blocked by `backend_db` in the merge step) and BDD-3405 (Ballin GTIN deletion). BDD-3357 (ftcCashmere 403) is now five days old while its Dagster failures keep recurring. Irem Bulut closed both High PME Legend tickets (BDD-3358, BDD-3359) and BDD-3362 (Bestseller reprocess), see [`recently-closed.md`](recently-closed.md). BDD-3305 is still an internal feature request Dushan owns, not listed here.
+**Five open, all unassigned, no High.** New Medium BDD-3410 (Brax visibility flags false in Mongo while PIPE shows true). BDD-3405 (Ballin GTIN deletion) closed by Irem Bulut 10-12 08:54 UTC, see [`recently-closed.md`](recently-closed.md). BDD-3357 (ftcCashmere 403) is six days old and ftcCashmere_FEED2 failed a fourth time 10-12. BDD-3305 is still an internal feature request Dushan owns, not listed here.
 
 ## Medium
 
@@ -16,7 +16,7 @@ team: BDD
 updated: 2026-10-07
 url: https://linear.app/fashioncloud/issue/BDD-3357/error-403-forbidden-when-pipe-process-image-fd-679834
 ```
-Filed 10-07 13:33 UTC. Someone working on FTC Cashmere images: PIPE gets 403 Forbidden on `shop.ftc-cashmere.com` image URLs that open fine in a browser. ftcCashmere_FEED2 has failed three times since (10-08 and 10-09 evening, 12 assets each; 10-11 morning, `download_images` exit 1 twice), now marked `recurring` in the [Dagster log](../dagster-alerts/log.md). Likely the same cause, not confirmed.
+Filed 10-07 13:33 UTC. Someone working on FTC Cashmere images: PIPE gets 403 Forbidden on `shop.ftc-cashmere.com` image URLs that open fine in a browser. ftcCashmere_FEED2 has failed four times since (10-08, 10-09 and 10-12 evening, 12 assets each; 10-11 morning, `download_images` exit 1 twice), now marked `recurring` in the [Dagster log](../dagster-alerts/log.md). Likely the same cause, not confirmed.
 
 ```yaml
 id: BDD-3386
@@ -40,19 +40,19 @@ team: BDD
 updated: 2026-10-09
 url: https://linear.app/fashioncloud/issue/BDD-3388
 ```
-Filed 10-09 09:46 UTC by Mariana Bassi da Silva. A brand (meierLederwaren / Suri, example GTIN 8720638924128) wants its sustainability certificates removed. Reprocessing FEED clears them from `fcKeys` and `manufacturerAttributes` in transformedskus, but after merge they're gone from `fcKeys` and still in `manufacturerAttributes`, because the merge still takes the `backend_db` feed's data. Asks for `backend_db` to be dropped from the merge.
+Filed 10-09 09:46 UTC by Mariana Bassi da Silva. A brand (meierLederwaren / Suri, example GTIN 8720638924128) wants its sustainability certificates removed. Reprocessing FEED clears them from `fcKeys` and `manufacturerAttributes` in transformedskus, but after merge they're gone from `fcKeys` and still in `manufacturerAttributes`, because the merge still takes the `backend_db` feed's data. Asks for `backend_db` to be dropped from the merge. Touched 10-12 20:37 UTC, still unassigned.
 
 ```yaml
-id: BDD-3405
-title: "Delete gtins for ballin (FD: 680460)"
+id: BDD-3410
+title: "Visibility flags not alligned (FD: 680602)"
 priority: Medium
 status: Triage
 assignee: unassigned
 team: BDD
-updated: 2026-10-12
-url: https://linear.app/fashioncloud/issue/BDD-3405
+updated: 2026-10-13
+url: https://linear.app/fashioncloud/issue/BDD-3410/visibility-flags-not-alligned-fd-680602
 ```
-Filed 10-12 08:10 UTC. Delete a list of Ballin GTINs for F/W 2026 (brand id `65bcbe5472d06b0012d10de0`). Routine deletion.
+Filed 10-13 08:39 UTC by Dion Piet. Brax (example GTIN 4067837170036): PIPE shows the Exchange visibility flags as true, as the brand sends them, but Mongo has them false. Asks why.
 
 ## Low
 

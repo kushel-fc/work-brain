@@ -2,48 +2,20 @@
 
 PRs Kushel opened, across both repos (plus backend, checked for his own PRs only). Populated on sync.
 
-**Three open, opened 10-09. One conflicts.**
+**One open: #2929, approved by four.** All three from last sync merged 10-12 and are in production: product-service#2912 (09:02 UTC, merged by Chamindu36), #2916 (10:26 UTC) and backend#7085 (10:27 UTC, after its conflict was resolved), plus his #2917 (Slice 5 part 3/3), opened and merged inside the window. product-service release #2922 (12:10 UTC) carried #2912, #2916 and #2917. Backend production deployment #7088 (merged by aledileo 15:08 UTC) carried #7085. See [`archive/prs/`](../archive/prs/).
 
 ```yaml
-number: 7085
-repo: backend
-title: "BDD-3223: Report CSV omission reasons and give PCS two minutes to resolve a download"
-author: kushel-fc
-state: open
-mergeable_state: conflicting
-review_state: awaiting-first-review
-requested_reviewers: [brand-data-dev (team), platform (team), abubakarwase, alirezaMoazenFashion, msamprz, aledileo]
-updated: 2026-10-12
-url: https://github.com/fashioncloud/backend/pull/7085
-```
-Opened 10-09 15:04 UTC, +770/-302. Step 2 of the 3-PR deploy order in #2916 (PCS, then this, then frontend). **Now conflicts with its base.** Most likely cause: aledileo's backend#7078 (run the monolith from `apps/backend` as an Nx app) merged 10-10 10:52 UTC and went out in production deployment #7086. Only CodeRabbit has commented. No human review yet.
-
-```yaml
-number: 2916
+number: 2929
 repo: product-service
-title: "BDD-3223: Accept 2000 GTINs per resolve and fix the CSV image extension, description and dropped-GTIN reporting"
+title: "BDD-3214: name PCS's database fc_product_content_service"
 author: kushel-fc
 state: open
-mergeable_state: blocked
-review_state: awaiting-first-review
-requested_reviewers: [brand-data-dev (team), dwiajik, abirprantofc]
-updated: 2026-10-09
-url: https://github.com/fashioncloud/product-service/pull/2916
-```
-Opened 10-09 15:04 UTC, +397/-38. PCS side of the CSV parity follow-up: `MAX_BULK_GTINS` 1000 to 2000, PCS to PDS timeout a flat 60s, an optional `imageSize` request field for the image file extension, `longDescription` for the description column, and a `csvSkipped` list of GTINs left out of the CSV. Deploys first of the three. CodeRabbit asked for changes, then approved 16:07 UTC. No human review yet. Mergeable, blocked on review.
-
-```yaml
-number: 2912
-repo: product-service
-title: "BDD-3214: map a resolve request to its download audit entry (2/3)"
-author: kushel-fc
-state: open
-mergeable_state: clean
+mergeable_state: unstable
 review_state: approved
-requested_reviewers: [irembbt, abirprantofc]
-updated: 2026-10-12
-url: https://github.com/fashioncloud/product-service/pull/2912
+requested_reviewers: [abubakarwase]
+updated: 2026-10-13
+url: https://github.com/fashioncloud/product-service/pull/2929
 ```
-Opened 10-09 12:45 UTC, +808/-21. Slice 5 part 2/3: pure `toAuditEntry` mapper (not called yet), `initiator` now validated against `DownloadInitiator` (unknown values get a 400), optional `organizationType`. Chamindu36 left five comments 10-09, approved 10-12 08:22 UTC. **Clean and ready to merge.** Part 3/3 (writing the entry) isn't open.
+Opened 10-13 08:33 UTC, +2/-2. Renames PCS's audit database on the content cluster from `product-content-service` to `fc_product_content_service`, to match the `fc_<service>` naming of the other Mongo databases. Approved within seven minutes by Chamindu36, irembbt, CodeRabbit and dwiajik. `unstable` only because `security / trivy-sast` was still pending at sync time; every other check passed. Mergeable once that finishes.
 
 His earlier self-closed PR (#2545, GTIN cleanup batch) is still parked in the archive, unrevisited.

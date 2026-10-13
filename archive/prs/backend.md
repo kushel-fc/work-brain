@@ -3,6 +3,28 @@
 His own backend PRs that were listed in `prs/mine.md` (backend isn't one of the two tracked repos), moved here once merged or closed. Never deleted.
 
 ```yaml
+number: 7085
+title: "BDD-3223: Generate the summary-bar CSV on PCS next to video, report CSV omission reasons and give downloads 100 s for PCS"
+author: kushel-fc
+state: closed
+merged: true
+closed: 2026-10-12
+url: https://github.com/fashioncloud/backend/pull/7085
+```
+Opened 10-09 15:04 UTC. Was conflicting at the 10-12 sync; the conflict got resolved, it was approved by dwiajik and irembbt, then merged by him 10:27 UTC, right after product-service#2916 (the deploy order held). Retitled at merge (was "Report CSV omission reasons and give PCS two minutes to resolve a download"; the timeout is now 100 s). In production via backend#7088.
+
+```yaml
+number: 7088
+title: "Production Deployment"
+author: kushel-fc
+state: closed
+merged: true
+closed: 2026-10-12
+url: https://github.com/fashioncloud/backend/pull/7088
+```
+His production deployment PR carrying only #7085. Merged by aledileo 15:08 UTC.
+
+```yaml
 number: 7066
 title: "BDD-3223: Serve the CSV of every download initiator through one POST and GET /downloads/:id"
 author: kushel-fc

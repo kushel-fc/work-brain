@@ -3,6 +3,160 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2927
+title: "Stream shards reader code implementation."
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-10-13
+url: https://github.com/fashioncloud/product-service/pull/2927
+```
+PDS replay worker. Opened and merged inside the window, 10-13 07:18 UTC. Not his.
+
+```yaml
+number: 2926
+title: "increase limit"
+author: irembbt
+state: closed
+merged: true
+closed: 2026-10-12
+url: https://github.com/fashioncloud/product-service/pull/2926
+```
+Opened and merged inside the window, 14:37 UTC. Not his.
+
+```yaml
+number: 2925
+title: "Add Shard planning logic for PDS replay worker"
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-10-12
+url: https://github.com/fashioncloud/product-service/pull/2925
+```
+Opened and merged inside the window, 14:01 UTC. Not his.
+
+```yaml
+number: 2924
+title: "Switch to pcs-a consumer name without filter"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-12
+url: https://github.com/fashioncloud/product-service/pull/2924
+```
+Opened and merged inside the window, 13:00 UTC. Not his.
+
+```yaml
+number: 2923
+title: "Add PDS Replay Worker module with initial setup and configurations"
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-10-12
+url: https://github.com/fashioncloud/product-service/pull/2923
+```
+Opened and merged inside the window, 13:19 UTC. Not his.
+
+```yaml
+number: 2922
+title: "Production Release - 2026-10-12"
+author: app/github-actions
+state: closed
+merged: true
+closed: 2026-10-12
+url: https://github.com/fashioncloud/product-service/pull/2922
+```
+Release, triggered by Chamindu36, paired with brand-data-pipeline#2036. Merged 12:10 UTC, after his #2912, #2916 and #2917 had merged and gone through staging release #2920, so all three are in production. The PDS relay Lambda error alert fired 8 minutes later (Aji: a release with breaking changes).
+
+```yaml
+number: 2921
+title: "Image reprocessing collector: add FEED_WHITELIST"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-12
+url: https://github.com/fashioncloud/product-service/pull/2921
+```
+Opened and merged inside the window, 12:55 UTC. Not his.
+
+```yaml
+number: 2920
+title: "Staging Release - 2026-10-12"
+author: app/github-actions
+state: closed
+merged: true
+closed: 2026-10-12
+url: https://github.com/fashioncloud/product-service/pull/2920
+```
+Release. Merged 12:00 UTC.
+
+```yaml
+number: 2918
+title: "BDD-3287 Make the PDS probe consumer configurable in terraform, use pcs-b to test filtering"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-12
+url: https://github.com/fashioncloud/product-service/pull/2918
+```
+Opened and merged inside the window, 11:26 UTC. Not his.
+
+```yaml
+number: 2917
+title: "BDD-3214: record the download audit entry on every resolve (3/3)"
+author: kushel-fc
+state: closed
+merged: true
+closed: 2026-10-12
+url: https://github.com/fashioncloud/product-service/pull/2917
+```
+**His.** Slice 5 part 3/3, opened and merged inside the window (merged by him 11:27 UTC). In production via #2922.
+
+```yaml
+number: 2916
+title: "BDD-3223: Accept 2000 GTINs per resolve and fix the CSV image extension, description and dropped-GTIN reporting"
+author: kushel-fc
+state: closed
+merged: true
+closed: 2026-10-12
+url: https://github.com/fashioncloud/product-service/pull/2916
+```
+**His.** PCS side of the CSV parity follow-up, merged by him 10:26 UTC, first of the three-PR deploy order. In production via #2922.
+
+```yaml
+number: 2915
+title: "Add replay worker infrastructure and IAM roles for ECS"
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-10-12
+url: https://github.com/fashioncloud/product-service/pull/2915
+```
+PDS replay infrastructure, merged 09:00 UTC. Not his.
+
+```yaml
+number: 2914
+title: "Implement replay job db module and supportive functions to handle slot claiming."
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-10-12
+url: https://github.com/fashioncloud/product-service/pull/2914
+```
+PDS replay job DB module, merged 11:45 UTC. Not his.
+
+```yaml
+number: 2912
+title: "BDD-3214: map a resolve request to its download audit entry (2/3)"
+author: kushel-fc
+state: closed
+merged: true
+closed: 2026-10-12
+url: https://github.com/fashioncloud/product-service/pull/2912
+```
+**His.** Slice 5 part 2/3, approved by Chamindu36 and merged by Chamindu36 09:02 UTC. In production via #2922.
+
+```yaml
 number: 2913
 title: "Production Release - 2026-10-09"
 author: app/github-actions

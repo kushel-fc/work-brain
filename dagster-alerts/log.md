@@ -3,6 +3,56 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
+timestamp: 2026-10-13T08:05:50Z
+channel: brand-data-dev-alerts
+brand: adidas
+summary: "adidas_FEED: 11 asset materializations failed (run e12051e5, from the schedule), starting at download_images and feed_transform"
+status: recurring
+linked_issue: null
+```
+Second adidas failure, same 11-asset shape as 10-09 (run 5702599d). The 10-09 thread tagged Irem but never explained it. No thread on this one yet.
+
+```yaml
+timestamp: 2026-10-12T21:45:19Z
+channel: brand-data-dev-alerts
+brand: platform (PCS 5xx)
+summary: "PCS content API 5xx rate triggered 21:45 (0.045) and PCS ALB target 5xx ratio 21:46; both recovered by 22:01 UTC"
+status: recurring
+linked_issue: null
+```
+Fourth PCS 5xx episode since the monitors landed 10-09 (10-09 afternoon, 10-09 night, 10-11, now 10-12 night). Self-resolved in about 15 minutes. This time someone put a :raising_hand: on both trigger messages, so someone may have picked it up, but there's no thread. It came about 10h after production release #2922 (12:10 UTC), which carried his #2916 and #2917 into PCS. Not shown to be related.
+
+```yaml
+timestamp: 2026-10-12T17:37:56Z
+channel: brand-data-dev-alerts
+brand: ftcCashmere
+summary: "ftcCashmere_FEED2: 12 asset materializations failed (run 405b23c9, from the schedule), starting at download_images and extract"
+status: recurring
+linked_issue: null
+```
+Fourth failing ftcCashmere_FEED2 run since 10-08. Still matches BDD-3357 (PIPE 403 on `shop.ftc-cashmere.com`), which is still unassigned in Triage. No thread.
+
+```yaml
+timestamp: 2026-10-12T13:11:38Z
+channel: brand-data-dev-alerts
+brand: carsJeans
+summary: "carsJeans_FEED_sync_images exceeded the 3h run time limit (run 199edd1a, started 10:11 UTC from the schedule)"
+status: recurring
+linked_issue: null
+```
+Ninth carsJeans run-limit hit, same 10:10 UTC scheduled start. No thread, still no owner.
+
+```yaml
+timestamp: 2026-10-12T12:18:24Z
+channel: brand-data-dev-alerts
+brand: platform (PDS relay)
+summary: "PDS relay Lambda erroring: pds-stream-relay-color-production (82) and pds-stream-relay-style-production (33); recovered 12:36 UTC"
+status: self-resolved
+linked_issue: null
+```
+Aji in-thread (12:27 UTC): broke temporarily because of a release with breaking changes, should already be resolved. It fired 8 minutes after production release #2922 merged (12:10 UTC). Recovered 18 minutes later.
+
+```yaml
 timestamp: 2026-10-12T06:06:08Z
 channel: brand-data-dev-alerts
 brand: platform (process_enrichment_flow)
@@ -87,10 +137,10 @@ timestamp: 2026-10-09T08:05:50Z
 channel: brand-data-dev-alerts
 brand: adidas
 summary: "adidas_FEED: 11 asset materializations failed (run 5702599d, from the schedule), starting at download_images and feed_transform"
-status: active
+status: recurring
 linked_issue: null
 ```
-First adidas entry in this log. Chamindu tagged Irem in-thread, no explanation yet.
+First adidas entry in this log. Chamindu tagged Irem in-thread, no explanation yet. Recurred 10-13 (see above), so now `recurring`.
 
 ```yaml
 timestamp: 2026-10-08T17:38:21Z
@@ -1125,22 +1175,3 @@ linked_issue: null
 ```
 New occurrence for this brand/feed, 09-13 12:13:21 CEST. No thread or reaction visible.
 
-```yaml
-timestamp: 2026-09-12T13:50:34Z
-channel: brand-data-dev-alerts
-brand: platform (galvatron ECS)
-summary: ECS health check failures detected for galvatron service, six more trigger/recover cycles
-status: recurring
-linked_issue: null
-```
-Same flapping pattern as previous cycles — six short-lived trigger/recover pairs across 09-11 15:52–20:03 CEST and 09-12 04:52–15:50 CEST, each self-resolving within 2-6 minutes. Consistently `galvatron` only. No thread; treated as known noise, not a fresh incident.
-
-```yaml
-timestamp: 2026-09-12T06:03:29Z
-channel: brand-data-dev-alerts
-brand: platform (Datadog / product-service-logs-index)
-summary: Log index hit warning threshold then daily quota again, self-resolved on quota reset
-status: recurring
-linked_issue: null
-```
-Same pattern as the 09-10 occurrence logged last cycle: warning threshold (85%) hit 09-11 17:42 CEST, daily quota (100%) hit 23:46 CEST, both auto-recovered 09-12 08:03 CEST on quota reset. Second time this exact cycle has happened within a week — upgrading status from the prior "self-resolved" to "recurring" since it's now a pattern, not a one-off. No thread; no action needed given the auto-recovery, but worth a permanent fix (larger quota or noisier-source cleanup) if it keeps recurring.

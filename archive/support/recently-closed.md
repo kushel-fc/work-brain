@@ -3,6 +3,15 @@
 Older entries rolled off `support/recently-closed.md`'s ~25-item cap. Never deleted.
 
 ```yaml
+id: BDD-3229
+title: "RE: Cancellations SS27 (FD: 675432)"
+priority: Low
+closed: 2026-09-14
+url: https://linear.app/fashioncloud/issue/BDD-3229/re-cancellations-ss27-fd-675432
+```
+Picked up individually from Triage last cycle, shipped this one.
+
+```yaml
 id: BDD-3180
 title: API access permission error (FD: 675082)
 priority: Low
