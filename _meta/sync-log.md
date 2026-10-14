@@ -2,6 +2,18 @@
 
 One entry per sync run. Prune entries older than ~30 days.
 
+## 2026-10-14 (~08:45 UTC)
+
+About 24h since the last sync. Linear (claude.ai connector), GitHub (`gh`) and Slack (claude.ai connector) were all reachable. The `plugin:engineering:*` servers needed auth and weren't used.
+
+- **His #2929 (database rename) merged 10-13 08:48 UTC**, minutes before the last sync wrote it up as open, and reached production in release #2938 (14:21 UTC). His #2939 (Fashion Cloud Test brand on PIPE) was opened and merged inside the window (10-14 08:22 UTC). frontend#7177 (BDD-3223) merged 10-13. **He has no open PRs.** Shaping doc updated.
+- **Review queue 2 to 4.** #2928 merged without his review. New: irembbt's #2930 (exclude `BACKEND_DB` from the certificate merge, him as the only human reviewer, likely the BDD-3388 fix), Chamindu36's #2940 (PDS replay worker, +3120) and #2941 (package scope, +2166/-1406).
+- Linear: his 3 live issues unchanged. Triage 6 to 4: Irem Bulut took BDD-3388 and BDD-3410 to In Progress on 10-13. Nothing new landed. support/open.md 5 to 3.
+- Slack (9 messages): **PDS stream publish failures 10-13 15:12 UTC**, cleared in 15 minutes, but Aji traced it to style `partitionKey`s over Kinesis's 256-character limit, so logged `active`. carsJeans 3h (tenth), process_enrichment_flow 3h (third), ftcCashmere_FEED2 (fifth), adidas_FEED (third), comma_FEED2 one-off timeout. No PCS 5xx since 10-12 22:01 UTC. Dagster log +6, pruned 3 (09-13, 09-14), now 120.
+- GitHub: product-service 3 to 3 (#2928 and #2929 merged, #2845 closed; #2930, #2940, #2941 new; #2931 to #2939 opened and merged inside the window). brand-data-pipeline 14 to 14 (#2045 to #2049 opened and merged inside the window). All archived.
+- Sync-log pruned: the 09-14 entry (30 days old).
+- Notified: no. None of his PRs flipped to conflict or Changes Requested (he has none open). No due dates on his issues and no new Triage tickets. The Dagster repeats (adidas, ftcCashmere, carsJeans, process_enrichment_flow) continue patterns already `recurring` and already reported, and the PDS publish alert cleared itself and is a new cause, not a repeat of something that had self-resolved.
+
 ## 2026-10-13 (~08:50 UTC)
 
 About 24h since the last sync. Linear (claude.ai connector), GitHub (`gh`) and Slack (claude.ai connector) were all reachable. The `plugin:engineering:*` servers needed auth and weren't used.
@@ -236,19 +248,6 @@ All three sources reachable this run. ~3-day gap since last sync (09-18 08:50 �
 - GitHub: five new PRs landed on each repo (product-service #2697/#2698/#2705/#2708/#2709, brand-data-pipeline #1882/#1883/#1888/#1889/#1890); #2655/#1839 (image-reprocessing-collector-job pair) merged. **Review queue up to 6** (new: #2705, a real feature — per-manufacturer/feed lookback override — not another routine brand migration).
 - New Dagster alerts, none actioned yet: kultivate_FEED joined the "exceeded 3h limit" brands; hom_FEED hit a first-occurrence asset-materialization failure; a new Datadog signature (extract-job Node string-length limit) self-resolved in ~5 min.
 - Notified: no — nothing crossed the notification bar. No deadline passed with zero movement (BDD-3263's deadline was met, not missed). No flip to conflict/Changes-Requested on his own work (his only own PR, #1890, is clean). No new Urgent-priority ticket landed unassigned (zero new Triage items at all this cycle). No Dagster alert recurred after reaching `self-resolved` status — baldessarini and hom are first-occurrence active failures rather than repeats of something that had self-resolved, and gaborBags was a one-off that resolved cleanly rather than recurring.
-
-## 2026-09-14 (08:46 UTC)
-
-- **profuomo's `move_images_from_ftp_to_s3_job_sync` recurred 3 more times (09-11/09-12/09-13, ~24h apart)** after last sync called it self-resolved alongside lugina — lugina itself stayed quiet. Crosses the notification bar (Dagster alert recurring rather than self-resolving). Earmark note updated; profuomo now tracked as its own `recurring` log entry.
-- **iosByMaica's merge-rule bug (missing `customAttributes` in `rootLevelAttributes`) spread to falke** — Kushel flagged it in-thread 09-11, Aji fixed it same day (~30 min turnaround). Likely landed via product-service#2675.
-- **BDD-3103's long-overdue Aug 25 deadline finally closed** — Deployed this cycle.
-- Two more tickets shipped: BDD-3091 (Hugo Boss MM) and BDD-3164 (Bestseller B2B pack images) — moved to `support/recently-closed.md`; 2 oldest entries (BDD-3136, BDD-2945) rolled off the 25-cap into archive.
-- One new internal ticket assigned: BDD-3252 (Off-Boarded Brands Deletion, Medium, To Do, not FD-referenced).
-- Triage backlog grew from 11 to 14 — nothing left this cycle, three new landed. Two of the three (BDD-3248, BDD-3249) are High priority and unassigned — first High-priority items sitting in Triage in a while, though not Urgent so no notification.
-- GitHub: product-service #2668/#2666 merged, three new PRs landed (#2677, #2676, #2675 — the last likely the falke fix); brand-data-pipeline #1810 merged, two new PRs landed (#1864, #1862). None of the five new PRs name Kushel. His own PR count stays at zero; PR #2514 (to-review) unchanged content-wise but now 17 days stale, `mergeable_state` flapped again.
-- product-service#1737 (not his) resolved from `unknown` to an actual merge conflict — first real signal on that stale PR in a while.
-- Dagster noise this cycle: PDS Kinesis/stream-publish throttling recurred several more times, ECS `galvatron` health checks flapped six more times, the Datadog log-index quota pattern recurred a second time (upgraded to `recurring`), `analytics_trigger_sensor` fired twice more, kultivate_FEED recurred a third time. New first-occurrence brands: sOliver/FEED2, snocks/FEED, ona__falke_FEED (distinct from falke_PRICAT), rinoAndPelle_FEED (first since 08-24). The ammann/garcia OOM cluster and `process_enrichment_flow`'s 3h-timeout recurrence both went quiet this cycle.
-- Notified: yes — profuomo's Dagster alert recurred after being called self-resolved last sync, crossing the notification bar.
 
 ## 2026-09-15
 

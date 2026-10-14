@@ -3,6 +3,66 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
+timestamp: 2026-10-14T08:05:11Z
+channel: brand-data-dev-alerts
+brand: adidas
+summary: "adidas_FEED: 11 asset materializations failed (run 90c660b3, from the schedule), starting at download_images and feed_transform"
+status: recurring
+linked_issue: null
+```
+Third adidas failure (10-09, 10-13, now 10-14), same 11-asset shape each time, now on a newer pipeline commit (8868c6fc). Still no explanation; no thread on this one.
+
+```yaml
+timestamp: 2026-10-13T17:38:10Z
+channel: brand-data-dev-alerts
+brand: ftcCashmere
+summary: "ftcCashmere_FEED2: 12 asset materializations failed (run 4c0c1868, from the schedule), starting at download_images and extract"
+status: recurring
+linked_issue: null
+```
+Fifth failing ftcCashmere_FEED2 run since 10-08. Still matches BDD-3357 (PIPE 403 on `shop.ftc-cashmere.com`), which is a week old and still unassigned in Triage. No thread.
+
+```yaml
+timestamp: 2026-10-13T15:12:29Z
+channel: brand-data-dev-alerts
+brand: platform (PDS publish)
+summary: "PDS stream publish failures (metric 69) + PUBLISHING_JOB_PD_STREAMS_FAILED log alert, paired, recovered 15:27 UTC"
+status: active
+linked_issue: null
+```
+The monitor cleared itself in 15 minutes like the earlier flares, but this time the cause is a data problem, not a transient one. Aji posted the error in-thread 10-14 08:14 UTC: Kinesis rejects records whose `partitionKey` is over 256 characters, and some style keys are a brand prefix (`006060:`, `008060:`) plus a long comma-joined list of German color names. Those records will keep failing until the key is shortened or hashed, so `active` rather than `self-resolved`. Not his code as far as the sources show. Different cause from the earlier self-clearing flares, one of which Aji traced to a transient DNS failure on the Kinesis endpoint.
+
+```yaml
+timestamp: 2026-10-13T15:06:59Z
+channel: brand-data-dev-alerts
+brand: platform (process_enrichment_flow)
+summary: "process_enrichment_flow exceeded the 3h run time limit (run 6179ceed, started 12:06 UTC from enrichment_file_sensor)"
+status: recurring
+linked_issue: null
+```
+Third 3h hit (10-06, 10-12, now 10-13), two days running. One :white_check_mark:, no thread, still unexplained.
+
+```yaml
+timestamp: 2026-10-13T13:11:56Z
+channel: brand-data-dev-alerts
+brand: carsJeans
+summary: "carsJeans_FEED_sync_images exceeded the 3h run time limit (run 893c23ca, started 10:11 UTC from the schedule)"
+status: recurring
+linked_issue: null
+```
+Tenth carsJeans run-limit hit, same 10:10 UTC scheduled start. One :white_check_mark:, no thread, still no owner.
+
+```yaml
+timestamp: 2026-10-13T10:18:00Z
+channel: brand-data-dev-alerts
+brand: comma
+summary: "comma_FEED2: 12 asset materializations failed (run b236e072, from the schedule), starting at download_images and extract"
+status: self-resolved
+linked_issue: null
+```
+First comma entry in this log. Aji replied in-thread 11:22 UTC: "timeout". No repeat through this sync.
+
+```yaml
 timestamp: 2026-10-13T08:05:50Z
 channel: brand-data-dev-alerts
 brand: adidas
@@ -1144,34 +1204,4 @@ status: active
 linked_issue: null
 ```
 Distinct from the ona__falke_FEED timeout logged 09-13 (different run) and from the merge-rule bug that hit falke 09-11 (already fixed). No thread visible.
-
-```yaml
-timestamp: 2026-09-14T03:50:41Z
-channel: brand-data-dev-alerts
-brand: platform (analytics_trigger_sensor)
-summary: "analytics step — essential container exited, exit code 1, twice more"
-status: recurring
-linked_issue: null
-```
-Fired again 09-11 12:54:12 CEST and 09-14 05:50:41 CEST — same signature as the earlier occurrences in this log (analytics step, exit code 1). No thread or reaction either time. A recurring, low-frequency background failure with no owner yet.
-
-```yaml
-timestamp: 2026-09-13T14:03:00Z
-channel: brand-data-dev-alerts
-brand: profuomo
-summary: "move_images_from_ftp_to_s3_job_sync recurred 3 more times (09-11, 09-12, 09-13, ~24h apart) after being called self-resolved last sync"
-status: recurring
-linked_issue: null
-```
-Last sync's `lugina / profuomo` entry (2026-09-10T09:03:09Z) called profuomo quiet after one recurrence and moved the linked earmark to Triggered/Dismissed with a note to check again. It didn't hold: profuomo fired on the identical job/step at almost exactly 16:03 CEST on 09-11, 09-12, and 09-13 — a daily pattern, not a one-off. Same signature as lugina's (which does appear to have stayed quiet since 09-10). No thread visible on any of the three. Crosses the notification bar (recurring after being called self-resolved).
-
-```yaml
-timestamp: 2026-09-13T10:13:21Z
-channel: brand-data-dev-alerts
-brand: sOliver
-summary: "sOliver/FEED2 — 12 asset materializations failed (download_images, extract, etc.)"
-status: active
-linked_issue: null
-```
-New occurrence for this brand/feed, 09-13 12:13:21 CEST. No thread or reaction visible.
 

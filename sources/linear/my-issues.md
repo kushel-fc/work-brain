@@ -2,7 +2,7 @@
 
 Assigned to Kushel, live (non-completed) statuses. Populated on sync — completed/canceled work stays in Linear's own history rather than being repeated here; see `git log` for what rolled off.
 
-**10-13 sync:** Still 3 live, no status changes. His Slice 5 PRs 2/3 (product-service#2912) and 3/3 (#2917) plus the Slice 3.2 parity follow-ups (product-service#2916, backend#7085) all merged 10-12 and are in production. The linked tickets BDD-3214 and BDD-3223 were already Done and stayed Done. BDD-3214 picked up one more PR 10-13 (#2929, database rename). See [`prs/mine.md`](../../prs/mine.md). BDD-3213, BDD-2406 and BDD-2079 unchanged in Linear.
+**10-14 sync:** Still 3 live, no status changes. His product-service#2929 (database rename, linked to BDD-3214) merged 10-13 08:48 UTC and is in production (release #2938). BDD-3214 stays Done. His frontend#7177 (BDD-3223) merged 10-13; BDD-3223 stays Done. BDD-3213, BDD-2406 and BDD-2079 unchanged in Linear.
 
 ---
 

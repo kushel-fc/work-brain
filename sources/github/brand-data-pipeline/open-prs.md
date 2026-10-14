@@ -2,7 +2,7 @@
 
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
-15 to 14. Off the list, all merged: inga-ar's #2030 and #2032 (10-12), honeypsabu's #2029 (10-13 08:34 UTC). New, none his: inga-ar's #2044 (material normalization) and dwiajik's #2039 (SAX XML parsing for bugatti, profuomo, mustang, schmidtGroup). Opened and merged inside the window: #2033, #2035, #2037, #2038 (revert pmeLegend FEED resources_size after SAX), #2040, #2041, #2042, #2043, staging #2034 and production #2036 (10-12 12:10 UTC, paired with product-service#2922). Older PRs' mergeable states mostly read `unknown` again and are left at their last known values. See [`archive/prs/brand-data-pipeline.md`](../../../archive/prs/brand-data-pipeline.md).
+14 to 14, same PRs. Nothing left the list. Opened and merged inside the window, none his: #2045 (Numph color/shoe materials), #2046 (stoneFashion mainImage visibility), #2047 (BDD-2991 header validation), staging #2048 and production #2049 (10-13 14:21 UTC, paired with product-service#2938). hakansoylu1's #2011 was updated 10-13. Older PRs' mergeable states mostly read `unknown` again and are left at their last known values. See [`archive/prs/brand-data-pipeline.md`](../../../archive/prs/brand-data-pipeline.md).
 
 ```yaml
 number: 2044
@@ -52,7 +52,7 @@ draft: true
 mergeable_state: mergeable
 review_state: awaiting-first-review
 requested_reviewers: []
-updated: 2026-10-09
+updated: 2026-10-13
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/2011
 ```
 Opened 10-06 13:31 UTC, draft, no description, updated 10-09. +856/-311, a local CLI agent under `brand-migration/agent/` with steps for feed transform, global transform, mapping and merge jobs. Not his.

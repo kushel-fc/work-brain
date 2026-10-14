@@ -3,6 +3,61 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2049
+title: "Production Release - 2026-10-13"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-10-13
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2049
+```
+Release, merged 14:21 UTC, paired with product-service#2938.
+
+```yaml
+number: 2048
+title: "Staging Release - 2026-10-13"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-10-13
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2048
+```
+Staging release, merged 13:44 UTC.
+
+```yaml
+number: 2047
+title: "BDD-2991: reject positionalHeaders combined with expectedHeaders/mandatoryFields"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-13
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2047
+```
+Opened and merged inside the window (14:47 UTC). Not his.
+
+```yaml
+number: 2046
+title: "Update mainImage visibility stoneFashion"
+author: Dionpiet97
+state: closed
+merged: true
+closed: 2026-10-13
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2046
+```
+Opened and merged inside the window (11:16 UTC). Not his.
+
+```yaml
+number: 2045
+title: "Numph - Search Color & Shoe materials logic changes"
+author: hakansoylu1
+state: closed
+merged: true
+closed: 2026-10-13
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2045
+```
+Opened and merged inside the window (12:36 UTC). Not his.
+
+```yaml
 number: 2043
 title: "Remove peta approved vegan"
 author: marianabassi

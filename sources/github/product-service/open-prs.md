@@ -2,44 +2,43 @@
 
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
-5 to 3. Off the list, all merged 10-12: **his own #2912 (09:02 UTC, by Chamindu36) and #2916 (10:26 UTC, by him)**, and Chamindu36's #2914 and #2915 (PDS replay worker). New: **his own #2929** (rename PCS's database) and Chamindu36's #2928 (PDS replay writer, names him as reviewer). Opened and merged inside the window: his #2917 (Slice 5 part 3/3), #2918, #2921, #2923, #2924, #2925, #2926, #2927, staging release #2920 and production release #2922 (10-12 12:10 UTC, after #2916 and #2917 merged). See [`archive/prs/product-service.md`](../../../archive/prs/product-service.md).
+3 to 3, but all three are different. Off the list: **his own #2929 (merged 10-13 08:48 UTC)**, Chamindu36's #2928 (merged 09:21 UTC) and dwiajik's draft #2845 (closed unmerged 09:39 UTC). New, all three naming him: irembbt's #2930, Chamindu36's #2940 and #2941. Opened and merged inside the window: **his own #2939** (Fashion Cloud Test brand on PIPE, merged 10-14 08:22 UTC), #2931 to #2937, staging release #2936 and production release #2938 (10-13 14:21 UTC, which carried #2929). See [`archive/prs/product-service.md`](../../../archive/prs/product-service.md).
 
 ```yaml
-number: 2929
-title: "BDD-3214: name PCS's database fc_product_content_service"
-author: kushel-fc
+number: 2941
+title: "Refactor package references to use @fashioncloud scope and update dependency paths"
+author: Chamindu36
 state: open
-mergeable_state: unstable
-review_state: approved
-requested_reviewers: [abubakarwase]
-updated: 2026-10-13
-url: https://github.com/fashioncloud/product-service/pull/2929
+mergeable_state: blocked
+review_state: awaiting-first-review
+requested_reviewers: [brand-data-dev, dwiajik, kushel-fc]
+updated: 2026-10-14
+url: https://github.com/fashioncloud/product-service/pull/2941
 ```
-His. Opened 10-13 08:33 UTC. See [`prs/mine.md`](../../../prs/mine.md).
+Opened 10-14 08:16 UTC, +2166/-1406, no description. Names him. See [`prs/to-review.md`](../../../prs/to-review.md).
 
 ```yaml
-number: 2928
-title: "Implement Replay writer code reusing the pds-relay-core logic."
+number: 2940
+title: "Full workflow orchestration for PDS replay worker"
 author: Chamindu36
 state: open
 mergeable_state: blocked
 review_state: changes-requested
-requested_reviewers: [irembbt, kushel-fc]
-updated: 2026-10-13
-url: https://github.com/fashioncloud/product-service/pull/2928
+requested_reviewers: [brand-data-dev, irembbt, julsjacinto, dwiajik, kushel-fc]
+updated: 2026-10-14
+url: https://github.com/fashioncloud/product-service/pull/2940
 ```
-Opened 10-13 08:01 UTC, +1306/-156. PDS replay writer. Names him. See [`prs/to-review.md`](../../../prs/to-review.md).
+Opened 10-13 15:58 UTC, +3120/-59. The PDS replay Fargate task (claims the queued job, reads the stream, finishes the job). Changes Requested is CodeRabbit's only. Names him. See [`prs/to-review.md`](../../../prs/to-review.md).
 
 ```yaml
-number: 2845
-title: "Add helper script to pull PDS stream data via the SQS consumer SDK"
-author: dwiajik
+number: 2930
+title: "Exclude BACKEND_DB from global certificate merge sources"
+author: irembbt
 state: open
-draft: true
-mergeable_state: mergeable
-review_state: awaiting-first-review
-requested_reviewers: []
-updated: 2026-10-01
-url: https://github.com/fashioncloud/product-service/pull/2845
+mergeable_state: blocked
+review_state: changes-requested
+requested_reviewers: [kushel-fc]
+updated: 2026-10-13
+url: https://github.com/fashioncloud/product-service/pull/2930
 ```
-Opened 10-01 11:40 UTC, draft. +486/-0. A local helper for reading a consumer's SQS queue with the PDS SDK. Not his. No change. Mergeable state read `unknown` again, left at last known value.
+Opened 10-13 09:37 UTC, +25/-0, no description. Looks like the fix for BDD-3388 (Suri certificates kept via `backend_db` in the merge), which Irem took out of Triage at 09:20 UTC. He is the only human reviewer requested. See [`prs/to-review.md`](../../../prs/to-review.md).

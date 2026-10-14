@@ -2,31 +2,7 @@
 
 Full raw Triage backlog for team BDD, sourced from https://linear.app/fashioncloud/team/BDD/triage. Populated on sync. See `support/open.md` for the FD-referenced/support-shaped curated subset.
 
-**10-13 sync:** 6 to 6. BDD-3405 (Ballin GTIN deletion) left: Irem Bulut closed it 10-12 08:54 UTC, minutes after the last sync. New: BDD-3410 (10-13, Medium, Brax visibility flags). BDD-3388 was touched 10-12 20:37 UTC but is still unassigned in Triage. BDD-3386, BDD-3357, BDD-3349 and BDD-3305 unchanged.
-
-```yaml
-id: BDD-3410
-title: "Visibility flags not alligned (FD: 680602)"
-priority: Medium
-status: Triage
-assignee: unassigned
-team: BDD
-updated: 2026-10-13
-url: https://linear.app/fashioncloud/issue/BDD-3410/visibility-flags-not-alligned-fd-680602
-```
-New 10-13 08:39 UTC. Support-shaped, see [`support/open.md`](../../support/open.md).
-
-```yaml
-id: BDD-3388
-title: "Issue on removing SA certificate information (FD: 680121)"
-priority: Medium
-status: Triage
-assignee: unassigned
-team: BDD
-updated: 2026-10-09
-url: https://linear.app/fashioncloud/issue/BDD-3388
-```
-Filed 10-09 09:46 UTC. Updated 10-12 20:37 UTC with no status or assignee change. Support-shaped, see [`support/open.md`](../../support/open.md).
+**10-14 sync:** 6 to 4. Irem Bulut took both Medium FD tickets out of Triage on 10-13 and has them In Progress: BDD-3388 (Suri certificates, triaged 09:20 UTC; irembbt's product-service#2930 looks like the fix and asks for his review) and BDD-3410 (Brax visibility flags, 13:34 UTC). Nothing new landed. BDD-3386, BDD-3357, BDD-3349 and BDD-3305 unchanged.
 
 ```yaml
 id: BDD-3386

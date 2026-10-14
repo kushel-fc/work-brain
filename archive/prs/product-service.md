@@ -3,6 +3,138 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2939
+title: "Enable Fashion Cloud Test brand on PIPE"
+author: kushel-fc
+state: closed
+merged: true
+closed: 2026-10-14
+url: https://github.com/fashioncloud/product-service/pull/2939
+```
+His. Opened 10-13 15:16 UTC, +5/-5. Moves brand `56c185b4dda95ba659ba1f9a` (fashionCloud_FEED/FEED2) from `brands_on_megatron` to `brands_on_pipe`; all 46 backend GTINs were already in PIPE `mappedskus`. Approved by irembbt and CodeRabbit, merged 10-14 08:22 UTC. Not in a production release yet.
+
+```yaml
+number: 2938
+title: "Production Release - 2026-10-13"
+author: app/github-actions
+state: closed
+merged: true
+closed: 2026-10-13
+url: https://github.com/fashioncloud/product-service/pull/2938
+```
+Release, merged 14:21 UTC, paired with brand-data-pipeline#2049. Carried his #2929 (database rename) and Chamindu36's #2928.
+
+```yaml
+number: 2937
+title: "Enhance AsyncAPI specifications for PDS replay event definition"
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-10-13
+url: https://github.com/fashioncloud/product-service/pull/2937
+```
+Opened and merged inside the window (14:22 UTC). Not his.
+
+```yaml
+number: 2936
+title: "Staging Release - 2026-10-13"
+author: app/github-actions
+state: closed
+merged: true
+closed: 2026-10-13
+url: https://github.com/fashioncloud/product-service/pull/2936
+```
+Staging release, merged 13:44 UTC.
+
+```yaml
+number: 2935
+title: "Keep only non-cancelled brands on Megatron brand array"
+author: dushansilva
+state: closed
+merged: true
+closed: 2026-10-13
+url: https://github.com/fashioncloud/product-service/pull/2935
+```
+Opened and merged inside the window (13:29 UTC). Not his.
+
+```yaml
+number: 2934
+title: "Refactor dependency-cruiser configuration and update package dependencies"
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-10-13
+url: https://github.com/fashioncloud/product-service/pull/2934
+```
+Opened and merged inside the window (12:48 UTC). Not his.
+
+```yaml
+number: 2933
+title: "docs(pipe): point PRODUCT_STYLE_UPDATED ODCS contract at MainEventBus"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-13
+url: https://github.com/fashioncloud/product-service/pull/2933
+```
+Opened and merged inside the window (12:43 UTC). Not his.
+
+```yaml
+number: 2932
+title: "BDD-2991: add expectedHeaders to PIPE parse-job"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-13
+url: https://github.com/fashioncloud/product-service/pull/2932
+```
+Opened and merged inside the window (14:47 UTC), paired with brand-data-pipeline#2047. Not his.
+
+```yaml
+number: 2931
+title: "fcapi-to-sftp-sync-job: onboard luisacerano and willen"
+author: dushansilva
+state: closed
+merged: true
+closed: 2026-10-13
+url: https://github.com/fashioncloud/product-service/pull/2931
+```
+Opened and merged inside the window (12:53 UTC). Not his.
+
+```yaml
+number: 2929
+title: "BDD-3214: name PCS's database fc_product_content_service"
+author: kushel-fc
+state: closed
+merged: true
+closed: 2026-10-13
+url: https://github.com/fashioncloud/product-service/pull/2929
+```
+His. +2/-2. Approved by Chamindu36, irembbt, CodeRabbit and dwiajik within seven minutes, merged by him 08:48 UTC, minutes before the 10-13 sync wrote it up as open. In production via release #2938 (14:21 UTC).
+
+```yaml
+number: 2928
+title: "Implement Replay writer code reusing the pds-relay-core logic."
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-10-13
+url: https://github.com/fashioncloud/product-service/pull/2928
+```
++1389/-156. Named him and irembbt; merged 09:21 UTC on dwiajik's and CodeRabbit's approvals, without his review.
+
+```yaml
+number: 2845
+title: "Add helper script to pull PDS stream data via the SQS consumer SDK"
+author: dwiajik
+state: closed
+merged: false
+closed: 2026-10-13
+url: https://github.com/fashioncloud/product-service/pull/2845
+```
+Draft since 10-01, closed unmerged 09:39 UTC. Not his.
+
+```yaml
 number: 2927
 title: "Stream shards reader code implementation."
 author: Chamindu36
