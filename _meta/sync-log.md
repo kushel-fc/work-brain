@@ -2,6 +2,19 @@
 
 One entry per sync run. Prune entries older than ~30 days.
 
+## 2026-10-15 (~08:50 UTC)
+
+About 24h since the last sync. Linear (claude.ai connector), GitHub (`gh`) and Slack (claude.ai connector) were all reachable. The `plugin:engineering:*` servers needed auth and weren't used.
+
+- **New own PR: product-service#2951** (transformedSku videos through to mergedSku/mappedSku), approved by Chamindu36, dwiajik and CodeRabbit, clean, not merged. Needs `fill-global-merge-rules` run per environment before deploy; earmarked.
+- **BDD-3215 (5.2 per-SKU download counts) went Done** 10-14 10:03 UTC off his #2944 (1/3), which is in production via release #2952 (10-15 07:48 UTC, triggered by him). #2946 (2/3) merged 10-15 07:31 UTC, not in production yet. 3/3 not open. Shaping doc updated.
+- **BDD-3388 went Done 10-15 08:17 UTC while irembbt's #2930 (him the only reviewer) is still open.** Review queue 4 to 3: #2941 merged without his review; #2940 has two approvals now.
+- Linear: his 3 live issues unchanged. Triage 4 to 6: BDD-3420 (IOS by Maica prices) and BDD-3457 (Obermeier EDI) new, both Medium, unassigned. support/open.md 3 to 5. Recently-closed +1 (BDD-3388), BDD-3150 rolled to archive.
+- Slack (13 messages): new fcapi-to-sftp-sync-job failure for Luisa Cerano (missing SFTP config, alarm cleared, Dushan checking); unitedLegwear_FEED first failure; PDS publish failures again 10-14 21:49 UTC (flipped `active` to `recurring`); adidas (fourth), ftcCashmere_FEED2 (sixth), carsJeans 3h (eleventh). Dagster log +6, pruned 6 (09-14 and early 09-15), now 120.
+- GitHub: product-service 3 to 5, brand-data-pipeline 14 to 15. 14 PRs archived (10 product-service, 4 brand-data-pipeline).
+- Sync-log pruned: the 09-15 entry (30 days old).
+- Notified: no. His only open PR is approved and clean, not in conflict or Changes Requested. No due dates on his issues; both new Triage tickets are Medium. The PDS publish alert recurred from `active` (cause known, unfixed), not after self-resolving, and adidas/ftcCashmere/carsJeans continue patterns already `recurring` and reported.
+
 ## 2026-10-14 (~08:45 UTC)
 
 About 24h since the last sync. Linear (claude.ai connector), GitHub (`gh`) and Slack (claude.ai connector) were all reachable. The `plugin:engineering:*` servers needed auth and weren't used.
@@ -248,11 +261,3 @@ All three sources reachable this run. ~3-day gap since last sync (09-18 08:50 �
 - GitHub: five new PRs landed on each repo (product-service #2697/#2698/#2705/#2708/#2709, brand-data-pipeline #1882/#1883/#1888/#1889/#1890); #2655/#1839 (image-reprocessing-collector-job pair) merged. **Review queue up to 6** (new: #2705, a real feature — per-manufacturer/feed lookback override — not another routine brand migration).
 - New Dagster alerts, none actioned yet: kultivate_FEED joined the "exceeded 3h limit" brands; hom_FEED hit a first-occurrence asset-materialization failure; a new Datadog signature (extract-job Node string-length limit) self-resolved in ~5 min.
 - Notified: no — nothing crossed the notification bar. No deadline passed with zero movement (BDD-3263's deadline was met, not missed). No flip to conflict/Changes-Requested on his own work (his only own PR, #1890, is clean). No new Urgent-priority ticket landed unassigned (zero new Triage items at all this cycle). No Dagster alert recurred after reaching `self-resolved` status — baldessarini and hom are first-occurrence active failures rather than repeats of something that had self-resolved, and gaborBags was a one-off that resolved cleanly rather than recurring.
-
-## 2026-09-15
-
-- **New Urgent security ticket, unassigned, due 09-17**: BDD-3263 (missing function-level authorization on `dim-admin-api` staging — full admin access via a regular user JWT, including reading every user's Assistant chat history). First new Urgent-priority unassigned ticket in this log's tracked history — crosses the notification bar.
-- **Dagster: `move_images_from_ftp_to_s3_job_sync` spread from profuomo/lugina to three more brands** (beheim, holyfashion, royRobson) — ~10 occurrences in under 24h, same exit-code-1 signature on all four, suggesting an ECS-task-level problem rather than per-brand FTP config as previously assumed.
-- Linear: four tickets shipped (BDD-3236, BDD-3229, BDD-3180, BDD-3150). BDD-3150 (PIPE/Megatron) closed without the earmarked brand-data-pipeline#1825 ever merging — that PR is still open; earmark dismissed as moot. BDD-3247 went Triage → assigned → Deployed same window. New: BDD-3251 picked up from Triage; three new "Video Delivery" project tickets (BDD-3223/3205/3206, Slice 3.2) landed on him, turning the parked shaping doc into real backlog. Triage backlog up to 16 (four new, two left).
-- GitHub: a nine-PR-pair brand-migration wave landed across both repos (blueSeven, fynchHatton, milestone, cinque, polaris, swing, schumacher, dorisStreich) — all mergeable, routine. Four of the new PRs name Kushel as reviewer (product-service#2689/#2683, brand-data-pipeline#1878/#1871), pushing his to-review queue from 1 to 5. Five PRs merged (product-service#2677/#2676/#2675, brand-data-pipeline#1864/#1862), none his. Zero open PRs of his own, unchanged.
-- Notified: yes — BDD-3263 (new Urgent, unassigned, security, 2-day deadline) clearly crosses the bar. The Dagster FTP-move spread is flagged prominently in `today.md` but doesn't strictly meet the "recurs after self-resolving" wording (it's an escalating pattern, not a flip back to failing), so treated as a strong today.md callout rather than a second notification trigger.

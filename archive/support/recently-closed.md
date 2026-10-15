@@ -3,6 +3,15 @@
 Older entries rolled off `support/recently-closed.md`'s ~25-item cap. Never deleted.
 
 ```yaml
+id: BDD-3150
+title: PIPE/Megatron Pipeline mismatch in processing capability for prices (FD: 674378)
+priority: Medium
+closed: 2026-09-14
+url: https://linear.app/fashioncloud/issue/BDD-3150/pipemegatron-pipeline-mismatch-in-processing-capability-for-prices-fd
+```
+Part of the 09-04 bulk assignment. Shipped without the earmarked flag-enable PR ([brand-data-pipeline#1825](../sources/github/brand-data-pipeline/open-prs.md)) ever merging — that PR is still open and unreviewed. Resolved some other way; see `_meta/earmarks.md`.
+
+```yaml
 id: BDD-3229
 title: "RE: Cancellations SS27 (FD: 675432)"
 priority: Low

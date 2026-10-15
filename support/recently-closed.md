@@ -3,6 +3,15 @@
 Capped at ~25 most recent. Older entries move to `../archive/support/`. Sourced from team BDD Done/Deployed issues carrying an FD reference.
 
 ```yaml
+id: BDD-3388
+title: "Issue on removing SA certificate information (FD: 680121)"
+priority: Medium
+closed: 2026-10-15
+url: https://linear.app/fashioncloud/issue/BDD-3388/issue-on-removing-sa-certificate-information-fd-680121
+```
+Suri certificates kept in `manufacturerAttributes` via the `backend_db` feed. Irem took it 10-13 and closed it 10-15 08:17 UTC. irembbt's product-service#2930 (exclude `BACKEND_DB` from the certificate merge), which looked like the fix and names him as only reviewer, is still open, so it was closed some other way or ahead of the PR.
+
+```yaml
 id: BDD-3405
 title: "Delete gtins for ballin (FD: 680460)"
 priority: Medium
@@ -217,12 +226,3 @@ closed: 2026-09-14
 url: https://linear.app/fashioncloud/issue/BDD-3261/aw-fashion-cloud-preorder-nile-227-fd-676746
 ```
 New and closed same day — Urgent, but landed already assigned to Kushel so it did not cross the new-unassigned-Urgent-ticket notification bar.
-
-```yaml
-id: BDD-3150
-title: PIPE/Megatron Pipeline mismatch in processing capability for prices (FD: 674378)
-priority: Medium
-closed: 2026-09-14
-url: https://linear.app/fashioncloud/issue/BDD-3150/pipemegatron-pipeline-mismatch-in-processing-capability-for-prices-fd
-```
-Part of the 09-04 bulk assignment. Shipped without the earmarked flag-enable PR ([brand-data-pipeline#1825](../sources/github/brand-data-pipeline/open-prs.md)) ever merging — that PR is still open and unreviewed. Resolved some other way; see `_meta/earmarks.md`.

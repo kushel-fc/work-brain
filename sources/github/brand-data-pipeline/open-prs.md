@@ -2,7 +2,20 @@
 
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
-14 to 14, same PRs. Nothing left the list. Opened and merged inside the window, none his: #2045 (Numph color/shoe materials), #2046 (stoneFashion mainImage visibility), #2047 (BDD-2991 header validation), staging #2048 and production #2049 (10-13 14:21 UTC, paired with product-service#2938). hakansoylu1's #2011 was updated 10-13. Older PRs' mergeable states mostly read `unknown` again and are left at their last known values. See [`archive/prs/brand-data-pipeline.md`](../../../archive/prs/brand-data-pipeline.md).
+14 to 15. Nothing left the list. New: inga-ar's #2053 (cancelled-items filtering, no reviewers). Opened and merged inside the window, none his: inga-ar's #2050 (cancelled-items filtering, 10-14 09:12 UTC), honeypsabu's #2052 (falke brand migration), staging #2051 and production #2054 (10-15 07:48 UTC, paired with product-service#2952). #2039 now reads `blocked`; older PRs' mergeable states mostly read `unknown` again and are left at their last known values. See [`archive/prs/brand-data-pipeline.md`](../../../archive/prs/brand-data-pipeline.md).
+
+```yaml
+number: 2053
+title: "add cancelled items filtering"
+author: inga-ar
+state: open
+mergeable_state: blocked
+review_state: awaiting-first-review
+requested_reviewers: []
+updated: 2026-10-14
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2053
+```
+Opened 10-14 11:01 UTC, +33/-5, a follow-up to her #2050 merged two hours earlier. No reviewers yet. Not his.
 
 ```yaml
 number: 2044
@@ -22,7 +35,7 @@ number: 2039
 title: "Enable SAX XML parsing for bugatti, profuomo, mustang and schmidtGroup"
 author: dwiajik
 state: open
-mergeable_state: unknown
+mergeable_state: blocked
 review_state: awaiting-first-review
 requested_reviewers: [hakansoylu1]
 updated: 2026-10-13

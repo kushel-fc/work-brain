@@ -3,6 +3,116 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2953
+title: "Set Datadog units and enable percentiles for PDS and PCS metrics"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-15
+url: https://github.com/fashioncloud/product-service/pull/2953
+```
+Merged 08:19 UTC. Not in a production release yet.
+
+```yaml
+number: 2952
+title: "Production Release - 2026-10-15"
+author: app/github-actions
+state: closed
+merged: true
+closed: 2026-10-15
+url: https://github.com/fashioncloud/product-service/pull/2952
+```
+Release, triggered by him, merged 07:48 UTC, paired with brand-data-pipeline#2054. Carried staging release #2942: his #2939 and #2944, Chamindu36's #2941, #2943, #2948, #2949, honeypsabu's #2947, #2932, #2937.
+
+```yaml
+number: 2949
+title: "feat: Implement replays module with controller, service, and validation logic in PDS for launching PDS Replay workers"
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-10-14
+url: https://github.com/fashioncloud/product-service/pull/2949
+```
+Opened and merged inside the window (15:07 UTC). In production via #2952.
+
+```yaml
+number: 2948
+title: "feat: Setup skeletons for replays module and enhance error handling in PDS"
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-10-14
+url: https://github.com/fashioncloud/product-service/pull/2948
+```
+Opened and merged inside the window (15:07 UTC). In production via #2952.
+
+```yaml
+number: 2947
+title: "Enable TIMEZONE GmbH on PIPE"
+author: honeypsabu
+state: closed
+merged: true
+closed: 2026-10-14
+url: https://github.com/fashioncloud/product-service/pull/2947
+```
+Merged 11:38 UTC. In production via #2952.
+
+```yaml
+number: 2946
+title: "BDD-3215: increment SKU download counts and map a download to its SKUs (2/3)"
+author: kushel-fc
+state: closed
+merged: true
+closed: 2026-10-15
+url: https://github.com/fashioncloud/product-service/pull/2946
+```
+His. Opened and merged inside the window, 10-15 07:31 UTC. Merged after staging release #2942, so not in production yet. BDD-3215 was already Done (closed off #2944).
+
+```yaml
+number: 2944
+title: "BDD-3215: skuDownloadCounts collection in @repo/content-models (1/3)"
+author: kushel-fc
+state: closed
+merged: true
+closed: 2026-10-14
+url: https://github.com/fashioncloud/product-service/pull/2944
+```
+His. Opened and merged inside the window, 10:03 UTC; BDD-3215 went Done two seconds later. In production via #2952.
+
+```yaml
+number: 2943
+title: "Update product-data-service to integrate ECS task management and error handling"
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-10-14
+url: https://github.com/fashioncloud/product-service/pull/2943
+```
+Merged 11:57 UTC. In production via #2952.
+
+```yaml
+number: 2942
+title: "Staging Release - 2026-10-14"
+author: app/github-actions
+state: closed
+merged: true
+closed: 2026-10-14
+url: https://github.com/fashioncloud/product-service/pull/2942
+```
+Release, merged 15:35 UTC, paired with brand-data-pipeline#2051.
+
+```yaml
+number: 2941
+title: "Refactor package references to use @fashioncloud scope and update dependency paths"
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-10-14
+url: https://github.com/fashioncloud/product-service/pull/2941
+```
+Merged 08:59 UTC, without his review (he was requested). In production via #2952.
+
+```yaml
 number: 2939
 title: "Enable Fashion Cloud Test brand on PIPE"
 author: kushel-fc

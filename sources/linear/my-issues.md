@@ -2,7 +2,7 @@
 
 Assigned to Kushel, live (non-completed) statuses. Populated on sync — completed/canceled work stays in Linear's own history rather than being repeated here; see `git log` for what rolled off.
 
-**10-14 sync:** Still 3 live, no status changes. His product-service#2929 (database rename, linked to BDD-3214) merged 10-13 08:48 UTC and is in production (release #2938). BDD-3214 stays Done. His frontend#7177 (BDD-3223) merged 10-13; BDD-3223 stays Done. BDD-3213, BDD-2406 and BDD-2079 unchanged in Linear.
+**10-15 sync:** Still 3 live, no status changes. BDD-3215 (5.2 PCS SKU-level download counts, child of BDD-3213) went In Review 10-14 09:35 UTC and Done 10:03 UTC, two seconds after his product-service#2944 (1/3) merged, so it closed off the PR link while part 2/3 (#2946) only merged 10-15 07:31 UTC and is not in production yet. BDD-3213, BDD-2406 and BDD-2079 unchanged in Linear.
 
 ---
 

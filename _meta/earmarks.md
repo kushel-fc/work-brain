@@ -8,7 +8,10 @@ Each earmark has a `Trigger signal` (plain-language condition to watch for durin
 
 ## Active
 
-_None._
+- **Trigger signal**: product-service#2951 (his, carry transformedSku videos through to mergedSku/mappedSku) merges, and later ships in a staging or production release
+- **Surface**: Check that `fill-global-merge-rules` from that branch was run against the environment before the release deployed. Per the PR, if the deployed merger can't find the new `videos` global merge rule, every merge run fails. After production, the backfill (brands with `video_processing_enabled`, rerun from `merge` with `FORCE_UPDATE`) is still to do. A burst of merge-step Dagster failures right after a release would point here.
+- **Related**: [prs/mine.md](../prs/mine.md), [dagster-alerts/log.md](../dagster-alerts/log.md)
+- **Status**: active (added 2026-10-15). #2951 approved and clean, not merged.
 
 ## Triggered / Dismissed
 

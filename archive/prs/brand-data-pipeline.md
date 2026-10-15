@@ -3,6 +3,50 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2054
+title: "Production Release - 2026-10-15"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-10-15
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2054
+```
+Release, merged 07:48 UTC, paired with product-service#2952.
+
+```yaml
+number: 2052
+title: "falke brand migration"
+author: honeypsabu
+state: closed
+merged: true
+closed: 2026-10-14
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2052
+```
+Opened and merged inside the window, 12:58 UTC.
+
+```yaml
+number: 2051
+title: "Staging Release - 2026-10-14"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-10-14
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2051
+```
+Release, merged 15:35 UTC, paired with product-service#2942.
+
+```yaml
+number: 2050
+title: "add filtering for cancelled items"
+author: inga-ar
+state: closed
+merged: true
+closed: 2026-10-14
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2050
+```
+Opened and merged inside the window, 09:12 UTC. Follow-up #2053 still open.
+
+```yaml
 number: 2049
 title: "Production Release - 2026-10-13"
 author: FCMachineUser

@@ -3,6 +3,66 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
+timestamp: 2026-10-15T08:05:31Z
+channel: brand-data-dev-alerts
+brand: adidas
+summary: "adidas_FEED: 11 asset materializations failed (run a3ea6a30, from the schedule), starting at download_images and feed_transform"
+status: recurring
+linked_issue: null
+```
+Fourth adidas failure (10-09, 10-13, 10-14, 10-15), same 11-asset shape, now on pipeline commit 670638c0 (after production release #2054). No thread, still unexplained.
+
+```yaml
+timestamp: 2026-10-14T21:49:28Z
+channel: brand-data-dev-alerts
+brand: platform (PDS publish)
+summary: "PUBLISHING_JOB_PD_STREAMS_FAILED log alert triggered, recovered 22:04 UTC"
+status: recurring
+linked_issue: null
+```
+Second firing after the 10-13 15:12 UTC one, which Aji traced to style `partitionKey`s over Kinesis's 256-character limit. Cleared in 15 minutes again, no thread. Most likely the same unfixed key problem, not confirmed. Not his.
+
+```yaml
+timestamp: 2026-10-14T17:37:42Z
+channel: brand-data-dev-alerts
+brand: ftcCashmere
+summary: "ftcCashmere_FEED2: 12 asset materializations failed (run 5c605be7, from the schedule), starting at download_images and extract"
+status: recurring
+linked_issue: null
+```
+Sixth failing ftcCashmere_FEED2 run since 10-08. Still matches BDD-3357 (PIPE 403 on `shop.ftc-cashmere.com`), eight days old and unassigned. No thread.
+
+```yaml
+timestamp: 2026-10-14T13:11:16Z
+channel: brand-data-dev-alerts
+brand: carsJeans
+summary: "carsJeans_FEED_sync_images exceeded the 3h run time limit (run 02dd3806, started 10:11 UTC from the schedule)"
+status: recurring
+linked_issue: null
+```
+Eleventh carsJeans run-limit hit, same 10:10 UTC scheduled start. No thread, no owner.
+
+```yaml
+timestamp: 2026-10-14T12:04:53Z
+channel: brand-data-dev-alerts
+brand: unitedLegwear
+summary: "unitedLegwear_FEED: 11 asset materializations failed (run ee7f8397, from the schedule), starting at download_images and feed_transform"
+status: active
+linked_issue: null
+```
+First unitedLegwear alert in this log. Same 11-asset shape as the adidas failures, on the same commit (8868c6fc). No thread, no repeat by sync time.
+
+```yaml
+timestamp: 2026-10-14T10:15:25Z
+channel: brand-data-dev-alerts
+brand: luisaCerano (fcapi-to-sftp-sync-job)
+summary: "fcapi-to-sftp-sync-job failed in production for brand 60d2f1147bb9340012a4d14a (Luisa Cerano), window 2026101409: config missing `host`, `type` and `filenamePattern`"
+status: self-resolved
+linked_issue: null
+```
+Three failure messages 10:15 to 10:18 UTC plus the CloudWatch alarm `product-service-fcapi-to-sftp-sync-job-errors-production` (ALARM 10:16, OK 10:34 UTC). First alert of this kind in the log. The brand was onboarded to this job earlier (see the luisacerano/willen onboarding PR in the product-service archive), so its SFTP config looks incomplete. Dushan said in-channel 11:14 UTC he'd check. No repeat since, so marked self-resolved, though nothing says the config was fixed.
+
+```yaml
 timestamp: 2026-10-14T08:05:11Z
 channel: brand-data-dev-alerts
 brand: adidas
@@ -1144,64 +1204,3 @@ status: active
 linked_issue: null
 ```
 New brand for this alert type — previously only blackstone_FEED/ona__blackstone_FEED and ona__falke_FEED had hit it. No thread. blackstone and falke's own 3h-limit alerts stayed quiet this window.
-
-```yaml
-timestamp: 2026-09-15T08:01:19Z
-channel: brand-data-dev-alerts
-brand: multiple (beheim, holyfashion, royRobson, profuomo)
-summary: "move_images_from_ftp_to_s3_job_sync failing across four brands, ~10 occurrences in under 24h — same exit-code-1 signature"
-status: recurring
-linked_issue: null
-```
-The profuomo/lugina pattern from the last few cycles has spread. Since last sync (2026-09-14 08:46 UTC): beheim__FEED2 fired three times (16:00, 00:01, 08:01 UTC — roughly 8h apart, on schedule); holyfashion__FEED fired three times (14:39, 22:39, 06:39 UTC — same ~8h cadence); royRobson__FEED2 fired three times in just over an hour (13:18, 14:18, 15:18 UTC — hourly schedule, failing every single run); profuomo__FEED fired three more times (14:03, 18:56, 19:08 UTC). All four share the identical failure signature: `Exception: Essential container in task exited, exit code: 1` on the `move_images_from_ftp_to_s3_job_sync` step. This no longer looks like a per-brand FTP/SFTP misconfiguration (the working theory for lugina/profuomo) — four unrelated brands hitting the same step with the same exit code, at each brand's own schedule cadence, points at something wrong with the move-images ECS task itself. No thread or owner on any of these. Worth a look — see `today.md`.
-
-```yaml
-timestamp: 2026-09-15T06:59:01Z
-channel: brand-data-dev-alerts
-brand: summum
-summary: summum__PRICAT__trigger_enrichment_from_map — container exited, exit code 1
-status: active
-linked_issue: null
-```
-New brand/step combination, first occurrence. No thread or reaction visible.
-
-```yaml
-timestamp: 2026-09-15T06:03:27Z
-channel: brand-data-dev-alerts
-brand: platform (Datadog log index)
-summary: Log index hit warning threshold then daily quota a third time, self-resolved on quota reset
-status: recurring
-linked_issue: null
-```
-Same `product-service-logs-index-` pattern as the last two cycles: triggered 02:06:27 UTC, recovered 06:03:26-27 UTC. Third occurrence now — flagged as worth a permanent fix (quota increase or volume reduction) if it keeps recurring at this rate.
-
-```yaml
-timestamp: 2026-09-15T00:43:52Z
-channel: brand-data-dev-alerts
-brand: blackstone
-summary: "blackstone_FEED and ona__blackstone_FEED both exceeded 3h run time limit"
-status: active
-linked_issue: null
-```
-New brand for this alert type, both the base and `ona__` prefixed jobs hit the limit within the same 30 seconds (00:43:22 and 00:43:52 UTC) — same underlying run. No thread visible.
-
-```yaml
-timestamp: 2026-09-14T19:32:27Z
-channel: brand-data-dev-alerts
-brand: platform (PDS / Kinesis)
-summary: PDS Kinesis write throttling warned and recovered within 11 minutes
-status: self-resolved
-linked_issue: null
-```
-Continuation of the known post-shard-increase-fix recurring issue: warned 19:21:27 UTC (metric 10.0), recovered 19:32:27 UTC. Shortest flare of this pattern seen so far. No thread.
-
-```yaml
-timestamp: 2026-09-14T16:16:28Z
-channel: brand-data-dev-alerts
-brand: falke
-summary: ona__falke_FEED exceeded 3h run time limit
-status: active
-linked_issue: null
-```
-Distinct from the ona__falke_FEED timeout logged 09-13 (different run) and from the merge-rule bug that hit falke 09-11 (already fixed). No thread visible.
-
