@@ -3,6 +3,94 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2061
+title: "Staging Release - 2026-10-15"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-10-15
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2061
+```
+Staging release, merged 15:06 UTC, paired with product-service#2967.
+
+```yaml
+number: 2060
+title: "feat(image-sync): optional image_recursive / image_max_depth config"
+author: dushansilva
+state: closed
+merged: true
+closed: 2026-10-15
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2060
+```
+Merged 15:01 UTC. Companion to product-service#2966 (still open).
+
+```yaml
+number: 2058
+title: "Luisa Cerano brand migration"
+author: dushansilva
+state: closed
+merged: true
+closed: 2026-10-15
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2058
+```
+Merged 14:09 UTC. Mapping-rules companion product-service#2961 still open.
+
+```yaml
+number: 2059
+title: "Disable Willen image sync"
+author: dushansilva
+state: closed
+merged: true
+closed: 2026-10-15
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2059
+```
+Opened and merged 13:42 to 13:51 UTC.
+
+```yaml
+number: 2057
+title: "Willen brand migration"
+author: dushansilva
+state: closed
+merged: true
+closed: 2026-10-15
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2057
+```
+Merged 13:40 UTC. Mapping-rules companion product-service#2960 (names him) still open.
+
+```yaml
+number: 2056
+title: "enabled archival and image sync"
+author: honeypsabu
+state: closed
+merged: true
+closed: 2026-10-15
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2056
+```
+Merged 10:45 UTC.
+
+```yaml
+number: 2055
+title: "profuomo: change main image"
+author: marianabassi
+state: closed
+merged: true
+closed: 2026-10-15
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2055
+```
+Opened and merged 09:41 to 09:54 UTC.
+
+```yaml
+number: 2053
+title: "add cancelled items filtering"
+author: inga-ar
+state: closed
+merged: true
+closed: 2026-10-15
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2053
+```
+Merged 09:44 UTC, follow-up to #2050.
+
+```yaml
 number: 2054
 title: "Production Release - 2026-10-15"
 author: FCMachineUser

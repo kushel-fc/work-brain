@@ -2,6 +2,20 @@
 
 One entry per sync run. Prune entries older than ~30 days.
 
+## 2026-10-16 (~08:45 UTC)
+
+About 24h since the last sync. Linear (claude.ai connector), GitHub (`gh`) and Slack (claude.ai connector) were all reachable. The `plugin:engineering:*` servers needed auth and weren't used.
+
+- **Earmark partly met: his product-service#2951 merged 10-15 14:45 UTC** (by him) and is in staging release #2967 (15:06 UTC). Whether `fill-global-merge-rules` was run against staging isn't visible. No production release since #2952, so the production step and the backfill are still ahead. Earmark stays active, top of today.md.
+- **BDD-3215 code-complete**: his #2956 (3/3) opened and merged 10-15 inside the window. 2/3 and 3/3 are in staging, 1/3 in production. He has no open PRs.
+- **New on him: BDD-3216** (5.3 Backend, delivery measurement at redemption), assigned 10-15 15:19 UTC, Backlog. Live issues 3 to 4. Its ticket makes the intent-vs-delivery decision a prerequisite. Shaping doc updated.
+- **Review queue 3 to 3**: new dushansilva's #2960 (Willen mapping rules, him and irembbt requested); #2940 merged without his review. #2930 still open three days on.
+- Linear: Triage 6 to 5, nothing new. Irem took and closed BDD-3457 (Obermeier EDI) 10-15 15:16 UTC. support/open.md 5 to 4. Recently-closed +1, BDD-3261 rolled to archive.
+- Slack (17 messages): falke failed four ways the day after its migration (new), bugatti_FEED and ftcCashmere_FEED2 `Credential lookup failed` (Aji), lawOfTheSea_FEED first failure with no logs because the Datadog log index hit its quota overnight, gant publish_from_map exit 1 (new), adidas (fifth), carsJeans 3h (twelfth), process_enrichment_flow 3h (fourth), PCS 5xx one-minute warn 08:36 UTC. Dagster log +10, pruned 7 (09-15), now 123.
+- GitHub: product-service 5 to 5, brand-data-pipeline 15 to 15. 23 PRs archived (15 product-service, 8 brand-data-pipeline).
+- Sync-log pruned: the 09-16 entry (30 days old).
+- Notified: no. He has no open PRs, so none could flip to conflict or Changes Requested. No due dates on his issues, and no new Triage tickets at all. The repeats (adidas, ftcCashmere, carsJeans, process_enrichment_flow, log index, PCS 5xx) continue patterns already `recurring`; the new falke, bugatti, lawOfTheSea and gant failures are first occurrences, not repeats after self-resolving.
+
 ## 2026-10-15 (~08:50 UTC)
 
 About 24h since the last sync. Linear (claude.ai connector), GitHub (`gh`) and Slack (claude.ai connector) were all reachable. The `plugin:engineering:*` servers needed auth and weren't used.
@@ -248,16 +262,3 @@ All three sources reachable this run. ~3-day gap since last sync (09-18 08:50 �
 - **GitHub: PR counts dropped sharply** — product-service 18→14, brand-data-pipeline 22→16 — as the brand-migration wave and the lookback-override feature (product-service#2705/brand-data-pipeline#1888, individually named Kushel) cleared. He now has zero open PRs of his own again. Review queue down to 5 (was 6): one new (#2723, documentation-only), #1878 and #1871 both flipped to Approved and are now waiting on his sign-off specifically.
 - **Slack: two new Dagster issues, neither his yet** — superdry_FEED OOM on publish_from_map (Chamindu pinged abubakarwase), gardeur/FEED2 multi-asset failure (single occurrence). zizzi_FEED failed on a new step, different from its known recurring pattern.
 - Notified: no — nothing crossed the notification bar (no deadline passed, no flip to conflict/Changes-Requested on his own work since he has none open, no new Urgent unassigned ticket, and both Dagster resolutions moved *toward* resolved rather than recurring after self-resolving).
-
-## 2026-09-16 (08:35 UTC)
-
-- **BDD-3263 (last cycle's Urgent security ticket) resolved** — Done, well ahead of its 09-17 deadline.
-- **The 09-04 bulk-assignment batch is fully closed out** — its last 5 unstarted items (BDD-3037, BDD-3129, BDD-3181, BDD-3110, BDD-3153) were reassigned away from Kushel to abubakarwase in two waves (09-15 ~15:23 UTC and 09-16 ~08:19 UTC), none ever started. This storyline, tracked since 09-07, is done.
-- **First quiet Triage-inflow cycle in a while** — zero new external tickets landed. Backlog shrank 15 → 13 as BDD-3249 (High, shipped) and BDD-3246 (Medium, now In Progress) were individually picked up.
-- **New ticket on the Video Delivery project**: BDD-3191 ("N1 — Document today's CSV generation logic"), Ready To Start.
-- **New Dagster incident: baldessarini_FEED failed on almost every hourly run for ~21h straight** (22 failed runs, 09-15 11:18 UTC through 09-16 08:18 UTC). Kushel opened his own fix same day — [brand-data-pipeline#1890](sources/github/brand-data-pipeline/open-prs.md) (stale `credential_id` swap) — but it hadn't merged by sync time, so the incident was still active. His first own PR since 09-09.
-- **Two more brands in the known move-images spread got a fix commitment but not a fix**: Kushel told Chamindu Rathnaweera "will be resolved with the next release" (holyfashion) and "will be fixed with the next release" (beheim) — both kept failing afterward. profuomo/royRobson (the other two brands in the spread) went quiet this cycle.
-- **gaborBags hit the same failure shape as baldessarini but was fixed same-day** — Kushel rotated an expired credential in 1Password, no recurrence.
-- GitHub: five new PRs landed on each repo (product-service #2697/#2698/#2705/#2708/#2709, brand-data-pipeline #1882/#1883/#1888/#1889/#1890); #2655/#1839 (image-reprocessing-collector-job pair) merged. **Review queue up to 6** (new: #2705, a real feature — per-manufacturer/feed lookback override — not another routine brand migration).
-- New Dagster alerts, none actioned yet: kultivate_FEED joined the "exceeded 3h limit" brands; hom_FEED hit a first-occurrence asset-materialization failure; a new Datadog signature (extract-job Node string-length limit) self-resolved in ~5 min.
-- Notified: no — nothing crossed the notification bar. No deadline passed with zero movement (BDD-3263's deadline was met, not missed). No flip to conflict/Changes-Requested on his own work (his only own PR, #1890, is clean). No new Urgent-priority ticket landed unassigned (zero new Triage items at all this cycle). No Dagster alert recurred after reaching `self-resolved` status — baldessarini and hom are first-occurrence active failures rather than repeats of something that had self-resolved, and gaborBags was a one-off that resolved cleanly rather than recurring.

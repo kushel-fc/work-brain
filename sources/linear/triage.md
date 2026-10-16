@@ -2,19 +2,7 @@
 
 Full raw Triage backlog for team BDD, sourced from https://linear.app/fashioncloud/team/BDD/triage. Populated on sync. See `support/open.md` for the FD-referenced/support-shaped curated subset.
 
-**10-15 sync:** 4 to 6, two new Medium FD tickets, both unassigned: BDD-3420 (IOS by Maica, prices missing after an extra PRICAT upload, 10-14 09:39 UTC) and BDD-3457 (Obermeier EDI exchange, 10-15 07:46 UTC). BDD-3388 (Irem, Suri certificates) went Done 10-15 08:17 UTC even though irembbt's product-service#2930 is still open. BDD-3410 still In Progress with Irem. BDD-3386, BDD-3357, BDD-3349 and BDD-3305 unchanged.
-
-```yaml
-id: BDD-3457
-title: "RE: Bitte um EDI-Nachrichtenaustausch - Kunde 121338 Obermeier (FD: 678927)"
-priority: Medium
-status: Triage
-assignee: unassigned
-team: BDD
-updated: 2026-10-15
-url: https://linear.app/fashioncloud/issue/BDD-3457
-```
-New 10-15 07:46 UTC. Support-shaped, see [`support/open.md`](../../support/open.md).
+**10-16 sync:** 6 to 5. Nothing new landed. BDD-3457 (Obermeier EDI) was taken by Irem Bulut and closed Done 10-15 15:16 UTC. BDD-3420, BDD-3386, BDD-3357, BDD-3349 and BDD-3305 unchanged. BDD-3410 (Irem, Brax visibility flags) is still In Progress, outside Triage.
 
 ```yaml
 id: BDD-3420
@@ -26,7 +14,7 @@ team: BDD
 updated: 2026-10-14
 url: https://linear.app/fashioncloud/issue/BDD-3420
 ```
-New 10-14 09:39 UTC. Support-shaped, see [`support/open.md`](../../support/open.md).
+Filed 10-14 09:39 UTC, unchanged. Support-shaped, see [`support/open.md`](../../support/open.md).
 
 ```yaml
 id: BDD-3386

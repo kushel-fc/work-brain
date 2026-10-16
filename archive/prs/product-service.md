@@ -3,6 +3,171 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2970
+title: "Implement SDK helper: apply only the newest version by emittedAt"
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-10-16
+url: https://github.com/fashioncloud/product-service/pull/2970
+```
+Opened 07:50 and merged 08:22 UTC 10-16. Not in a release yet.
+
+```yaml
+number: 2964
+title: "BDD-3474: T3.1: scaffold the deletion publishing job"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-16
+url: https://github.com/fashioncloud/product-service/pull/2964
+```
+Merged 08:23 UTC 10-16. Not in a release yet.
+
+```yaml
+number: 2968
+title: "Implement POST endpoint for replay error handling and resume functionality"
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-10-16
+url: https://github.com/fashioncloud/product-service/pull/2968
+```
+Merged 07:19 UTC 10-16. Not in a release yet.
+
+```yaml
+number: 2967
+title: "Staging Release - 2026-10-15"
+author: app/github-actions
+state: closed
+merged: true
+closed: 2026-10-15
+url: https://github.com/fashioncloud/product-service/pull/2967
+```
+Staging release triggered by dushansilva, merged 15:06 UTC, paired with brand-data-pipeline#2061. Carried his #2946, #2956 and #2951, plus #2940, #2953, #2954, #2955, #2957, #2958, #2959, #2962, #2965.
+
+```yaml
+number: 2963
+title: "BDD-3470: T1.2: stream publisher delete envelopes and caller-supplied emittedAt"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-15
+url: https://github.com/fashioncloud/product-service/pull/2963
+```
+Merged 15:10 UTC, after staging release #2967.
+
+```yaml
+number: 2951
+title: "Carry transformedSku videos through to mergedSku and mappedSku"
+author: kushel-fc
+state: closed
+merged: true
+closed: 2026-10-15
+url: https://github.com/fashioncloud/product-service/pull/2951
+```
+His. Merged by him 14:45 UTC, in staging release #2967 (15:06 UTC), not in production. Needs `fill-global-merge-rules` per environment before deploy, then a backfill (earmarked).
+
+```yaml
+number: 2959
+title: "BDD-3473: T2.2: write the deletion log from the GTIN delete"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-15
+url: https://github.com/fashioncloud/product-service/pull/2959
+```
+Merged 14:30 UTC, in staging release #2967.
+
+```yaml
+number: 2965
+title: "Add replay task tagging IAM policy to ECS configuration"
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-10-15
+url: https://github.com/fashioncloud/product-service/pull/2965
+```
+Opened and merged 13:17 to 13:21 UTC, in staging release #2967.
+
+```yaml
+number: 2955
+title: "BDD-3466: T1.1: add delete event types to product-data-schema, rename SKU event types to SIZE"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-15
+url: https://github.com/fashioncloud/product-service/pull/2955
+```
+Merged 13:02 UTC, in staging release #2967.
+
+```yaml
+number: 2962
+title: "Persist replay shardsTotal and limit Datadog percentile config to production"
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-10-15
+url: https://github.com/fashioncloud/product-service/pull/2962
+```
+Merged 12:43 UTC, in staging release #2967.
+
+```yaml
+number: 2940
+title: "Full workflow orchestration for PDS replay worker"
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-10-15
+url: https://github.com/fashioncloud/product-service/pull/2940
+```
+Merged 11:56 UTC without his review (he was requested; dwiajik and abubakarwase approved). In staging release #2967.
+
+```yaml
+number: 2956
+title: "BDD-3215: count retailer downloads per SKU on every resolve (3/3)"
+author: kushel-fc
+state: closed
+merged: true
+closed: 2026-10-15
+url: https://github.com/fashioncloud/product-service/pull/2956
+```
+His. Opened 08:47, merged 11:52 UTC. In staging release #2967, not in production.
+
+```yaml
+number: 2957
+title: "BDD-3467 T2.1: add the skuDeletions collection and repository"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-15
+url: https://github.com/fashioncloud/product-service/pull/2957
+```
+Merged 11:34 UTC, in staging release #2967.
+
+```yaml
+number: 2958
+title: "chore(pd-observer): make ClickHouse optional (replace-me disables it)"
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-10-15
+url: https://github.com/fashioncloud/product-service/pull/2958
+```
+Merged 11:08 UTC, in staging release #2967.
+
+```yaml
+number: 2954
+title: "feat: GET ednpoint to check progress tracking and detailed error responses for PDS replay runs"
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-10-15
+url: https://github.com/fashioncloud/product-service/pull/2954
+```
+Merged 08:56 UTC (he approved it 08:37). In staging release #2967.
+
+```yaml
 number: 2953
 title: "Set Datadog units and enable percentiles for PDS and PCS metrics"
 author: dwiajik

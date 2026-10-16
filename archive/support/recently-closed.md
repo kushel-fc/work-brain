@@ -3,6 +3,15 @@
 Older entries rolled off `support/recently-closed.md`'s ~25-item cap. Never deleted.
 
 ```yaml
+id: BDD-3261
+title: "AW: Fashion Cloud/ Preorder NILE 2/27 (FD: 676746)"
+priority: Urgent
+closed: 2026-09-14
+url: https://linear.app/fashioncloud/issue/BDD-3261/aw-fashion-cloud-preorder-nile-227-fd-676746
+```
+New and closed same day — Urgent, but landed already assigned to Kushel so it did not cross the new-unassigned-Urgent-ticket notification bar.
+
+```yaml
 id: BDD-3150
 title: PIPE/Megatron Pipeline mismatch in processing capability for prices (FD: 674378)
 priority: Medium

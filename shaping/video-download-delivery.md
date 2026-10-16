@@ -1,6 +1,6 @@
 ---
 status: active
-last_touched: 2026-10-12
+last_touched: 2026-10-16
 ---
 
 # Video download delivery on platform
@@ -45,3 +45,5 @@ The routing rule in both specs is explicit that the existing images-only and ima
 **10-14 update:** [#2929](../archive/prs/product-service.md) (database rename to `fc_product_content_service`) merged 10-13 08:48 UTC and reached production in release #2938 (14:21 UTC). Audit entries written between release #2922 (10-12 12:10 UTC) and #2938 went to the old `product-content-service` database; whether they need moving is still open. His frontend#7177 (BDD-3223: missing-GTIN reasons in the CSV, CSV-only bulk downloads) merged 10-13 09:21 UTC. No PCS 5xx alert since 10-12 22:01 UTC. [BDD-3213](../sources/linear/my-issues.md) unchanged: per-SKU counts, observability, the N3 write-up and the intent-vs-delivery decision are still open.
 
 **10-15 update:** Slice 5's per-SKU counts are moving. [BDD-3215](https://linear.app/fashioncloud/issue/BDD-3215) (5.2 PCS SKU-level download counts, child of BDD-3213) went Done 10-14 10:03 UTC, two seconds after his #2944 (1/3, `skuDownloadCounts` collection in `@repo/content-models`) merged, so it closed off the PR link like BDD-3214 did. #2944 is in production via release #2952 (10-15 07:48 UTC). #2946 (2/3, increment counts and map a download to its SKUs) merged 10-15 07:31 UTC, after the 10-14 staging release, so it isn't in production yet. Part 3/3 isn't open. Separately, his [#2951](../prs/mine.md) carries transformedSku videos through to mergedSku/mappedSku (approved, clean, not merged); it needs `fill-global-merge-rules` run per environment before deploy. [BDD-3213](../sources/linear/my-issues.md) is still In Progress; observability beyond the write metric, moving the early audit entries, the N3 write-up and the intent-vs-delivery decision are still open.
+
+**10-16 update:** All three BDD-3215 PRs are merged. His #2956 (3/3, count retailer downloads per SKU on every resolve) opened and merged 10-15 08:47 to 11:52 UTC. #2946 (2/3) and #2956 are in staging release #2967 (10-15 15:06 UTC), not production; #2944 (1/3) is in production. His [#2951](../archive/prs/product-service.md) (videos through to mergedSku/mappedSku) merged 10-15 14:45 UTC and is in the same staging release (earmarked for the `fill-global-merge-rules` step). New on him: [BDD-3216](../sources/linear/my-issues.md) (5.3 Backend, delivery measurement at redemption: bytes written, build duration, disconnects, separate failure counters), assigned 10-15, Backlog. Its ticket says the intent-vs-delivery decision has to be settled before it is implemented, so that open question now blocks real work. Moving the early audit entries and the N3 write-up are still open.

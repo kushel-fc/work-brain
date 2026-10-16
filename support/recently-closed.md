@@ -3,6 +3,15 @@
 Capped at ~25 most recent. Older entries move to `../archive/support/`. Sourced from team BDD Done/Deployed issues carrying an FD reference.
 
 ```yaml
+id: BDD-3457
+title: "RE: Bitte um EDI-Nachrichtenaustausch - Kunde 121338 Obermeier (FD: 678927)"
+priority: Medium
+closed: 2026-10-15
+url: https://linear.app/fashioncloud/issue/BDD-3457/re-bitte-um-edi-nachrichtenaustausch-kunde-121338-obermeier-fd-678927
+```
+Filed 10-15 07:46 UTC (retailer Obermeier, classic EDI exchange). Irem Bulut took it and closed it Done 15:16 UTC the same day.
+
+```yaml
 id: BDD-3388
 title: "Issue on removing SA certificate information (FD: 680121)"
 priority: Medium
@@ -217,12 +226,3 @@ closed: 2026-09-15
 url: https://linear.app/fashioncloud/issue/BDD-3262/remove-items-stieliz-fd-676811
 ```
 New and closed same window — landed already assigned to Kushel and shipped before it ever showed at a "live" status in a prior sync.
-
-```yaml
-id: BDD-3261
-title: "AW: Fashion Cloud/ Preorder NILE 2/27 (FD: 676746)"
-priority: Urgent
-closed: 2026-09-14
-url: https://linear.app/fashioncloud/issue/BDD-3261/aw-fashion-cloud-preorder-nile-227-fd-676746
-```
-New and closed same day — Urgent, but landed already assigned to Kushel so it did not cross the new-unassigned-Urgent-ticket notification bar.

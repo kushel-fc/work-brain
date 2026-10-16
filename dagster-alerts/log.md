@@ -3,6 +3,106 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
+timestamp: 2026-10-16T08:36:26Z
+channel: brand-data-dev-alerts
+brand: platform (PCS 5xx)
+summary: "PCS ALB target 5xx ratio Warn, recovered 08:37 UTC"
+status: recurring
+linked_issue: null
+```
+First PCS 5xx alert since 10-12 22:01 UTC. Warn level only, cleared in a minute, no thread. No product-service production release since #2952 (10-15 07:48 UTC), so not tied to a deploy.
+
+```yaml
+timestamp: 2026-10-16T08:05:31Z
+channel: brand-data-dev-alerts
+brand: adidas
+summary: "adidas_FEED: 11 asset materializations failed (run c4725a95, from the schedule), starting at download_images and feed_transform"
+status: recurring
+linked_issue: null
+```
+Fifth adidas failure (10-09, 10-13, 10-14, 10-15, 10-16), same shape. Chamindu tagged Irem in-thread, one eyes reaction. Still unexplained.
+
+```yaml
+timestamp: 2026-10-16T06:35:33Z
+channel: brand-data-dev-alerts
+brand: lawOfTheSea
+summary: "lawOfTheSea_FEED: 11 asset materializations failed (run 3b4c8431, from the schedule), starting at download_images and feed_transform"
+status: active
+linked_issue: null
+```
+First occurrence, same 11-asset shape as adidas/unitedLegwear. Aji found no logs; Dushan said the log index quota was exceeded (see the 02:27 UTC entry), so the cause is not visible.
+
+```yaml
+timestamp: 2026-10-16T06:07:55Z
+channel: brand-data-dev-alerts
+brand: platform (process_enrichment_flow)
+summary: "process_enrichment_flow exceeded the 3h run-time limit (run 7ab9db1c, started 03:07 UTC by enrichment_file_sensor)"
+status: recurring
+linked_issue: null
+```
+Fourth this month (10-06, 10-12, 10-13, 10-16). No thread.
+
+```yaml
+timestamp: 2026-10-16T02:27:26Z
+channel: brand-data-dev-alerts
+brand: platform (Datadog log index)
+summary: "product-service-logs-index hit its daily ingestion quota (warning 10-15 20:03 UTC), recovered 06:03 UTC"
+status: recurring
+linked_issue: null
+```
+Quota reached for about 3.5h overnight. It cost the lawOfTheSea investigation its logs. No thread.
+
+```yaml
+timestamp: 2026-10-16T02:06:47Z
+channel: brand-data-dev-alerts
+brand: gant
+summary: "gant_FEED: publish_from_map failed, ECS container had no exit code (exit 1, run b4766415, from the schedule)"
+status: active
+linked_issue: null
+```
+First occurrence. One asset event, no thread.
+
+```yaml
+timestamp: 2026-10-15T17:38:13Z
+channel: brand-data-dev-alerts
+brand: ftcCashmere
+summary: "ftcCashmere_FEED2: 12 asset materializations failed (run d8bfbfd3, from the schedule), starting at download_images and extract"
+status: recurring
+linked_issue: null
+```
+Seventh since 10-08. Aji quoted the error in-thread 10-16: `Credential lookup failed. Verify credentials configuration.` That points at credentials rather than the 403 in [BDD-3357](../support/open.md), not confirmed.
+
+```yaml
+timestamp: 2026-10-15T15:15:09Z
+channel: brand-data-dev-alerts
+brand: bugatti
+summary: "bugatti_FEED: 11 asset materializations failed (run 262d0bdc, from the schedule), starting at download_images and feed_transform"
+status: active
+linked_issue: null
+```
+First bugatti_FEED failure in the log. Aji quoted the same `Credential lookup failed` error as ftcCashmere. Not related to the beltsBugatti 10-02 entry.
+
+```yaml
+timestamp: 2026-10-15T14:10:21Z
+channel: brand-data-dev-alerts
+brand: falke
+summary: "falke_FEED failures after the falke brand migration: 11 assets failed twice (08:58 and 09:01 UTC, one hand-started), falke__FEED__map exit 1 (10:02 UTC), ona__falke_FEED over the 3h limit (started 11:10 UTC)"
+status: active
+linked_issue: null
+```
+All on the day after honeypsabu's falke migration (brand-data-pipeline#2052, 10-14). The 3h alert got a check-mark reaction, no thread text. Not his.
+
+```yaml
+timestamp: 2026-10-15T13:11:38Z
+channel: brand-data-dev-alerts
+brand: carsJeans
+summary: "carsJeans_FEED_sync_images exceeded the 3h run-time limit (run b189d8e0, started 10:10 UTC)"
+status: recurring
+linked_issue: null
+```
+Twelfth hit (09-30 to 10-15), always the 10:10 UTC schedule. Check-mark reaction, no thread, no owner.
+
+```yaml
 timestamp: 2026-10-15T08:05:31Z
 channel: brand-data-dev-alerts
 brand: adidas
@@ -1134,73 +1234,3 @@ status: recurring
 linked_issue: null
 ```
 Four short flap cycles this window (2026-09-15T17:07:35Z→17:08:35Z, 19:02:36Z→19:07:35Z, 2026-09-16T00:52:35Z→00:55:35Z, 04:42:35Z→04:51:35Z), each self-resolving in 1-9 minutes. Same established noise pattern, no thread.
-
-```yaml
-timestamp: 2026-09-15T19:38:34Z
-channel: brand-data-dev-alerts
-brand: hom
-summary: hom_FEED — 11 asset materializations failed (download_images, feed_transform, etc.)
-status: active
-linked_issue: null
-```
-New brand for this failure signature, single occurrence. No thread, no reaction, no follow-up alert — unclear if it self-resolved or is still pending.
-
-```yaml
-timestamp: 2026-09-15T15:50:22Z
-channel: brand-data-dev-alerts
-brand: platform (analytics_trigger_sensor)
-summary: analytics step — essential container exited, exit code 1, once more
-status: recurring
-linked_issue: null
-```
-Same no-owner recurring pattern as previous cycles. No thread.
-
-```yaml
-timestamp: 2026-09-15T15:24:49Z
-channel: brand-data-dev-alerts
-brand: baldessarini
-summary: "baldessarini_FEED failing on nearly every hourly cron run — 22 failed runs across ~21h, own PR in flight"
-status: active
-linked_issue: null
-```
-**New signature, not previously tracked — the most consequential Dagster finding this cycle.** `baldessarini_FEED_cron_schedule` failed 10 asset materializations (download_images, extract, + downstream feed assets) on 22 separate runs spanning 2026-09-15T11:18:23Z through 2026-09-16T08:18:46Z — effectively every single hourly run in the whole window, zero successes. Kushel replied in-thread 15:24:49Z-15:24:54Z with a cross-channel link and "PR to fix this" — his own [brand-data-pipeline#1890](../sources/github/brand-data-pipeline/open-prs.md) (updates the job's stale `credential_id`), opened same day. Failures continued for ~17 more hours after the PR reference, so it hadn't merged/deployed by the end of the capture window. Top of `today.md` — his own fix, not yet shipped.
-
-```yaml
-timestamp: 2026-09-15T14:51:01Z
-channel: brand-data-dev-alerts
-brand: gaborBags
-summary: gaborBags_FEED — 10 asset materializations failed, resolved via credential rotation
-status: self-resolved
-linked_issue: null
-```
-New brand for this failure shape (download_images/extract chain, same as baldessarini above) — one-off occurrence 2026-09-15T11:48:03Z. Kushel replied in-thread 14:51:01Z: "Updated the password in 1PW." No further gaborBags alerts after the fix.
-
-```yaml
-timestamp: 2026-09-15T14:12:25Z
-channel: brand-data-dev-alerts
-brand: platform (extract-job, manufacturer unspecified)
-summary: Extract job's flat legacy-archive copy buffered a file exceeding Node's max string length
-status: self-resolved
-linked_issue: null
-```
-New Datadog signature, not previously tracked — possibly related to the archived-files string-limit alert from 09-14 ([product-service#2676](../archive/prs/product-service.md), merged) given the shared "Node max string length" description; [product-service#2708](../sources/github/product-service/open-prs.md) ("Scope archive string-limit alert to XML files", opened same day, already Approved) may be a further refinement. Triggered 14:12:25Z, recovered ~5 min later 14:17:25Z. One "eyes" reaction, no text reply. Worth watching for recurrence given the OOM-risk framing.
-
-```yaml
-timestamp: 2026-09-15T11:24:27Z
-channel: brand-data-dev-alerts
-brand: platform (product-data-service / PDS)
-summary: PDS stream-publish failures + Kinesis write-throttling, paired alerts, self-resolved in ~15 min
-status: self-resolved
-linked_issue: null
-```
-Continuation of the known post-shard-increase-fix recurring issue. Triggered together 11:24:27Z/11:24:29Z, recovered together ~11:39:28Z/11:39:29Z. No thread.
-
-```yaml
-timestamp: 2026-09-15T11:21:54Z
-channel: brand-data-dev-alerts
-brand: kultivate
-summary: kultivate_FEED run exceeded the 3h run-time-limit alert policy
-status: active
-linked_issue: null
-```
-New brand for this alert type — previously only blackstone_FEED/ona__blackstone_FEED and ona__falke_FEED had hit it. No thread. blackstone and falke's own 3h-limit alerts stayed quiet this window.

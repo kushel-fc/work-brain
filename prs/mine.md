@@ -2,20 +2,6 @@
 
 PRs Kushel opened, across both repos (plus backend, checked for his own PRs only). Populated on sync.
 
-**One open, approved and clean.** Merged inside the window: #2944 (BDD-3215 1/3, `skuDownloadCounts` collection in `@repo/content-models`, 10-14 10:03 UTC), in production via release #2952 (10-15 07:48 UTC, which he triggered), and #2946 (BDD-3215 2/3, increment SKU download counts and map a download to its SKUs, 10-15 07:31 UTC), which merged after the 10-14 staging release and is not in production yet. #2939 (Fashion Cloud Test brand on PIPE) is in production via #2952. Part 3/3 isn't open. No open PRs of his on backend. See [`archive/prs/`](../archive/prs/).
-
-```yaml
-number: 2951
-repo: product-service
-title: "Carry transformedSku videos through to mergedSku and mappedSku"
-author: kushel-fc
-state: open
-mergeable_state: clean
-review_state: approved
-requested_reviewers: [julsjacinto]
-updated: 2026-10-15
-url: https://github.com/fashioncloud/product-service/pull/2951
-```
-Opened 10-14 14:38 UTC, +487/-87, no ticket in the description. Videos on transformedSkus now reach mergedSku and mappedSku like images do (new `videos` global merge rule, `StyleMerger`/`StyleFlattener` changes); `PRODUCT_STYLE_UPDATED` events drop videos because PIPE videos have no `mediaServiceId` for the backend. Chamindu36 approved 10-14, dwiajik and CodeRabbit 10-15 07:25 UTC; all checks green. **Rollout order matters:** run `fill-global-merge-rules` from this branch against each environment before deploy, or every merge run fails; then backfill brands with `video_processing_enabled` from `merge` with `FORCE_UPDATE`.
+**None open.** Both of his PRs from the window merged 10-15 and are in staging only, via staging release product-service#2967 (15:06 UTC): [#2951](../archive/prs/product-service.md) (transformedSku videos through to mergedSku/mappedSku, merged by him 14:45 UTC) and [#2956](../archive/prs/product-service.md) (BDD-3215 3/3, count retailer downloads per SKU on every resolve, opened and merged 08:47 to 11:52 UTC). #2946 (BDD-3215 2/3) is in the same staging release. No production release has gone out since #2952 (10-15 07:48 UTC). **#2951 rollout:** `fill-global-merge-rules` from that branch has to have been run against staging before #2967 deployed, and against production before the next production release, or every merge run fails. Then the `video_processing_enabled` backfill from `merge` with `FORCE_UPDATE`. Earmarked in [`_meta/earmarks.md`](../_meta/earmarks.md). No open PRs of his on backend. See [`archive/prs/`](../archive/prs/).
 
 His earlier self-closed PR (#2545, GTIN cleanup batch) is still parked in the archive, unrevisited.

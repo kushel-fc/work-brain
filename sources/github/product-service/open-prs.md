@@ -2,59 +2,59 @@
 
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
-3 to 5. Off the list: Chamindu36's #2941 (package scope, merged 10-14 08:59 UTC without his review). New: **his own #2951** (videos through to mergedSku/mappedSku, approved and clean), Chamindu36's #2954 (PDS replay progress endpoint, he approved it) and dwiajik's #2955 (PDS delete event types). Opened and merged inside the window: **his own #2944 (BDD-3215 1/3, 10-14 10:03 UTC) and #2946 (2/3, 10-15 07:31 UTC)**, Chamindu36's #2943, #2948, #2949 (PDS replay), honeypsabu's #2947 (TIMEZONE GmbH on PIPE), dwiajik's #2953 (Datadog units), staging release #2942 and production release #2952 (10-15 07:48 UTC, triggered by him). See [`archive/prs/product-service.md`](../../../archive/prs/product-service.md).
+5 to 5. Off the list: **his own #2951** (merged by him 10-15 14:45 UTC, in staging release #2967), Chamindu36's #2940 (merged 11:56 UTC without his review) and #2954, dwiajik's #2955. New: dwiajik's #2969 (SDK delete events, conflicting), dushansilva's #2966 (move-images subdirectories), #2961 (Luisa Cerano mapping rules) and **#2960 (Willen mapping rules, names him)**. Opened and merged inside the window: **his own #2956 (BDD-3215 3/3, 11:52 UTC)**, dwiajik's #2957, #2959, #2963, #2964, Chamindu36's #2958, #2962, #2965, #2968, #2970, and staging release #2967 (15:06 UTC, triggered by dushansilva). No production release since #2952. See [`archive/prs/product-service.md`](../../../archive/prs/product-service.md).
 
 ```yaml
-number: 2955
-title: "BDD-3466: add delete event types to product-data-schema"
+number: 2969
+title: "BDD-3471: T1.3: SDK accepts and delivers delete events"
 author: dwiajik
 state: open
-mergeable_state: blocked
-review_state: changes-requested
-requested_reviewers: []
-updated: 2026-10-15
-url: https://github.com/fashioncloud/product-service/pull/2955
+mergeable_state: dirty
+review_state: awaiting-first-review
+requested_reviewers: [abubakarwase, julsjacinto]
+updated: 2026-10-16
+url: https://github.com/fashioncloud/product-service/pull/2969
 ```
-Opened 10-15 08:33 UTC, +230/-25. First step of deletion events in PDS Streams: `PRODUCT_DATA_SKU/COLOR/STYLE_DELETE` in the schema package. Only CodeRabbit has reviewed. Doesn't name him.
+Opened 10-15 15:13 UTC, +248/-48. Consumer half of PDS Streams deletion events: the SDK now accepts the delete types from #2955 instead of treating them as malformed. Conflicts with the base. Only CodeRabbit has reviewed (its latest review is an approval). Doesn't name him.
 
 ```yaml
-number: 2954
-title: "feat: GET ednpoint to check progress tracking and detailed error responses for PDS replay runs"
-author: Chamindu36
+number: 2966
+title: "feat(move-images): optionally list images in subdirectories"
+author: dushansilva
 state: open
 mergeable_state: blocked
 review_state: changes-requested
-requested_reviewers: []
+requested_reviewers: [dwiajik, abubakarwase]
 updated: 2026-10-15
-url: https://github.com/fashioncloud/product-service/pull/2954
+url: https://github.com/fashioncloud/product-service/pull/2966
 ```
-Opened 10-15 08:27 UTC, +335/-32, no description. dwiajik approved 08:33 UTC and he approved 08:37 UTC; CodeRabbit's Changes Requested is what holds the aggregate.
+Opened 10-15 13:58 UTC, +281/-5. Opt-in `IMAGE_RECURSIVE` / `IMAGE_MAX_DEPTH` for the move-images job; companion brand-data-pipeline#2060 already merged. Only CodeRabbit has reviewed (Changes Requested). Doesn't name him.
 
 ```yaml
-number: 2951
-title: "Carry transformedSku videos through to mergedSku and mappedSku"
-author: kushel-fc
+number: 2961
+title: "Luisa Cerano brand migration"
+author: dushansilva
 state: open
-mergeable_state: clean
-review_state: approved
-requested_reviewers: [julsjacinto]
+mergeable_state: blocked
+review_state: awaiting-first-review
+requested_reviewers: [irembbt, julsjacinto]
 updated: 2026-10-15
-url: https://github.com/fashioncloud/product-service/pull/2951
+url: https://github.com/fashioncloud/product-service/pull/2961
 ```
-His. Opened 10-14 14:38 UTC, +487/-87. See [`prs/mine.md`](../../../prs/mine.md).
+Opened 10-15 12:08 UTC, +48/-0. Mapping-rule payload (40 rules) for the Luisa Cerano FEED migration; pipeline side #2058 merged. CodeRabbit approved. Doesn't name him.
 
 ```yaml
-number: 2940
-title: "Full workflow orchestration for PDS replay worker"
-author: Chamindu36
+number: 2960
+title: "Willen brand migration mapping rules"
+author: dushansilva
 state: open
 mergeable_state: blocked
 review_state: changes-requested
-requested_reviewers: [irembbt, julsjacinto, kushel-fc]
+requested_reviewers: [irembbt, kushel-fc]
 updated: 2026-10-15
-url: https://github.com/fashioncloud/product-service/pull/2940
+url: https://github.com/fashioncloud/product-service/pull/2960
 ```
-Opened 10-13 15:58 UTC, +3120/-59. dwiajik approved 10-14 14:55 UTC and abubakarwase 10-15 07:54 UTC; CodeRabbit's Changes Requested still holds the aggregate. Still names him. See [`prs/to-review.md`](../../../prs/to-review.md).
+Opened 10-15 11:49 UTC, +148/-15. Names him. See [`prs/to-review.md`](../../../prs/to-review.md).
 
 ```yaml
 number: 2930

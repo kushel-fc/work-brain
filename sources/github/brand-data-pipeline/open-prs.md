@@ -2,20 +2,20 @@
 
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
-14 to 15. Nothing left the list. New: inga-ar's #2053 (cancelled-items filtering, no reviewers). Opened and merged inside the window, none his: inga-ar's #2050 (cancelled-items filtering, 10-14 09:12 UTC), honeypsabu's #2052 (falke brand migration), staging #2051 and production #2054 (10-15 07:48 UTC, paired with product-service#2952). #2039 now reads `blocked`; older PRs' mergeable states mostly read `unknown` again and are left at their last known values. See [`archive/prs/brand-data-pipeline.md`](../../../archive/prs/brand-data-pipeline.md).
+15 to 15. Off the list: inga-ar's #2053 (cancelled-items filtering, merged 10-15 09:44 UTC). New: dwiajik's #2062 (clean invalid `expectedHeaders` entries in feed configs, no reviewers). Opened and merged inside the window, none his: dushansilva's #2057 (Willen migration), #2058 (Luisa Cerano migration), #2059 (disable Willen image sync), #2060 (recursive image sync config), honeypsabu's #2056, marianabassi's #2055 (profuomo main image) and staging release #2061 (15:06 UTC, paired with product-service#2967). Mergeable states mostly read `unknown` this cycle and are left at their last known values. See [`archive/prs/brand-data-pipeline.md`](../../../archive/prs/brand-data-pipeline.md).
 
 ```yaml
-number: 2053
-title: "add cancelled items filtering"
-author: inga-ar
+number: 2062
+title: "BDD-2991: clean invalid expectedHeaders entries in feed configs"
+author: dwiajik
 state: open
 mergeable_state: blocked
 review_state: awaiting-first-review
 requested_reviewers: []
-updated: 2026-10-14
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/2053
+updated: 2026-10-16
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2062
 ```
-Opened 10-14 11:01 UTC, +33/-5, a follow-up to her #2050 merged two hours earlier. No reviewers yet. Not his.
+Opened 10-16 08:20 UTC, +8/-12. Fixes 6 of 242 `feed_config.json` files whose `expectedHeaders` the parse job would reject once it reads the field (product-service #2932). No reviewers yet. Not his.
 
 ```yaml
 number: 2044

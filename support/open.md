@@ -2,7 +2,7 @@
 
 FD-sourced/support-shaped tickets, by priority then age (oldest first within each tier). Sourced from the team BDD Triage view: https://linear.app/fashioncloud/team/BDD/triage. Populated on sync. Full raw Triage list lives in [`sources/linear/triage.md`](../sources/linear/triage.md).
 
-**Five open, all unassigned, no High.** Two new Medium FD tickets: BDD-3420 (IOS by Maica prices) and BDD-3457 (Obermeier EDI). BDD-3388 (Suri certificates) went Done 10-15 08:17 UTC with irembbt's product-service#2930 still open and unreviewed by him, see [`recently-closed.md`](recently-closed.md). BDD-3410 (Brax visibility flags) is still In Progress with Irem. BDD-3357 (ftcCashmere 403) is eight days old and ftcCashmere_FEED2 failed a sixth time 10-14. BDD-3305 is still an internal feature request Dushan owns, not listed here.
+**Four open, all unassigned, no High.** Nothing new. BDD-3457 (Obermeier EDI) was taken by Irem and closed Done 10-15 15:16 UTC, see [`recently-closed.md`](recently-closed.md). BDD-3410 (Brax visibility flags) is still In Progress with Irem. BDD-3357 (ftcCashmere) is nine days old; ftcCashmere_FEED2 failed a seventh time 10-15, and Aji quoted the error in-thread as "Credential lookup failed", which is not the 403 the ticket describes. BDD-3305 is still an internal feature request Dushan owns, not listed here.
 
 ## Medium
 
@@ -16,7 +16,7 @@ team: BDD
 updated: 2026-10-07
 url: https://linear.app/fashioncloud/issue/BDD-3357/error-403-forbidden-when-pipe-process-image-fd-679834
 ```
-Filed 10-07 13:33 UTC. Someone working on FTC Cashmere images: PIPE gets 403 Forbidden on `shop.ftc-cashmere.com` image URLs that open fine in a browser. ftcCashmere_FEED2 has failed five times since (10-08, 10-09, 10-12 and 10-13 evening, 12 assets each; 10-11 morning, `download_images` exit 1 twice), now marked `recurring` in the [Dagster log](../dagster-alerts/log.md). Likely the same cause, not confirmed.
+Filed 10-07 13:33 UTC. Someone working on FTC Cashmere images: PIPE gets 403 Forbidden on `shop.ftc-cashmere.com` image URLs that open fine in a browser. ftcCashmere_FEED2 has failed seven times since (most recently 10-14 and 10-15 evening, 12 assets each), marked `recurring` in the [Dagster log](../dagster-alerts/log.md). On the 10-15 failure Aji quoted `Credential lookup failed. Verify credentials configuration.`, so the feed failures may be a credentials problem rather than this 403. Not confirmed either way.
 
 ```yaml
 id: BDD-3386
@@ -41,18 +41,6 @@ updated: 2026-10-14
 url: https://linear.app/fashioncloud/issue/BDD-3420
 ```
 Filed 10-14 09:39 UTC by Torben (brand `5f75cea4c29675001065333d`). Prices missing on many styles; the brand uploaded an extra PRICAT with prices that still hasn't been processed. Torben found the EANs with prices in the PRICAT (example 4065986020028).
-
-```yaml
-id: BDD-3457
-title: "RE: Bitte um EDI-Nachrichtenaustausch - Kunde 121338 Obermeier (FD: 678927)"
-priority: Medium
-status: Triage
-assignee: unassigned
-team: BDD
-updated: 2026-10-15
-url: https://linear.app/fashioncloud/issue/BDD-3457
-```
-Filed 10-15 07:46 UTC (in German). The body is FC's own reply to retailer Obermeier: classic EDI is now connected, ORDRSP and PRICAT for open orders were sent, and SLSRPT/INVRPT need something further from the retailer (truncated). What BDD is being asked to do isn't clear from the visible text.
 
 ## Low
 
