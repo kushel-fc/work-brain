@@ -3,6 +3,61 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2066
+title: "added brand ID"
+author: honeypsabu
+state: closed
+merged: true
+closed: 2026-10-19
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2066
+```
+Opened and merged inside the window (10-19 07:57 UTC). Not his.
+
+```yaml
+number: 2065
+title: "add filtering for cancelled items"
+author: inga-ar
+state: closed
+merged: true
+closed: 2026-10-16
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2065
+```
+Merged 10-16 10:41 UTC. Not his.
+
+```yaml
+number: 2064
+title: "Production Release - 2026-10-16"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-10-16
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2064
+```
+Production release, merged 10-16 11:33 UTC, paired with product-service#2973.
+
+```yaml
+number: 2063
+title: "updated archival"
+author: honeypsabu
+state: closed
+merged: true
+closed: 2026-10-16
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2063
+```
+Opened and merged 10-16 09:46 UTC. Not his.
+
+```yaml
+number: 2062
+title: "BDD-2991: clean invalid expectedHeaders entries in feed configs"
+author: dwiajik
+state: closed
+merged: false
+closed: 2026-10-16
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2062
+```
+Closed without merging 10-16 14:25 UTC, about six hours after opening. Not his.
+
+```yaml
 number: 2061
 title: "Staging Release - 2026-10-15"
 author: FCMachineUser

@@ -2,7 +2,7 @@
 
 Full raw Triage backlog for team BDD, sourced from https://linear.app/fashioncloud/team/BDD/triage. Populated on sync. See `support/open.md` for the FD-referenced/support-shaped curated subset.
 
-**10-16 sync:** 6 to 5. Nothing new landed. BDD-3457 (Obermeier EDI) was taken by Irem Bulut and closed Done 10-15 15:16 UTC. BDD-3420, BDD-3386, BDD-3357, BDD-3349 and BDD-3305 unchanged. BDD-3410 (Irem, Brax visibility flags) is still In Progress, outside Triage.
+**10-19 sync:** 5 to 5, nothing new and nothing left. All five unchanged since they were filed. BDD-3410 (Irem, Brax visibility flags) is still outside Triage.
 
 ```yaml
 id: BDD-3420

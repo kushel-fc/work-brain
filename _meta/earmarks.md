@@ -8,12 +8,14 @@ Each earmark has a `Trigger signal` (plain-language condition to watch for durin
 
 ## Active
 
+None.
+
+## Triggered / Dismissed
+
 - **Trigger signal**: product-service#2951 (his, carry transformedSku videos through to mergedSku/mappedSku) merges, and later ships in a staging or production release
 - **Surface**: Check that `fill-global-merge-rules` from that branch was run against the environment before the release deployed. Per the PR, if the deployed merger can't find the new `videos` global merge rule, every merge run fails. After production, the backfill (brands with `video_processing_enabled`, rerun from `merge` with `FORCE_UPDATE`) is still to do. A burst of merge-step Dagster failures right after a release would point here.
 - **Related**: [prs/mine.md](../prs/mine.md), [dagster-alerts/log.md](../dagster-alerts/log.md)
-- **Status**: active (added 2026-10-15). Partly met 10-16: #2951 merged 10-15 14:45 UTC and shipped in staging release #2967 (15:06 UTC). Whether `fill-global-merge-rules` was run against staging first isn't visible from the sources, and staging merge failures don't post to #brand-data-dev-alerts. Not in production yet (no production release since #2952). Stays active until production and the backfill are done.
-
-## Triggered / Dismissed
+- **Status**: triggered 2026-10-19 (added 2026-10-15). #2951 reached production in release product-service#2973 (10-16 11:33 UTC). The rule had not been run first: katag_FEED2, polaris_FEED and florez_FEED failed at map/merge 11:57 to 12:04 UTC, and Kushel said in the polaris thread (12:08 UTC) he'd update the global merge rule to include videos. No merge-step failures since (about 3 days), so it looks fixed. The `video_processing_enabled` backfill isn't visible as done; it's carried in `this-week.md` as a to-do, not a signal. Earlier note, 10-16: #2951 merged 10-15 14:45 UTC and shipped in staging release #2967 (15:06 UTC). Whether `fill-global-merge-rules` was run against staging first isn't visible from the sources, and staging merge failures don't post to #brand-data-dev-alerts. Not in production yet (no production release since #2952). Stays active until production and the backfill are done.
 
 - **Trigger signal**: product-service#2866 (his, cap the PCS CSV artifact signed-URL lifetime at 7 days) ships in a product-service production release
 - **Surface**: Until it does, PCS's `CsvArtifactStore.store` in production fails whenever a caller leaves out `ttlSeconds` (the 14-day default is past S3's one-week SigV4 limit). backend#7066 merged 10-07, so check this is in production before `enable_pcs_csv_generation` is turned on there.

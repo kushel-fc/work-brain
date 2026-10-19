@@ -2,20 +2,46 @@
 
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
-15 to 15. Off the list: inga-ar's #2053 (cancelled-items filtering, merged 10-15 09:44 UTC). New: dwiajik's #2062 (clean invalid `expectedHeaders` entries in feed configs, no reviewers). Opened and merged inside the window, none his: dushansilva's #2057 (Willen migration), #2058 (Luisa Cerano migration), #2059 (disable Willen image sync), #2060 (recursive image sync config), honeypsabu's #2056, marianabassi's #2055 (profuomo main image) and staging release #2061 (15:06 UTC, paired with product-service#2967). Mergeable states mostly read `unknown` this cycle and are left at their last known values. See [`archive/prs/brand-data-pipeline.md`](../../../archive/prs/brand-data-pipeline.md).
+15 to 17. Off the list: dwiajik's #2062 (`expectedHeaders` config cleanup, closed unmerged 10-16 14:25 UTC). New: **dwiajik's #2067 (Dagster job for deletion publishing, names him)**, marianabassi's #2069 (ftcCashmere credential ID) and staging release #2068. Opened and merged inside the window, none his: inga-ar's #2065, honeypsabu's #2063 and #2066, and production release #2064 (10-16 11:33 UTC, paired with product-service#2973). Mergeable states for the older PRs mostly read `unknown` again and are left at their last known values. See [`archive/prs/brand-data-pipeline.md`](../../../archive/prs/brand-data-pipeline.md).
 
 ```yaml
-number: 2062
-title: "BDD-2991: clean invalid expectedHeaders entries in feed configs"
+number: 2069
+title: "ftcCashmere: change credentialID"
+author: marianabassi
+state: open
+mergeable_state: clean
+review_state: approved
+requested_reviewers: []
+updated: 2026-10-19
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2069
+```
+Opened 10-19 08:19 UTC, +1/-1, approved. Follows Aji's 10-19 "credential not found" reply on the ftcCashmere_FEED2 alert. Not his. Relevant to [BDD-3357](../../../support/open.md).
+
+```yaml
+number: 2068
+title: "Staging Release - 2026-10-19"
+author: FCMachineUser
+state: open
+mergeable_state: clean
+review_state: approved
+requested_reviewers: []
+updated: 2026-10-19
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2068
+```
+Opened 10-19 07:50 UTC, paired with product-service#2982. Nothing of his.
+
+```yaml
+number: 2067
+title: "BDD-3469 T4.1: Dagster job for deletion publishing"
 author: dwiajik
 state: open
 mergeable_state: blocked
-review_state: awaiting-first-review
-requested_reviewers: []
-updated: 2026-10-16
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/2062
+review_state: approved
+requested_reviewers: [irembbt, kushel-fc]
+updated: 2026-10-19
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2067
 ```
-Opened 10-16 08:20 UTC, +8/-12. Fixes 6 of 242 `feed_config.json` files whose `expectedHeaders` the parse job would reject once it reads the field (product-service #2932). No reviewers yet. Not his.
+Opened 10-16 14:29 UTC, +306/-0. Names him. See [`prs/to-review.md`](../../../prs/to-review.md).
 
 ```yaml
 number: 2044

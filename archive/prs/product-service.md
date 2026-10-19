@@ -3,6 +3,94 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2969
+title: "BDD-3471: T1.3: SDK accepts and delivers delete events"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-16
+url: https://github.com/fashioncloud/product-service/pull/2969
+```
+Merged 10-16 10:14 UTC after its conflict cleared. In staging release #2982. Not his.
+
+```yaml
+number: 2979
+title: "Enhance Datadog monitoring for PDS replay functionality."
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-10-16
+url: https://github.com/fashioncloud/product-service/pull/2979
+```
+Opened and merged 10-16 (11:26 UTC). In staging release #2982. Not his.
+
+```yaml
+number: 2976
+title: "Image processing Engine will extract AI generated Image signals from embedded metadata"
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-10-17
+url: https://github.com/fashioncloud/product-service/pull/2976
+```
+Opened and merged inside the window (10-17 21:03 UTC). AI-image provenance signals in the image processing engine (BDD-3483). In staging release #2982. Not his.
+
+```yaml
+number: 2975
+title: "updated falke"
+author: honeypsabu
+state: closed
+merged: true
+closed: 2026-10-16
+url: https://github.com/fashioncloud/product-service/pull/2975
+```
+Opened and merged 10-16 10:52 UTC. falke follow-up after its migration. Not his.
+
+```yaml
+number: 2974
+title: "BDD-2991: allow blank and padded expectedHeaders entries"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-16
+url: https://github.com/fashioncloud/product-service/pull/2974
+```
+Opened and merged 10-16 10:12 UTC (BDD-2991). Not his.
+
+```yaml
+number: 2973
+title: "Production Release - 2026-10-16"
+author: app/github-actions
+state: closed
+merged: true
+closed: 2026-10-16
+url: https://github.com/fashioncloud/product-service/pull/2973
+```
+Production release, merged 10-16 11:33 UTC by dushansilva. Carried his #2951 (videos through the merge), #2946 and #2956 (BDD-3215 2/3 and 3/3), plus #2940, #2957, #2959, #2962, #2965. katag/polaris/florez merge-step failures followed within 25 minutes, see the Dagster log.
+
+```yaml
+number: 2972
+title: "Move endurance from Megatron to PIPE brand array"
+author: dushansilva
+state: closed
+merged: true
+closed: 2026-10-16
+url: https://github.com/fashioncloud/product-service/pull/2972
+```
+Opened and merged 10-16 09:31 UTC. Not his.
+
+```yaml
+number: 2971
+title: "BDD-3476 T3.2: work out the events for a deletion"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-16
+url: https://github.com/fashioncloud/product-service/pull/2971
+```
+Merged 10-16 14:07 UTC (BDD-3476 T3.2). #2977 was stacked on it. Not his.
+
+```yaml
 number: 2970
 title: "Implement SDK helper: apply only the newest version by emittedAt"
 author: Chamindu36

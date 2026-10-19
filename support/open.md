@@ -2,7 +2,7 @@
 
 FD-sourced/support-shaped tickets, by priority then age (oldest first within each tier). Sourced from the team BDD Triage view: https://linear.app/fashioncloud/team/BDD/triage. Populated on sync. Full raw Triage list lives in [`sources/linear/triage.md`](../sources/linear/triage.md).
 
-**Four open, all unassigned, no High.** Nothing new. BDD-3457 (Obermeier EDI) was taken by Irem and closed Done 10-15 15:16 UTC, see [`recently-closed.md`](recently-closed.md). BDD-3410 (Brax visibility flags) is still In Progress with Irem. BDD-3357 (ftcCashmere) is nine days old; ftcCashmere_FEED2 failed a seventh time 10-15, and Aji quoted the error in-thread as "Credential lookup failed", which is not the 403 the ticket describes. BDD-3305 is still an internal feature request Dushan owns, not listed here.
+**Four open, all unassigned, no High.** Nothing new and nothing closed since 10-16. BDD-3357 (ftcCashmere) is twelve days old. Aji said 10-19 that ftcCashmere_FEED2's failures are a missing credential in its `config.json`, and marianabassi's brand-data-pipeline#2069 changes the credential ID (approved, not merged). That explains the feed failures. Whether it also explains the ticket's 403 on image URLs isn't confirmed. BDD-3305 is still an internal feature request Dushan owns, not listed here.
 
 ## Medium
 
@@ -16,7 +16,7 @@ team: BDD
 updated: 2026-10-07
 url: https://linear.app/fashioncloud/issue/BDD-3357/error-403-forbidden-when-pipe-process-image-fd-679834
 ```
-Filed 10-07 13:33 UTC. Someone working on FTC Cashmere images: PIPE gets 403 Forbidden on `shop.ftc-cashmere.com` image URLs that open fine in a browser. ftcCashmere_FEED2 has failed seven times since (most recently 10-14 and 10-15 evening, 12 assets each), marked `recurring` in the [Dagster log](../dagster-alerts/log.md). On the 10-15 failure Aji quoted `Credential lookup failed. Verify credentials configuration.`, so the feed failures may be a credentials problem rather than this 403. Not confirmed either way.
+Filed 10-07 13:33 UTC. Someone working on FTC Cashmere images: PIPE gets 403 Forbidden on `shop.ftc-cashmere.com` image URLs that open fine in a browser. ftcCashmere_FEED2 has failed nine times since (most recently 10-16 and 10-18), marked `recurring` in the [Dagster log](../dagster-alerts/log.md). Aji traced it to a credential not found in the feed's `config.json` (10-19), and brand-data-pipeline#2069 changes the credential ID. Whether that also fixes this 403 isn't confirmed.
 
 ```yaml
 id: BDD-3386
