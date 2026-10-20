@@ -2,46 +2,20 @@
 
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
-15 to 17. Off the list: dwiajik's #2062 (`expectedHeaders` config cleanup, closed unmerged 10-16 14:25 UTC). New: **dwiajik's #2067 (Dagster job for deletion publishing, names him)**, marianabassi's #2069 (ftcCashmere credential ID) and staging release #2068. Opened and merged inside the window, none his: inga-ar's #2065, honeypsabu's #2063 and #2066, and production release #2064 (10-16 11:33 UTC, paired with product-service#2973). Mergeable states for the older PRs mostly read `unknown` again and are left at their last known values. See [`archive/prs/brand-data-pipeline.md`](../../../archive/prs/brand-data-pipeline.md).
+17 to 15. Off the list, all merged: marianabassi's #2069 (ftcCashmere credential ID, 10-19 08:51 UTC, in production release #2076), staging release #2068, and dwiajik's #2067 (deletion publishing Dagster job, 10-19 10:05 UTC, without his review). New: physicalattraction's #2077 (CODEOWNERS). Opened and merged inside the window: **his own #2074** (BDD-3495, publish after `download_videos`, 10-19 15:28 UTC, not in a release yet), production releases #2070 (10-19 10:03 UTC) and #2076 (10-20 07:59 UTC), staging release #2073, dushansilva's #2072 (Willen material), inga-ar's #2071, honeypsabu's #2075, marianabassi's #2078 (oneil), dwiajik's #2079 (vanDeVelde FEED to size M, 10-20 08:38 UTC). Mergeable states for the older PRs mostly read `unknown` again and are left at their last known values. See [`archive/prs/brand-data-pipeline.md`](../../../archive/prs/brand-data-pipeline.md).
 
 ```yaml
-number: 2069
-title: "ftcCashmere: change credentialID"
-author: marianabassi
+number: 2077
+title: "Update CODEOWNERS file"
+author: physicalattraction
 state: open
-mergeable_state: clean
+mergeable_state: unstable
 review_state: approved
-requested_reviewers: []
-updated: 2026-10-19
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/2069
+requested_reviewers: [irembbt]
+updated: 2026-10-20
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2077
 ```
-Opened 10-19 08:19 UTC, +1/-1, approved. Follows Aji's 10-19 "credential not found" reply on the ftcCashmere_FEED2 alert. Not his. Relevant to [BDD-3357](../../../support/open.md).
-
-```yaml
-number: 2068
-title: "Staging Release - 2026-10-19"
-author: FCMachineUser
-state: open
-mergeable_state: clean
-review_state: approved
-requested_reviewers: []
-updated: 2026-10-19
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/2068
-```
-Opened 10-19 07:50 UTC, paired with product-service#2982. Nothing of his.
-
-```yaml
-number: 2067
-title: "BDD-3469 T4.1: Dagster job for deletion publishing"
-author: dwiajik
-state: open
-mergeable_state: blocked
-review_state: approved
-requested_reviewers: [irembbt, kushel-fc]
-updated: 2026-10-19
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/2067
-```
-Opened 10-16 14:29 UTC, +306/-0. Names him. See [`prs/to-review.md`](../../../prs/to-review.md).
+Opened 10-19 15:55 UTC. Approved, a check failing or pending. The product-service counterpart (#3000) merged 10-19 17:09 UTC. Doesn't name him.
 
 ```yaml
 number: 2044

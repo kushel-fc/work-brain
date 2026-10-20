@@ -8,7 +8,15 @@ Each earmark has a `Trigger signal` (plain-language condition to watch for durin
 
 ## Active
 
-None.
+- **Trigger signal**: the next product-service and brand-data-pipeline releases (staging or production) carry his product-service#2996 (video reprocessing prerequisites, 1/4) and brand-data-pipeline#2074 (`publish_from_download_videos`)
+- **Surface**: #2996's rollout says it deploys first: every job validates `WORKFLOW_TYPE` at boot, and the new publish step reads the GTIN list #2996 makes `download_videos` write. Both merged 10-19 15:28 UTC, after that day's staging releases, so they will most likely ride the same pair of releases. Check product-service deployed before (or with) the pipeline, and watch for `fashionCloud_FEED`, `fashionCloud_FEED2` or `fashionCloudQA_FEED` failing at `download_videos` or `publish_from_download_videos` right after.
+- **Related**: [prs/mine.md](../prs/mine.md), [archive/prs/product-service.md](../archive/prs/product-service.md), [archive/prs/brand-data-pipeline.md](../archive/prs/brand-data-pipeline.md)
+- **Status**: active (added 2026-10-20)
+
+- **Trigger signal**: ftcCashmere_FEED2 goes a full sync cycle with no alerts, now that brand-data-pipeline#2069 (credential ID) is in production (release #2076, 10-20 07:59 UTC)
+- **Surface**: Then the feed failures are fixed. Check whether [BDD-3357](../support/open.md)'s 403 on `shop.ftc-cashmere.com` image URLs went away with it, or is a separate problem. If ftcCashmere fails again after 10-20 07:59 UTC, the credential change wasn't the whole fix.
+- **Related**: [dagster-alerts/log.md](../dagster-alerts/log.md), [support/open.md](../support/open.md)
+- **Status**: active (added 2026-10-20)
 
 ## Triggered / Dismissed
 

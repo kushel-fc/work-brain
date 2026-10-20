@@ -2,6 +2,19 @@
 
 One entry per sync run. Prune entries older than ~30 days.
 
+## 2026-10-20 (~08:50 UTC)
+
+About 24h since the last sync. Linear (claude.ai connector), GitHub (`gh`) and Slack (claude.ai connector) were all reachable. The `plugin:engineering:*` servers needed auth and weren't used.
+
+- **Slice 5 closed:** BDD-3213 Done and BDD-3216 Canceled 10-19 15:28 UTC. His #2981 (BDD-3223 speed-ups) merged 10:27 UTC and is in production release product-service#2999 (10-20 07:58 UTC). #3001 (JMeter test) merged too. Shaping doc updated.
+- **New project on him, Video Reprocessing:** BDD-3494 to BDD-3499 created 10-19 14:43 UTC. BDD-3494/3495 already Done off his product-service#2996 (1/4) and brand-data-pipeline#2074, neither released yet, and #2996 must deploy first (new active earmark). BDD-3496 In Review with his new #3002 (2/4), approved by dwiajik and Chamindu36, `BLOCKED` on julsjacinto. BDD-3449 (video download parity) moved to In Progress. Live issues 4 to 7.
+- **Review queue 6 to 2:** he approved #2983 (merged). #2977 and brand-data-pipeline#2067 merged without his review. irembbt closed #2930 unmerged. Left: #2960 (five days) and dependabot #2019.
+- Linear Triage 5 to 6: BDD-3501 (Low, FD 681456, Oleh Polishchuk: image downloader never closes FTP/SFTP clients). support/open.md 4 to 5. Nothing closed.
+- Slack (19 messages): a 09:07 to 09:18 UTC cluster 10-19 (analytics twice with an SSM 500, lerros, liebeskind, unitedLegwear, blueSeven FTP timeout), PDS publish failures twice (Kinesis 5xx, fix #2987 merged; credentials error, #3003 draft), ftcCashmere tenth (before its fix reached production, new active earmark), timezone (fixed by honey.sabu), fynchHatton 3h from a schedule he disabled 09-30, carsJeans fourteenth, falke, new vanDeVelde OOM (fix #2079 merged), adidas seventh. Dagster log +12, pruned 1 (09-19), now 125.
+- GitHub: product-service 9 to 5, brand-data-pipeline 17 to 15. 12 PRs archived (8 product-service, 4 brand-data-pipeline).
+- Sync-log pruned: the 09-21 entry.
+- Notified: no. His only open PR is approved, not in conflict or Changes Requested. No due dates on his issues. The new Triage ticket is Low, not Urgent. No Dagster alert came back after being marked self-resolved: liebeskind's earlier self-resolved entry was a different feed and error, and the PDS publish, ftcCashmere, carsJeans, adidas and fynchHatton repeats continue entries already `recurring`.
+
 ## 2026-10-19 (~08:50 UTC)
 
 About 72h since the last sync (Friday 10-16 08:45 UTC to Monday). Linear (claude.ai connector), GitHub (`gh`) and Slack (claude.ai connector) were all reachable. The `plugin:engineering:*` servers needed auth and weren't used.
@@ -245,16 +258,3 @@ Quietest cycle in a while — ~24h gap since last sync (09-21 08:46 → 09-22 ~0
 - **GitHub: he cleared one of his own review-queue items himself** — approved [product-service#2748](../sources/github/product-service/open-prs.md) this morning (08:45 UTC), down to dwiajik as the only outstanding reviewer there. Review queue 5→4. product-service 18→16 (one new bot PR #2750, three merged: #2742/#2728/#2622); brand-data-pipeline 17→18 (one new, #1929 "sizes", not his). #1871 (names him) resolved its months-long `unknown` mergeable state to a clean `mergeable`, corrected the approver attribution to dwiajik (not marianabassi as previously logged). product-service#1737 (not his) flipped from `unknown` to a real conflict after two-plus months of flapping.
 - Datadog log-index quota hit its warning→quota→recover cycle a sixth time, self-resolved as usual.
 - Notified: no — nothing crossed the notification bar. No deadline passed with zero movement. No flip to conflict/Changes-Requested on his own work (zero open PRs; his own review action on #2748 was an approval, not a flip against him). No new Urgent-priority ticket landed unassigned (zero new Triage items at all). No Dagster alert recurred after reaching self-resolved status — riani's recurrence continues from `active`, not a flip from `self-resolved`, and the mosMosh/ara quiet spell is the opposite direction (quiet, not recurring).
-
-## 2026-09-21 (08:46 UTC)
-
-All three sources reachable this run. ~3-day gap since last sync (09-18 08:50 → 09-21 08:46).
-
-- **Most consequential: the mosMosh/ara Dagster OOM sprees flagged last cycle as the top new finding never stopped.** `mosMosh__FEED__process_images` fired 8 more times 09-18 and 3 more times this morning (21+ total since 09-17); `ara__PRICAT__process_images` fired 9 more times 09-18 and 8 more this morning (26+ total). Still zero thread, zero reaction, zero owner across 4 days. [BDD-3268](../support/open.md) (bump resource size for long-running integrations) — the ticket that looked like the fix — was picked up by abubakarwase 09-18 and is In Progress, but hasn't landed and the failures continued after he started it.
-- **BDD-3251 (his own In Review ticket) got pulled to another team** — transferred to Replenishment as RPL-2346 and reset to Todo status there. Different shape from the usual pattern (unassigned Triage backlog leaving BDD) — this was his active work.
-- **BDD-3206 (Video Delivery Slice 3.2 backend) advanced Ready To Start → In Progress today** — first real code movement on that slice since the tickets landed 09-15.
-- Linear: BDD-3246 (Kultivate Becosoft, his own) shipped. Triage backlog down to 6 (was 9) on a quiet inflow cycle — zero new tickets landed; BDD-3278 shipped same day it landed, BDD-3268/BDD-3266 both picked up by abubakarwase (workload-shift pattern continues).
-- GitHub: product-service up 17→18 (4 new: #2748/#2746/#2744/#2742; 3 dropped — #2735/#2732/#2723 all merged, #2732 and #2723 without Kushel ever reviewing them despite being individually named). brand-data-pipeline down 20→17 (0 new; 3 dropped — #1917/#1918 merged, #1912 vanDeVelde-season-labels fix closed unmerged). Review queue down 6→5 (#2732/#2723 merged off it; new #2748 landed alongside dwiajik). #2737/#2738 (product-service) and their pipeline companion #1919 all came out of draft today with real reviewers requested — none name Kushel.
-- New Dagster pattern: `meyer__FEED__map` failed once (exit 1), distinct from the already-shipped BDD-3155 meyer ticket. `process_enrichment_flow` breached its 3h limit again (chronic since 09-08, still unexplained). PDS Kinesis throttling hit a new all-time-high metric (609, prior max 257) but self-resolved in ~15 min as usual.
-- Log pruned to the last 30 days (7 entries older than 2026-08-22 moved out) — 140 → 134 total after pruning and this cycle's additions.
-- Notified: no — nothing crossed the notification bar. No deadline passed with zero movement. No flip to conflict/Changes-Requested on his own work (zero open PRs). No new Urgent-priority ticket landed unassigned (zero new Triage items at all this cycle). No Dagster alert recurred after reaching self-resolved status — mosMosh/ara are continuously active rather than a stop-then-restart, and the PDS Kinesis/process_enrichment_flow patterns are continuations of already-`recurring`-tagged issues, not fresh flips. The mosMosh/ara persistence is called out prominently in `today.md`/`this-week.md` regardless, given how consequential and unowned it now is.

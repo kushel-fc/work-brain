@@ -3,6 +3,50 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2074
+title: "BDD-3495: publish after download_videos"
+author: kushel-fc
+state: closed
+merged: true
+closed: 2026-10-19
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2074
+```
+His. Opened 14:30 UTC and merged 15:28 UTC 10-19. Adds `publish_from_download_videos` for `video_processing_enabled` feeds. Has to deploy after product-service#2996; neither is in a release yet (earmarked).
+
+```yaml
+number: 2069
+title: "ftcCashmere: change credentialID"
+author: marianabassi
+state: closed
+merged: true
+closed: 2026-10-19
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2069
+```
+Merged 10-19 08:51 UTC. Missed production release #2070, went out in #2076 (10-20 07:59 UTC). Relevant to [BDD-3357](../../support/open.md).
+
+```yaml
+number: 2068
+title: "Staging Release - 2026-10-19"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-10-19
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2068
+```
+Merged 10-19 08:49 UTC. Nothing of his.
+
+```yaml
+number: 2067
+title: "BDD-3469 T4.1: Dagster job for deletion publishing"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-19
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2067
+```
+Merged 10-19 10:05 UTC on Chamindu36's approval, without his review. Named him.
+
+```yaml
 number: 2066
 title: "added brand ID"
 author: honeypsabu

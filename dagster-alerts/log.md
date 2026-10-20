@@ -3,6 +3,126 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
+timestamp: 2026-10-20T08:07:28Z
+channel: brand-data-dev-alerts
+brand: adidas
+summary: "adidas_FEED: 11 asset materializations failed (run 6e77410c, from the schedule), starting at download_images and feed_transform"
+status: recurring
+linked_issue: null
+```
+Seventh adidas failure (10-09, 10-13, 10-14, 10-15, 10-16, 10-19, 10-20), same shape. No thread. Still unexplained.
+
+```yaml
+timestamp: 2026-10-20T00:36:21Z
+channel: brand-data-dev-alerts
+brand: vanDeVelde
+summary: "vanDeVelde__FEED__process_images OOM (exit 137, run d49716e1, from the schedule)"
+status: active
+linked_issue: null
+```
+First vanDeVelde OOM in the log window. Aji: out of memory in process images. Chamindu: the brand sends high-quality images now, so it needs more resources. dwiajik merged brand-data-pipeline#2079 "vanDeVelde FEED to use M" 10-20 08:38 UTC, which looks like the fix. Not in a release yet, not his.
+
+```yaml
+timestamp: 2026-10-19T21:50:30Z
+channel: brand-data-dev-alerts
+brand: platform (PDS publish)
+summary: "PUBLISHING_JOB_PD_STREAMS_FAILED log alert triggered, recovered 22:05 UTC"
+status: recurring
+linked_issue: null
+```
+Second firing this cycle. Per dwiajik's draft product-service#3003, the 21:48 UTC failure was `CredentialsProviderError`: the SDK couldn't get credentials from the task's credentials endpoint, so nothing reached Kinesis. #3003 lengthens the timeout and adds retries. Different cause from the 09:07 UTC firing and from the 10-13 `partitionKey` problem. Not his.
+
+```yaml
+timestamp: 2026-10-19T18:15:45Z
+channel: brand-data-dev-alerts
+brand: falke
+summary: "falke_FEED: 11 asset materializations failed (run a2dd417e, started by Dagster Dim User), starting at download_images and feed_transform"
+status: recurring
+linked_issue: null
+```
+First falke failure since the four on 10-15, after its migration. Hand-started run. No thread. Not his.
+
+```yaml
+timestamp: 2026-10-19T17:38:07Z
+channel: brand-data-dev-alerts
+brand: ftcCashmere
+summary: "ftcCashmere_FEED2: 12 asset materializations failed (run d289ac50, from the schedule), starting at download_images and extract"
+status: recurring
+linked_issue: BDD-3357
+```
+Tenth since 10-08. marianabassi's credential fix (brand-data-pipeline#2069) merged 08:51 UTC but missed production release #2070 (10:03 UTC) and only reached production in #2076 (10-20 07:59 UTC), so this run still had the old config. No thread. Earmarked: one clean cycle means the fix held.
+
+```yaml
+timestamp: 2026-10-19T13:11:26Z
+channel: brand-data-dev-alerts
+brand: carsJeans
+summary: "carsJeans_FEED_sync_images exceeded the 3h run-time limit (run 099ab457, started 10:10 UTC)"
+status: recurring
+linked_issue: null
+```
+Fourteenth hit (09-30 to 10-19), the 10:10 UTC schedule again, after quiet 10-17 and 10-18. Check-mark reaction, no thread. No owner.
+
+```yaml
+timestamp: 2026-10-19T12:16:43Z
+channel: brand-data-dev-alerts
+brand: fynchHatton
+summary: "fynchHatton_FEED2_sync_images exceeded the 3h run-time limit (run f2449be4, started 09:16 UTC from the schedule)"
+status: recurring
+linked_issue: null
+```
+Kushel disabled the fynchHatton image-sync schedule on 09-30 because of the brand's FTP problem. This run was launched by `fynchHatton_FEED2_cron_image_sync_schedule`, so that schedule is on again. Who turned it back on isn't visible. Eyes reaction, no thread.
+
+```yaml
+timestamp: 2026-10-19T11:07:55Z
+channel: brand-data-dev-alerts
+brand: timezone
+summary: "timezone__FEED2__move_images_from_ftp_to_s3_job_sync exit 1 (run 7bb8cd79): remote directory /productImages not found"
+status: self-resolved
+linked_issue: null
+```
+Aji tagged honey.sabu, who replied "Fixed" (14:37 UTC). First timezone failure in the log window.
+
+```yaml
+timestamp: 2026-10-19T09:18:25Z
+channel: brand-data-dev-alerts
+brand: blueSeven
+summary: "blueSeven_FEED2 sync images: 4 asset materializations failed (run 73096d4f, from the schedule), FTP connection termination timed out"
+status: active
+linked_issue: null
+```
+Aji quoted `Error: FTP connection termination timed out` from `source-connector/dist/ftpSource.js` in the image-sync collector job. Part of the 09:07 to 09:18 UTC cluster below, but with its own error. Different from the 09-30 `ona__blueSeven_FEED2` 3h hang.
+
+```yaml
+timestamp: 2026-10-19T09:12:54Z
+channel: brand-data-dev-alerts
+brand: unitedLegwear, liebeskind, lerros
+summary: "unitedLegwear_FEED (8 assets, hand-started), liebeskind_FEED (12 assets, schedule) and lerros__FEED__trigger_enrichment_from_map (no exit code, schedule) failed 09:09 to 09:13 UTC"
+status: active
+linked_issue: null
+```
+Aji replied "no logs" on all three. Same five minutes as the two `analytics` failures, one of which logged an SSM 500 at task start, so a short AWS-side problem is a plausible common cause. Not confirmed. unitedLegwear's second failure (also 10-14). liebeskind's 10-07 FEED2 entry was a different feed and error. First lerros failure in the window.
+
+```yaml
+timestamp: 2026-10-19T09:07:52Z
+channel: brand-data-dev-alerts
+brand: platform (analytics_trigger_sensor)
+summary: "analytics failed twice (runs 6c3e8c90 09:07 UTC, ae50029f 09:12 UTC), the second with ResourceInitializationError: SSM GetParameters 500"
+status: recurring
+linked_issue: null
+```
+Aji: no logs for the first. For the second he quoted the task failing to pull secrets from SSM (`InternalServerError`, 3 attempts). Continues the September `analytics` pattern.
+
+```yaml
+timestamp: 2026-10-19T09:07:29Z
+channel: brand-data-dev-alerts
+brand: platform (PDS publish)
+summary: "PDS stream publish failures (metric 79) + PUBLISHING_JOB_PD_STREAMS_FAILED log alert, paired, recovered 09:22 to 09:24 UTC"
+status: recurring
+linked_issue: null
+```
+Aji posted an example log (`InternalFailure: UnknownError` from Kinesis, style group 2004503) and a remediation PR, dwiajik's product-service#2987 (retry Kinesis 5xx in the stream publisher), merged 10-20 07:41 UTC, after production release #2999, so not in production yet. Not his.
+
+```yaml
 timestamp: 2026-10-19T08:06:33Z
 channel: brand-data-dev-alerts
 brand: adidas
@@ -1135,12 +1255,3 @@ linked_issue: null
 ```
 New brand for this failure shape, first seen 2026-09-17 (7 occurrences, 12:42-12:58 UTC). Recurred 09-18 (9 more, 12:42-12:52 UTC) and again 09-21 (8 more, 08:23-08:35 UTC) — 26+ occurrences total, all the same step, still completely unowned across four days. No thread or reaction at any point.
 
-```yaml
-timestamp: 2026-09-19T00:50:40Z
-channel: brand-data-dev-alerts
-brand: meyer
-summary: "meyer__FEED__map — essential container exited, exit code 1 (cron-scheduled run)"
-status: active
-linked_issue: null
-```
-New failure signature for meyer, distinct from the earlier FEED2 reprocessing issue ([BDD-3155](../support/recently-closed.md), already shipped). Single occurrence, launched by `meyer_FEED_cron_schedule`. No thread, no reaction.

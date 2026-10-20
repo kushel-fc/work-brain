@@ -3,6 +3,94 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2981
+title: "BDD-3223: speed up PCS CSV generation and the PDS call"
+author: kushel-fc
+state: closed
+merged: true
+closed: 2026-10-19
+url: https://github.com/fashioncloud/product-service/pull/2981
+```
+His. Merged by him 10-19 10:27 UTC (approved by dwiajik). In staging release #2994 and production release #2999 (10-20 07:58 UTC). The optimisation the PCS p95 monitor was muted for.
+
+```yaml
+number: 2996
+title: "BDD-3494: video reprocessing prerequisites (1/4)"
+author: kushel-fc
+state: closed
+merged: true
+closed: 2026-10-19
+url: https://github.com/fashioncloud/product-service/pull/2996
+```
+His. Opened 14:30 UTC and merged 15:28 UTC 10-19. `video-reprocessing` workflow type, video GTIN lookup, GTIN output from `download_videos`. Its rollout says deploy this before brand-data-pipeline#2074. Not in a release yet (missed staging #2994 at 14:57 UTC).
+
+```yaml
+number: 3001
+title: "BDD-3223: add a JMeter load test for PCS multi-download resolve"
+author: kushel-fc
+state: closed
+merged: true
+closed: 2026-10-20
+url: https://github.com/fashioncloud/product-service/pull/3001
+```
+His. Opened 10-19 16:13 UTC, merged 10-20 07:58 UTC, +1583/-0.
+
+```yaml
+number: 2983
+title: "Add AI origin handling for product images"
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-10-19
+url: https://github.com/fashioncloud/product-service/pull/2983
+```
+He approved 10-19 09:28 UTC; Chamindu36 merged at 09:29.
+
+```yaml
+number: 2977
+title: "BDD-3479 T3.3: publish the deletion events and fail loudly"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-19
+url: https://github.com/fashioncloud/product-service/pull/2977
+```
+Merged 10-19 10:05 UTC on Chamindu36's approval, without his review. Named him.
+
+```yaml
+number: 2980
+title: "BDD-3468 T3.4: Terraform and deploy wiring for the deletion publishing job"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-19
+url: https://github.com/fashioncloud/product-service/pull/2980
+```
+Merged 10-19 10:05 UTC. Not his.
+
+```yaml
+number: 2982
+title: "Staging Release - 2026-10-19"
+author: app/github-actions
+state: closed
+merged: true
+closed: 2026-10-19
+url: https://github.com/fashioncloud/product-service/pull/2982
+```
+Merged 10-19 08:49 UTC. Nothing of his.
+
+```yaml
+number: 2930
+title: "Exclude BACKEND_DB from global certificate merge sources"
+author: irembbt
+state: closed
+merged: false
+closed: 2026-10-20
+url: https://github.com/fashioncloud/product-service/pull/2930
+```
+Closed unmerged by irembbt 10-20 08:09 UTC, a week after opening. He was the only human reviewer requested and never reviewed. BDD-3388 had already gone Done 10-15.
+
+```yaml
 number: 2969
 title: "BDD-3471: T1.3: SDK accepts and delivers delete events"
 author: dwiajik

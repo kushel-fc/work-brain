@@ -2,7 +2,19 @@
 
 Full raw Triage backlog for team BDD, sourced from https://linear.app/fashioncloud/team/BDD/triage. Populated on sync. See `support/open.md` for the FD-referenced/support-shaped curated subset.
 
-**10-19 sync:** 5 to 5, nothing new and nothing left. All five unchanged since they were filed. BDD-3410 (Irem, Brax visibility flags) is still outside Triage.
+**10-20 sync:** 5 to 6. New: BDD-3501 (Low, FD 681456, unassigned), filed 10-20 08:04 UTC. Nothing left. The other five are unchanged since they were filed.
+
+```yaml
+id: BDD-3501
+title: "FTP/SFTP connections stay open in the brand-data image downloader (FD: 681456)"
+priority: Low
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-10-20
+url: https://linear.app/fashioncloud/issue/BDD-3501/ftpsftp-connections-stay-open-in-the-brand-data-image-downloader-fd
+```
+Filed 10-20 08:04 UTC. Created by Oleh Polishchuk (Order management), not a brand. Support-shaped, see [`support/open.md`](../../support/open.md).
 
 ```yaml
 id: BDD-3420
