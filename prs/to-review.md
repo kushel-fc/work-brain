@@ -2,21 +2,7 @@
 
 PRs where Kushel is a requested reviewer. Populated on sync.
 
-**Six to two.** He approved Chamindu36's #2983 (10-19 09:28 UTC, merged a minute later). dwiajik's deletion-publishing pair, product-service#2977 and brand-data-pipeline#2067, merged 10-19 10:05 UTC on Chamindu36's approval, without his review. irembbt closed #2930 unmerged 10-20 08:09 UTC. Left: #2960 (five days, no human review) and the dependabot bump.
-
-```yaml
-number: 2960
-repo: product-service
-title: "Willen brand migration mapping rules"
-author: dushansilva
-state: open
-mergeable_state: unknown
-review_state: changes-requested
-requested_reviewers: [brand-data-dev, irembbt, kushel-fc]
-updated: 2026-10-15
-url: https://github.com/fashioncloud/product-service/pull/2960
-```
-Opened 10-15 11:49 UTC, +148/-15, no activity since. Phase 1 mapping rules for the Willen `FEED` migration: 25 `searchColor` and 38 positional `careInstructions` rules, plus a local env example for the upsert helper. The pipeline side (brand-data-pipeline#2057) merged 10-15, and dushansilva merged a follow-up there 10-19 (#2072, keep Willen material parts separate in `fcKeys.material`). Only CodeRabbit has reviewed (Changes Requested). `gh` reads `unknown` this cycle; last known state was mergeable, blocked on review.
+**Two to one.** product-service#2960 (Willen mapping rules) was **closed unmerged** 10-20 14:56 UTC, the same minute dushansilva merged #3016 (Willen moved from Megatron to the PIPE brand array), so it needed no review from him. Left: the dependabot bump. The routine staging release PR product-service#3023 (10-21) also names him, and isn't tracked as a review.
 
 ```yaml
 number: 2019

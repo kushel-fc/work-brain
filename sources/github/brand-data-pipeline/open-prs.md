@@ -2,7 +2,46 @@
 
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
-17 to 15. Off the list, all merged: marianabassi's #2069 (ftcCashmere credential ID, 10-19 08:51 UTC, in production release #2076), staging release #2068, and dwiajik's #2067 (deletion publishing Dagster job, 10-19 10:05 UTC, without his review). New: physicalattraction's #2077 (CODEOWNERS). Opened and merged inside the window: **his own #2074** (BDD-3495, publish after `download_videos`, 10-19 15:28 UTC, not in a release yet), production releases #2070 (10-19 10:03 UTC) and #2076 (10-20 07:59 UTC), staging release #2073, dushansilva's #2072 (Willen material), inga-ar's #2071, honeypsabu's #2075, marianabassi's #2078 (oneil), dwiajik's #2079 (vanDeVelde FEED to size M, 10-20 08:38 UTC). Mergeable states for the older PRs mostly read `unknown` again and are left at their last known values. See [`archive/prs/brand-data-pipeline.md`](../../../archive/prs/brand-data-pipeline.md).
+15 to 18. Nothing of the tracked 15 merged or closed. New: #2088 (staging release, 10-21, names the brand-data-dev team, dwiajik and abubakarwase), #2087 (MuniaL, Daniel Hechter offboarding, approved, clean) and #2081 (inga-ar, "remove to dates"). Merged since the last sync, all already off the list: #2079 (vanDeVelde size M), #2078, #2080, #2082, #2084, #2086, staging release #2083 and **production release #2085 (10-20 12:58 UTC)**. #2039 (dwiajik, SAX XML parsing for bugatti, profuomo, mustang and schmidtGroup; hakansoylu1 and the dims team requested) was already listed. Mergeable states for the older PRs mostly read `unknown` and are left at their last known values. See [`archive/prs/brand-data-pipeline.md`](../../../archive/prs/brand-data-pipeline.md).
+
+```yaml
+number: 2088
+title: "Staging Release - 2026-10-21"
+author: FCMachineUser
+state: open
+mergeable_state: blocked
+review_state: awaiting-first-review
+requested_reviewers: [brand-data-dev, dwiajik, abubakarwase]
+updated: 2026-10-21
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2088
+```
+Routine staging release, paired with product-service#3023. Doesn't name him.
+
+```yaml
+number: 2087
+title: "Daniel Hechter Offboarding"
+author: MuniaL
+state: open
+mergeable_state: clean
+review_state: approved
+requested_reviewers: []
+updated: 2026-10-21
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2087
+```
++0/-793, approved by honeypsabu. Doesn't name him.
+
+```yaml
+number: 2081
+title: "remove \"to\" dates"
+author: inga-ar
+state: open
+mergeable_state: blocked
+review_state: awaiting-first-review
+requested_reviewers: []
+updated: 2026-10-20
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2081
+```
+Doesn't name him.
 
 ```yaml
 number: 2077

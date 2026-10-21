@@ -8,17 +8,19 @@ Each earmark has a `Trigger signal` (plain-language condition to watch for durin
 
 ## Active
 
-- **Trigger signal**: the next product-service and brand-data-pipeline releases (staging or production) carry his product-service#2996 (video reprocessing prerequisites, 1/4) and brand-data-pipeline#2074 (`publish_from_download_videos`)
-- **Surface**: #2996's rollout says it deploys first: every job validates `WORKFLOW_TYPE` at boot, and the new publish step reads the GTIN list #2996 makes `download_videos` write. Both merged 10-19 15:28 UTC, after that day's staging releases, so they will most likely ride the same pair of releases. Check product-service deployed before (or with) the pipeline, and watch for `fashionCloud_FEED`, `fashionCloud_FEED2` or `fashionCloudQA_FEED` failing at `download_videos` or `publish_from_download_videos` right after.
-- **Related**: [prs/mine.md](../prs/mine.md), [archive/prs/product-service.md](../archive/prs/product-service.md), [archive/prs/brand-data-pipeline.md](../archive/prs/brand-data-pipeline.md)
-- **Status**: active (added 2026-10-20)
-
-- **Trigger signal**: ftcCashmere_FEED2 goes a full sync cycle with no alerts, now that brand-data-pipeline#2069 (credential ID) is in production (release #2076, 10-20 07:59 UTC)
-- **Surface**: Then the feed failures are fixed. Check whether [BDD-3357](../support/open.md)'s 403 on `shop.ftc-cashmere.com` image URLs went away with it, or is a separate problem. If ftcCashmere fails again after 10-20 07:59 UTC, the credential change wasn't the whole fix.
-- **Related**: [dagster-alerts/log.md](../dagster-alerts/log.md), [support/open.md](../support/open.md)
-- **Status**: active (added 2026-10-20)
+(none)
 
 ## Triggered / Dismissed
+
+- **Trigger signal**: the next product-service and brand-data-pipeline releases (staging or production) carry his product-service#2996 (video reprocessing prerequisites, 1/4) and brand-data-pipeline#2074 (`publish_from_download_videos`)
+- **Surface**: #2996's rollout says it deploys first: every job validates `WORKFLOW_TYPE` at boot, and the new publish step reads the GTIN list #2996 makes `download_videos` write.
+- **Related**: [prs/mine.md](../prs/mine.md), [archive/prs/product-service.md](../archive/prs/product-service.md), [archive/prs/brand-data-pipeline.md](../archive/prs/brand-data-pipeline.md)
+- **Status**: triggered 2026-10-21 (added 2026-10-20). Both are in production: product-service release #3015 merged 10-20 12:57 UTC and brand-data-pipeline #2085 a minute later, both cut after staging releases #3012 and #2083 (12:09 UTC), which post-date the 10-19 15:28 UTC merges. Order was right (product-service first). I haven't read the release contents, so "carried by" is inferred from timing. No `download_videos` or `publish_from_download_videos` failure in #brand-data-dev-alerts since, and `fashionCloud_FEED`, `fashionCloud_FEED2` and `fashionCloudQA_FEED` didn't alert. That says nothing about whether those jobs ran, so first real use is still ahead.
+
+- **Trigger signal**: ftcCashmere_FEED2 goes a full sync cycle with no alerts, now that brand-data-pipeline#2069 (credential ID) is in production (release #2076, 10-20 07:59 UTC)
+- **Surface**: Then the feed failures are fixed. Check whether [BDD-3357](../support/open.md)'s 403 on `shop.ftc-cashmere.com` image URLs went away with it, or is a separate problem.
+- **Related**: [dagster-alerts/log.md](../dagster-alerts/log.md), [support/open.md](../support/open.md)
+- **Status**: triggered 2026-10-21 (added 2026-10-20). No ftcCashmere alert between 10-20 08:50 UTC and now (about 24h, after the production release at 07:59 UTC). Earlier failures came every one to three days, so this is encouraging rather than conclusive. BDD-3357 is still in Triage and unassigned, nobody has said whether the 403 is gone. If ftcCashmere fails again, reopen it as a `recurring` Dagster entry instead of reviving this earmark.
 
 - **Trigger signal**: product-service#2951 (his, carry transformedSku videos through to mergedSku/mappedSku) merges, and later ships in a staging or production release
 - **Surface**: Check that `fill-global-merge-rules` from that branch was run against the environment before the release deployed. Per the PR, if the deployed merger can't find the new `videos` global merge rule, every merge run fails. After production, the backfill (brands with `video_processing_enabled`, rerun from `merge` with `FORCE_UPDATE`) is still to do. A burst of merge-step Dagster failures right after a release would point here.

@@ -1,12 +1,17 @@
 # Today
 
-1. **Get his own [#3002](prs/mine.md) unblocked** (video reprocessing 2/4, BDD-3496). dwiajik and Chamindu36 approved and all checks are green, but it's `BLOCKED` with julsjacinto requested, probably as a new code owner after the CODEOWNERS change #3000 (not confirmed). PRs 3 and 4 (BDD-3497, BDD-3498) stack on it.
-2. **Watch the release order for video reprocessing.** His product-service#2996 (1/4) and brand-data-pipeline#2074 (publish after `download_videos`) both merged 10-19 and neither is in a release yet. #2996 has to deploy first. Earmarked, see [`_meta/earmarks.md`](_meta/earmarks.md).
-3. **Review dushansilva's [product-service#2960](prs/to-review.md)** (Willen mapping rules). Five days, no human review, and he and irembbt are the only humans requested. dushansilva is still shipping Willen pipeline fixes (#2072 on 10-19).
+## Earmarks triggered
+- **Video reprocessing releases:** his product-service#2996 (1/4) and brand-data-pipeline#2074 are in **production** since 10-20 ~12:58 UTC (releases #3015 and #2085, product-service first, as the rollout needs). Inferred from release timing, I haven't read the release contents. No `download_videos` or publish failures in the alerts channel since, but nothing has used the new step yet. See [`_meta/earmarks.md`](_meta/earmarks.md).
+- **ftcCashmere:** no alert for about 24h since the credential fix (#2069) reached production 10-20 07:59 UTC. Encouraging, not conclusive. Whether it also clears the 403 in [BDD-3357](support/open.md) is still unconfirmed.
+
+## Priorities
+1. **Get his own [#3017](prs/mine.md) unblocked** (video reprocessing 4/4, BDD-3498). Chamindu36, irembbt and dwiajik approved 10-20 and checks are green, but it's `BLOCKED` on abubakarwase (probably code owner) and CodeRabbit has requested changes a third time (1 comment left as of 08:33 UTC). He replied to the threads this morning. It's the last endpoint PR, and the publish step it depends on is already in production.
+2. **BDD-3455 and BDD-3449 bookkeeping.** BDD-3455 (parent) is In Progress; BDD-3449 (video download parity) moved back to To Do this morning. BDD-3499, the admin page in the frontend repo, is the only unstarted piece of Video Reprocessing.
 
 ## Worth noting (not urgent)
-- **Slice 5 is closed.** BDD-3213 Done and BDD-3216 (delivery measurement) Canceled on 10-19, so the intent-vs-delivery question no longer blocks anything. His #2981 (CSV and PDS-call speed-ups) is **in production** since release #2999 (10-20 07:58 UTC). The PCS p95 monitor he muted for it is still muted as far as the sources show. See [shaping](shaping/video-download-delivery.md).
-- **Review queue down to two.** He approved #2983. dwiajik's deletion pair (#2977, brand-data-pipeline#2067) merged without his review, and Irem closed #2930 unmerged.
-- **fynchHatton's image-sync schedule is running again.** He disabled it 09-30 over the brand's FTP problem; it ran from the schedule 10-19 and hung 3h. Who turned it back on isn't visible. See the [Dagster log](dagster-alerts/log.md).
-- **Support:** new [BDD-3501](support/open.md) (Low): Oleh Polishchuk reports the image downloader never closes its FTP/SFTP clients. Same area as his BDD-3449 "reuse FTP connections" item. ftcCashmere's credential fix (#2069) reached production 10-20 07:59 UTC, after a tenth failure (earmarked).
-- **Dagster:** a 09:07 to 09:18 UTC cluster 10-19 (analytics twice with an SSM 500, lerros, liebeskind, unitedLegwear, blueSeven FTP timeout, PDS publish), mostly "no logs". PDS publish fired again 21:50 UTC on a credentials error (dwiajik's #3003, draft). New vanDeVelde OOM (fix #2079 merged). adidas seventh, carsJeans fourteenth, falke again.
+- **Review queue is down to one.** product-service#2960 (Willen) was closed unmerged when dushansilva moved Willen to PIPE with #3016, so nothing is waiting on him except the dependabot bump (brand-data-pipeline#2019, since 10-07). The routine staging release PR product-service#3023 also names him.
+- **fynchHatton's image-sync schedule is still on:** it hung 3h again 10-20 (second day running) from the schedule he disabled 09-30. See the [Dagster log](dagster-alerts/log.md).
+- **PDS relay Lambda** (`pds-stream-relay-style-production`) alerted four times 10-20 13:10 to 16:10 UTC and recovered 16:12. No thread, no cause stated.
+- **New brand failures, none his:** calida_FEED (12 assets, 10-20 19:23 UTC), luisacerano_FEED (map/merge/publish, after its migration), falke_FEED hand-started again.
+- **Support:** no change, five open and unassigned (see [support/open.md](support/open.md)). Nothing new in Triage.
+- **Slice 5 / PCS:** unchanged, closed. The PCS p95 monitor he muted for #2981 is still muted as far as the sources show. See [shaping](shaping/video-download-delivery.md).

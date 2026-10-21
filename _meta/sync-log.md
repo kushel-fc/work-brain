@@ -2,6 +2,17 @@
 
 One entry per sync run. Prune entries older than ~30 days.
 
+## 2026-10-21 (~08:55 UTC)
+
+About 24h since the last sync. Linear (claude.ai connector), GitHub (`gh`) and Slack (claude.ai connector) were all reachable.
+
+- **His video reprocessing stack moved two steps.** #3002 (2/4) and #3008 (3/4) merged 10-20 (08:50 and 11:05 UTC), and #3017 (4/4, endpoints) opened 12:20 UTC. Three humans approved #3017; CodeRabbit has requested changes three times (3 comments, then 2, then 1) and he replied. It's `BLOCKED` on abubakarwase. Linear: BDD-3496 and BDD-3497 Done, BDD-3498 In Review, BDD-3455 (parent) In Progress, BDD-3449 back to To Do. His live issues go 7 to 6.
+- **Both earmarks triggered.** #2996 and brand-data-pipeline#2074 reached production in releases #3015 and #2085 (10-20 ~12:58 UTC, product-service first); inferred from release timing, not from reading the contents. ftcCashmere_FEED2 had no alert for about 24h after its credential fix, which is encouraging but not conclusive. No earmarks active now.
+- Review queue 2 to 1: product-service#2960 (Willen) was closed unmerged when #3016 moved Willen to PIPE. Only the dependabot bump is left. product-service stayed at 5, brand-data-pipeline went 15 to 18 (#2081, #2087, staging release #2088). Several older PRs read `unknown` mergeable states and are left at their last known values.
+- Linear Triage unchanged at 6, support/open.md unchanged at 5.
+- Slack (12 messages): carsJeans hit the 3h limit a fifteenth time and fynchHatton_FEED2 a second day running (the schedule he disabled 09-30 is still on). The PDS relay Lambda alert fired four times (style relay) and recovered. New: calida_FEED (12 assets), luisacerano_FEED (map/merge/publish) and a second hand-started falke failure. A galvatron health-check blip self-resolved. Quiet after 19:23 UTC. Dagster log pruned by 2 entries (09-21), now 130.
+- Notified: no. Nothing crossed the notification bar. No deadline passed with zero movement. #3017's Changes Requested is CodeRabbit's alone, with three human approvals, and by the precedent in this log (09-24) that isn't a flip against him; no conflict. No new Urgent unassigned ticket. fynchHatton and the PDS relay continue existing `recurring` entries rather than coming back after self-resolving.
+
 ## 2026-10-20 (~08:50 UTC)
 
 About 24h since the last sync. Linear (claude.ai connector), GitHub (`gh`) and Slack (claude.ai connector) were all reachable. The `plugin:engineering:*` servers needed auth and weren't used.

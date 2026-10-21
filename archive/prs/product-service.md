@@ -3,6 +3,149 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 3002
+title: "BDD-3496: video reprocessing API query layer and shared media strategies (2/4)"
+author: kushel-fc
+state: closed
+merged: true
+closed: 2026-10-20
+url: https://github.com/fashioncloud/product-service/pull/3002
+```
+His. Merged by him 10-20 08:50 UTC after dwiajik and Chamindu36 approved. In staging release #3012 and production release #3015 (12:57 UTC).
+
+```yaml
+number: 3008
+title: "BDD-3497: video reprocessing API service and shared reprocessing helpers (3/4)"
+author: kushel-fc
+state: closed
+merged: true
+closed: 2026-10-20
+url: https://github.com/fashioncloud/product-service/pull/3008
+```
+His. Merged 11:05 UTC. In staging #3012 and production #3015.
+
+```yaml
+number: 2960
+title: "Willen brand migration mapping rules"
+author: dushansilva
+state: closed
+merged: false
+closed: 2026-10-20
+url: https://github.com/fashioncloud/product-service/pull/2960
+```
+Closed unmerged 14:56 UTC, the same minute #3016 (Willen moved from Megatron to the PIPE brand array) merged. Named him; he never reviewed it.
+
+```yaml
+number: 2961
+title: "Luisa Cerano brand migration"
+author: dushansilva
+state: closed
+merged: false
+closed: 2026-10-20
+url: https://github.com/fashioncloud/product-service/pull/2961
+```
+Closed unmerged 09:11 UTC.
+
+```yaml
+number: 2966
+title: "feat(move-images): optionally list images in subdirectories"
+author: dushansilva
+state: closed
+merged: true
+closed: 2026-10-20
+url: https://github.com/fashioncloud/product-service/pull/2966
+```
+Merged 12:19 UTC.
+
+```yaml
+number: 3003
+title: "PD stream credentials longer timeout and more retries"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-20
+url: https://github.com/fashioncloud/product-service/pull/3003
+```
+Merged 09:11 UTC; the fix for the 10-19 21:50 UTC `CredentialsProviderError` publish failure.
+
+```yaml
+number: 3015
+title: "Production Release - 2026-10-20"
+author: app/github-actions
+state: closed
+merged: true
+closed: 2026-10-20
+url: https://github.com/fashioncloud/product-service/pull/3015
+```
+Merged 12:57 UTC. First production release after his #2996 (1/4) and #3002/#3008; also carried the deletion-publishing work.
+
+```yaml
+number: 3012
+title: "Staging Release - 2026-10-20"
+author: app/github-actions
+state: closed
+merged: true
+closed: 2026-10-20
+url: https://github.com/fashioncloud/product-service/pull/3012
+```
+Merged 12:09 UTC.
+
+```yaml
+number: 3022
+title: "feat(replay-caller): implement consumer authorization and error handling"
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-10-21
+url: https://github.com/fashioncloud/product-service/pull/3022
+```
+Merged 08:40 UTC.
+
+```yaml
+number: 3016
+title: "Move Willen from Megatron to PIPE brand array"
+author: dushansilva
+state: closed
+merged: true
+closed: 2026-10-20
+url: https://github.com/fashioncloud/product-service/pull/3016
+```
+Merged 14:55 UTC.
+
+```yaml
+number: 3014
+title: "BDD-3482 T5.4: enable delete publishing in staging and production"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-20
+url: https://github.com/fashioncloud/product-service/pull/3014
+```
+Merged 13:28 UTC.
+
+```yaml
+number: 3019
+title: "Use default_zero for aws.lambda.errors in PDS relay monitoring"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-20
+url: https://github.com/fashioncloud/product-service/pull/3019
+```
+Merged 14:21 UTC.
+
+```yaml
+number: 3009
+title: "let pipe stack own product videos bucket policy including CDN access"
+author: irembbt
+state: closed
+merged: false
+closed: 2026-10-20
+url: https://github.com/fashioncloud/product-service/pull/3009
+```
+Closed unmerged 11:50 UTC.
+
+```yaml
 number: 2981
 title: "BDD-3223: speed up PCS CSV generation and the PDS call"
 author: kushel-fc

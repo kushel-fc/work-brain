@@ -3,6 +3,76 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
+timestamp: 2026-10-20T19:23:04Z
+channel: brand-data-dev-alerts
+brand: calida
+summary: "calida_FEED: 12 asset materializations failed (run c77f794d, from the schedule), starting at download_images and extract"
+status: active
+linked_issue: null
+```
+First calida failure in the log. Same shape as the ftcCashmere and bugatti credential failures, but the cause isn't stated. No thread. Not his.
+
+```yaml
+timestamp: 2026-10-20T18:16:42Z
+channel: brand-data-dev-alerts
+brand: fynchHatton
+summary: "fynchHatton_FEED2_sync_images exceeded the 3h run-time limit (run 951c4c3a, started 15:16 UTC from the schedule)"
+status: recurring
+linked_issue: null
+```
+Second scheduled hang in two days (10-19, 10-20) from the `fynchHatton_FEED2_cron_image_sync_schedule` he disabled 09-30. The schedule is evidently still on. No thread.
+
+```yaml
+timestamp: 2026-10-20T16:12:26Z
+channel: brand-data-dev-alerts
+brand: platform (PDS relay)
+summary: "PDS relay Lambda erroring: pds-stream-relay-style-production (84 errors at the 13:10 UTC trigger), re-triggered 14:10, 15:10 and 16:10 UTC, recovered 16:12 UTC"
+status: recurring
+linked_issue: null
+```
+Four notifications over about three hours, then a recovery. Same monitor as the 09-25 and 10-06 relay alerts. The style relay only, color was fine. Eyes reactions on two of them, no thread, no cause stated. The monitor's `default_zero` change (dwiajik's #3019) merged 14:21 UTC, between the re-triggers. Not his.
+
+```yaml
+timestamp: 2026-10-20T13:47:45Z
+channel: brand-data-dev-alerts
+brand: platform (galvatron ECS)
+summary: "[production] ECS health check failures (galvatron, value 2), recovered 13:54 UTC"
+status: self-resolved
+linked_issue: null
+```
+Seven minutes. No thread.
+
+```yaml
+timestamp: 2026-10-20T13:11:12Z
+channel: brand-data-dev-alerts
+brand: carsJeans
+summary: "carsJeans_FEED_sync_images exceeded the 3h run-time limit (run 398ba0d0, started 10:11 UTC)"
+status: recurring
+linked_issue: null
+```
+Fifteenth hit (09-30 to 10-20), the 10:10 UTC schedule again. No thread, no owner.
+
+```yaml
+timestamp: 2026-10-20T10:47:09Z
+channel: brand-data-dev-alerts
+brand: luisacerano
+summary: "luisacerano_FEED: map, merge and publish_from_map failed (3 assets, run 2bda61a2)"
+status: active
+linked_issue: null
+```
+First luisacerano failure in the log, after its migration (product-service#2961 mapping rules still open, pipeline #2058 merged). No thread. Not his.
+
+```yaml
+timestamp: 2026-10-20T10:46:39Z
+channel: brand-data-dev-alerts
+brand: falke
+summary: "falke_FEED: 11 asset materializations failed (run 710cee82, started by Dagster Dim User), starting at download_images and feed_transform"
+status: recurring
+linked_issue: null
+```
+Second hand-started falke failure in two days (10-19, 10-20). No thread. Not his.
+
+```yaml
 timestamp: 2026-10-20T08:07:28Z
 channel: brand-data-dev-alerts
 brand: adidas
@@ -1234,24 +1304,4 @@ status: self-resolved
 linked_issue: null
 ```
 The 4-day, 45+-occurrence spree (mosMosh 21+, ara 26+ as of last sync) continued for exactly 3 more mosMosh hits right after last sync's cutoff (08:48:28, 08:52:29, 08:53:30 UTC 09-21) — then nothing. Zero further mosMosh or ara occurrences for the rest of the ~24h window, the longest quiet stretch since the spree started 09-17. [BDD-3268](../support/open.md) (resource-size bump) is still In Progress per Linear, not marked done — so this can't be confidently attributed to that fix landing yet. Worth a fresh look next sync before calling it fully resolved; total tally now mosMosh 24+, ara 26+ (unchanged this cycle). **09-23 sync: confirmed quiet a second full cycle** (zero mosMosh/ara alerts 09-22 08:50 to 09-23 08:45 UTC); BDD-3268 still In Progress, so the stop is still not attributable to that fix.
-
-```yaml
-timestamp: 2026-09-21T08:35:55Z
-channel: brand-data-dev-alerts
-brand: mosMosh
-summary: "mosMosh__FEED image-processing OOM spree now 21+ occurrences across 4 days, still no owner"
-status: active
-linked_issue: null
-```
-New brand for this failure shape, first seen 2026-09-17. `process_images`/`process_images_sync` (exit code 137, OOM) fired 10 times 09-17, then 8 more 09-18 (12:42-13:13 UTC), then 3 more 09-21 (08:29-08:35 UTC) — 21+ occurrences total, still completely unowned, no thread or reaction at any point across four days. [BDD-3268](../support/open.md) (bump resource size for long-running integrations) — the ticket that looked like it might be the fix — was picked up by abubakarwase 09-18 and is now In Progress, but no fix has landed yet and the failures continued after he started it.
-
-```yaml
-timestamp: 2026-09-21T08:35:55Z
-channel: brand-data-dev-alerts
-brand: ara
-summary: "ara__PRICAT__process_images OOM now 26+ occurrences across 4 days, still no owner"
-status: active
-linked_issue: null
-```
-New brand for this failure shape, first seen 2026-09-17 (7 occurrences, 12:42-12:58 UTC). Recurred 09-18 (9 more, 12:42-12:52 UTC) and again 09-21 (8 more, 08:23-08:35 UTC) — 26+ occurrences total, all the same step, still completely unowned across four days. No thread or reaction at any point.
 

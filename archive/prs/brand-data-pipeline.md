@@ -3,6 +3,94 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2085
+title: "Production Release - 2026-10-20"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-10-20
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2085
+```
+Merged 12:58 UTC, a minute after product-service#3015. First production release carrying his #2074 (publish after `download_videos`).
+
+```yaml
+number: 2083
+title: "Staging Release - 2026-10-20"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-10-20
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2083
+```
+Merged 12:09 UTC.
+
+```yaml
+number: 2082
+title: "BDD-3469: rename the deletion publishing step to publish_deletion"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-20
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2082
+```
+Merged 12:09 UTC.
+
+```yaml
+number: 2080
+title: "NZA FEED2 Acceptance db - Staging only"
+author: hakansoylu1
+state: closed
+merged: true
+closed: 2026-10-20
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2080
+```
+Merged 10:24 UTC.
+
+```yaml
+number: 2079
+title: "vanDeVelde FEED to use M"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-20
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2079
+```
+Merged 08:38 UTC, the size bump for the vanDeVelde OOM.
+
+```yaml
+number: 2078
+title: "oneil: add attributes to productCharacteristics"
+author: marianabassi
+state: closed
+merged: true
+closed: 2026-10-20
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2078
+```
+Merged 08:10 UTC.
+
+```yaml
+number: 2086
+title: "temporary change - cron"
+author: Busra040
+state: closed
+merged: true
+closed: 2026-10-20
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2086
+```
+Merged 15:53 UTC.
+
+```yaml
+number: 2084
+title: "ci: move GitHub-hosted jobs to RunsOn runners"
+author: DavidPessoa
+state: closed
+merged: true
+closed: 2026-10-20
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2084
+```
+Merged 12:09 UTC.
+
+```yaml
 number: 2074
 title: "BDD-3495: publish after download_videos"
 author: kushel-fc

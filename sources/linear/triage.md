@@ -2,7 +2,7 @@
 
 Full raw Triage backlog for team BDD, sourced from https://linear.app/fashioncloud/team/BDD/triage. Populated on sync. See `support/open.md` for the FD-referenced/support-shaped curated subset.
 
-**10-20 sync:** 5 to 6. New: BDD-3501 (Low, FD 681456, unassigned), filed 10-20 08:04 UTC. Nothing left. The other five are unchanged since they were filed.
+**10-21 sync:** unchanged, still 6. No new tickets, nothing left Triage, no priority or assignee changes.
 
 ```yaml
 id: BDD-3501
