@@ -2,9 +2,33 @@
 
 FD-sourced/support-shaped tickets, by priority then age (oldest first within each tier). Sourced from the team BDD Triage view: https://linear.app/fashioncloud/team/BDD/triage. Populated on sync. Full raw Triage list lives in [`sources/linear/triage.md`](../sources/linear/triage.md).
 
-**Five open, all unassigned, no High. No change since 10-20.** On BDD-3357 (ftcCashmere): the credential fix (brand-data-pipeline#2069) has been in production since 10-20 07:59 UTC and ftcCashmere_FEED2 has not alerted since (about 25h, earmark triggered). That is consistent with the fix holding but doesn't show it, since the schedule doesn't fire every day. Whether it also explains the ticket's 403 isn't confirmed. BDD-3305 is still an internal feature request Dushan owns, not listed here.
+**Eight open, all unassigned, no High. Three new since 10-21:** BDD-3514, BDD-3512 and BDD-3513 (all merge-rule or image-setting requests). BDD-3357 (ftcCashmere): the credential fix (brand-data-pipeline#2069) has been in production since 10-20 07:59 UTC and ftcCashmere_FEED2 has not alerted since (about 48h), which is consistent with the fix holding; whether it also explains the ticket's 403 on `shop.ftc-cashmere.com` image URLs hasn't been confirmed by anyone.
 
 ## Medium
+
+```yaml
+id: BDD-3512
+title: "Update merge rules Olymp (FD: 681645)"
+priority: Medium
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-10-21
+url: https://linear.app/fashioncloud/issue/BDD-3512
+```
+Filed 10-21 15:28 UTC by Dion Piet. Asks to change Olymp's image merge rules so FEED is no longer considered and FEED2 has priority; says it currently blocks some images on the platform from showing.
+
+```yaml
+id: BDD-3514
+title: "Remove watermark from product images (FD: 680938)"
+priority: Medium
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-10-22
+url: https://linear.app/fashioncloud/issue/BDD-3514
+```
+Filed 10-22 08:40 UTC by Sebastian Igel (German). Retrieving brand product images through Globalsys via API, every image carries a Fashion Cloud watermark; asks what to change in settings to get e-commerce-ready images.
 
 ```yaml
 id: BDD-3357
@@ -43,6 +67,18 @@ url: https://linear.app/fashioncloud/issue/BDD-3420
 Filed 10-14 09:39 UTC by Torben (brand `5f75cea4c29675001065333d`). Prices missing on many styles; the brand uploaded an extra PRICAT with prices that still hasn't been processed. Torben found the EANs with prices in the PRICAT (example 4065986020028).
 
 ## Low
+
+```yaml
+id: BDD-3513
+title: "Create merge rule (FD: 681689)"
+priority: Low
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-10-22
+url: https://linear.app/fashioncloud/issue/BDD-3513
+```
+Filed 10-22 08:26 UTC by Inga Arutiunian. Create an image merge rule with `"mergeStrategy": "USE_FIRST_PRESENT"` for brand HANRO (`5c9116c49c2e580013d83830`).
 
 ```yaml
 id: BDD-3349

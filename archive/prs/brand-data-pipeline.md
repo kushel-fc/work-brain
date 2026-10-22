@@ -3,6 +3,50 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2088
+title: "Staging Release - 2026-10-21"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-10-21
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2088
+```
+Routine staging release, merged 10-21 09:52 UTC.
+
+```yaml
+number: 2087
+title: "Daniel Hechter Offboarding"
+author: MuniaL
+state: closed
+merged: true
+closed: 2026-10-21
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2087
+```
+Merged 10-21 09:44 UTC, approved and clean at the last sync.
+
+```yaml
+number: 2077
+title: "Update CODEOWNERS file"
+author: physicalattraction
+state: closed
+merged: true
+closed: 2026-10-21
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2077
+```
+Merged 10-21 09:31 UTC.
+
+```yaml
+number: 2044
+title: "implement material normalization"
+author: inga-ar
+state: closed
+merged: false
+closed: 2026-10-21
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2044
+```
+Closed unmerged 10-21 14:31 UTC, after her #2090 ("fix materials") merged.
+
+```yaml
 number: 2085
 title: "Production Release - 2026-10-20"
 author: FCMachineUser

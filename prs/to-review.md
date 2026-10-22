@@ -2,7 +2,21 @@
 
 PRs where Kushel is a requested reviewer. Populated on sync.
 
-**Two to one.** product-service#2960 (Willen mapping rules) was **closed unmerged** 10-20 14:56 UTC, the same minute dushansilva merged #3016 (Willen moved from Megatron to the PIPE brand array), so it needed no review from him. Left: the dependabot bump. The routine staging release PR product-service#3023 (10-21) also names him, and isn't tracked as a review.
+**One to two.** New: product-service#3035 (dwiajik, 2/3 of the export-PDS-payloads job), which names him alongside abubakarwase. product-service#3040 (Chamindu36) also named him but he approved it already, so it left the queue. The dependabot bump is unchanged. The routine staging release PR #3023 merged.
+
+```yaml
+number: 3035
+repo: product-service
+title: "BDD-3510: implement the export PDS payloads logic in the job (2/3)"
+author: dwiajik
+state: open
+mergeable_state: blocked
+review_state: awaiting-first-review
+requested_reviewers: [abubakarwase, kushel-fc]
+updated: 2026-10-22
+url: https://github.com/fashioncloud/product-service/pull/3035
+```
+Opened 10-21 14:47 UTC, +1021/-24, middle of a three-part stack (#3034 scaffold, #3036 Terraform draft). CodeRabbit's latest review is an approval; no human has reviewed yet. Part 3/3 sits behind it.
 
 ```yaml
 number: 2019

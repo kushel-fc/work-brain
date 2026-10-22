@@ -2,6 +2,17 @@
 
 One entry per sync run. Prune entries older than ~30 days.
 
+## 2026-10-22 (~09:00 UTC)
+
+About 24h since the last sync. Linear and Slack (claude.ai connectors) and GitHub (`gh`) were all reachable. My first Slack read used a wrong start timestamp and came back empty; re-read with the correct one (10-21 08:55 UTC).
+
+- **Video Reprocessing finished its API side.** His #3017 (4/4) merged 10-21 10:30 UTC, and #3028 (mappedSku videos index, fixing a 120s timeout on `validate`) merged 12:47 UTC; both are in production by release timing (#3025, #3039), contents not read. BDD-3498 Done. BDD-3455 was moved In Progress then **Canceled** 10-21, so his live issues go 6 to 4. BDD-3499 went In Review with his new frontend#7203, now his only open PR (BLOCKED, no review yet).
+- **Review queue 1 to 2:** product-service#3035 (dwiajik, 2/3 export PDS payloads) names him. He approved #3040 himself, so it isn't queued. product-service 5 to 6, brand-data-pipeline 18 to 14 (8 merged including productions #2089 and #2095; #2044 closed unmerged). 9 PRs archived.
+- Linear Triage 6 to 9, support/open.md 5 to 8: BDD-3512 (Medium, Olymp merge rules), BDD-3514 (Medium, watermark on API images) and BDD-3513 (Low, HANRO merge rule). Nothing left Triage.
+- Slack (17 messages): PCS 5xx Warn/recover pairs 00:37 to 00:59 UTC 10-22 (both monitors, existing `recurring`); new ultimoFashion_FEED (three failures, two hand-started); calida_FEED a second day; fynchHatton 3h hang twice (third day, schedule still on); process_enrichment_flow 3h twice plus map/merge failures; carsJeans sixteenth. Dagster log +6, pruned 7 (09-22 and older), now 129. Sync-log pruned: the 09-22 entry.
+- Earmarks: none active.
+- Notified: no. Nothing crossed the notification bar. No deadlines. His only open PR is new and unreviewed, not in conflict or Changes Requested. No new Urgent ticket (the three new ones are Medium, Medium, Low). Every Dagster repeat continues an existing `recurring` entry; calida and ultimoFashion are first-time or second-day, not returns from self-resolved.
+
 ## 2026-10-21 (~08:55 UTC)
 
 About 24h since the last sync. Linear (claude.ai connector), GitHub (`gh`) and Slack (claude.ai connector) were all reachable.
@@ -258,14 +269,3 @@ About 24h since the last sync (09-22 ~08:50 to 09-23 ~08:50). Linear, GitHub and
 - GitHub: review queue 4 to 3, because brand-data-pipeline#1871 merged without his review (its companion product-service#2683 is still waiting on him, zero human reviews). product-service 16 to 14, brand-data-pipeline 18 to 19. Every mergeable state resolved this cycle.
 - Slack was quiet (4 messages): riani `trigger_enrichment_from_map` 1 more (still recurring), a new sOliver FEED2 `map` failure, and a galvatron health-check blip. Dagster log pruned by 2 entries older than 30 days, now 139 in total.
 - Notified: no. Nothing crossed the notification bar. No deadline passed with zero movement. #2754's Changes Requested came and cleared inside this window on a brand-new PR, so the current state is approved, not a flip against him. No new Urgent unassigned ticket (BDD-3296 is Medium). riani continues as an existing `recurring` alert rather than coming back after self-resolving.
-
-## 2026-09-22 (~08:50 UTC)
-
-Quietest cycle in a while — ~24h gap since last sync (09-21 08:46 → 09-22 ~08:50). All three sources reachable.
-
-- **Linear: zero changes.** Both his assigned-issue list and the team BDD Triage backlog are byte-for-byte identical to last sync — no new tickets, no status moves, no reassignments.
-- **Good news, unconfirmed: the mosMosh/ara OOM spree (4 days, 45+ occurrences) appears to have stopped.** Three more mosMosh hits right after last sync's cutoff (09-21 08:48-08:53 UTC), then nothing — zero mosMosh or ara occurrences for the rest of the ~24h window, the longest quiet stretch since it started 09-17. [BDD-3268](../support/open.md) (the resource-size fix) is still In Progress, not shipped, so not yet confidently attributable — added as an active earmark to confirm next cycle.
-- **riani's `trigger_enrichment_from_map` recurred 4 more times** (09-21), despite Dushan's 09-17 "will check" — garcia (paired with riani in that entry) stayed quiet this time.
-- **GitHub: he cleared one of his own review-queue items himself** — approved [product-service#2748](../sources/github/product-service/open-prs.md) this morning (08:45 UTC), down to dwiajik as the only outstanding reviewer there. Review queue 5→4. product-service 18→16 (one new bot PR #2750, three merged: #2742/#2728/#2622); brand-data-pipeline 17→18 (one new, #1929 "sizes", not his). #1871 (names him) resolved its months-long `unknown` mergeable state to a clean `mergeable`, corrected the approver attribution to dwiajik (not marianabassi as previously logged). product-service#1737 (not his) flipped from `unknown` to a real conflict after two-plus months of flapping.
-- Datadog log-index quota hit its warning→quota→recover cycle a sixth time, self-resolved as usual.
-- Notified: no — nothing crossed the notification bar. No deadline passed with zero movement. No flip to conflict/Changes-Requested on his own work (zero open PRs; his own review action on #2748 was an approval, not a flip against him). No new Urgent-priority ticket landed unassigned (zero new Triage items at all). No Dagster alert recurred after reaching self-resolved status — riani's recurrence continues from `active`, not a flip from `self-resolved`, and the mosMosh/ara quiet spell is the opposite direction (quiet, not recurring).

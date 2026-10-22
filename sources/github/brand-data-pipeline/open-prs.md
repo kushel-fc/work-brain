@@ -2,33 +2,7 @@
 
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
-15 to 18. Nothing of the tracked 15 merged or closed. New: #2088 (staging release, 10-21, names the brand-data-dev team, dwiajik and abubakarwase), #2087 (MuniaL, Daniel Hechter offboarding, approved, clean) and #2081 (inga-ar, "remove to dates"). Merged since the last sync, all already off the list: #2079 (vanDeVelde size M), #2078, #2080, #2082, #2084, #2086, staging release #2083 and **production release #2085 (10-20 12:58 UTC)**. #2039 (dwiajik, SAX XML parsing for bugatti, profuomo, mustang and schmidtGroup; hakansoylu1 and the dims team requested) was already listed. Mergeable states for the older PRs mostly read `unknown` and are left at their last known values. See [`archive/prs/brand-data-pipeline.md`](../../../archive/prs/brand-data-pipeline.md).
-
-```yaml
-number: 2088
-title: "Staging Release - 2026-10-21"
-author: FCMachineUser
-state: open
-mergeable_state: blocked
-review_state: awaiting-first-review
-requested_reviewers: [brand-data-dev, dwiajik, abubakarwase]
-updated: 2026-10-21
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/2088
-```
-Routine staging release, paired with product-service#3023. Doesn't name him.
-
-```yaml
-number: 2087
-title: "Daniel Hechter Offboarding"
-author: MuniaL
-state: open
-mergeable_state: clean
-review_state: approved
-requested_reviewers: []
-updated: 2026-10-21
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/2087
-```
-+0/-793, approved by honeypsabu. Doesn't name him.
+18 to 14. Nothing new opened. Merged since the last sync, all off the list: #2088 (staging release), #2087 (Daniel Hechter offboarding), #2077 (CODEOWNERS), #2090, #2091, #2092, #2093, #2094 and **production release #2095 (10-22 08:04 UTC)**, plus #2089 (production release, 10-21 11:57 UTC). #2044 (inga-ar, material normalization) was closed unmerged 10-21 14:31 UTC, after her #2090 "fix materials" merged. Mergeable states for the older PRs mostly read `unknown` and are left at their last known values. See [`archive/prs/brand-data-pipeline.md`](../../../archive/prs/brand-data-pipeline.md).
 
 ```yaml
 number: 2081
@@ -42,32 +16,6 @@ updated: 2026-10-20
 url: https://github.com/fashioncloud/brand-data-pipeline/pull/2081
 ```
 Doesn't name him.
-
-```yaml
-number: 2077
-title: "Update CODEOWNERS file"
-author: physicalattraction
-state: open
-mergeable_state: unstable
-review_state: approved
-requested_reviewers: [irembbt]
-updated: 2026-10-20
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/2077
-```
-Opened 10-19 15:55 UTC. Approved, a check failing or pending. The product-service counterpart (#3000) merged 10-19 17:09 UTC. Doesn't name him.
-
-```yaml
-number: 2044
-title: "implement material normalization"
-author: inga-ar
-state: open
-mergeable_state: mergeable
-review_state: awaiting-first-review
-requested_reviewers: []
-updated: 2026-10-13
-url: https://github.com/fashioncloud/brand-data-pipeline/pull/2044
-```
-Opened 10-13 08:42 UTC, +52/-6. No reviewers yet. Not his.
 
 ```yaml
 number: 2039

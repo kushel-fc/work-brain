@@ -2,7 +2,43 @@
 
 Full raw Triage backlog for team BDD, sourced from https://linear.app/fashioncloud/team/BDD/triage. Populated on sync. See `support/open.md` for the FD-referenced/support-shaped curated subset.
 
-**10-21 sync:** unchanged, still 6. No new tickets, nothing left Triage, no priority or assignee changes.
+**10-22 sync:** 6 to 9. Three new FD tickets, none Urgent or High: BDD-3514 (Medium), BDD-3512 (Medium) and BDD-3513 (Low). Nothing left Triage, no priority or assignee changes on the existing six.
+
+```yaml
+id: BDD-3514
+title: "Remove watermark from product images (FD: 680938)"
+priority: Medium
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-10-22
+url: https://linear.app/fashioncloud/issue/BDD-3514
+```
+Filed 10-22 08:40 UTC (in German, via Kontakt, Sebastian Igel). Support-shaped, see [`support/open.md`](../../support/open.md).
+
+```yaml
+id: BDD-3513
+title: "Create merge rule (FD: 681689)"
+priority: Low
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-10-22
+url: https://linear.app/fashioncloud/issue/BDD-3513
+```
+Filed 10-22 08:26 UTC by Inga Arutiunian. Support-shaped, see [`support/open.md`](../../support/open.md).
+
+```yaml
+id: BDD-3512
+title: "Update merge rules Olymp (FD: 681645)"
+priority: Medium
+status: Triage
+assignee: unassigned
+team: BDD
+updated: 2026-10-21
+url: https://linear.app/fashioncloud/issue/BDD-3512
+```
+Filed 10-21 15:28 UTC by Dion Piet. Support-shaped, see [`support/open.md`](../../support/open.md).
 
 ```yaml
 id: BDD-3501

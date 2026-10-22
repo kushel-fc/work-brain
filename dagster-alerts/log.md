@@ -3,6 +3,66 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
+timestamp: 2026-10-22T00:59:45Z
+channel: brand-data-dev-alerts
+brand: platform (PCS 5xx)
+summary: "PCS ALB target 5xx ratio Warn 00:37 UTC (recovered 00:39), then again 00:55 (recovered 00:59); PCS content API 5xx rate Warn 00:52 (metric 0.005), recovered 00:58 UTC"
+status: recurring
+linked_issue: null
+```
+Two Warn/recover pairs about 15 minutes apart, overnight, no thread. Product-service production releases went out 10-21 11:57 UTC and 10-22 08:04 UTC, so neither was running a fresh deploy at the time.
+
+```yaml
+timestamp: 2026-10-21T19:22:43Z
+channel: brand-data-dev-alerts
+brand: calida
+summary: "calida_FEED: 12 asset materializations failed again (run f127b80c, from the schedule)"
+status: recurring
+linked_issue: null
+```
+Second day running (10-20 19:23 UTC, 10-21 19:22 UTC), same schedule time. No thread, cause not stated. Not his.
+
+```yaml
+timestamp: 2026-10-21T18:16:50Z
+channel: brand-data-dev-alerts
+brand: fynchHatton
+summary: "fynchHatton_FEED2_sync_images exceeded the 3h run-time limit twice (run a03f80e4 started 09:16 UTC, alert 12:17; run 16ca635f started 15:16 UTC, alert 18:16)"
+status: recurring
+linked_issue: null
+```
+Third day (10-19, 10-20, 10-21) and two runs today, both from `fynchHatton_FEED2_cron_image_sync_schedule`, the schedule he disabled 09-30. Still on. No thread.
+
+```yaml
+timestamp: 2026-10-21T17:24:34Z
+channel: brand-data-dev-alerts
+brand: ultimoFashion
+summary: "ultimoFashion_FEED: 11 asset materializations failed three times (hand-started runs 7ef19d17 11:53 UTC and aeb7d295 12:02 UTC by Dagster Dim User; schedule run b93973f5 17:24 UTC), starting at download_images and feed_transform"
+status: active
+linked_issue: null
+```
+First ultimoFashion failure in the log. Two manual retries failed, then the scheduled run failed the same way. No thread, cause not stated. Not his.
+
+```yaml
+timestamp: 2026-10-21T15:09:47Z
+channel: brand-data-dev-alerts
+brand: platform (process_enrichment_flow)
+summary: "process_enrichment_flow exceeded the 3h run-time limit twice (run b6ea024a started 09:35 UTC, alert 12:36; run ee0a0d6d started 12:09 UTC, alert 15:09, both by enrichment_file_sensor); also 5 asset failures at map/merge (run 3fb3db44, 10:14 UTC)"
+status: recurring
+linked_issue: null
+```
+Same sensor-launched job as the earlier 3h hangs. No thread.
+
+```yaml
+timestamp: 2026-10-21T13:11:15Z
+channel: brand-data-dev-alerts
+brand: carsJeans
+summary: "carsJeans_FEED_sync_images exceeded the 3h run-time limit (run 8afa59d2, started 10:10 UTC)"
+status: recurring
+linked_issue: null
+```
+Sixteenth hit (09-30 to 10-21), the 10:10 UTC schedule again. No thread, no owner.
+
+```yaml
 timestamp: 2026-10-20T19:23:04Z
 channel: brand-data-dev-alerts
 brand: calida
@@ -1234,74 +1294,4 @@ status: active
 linked_issue: null
 ```
 Scheduled `digel_FEED_cron_schedule` run (e0bb88b6). First digel entry in this log. No thread or reaction.
-
-```yaml
-timestamp: 2026-09-22T18:49:01Z
-channel: brand-data-dev-alerts
-brand: sOliver
-summary: "sOliver__FEED2__map - app container has no exit code after task stopped (exit 1)"
-status: active
-linked_issue: null
-```
-Single failure from the scheduled `sOliver_FEED2_cron_schedule` run (57ff4f7a) on the mapping step, 20:49 CEST. Different step from the older sOliver/FEED2 entries in this log (download_images/extract). No thread or reaction; unclear yet whether it's a one-off ECS task stop or the start of a pattern.
-
-```yaml
-timestamp: 2026-09-22T14:58:35Z
-channel: brand-data-dev-alerts
-brand: platform (galvatron ECS)
-summary: ECS health check failures on galvatron, one more brief trigger/recover cycle
-status: self-resolved
-linked_issue: null
-```
-Triggered 14:52:35 UTC, recovered 14:58:35 UTC (value 2.0 at peak). Same known flapping pattern, galvatron only.
-
-```yaml
-timestamp: 2026-09-22T09:16:08Z
-channel: brand-data-dev-alerts
-brand: riani
-summary: "riani__FEED__trigger_enrichment_from_map failed once more (exit 1) - fifth cycle running"
-status: recurring
-linked_issue: null
-```
-One more occurrence (run 4198c7b4, 11:16 CEST), down from four the prior cycle. Someone reacted with :wave:, no thread reply. Still no fix landed since Dushan's 09-17 "will check."
-
-```yaml
-timestamp: 2026-09-22T06:03:28Z
-channel: brand-data-dev-alerts
-brand: platform (Datadog log index)
-summary: Log index hit warning threshold then daily quota a sixth time, self-resolved on quota reset
-status: recurring
-linked_issue: null
-```
-Same `product-service-logs-index-` pattern, sixth occurrence now (warning 09-21 14:52:28 UTC, quota reached 09-22 00:29:26 UTC, recovered 06:03:28 UTC on quota reset). Still no permanent fix in place.
-
-```yaml
-timestamp: 2026-09-21T16:25:53Z
-channel: brand-data-dev-alerts
-brand: riani
-summary: "riani__FEED__trigger_enrichment_from_map recurred 4 more times, despite Dushan's 09-17 'will check' — still unfixed"
-status: recurring
-linked_issue: null
-```
-Same step/signature as the 09-17 garcia+riani entry (Dushan said "will check trigger enrichment" that day). garcia stayed quiet this cycle, but riani fired four more times alone: 10:26:54, 13:06:04, 13:57:46, 16:25:53 UTC on 09-21. No further thread activity visible since the 09-17 acknowledgment — whatever Dushan looked into hasn't landed yet.
-
-```yaml
-timestamp: 2026-09-21T09:53:35Z
-channel: brand-data-dev-alerts
-brand: platform (galvatron ECS)
-summary: ECS health check failures detected for galvatron service, one more brief trigger/recover cycle
-status: recurring
-linked_issue: null
-```
-Triggered 09:52:35 UTC, recovered ~1 minute later — same established noise pattern, no thread.
-
-```yaml
-timestamp: 2026-09-21T08:53:30Z
-channel: brand-data-dev-alerts
-brand: mosMosh, ara
-summary: "mosMosh/ara OOM sprees appear to have stopped — quiet for the rest of this cycle after 3 more mosMosh hits right at the start"
-status: self-resolved
-linked_issue: null
-```
-The 4-day, 45+-occurrence spree (mosMosh 21+, ara 26+ as of last sync) continued for exactly 3 more mosMosh hits right after last sync's cutoff (08:48:28, 08:52:29, 08:53:30 UTC 09-21) — then nothing. Zero further mosMosh or ara occurrences for the rest of the ~24h window, the longest quiet stretch since the spree started 09-17. [BDD-3268](../support/open.md) (resource-size bump) is still In Progress per Linear, not marked done — so this can't be confidently attributed to that fix landing yet. Worth a fresh look next sync before calling it fully resolved; total tally now mosMosh 24+, ara 26+ (unchanged this cycle). **09-23 sync: confirmed quiet a second full cycle** (zero mosMosh/ara alerts 09-22 08:50 to 09-23 08:45 UTC); BDD-3268 still In Progress, so the stop is still not attributable to that fix.
 

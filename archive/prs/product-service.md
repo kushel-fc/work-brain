@@ -3,6 +3,61 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 3028
+title: "Add mappedSku videos index for the video GTIN lookup"
+author: kushel-fc
+state: closed
+merged: true
+closed: 2026-10-21
+url: https://github.com/fashioncloud/product-service/pull/3028
+```
+His. Merged 10-21 12:47 UTC. Adds a standalone `{ videos: 1 }` index to `mappedSku`: on development, `POST /reprocessing/video/validate` with the `failed` strategy timed out at 120s for two brands without it, while the image equivalent answered in 0.16s. By timing it is in production release #3039 (10-22 08:04 UTC); I haven't checked the release contents or that the index has finished building.
+
+```yaml
+number: 3017
+title: "BDD-3498: video reprocessing API endpoints (4/4)"
+author: kushel-fc
+state: closed
+merged: true
+closed: 2026-10-21
+url: https://github.com/fashioncloud/product-service/pull/3017
+```
+His. Merged by him 10-21 10:30 UTC, last of the four-part video reprocessing stack. By timing it is in production release #3025 (11:57 UTC).
+
+```yaml
+number: 3018
+title: "ci: pin memory-heavy jobs to runner=x64-medium"
+author: DavidPessoa
+state: closed
+merged: true
+closed: 2026-10-22
+url: https://github.com/fashioncloud/product-service/pull/3018
+```
+Merged 10-22 07:15 UTC. Didn't name him.
+
+```yaml
+number: 3021
+title: "Add helper script to export PDS stream payloads as NDJSON"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-21
+url: https://github.com/fashioncloud/product-service/pull/3021
+```
+Merged 10-21 14:39 UTC. Didn't name him.
+
+```yaml
+number: 3023
+title: "Staging Release - 2026-10-21"
+author: app/github-actions
+state: closed
+merged: true
+closed: 2026-10-21
+url: https://github.com/fashioncloud/product-service/pull/3023
+```
+Routine staging release, merged 10-21 09:52 UTC. It named him; he wasn't asked to review contents.
+
+```yaml
 number: 3002
 title: "BDD-3496: video reprocessing API query layer and shared media strategies (2/4)"
 author: kushel-fc

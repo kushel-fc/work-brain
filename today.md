@@ -1,17 +1,17 @@
 # Today
 
 ## Earmarks triggered
-- **Video reprocessing releases:** his product-service#2996 (1/4) and brand-data-pipeline#2074 are in **production** since 10-20 ~12:58 UTC (releases #3015 and #2085, product-service first, as the rollout needs). Inferred from release timing, I haven't read the release contents. No `download_videos` or publish failures in the alerts channel since, but nothing has used the new step yet. See [`_meta/earmarks.md`](_meta/earmarks.md).
-- **ftcCashmere:** no alert for about 24h since the credential fix (#2069) reached production 10-20 07:59 UTC. Encouraging, not conclusive. Whether it also clears the 403 in [BDD-3357](support/open.md) is still unconfirmed.
+None. No active earmarks.
 
 ## Priorities
-1. **Get his own [#3017](prs/mine.md) unblocked** (video reprocessing 4/4, BDD-3498). Chamindu36, irembbt and dwiajik approved 10-20 and checks are green, but it's `BLOCKED` on abubakarwase (probably code owner) and CodeRabbit has requested changes a third time (1 comment left as of 08:33 UTC). He replied to the threads this morning. It's the last endpoint PR, and the publish step it depends on is already in production.
-2. **BDD-3455 and BDD-3449 bookkeeping.** BDD-3455 (parent) is In Progress; BDD-3449 (video download parity) moved back to To Do this morning. BDD-3499, the admin page in the frontend repo, is the only unstarted piece of Video Reprocessing.
+1. **Get his own [frontend#7203](prs/mine.md) reviewed** (video reprocessing admin page, BDD-3499, In Review). It is the last piece of the Video Reprocessing project; the endpoints it calls (#3017) merged 10-21 and are in production by release timing. It's `BLOCKED` with no review requested yet.
+2. **Review [product-service#3035](prs/to-review.md)** (dwiajik, export PDS payloads job, 2/3). It names him, no human has reviewed it, and 3/3 (#3036, draft) sits behind it. CodeRabbit's last review is an approval.
+3. **Unassigned FD tickets that landed since yesterday** (all Medium or Low, none his by default): [BDD-3512](support/open.md) (Olymp image merge rules, says it blocks images on the platform), [BDD-3514](support/open.md) (watermark on API images) and [BDD-3513](support/open.md) (HANRO merge rule, Low).
 
 ## Worth noting (not urgent)
-- **Review queue is down to one.** product-service#2960 (Willen) was closed unmerged when dushansilva moved Willen to PIPE with #3016, so nothing is waiting on him except the dependabot bump (brand-data-pipeline#2019, since 10-07). The routine staging release PR product-service#3023 also names him.
-- **fynchHatton's image-sync schedule is still on:** it hung 3h again 10-20 (second day running) from the schedule he disabled 09-30. See the [Dagster log](dagster-alerts/log.md).
-- **PDS relay Lambda** (`pds-stream-relay-style-production`) alerted four times 10-20 13:10 to 16:10 UTC and recovered 16:12. No thread, no cause stated.
-- **New brand failures, none his:** calida_FEED (12 assets, 10-20 19:23 UTC), luisacerano_FEED (map/merge/publish, after its migration), falke_FEED hand-started again.
-- **Support:** no change, five open and unassigned (see [support/open.md](support/open.md)). Nothing new in Triage.
-- **Slice 5 / PCS:** unchanged, closed. The PCS p95 monitor he muted for #2981 is still muted as far as the sources show. See [shaping](shaping/video-download-delivery.md).
+- **#3017 and #3028 merged.** The `{ videos: 1 }` index (#3028) was written because `validate` timed out at 120s on development without it. By timing it is in production release #3039 (10-22 08:04 UTC); I haven't confirmed the index finished building or that `validate` is fast there. BDD-3498 Done, BDD-3455 (the old parent) Canceled.
+- **PCS 5xx alerts overnight:** two Warn/recover pairs 00:37 to 00:59 UTC (ALB ratio and content API rate, peak 0.5%). No thread, no deploy at the time. See the [Dagster log](dagster-alerts/log.md).
+- **New brand failures, none his:** ultimoFashion_FEED failed three times 10-21 (two hand-started retries, then the schedule), calida_FEED a second day running.
+- **fynchHatton's image-sync schedule is still on:** two 3h hangs on 10-21, third day running, from the schedule he disabled 09-30.
+- **Review queue:** two (#3035 and the dependabot bump brand-data-pipeline#2019, since 10-07). He already approved #3040.
+- **Support:** eight open and unassigned, three new (see [support/open.md](support/open.md)).

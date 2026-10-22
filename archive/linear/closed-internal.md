@@ -3,6 +3,24 @@
 Kushel's own internal/tech-debt tickets that shipped, without an FD reference — so they don't belong in `support/recently-closed.md` (FD-sourced only) but shouldn't just vanish from `sources/linear/my-issues.md` silently either. Never deleted.
 
 ```yaml
+id: BDD-3498
+title: "Video reprocessing API: endpoints and OpenAPI"
+status: Done
+closed: 2026-10-21
+url: https://linear.app/fashioncloud/issue/BDD-3498
+```
+His. Done 10-21 10:30 UTC when #3017 (4/4) merged.
+
+```yaml
+id: BDD-3455
+title: Video reprocessing endpoint in dim-admin-api
+status: Canceled
+closed: 2026-10-21
+url: https://linear.app/fashioncloud/issue/BDD-3455/video-reprocessing-endpoint-in-dim-admin-api
+```
+His. The original single-ticket scope, child of BDD-3449; replaced by the BDD-3494 to BDD-3499 split. Canceled 10-21 12:17 UTC after a short In Progress.
+
+```yaml
 id: BDD-3214
 title: "5.1 PCS — Aggregated audit entry"
 priority: No priority

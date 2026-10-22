@@ -2,35 +2,7 @@
 
 Assigned to Kushel, live (non-completed) statuses. Populated on sync — completed/canceled work stays in Linear's own history rather than being repeated here; see `git log` for what rolled off.
 
-**10-21 sync:** 7 to 6 live. BDD-3496 (his #3002, merged 10-20 08:50 UTC) and BDD-3497 (#3008, merged 11:05 UTC) went Done. BDD-3498 (endpoints) is In Review on his #3017. **BDD-3455** (the parent, "Video reprocessing endpoint in dim-admin-api") is In Progress, updated 10-21 08:22 UTC. BDD-3449 moved from In Progress back to To Do (10-21 08:21 UTC). BDD-3499, BDD-2406 and BDD-2079 unchanged.
-
----
-
-```yaml
-id: BDD-3455
-title: Video reprocessing endpoint in dim-admin-api
-priority: No priority
-status: In Progress
-assignee: Kushel Ramanayake
-team: BDD
-updated: 2026-10-21
-url: https://linear.app/fashioncloud/issue/BDD-3455/video-reprocessing-endpoint-in-dim-admin-api
-```
-Parent of BDD-3494 to BDD-3498. Four of the five are Done or in review; the endpoints PR (#3017) is the last open piece.
-
----
-
-```yaml
-id: BDD-3498
-title: "Video reprocessing API: endpoints and OpenAPI"
-priority: No priority
-status: In Review
-assignee: Kushel Ramanayake
-team: BDD
-updated: 2026-10-20
-url: https://linear.app/fashioncloud/issue/BDD-3498
-```
-Last piece of the endpoints (his [product-service#3017](../../prs/mine.md), 4/4, open): `POST /reprocessing/video/validate`, `/trigger` and `/trigger/uploaded-videoids`, a 400 when nothing matches, OpenAPI. The ticket's rollout note says to deploy it after the publish step, which merged and reached production 10-20 (brand-data-pipeline#2074).
+**10-22 sync:** 6 to 4 live. BDD-3498 (endpoints, his #3017 merged 10-21 10:30 UTC) went Done. BDD-3455 (the parent, "Video reprocessing endpoint in dim-admin-api", child of BDD-3449) was moved In Progress at 08:22 UTC and **Canceled** at 12:17 UTC 10-21, so it drops off. BDD-3499 (admin page) went Backlog to In Review 10-21 12:17 UTC with his frontend#7203 open. BDD-3449, BDD-2406 and BDD-2079 unchanged.
 
 ---
 
@@ -38,13 +10,13 @@ Last piece of the endpoints (his [product-service#3017](../../prs/mine.md), 4/4,
 id: BDD-3499
 title: Video Reprocessing page in admin tooling
 priority: No priority
-status: Backlog
+status: In Review
 assignee: Kushel Ramanayake
 team: BDD
-updated: 2026-10-19
+updated: 2026-10-21
 url: https://linear.app/fashioncloud/issue/BDD-3499
 ```
-Frontend repo. Mirrors the image reprocessing page: input, valid/skipped overview, result with the Dagster run link. Not started.
+Frontend repo. Mirrors the image reprocessing page: input, valid/skipped overview, result with the Dagster run link. Started 10-21 12:17 UTC; his [frontend#7203](https://github.com/fashioncloud/frontend/pull/7203) is open.
 
 ---
 
