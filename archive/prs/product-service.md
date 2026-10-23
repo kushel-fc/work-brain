@@ -3,6 +3,61 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 3041
+title: "Log the time from the GTIN check to the end of publishing in the deletion job"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-22
+url: https://github.com/fashioncloud/product-service/pull/3041
+```
+Merged 2026-10-22 09:00 UTC.
+
+```yaml
+number: 3040
+title: "MMS ECS service with skeleton infrastructure all data models (v1 of Data models)"
+author: Chamindu36
+state: closed
+merged: true
+closed: 2026-10-22
+url: https://github.com/fashioncloud/product-service/pull/3040
+```
+Merged 2026-10-22 09:44 UTC.
+
+```yaml
+number: 3036
+title: "BDD-3511: Terraform and deploy wiring for the export PDS payloads job (3/3)"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-22
+url: https://github.com/fashioncloud/product-service/pull/3036
+```
+Merged 2026-10-22 11:26 UTC.
+
+```yaml
+number: 3035
+title: "BDD-3510: implement the export PDS payloads logic in the job (2/3)"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-22
+url: https://github.com/fashioncloud/product-service/pull/3035
+```
+Merged 2026-10-22 09:20 UTC.
+
+```yaml
+number: 3034
+title: "BDD-3509: scaffold the export PDS payloads job (1/3)"
+author: dwiajik
+state: closed
+merged: true
+closed: 2026-10-22
+url: https://github.com/fashioncloud/product-service/pull/3034
+```
+Merged 2026-10-22 09:08 UTC.
+
+```yaml
 number: 3028
 title: "Add mappedSku videos index for the video GTIN lookup"
 author: kushel-fc

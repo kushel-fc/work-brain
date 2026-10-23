@@ -3,6 +3,77 @@
 Older entries rolled off `support/recently-closed.md`'s ~25-item cap. Never deleted.
 
 ```yaml
+id: BDD-3117
+title: "FW: PME stockbase (FD: 672891)"
+priority: Medium
+closed: 2026-09-23
+url: https://linear.app/fashioncloud/issue/BDD-3117/fw-pme-stockbase-fd-672891
+```
+Kushel's own - In Progress since 09-03, Done 09-23 08:17 UTC. Stone Casual Store's PME Legend image downloads were rejected with "not permitted".
+
+```yaml
+id: BDD-3246
+title: "PIPE: Becosoft image issue - Kultivate (FD: 676295)"
+priority: Medium
+closed: 2026-09-18
+url: https://linear.app/fashioncloud/issue/BDD-3246/pipe-becosoft-image-issue-kultivate-fd-676295
+```
+Kushel's own ticket — In Review → Done. No change noted beyond the status flip.
+
+```yaml
+id: BDD-3278
+title: "PIPE: withblack ean deletion (FD: 677342)"
+priority: Low
+closed: 2026-09-18
+url: https://linear.app/fashioncloud/issue/BDD-3278/pipe-withblack-ean-deletion-fd-677342
+```
+Landed in Triage unassigned 09-18, picked up by abubakarwase and shipped same day.
+
+```yaml
+id: BDD-3237
+title: "PIPE: Superdry - deleting one image possible? (FD: 675898)"
+priority: Low
+closed: 2026-09-17
+url: https://linear.app/fashioncloud/issue/BDD-3237/pipe-superdry-deleting-one-image-possible-fd-675898
+```
+Shipped last cycle, In Review → Deployed. No change noted in the ticket beyond the status flip.
+
+```yaml
+id: BDD-3228
+title: Removing model images - Fynch Hatton (FD: 675667)
+priority: Medium
+closed: 2026-09-16
+url: https://linear.app/fashioncloud/issue/BDD-3228/removing-model-images-fynch-hatton-fd-675667
+```
+Was sitting in `support/open.md` (Medium) since 09-07; picked up and shipped by Syed Muhammad Abu Bakar Wase (abubakarwase), not Kushel — part of the same reassignment wave that pulled BDD-2539/BDD-3189 off Kushel's own plate this cycle.
+
+```yaml
+id: BDD-3263
+title: "[Security] Missing function-level authorization on dim-admin-api (staging)"
+priority: Urgent
+closed: 2026-09-16
+url: https://linear.app/fashioncloud/issue/BDD-3263/security-missing-function-level-authorization-on-dim-admin-api-staging
+```
+The Urgent, unassigned, 09-17-deadline security ticket flagged in `today.md` last cycle (crossed the notification bar then) — picked up and Done well ahead of its deadline. Not FD-referenced (internal security report via the Notion Vulnerabilities Registry), included here as an exception given its severity and the prior notification.
+
+```yaml
+id: BDD-3249
+title: "error 403 bij downloaden foto's voor Bijnen (FD: 673023)"
+priority: High
+closed: 2026-09-15
+url: https://linear.app/fashioncloud/issue/BDD-3249/error-403-bij-downloaden-fotos-voor-bijnen-fd-673023
+```
+Picked up individually from Triage and shipped same window. Was aging in `support/open.md` for two cycles; FD number was notably older than its Triage entry, suggesting a reopened/renewed report.
+
+```yaml
+id: BDD-3262
+title: "Remove items | Stieliz (FD: 676811)"
+priority: High
+closed: 2026-09-15
+url: https://linear.app/fashioncloud/issue/BDD-3262/remove-items-stieliz-fd-676811
+```
+New and closed same window — landed already assigned to Kushel and shipped before it ever showed at a "live" status in a prior sync.
+```yaml
 id: BDD-3261
 title: "AW: Fashion Cloud/ Preorder NILE 2/27 (FD: 676746)"
 priority: Urgent

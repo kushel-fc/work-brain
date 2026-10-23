@@ -2,6 +2,17 @@
 
 One entry per sync run. Prune entries older than ~30 days.
 
+## 2026-10-23 (~09:00 UTC)
+
+About 24h since the last sync. Linear and Slack (claude.ai connectors) and GitHub (`gh`) were all reachable.
+
+- **Video Reprocessing code finished.** His frontend#7203 merged 10-22 12:29 UTC and BDD-3499 went Done, so he has no open PRs. Five new Backlog tickets assigned to him, BDD-3543 to BDD-3547 (daily video sweep), were created 10-22 16:02 UTC; only titles read. BDD-3424 (N1) also went Done. His live issues go 4 to 8.
+- **Triage 9 to 4, support/open.md 8 to 3.** Irem Bulut closed BDD-3512, BDD-3513 and the new BDD-3515 and took BDD-3514 and BDD-3349 In Progress. BDD-3501 was fixed by julsjacinto's product-service#3054 and Deployed 10-23. Nothing new landed in Triage. The remaining three FD tickets (BDD-3357, BDD-3386, BDD-3420) are Medium and unassigned. recently-closed kept at 25, 8 older entries rolled into the archive.
+- **Review queue 2 to 3:** product-service#3035 merged without him; new asks are #3045 (CodeQL fix) and staging release #3058, plus the dependabot bump. product-service 6 to 7, brand-data-pipeline 14 to 16. Production releases product-service #3051 and brand-data-pipeline #2099 (10-22 13:16 UTC).
+- Slack (10 alerts): **ftcCashmere_FEED2 failed again 10-22 17:42 UTC**, about two days after the credential fix reached production, which undoes the earmark's quiet reading; logged `recurring`. adidas back after two quiet days. New: lolaLiza global_transform OOM (exit 137, three retries), fabienne_PRICAT, stateOfArt_PRICAT, luisacerano 3h hang (hand-started). fynchHatton fourth day, carsJeans seventeenth, PDS size relay Lambda alert and recovery. Dagster log +9, pruned 1, now 138. Sync-log pruned: the 09-23 entry and older.
+- Earmarks: none active.
+- Notified: yes. ftcCashmere_FEED2 recurred after the fix and about two quiet days, which meets the Dagster-alert-recurs bar. Nothing else crossed it: no PR of his is open, no deadlines on his issues, no new Urgent unassigned ticket (BDD-3519 is Urgent but assigned to abubakarwase).
+
 ## 2026-10-22 (~09:00 UTC)
 
 About 24h since the last sync. Linear and Slack (claude.ai connectors) and GitHub (`gh`) were all reachable. My first Slack read used a wrong start timestamp and came back empty; re-read with the correct one (10-21 08:55 UTC).
@@ -259,13 +270,3 @@ About 24h since the last sync (09-23 ~08:50 to 09-24 ~08:45). Linear, GitHub and
 - Earmarks: none active, nothing to check.
 - Notified: no. Nothing crossed the notification bar. No deadline passed with zero movement. His own #2767 got Changes Requested from CodeRabbit only, which it then replaced with an approval inside the same window, so it isn't a human Changes Requested or a conflict. No new Urgent unassigned ticket (both new FD tickets are Medium). No Dagster alert came back after self-resolving; both alerts this cycle are first occurrences.
 
-## 2026-09-23 (~08:50 UTC)
-
-About 24h since the last sync (09-22 ~08:50 to 09-23 ~08:50). Linear, GitHub and Slack were all reachable.
-
-- **Earmark triggered: the mosMosh/ara OOM spree is over.** Zero alerts for a second full cycle, about 48h since the last hit. It still can't be credited to BDD-3268 (In Progress, no update since 09-18). Earmark moved to Triggered.
-- **Kushel opened his first PRs since 09-16, a 4-part split of the Video Delivery Slice 3.2 CSV work.** #2752 closed, #2753 (1/4) merged, and #2754 (2/4) is open. #2754 got Changes Requested from Chamindu36 at 09-22 13:31 UTC, then his approval at 09-23 08:17 UTC, so the net state is approved but `BLOCKED`. In Linear, BDD-3205, BDD-3206 and BDD-3223 all moved to In Review.
-- Linear: BDD-3117 (PME stockbase) shipped, Done 09-23, so his issues go 9 to 8. One new Triage ticket, BDD-3296 (Medium, Altex SS27 cancellations), so Triage goes 6 to 7. Nothing left Triage.
-- GitHub: review queue 4 to 3, because brand-data-pipeline#1871 merged without his review (its companion product-service#2683 is still waiting on him, zero human reviews). product-service 16 to 14, brand-data-pipeline 18 to 19. Every mergeable state resolved this cycle.
-- Slack was quiet (4 messages): riani `trigger_enrichment_from_map` 1 more (still recurring), a new sOliver FEED2 `map` failure, and a galvatron health-check blip. Dagster log pruned by 2 entries older than 30 days, now 139 in total.
-- Notified: no. Nothing crossed the notification bar. No deadline passed with zero movement. #2754's Changes Requested came and cleared inside this window on a brand-new PR, so the current state is approved, not a flip against him. No new Urgent unassigned ticket (BDD-3296 is Medium). riani continues as an existing `recurring` alert rather than coming back after self-resolving.

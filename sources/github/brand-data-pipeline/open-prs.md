@@ -2,7 +2,35 @@
 
 Full raw open-PR list. Populated on sync. Kushel's curated view (his own + requested-of-him) lives in [`prs/mine.md`](../../../prs/mine.md) / [`prs/to-review.md`](../../../prs/to-review.md).
 
-18 to 14. Nothing new opened. Merged since the last sync, all off the list: #2088 (staging release), #2087 (Daniel Hechter offboarding), #2077 (CODEOWNERS), #2090, #2091, #2092, #2093, #2094 and **production release #2095 (10-22 08:04 UTC)**, plus #2089 (production release, 10-21 11:57 UTC). #2044 (inga-ar, material normalization) was closed unmerged 10-21 14:31 UTC, after her #2090 "fix materials" merged. Mergeable states for the older PRs mostly read `unknown` and are left at their last known values. See [`archive/prs/brand-data-pipeline.md`](../../../archive/prs/brand-data-pipeline.md).
+14 to 16. Merged since the last sync, off the list: #2096, #2097, #2098 (staging release), **#2099 (production release, 10-22 13:16 UTC)**, #2100 and #2101. New: #2102 (hakansoylu1, new images structure and AI tag) and staging release #2103. Mergeable states for the older PRs mostly read `unknown` and are left at their last known values. See [`archive/prs/brand-data-pipeline.md`](../../../archive/prs/brand-data-pipeline.md).
+
+```yaml
+number: 2103
+repo: brand-data-pipeline
+title: "Staging Release - 2026-10-23"
+author: FCMachineUser
+state: open
+mergeable_state: mergeable
+review_state: approved
+requested_reviewers: []
+updated: 2026-10-23
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2103
+```
+
+
+```yaml
+number: 2102
+repo: brand-data-pipeline
+title: "Implement new images structure & AI tag"
+author: hakansoylu1
+state: open
+mergeable_state: blocked
+review_state: awaiting-first-review
+requested_reviewers: []
+updated: 2026-10-23
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2102
+```
+
 
 ```yaml
 number: 2081

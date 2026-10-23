@@ -3,6 +3,72 @@
 Merged or closed PRs, moved here off the open list. Never deleted.
 
 ```yaml
+number: 2101
+title: "scoretex: change transformation to set main image to true only if it …"
+author: marianabassi
+state: closed
+merged: true
+closed: 2026-10-22
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2101
+```
+Merged 2026-10-22 12:10 UTC.
+
+```yaml
+number: 2100
+title: "add detailed trousers sizes"
+author: inga-ar
+state: closed
+merged: true
+closed: 2026-10-23
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2100
+```
+Merged 2026-10-23 07:49 UTC.
+
+```yaml
+number: 2099
+title: "Production Release - 2026-10-22"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-10-22
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2099
+```
+Merged 2026-10-22 13:16 UTC.
+
+```yaml
+number: 2098
+title: "Staging Release - 2026-10-22"
+author: FCMachineUser
+state: closed
+merged: true
+closed: 2026-10-22
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2098
+```
+Merged 2026-10-22 11:47 UTC.
+
+```yaml
+number: 2097
+title: "offboarding - The Jogg Concept"
+author: MuniaL
+state: closed
+merged: true
+closed: 2026-10-22
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2097
+```
+Merged 2026-10-22 10:01 UTC.
+
+```yaml
+number: 2096
+title: "fix mapping for sneakers CK"
+author: inga-ar
+state: closed
+merged: true
+closed: 2026-10-23
+url: https://github.com/fashioncloud/brand-data-pipeline/pull/2096
+```
+Merged 2026-10-23 07:35 UTC.
+
+```yaml
 number: 2088
 title: "Staging Release - 2026-10-21"
 author: FCMachineUser

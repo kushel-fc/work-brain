@@ -3,6 +3,96 @@
 Deduped rolling log from Slack #brand-data-dev-alerts (channel `C07A06X22TD`). Newest first. Entries older than 30 days are pruned on sync.
 
 ```yaml
+timestamp: 2026-10-23T08:05:02Z
+channel: brand-data-dev-alerts
+brand: adidas
+summary: "adidas_FEED: 11 asset materializations failed, starting at download_images and feed_transform (run 8f5fe466, from adidas_FEED_cron_schedule)"
+status: recurring
+linked_issue: null
+```
+Eighth adidas failure in the log and the first since 10-20 (none 10-21 or 10-22). No thread, cause not stated. Not his.
+
+```yaml
+timestamp: 2026-10-22T18:16:30Z
+channel: brand-data-dev-alerts
+brand: fynchHatton
+summary: "fynchHatton_FEED2_sync_images exceeded the 3h run-time limit (run e4ab841b, started 15:15 UTC)"
+status: recurring
+linked_issue: null
+```
+Fourth day running (10-19 to 10-22), from `fynchHatton_FEED2_cron_image_sync_schedule`, the schedule he disabled 09-30. Still on. No thread.
+
+```yaml
+timestamp: 2026-10-22T17:42:20Z
+channel: brand-data-dev-alerts
+brand: ftcCashmere
+summary: "ftcCashmere_FEED2: 12 asset materializations failed (run 82accbf1, from the schedule), starting at download_images and extract"
+status: recurring
+linked_issue: BDD-3357
+```
+Eleventh since 10-08 and the first since the credential fix (brand-data-pipeline#2069) reached production 10-20 07:59 UTC, so it came back after about two quiet days. That ends the 10-21 earmark's optimistic reading: the fix didn't settle it. No thread. BDD-3357 (403 on image URLs) is still in Triage.
+
+```yaml
+timestamp: 2026-10-22T17:24:41Z
+channel: brand-data-dev-alerts
+brand: stateOfArt
+summary: "stateOfArt_PRICAT: 12 asset materializations failed, starting at download_images and extract (run 51756685, from the schedule)"
+status: active
+linked_issue: null
+```
+Second stateOfArt_PRICAT failure in the log; the earlier one (11 assets) is further down. No thread. Not his.
+
+```yaml
+timestamp: 2026-10-22T17:16:07Z
+channel: brand-data-dev-alerts
+brand: fabienne
+summary: "fabienne_PRICAT: 11 asset materializations failed, starting at download_images and feed_transform (run 1ca18177, from the schedule)"
+status: active
+linked_issue: null
+```
+First fabienne failure in the log. No thread. Not his.
+
+```yaml
+timestamp: 2026-10-22T13:29:49Z
+channel: brand-data-dev-alerts
+brand: platform (PDS relay)
+summary: "PDS relay Lambda erroring: pds-stream-relay-size-production (522 errors at the 13:29 UTC trigger), recovered 13:45 UTC"
+status: recurring
+linked_issue: null
+```
+Same monitor as the 10-20 style relay alert; this time the size relay. Fifteen minutes to recovery, no thread. Not his.
+
+```yaml
+timestamp: 2026-10-22T13:11:23Z
+channel: brand-data-dev-alerts
+brand: carsJeans
+summary: "carsJeans_FEED_sync_images exceeded the 3h run-time limit (run 53f2ae86, started 10:10 UTC)"
+status: recurring
+linked_issue: null
+```
+Seventeenth hit (09-30 to 10-22, 10:10 UTC daily start). No owner.
+
+```yaml
+timestamp: 2026-10-22T12:16:38Z
+channel: brand-data-dev-alerts
+brand: luisacerano
+summary: "luisacerano_FEED_sync_images exceeded the 3h run-time limit (run a6102897, started 09:16 UTC by Dushan Silva)"
+status: active
+linked_issue: null
+```
+Hand-started by Dushan after his 10-21 enable-image-sync PR (brand-data-pipeline#2093). Someone reacted with a check mark; no thread. Not his.
+
+```yaml
+timestamp: 2026-10-22T09:54:04Z
+channel: brand-data-dev-alerts
+brand: lolaLiza
+summary: "lolaLiza_FEED global_transform exited 137 (out of memory) three times, 09:50, 09:52 and 09:54 UTC (runs b8242f30, df9ef684, 0bd54dd1), after a 09:30 UTC run launched by Dagster Dim User failed 9 assets (run 67265568)"
+status: active
+linked_issue: null
+```
+First lolaLiza failure in the log. Exit code 137 on the global-transform ECS task, retried by hand three times. No thread. Not his.
+
+```yaml
 timestamp: 2026-10-22T00:59:45Z
 channel: brand-data-dev-alerts
 brand: platform (PCS 5xx)

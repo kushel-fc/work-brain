@@ -2,21 +2,35 @@
 
 PRs where Kushel is a requested reviewer. Populated on sync.
 
-**One to two.** New: product-service#3035 (dwiajik, 2/3 of the export-PDS-payloads job), which names him alongside abubakarwase. product-service#3040 (Chamindu36) also named him but he approved it already, so it left the queue. The dependabot bump is unchanged. The routine staging release PR #3023 merged.
+**Three, from two to three.** product-service#3035 merged 10-22 09:20 UTC (approved by CodeRabbit and others without him) and left the queue. New: the routine staging release #3058 and Chamindu36's CodeQL fix #3045 name him. The dependabot bump is unchanged.
 
 ```yaml
-number: 3035
+number: 3045
 repo: product-service
-title: "BDD-3510: implement the export PDS payloads logic in the job (2/3)"
-author: dwiajik
+title: "Potential fix for code scanning alert no. 104: Database query built from user-controlled sources"
+author: Chamindu36
 state: open
-mergeable_state: blocked
-review_state: awaiting-first-review
+mergeable_state: unknown
+review_state: changes-requested
 requested_reviewers: [abubakarwase, kushel-fc]
 updated: 2026-10-22
-url: https://github.com/fashioncloud/product-service/pull/3035
+url: https://github.com/fashioncloud/product-service/pull/3045
 ```
-Opened 10-21 14:47 UTC, +1021/-24, middle of a three-part stack (#3034 scaffold, #3036 Terraform draft). CodeRabbit's latest review is an approval; no human has reviewed yet. Part 3/3 sits behind it.
+Automated code-scanning fix, opened under Chamindu36's name. A review is already in changes-requested state; no human has approved. Several sibling CodeQL fixes (#3043, #3044, #3053) merged 10-22.
+
+```yaml
+number: 3058
+repo: product-service
+title: "Staging Release - 2026-10-23"
+author: app/github-actions
+state: open
+mergeable_state: mergeable
+review_state: awaiting-first-review
+requested_reviewers: [dwiajik, kushel-fc]
+updated: 2026-10-23
+url: https://github.com/fashioncloud/product-service/pull/3058
+```
+Routine staging release. Names him alongside dwiajik.
 
 ```yaml
 number: 2019
